@@ -101,7 +101,10 @@ public class TreeNodeMouseClickEventArgs extends system.windows.forms.MouseEvent
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TreeNodeMouseClickEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,17 @@ public class TreeNodeMouseClickEventArgs extends system.windows.forms.MouseEvent
     public TreeNodeMouseClickEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param node the argument of type {@code TreeNode}
+     * @param button the argument of type {@code MouseButtons}
+     * @param clicks the argument of type {@code int}
+     * @param x the argument of type {@code int}
+     * @param y the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TreeNodeMouseClickEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public TreeNodeMouseClickEventArgs(TreeNode node, MouseButtons button, int clicks, int x, int y) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +184,13 @@ public class TreeNodeMouseClickEventArgs extends system.windows.forms.MouseEvent
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Node.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TreeNodeMouseClickEventArgs.Node" target="_top">.NET documentation</a>
+     */
     public TreeNode getNode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

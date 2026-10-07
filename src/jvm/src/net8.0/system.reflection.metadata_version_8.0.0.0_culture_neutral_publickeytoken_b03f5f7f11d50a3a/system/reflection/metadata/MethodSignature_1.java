@@ -101,7 +101,10 @@ public class MethodSignature_1<TType extends IJCOBridgeReflected> extends system
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MethodSignature_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,17 @@ public class MethodSignature_1<TType extends IJCOBridgeReflected> extends system
     public MethodSignature_1() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param header the argument of type {@code SignatureHeader}
+     * @param returnType the argument of type {@code TType}
+     * @param requiredParameterCount the argument of type {@code int}
+     * @param genericParameterCount the argument of type {@code int}
+     * @param parameterTypes the argument of type {@code ImmutableArray_1}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MethodSignature-1.-ctor" target="_top">.NET documentation</a>
+     */
     public MethodSignature_1(SignatureHeader header, TType returnType, int requiredParameterCount, int genericParameterCount, ImmutableArray_1 parameterTypes) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +186,13 @@ public class MethodSignature_1<TType extends IJCOBridgeReflected> extends system
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property GenericParameterCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MethodSignature-1.GenericParameterCount" target="_top">.NET documentation</a>
+     */
     public int getGenericParameterCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +233,13 @@ public class MethodSignature_1<TType extends IJCOBridgeReflected> extends system
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequiredParameterCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MethodSignature-1.RequiredParameterCount" target="_top">.NET documentation</a>
+     */
     public int getRequiredParameterCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +280,13 @@ public class MethodSignature_1<TType extends IJCOBridgeReflected> extends system
         }
     }
 
+    /**
+     * Gets the value of the .NET property ParameterTypes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MethodSignature-1.ParameterTypes" target="_top">.NET documentation</a>
+     */
     public ImmutableArray_1 getParameterTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +302,13 @@ public class MethodSignature_1<TType extends IJCOBridgeReflected> extends system
         }
     }
 
+    /**
+     * Gets the value of the .NET property Header.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MethodSignature-1.Header" target="_top">.NET documentation</a>
+     */
     public SignatureHeader getHeader() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +324,13 @@ public class MethodSignature_1<TType extends IJCOBridgeReflected> extends system
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReturnType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MethodSignature-1.ReturnType" target="_top">.NET documentation</a>
+     */
     public TType getReturnType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -114,7 +114,10 @@ public class ServiceCredentials extends system.servicemodel.security.SecurityCre
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ServiceCredentials(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -161,6 +164,27 @@ public class ServiceCredentials extends system.servicemodel.security.SecurityCre
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceCredentials.-ctor" target="_top">.NET documentation</a>
+     */
     public ServiceCredentials() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.reflection.AmbiguousMatchException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.configuration.ConfigurationException, system.MissingMethodException, system.TypeLoadException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +199,23 @@ public class ServiceCredentials extends system.servicemodel.security.SecurityCre
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateSecurityTokenManager.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceCredentials.CreateSecurityTokenManager" target="_top">.NET documentation</a>
+     */
     public SecurityTokenManager CreateSecurityTokenManager() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +231,23 @@ public class ServiceCredentials extends system.servicemodel.security.SecurityCre
         }
     }
 
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceCredentials.Clone" target="_top">.NET documentation</a>
+     */
     public ServiceCredentials Clone() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,8 +266,15 @@ public class ServiceCredentials extends system.servicemodel.security.SecurityCre
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIServiceBehavior method available in IServiceBehavior to obtain an object with an invocable method
+     *
+     * @param serviceDescription the argument of type {@code ServiceDescription}
+     * @param serviceHostBase the argument of type {@code ServiceHostBase}
+     * @param endpoints the argument of type {@code Collection_1}
+     * @param bindingParameters the argument of type {@code BindingParameterCollection}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IServiceBehavior.AddBindingParameters" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void AddBindingParameters(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase, Collection_1 endpoints, BindingParameterCollection bindingParameters) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
     }
@@ -217,8 +282,13 @@ public class ServiceCredentials extends system.servicemodel.security.SecurityCre
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIServiceBehavior method available in IServiceBehavior to obtain an object with an invocable method
+     *
+     * @param serviceDescription the argument of type {@code ServiceDescription}
+     * @param serviceHostBase the argument of type {@code ServiceHostBase}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ApplyDispatchBehavior(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
     }
@@ -226,8 +296,13 @@ public class ServiceCredentials extends system.servicemodel.security.SecurityCre
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIServiceBehavior method available in IServiceBehavior to obtain an object with an invocable method
+     *
+     * @param serviceDescription the argument of type {@code ServiceDescription}
+     * @param serviceHostBase the argument of type {@code ServiceHostBase}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IServiceBehavior.Validate" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Validate(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
     }
@@ -236,6 +311,13 @@ public class ServiceCredentials extends system.servicemodel.security.SecurityCre
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property UseIdentityConfiguration.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceCredentials.UseIdentityConfiguration" target="_top">.NET documentation</a>
+     */
     public boolean getUseIdentityConfiguration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +332,33 @@ public class ServiceCredentials extends system.servicemodel.security.SecurityCre
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseIdentityConfiguration.
+     *
+     * @param UseIdentityConfiguration the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceCredentials.UseIdentityConfiguration" target="_top">.NET documentation</a>
+     */
     public void setUseIdentityConfiguration(boolean UseIdentityConfiguration) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.UriFormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +369,13 @@ public class ServiceCredentials extends system.servicemodel.security.SecurityCre
         }
     }
 
+    /**
+     * Gets the value of the .NET property IdentityConfiguration.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceCredentials.IdentityConfiguration" target="_top">.NET documentation</a>
+     */
     public IdentityConfiguration getIdentityConfiguration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +391,29 @@ public class ServiceCredentials extends system.servicemodel.security.SecurityCre
         }
     }
 
+    /**
+     * Sets the value of the .NET property IdentityConfiguration.
+     *
+     * @param IdentityConfiguration the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceCredentials.IdentityConfiguration" target="_top">.NET documentation</a>
+     */
     public void setIdentityConfiguration(IdentityConfiguration IdentityConfiguration) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -285,6 +424,13 @@ public class ServiceCredentials extends system.servicemodel.security.SecurityCre
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExceptionMapper.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceCredentials.ExceptionMapper" target="_top">.NET documentation</a>
+     */
     public ExceptionMapper getExceptionMapper() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +446,29 @@ public class ServiceCredentials extends system.servicemodel.security.SecurityCre
         }
     }
 
+    /**
+     * Sets the value of the .NET property ExceptionMapper.
+     *
+     * @param ExceptionMapper the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceCredentials.ExceptionMapper" target="_top">.NET documentation</a>
+     */
     public void setExceptionMapper(ExceptionMapper ExceptionMapper) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +479,13 @@ public class ServiceCredentials extends system.servicemodel.security.SecurityCre
         }
     }
 
+    /**
+     * Gets the value of the .NET property IssuedTokenAuthentication.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication" target="_top">.NET documentation</a>
+     */
     public IssuedTokenServiceCredential getIssuedTokenAuthentication() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -325,6 +501,13 @@ public class ServiceCredentials extends system.servicemodel.security.SecurityCre
         }
     }
 
+    /**
+     * Gets the value of the .NET property Peer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceCredentials.Peer" target="_top">.NET documentation</a>
+     */
     public PeerCredential getPeer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -340,6 +523,13 @@ public class ServiceCredentials extends system.servicemodel.security.SecurityCre
         }
     }
 
+    /**
+     * Gets the value of the .NET property SecureConversationAuthentication.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceCredentials.SecureConversationAuthentication" target="_top">.NET documentation</a>
+     */
     public SecureConversationServiceCredential getSecureConversationAuthentication() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -355,6 +545,13 @@ public class ServiceCredentials extends system.servicemodel.security.SecurityCre
         }
     }
 
+    /**
+     * Gets the value of the .NET property UserNameAuthentication.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceCredentials.UserNameAuthentication" target="_top">.NET documentation</a>
+     */
     public UserNamePasswordServiceCredential getUserNameAuthentication() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -370,6 +567,13 @@ public class ServiceCredentials extends system.servicemodel.security.SecurityCre
         }
     }
 
+    /**
+     * Gets the value of the .NET property WindowsAuthentication.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceCredentials.WindowsAuthentication" target="_top">.NET documentation</a>
+     */
     public WindowsServiceCredential getWindowsAuthentication() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -385,6 +589,13 @@ public class ServiceCredentials extends system.servicemodel.security.SecurityCre
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClientCertificate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceCredentials.ClientCertificate" target="_top">.NET documentation</a>
+     */
     public X509CertificateInitiatorServiceCredential getClientCertificate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -400,6 +611,13 @@ public class ServiceCredentials extends system.servicemodel.security.SecurityCre
         }
     }
 
+    /**
+     * Gets the value of the .NET property ServiceCertificate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceCredentials.ServiceCertificate" target="_top">.NET documentation</a>
+     */
     public X509CertificateRecipientServiceCredential getServiceCertificate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

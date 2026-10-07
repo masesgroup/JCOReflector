@@ -102,7 +102,10 @@ public class Point extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Point(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,13 @@ public class Point extends system.ValueType  {
     public Point() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param dw the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Point.-ctor" target="_top">.NET documentation</a>
+     */
     public Point(int dw) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +172,14 @@ public class Point extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param x the argument of type {@code int}
+     * @param y the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Point.-ctor" target="_top">.NET documentation</a>
+     */
     public Point(int x, int y) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +190,13 @@ public class Point extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param sz the argument of type {@code Size}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Point.-ctor" target="_top">.NET documentation</a>
+     */
     public Point(Size sz) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -187,6 +212,15 @@ public class Point extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param pt the argument of type {@code Point}
+     * @param sz the argument of type {@code Size}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Point.Add" target="_top">.NET documentation</a>
+     */
     public static Point Add(Point pt, Size sz) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -202,6 +236,14 @@ public class Point extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Ceiling.
+     *
+     * @param value the argument of type {@code PointF}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Point.Ceiling" target="_top">.NET documentation</a>
+     */
     public static Point Ceiling(PointF value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -217,6 +259,14 @@ public class Point extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Round.
+     *
+     * @param value the argument of type {@code PointF}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Point.Round" target="_top">.NET documentation</a>
+     */
     public static Point Round(PointF value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -232,6 +282,15 @@ public class Point extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Subtract.
+     *
+     * @param pt the argument of type {@code Point}
+     * @param sz the argument of type {@code Size}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Point.Subtract" target="_top">.NET documentation</a>
+     */
     public static Point Subtract(Point pt, Size sz) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -247,6 +306,14 @@ public class Point extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Truncate.
+     *
+     * @param value the argument of type {@code PointF}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Point.Truncate" target="_top">.NET documentation</a>
+     */
     public static Point Truncate(PointF value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -262,6 +329,14 @@ public class Point extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Offset.
+     *
+     * @param dx the argument of type {@code int}
+     * @param dy the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Point.Offset" target="_top">.NET documentation</a>
+     */
     public void Offset(int dx, int dy) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +347,13 @@ public class Point extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Offset.
+     *
+     * @param p the argument of type {@code Point}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Point.Offset" target="_top">.NET documentation</a>
+     */
     public void Offset(Point p) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +368,13 @@ public class Point extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsEmpty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Point.IsEmpty" target="_top">.NET documentation</a>
+     */
     public boolean getIsEmpty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +389,13 @@ public class Point extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property X.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Point.X" target="_top">.NET documentation</a>
+     */
     public int getX() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -340,6 +436,13 @@ public class Point extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property X.
+     *
+     * @param X the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Point.X" target="_top">.NET documentation</a>
+     */
     public void setX(int X) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -350,6 +453,13 @@ public class Point extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Y.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Point.Y" target="_top">.NET documentation</a>
+     */
     public int getY() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -390,6 +500,13 @@ public class Point extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Y.
+     *
+     * @param Y the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Point.Y" target="_top">.NET documentation</a>
+     */
     public void setY(int Y) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class ReplicationOperationInformation extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ReplicationOperationInformation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class ReplicationOperationInformation extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.ReplicationOperationInformation.-ctor" target="_top">.NET documentation</a>
+     */
     public ReplicationOperationInformation() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +175,13 @@ public class ReplicationOperationInformation extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property OperationStartTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.ReplicationOperationInformation.OperationStartTime" target="_top">.NET documentation</a>
+     */
     public DateTime getOperationStartTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +197,13 @@ public class ReplicationOperationInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentOperation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.ReplicationOperationInformation.CurrentOperation" target="_top">.NET documentation</a>
+     */
     public ReplicationOperation getCurrentOperation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +219,13 @@ public class ReplicationOperationInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PendingOperations.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.ReplicationOperationInformation.PendingOperations" target="_top">.NET documentation</a>
+     */
     public ReplicationOperationCollection getPendingOperations() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

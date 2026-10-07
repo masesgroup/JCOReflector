@@ -106,7 +106,10 @@ public class SecurityTokenHandlerConfigurationElement extends system.configurati
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SecurityTokenHandlerConfigurationElement(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,16 @@ public class SecurityTokenHandlerConfigurationElement extends system.configurati
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenHandlerConfigurationElement.-ctor" target="_top">.NET documentation</a>
+     */
     public SecurityTokenHandlerConfigurationElement() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.collections.generic.KeyNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +184,30 @@ public class SecurityTokenHandlerConfigurationElement extends system.configurati
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SaveBootstrapContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenHandlerConfigurationElement.SaveBootstrapContext" target="_top">.NET documentation</a>
+     */
     public boolean getSaveBootstrapContext() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +222,31 @@ public class SecurityTokenHandlerConfigurationElement extends system.configurati
         }
     }
 
+    /**
+     * Sets the value of the .NET property SaveBootstrapContext.
+     *
+     * @param SaveBootstrapContext the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenHandlerConfigurationElement.SaveBootstrapContext" target="_top">.NET documentation</a>
+     */
     public void setSaveBootstrapContext(boolean SaveBootstrapContext) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +257,30 @@ public class SecurityTokenHandlerConfigurationElement extends system.configurati
         }
     }
 
+    /**
+     * Gets the value of the .NET property AudienceUris.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenHandlerConfigurationElement.AudienceUris" target="_top">.NET documentation</a>
+     */
     public AudienceUriElementCollection getAudienceUris() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +296,30 @@ public class SecurityTokenHandlerConfigurationElement extends system.configurati
         }
     }
 
+    /**
+     * Gets the value of the .NET property IssuerTokenResolver.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenHandlerConfigurationElement.IssuerTokenResolver" target="_top">.NET documentation</a>
+     */
     public CustomTypeElement getIssuerTokenResolver() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +335,31 @@ public class SecurityTokenHandlerConfigurationElement extends system.configurati
         }
     }
 
+    /**
+     * Sets the value of the .NET property IssuerTokenResolver.
+     *
+     * @param IssuerTokenResolver the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenHandlerConfigurationElement.IssuerTokenResolver" target="_top">.NET documentation</a>
+     */
     public void setIssuerTokenResolver(CustomTypeElement IssuerTokenResolver) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +370,30 @@ public class SecurityTokenHandlerConfigurationElement extends system.configurati
         }
     }
 
+    /**
+     * Gets the value of the .NET property ServiceTokenResolver.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenHandlerConfigurationElement.ServiceTokenResolver" target="_top">.NET documentation</a>
+     */
     public CustomTypeElement getServiceTokenResolver() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +409,31 @@ public class SecurityTokenHandlerConfigurationElement extends system.configurati
         }
     }
 
+    /**
+     * Sets the value of the .NET property ServiceTokenResolver.
+     *
+     * @param ServiceTokenResolver the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenHandlerConfigurationElement.ServiceTokenResolver" target="_top">.NET documentation</a>
+     */
     public void setServiceTokenResolver(CustomTypeElement ServiceTokenResolver) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +444,30 @@ public class SecurityTokenHandlerConfigurationElement extends system.configurati
         }
     }
 
+    /**
+     * Gets the value of the .NET property Caches.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenHandlerConfigurationElement.Caches" target="_top">.NET documentation</a>
+     */
     public IdentityModelCachesElement getCaches() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +483,31 @@ public class SecurityTokenHandlerConfigurationElement extends system.configurati
         }
     }
 
+    /**
+     * Sets the value of the .NET property Caches.
+     *
+     * @param Caches the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenHandlerConfigurationElement.Caches" target="_top">.NET documentation</a>
+     */
     public void setCaches(IdentityModelCachesElement Caches) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -285,6 +518,30 @@ public class SecurityTokenHandlerConfigurationElement extends system.configurati
         }
     }
 
+    /**
+     * Gets the value of the .NET property IssuerNameRegistry.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenHandlerConfigurationElement.IssuerNameRegistry" target="_top">.NET documentation</a>
+     */
     public IssuerNameRegistryElement getIssuerNameRegistry() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +557,31 @@ public class SecurityTokenHandlerConfigurationElement extends system.configurati
         }
     }
 
+    /**
+     * Sets the value of the .NET property IssuerNameRegistry.
+     *
+     * @param IssuerNameRegistry the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenHandlerConfigurationElement.IssuerNameRegistry" target="_top">.NET documentation</a>
+     */
     public void setIssuerNameRegistry(IssuerNameRegistryElement IssuerNameRegistry) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +592,30 @@ public class SecurityTokenHandlerConfigurationElement extends system.configurati
         }
     }
 
+    /**
+     * Gets the value of the .NET property TokenReplayDetection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenHandlerConfigurationElement.TokenReplayDetection" target="_top">.NET documentation</a>
+     */
     public TokenReplayDetectionElement getTokenReplayDetection() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -325,6 +631,31 @@ public class SecurityTokenHandlerConfigurationElement extends system.configurati
         }
     }
 
+    /**
+     * Sets the value of the .NET property TokenReplayDetection.
+     *
+     * @param TokenReplayDetection the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenHandlerConfigurationElement.TokenReplayDetection" target="_top">.NET documentation</a>
+     */
     public void setTokenReplayDetection(TokenReplayDetectionElement TokenReplayDetection) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +666,30 @@ public class SecurityTokenHandlerConfigurationElement extends system.configurati
         }
     }
 
+    /**
+     * Gets the value of the .NET property CertificateValidation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenHandlerConfigurationElement.CertificateValidation" target="_top">.NET documentation</a>
+     */
     public X509CertificateValidationElement getCertificateValidation() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -350,6 +705,31 @@ public class SecurityTokenHandlerConfigurationElement extends system.configurati
         }
     }
 
+    /**
+     * Sets the value of the .NET property CertificateValidation.
+     *
+     * @param CertificateValidation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenHandlerConfigurationElement.CertificateValidation" target="_top">.NET documentation</a>
+     */
     public void setCertificateValidation(X509CertificateValidationElement CertificateValidation) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -360,6 +740,30 @@ public class SecurityTokenHandlerConfigurationElement extends system.configurati
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenHandlerConfigurationElement.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -374,6 +778,31 @@ public class SecurityTokenHandlerConfigurationElement extends system.configurati
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenHandlerConfigurationElement.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -384,6 +813,30 @@ public class SecurityTokenHandlerConfigurationElement extends system.configurati
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaximumClockSkew.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenHandlerConfigurationElement.MaximumClockSkew" target="_top">.NET documentation</a>
+     */
     public TimeSpan getMaximumClockSkew() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -399,6 +852,31 @@ public class SecurityTokenHandlerConfigurationElement extends system.configurati
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaximumClockSkew.
+     *
+     * @param MaximumClockSkew the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenHandlerConfigurationElement.MaximumClockSkew" target="_top">.NET documentation</a>
+     */
     public void setMaximumClockSkew(TimeSpan MaximumClockSkew) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

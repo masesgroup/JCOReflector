@@ -177,7 +177,10 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataGridView(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -224,6 +227,36 @@ public class DataGridView extends system.windows.forms.Control  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.-ctor" target="_top">.NET documentation</a>
+     */
     public DataGridView() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.runtime.interopservices.ExternalException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.security.SecurityException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -238,6 +271,33 @@ public class DataGridView extends system.windows.forms.Control  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AreAllCellsSelected.
+     *
+     * @param includeInvisibleCells the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.AreAllCellsSelected" target="_top">.NET documentation</a>
+     */
     public boolean AreAllCellsSelected(boolean includeInvisibleCells) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.MulticastNotSupportedException, system.NotSupportedException, system.threading.ThreadStateException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +312,35 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member BeginEdit.
+     *
+     * @param selectAll the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.BeginEdit" target="_top">.NET documentation</a>
+     */
     public boolean BeginEdit(boolean selectAll) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.InvalidCastException, system.collections.generic.KeyNotFoundException, system.RankException, system.OverflowException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +355,23 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member CancelEdit.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.CancelEdit" target="_top">.NET documentation</a>
+     */
     public boolean CancelEdit() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NullReferenceException, system.NotSupportedException, system.InvalidCastException, system.FormatException, system.RankException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +386,30 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member CommitEdit.
+     *
+     * @param context the argument of type {@code DataGridViewDataErrorContexts}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.CommitEdit" target="_top">.NET documentation</a>
+     */
     public boolean CommitEdit(DataGridViewDataErrorContexts context) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.ArgumentException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.InvalidCastException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +424,27 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member EndEdit.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.EndEdit" target="_top">.NET documentation</a>
+     */
     public boolean EndEdit() throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.InvalidCastException, system.security.SecurityException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +459,31 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member EndEdit.
+     *
+     * @param context the argument of type {@code DataGridViewDataErrorContexts}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.EndEdit" target="_top">.NET documentation</a>
+     */
     public boolean EndEdit(DataGridViewDataErrorContexts context) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.ArgumentException, system.NullReferenceException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidCastException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.InvalidEnumArgumentException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -322,6 +498,32 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member RefreshEdit.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.RefreshEdit" target="_top">.NET documentation</a>
+     */
     public boolean RefreshEdit() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.NotSupportedException, system.security.SecurityException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.InvalidCastException, system.FormatException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -336,6 +538,26 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member DisplayedColumnCount.
+     *
+     * @param includePartialColumns the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.DisplayedColumnCount" target="_top">.NET documentation</a>
+     */
     public int DisplayedColumnCount(boolean includePartialColumns) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -376,6 +598,14 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member DisplayedRowCount.
+     *
+     * @param includePartialRow the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.DisplayedRowCount" target="_top">.NET documentation</a>
+     */
     public int DisplayedRowCount(boolean includePartialRow) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -416,6 +646,26 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCellCount.
+     *
+     * @param includeFilter the argument of type {@code DataGridViewElementStates}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.GetCellCount" target="_top">.NET documentation</a>
+     */
     public int GetCellCount(DataGridViewElementStates includeFilter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -456,6 +706,26 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCellDisplayRectangle.
+     *
+     * @param columnIndex the argument of type {@code int}
+     * @param rowIndex the argument of type {@code int}
+     * @param cutOverflow the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.GetCellDisplayRectangle" target="_top">.NET documentation</a>
+     */
     public Rectangle GetCellDisplayRectangle(int columnIndex, int rowIndex, boolean cutOverflow) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -471,6 +741,25 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetColumnDisplayRectangle.
+     *
+     * @param columnIndex the argument of type {@code int}
+     * @param cutOverflow the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.GetColumnDisplayRectangle" target="_top">.NET documentation</a>
+     */
     public Rectangle GetColumnDisplayRectangle(int columnIndex, boolean cutOverflow) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -486,6 +775,24 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRowDisplayRectangle.
+     *
+     * @param rowIndex the argument of type {@code int}
+     * @param cutOverflow the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.GetRowDisplayRectangle" target="_top">.NET documentation</a>
+     */
     public Rectangle GetRowDisplayRectangle(int rowIndex, boolean cutOverflow) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -501,6 +808,27 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member AdjustColumnHeaderBorderStyle.
+     *
+     * @param dataGridViewAdvancedBorderStyleInput the argument of type {@code DataGridViewAdvancedBorderStyle}
+     * @param dataGridViewAdvancedBorderStylePlaceholder the argument of type {@code DataGridViewAdvancedBorderStyle}
+     * @param isFirstDisplayedColumn the argument of type {@code boolean}
+     * @param isLastVisibleColumn the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.AdjustColumnHeaderBorderStyle" target="_top">.NET documentation</a>
+     */
     public DataGridViewAdvancedBorderStyle AdjustColumnHeaderBorderStyle(DataGridViewAdvancedBorderStyle dataGridViewAdvancedBorderStyleInput, DataGridViewAdvancedBorderStyle dataGridViewAdvancedBorderStylePlaceholder, boolean isFirstDisplayedColumn, boolean isLastVisibleColumn) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -516,6 +844,31 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetClipboardContent.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.GetClipboardContent" target="_top">.NET documentation</a>
+     */
     public DataObject GetClipboardContent() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.RankException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -531,6 +884,23 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member AutoResizeColumn.
+     *
+     * @param columnIndex the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.AutoResizeColumn" target="_top">.NET documentation</a>
+     */
     public void AutoResizeColumn(int columnIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -541,6 +911,27 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member AutoResizeColumn.
+     *
+     * @param columnIndex the argument of type {@code int}
+     * @param autoSizeColumnMode the argument of type {@code DataGridViewAutoSizeColumnMode}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.AutoResizeColumn" target="_top">.NET documentation</a>
+     */
     public void AutoResizeColumn(int columnIndex, DataGridViewAutoSizeColumnMode autoSizeColumnMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -551,6 +942,21 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member AutoResizeColumnHeadersHeight.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.AutoResizeColumnHeadersHeight" target="_top">.NET documentation</a>
+     */
     public void AutoResizeColumnHeadersHeight() throws Throwable, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -561,6 +967,20 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member AutoResizeColumnHeadersHeight.
+     *
+     * @param columnIndex the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.AutoResizeColumnHeadersHeight" target="_top">.NET documentation</a>
+     */
     public void AutoResizeColumnHeadersHeight(int columnIndex) throws Throwable, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -571,6 +991,21 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member AutoResizeColumns.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.AutoResizeColumns" target="_top">.NET documentation</a>
+     */
     public void AutoResizeColumns() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -581,6 +1016,23 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member AutoResizeColumns.
+     *
+     * @param autoSizeColumnsMode the argument of type {@code DataGridViewAutoSizeColumnsMode}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.AutoResizeColumns" target="_top">.NET documentation</a>
+     */
     public void AutoResizeColumns(DataGridViewAutoSizeColumnsMode autoSizeColumnsMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -591,6 +1043,25 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member AutoResizeRow.
+     *
+     * @param rowIndex the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.AutoResizeRow" target="_top">.NET documentation</a>
+     */
     public void AutoResizeRow(int rowIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -601,6 +1072,28 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member AutoResizeRow.
+     *
+     * @param rowIndex the argument of type {@code int}
+     * @param autoSizeRowMode the argument of type {@code DataGridViewAutoSizeRowMode}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.AutoResizeRow" target="_top">.NET documentation</a>
+     */
     public void AutoResizeRow(int rowIndex, DataGridViewAutoSizeRowMode autoSizeRowMode) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -611,6 +1104,27 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member AutoResizeRowHeadersWidth.
+     *
+     * @param rowIndex the argument of type {@code int}
+     * @param rowHeadersWidthSizeMode the argument of type {@code DataGridViewRowHeadersWidthSizeMode}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.AutoResizeRowHeadersWidth" target="_top">.NET documentation</a>
+     */
     public void AutoResizeRowHeadersWidth(int rowIndex, DataGridViewRowHeadersWidthSizeMode rowHeadersWidthSizeMode) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -621,6 +1135,26 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member AutoResizeRowHeadersWidth.
+     *
+     * @param rowHeadersWidthSizeMode the argument of type {@code DataGridViewRowHeadersWidthSizeMode}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.AutoResizeRowHeadersWidth" target="_top">.NET documentation</a>
+     */
     public void AutoResizeRowHeadersWidth(DataGridViewRowHeadersWidthSizeMode rowHeadersWidthSizeMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -631,6 +1165,23 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member AutoResizeRows.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.AutoResizeRows" target="_top">.NET documentation</a>
+     */
     public void AutoResizeRows() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -641,6 +1192,27 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member AutoResizeRows.
+     *
+     * @param autoSizeRowsMode the argument of type {@code DataGridViewAutoSizeRowsMode}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.AutoResizeRows" target="_top">.NET documentation</a>
+     */
     public void AutoResizeRows(DataGridViewAutoSizeRowsMode autoSizeRowsMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -651,6 +1223,26 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member ClearSelection.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.ClearSelection" target="_top">.NET documentation</a>
+     */
     public void ClearSelection() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.NullReferenceException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidCastException, system.security.SecurityException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -661,6 +1253,25 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member InvalidateCell.
+     *
+     * @param columnIndex the argument of type {@code int}
+     * @param rowIndex the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.InvalidateCell" target="_top">.NET documentation</a>
+     */
     public void InvalidateCell(int columnIndex, int rowIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -671,6 +1282,26 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member InvalidateCell.
+     *
+     * @param dataGridViewCell the argument of type {@code DataGridViewCell}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.InvalidateCell" target="_top">.NET documentation</a>
+     */
     public void InvalidateCell(DataGridViewCell dataGridViewCell) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -681,6 +1312,26 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member InvalidateColumn.
+     *
+     * @param columnIndex the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.InvalidateColumn" target="_top">.NET documentation</a>
+     */
     public void InvalidateColumn(int columnIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.RankException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -691,6 +1342,25 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member InvalidateRow.
+     *
+     * @param rowIndex the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.InvalidateRow" target="_top">.NET documentation</a>
+     */
     public void InvalidateRow(int rowIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -701,6 +1371,24 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member NotifyCurrentCellDirty.
+     *
+     * @param dirty the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.NotifyCurrentCellDirty" target="_top">.NET documentation</a>
+     */
     public void NotifyCurrentCellDirty(boolean dirty) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -711,6 +1399,23 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResetText.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.ResetText" target="_top">.NET documentation</a>
+     */
     public void ResetText() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -721,6 +1426,30 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member SelectAll.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.SelectAll" target="_top">.NET documentation</a>
+     */
     public void SelectAll() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.TypeLoadException, system.MulticastNotSupportedException, system.NotSupportedException, system.threading.ThreadStateException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -731,6 +1460,33 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member Sort.
+     *
+     * @param comparer the argument of type {@code IComparer}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.Sort" target="_top">.NET documentation</a>
+     */
     public void Sort(IComparer comparer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.OverflowException, system.InvalidCastException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -741,6 +1497,35 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member Sort.
+     *
+     * @param dataGridViewColumn the argument of type {@code DataGridViewColumn}
+     * @param direction the argument of type {@code ListSortDirection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.Sort" target="_top">.NET documentation</a>
+     */
     public void Sort(DataGridViewColumn dataGridViewColumn, ListSortDirection direction) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.InvalidCastException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -751,6 +1536,25 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member UpdateCellErrorText.
+     *
+     * @param columnIndex the argument of type {@code int}
+     * @param rowIndex the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.UpdateCellErrorText" target="_top">.NET documentation</a>
+     */
     public void UpdateCellErrorText(int columnIndex, int rowIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -761,6 +1565,26 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member UpdateCellValue.
+     *
+     * @param columnIndex the argument of type {@code int}
+     * @param rowIndex the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.UpdateCellValue" target="_top">.NET documentation</a>
+     */
     public void UpdateCellValue(int columnIndex, int rowIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -771,6 +1595,24 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member UpdateRowErrorText.
+     *
+     * @param rowIndex the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.UpdateRowErrorText" target="_top">.NET documentation</a>
+     */
     public void UpdateRowErrorText(int rowIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -781,6 +1623,28 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member UpdateRowErrorText.
+     *
+     * @param rowIndexStart the argument of type {@code int}
+     * @param rowIndexEnd the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.UpdateRowErrorText" target="_top">.NET documentation</a>
+     */
     public void UpdateRowErrorText(int rowIndexStart, int rowIndexEnd) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -791,6 +1655,30 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member UpdateRowHeightInfo.
+     *
+     * @param rowIndex the argument of type {@code int}
+     * @param updateToEnd the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.UpdateRowHeightInfo" target="_top">.NET documentation</a>
+     */
     public void UpdateRowHeightInfo(int rowIndex, boolean updateToEnd) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.ArithmeticException, system.RankException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -804,8 +1692,11 @@ public class DataGridView extends system.windows.forms.Control  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToISupportInitialize method available in ISupportInitialize to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ISupportInitialize.BeginInit" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void BeginInit() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
     }
@@ -813,8 +1704,11 @@ public class DataGridView extends system.windows.forms.Control  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToISupportInitialize method available in ISupportInitialize to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ISupportInitialize.EndInit" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void EndInit() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
     }
@@ -823,6 +1717,13 @@ public class DataGridView extends system.windows.forms.Control  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowUserToAddRows.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.AllowUserToAddRows" target="_top">.NET documentation</a>
+     */
     public boolean getAllowUserToAddRows() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -837,6 +1738,24 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowUserToAddRows.
+     *
+     * @param AllowUserToAddRows the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.AllowUserToAddRows" target="_top">.NET documentation</a>
+     */
     public void setAllowUserToAddRows(boolean AllowUserToAddRows) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -847,6 +1766,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowUserToDeleteRows.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.AllowUserToDeleteRows" target="_top">.NET documentation</a>
+     */
     public boolean getAllowUserToDeleteRows() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -861,6 +1787,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowUserToDeleteRows.
+     *
+     * @param AllowUserToDeleteRows the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.AllowUserToDeleteRows" target="_top">.NET documentation</a>
+     */
     public void setAllowUserToDeleteRows(boolean AllowUserToDeleteRows) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -871,6 +1804,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowUserToOrderColumns.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.AllowUserToOrderColumns" target="_top">.NET documentation</a>
+     */
     public boolean getAllowUserToOrderColumns() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -885,6 +1825,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowUserToOrderColumns.
+     *
+     * @param AllowUserToOrderColumns the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.AllowUserToOrderColumns" target="_top">.NET documentation</a>
+     */
     public void setAllowUserToOrderColumns(boolean AllowUserToOrderColumns) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -895,6 +1842,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowUserToResizeColumns.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.AllowUserToResizeColumns" target="_top">.NET documentation</a>
+     */
     public boolean getAllowUserToResizeColumns() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -909,6 +1863,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowUserToResizeColumns.
+     *
+     * @param AllowUserToResizeColumns the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.AllowUserToResizeColumns" target="_top">.NET documentation</a>
+     */
     public void setAllowUserToResizeColumns(boolean AllowUserToResizeColumns) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -919,6 +1880,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowUserToResizeRows.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.AllowUserToResizeRows" target="_top">.NET documentation</a>
+     */
     public boolean getAllowUserToResizeRows() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -933,6 +1901,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowUserToResizeRows.
+     *
+     * @param AllowUserToResizeRows the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.AllowUserToResizeRows" target="_top">.NET documentation</a>
+     */
     public void setAllowUserToResizeRows(boolean AllowUserToResizeRows) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -943,6 +1918,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AutoGenerateColumns.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.AutoGenerateColumns" target="_top">.NET documentation</a>
+     */
     public boolean getAutoGenerateColumns() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -957,6 +1939,26 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AutoGenerateColumns.
+     *
+     * @param AutoGenerateColumns the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.AutoGenerateColumns" target="_top">.NET documentation</a>
+     */
     public void setAutoGenerateColumns(boolean AutoGenerateColumns) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.InvalidCastException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -967,6 +1969,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ColumnHeadersVisible.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.ColumnHeadersVisible" target="_top">.NET documentation</a>
+     */
     public boolean getColumnHeadersVisible() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -981,6 +1990,30 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ColumnHeadersVisible.
+     *
+     * @param ColumnHeadersVisible the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.ColumnHeadersVisible" target="_top">.NET documentation</a>
+     */
     public void setColumnHeadersVisible(boolean ColumnHeadersVisible) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.ArithmeticException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -991,6 +2024,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EnableHeadersVisualStyles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.EnableHeadersVisualStyles" target="_top">.NET documentation</a>
+     */
     public boolean getEnableHeadersVisualStyles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1005,6 +2045,27 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EnableHeadersVisualStyles.
+     *
+     * @param EnableHeadersVisualStyles the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.EnableHeadersVisualStyles" target="_top">.NET documentation</a>
+     */
     public void setEnableHeadersVisualStyles(boolean EnableHeadersVisualStyles) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1015,6 +2076,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsCurrentCellDirty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.IsCurrentCellDirty" target="_top">.NET documentation</a>
+     */
     public boolean getIsCurrentCellDirty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1029,6 +2097,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsCurrentCellInEditMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.IsCurrentCellInEditMode" target="_top">.NET documentation</a>
+     */
     public boolean getIsCurrentCellInEditMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1043,6 +2118,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsCurrentRowDirty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.IsCurrentRowDirty" target="_top">.NET documentation</a>
+     */
     public boolean getIsCurrentRowDirty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1057,6 +2139,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MultiSelect.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.MultiSelect" target="_top">.NET documentation</a>
+     */
     public boolean getMultiSelect() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1071,6 +2160,27 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MultiSelect.
+     *
+     * @param MultiSelect the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.MultiSelect" target="_top">.NET documentation</a>
+     */
     public void setMultiSelect(boolean MultiSelect) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NullReferenceException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1081,6 +2191,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReadOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.ReadOnly" target="_top">.NET documentation</a>
+     */
     public boolean getReadOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1095,6 +2212,30 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReadOnly.
+     *
+     * @param ReadOnly the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.ReadOnly" target="_top">.NET documentation</a>
+     */
     public void setReadOnly(boolean ReadOnly) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.ArgumentException, system.NullReferenceException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidCastException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.InvalidEnumArgumentException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1105,6 +2246,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RowHeadersVisible.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.RowHeadersVisible" target="_top">.NET documentation</a>
+     */
     public boolean getRowHeadersVisible() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1119,6 +2267,29 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RowHeadersVisible.
+     *
+     * @param RowHeadersVisible the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.RowHeadersVisible" target="_top">.NET documentation</a>
+     */
     public void setRowHeadersVisible(boolean RowHeadersVisible) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException, system.ArithmeticException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1129,6 +2300,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShowCellErrors.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.ShowCellErrors" target="_top">.NET documentation</a>
+     */
     public boolean getShowCellErrors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1143,6 +2321,29 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ShowCellErrors.
+     *
+     * @param ShowCellErrors the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.ShowCellErrors" target="_top">.NET documentation</a>
+     */
     public void setShowCellErrors(boolean ShowCellErrors) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.security.SecurityException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1153,6 +2354,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShowCellToolTips.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.ShowCellToolTips" target="_top">.NET documentation</a>
+     */
     public boolean getShowCellToolTips() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1167,6 +2375,28 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ShowCellToolTips.
+     *
+     * @param ShowCellToolTips the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.ShowCellToolTips" target="_top">.NET documentation</a>
+     */
     public void setShowCellToolTips(boolean ShowCellToolTips) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.security.SecurityException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1177,6 +2407,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShowEditingIcon.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.ShowEditingIcon" target="_top">.NET documentation</a>
+     */
     public boolean getShowEditingIcon() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1191,6 +2428,24 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ShowEditingIcon.
+     *
+     * @param ShowEditingIcon the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.ShowEditingIcon" target="_top">.NET documentation</a>
+     */
     public void setShowEditingIcon(boolean ShowEditingIcon) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1201,6 +2456,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShowRowErrors.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.ShowRowErrors" target="_top">.NET documentation</a>
+     */
     public boolean getShowRowErrors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1215,6 +2477,28 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ShowRowErrors.
+     *
+     * @param ShowRowErrors the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.ShowRowErrors" target="_top">.NET documentation</a>
+     */
     public void setShowRowErrors(boolean ShowRowErrors) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.security.SecurityException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1225,6 +2509,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StandardTab.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.StandardTab" target="_top">.NET documentation</a>
+     */
     public boolean getStandardTab() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1239,6 +2530,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StandardTab.
+     *
+     * @param StandardTab the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.StandardTab" target="_top">.NET documentation</a>
+     */
     public void setStandardTab(boolean StandardTab) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1249,6 +2547,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VirtualMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.VirtualMode" target="_top">.NET documentation</a>
+     */
     public boolean getVirtualMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1263,6 +2568,29 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property VirtualMode.
+     *
+     * @param VirtualMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.VirtualMode" target="_top">.NET documentation</a>
+     */
     public void setVirtualMode(boolean VirtualMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.ArithmeticException, system.RankException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1273,6 +2601,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ColumnCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.ColumnCount" target="_top">.NET documentation</a>
+     */
     public int getColumnCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1313,6 +2648,29 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ColumnCount.
+     *
+     * @param ColumnCount the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.ColumnCount" target="_top">.NET documentation</a>
+     */
     public void setColumnCount(int ColumnCount) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.FormatException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1323,6 +2681,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ColumnHeadersHeight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.ColumnHeadersHeight" target="_top">.NET documentation</a>
+     */
     public int getColumnHeadersHeight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1363,6 +2728,29 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ColumnHeadersHeight.
+     *
+     * @param ColumnHeadersHeight the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.ColumnHeadersHeight" target="_top">.NET documentation</a>
+     */
     public void setColumnHeadersHeight(int ColumnHeadersHeight) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.ArithmeticException, system.RankException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1373,6 +2761,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FirstDisplayedScrollingColumnHiddenWidth.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.FirstDisplayedScrollingColumnHiddenWidth" target="_top">.NET documentation</a>
+     */
     public int getFirstDisplayedScrollingColumnHiddenWidth() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1413,6 +2808,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FirstDisplayedScrollingColumnIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.FirstDisplayedScrollingColumnIndex" target="_top">.NET documentation</a>
+     */
     public int getFirstDisplayedScrollingColumnIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1453,6 +2855,34 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FirstDisplayedScrollingColumnIndex.
+     *
+     * @param FirstDisplayedScrollingColumnIndex the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.FirstDisplayedScrollingColumnIndex" target="_top">.NET documentation</a>
+     */
     public void setFirstDisplayedScrollingColumnIndex(int FirstDisplayedScrollingColumnIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.Win32Exception, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1463,6 +2893,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FirstDisplayedScrollingRowIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.FirstDisplayedScrollingRowIndex" target="_top">.NET documentation</a>
+     */
     public int getFirstDisplayedScrollingRowIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1503,6 +2940,34 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FirstDisplayedScrollingRowIndex.
+     *
+     * @param FirstDisplayedScrollingRowIndex the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.FirstDisplayedScrollingRowIndex" target="_top">.NET documentation</a>
+     */
     public void setFirstDisplayedScrollingRowIndex(int FirstDisplayedScrollingRowIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.InvalidCastException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1513,6 +2978,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HorizontalScrollingOffset.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.HorizontalScrollingOffset" target="_top">.NET documentation</a>
+     */
     public int getHorizontalScrollingOffset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1553,6 +3025,35 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HorizontalScrollingOffset.
+     *
+     * @param HorizontalScrollingOffset the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.HorizontalScrollingOffset" target="_top">.NET documentation</a>
+     */
     public void setHorizontalScrollingOffset(int HorizontalScrollingOffset) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.RankException, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1563,6 +3064,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NewRowIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.NewRowIndex" target="_top">.NET documentation</a>
+     */
     public int getNewRowIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1603,6 +3111,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RowCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.RowCount" target="_top">.NET documentation</a>
+     */
     public int getRowCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1643,6 +3158,31 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RowCount.
+     *
+     * @param RowCount the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.RowCount" target="_top">.NET documentation</a>
+     */
     public void setRowCount(int RowCount) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.componentmodel.InvalidEnumArgumentException, system.InvalidCastException, system.componentmodel.Win32Exception, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1653,6 +3193,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RowHeadersWidth.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.RowHeadersWidth" target="_top">.NET documentation</a>
+     */
     public int getRowHeadersWidth() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1693,6 +3240,29 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RowHeadersWidth.
+     *
+     * @param RowHeadersWidth the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.RowHeadersWidth" target="_top">.NET documentation</a>
+     */
     public void setRowHeadersWidth(int RowHeadersWidth) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.ArithmeticException, system.RankException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1703,6 +3273,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VerticalScrollingOffset.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.VerticalScrollingOffset" target="_top">.NET documentation</a>
+     */
     public int getVerticalScrollingOffset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1743,6 +3320,23 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BackgroundColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.BackgroundColor" target="_top">.NET documentation</a>
+     */
     public Color getBackgroundColor() throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1758,6 +3352,29 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BackgroundColor.
+     *
+     * @param BackgroundColor the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.BackgroundColor" target="_top">.NET documentation</a>
+     */
     public void setBackgroundColor(Color BackgroundColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1768,6 +3385,23 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GridColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.GridColor" target="_top">.NET documentation</a>
+     */
     public Color getGridColor() throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1783,6 +3417,29 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property GridColor.
+     *
+     * @param GridColor the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.GridColor" target="_top">.NET documentation</a>
+     */
     public void setGridColor(Color GridColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1793,6 +3450,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentCellAddress.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.CurrentCellAddress" target="_top">.NET documentation</a>
+     */
     public Point getCurrentCellAddress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1808,6 +3472,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataSource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.DataSource" target="_top">.NET documentation</a>
+     */
     public NetObject getDataSource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1823,6 +3494,31 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataSource.
+     *
+     * @param DataSource the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.DataSource" target="_top">.NET documentation</a>
+     */
     public void setDataSource(NetObject DataSource) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.InvalidEnumArgumentException, system.InvalidCastException, system.NotSupportedException, system.FormatException, system.RankException, system.OverflowException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1833,6 +3529,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataMember.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.DataMember" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDataMember() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1847,6 +3550,31 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataMember.
+     *
+     * @param DataMember the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.DataMember" target="_top">.NET documentation</a>
+     */
     public void setDataMember(java.lang.String DataMember) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.InvalidEnumArgumentException, system.InvalidCastException, system.NotSupportedException, system.FormatException, system.RankException, system.OverflowException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1857,6 +3585,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BorderStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.BorderStyle" target="_top">.NET documentation</a>
+     */
     public BorderStyle getBorderStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1872,6 +3607,32 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BorderStyle.
+     *
+     * @param BorderStyle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.BorderStyle" target="_top">.NET documentation</a>
+     */
     public void setBorderStyle(BorderStyle BorderStyle) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.ArithmeticException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1882,6 +3643,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EditingControl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.EditingControl" target="_top">.NET documentation</a>
+     */
     public Control getEditingControl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1897,6 +3665,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UserSetCursor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.UserSetCursor" target="_top">.NET documentation</a>
+     */
     public Cursor getUserSetCursor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1912,6 +3687,23 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AdjustedTopLeftHeaderBorderStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.AdjustedTopLeftHeaderBorderStyle" target="_top">.NET documentation</a>
+     */
     public DataGridViewAdvancedBorderStyle getAdjustedTopLeftHeaderBorderStyle() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1927,6 +3719,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AdvancedCellBorderStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.AdvancedCellBorderStyle" target="_top">.NET documentation</a>
+     */
     public DataGridViewAdvancedBorderStyle getAdvancedCellBorderStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1942,6 +3741,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AdvancedColumnHeadersBorderStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.AdvancedColumnHeadersBorderStyle" target="_top">.NET documentation</a>
+     */
     public DataGridViewAdvancedBorderStyle getAdvancedColumnHeadersBorderStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1957,6 +3763,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AdvancedRowHeadersBorderStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.AdvancedRowHeadersBorderStyle" target="_top">.NET documentation</a>
+     */
     public DataGridViewAdvancedBorderStyle getAdvancedRowHeadersBorderStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1972,6 +3785,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AutoSizeColumnsMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.AutoSizeColumnsMode" target="_top">.NET documentation</a>
+     */
     public DataGridViewAutoSizeColumnsMode getAutoSizeColumnsMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1987,6 +3807,28 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AutoSizeColumnsMode.
+     *
+     * @param AutoSizeColumnsMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.AutoSizeColumnsMode" target="_top">.NET documentation</a>
+     */
     public void setAutoSizeColumnsMode(DataGridViewAutoSizeColumnsMode AutoSizeColumnsMode) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1997,6 +3839,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AutoSizeRowsMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.AutoSizeRowsMode" target="_top">.NET documentation</a>
+     */
     public DataGridViewAutoSizeRowsMode getAutoSizeRowsMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2012,6 +3861,28 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AutoSizeRowsMode.
+     *
+     * @param AutoSizeRowsMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.AutoSizeRowsMode" target="_top">.NET documentation</a>
+     */
     public void setAutoSizeRowsMode(DataGridViewAutoSizeRowsMode AutoSizeRowsMode) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2022,6 +3893,30 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentCell.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.CurrentCell" target="_top">.NET documentation</a>
+     */
     public DataGridViewCell getCurrentCell() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.TypeLoadException, system.MulticastNotSupportedException, system.NotSupportedException, system.threading.ThreadStateException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2037,6 +3932,29 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CurrentCell.
+     *
+     * @param CurrentCell the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.CurrentCell" target="_top">.NET documentation</a>
+     */
     public void setCurrentCell(DataGridViewCell CurrentCell) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NullReferenceException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidCastException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2047,6 +3965,30 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FirstDisplayedCell.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.FirstDisplayedCell" target="_top">.NET documentation</a>
+     */
     public DataGridViewCell getFirstDisplayedCell() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.MulticastNotSupportedException, system.NotSupportedException, system.threading.ThreadStateException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2062,6 +4004,33 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FirstDisplayedCell.
+     *
+     * @param FirstDisplayedCell the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.FirstDisplayedCell" target="_top">.NET documentation</a>
+     */
     public void setFirstDisplayedCell(DataGridViewCell FirstDisplayedCell) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.MulticastNotSupportedException, system.threading.ThreadStateException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2072,6 +4041,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CellBorderStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.CellBorderStyle" target="_top">.NET documentation</a>
+     */
     public DataGridViewCellBorderStyle getCellBorderStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2087,6 +4063,29 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CellBorderStyle.
+     *
+     * @param CellBorderStyle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.CellBorderStyle" target="_top">.NET documentation</a>
+     */
     public void setCellBorderStyle(DataGridViewCellBorderStyle CellBorderStyle) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2097,6 +4096,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AlternatingRowsDefaultCellStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle" target="_top">.NET documentation</a>
+     */
     public DataGridViewCellStyle getAlternatingRowsDefaultCellStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2112,6 +4118,27 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AlternatingRowsDefaultCellStyle.
+     *
+     * @param AlternatingRowsDefaultCellStyle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle" target="_top">.NET documentation</a>
+     */
     public void setAlternatingRowsDefaultCellStyle(DataGridViewCellStyle AlternatingRowsDefaultCellStyle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2122,6 +4149,25 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ColumnHeadersDefaultCellStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle" target="_top">.NET documentation</a>
+     */
     public DataGridViewCellStyle getColumnHeadersDefaultCellStyle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NullReferenceException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2137,6 +4183,24 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ColumnHeadersDefaultCellStyle.
+     *
+     * @param ColumnHeadersDefaultCellStyle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle" target="_top">.NET documentation</a>
+     */
     public void setColumnHeadersDefaultCellStyle(DataGridViewCellStyle ColumnHeadersDefaultCellStyle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NullReferenceException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2147,6 +4211,25 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultCellStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.DefaultCellStyle" target="_top">.NET documentation</a>
+     */
     public DataGridViewCellStyle getDefaultCellStyle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NullReferenceException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2162,6 +4245,24 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultCellStyle.
+     *
+     * @param DefaultCellStyle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.DefaultCellStyle" target="_top">.NET documentation</a>
+     */
     public void setDefaultCellStyle(DataGridViewCellStyle DefaultCellStyle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NullReferenceException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2172,6 +4273,25 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RowHeadersDefaultCellStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle" target="_top">.NET documentation</a>
+     */
     public DataGridViewCellStyle getRowHeadersDefaultCellStyle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NullReferenceException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2187,6 +4307,24 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RowHeadersDefaultCellStyle.
+     *
+     * @param RowHeadersDefaultCellStyle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle" target="_top">.NET documentation</a>
+     */
     public void setRowHeadersDefaultCellStyle(DataGridViewCellStyle RowHeadersDefaultCellStyle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NullReferenceException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2197,6 +4335,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RowsDefaultCellStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.RowsDefaultCellStyle" target="_top">.NET documentation</a>
+     */
     public DataGridViewCellStyle getRowsDefaultCellStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2212,6 +4357,27 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RowsDefaultCellStyle.
+     *
+     * @param RowsDefaultCellStyle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.RowsDefaultCellStyle" target="_top">.NET documentation</a>
+     */
     public void setRowsDefaultCellStyle(DataGridViewCellStyle RowsDefaultCellStyle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2222,6 +4388,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClipboardCopyMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.ClipboardCopyMode" target="_top">.NET documentation</a>
+     */
     public DataGridViewClipboardCopyMode getClipboardCopyMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2237,6 +4410,28 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ClipboardCopyMode.
+     *
+     * @param ClipboardCopyMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.ClipboardCopyMode" target="_top">.NET documentation</a>
+     */
     public void setClipboardCopyMode(DataGridViewClipboardCopyMode ClipboardCopyMode) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2247,6 +4442,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SortedColumn.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.SortedColumn" target="_top">.NET documentation</a>
+     */
     public DataGridViewColumn getSortedColumn() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2262,6 +4464,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Columns.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.Columns" target="_top">.NET documentation</a>
+     */
     public DataGridViewColumnCollection getColumns() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2277,6 +4486,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ColumnHeadersHeightSizeMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode" target="_top">.NET documentation</a>
+     */
     public DataGridViewColumnHeadersHeightSizeMode getColumnHeadersHeightSizeMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2292,6 +4508,28 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ColumnHeadersHeightSizeMode.
+     *
+     * @param ColumnHeadersHeightSizeMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode" target="_top">.NET documentation</a>
+     */
     public void setColumnHeadersHeightSizeMode(DataGridViewColumnHeadersHeightSizeMode ColumnHeadersHeightSizeMode) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2302,6 +4540,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EditMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.EditMode" target="_top">.NET documentation</a>
+     */
     public DataGridViewEditMode getEditMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2317,6 +4562,35 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EditMode.
+     *
+     * @param EditMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.EditMode" target="_top">.NET documentation</a>
+     */
     public void setEditMode(DataGridViewEditMode EditMode) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.security.SecurityException, system.OutOfMemoryException, system.InvalidCastException, system.collections.generic.KeyNotFoundException, system.RankException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2327,6 +4601,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ColumnHeadersBorderStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle" target="_top">.NET documentation</a>
+     */
     public DataGridViewHeaderBorderStyle getColumnHeadersBorderStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2342,6 +4623,29 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ColumnHeadersBorderStyle.
+     *
+     * @param ColumnHeadersBorderStyle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle" target="_top">.NET documentation</a>
+     */
     public void setColumnHeadersBorderStyle(DataGridViewHeaderBorderStyle ColumnHeadersBorderStyle) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2352,6 +4656,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RowHeadersBorderStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.RowHeadersBorderStyle" target="_top">.NET documentation</a>
+     */
     public DataGridViewHeaderBorderStyle getRowHeadersBorderStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2367,6 +4678,29 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RowHeadersBorderStyle.
+     *
+     * @param RowHeadersBorderStyle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.RowHeadersBorderStyle" target="_top">.NET documentation</a>
+     */
     public void setRowHeadersBorderStyle(DataGridViewHeaderBorderStyle RowHeadersBorderStyle) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2377,6 +4711,22 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TopLeftHeaderCell.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.TopLeftHeaderCell" target="_top">.NET documentation</a>
+     */
     public DataGridViewHeaderCell getTopLeftHeaderCell() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2392,6 +4742,25 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TopLeftHeaderCell.
+     *
+     * @param TopLeftHeaderCell the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.TopLeftHeaderCell" target="_top">.NET documentation</a>
+     */
     public void setTopLeftHeaderCell(DataGridViewHeaderCell TopLeftHeaderCell) throws Throwable, system.InvalidOperationException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NullReferenceException, system.NotSupportedException, system.ArgumentNullException, system.NotImplementedException, system.MissingMethodException, system.componentmodel.InvalidEnumArgumentException, system.globalization.CultureNotFoundException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2402,6 +4771,30 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentRow.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.CurrentRow" target="_top">.NET documentation</a>
+     */
     public DataGridViewRow getCurrentRow() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.TypeLoadException, system.MulticastNotSupportedException, system.NotSupportedException, system.threading.ThreadStateException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2417,6 +4810,27 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RowTemplate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.RowTemplate" target="_top">.NET documentation</a>
+     */
     public DataGridViewRow getRowTemplate() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.RankException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2432,6 +4846,24 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RowTemplate.
+     *
+     * @param RowTemplate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.RowTemplate" target="_top">.NET documentation</a>
+     */
     public void setRowTemplate(DataGridViewRow RowTemplate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2442,6 +4874,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Rows.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.Rows" target="_top">.NET documentation</a>
+     */
     public DataGridViewRowCollection getRows() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2457,6 +4896,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RowHeadersWidthSizeMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode" target="_top">.NET documentation</a>
+     */
     public DataGridViewRowHeadersWidthSizeMode getRowHeadersWidthSizeMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2472,6 +4918,28 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RowHeadersWidthSizeMode.
+     *
+     * @param RowHeadersWidthSizeMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode" target="_top">.NET documentation</a>
+     */
     public void setRowHeadersWidthSizeMode(DataGridViewRowHeadersWidthSizeMode RowHeadersWidthSizeMode) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2482,6 +4950,30 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SelectedCells.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.SelectedCells" target="_top">.NET documentation</a>
+     */
     public DataGridViewSelectedCellCollection getSelectedCells() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.TypeLoadException, system.MulticastNotSupportedException, system.NotSupportedException, system.threading.ThreadStateException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2497,6 +4989,14 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SelectedColumns.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.SelectedColumns" target="_top">.NET documentation</a>
+     */
     public DataGridViewSelectedColumnCollection getSelectedColumns() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2512,6 +5012,30 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SelectedRows.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.SelectedRows" target="_top">.NET documentation</a>
+     */
     public DataGridViewSelectedRowCollection getSelectedRows() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.TypeLoadException, system.MulticastNotSupportedException, system.NotSupportedException, system.threading.ThreadStateException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2527,6 +5051,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SelectionMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.SelectionMode" target="_top">.NET documentation</a>
+     */
     public DataGridViewSelectionMode getSelectionMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2542,6 +5073,30 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SelectionMode.
+     *
+     * @param SelectionMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.SelectionMode" target="_top">.NET documentation</a>
+     */
     public void setSelectionMode(DataGridViewSelectionMode SelectionMode) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2552,6 +5107,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Padding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.Padding" target="_top">.NET documentation</a>
+     */
     public Padding getPadding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2567,6 +5129,21 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Padding.
+     *
+     * @param Padding the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.Padding" target="_top">.NET documentation</a>
+     */
     public void setPadding(Padding Padding) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2577,6 +5154,27 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EditingPanel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.EditingPanel" target="_top">.NET documentation</a>
+     */
     public Panel getEditingPanel() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2592,6 +5190,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ScrollBars.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.ScrollBars" target="_top">.NET documentation</a>
+     */
     public ScrollBars getScrollBars() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2607,6 +5212,34 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ScrollBars.
+     *
+     * @param ScrollBars the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.ScrollBars" target="_top">.NET documentation</a>
+     */
     public void setScrollBars(ScrollBars ScrollBars) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.RankException, system.InvalidCastException, system.runtime.interopservices.ExternalException, system.ArithmeticException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2617,6 +5250,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SortOrder.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridView.SortOrder" target="_top">.NET documentation</a>
+     */
     public SortOrder getSortOrder() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2637,6 +5277,13 @@ public class DataGridView extends system.windows.forms.Control  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addAllowUserToAddRowsChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addAllowUserToAddRowsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2647,6 +5294,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeAllowUserToAddRowsChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeAllowUserToAddRowsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2657,6 +5311,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addAllowUserToDeleteRowsChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addAllowUserToDeleteRowsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2667,6 +5328,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeAllowUserToDeleteRowsChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeAllowUserToDeleteRowsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2677,6 +5345,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addAllowUserToOrderColumnsChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addAllowUserToOrderColumnsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2687,6 +5362,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeAllowUserToOrderColumnsChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeAllowUserToOrderColumnsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2697,6 +5379,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addAllowUserToResizeColumnsChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addAllowUserToResizeColumnsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2707,6 +5396,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeAllowUserToResizeColumnsChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeAllowUserToResizeColumnsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2717,6 +5413,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addAllowUserToResizeRowsChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addAllowUserToResizeRowsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2727,6 +5430,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeAllowUserToResizeRowsChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeAllowUserToResizeRowsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2737,6 +5447,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addAlternatingRowsDefaultCellStyleChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addAlternatingRowsDefaultCellStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2747,6 +5464,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeAlternatingRowsDefaultCellStyleChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeAlternatingRowsDefaultCellStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2757,6 +5481,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addAutoGenerateColumnsChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addAutoGenerateColumnsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2767,6 +5498,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeAutoGenerateColumnsChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeAutoGenerateColumnsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2777,6 +5515,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addBackColorChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addBackColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2787,6 +5532,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeBackColorChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeBackColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2797,6 +5549,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addBackgroundColorChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addBackgroundColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2807,6 +5566,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeBackgroundColorChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeBackgroundColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2817,6 +5583,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addBackgroundImageChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addBackgroundImageChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2827,6 +5600,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeBackgroundImageChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeBackgroundImageChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2837,6 +5617,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addBackgroundImageLayoutChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addBackgroundImageLayoutChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2847,6 +5634,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeBackgroundImageLayoutChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeBackgroundImageLayoutChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2857,6 +5651,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addBorderStyleChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addBorderStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2867,6 +5668,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeBorderStyleChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeBorderStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2877,6 +5685,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCellBorderStyleChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCellBorderStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2887,6 +5702,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCellBorderStyleChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCellBorderStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2897,6 +5719,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addColumnHeadersBorderStyleChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addColumnHeadersBorderStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2907,6 +5736,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeColumnHeadersBorderStyleChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeColumnHeadersBorderStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2917,6 +5753,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addColumnHeadersDefaultCellStyleChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addColumnHeadersDefaultCellStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2927,6 +5770,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeColumnHeadersDefaultCellStyleChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeColumnHeadersDefaultCellStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2937,6 +5787,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addColumnHeadersHeightChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addColumnHeadersHeightChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2947,6 +5804,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeColumnHeadersHeightChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeColumnHeadersHeightChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2957,6 +5821,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCurrentCellChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCurrentCellChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2967,6 +5838,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCurrentCellChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCurrentCellChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2977,6 +5855,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCurrentCellDirtyStateChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCurrentCellDirtyStateChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2987,6 +5872,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCurrentCellDirtyStateChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCurrentCellDirtyStateChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2997,6 +5889,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addDataMemberChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addDataMemberChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3007,6 +5906,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeDataMemberChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeDataMemberChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3017,6 +5923,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addDataSourceChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addDataSourceChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3027,6 +5940,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeDataSourceChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeDataSourceChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3037,6 +5957,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addDefaultCellStyleChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addDefaultCellStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3047,6 +5974,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeDefaultCellStyleChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeDefaultCellStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3057,6 +5991,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addEditModeChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addEditModeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3067,6 +6008,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeEditModeChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeEditModeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3077,6 +6025,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addFontChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addFontChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3087,6 +6042,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeFontChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeFontChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3097,6 +6059,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addForeColorChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addForeColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3107,6 +6076,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeForeColorChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeForeColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3117,6 +6093,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addGridColorChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addGridColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3127,6 +6110,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeGridColorChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeGridColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3137,6 +6127,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addMultiSelectChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addMultiSelectChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3147,6 +6144,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeMultiSelectChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeMultiSelectChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3157,6 +6161,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addPaddingChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPaddingChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3167,6 +6178,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePaddingChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePaddingChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3177,6 +6195,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addReadOnlyChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addReadOnlyChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3187,6 +6212,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeReadOnlyChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeReadOnlyChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3197,6 +6229,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRowHeadersBorderStyleChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowHeadersBorderStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3207,6 +6246,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowHeadersBorderStyleChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowHeadersBorderStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3217,6 +6263,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRowHeadersDefaultCellStyleChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowHeadersDefaultCellStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3227,6 +6280,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowHeadersDefaultCellStyleChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowHeadersDefaultCellStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3237,6 +6297,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRowHeadersWidthChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowHeadersWidthChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3247,6 +6314,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowHeadersWidthChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowHeadersWidthChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3257,6 +6331,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRowsDefaultCellStyleChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowsDefaultCellStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3267,6 +6348,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowsDefaultCellStyleChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowsDefaultCellStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3277,6 +6365,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addSelectionChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addSelectionChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3287,6 +6382,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeSelectionChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeSelectionChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3297,6 +6399,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addSorted.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addSorted(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3307,6 +6416,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeSorted.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeSorted(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3317,6 +6433,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addStyleChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3327,6 +6450,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeStyleChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3337,6 +6467,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addTextChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3347,6 +6484,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeTextChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3357,6 +6501,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addAutoSizeColumnModeChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewAutoSizeColumnModeEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addAutoSizeColumnModeChanged(DataGridViewAutoSizeColumnModeEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3367,6 +6518,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeAutoSizeColumnModeChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewAutoSizeColumnModeEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeAutoSizeColumnModeChanged(DataGridViewAutoSizeColumnModeEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3377,6 +6535,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addAutoSizeColumnsModeChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewAutoSizeColumnsModeEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addAutoSizeColumnsModeChanged(DataGridViewAutoSizeColumnsModeEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3387,6 +6552,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeAutoSizeColumnsModeChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewAutoSizeColumnsModeEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeAutoSizeColumnsModeChanged(DataGridViewAutoSizeColumnsModeEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3397,6 +6569,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addAutoSizeRowsModeChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewAutoSizeModeEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addAutoSizeRowsModeChanged(DataGridViewAutoSizeModeEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3407,6 +6586,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeAutoSizeRowsModeChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewAutoSizeModeEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeAutoSizeRowsModeChanged(DataGridViewAutoSizeModeEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3417,6 +6603,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addColumnHeadersHeightSizeModeChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewAutoSizeModeEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addColumnHeadersHeightSizeModeChanged(DataGridViewAutoSizeModeEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3427,6 +6620,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeColumnHeadersHeightSizeModeChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewAutoSizeModeEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeColumnHeadersHeightSizeModeChanged(DataGridViewAutoSizeModeEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3437,6 +6637,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRowHeadersWidthSizeModeChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewAutoSizeModeEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowHeadersWidthSizeModeChanged(DataGridViewAutoSizeModeEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3447,6 +6654,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowHeadersWidthSizeModeChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewAutoSizeModeEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowHeadersWidthSizeModeChanged(DataGridViewAutoSizeModeEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3457,6 +6671,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addDataBindingComplete.
+     *
+     * @param handler the argument of type {@code DataGridViewBindingCompleteEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addDataBindingComplete(DataGridViewBindingCompleteEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3467,6 +6688,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeDataBindingComplete.
+     *
+     * @param handler the argument of type {@code DataGridViewBindingCompleteEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeDataBindingComplete(DataGridViewBindingCompleteEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3477,6 +6705,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCellBeginEdit.
+     *
+     * @param handler the argument of type {@code DataGridViewCellCancelEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCellBeginEdit(DataGridViewCellCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3487,6 +6722,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCellBeginEdit.
+     *
+     * @param handler the argument of type {@code DataGridViewCellCancelEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCellBeginEdit(DataGridViewCellCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3497,6 +6739,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRowValidating.
+     *
+     * @param handler the argument of type {@code DataGridViewCellCancelEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowValidating(DataGridViewCellCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3507,6 +6756,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowValidating.
+     *
+     * @param handler the argument of type {@code DataGridViewCellCancelEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowValidating(DataGridViewCellCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3517,6 +6773,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCellContextMenuStripNeeded.
+     *
+     * @param handler the argument of type {@code DataGridViewCellContextMenuStripNeededEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCellContextMenuStripNeeded(DataGridViewCellContextMenuStripNeededEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3527,6 +6790,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCellContextMenuStripNeeded.
+     *
+     * @param handler the argument of type {@code DataGridViewCellContextMenuStripNeededEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCellContextMenuStripNeeded(DataGridViewCellContextMenuStripNeededEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3537,6 +6807,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCellErrorTextNeeded.
+     *
+     * @param handler the argument of type {@code DataGridViewCellErrorTextNeededEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCellErrorTextNeeded(DataGridViewCellErrorTextNeededEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3547,6 +6824,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCellErrorTextNeeded.
+     *
+     * @param handler the argument of type {@code DataGridViewCellErrorTextNeededEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCellErrorTextNeeded(DataGridViewCellErrorTextNeededEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3557,6 +6841,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCellClick.
+     *
+     * @param handler the argument of type {@code DataGridViewCellEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCellClick(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3567,6 +6858,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCellClick.
+     *
+     * @param handler the argument of type {@code DataGridViewCellEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCellClick(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3577,6 +6875,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCellContentClick.
+     *
+     * @param handler the argument of type {@code DataGridViewCellEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCellContentClick(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3587,6 +6892,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCellContentClick.
+     *
+     * @param handler the argument of type {@code DataGridViewCellEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCellContentClick(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3597,6 +6909,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCellContentDoubleClick.
+     *
+     * @param handler the argument of type {@code DataGridViewCellEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCellContentDoubleClick(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3607,6 +6926,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCellContentDoubleClick.
+     *
+     * @param handler the argument of type {@code DataGridViewCellEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCellContentDoubleClick(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3617,6 +6943,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCellContextMenuStripChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewCellEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCellContextMenuStripChanged(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3627,6 +6960,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCellContextMenuStripChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewCellEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCellContextMenuStripChanged(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3637,6 +6977,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCellDoubleClick.
+     *
+     * @param handler the argument of type {@code DataGridViewCellEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCellDoubleClick(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3647,6 +6994,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCellDoubleClick.
+     *
+     * @param handler the argument of type {@code DataGridViewCellEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCellDoubleClick(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3657,6 +7011,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCellEndEdit.
+     *
+     * @param handler the argument of type {@code DataGridViewCellEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCellEndEdit(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3667,6 +7028,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCellEndEdit.
+     *
+     * @param handler the argument of type {@code DataGridViewCellEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCellEndEdit(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3677,6 +7045,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCellEnter.
+     *
+     * @param handler the argument of type {@code DataGridViewCellEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCellEnter(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3687,6 +7062,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCellEnter.
+     *
+     * @param handler the argument of type {@code DataGridViewCellEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCellEnter(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3697,6 +7079,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCellErrorTextChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewCellEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCellErrorTextChanged(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3707,6 +7096,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCellErrorTextChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewCellEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCellErrorTextChanged(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3717,6 +7113,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCellLeave.
+     *
+     * @param handler the argument of type {@code DataGridViewCellEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCellLeave(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3727,6 +7130,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCellLeave.
+     *
+     * @param handler the argument of type {@code DataGridViewCellEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCellLeave(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3737,6 +7147,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCellMouseEnter.
+     *
+     * @param handler the argument of type {@code DataGridViewCellEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCellMouseEnter(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3747,6 +7164,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCellMouseEnter.
+     *
+     * @param handler the argument of type {@code DataGridViewCellEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCellMouseEnter(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3757,6 +7181,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCellMouseLeave.
+     *
+     * @param handler the argument of type {@code DataGridViewCellEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCellMouseLeave(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3767,6 +7198,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCellMouseLeave.
+     *
+     * @param handler the argument of type {@code DataGridViewCellEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCellMouseLeave(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3777,6 +7215,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCellStyleChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewCellEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCellStyleChanged(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3787,6 +7232,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCellStyleChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewCellEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCellStyleChanged(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3797,6 +7249,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCellToolTipTextChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewCellEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCellToolTipTextChanged(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3807,6 +7266,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCellToolTipTextChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewCellEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCellToolTipTextChanged(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3817,6 +7283,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCellValidated.
+     *
+     * @param handler the argument of type {@code DataGridViewCellEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCellValidated(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3827,6 +7300,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCellValidated.
+     *
+     * @param handler the argument of type {@code DataGridViewCellEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCellValidated(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3837,6 +7317,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCellValueChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewCellEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCellValueChanged(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3847,6 +7334,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCellValueChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewCellEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCellValueChanged(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3857,6 +7351,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRowEnter.
+     *
+     * @param handler the argument of type {@code DataGridViewCellEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowEnter(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3867,6 +7368,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowEnter.
+     *
+     * @param handler the argument of type {@code DataGridViewCellEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowEnter(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3877,6 +7385,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRowLeave.
+     *
+     * @param handler the argument of type {@code DataGridViewCellEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowLeave(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3887,6 +7402,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowLeave.
+     *
+     * @param handler the argument of type {@code DataGridViewCellEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowLeave(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3897,6 +7419,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRowValidated.
+     *
+     * @param handler the argument of type {@code DataGridViewCellEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowValidated(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3907,6 +7436,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowValidated.
+     *
+     * @param handler the argument of type {@code DataGridViewCellEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowValidated(DataGridViewCellEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3917,6 +7453,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCellFormatting.
+     *
+     * @param handler the argument of type {@code DataGridViewCellFormattingEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCellFormatting(DataGridViewCellFormattingEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3927,6 +7470,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCellFormatting.
+     *
+     * @param handler the argument of type {@code DataGridViewCellFormattingEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCellFormatting(DataGridViewCellFormattingEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3937,6 +7487,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCellMouseClick.
+     *
+     * @param handler the argument of type {@code DataGridViewCellMouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCellMouseClick(DataGridViewCellMouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3947,6 +7504,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCellMouseClick.
+     *
+     * @param handler the argument of type {@code DataGridViewCellMouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCellMouseClick(DataGridViewCellMouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3957,6 +7521,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCellMouseDoubleClick.
+     *
+     * @param handler the argument of type {@code DataGridViewCellMouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCellMouseDoubleClick(DataGridViewCellMouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3967,6 +7538,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCellMouseDoubleClick.
+     *
+     * @param handler the argument of type {@code DataGridViewCellMouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCellMouseDoubleClick(DataGridViewCellMouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3977,6 +7555,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCellMouseDown.
+     *
+     * @param handler the argument of type {@code DataGridViewCellMouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCellMouseDown(DataGridViewCellMouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3987,6 +7572,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCellMouseDown.
+     *
+     * @param handler the argument of type {@code DataGridViewCellMouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCellMouseDown(DataGridViewCellMouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -3997,6 +7589,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCellMouseMove.
+     *
+     * @param handler the argument of type {@code DataGridViewCellMouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCellMouseMove(DataGridViewCellMouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4007,6 +7606,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCellMouseMove.
+     *
+     * @param handler the argument of type {@code DataGridViewCellMouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCellMouseMove(DataGridViewCellMouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4017,6 +7623,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCellMouseUp.
+     *
+     * @param handler the argument of type {@code DataGridViewCellMouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCellMouseUp(DataGridViewCellMouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4027,6 +7640,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCellMouseUp.
+     *
+     * @param handler the argument of type {@code DataGridViewCellMouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCellMouseUp(DataGridViewCellMouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4037,6 +7657,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addColumnHeaderMouseClick.
+     *
+     * @param handler the argument of type {@code DataGridViewCellMouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addColumnHeaderMouseClick(DataGridViewCellMouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4047,6 +7674,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeColumnHeaderMouseClick.
+     *
+     * @param handler the argument of type {@code DataGridViewCellMouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeColumnHeaderMouseClick(DataGridViewCellMouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4057,6 +7691,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addColumnHeaderMouseDoubleClick.
+     *
+     * @param handler the argument of type {@code DataGridViewCellMouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addColumnHeaderMouseDoubleClick(DataGridViewCellMouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4067,6 +7708,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeColumnHeaderMouseDoubleClick.
+     *
+     * @param handler the argument of type {@code DataGridViewCellMouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeColumnHeaderMouseDoubleClick(DataGridViewCellMouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4077,6 +7725,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRowHeaderMouseClick.
+     *
+     * @param handler the argument of type {@code DataGridViewCellMouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowHeaderMouseClick(DataGridViewCellMouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4087,6 +7742,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowHeaderMouseClick.
+     *
+     * @param handler the argument of type {@code DataGridViewCellMouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowHeaderMouseClick(DataGridViewCellMouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4097,6 +7759,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRowHeaderMouseDoubleClick.
+     *
+     * @param handler the argument of type {@code DataGridViewCellMouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowHeaderMouseDoubleClick(DataGridViewCellMouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4107,6 +7776,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowHeaderMouseDoubleClick.
+     *
+     * @param handler the argument of type {@code DataGridViewCellMouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowHeaderMouseDoubleClick(DataGridViewCellMouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4117,6 +7793,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCellPainting.
+     *
+     * @param handler the argument of type {@code DataGridViewCellPaintingEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCellPainting(DataGridViewCellPaintingEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4127,6 +7810,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCellPainting.
+     *
+     * @param handler the argument of type {@code DataGridViewCellPaintingEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCellPainting(DataGridViewCellPaintingEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4137,6 +7827,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCellParsing.
+     *
+     * @param handler the argument of type {@code DataGridViewCellParsingEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCellParsing(DataGridViewCellParsingEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4147,6 +7844,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCellParsing.
+     *
+     * @param handler the argument of type {@code DataGridViewCellParsingEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCellParsing(DataGridViewCellParsingEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4157,6 +7861,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCellStateChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewCellStateChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCellStateChanged(DataGridViewCellStateChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4167,6 +7878,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCellStateChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewCellStateChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCellStateChanged(DataGridViewCellStateChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4177,6 +7895,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCellStyleContentChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewCellStyleContentChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCellStyleContentChanged(DataGridViewCellStyleContentChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4187,6 +7912,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCellStyleContentChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewCellStyleContentChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCellStyleContentChanged(DataGridViewCellStyleContentChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4197,6 +7929,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCellToolTipTextNeeded.
+     *
+     * @param handler the argument of type {@code DataGridViewCellToolTipTextNeededEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCellToolTipTextNeeded(DataGridViewCellToolTipTextNeededEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4207,6 +7946,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCellToolTipTextNeeded.
+     *
+     * @param handler the argument of type {@code DataGridViewCellToolTipTextNeededEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCellToolTipTextNeeded(DataGridViewCellToolTipTextNeededEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4217,6 +7963,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCellValidating.
+     *
+     * @param handler the argument of type {@code DataGridViewCellValidatingEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCellValidating(DataGridViewCellValidatingEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4227,6 +7980,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCellValidating.
+     *
+     * @param handler the argument of type {@code DataGridViewCellValidatingEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCellValidating(DataGridViewCellValidatingEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4237,6 +7997,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCellValueNeeded.
+     *
+     * @param handler the argument of type {@code DataGridViewCellValueEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCellValueNeeded(DataGridViewCellValueEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4247,6 +8014,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCellValueNeeded.
+     *
+     * @param handler the argument of type {@code DataGridViewCellValueEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCellValueNeeded(DataGridViewCellValueEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4257,6 +8031,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCellValuePushed.
+     *
+     * @param handler the argument of type {@code DataGridViewCellValueEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCellValuePushed(DataGridViewCellValueEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4267,6 +8048,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCellValuePushed.
+     *
+     * @param handler the argument of type {@code DataGridViewCellValueEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCellValuePushed(DataGridViewCellValueEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4277,6 +8065,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addColumnDividerDoubleClick.
+     *
+     * @param handler the argument of type {@code DataGridViewColumnDividerDoubleClickEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addColumnDividerDoubleClick(DataGridViewColumnDividerDoubleClickEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4287,6 +8082,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeColumnDividerDoubleClick.
+     *
+     * @param handler the argument of type {@code DataGridViewColumnDividerDoubleClickEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeColumnDividerDoubleClick(DataGridViewColumnDividerDoubleClickEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4297,6 +8099,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addColumnAdded.
+     *
+     * @param handler the argument of type {@code DataGridViewColumnEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addColumnAdded(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4307,6 +8116,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeColumnAdded.
+     *
+     * @param handler the argument of type {@code DataGridViewColumnEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeColumnAdded(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4317,6 +8133,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addColumnContextMenuStripChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewColumnEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addColumnContextMenuStripChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4327,6 +8150,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeColumnContextMenuStripChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewColumnEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeColumnContextMenuStripChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4337,6 +8167,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addColumnDataPropertyNameChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewColumnEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addColumnDataPropertyNameChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4347,6 +8184,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeColumnDataPropertyNameChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewColumnEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeColumnDataPropertyNameChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4357,6 +8201,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addColumnDefaultCellStyleChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewColumnEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addColumnDefaultCellStyleChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4367,6 +8218,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeColumnDefaultCellStyleChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewColumnEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeColumnDefaultCellStyleChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4377,6 +8235,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addColumnDisplayIndexChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewColumnEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addColumnDisplayIndexChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4387,6 +8252,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeColumnDisplayIndexChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewColumnEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeColumnDisplayIndexChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4397,6 +8269,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addColumnDividerWidthChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewColumnEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addColumnDividerWidthChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4407,6 +8286,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeColumnDividerWidthChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewColumnEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeColumnDividerWidthChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4417,6 +8303,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addColumnHeaderCellChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewColumnEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addColumnHeaderCellChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4427,6 +8320,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeColumnHeaderCellChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewColumnEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeColumnHeaderCellChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4437,6 +8337,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addColumnMinimumWidthChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewColumnEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addColumnMinimumWidthChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4447,6 +8354,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeColumnMinimumWidthChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewColumnEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeColumnMinimumWidthChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4457,6 +8371,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addColumnNameChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewColumnEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addColumnNameChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4467,6 +8388,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeColumnNameChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewColumnEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeColumnNameChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4477,6 +8405,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addColumnRemoved.
+     *
+     * @param handler the argument of type {@code DataGridViewColumnEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addColumnRemoved(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4487,6 +8422,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeColumnRemoved.
+     *
+     * @param handler the argument of type {@code DataGridViewColumnEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeColumnRemoved(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4497,6 +8439,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addColumnSortModeChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewColumnEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addColumnSortModeChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4507,6 +8456,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeColumnSortModeChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewColumnEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeColumnSortModeChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4517,6 +8473,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addColumnToolTipTextChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewColumnEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addColumnToolTipTextChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4527,6 +8490,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeColumnToolTipTextChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewColumnEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeColumnToolTipTextChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4537,6 +8507,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addColumnWidthChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewColumnEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addColumnWidthChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4547,6 +8524,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeColumnWidthChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewColumnEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeColumnWidthChanged(DataGridViewColumnEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4557,6 +8541,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addColumnStateChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewColumnStateChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addColumnStateChanged(DataGridViewColumnStateChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4567,6 +8558,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeColumnStateChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewColumnStateChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeColumnStateChanged(DataGridViewColumnStateChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4577,6 +8575,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addDataError.
+     *
+     * @param handler the argument of type {@code DataGridViewDataErrorEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addDataError(DataGridViewDataErrorEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4587,6 +8592,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeDataError.
+     *
+     * @param handler the argument of type {@code DataGridViewDataErrorEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeDataError(DataGridViewDataErrorEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4597,6 +8609,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addEditingControlShowing.
+     *
+     * @param handler the argument of type {@code DataGridViewEditingControlShowingEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addEditingControlShowing(DataGridViewEditingControlShowingEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4607,6 +8626,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeEditingControlShowing.
+     *
+     * @param handler the argument of type {@code DataGridViewEditingControlShowingEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeEditingControlShowing(DataGridViewEditingControlShowingEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4617,6 +8643,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addUserDeletingRow.
+     *
+     * @param handler the argument of type {@code DataGridViewRowCancelEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addUserDeletingRow(DataGridViewRowCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4627,6 +8660,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeUserDeletingRow.
+     *
+     * @param handler the argument of type {@code DataGridViewRowCancelEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeUserDeletingRow(DataGridViewRowCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4637,6 +8677,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRowContextMenuStripNeeded.
+     *
+     * @param handler the argument of type {@code DataGridViewRowContextMenuStripNeededEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowContextMenuStripNeeded(DataGridViewRowContextMenuStripNeededEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4647,6 +8694,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowContextMenuStripNeeded.
+     *
+     * @param handler the argument of type {@code DataGridViewRowContextMenuStripNeededEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowContextMenuStripNeeded(DataGridViewRowContextMenuStripNeededEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4657,6 +8711,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRowDividerDoubleClick.
+     *
+     * @param handler the argument of type {@code DataGridViewRowDividerDoubleClickEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowDividerDoubleClick(DataGridViewRowDividerDoubleClickEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4667,6 +8728,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowDividerDoubleClick.
+     *
+     * @param handler the argument of type {@code DataGridViewRowDividerDoubleClickEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowDividerDoubleClick(DataGridViewRowDividerDoubleClickEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4677,6 +8745,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRowErrorTextNeeded.
+     *
+     * @param handler the argument of type {@code DataGridViewRowErrorTextNeededEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowErrorTextNeeded(DataGridViewRowErrorTextNeededEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4687,6 +8762,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowErrorTextNeeded.
+     *
+     * @param handler the argument of type {@code DataGridViewRowErrorTextNeededEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowErrorTextNeeded(DataGridViewRowErrorTextNeededEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4697,6 +8779,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addDefaultValuesNeeded.
+     *
+     * @param handler the argument of type {@code DataGridViewRowEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addDefaultValuesNeeded(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4707,6 +8796,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeDefaultValuesNeeded.
+     *
+     * @param handler the argument of type {@code DataGridViewRowEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeDefaultValuesNeeded(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4717,6 +8813,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addNewRowNeeded.
+     *
+     * @param handler the argument of type {@code DataGridViewRowEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addNewRowNeeded(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4727,6 +8830,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeNewRowNeeded.
+     *
+     * @param handler the argument of type {@code DataGridViewRowEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeNewRowNeeded(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4737,6 +8847,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRowContextMenuStripChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewRowEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowContextMenuStripChanged(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4747,6 +8864,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowContextMenuStripChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewRowEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowContextMenuStripChanged(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4757,6 +8881,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRowDefaultCellStyleChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewRowEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowDefaultCellStyleChanged(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4767,6 +8898,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowDefaultCellStyleChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewRowEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowDefaultCellStyleChanged(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4777,6 +8915,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRowDividerHeightChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewRowEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowDividerHeightChanged(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4787,6 +8932,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowDividerHeightChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewRowEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowDividerHeightChanged(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4797,6 +8949,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRowErrorTextChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewRowEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowErrorTextChanged(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4807,6 +8966,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowErrorTextChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewRowEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowErrorTextChanged(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4817,6 +8983,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRowHeaderCellChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewRowEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowHeaderCellChanged(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4827,6 +9000,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowHeaderCellChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewRowEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowHeaderCellChanged(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4837,6 +9017,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRowHeightChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewRowEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowHeightChanged(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4847,6 +9034,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowHeightChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewRowEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowHeightChanged(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4857,6 +9051,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRowMinimumHeightChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewRowEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowMinimumHeightChanged(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4867,6 +9068,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowMinimumHeightChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewRowEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowMinimumHeightChanged(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4877,6 +9085,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRowUnshared.
+     *
+     * @param handler the argument of type {@code DataGridViewRowEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowUnshared(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4887,6 +9102,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowUnshared.
+     *
+     * @param handler the argument of type {@code DataGridViewRowEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowUnshared(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4897,6 +9119,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addUserAddedRow.
+     *
+     * @param handler the argument of type {@code DataGridViewRowEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addUserAddedRow(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4907,6 +9136,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeUserAddedRow.
+     *
+     * @param handler the argument of type {@code DataGridViewRowEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeUserAddedRow(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4917,6 +9153,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addUserDeletedRow.
+     *
+     * @param handler the argument of type {@code DataGridViewRowEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addUserDeletedRow(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4927,6 +9170,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeUserDeletedRow.
+     *
+     * @param handler the argument of type {@code DataGridViewRowEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeUserDeletedRow(DataGridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4937,6 +9187,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRowHeightInfoNeeded.
+     *
+     * @param handler the argument of type {@code DataGridViewRowHeightInfoNeededEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowHeightInfoNeeded(DataGridViewRowHeightInfoNeededEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4947,6 +9204,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowHeightInfoNeeded.
+     *
+     * @param handler the argument of type {@code DataGridViewRowHeightInfoNeededEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowHeightInfoNeeded(DataGridViewRowHeightInfoNeededEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4957,6 +9221,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRowHeightInfoPushed.
+     *
+     * @param handler the argument of type {@code DataGridViewRowHeightInfoPushedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowHeightInfoPushed(DataGridViewRowHeightInfoPushedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4967,6 +9238,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowHeightInfoPushed.
+     *
+     * @param handler the argument of type {@code DataGridViewRowHeightInfoPushedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowHeightInfoPushed(DataGridViewRowHeightInfoPushedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4977,6 +9255,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRowPostPaint.
+     *
+     * @param handler the argument of type {@code DataGridViewRowPostPaintEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowPostPaint(DataGridViewRowPostPaintEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4987,6 +9272,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowPostPaint.
+     *
+     * @param handler the argument of type {@code DataGridViewRowPostPaintEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowPostPaint(DataGridViewRowPostPaintEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -4997,6 +9289,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRowPrePaint.
+     *
+     * @param handler the argument of type {@code DataGridViewRowPrePaintEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowPrePaint(DataGridViewRowPrePaintEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -5007,6 +9306,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowPrePaint.
+     *
+     * @param handler the argument of type {@code DataGridViewRowPrePaintEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowPrePaint(DataGridViewRowPrePaintEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -5017,6 +9323,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRowsAdded.
+     *
+     * @param handler the argument of type {@code DataGridViewRowsAddedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowsAdded(DataGridViewRowsAddedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -5027,6 +9340,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowsAdded.
+     *
+     * @param handler the argument of type {@code DataGridViewRowsAddedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowsAdded(DataGridViewRowsAddedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -5037,6 +9357,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRowsRemoved.
+     *
+     * @param handler the argument of type {@code DataGridViewRowsRemovedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowsRemoved(DataGridViewRowsRemovedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -5047,6 +9374,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowsRemoved.
+     *
+     * @param handler the argument of type {@code DataGridViewRowsRemovedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowsRemoved(DataGridViewRowsRemovedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -5057,6 +9391,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRowStateChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewRowStateChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowStateChanged(DataGridViewRowStateChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -5067,6 +9408,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowStateChanged.
+     *
+     * @param handler the argument of type {@code DataGridViewRowStateChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowStateChanged(DataGridViewRowStateChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -5077,6 +9425,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addSortCompare.
+     *
+     * @param handler the argument of type {@code DataGridViewSortCompareEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addSortCompare(DataGridViewSortCompareEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -5087,6 +9442,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeSortCompare.
+     *
+     * @param handler the argument of type {@code DataGridViewSortCompareEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeSortCompare(DataGridViewSortCompareEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -5097,6 +9459,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCancelRowEdit.
+     *
+     * @param handler the argument of type {@code QuestionEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCancelRowEdit(QuestionEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -5107,6 +9476,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCancelRowEdit.
+     *
+     * @param handler the argument of type {@code QuestionEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCancelRowEdit(QuestionEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -5117,6 +9493,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRowDirtyStateNeeded.
+     *
+     * @param handler the argument of type {@code QuestionEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowDirtyStateNeeded(QuestionEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -5127,6 +9510,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowDirtyStateNeeded.
+     *
+     * @param handler the argument of type {@code QuestionEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowDirtyStateNeeded(QuestionEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -5137,6 +9527,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addScroll.
+     *
+     * @param handler the argument of type {@code ScrollEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addScroll(ScrollEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -5147,6 +9544,13 @@ public class DataGridView extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeScroll.
+     *
+     * @param handler the argument of type {@code ScrollEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeScroll(ScrollEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

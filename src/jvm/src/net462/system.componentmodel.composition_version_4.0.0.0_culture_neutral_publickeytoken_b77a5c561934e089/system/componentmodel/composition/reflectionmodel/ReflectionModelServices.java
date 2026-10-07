@@ -112,7 +112,10 @@ public class ReflectionModelServices extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ReflectionModelServices(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -165,6 +168,18 @@ public class ReflectionModelServices extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsDisposalRequired.
+     *
+     * @param partDefinition the argument of type {@code ComposablePartDefinition}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ReflectionModel.ReflectionModelServices.IsDisposalRequired" target="_top">.NET documentation</a>
+     */
     public static boolean IsDisposalRequired(ComposablePartDefinition partDefinition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -179,6 +194,15 @@ public class ReflectionModelServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsExportFactoryImportDefinition.
+     *
+     * @param importDefinition the argument of type {@code ImportDefinition}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ReflectionModel.ReflectionModelServices.IsExportFactoryImportDefinition" target="_top">.NET documentation</a>
+     */
     public static boolean IsExportFactoryImportDefinition(ImportDefinition importDefinition) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -193,6 +217,27 @@ public class ReflectionModelServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsImportingParameter.
+     *
+     * @param importDefinition the argument of type {@code ImportDefinition}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ReflectionModel.ReflectionModelServices.IsImportingParameter" target="_top">.NET documentation</a>
+     */
     public static boolean IsImportingParameter(ImportDefinition importDefinition) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -207,6 +252,23 @@ public class ReflectionModelServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryMakeGenericPartDefinition.
+     *
+     * @param partDefinition the argument of type {@code ComposablePartDefinition}
+     * @param genericParameters the argument of type {@code IEnumerable_1}
+     * @param specialization the argument of type {@code JCORefOut<ComposablePartDefinition>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ReflectionModel.ReflectionModelServices.TryMakeGenericPartDefinition" target="_top">.NET documentation</a>
+     */
     public static boolean TryMakeGenericPartDefinition(ComposablePartDefinition partDefinition, IEnumerable_1 genericParameters, JCORefOut<ComposablePartDefinition> specialization) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -221,6 +283,24 @@ public class ReflectionModelServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreatePartDefinition.
+     *
+     * @param partType the argument of type {@code Lazy_1}
+     * @param isDisposalRequired the argument of type {@code boolean}
+     * @param imports the argument of type {@code Lazy_1}
+     * @param exports the argument of type {@code Lazy_1}
+     * @param metadata the argument of type {@code Lazy_1}
+     * @param origin the argument of type {@code ICompositionElement}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ReflectionModel.ReflectionModelServices.CreatePartDefinition" target="_top">.NET documentation</a>
+     */
     public static ComposablePartDefinition CreatePartDefinition(Lazy_1 partType, boolean isDisposalRequired, Lazy_1 imports, Lazy_1 exports, Lazy_1 metadata, ICompositionElement origin) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -236,6 +316,37 @@ public class ReflectionModelServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateImportDefinition.
+     *
+     * @param importingMember the argument of type {@code LazyMemberInfo}
+     * @param contractName the argument of type {@code java.lang.String}
+     * @param requiredTypeIdentity the argument of type {@code java.lang.String}
+     * @param requiredMetadata the argument of type {@code IEnumerable_1}
+     * @param cardinality the argument of type {@code ImportCardinality}
+     * @param isRecomposable the argument of type {@code boolean}
+     * @param isPreRequisite the argument of type {@code boolean}
+     * @param requiredCreationPolicy the argument of type {@code CreationPolicy}
+     * @param metadata the argument of type {@code IDictionary_2}
+     * @param isExportFactory the argument of type {@code boolean}
+     * @param origin the argument of type {@code ICompositionElement}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ReflectionModel.ReflectionModelServices.CreateImportDefinition" target="_top">.NET documentation</a>
+     */
     public static ContractBasedImportDefinition CreateImportDefinition(LazyMemberInfo importingMember, java.lang.String contractName, java.lang.String requiredTypeIdentity, IEnumerable_1 requiredMetadata, ImportCardinality cardinality, boolean isRecomposable, boolean isPreRequisite, CreationPolicy requiredCreationPolicy, IDictionary_2 metadata, boolean isExportFactory, ICompositionElement origin) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -251,6 +362,35 @@ public class ReflectionModelServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateImportDefinition.
+     *
+     * @param importingMember the argument of type {@code LazyMemberInfo}
+     * @param contractName the argument of type {@code java.lang.String}
+     * @param requiredTypeIdentity the argument of type {@code java.lang.String}
+     * @param requiredMetadata the argument of type {@code IEnumerable_1}
+     * @param cardinality the argument of type {@code ImportCardinality}
+     * @param isRecomposable the argument of type {@code boolean}
+     * @param requiredCreationPolicy the argument of type {@code CreationPolicy}
+     * @param metadata the argument of type {@code IDictionary_2}
+     * @param isExportFactory the argument of type {@code boolean}
+     * @param origin the argument of type {@code ICompositionElement}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ReflectionModel.ReflectionModelServices.CreateImportDefinition" target="_top">.NET documentation</a>
+     */
     public static ContractBasedImportDefinition CreateImportDefinition(LazyMemberInfo importingMember, java.lang.String contractName, java.lang.String requiredTypeIdentity, IEnumerable_1 requiredMetadata, ImportCardinality cardinality, boolean isRecomposable, CreationPolicy requiredCreationPolicy, IDictionary_2 metadata, boolean isExportFactory, ICompositionElement origin) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -266,6 +406,31 @@ public class ReflectionModelServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateImportDefinition.
+     *
+     * @param importingMember the argument of type {@code LazyMemberInfo}
+     * @param contractName the argument of type {@code java.lang.String}
+     * @param requiredTypeIdentity the argument of type {@code java.lang.String}
+     * @param requiredMetadata the argument of type {@code IEnumerable_1}
+     * @param cardinality the argument of type {@code ImportCardinality}
+     * @param isRecomposable the argument of type {@code boolean}
+     * @param requiredCreationPolicy the argument of type {@code CreationPolicy}
+     * @param origin the argument of type {@code ICompositionElement}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ReflectionModel.ReflectionModelServices.CreateImportDefinition" target="_top">.NET documentation</a>
+     */
     public static ContractBasedImportDefinition CreateImportDefinition(LazyMemberInfo importingMember, java.lang.String contractName, java.lang.String requiredTypeIdentity, IEnumerable_1 requiredMetadata, ImportCardinality cardinality, boolean isRecomposable, CreationPolicy requiredCreationPolicy, ICompositionElement origin) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -281,6 +446,35 @@ public class ReflectionModelServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateImportDefinition.
+     *
+     * @param parameter the argument of type {@code Lazy_1}
+     * @param contractName the argument of type {@code java.lang.String}
+     * @param requiredTypeIdentity the argument of type {@code java.lang.String}
+     * @param requiredMetadata the argument of type {@code IEnumerable_1}
+     * @param cardinality the argument of type {@code ImportCardinality}
+     * @param requiredCreationPolicy the argument of type {@code CreationPolicy}
+     * @param metadata the argument of type {@code IDictionary_2}
+     * @param isExportFactory the argument of type {@code boolean}
+     * @param origin the argument of type {@code ICompositionElement}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ReflectionModel.ReflectionModelServices.CreateImportDefinition" target="_top">.NET documentation</a>
+     */
     public static ContractBasedImportDefinition CreateImportDefinition(Lazy_1 parameter, java.lang.String contractName, java.lang.String requiredTypeIdentity, IEnumerable_1 requiredMetadata, ImportCardinality cardinality, CreationPolicy requiredCreationPolicy, IDictionary_2 metadata, boolean isExportFactory, ICompositionElement origin) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -296,6 +490,32 @@ public class ReflectionModelServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateImportDefinition.
+     *
+     * @param parameter the argument of type {@code Lazy_1}
+     * @param contractName the argument of type {@code java.lang.String}
+     * @param requiredTypeIdentity the argument of type {@code java.lang.String}
+     * @param requiredMetadata the argument of type {@code IEnumerable_1}
+     * @param cardinality the argument of type {@code ImportCardinality}
+     * @param requiredCreationPolicy the argument of type {@code CreationPolicy}
+     * @param origin the argument of type {@code ICompositionElement}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ReflectionModel.ReflectionModelServices.CreateImportDefinition" target="_top">.NET documentation</a>
+     */
     public static ContractBasedImportDefinition CreateImportDefinition(Lazy_1 parameter, java.lang.String contractName, java.lang.String requiredTypeIdentity, IEnumerable_1 requiredMetadata, ImportCardinality cardinality, CreationPolicy requiredCreationPolicy, ICompositionElement origin) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -311,6 +531,27 @@ public class ReflectionModelServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetExportFactoryProductImportDefinition.
+     *
+     * @param importDefinition the argument of type {@code ImportDefinition}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ReflectionModel.ReflectionModelServices.GetExportFactoryProductImportDefinition" target="_top">.NET documentation</a>
+     */
     public static ContractBasedImportDefinition GetExportFactoryProductImportDefinition(ImportDefinition importDefinition) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -326,6 +567,30 @@ public class ReflectionModelServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateExportDefinition.
+     *
+     * @param exportingMember the argument of type {@code LazyMemberInfo}
+     * @param contractName the argument of type {@code java.lang.String}
+     * @param metadata the argument of type {@code Lazy_1}
+     * @param origin the argument of type {@code ICompositionElement}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ReflectionModel.ReflectionModelServices.CreateExportDefinition" target="_top">.NET documentation</a>
+     */
     public static ExportDefinition CreateExportDefinition(LazyMemberInfo exportingMember, java.lang.String contractName, Lazy_1 metadata, ICompositionElement origin) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -341,6 +606,27 @@ public class ReflectionModelServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetExportingMember.
+     *
+     * @param exportDefinition the argument of type {@code ExportDefinition}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ReflectionModel.ReflectionModelServices.GetExportingMember" target="_top">.NET documentation</a>
+     */
     public static LazyMemberInfo GetExportingMember(ExportDefinition exportDefinition) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -356,6 +642,27 @@ public class ReflectionModelServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetImportingMember.
+     *
+     * @param importDefinition the argument of type {@code ImportDefinition}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ReflectionModel.ReflectionModelServices.GetImportingMember" target="_top">.NET documentation</a>
+     */
     public static LazyMemberInfo GetImportingMember(ImportDefinition importDefinition) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -371,6 +678,27 @@ public class ReflectionModelServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetImportingParameter.
+     *
+     * @param importDefinition the argument of type {@code ImportDefinition}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ReflectionModel.ReflectionModelServices.GetImportingParameter" target="_top">.NET documentation</a>
+     */
     public static Lazy_1 GetImportingParameter(ImportDefinition importDefinition) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -386,6 +714,18 @@ public class ReflectionModelServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPartType.
+     *
+     * @param partDefinition the argument of type {@code ComposablePartDefinition}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ReflectionModel.ReflectionModelServices.GetPartType" target="_top">.NET documentation</a>
+     */
     public static Lazy_1 GetPartType(ComposablePartDefinition partDefinition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

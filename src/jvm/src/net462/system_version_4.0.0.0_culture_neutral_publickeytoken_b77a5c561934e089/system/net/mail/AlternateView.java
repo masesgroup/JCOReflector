@@ -105,7 +105,10 @@ public class AlternateView extends system.net.mail.AttachmentBase  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AlternateView(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,21 @@ public class AlternateView extends system.net.mail.AttachmentBase  {
     public AlternateView() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param contentStream the argument of type {@code Stream}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Mail.AlternateView.-ctor" target="_top">.NET documentation</a>
+     */
     public AlternateView(Stream contentStream) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.FormatException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +183,20 @@ public class AlternateView extends system.net.mail.AttachmentBase  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param contentStream the argument of type {@code Stream}
+     * @param contentType the argument of type {@code ContentType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Mail.AlternateView.-ctor" target="_top">.NET documentation</a>
+     */
     public AlternateView(Stream contentStream, ContentType contentType) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +207,24 @@ public class AlternateView extends system.net.mail.AttachmentBase  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param contentStream the argument of type {@code Stream}
+     * @param mediaType the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Mail.AlternateView.-ctor" target="_top">.NET documentation</a>
+     */
     public AlternateView(Stream contentStream, java.lang.String mediaType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -185,6 +235,33 @@ public class AlternateView extends system.net.mail.AttachmentBase  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param fileName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Mail.AlternateView.-ctor" target="_top">.NET documentation</a>
+     */
     public AlternateView(java.lang.String fileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -195,6 +272,34 @@ public class AlternateView extends system.net.mail.AttachmentBase  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param fileName the argument of type {@code java.lang.String}
+     * @param contentType the argument of type {@code ContentType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Mail.AlternateView.-ctor" target="_top">.NET documentation</a>
+     */
     public AlternateView(java.lang.String fileName, ContentType contentType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -205,6 +310,34 @@ public class AlternateView extends system.net.mail.AttachmentBase  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param fileName the argument of type {@code java.lang.String}
+     * @param mediaType the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Mail.AlternateView.-ctor" target="_top">.NET documentation</a>
+     */
     public AlternateView(java.lang.String fileName, java.lang.String mediaType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -220,6 +353,26 @@ public class AlternateView extends system.net.mail.AttachmentBase  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateAlternateViewFromString.
+     *
+     * @param content the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Mail.AlternateView.CreateAlternateViewFromString" target="_top">.NET documentation</a>
+     */
     public static AlternateView CreateAlternateViewFromString(java.lang.String content) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -235,6 +388,24 @@ public class AlternateView extends system.net.mail.AttachmentBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateAlternateViewFromString.
+     *
+     * @param content the argument of type {@code java.lang.String}
+     * @param contentType the argument of type {@code ContentType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Mail.AlternateView.CreateAlternateViewFromString" target="_top">.NET documentation</a>
+     */
     public static AlternateView CreateAlternateViewFromString(java.lang.String content, ContentType contentType) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -250,6 +421,28 @@ public class AlternateView extends system.net.mail.AttachmentBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateAlternateViewFromString.
+     *
+     * @param content the argument of type {@code java.lang.String}
+     * @param contentEncoding the argument of type {@code Encoding}
+     * @param mediaType the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Mail.AlternateView.CreateAlternateViewFromString" target="_top">.NET documentation</a>
+     */
     public static AlternateView CreateAlternateViewFromString(java.lang.String content, Encoding contentEncoding, java.lang.String mediaType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -269,6 +462,14 @@ public class AlternateView extends system.net.mail.AttachmentBase  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property LinkedResources.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Mail.AlternateView.LinkedResources" target="_top">.NET documentation</a>
+     */
     public LinkedResourceCollection getLinkedResources() throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -284,6 +485,27 @@ public class AlternateView extends system.net.mail.AttachmentBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BaseUri.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Mail.AlternateView.BaseUri" target="_top">.NET documentation</a>
+     */
     public Uri getBaseUri() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -299,6 +521,26 @@ public class AlternateView extends system.net.mail.AttachmentBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BaseUri.
+     *
+     * @param BaseUri the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Mail.AlternateView.BaseUri" target="_top">.NET documentation</a>
+     */
     public void setBaseUri(Uri BaseUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.UriFormatException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

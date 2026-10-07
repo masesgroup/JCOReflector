@@ -107,7 +107,10 @@ public class ServicePointManager extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ServicePointManager(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -162,6 +165,32 @@ public class ServicePointManager extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member FindServicePoint.
+     *
+     * @param uriString the argument of type {@code java.lang.String}
+     * @param proxy the argument of type {@code IWebProxy}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePointManager.FindServicePoint" target="_top">.NET documentation</a>
+     */
     public static ServicePoint FindServicePoint(java.lang.String uriString, IWebProxy proxy) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.configuration.ConfigurationException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -177,6 +206,28 @@ public class ServicePointManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FindServicePoint.
+     *
+     * @param address the argument of type {@code Uri}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePointManager.FindServicePoint" target="_top">.NET documentation</a>
+     */
     public static ServicePoint FindServicePoint(Uri address) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -192,6 +243,31 @@ public class ServicePointManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FindServicePoint.
+     *
+     * @param address the argument of type {@code Uri}
+     * @param proxy the argument of type {@code IWebProxy}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePointManager.FindServicePoint" target="_top">.NET documentation</a>
+     */
     public static ServicePoint FindServicePoint(Uri address, IWebProxy proxy) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -207,6 +283,16 @@ public class ServicePointManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetTcpKeepAlive.
+     *
+     * @param enabled the argument of type {@code boolean}
+     * @param keepAliveTime the argument of type {@code int}
+     * @param keepAliveInterval the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePointManager.SetTcpKeepAlive" target="_top">.NET documentation</a>
+     */
     public static void SetTcpKeepAlive(boolean enabled, int keepAliveTime, int keepAliveInterval) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -221,6 +307,26 @@ public class ServicePointManager extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CheckCertificateRevocationList.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePointManager.CheckCertificateRevocationList" target="_top">.NET documentation</a>
+     */
     public static boolean getCheckCertificateRevocationList() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.configuration.ConfigurationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -235,6 +341,26 @@ public class ServicePointManager extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CheckCertificateRevocationList.
+     *
+     * @param CheckCertificateRevocationList the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePointManager.CheckCertificateRevocationList" target="_top">.NET documentation</a>
+     */
     public static void setCheckCertificateRevocationList(boolean CheckCertificateRevocationList) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.configuration.ConfigurationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -245,6 +371,26 @@ public class ServicePointManager extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EnableDnsRoundRobin.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePointManager.EnableDnsRoundRobin" target="_top">.NET documentation</a>
+     */
     public static boolean getEnableDnsRoundRobin() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.configuration.ConfigurationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -259,6 +405,26 @@ public class ServicePointManager extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EnableDnsRoundRobin.
+     *
+     * @param EnableDnsRoundRobin the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePointManager.EnableDnsRoundRobin" target="_top">.NET documentation</a>
+     */
     public static void setEnableDnsRoundRobin(boolean EnableDnsRoundRobin) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.configuration.ConfigurationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -269,6 +435,26 @@ public class ServicePointManager extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Expect100Continue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePointManager.Expect100Continue" target="_top">.NET documentation</a>
+     */
     public static boolean getExpect100Continue() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.configuration.ConfigurationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -283,6 +469,26 @@ public class ServicePointManager extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Expect100Continue.
+     *
+     * @param Expect100Continue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePointManager.Expect100Continue" target="_top">.NET documentation</a>
+     */
     public static void setExpect100Continue(boolean Expect100Continue) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.configuration.ConfigurationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -293,6 +499,13 @@ public class ServicePointManager extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReusePort.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePointManager.ReusePort" target="_top">.NET documentation</a>
+     */
     public static boolean getReusePort() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -307,6 +520,13 @@ public class ServicePointManager extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReusePort.
+     *
+     * @param ReusePort the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePointManager.ReusePort" target="_top">.NET documentation</a>
+     */
     public static void setReusePort(boolean ReusePort) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -317,6 +537,26 @@ public class ServicePointManager extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseNagleAlgorithm.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePointManager.UseNagleAlgorithm" target="_top">.NET documentation</a>
+     */
     public static boolean getUseNagleAlgorithm() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.configuration.ConfigurationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -331,6 +571,26 @@ public class ServicePointManager extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseNagleAlgorithm.
+     *
+     * @param UseNagleAlgorithm the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePointManager.UseNagleAlgorithm" target="_top">.NET documentation</a>
+     */
     public static void setUseNagleAlgorithm(boolean UseNagleAlgorithm) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.configuration.ConfigurationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -341,6 +601,21 @@ public class ServicePointManager extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultConnectionLimit.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePointManager.DefaultConnectionLimit" target="_top">.NET documentation</a>
+     */
     public static int getDefaultConnectionLimit() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -381,6 +656,21 @@ public class ServicePointManager extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultConnectionLimit.
+     *
+     * @param DefaultConnectionLimit the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePointManager.DefaultConnectionLimit" target="_top">.NET documentation</a>
+     */
     public static void setDefaultConnectionLimit(int DefaultConnectionLimit) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -391,6 +681,26 @@ public class ServicePointManager extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DnsRefreshTimeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePointManager.DnsRefreshTimeout" target="_top">.NET documentation</a>
+     */
     public static int getDnsRefreshTimeout() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.configuration.ConfigurationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -431,6 +741,26 @@ public class ServicePointManager extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DnsRefreshTimeout.
+     *
+     * @param DnsRefreshTimeout the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePointManager.DnsRefreshTimeout" target="_top">.NET documentation</a>
+     */
     public static void setDnsRefreshTimeout(int DnsRefreshTimeout) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.configuration.ConfigurationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -441,6 +771,13 @@ public class ServicePointManager extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxServicePointIdleTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePointManager.MaxServicePointIdleTime" target="_top">.NET documentation</a>
+     */
     public static int getMaxServicePointIdleTime() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -481,6 +818,20 @@ public class ServicePointManager extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxServicePointIdleTime.
+     *
+     * @param MaxServicePointIdleTime the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePointManager.MaxServicePointIdleTime" target="_top">.NET documentation</a>
+     */
     public static void setMaxServicePointIdleTime(int MaxServicePointIdleTime) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.FormatException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -491,6 +842,13 @@ public class ServicePointManager extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxServicePoints.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePointManager.MaxServicePoints" target="_top">.NET documentation</a>
+     */
     public static int getMaxServicePoints() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -531,6 +889,14 @@ public class ServicePointManager extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxServicePoints.
+     *
+     * @param MaxServicePoints the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePointManager.MaxServicePoints" target="_top">.NET documentation</a>
+     */
     public static void setMaxServicePoints(int MaxServicePoints) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -541,6 +907,13 @@ public class ServicePointManager extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CertificatePolicy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePointManager.CertificatePolicy" target="_top">.NET documentation</a>
+     */
     public static ICertificatePolicy getCertificatePolicy() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -556,6 +929,19 @@ public class ServicePointManager extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CertificatePolicy.
+     *
+     * @param CertificatePolicy the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePointManager.CertificatePolicy" target="_top">.NET documentation</a>
+     */
     public static void setCertificatePolicy(ICertificatePolicy CertificatePolicy) throws Throwable, system.security.SecurityException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -566,6 +952,26 @@ public class ServicePointManager extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EncryptionPolicy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePointManager.EncryptionPolicy" target="_top">.NET documentation</a>
+     */
     public static EncryptionPolicy getEncryptionPolicy() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.configuration.ConfigurationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -581,6 +987,13 @@ public class ServicePointManager extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ServerCertificateValidationCallback.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePointManager.ServerCertificateValidationCallback" target="_top">.NET documentation</a>
+     */
     public static RemoteCertificateValidationCallback getServerCertificateValidationCallback() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -595,6 +1008,19 @@ public class ServicePointManager extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ServerCertificateValidationCallback.
+     *
+     * @param ServerCertificateValidationCallback the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePointManager.ServerCertificateValidationCallback" target="_top">.NET documentation</a>
+     */
     public static void setServerCertificateValidationCallback(RemoteCertificateValidationCallback ServerCertificateValidationCallback) throws Throwable, system.security.SecurityException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -605,6 +1031,28 @@ public class ServicePointManager extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SecurityProtocol.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePointManager.SecurityProtocol" target="_top">.NET documentation</a>
+     */
     public static SecurityProtocolType getSecurityProtocol() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -620,6 +1068,28 @@ public class ServicePointManager extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SecurityProtocol.
+     *
+     * @param SecurityProtocol the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePointManager.SecurityProtocol" target="_top">.NET documentation</a>
+     */
     public static void setSecurityProtocol(SecurityProtocolType SecurityProtocol) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

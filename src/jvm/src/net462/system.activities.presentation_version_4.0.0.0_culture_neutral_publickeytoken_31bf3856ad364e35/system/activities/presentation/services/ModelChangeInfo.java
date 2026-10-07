@@ -100,7 +100,10 @@ public class ModelChangeInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ModelChangeInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,13 @@ public class ModelChangeInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Key.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Services.ModelChangeInfo.Key" target="_top">.NET documentation</a>
+     */
     public ModelItem getKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +182,13 @@ public class ModelChangeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OldValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Services.ModelChangeInfo.OldValue" target="_top">.NET documentation</a>
+     */
     public ModelItem getOldValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +204,13 @@ public class ModelChangeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Subject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Services.ModelChangeInfo.Subject" target="_top">.NET documentation</a>
+     */
     public ModelItem getSubject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +226,13 @@ public class ModelChangeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Services.ModelChangeInfo.Value" target="_top">.NET documentation</a>
+     */
     public ModelItem getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +248,13 @@ public class ModelChangeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ModelChangeType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Services.ModelChangeInfo.ModelChangeType" target="_top">.NET documentation</a>
+     */
     public ModelChangeType getModelChangeType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +270,13 @@ public class ModelChangeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Services.ModelChangeInfo.PropertyName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPropertyName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

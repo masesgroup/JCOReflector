@@ -106,7 +106,10 @@ public class XamlDirective extends system.xaml.XamlMember  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XamlDirective(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,28 @@ public class XamlDirective extends system.xaml.XamlMember  {
     public XamlDirective() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param xamlNamespaces the argument of type {@code IEnumerable_1}
+     * @param name the argument of type {@code java.lang.String}
+     * @param xamlType the argument of type {@code XamlType}
+     * @param typeConverter the argument of type {@code XamlValueConverter_1}
+     * @param allowedLocation the argument of type {@code AllowedMemberLocations}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlDirective.-ctor" target="_top">.NET documentation</a>
+     */
     public XamlDirective(IEnumerable_1 xamlNamespaces, java.lang.String name, XamlType xamlType, XamlValueConverter_1 typeConverter, AllowedMemberLocations allowedLocation) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +191,20 @@ public class XamlDirective extends system.xaml.XamlMember  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param xamlNamespace the argument of type {@code java.lang.String}
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlDirective.-ctor" target="_top">.NET documentation</a>
+     */
     public XamlDirective(java.lang.String xamlNamespace, java.lang.String name) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +220,13 @@ public class XamlDirective extends system.xaml.XamlMember  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetXamlNamespaces.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlDirective.GetXamlNamespaces" target="_top">.NET documentation</a>
+     */
     public IList_1 GetXamlNamespaces() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +246,13 @@ public class XamlDirective extends system.xaml.XamlMember  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowedLocation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlDirective.AllowedLocation" target="_top">.NET documentation</a>
+     */
     public AllowedMemberLocations getAllowedLocation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

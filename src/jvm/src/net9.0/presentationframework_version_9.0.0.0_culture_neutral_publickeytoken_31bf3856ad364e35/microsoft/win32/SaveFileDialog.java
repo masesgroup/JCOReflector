@@ -100,7 +100,10 @@ public class SaveFileDialog extends microsoft.win32.FileDialog  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SaveFileDialog(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class SaveFileDialog extends microsoft.win32.FileDialog  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.SaveFileDialog.-ctor" target="_top">.NET documentation</a>
+     */
     public SaveFileDialog() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,22 @@ public class SaveFileDialog extends microsoft.win32.FileDialog  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member OpenFile.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.SaveFileDialog.OpenFile" target="_top">.NET documentation</a>
+     */
     public Stream OpenFile() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +201,12 @@ public class SaveFileDialog extends microsoft.win32.FileDialog  {
         }
     }
 
+    /**
+     * Invokes the .NET member Reset.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.SaveFileDialog.Reset" target="_top">.NET documentation</a>
+     */
     public void Reset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +221,13 @@ public class SaveFileDialog extends microsoft.win32.FileDialog  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CreatePrompt.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.SaveFileDialog.CreatePrompt" target="_top">.NET documentation</a>
+     */
     public boolean getCreatePrompt() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +242,13 @@ public class SaveFileDialog extends microsoft.win32.FileDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CreatePrompt.
+     *
+     * @param CreatePrompt the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.SaveFileDialog.CreatePrompt" target="_top">.NET documentation</a>
+     */
     public void setCreatePrompt(boolean CreatePrompt) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +259,13 @@ public class SaveFileDialog extends microsoft.win32.FileDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CreateTestFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.SaveFileDialog.CreateTestFile" target="_top">.NET documentation</a>
+     */
     public boolean getCreateTestFile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +280,13 @@ public class SaveFileDialog extends microsoft.win32.FileDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CreateTestFile.
+     *
+     * @param CreateTestFile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.SaveFileDialog.CreateTestFile" target="_top">.NET documentation</a>
+     */
     public void setCreateTestFile(boolean CreateTestFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +297,13 @@ public class SaveFileDialog extends microsoft.win32.FileDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OverwritePrompt.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.SaveFileDialog.OverwritePrompt" target="_top">.NET documentation</a>
+     */
     public boolean getOverwritePrompt() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +318,13 @@ public class SaveFileDialog extends microsoft.win32.FileDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OverwritePrompt.
+     *
+     * @param OverwritePrompt the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.SaveFileDialog.OverwritePrompt" target="_top">.NET documentation</a>
+     */
     public void setOverwritePrompt(boolean OverwritePrompt) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

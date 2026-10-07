@@ -102,7 +102,10 @@ public class RuntimeFieldHandle extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RuntimeFieldHandle(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,14 @@ public class RuntimeFieldHandle extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param handle the argument of type {@code RuntimeFieldHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.RuntimeFieldHandle.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(RuntimeFieldHandle handle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +182,26 @@ public class RuntimeFieldHandle extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetObjectData.
+     *
+     * @param info the argument of type {@code SerializationInfo}
+     * @param context the argument of type {@code StreamingContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.RuntimeFieldHandle.GetObjectData" target="_top">.NET documentation</a>
+     */
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.runtime.serialization.SerializationException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

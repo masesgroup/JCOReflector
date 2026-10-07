@@ -111,7 +111,10 @@ public class ILGenerator extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ILGenerator(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -164,6 +167,13 @@ public class ILGenerator extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member BeginExceptionBlock.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.BeginExceptionBlock" target="_top">.NET documentation</a>
+     */
     public Label BeginExceptionBlock() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +189,13 @@ public class ILGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DefineLabel.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.DefineLabel" target="_top">.NET documentation</a>
+     */
     public Label DefineLabel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +211,15 @@ public class ILGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DeclareLocal.
+     *
+     * @param localType the argument of type {@code NetType}
+     * @param pinned the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.DeclareLocal" target="_top">.NET documentation</a>
+     */
     public LocalBuilder DeclareLocal(NetType localType, boolean pinned) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +235,14 @@ public class ILGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DeclareLocal.
+     *
+     * @param localType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.DeclareLocal" target="_top">.NET documentation</a>
+     */
     public LocalBuilder DeclareLocal(NetType localType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +258,13 @@ public class ILGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BeginCatchBlock.
+     *
+     * @param exceptionType the argument of type {@code NetType}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.BeginCatchBlock" target="_top">.NET documentation</a>
+     */
     public void BeginCatchBlock(NetType exceptionType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +275,12 @@ public class ILGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BeginExceptFilterBlock.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.BeginExceptFilterBlock" target="_top">.NET documentation</a>
+     */
     public void BeginExceptFilterBlock() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +291,12 @@ public class ILGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BeginFaultBlock.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.BeginFaultBlock" target="_top">.NET documentation</a>
+     */
     public void BeginFaultBlock() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +307,12 @@ public class ILGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BeginFinallyBlock.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.BeginFinallyBlock" target="_top">.NET documentation</a>
+     */
     public void BeginFinallyBlock() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +323,12 @@ public class ILGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BeginScope.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.BeginScope" target="_top">.NET documentation</a>
+     */
     public void BeginScope() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +339,14 @@ public class ILGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Emit.
+     *
+     * @param opcode the argument of type {@code OpCode}
+     * @param arg the argument of type {@code byte}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.Emit" target="_top">.NET documentation</a>
+     */
     public void Emit(OpCode opcode, byte arg) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -284,6 +357,14 @@ public class ILGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Emit.
+     *
+     * @param opcode the argument of type {@code OpCode}
+     * @param arg the argument of type {@code double}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.Emit" target="_top">.NET documentation</a>
+     */
     public void Emit(OpCode opcode, double arg) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +375,14 @@ public class ILGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Emit.
+     *
+     * @param opcode the argument of type {@code OpCode}
+     * @param arg the argument of type {@code short}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.Emit" target="_top">.NET documentation</a>
+     */
     public void Emit(OpCode opcode, short arg) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +393,14 @@ public class ILGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Emit.
+     *
+     * @param opcode the argument of type {@code OpCode}
+     * @param arg the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.Emit" target="_top">.NET documentation</a>
+     */
     public void Emit(OpCode opcode, int arg) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -314,6 +411,14 @@ public class ILGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Emit.
+     *
+     * @param opcode the argument of type {@code OpCode}
+     * @param arg the argument of type {@code long}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.Emit" target="_top">.NET documentation</a>
+     */
     public void Emit(OpCode opcode, long arg) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -324,6 +429,14 @@ public class ILGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Emit.
+     *
+     * @param opcode the argument of type {@code OpCode}
+     * @param arg the argument of type {@code SByte}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.Emit" target="_top">.NET documentation</a>
+     */
     public void Emit(OpCode opcode, SByte arg) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -334,6 +447,14 @@ public class ILGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Emit.
+     *
+     * @param opcode the argument of type {@code OpCode}
+     * @param arg the argument of type {@code Single}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.Emit" target="_top">.NET documentation</a>
+     */
     public void Emit(OpCode opcode, Single arg) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -344,6 +465,14 @@ public class ILGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Emit.
+     *
+     * @param opcode the argument of type {@code OpCode}
+     * @param con the argument of type {@code ConstructorInfo}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.Emit" target="_top">.NET documentation</a>
+     */
     public void Emit(OpCode opcode, ConstructorInfo con) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -354,6 +483,14 @@ public class ILGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Emit.
+     *
+     * @param opcode the argument of type {@code OpCode}
+     * @param label the argument of type {@code Label}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.Emit" target="_top">.NET documentation</a>
+     */
     public void Emit(OpCode opcode, Label label) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -364,6 +501,14 @@ public class ILGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Emit.
+     *
+     * @param opcode the argument of type {@code OpCode}
+     * @param labels the argument of type {@code Label[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.Emit" target="_top">.NET documentation</a>
+     */
     public void Emit(OpCode opcode, Label[] labels) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -374,6 +519,14 @@ public class ILGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Emit.
+     *
+     * @param opcode the argument of type {@code OpCode}
+     * @param local the argument of type {@code LocalBuilder}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.Emit" target="_top">.NET documentation</a>
+     */
     public void Emit(OpCode opcode, LocalBuilder local) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -384,6 +537,14 @@ public class ILGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Emit.
+     *
+     * @param opcode the argument of type {@code OpCode}
+     * @param signature the argument of type {@code SignatureHelper}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.Emit" target="_top">.NET documentation</a>
+     */
     public void Emit(OpCode opcode, SignatureHelper signature) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -394,6 +555,14 @@ public class ILGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Emit.
+     *
+     * @param opcode the argument of type {@code OpCode}
+     * @param field the argument of type {@code FieldInfo}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.Emit" target="_top">.NET documentation</a>
+     */
     public void Emit(OpCode opcode, FieldInfo field) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -404,6 +573,14 @@ public class ILGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Emit.
+     *
+     * @param opcode the argument of type {@code OpCode}
+     * @param meth the argument of type {@code MethodInfo}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.Emit" target="_top">.NET documentation</a>
+     */
     public void Emit(OpCode opcode, MethodInfo meth) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -414,6 +591,14 @@ public class ILGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Emit.
+     *
+     * @param opcode the argument of type {@code OpCode}
+     * @param str the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.Emit" target="_top">.NET documentation</a>
+     */
     public void Emit(OpCode opcode, java.lang.String str) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -424,6 +609,14 @@ public class ILGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Emit.
+     *
+     * @param opcode the argument of type {@code OpCode}
+     * @param cls the argument of type {@code NetType}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.Emit" target="_top">.NET documentation</a>
+     */
     public void Emit(OpCode opcode, NetType cls) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -434,6 +627,13 @@ public class ILGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Emit.
+     *
+     * @param opcode the argument of type {@code OpCode}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.Emit" target="_top">.NET documentation</a>
+     */
     public void Emit(OpCode opcode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -444,6 +644,15 @@ public class ILGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EmitCall.
+     *
+     * @param opcode the argument of type {@code OpCode}
+     * @param methodInfo the argument of type {@code MethodInfo}
+     * @param optionalParameterTypes the argument of type {@code NetType[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.EmitCall" target="_top">.NET documentation</a>
+     */
     public void EmitCall(OpCode opcode, MethodInfo methodInfo, NetType[] optionalParameterTypes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -454,6 +663,17 @@ public class ILGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EmitCalli.
+     *
+     * @param opcode the argument of type {@code OpCode}
+     * @param callingConvention the argument of type {@code CallingConventions}
+     * @param returnType the argument of type {@code NetType}
+     * @param parameterTypes the argument of type {@code NetType[]}
+     * @param optionalParameterTypes the argument of type {@code NetType[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.EmitCalli" target="_top">.NET documentation</a>
+     */
     public void EmitCalli(OpCode opcode, CallingConventions callingConvention, NetType returnType, NetType[] parameterTypes, NetType[] optionalParameterTypes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -464,6 +684,16 @@ public class ILGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EmitCalli.
+     *
+     * @param opcode the argument of type {@code OpCode}
+     * @param unmanagedCallConv the argument of type {@code CallingConvention}
+     * @param returnType the argument of type {@code NetType}
+     * @param parameterTypes the argument of type {@code NetType[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.EmitCalli" target="_top">.NET documentation</a>
+     */
     public void EmitCalli(OpCode opcode, CallingConvention unmanagedCallConv, NetType returnType, NetType[] parameterTypes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -474,6 +704,25 @@ public class ILGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EmitWriteLine.
+     *
+     * @param localBuilder the argument of type {@code LocalBuilder}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.io.FileLoadException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.EmitWriteLine" target="_top">.NET documentation</a>
+     */
     public void EmitWriteLine(LocalBuilder localBuilder) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.TypeLoadException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.ArgumentOutOfRangeException, system.io.FileLoadException, system.io.FileNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -484,6 +733,28 @@ public class ILGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EmitWriteLine.
+     *
+     * @param fld the argument of type {@code FieldInfo}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.io.FileLoadException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.EmitWriteLine" target="_top">.NET documentation</a>
+     */
     public void EmitWriteLine(FieldInfo fld) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.TypeLoadException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.UnreachableException, system.io.FileLoadException, system.io.FileNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -494,6 +765,25 @@ public class ILGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EmitWriteLine.
+     *
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.io.FileLoadException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.EmitWriteLine" target="_top">.NET documentation</a>
+     */
     public void EmitWriteLine(java.lang.String value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.TypeLoadException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.ArgumentOutOfRangeException, system.io.FileLoadException, system.io.FileNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -504,6 +794,12 @@ public class ILGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EndExceptionBlock.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.EndExceptionBlock" target="_top">.NET documentation</a>
+     */
     public void EndExceptionBlock() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -514,6 +810,12 @@ public class ILGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EndScope.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.EndScope" target="_top">.NET documentation</a>
+     */
     public void EndScope() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -524,6 +826,13 @@ public class ILGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MarkLabel.
+     *
+     * @param loc the argument of type {@code Label}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.MarkLabel" target="_top">.NET documentation</a>
+     */
     public void MarkLabel(Label loc) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -534,6 +843,26 @@ public class ILGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MarkSequencePoint.
+     *
+     * @param document the argument of type {@code ISymbolDocumentWriter}
+     * @param startLine the argument of type {@code int}
+     * @param startColumn the argument of type {@code int}
+     * @param endLine the argument of type {@code int}
+     * @param endColumn the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.MarkSequencePoint" target="_top">.NET documentation</a>
+     */
     public void MarkSequencePoint(ISymbolDocumentWriter document, int startLine, int startColumn, int endLine, int endColumn) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -544,6 +873,22 @@ public class ILGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ThrowException.
+     *
+     * @param excType the argument of type {@code NetType}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.ThrowException" target="_top">.NET documentation</a>
+     */
     public void ThrowException(NetType excType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -554,6 +899,13 @@ public class ILGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UsingNamespace.
+     *
+     * @param usingNamespace the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.UsingNamespace" target="_top">.NET documentation</a>
+     */
     public void UsingNamespace(java.lang.String usingNamespace) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -568,6 +920,13 @@ public class ILGenerator extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ILOffset.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ILGenerator.ILOffset" target="_top">.NET documentation</a>
+     */
     public int getILOffset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

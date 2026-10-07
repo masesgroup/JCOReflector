@@ -101,7 +101,10 @@ public class AssemblyFlagsAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AssemblyFlagsAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,13 @@ public class AssemblyFlagsAttribute extends system.Attribute  {
     public AssemblyFlagsAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param assemblyFlags the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyFlagsAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public AssemblyFlagsAttribute(int assemblyFlags) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +171,13 @@ public class AssemblyFlagsAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param assemblyFlags the argument of type {@code AssemblyNameFlags}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyFlagsAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public AssemblyFlagsAttribute(AssemblyNameFlags assemblyFlags) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +188,13 @@ public class AssemblyFlagsAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param flags the argument of type {@code UInt32}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyFlagsAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public AssemblyFlagsAttribute(UInt32 flags) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -190,6 +214,13 @@ public class AssemblyFlagsAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AssemblyFlags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyFlagsAttribute.AssemblyFlags" target="_top">.NET documentation</a>
+     */
     public int getAssemblyFlags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +261,13 @@ public class AssemblyFlagsAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Flags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyFlagsAttribute.Flags" target="_top">.NET documentation</a>
+     */
     public UInt32 getFlags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class TransactionInterop extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TransactionInterop(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,31 @@ public class TransactionInterop extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetExportCookie.
+     *
+     * @param transaction the argument of type {@code Transaction}
+     * @param whereabouts the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.transactions.TransactionPromotionException if the .NET member raises it
+     * @throws system.transactions.TransactionException if the .NET member raises it
+     * @throws system.transactions.TransactionManagerCommunicationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Transactions.TransactionInterop.GetExportCookie" target="_top">.NET documentation</a>
+     */
     public static byte[] GetExportCookie(Transaction transaction, byte[] whereabouts) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -177,6 +205,31 @@ public class TransactionInterop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetExportCookie.
+     *
+     * @param dupParam0 the argument of type {@code Transaction}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.transactions.TransactionPromotionException if the .NET member raises it
+     * @throws system.transactions.TransactionException if the .NET member raises it
+     * @throws system.transactions.TransactionManagerCommunicationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Transactions.TransactionInterop.GetExportCookie" target="_top">.NET documentation</a>
+     */
     public static byte[] GetExportCookie(Transaction dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -200,6 +253,30 @@ public class TransactionInterop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTransmitterPropagationToken.
+     *
+     * @param transaction the argument of type {@code Transaction}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.transactions.TransactionPromotionException if the .NET member raises it
+     * @throws system.transactions.TransactionException if the .NET member raises it
+     * @throws system.transactions.TransactionManagerCommunicationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Transactions.TransactionInterop.GetTransmitterPropagationToken" target="_top">.NET documentation</a>
+     */
     public static byte[] GetTransmitterPropagationToken(Transaction transaction) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -223,6 +300,29 @@ public class TransactionInterop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetWhereabouts.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.transactions.TransactionException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.transactions.TransactionManagerCommunicationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Transactions.TransactionInterop.GetWhereabouts" target="_top">.NET documentation</a>
+     */
     public static byte[] GetWhereabouts() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.ArgumentException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.threading.WaitHandleCannotBeOpenedException, system.InvalidOperationException, system.transactions.TransactionException, system.RankException, system.ArrayTypeMismatchException, system.transactions.TransactionManagerCommunicationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -246,6 +346,30 @@ public class TransactionInterop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDtcTransaction.
+     *
+     * @param transaction the argument of type {@code Transaction}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.transactions.TransactionPromotionException if the .NET member raises it
+     * @throws system.transactions.TransactionException if the .NET member raises it
+     * @throws system.transactions.TransactionManagerCommunicationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Transactions.TransactionInterop.GetDtcTransaction" target="_top">.NET documentation</a>
+     */
     public static IDtcTransaction GetDtcTransaction(Transaction transaction) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -261,6 +385,35 @@ public class TransactionInterop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTransactionFromDtcTransaction.
+     *
+     * @param transactionNative the argument of type {@code IDtcTransaction}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.transactions.TransactionException if the .NET member raises it
+     * @throws system.transactions.TransactionManagerCommunicationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Transactions.TransactionInterop.GetTransactionFromDtcTransaction" target="_top">.NET documentation</a>
+     */
     public static Transaction GetTransactionFromDtcTransaction(IDtcTransaction transactionNative) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -276,6 +429,35 @@ public class TransactionInterop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTransactionFromExportCookie.
+     *
+     * @param cookie the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.transactions.TransactionException if the .NET member raises it
+     * @throws system.transactions.TransactionManagerCommunicationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Transactions.TransactionInterop.GetTransactionFromExportCookie" target="_top">.NET documentation</a>
+     */
     public static Transaction GetTransactionFromExportCookie(byte[] cookie) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -291,6 +473,35 @@ public class TransactionInterop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTransactionFromExportCookie.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.transactions.TransactionException if the .NET member raises it
+     * @throws system.transactions.TransactionManagerCommunicationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Transactions.TransactionInterop.GetTransactionFromExportCookie" target="_top">.NET documentation</a>
+     */
     public static Transaction GetTransactionFromExportCookie(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -306,6 +517,35 @@ public class TransactionInterop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTransactionFromTransmitterPropagationToken.
+     *
+     * @param propagationToken the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.transactions.TransactionManagerCommunicationException if the .NET member raises it
+     * @throws system.transactions.TransactionException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Transactions.TransactionInterop.GetTransactionFromTransmitterPropagationToken" target="_top">.NET documentation</a>
+     */
     public static Transaction GetTransactionFromTransmitterPropagationToken(byte[] propagationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException, system.transactions.TransactionManagerCommunicationException, system.transactions.TransactionException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -321,6 +561,35 @@ public class TransactionInterop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTransactionFromTransmitterPropagationToken.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.transactions.TransactionManagerCommunicationException if the .NET member raises it
+     * @throws system.transactions.TransactionException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Transactions.TransactionInterop.GetTransactionFromTransmitterPropagationToken" target="_top">.NET documentation</a>
+     */
     public static Transaction GetTransactionFromTransmitterPropagationToken(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException, system.transactions.TransactionManagerCommunicationException, system.transactions.TransactionException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

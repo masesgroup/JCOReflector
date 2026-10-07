@@ -99,7 +99,10 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Csc(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,24 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Csc.-ctor" target="_top">.NET documentation</a>
+     */
     public Csc() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +185,16 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowUnsafeBlocks.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Csc.AllowUnsafeBlocks" target="_top">.NET documentation</a>
+     */
     public boolean getAllowUnsafeBlocks() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +209,20 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowUnsafeBlocks.
+     *
+     * @param AllowUnsafeBlocks the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Csc.AllowUnsafeBlocks" target="_top">.NET documentation</a>
+     */
     public void setAllowUnsafeBlocks(boolean AllowUnsafeBlocks) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +233,16 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CheckForOverflowUnderflow.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Csc.CheckForOverflowUnderflow" target="_top">.NET documentation</a>
+     */
     public boolean getCheckForOverflowUnderflow() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +257,20 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CheckForOverflowUnderflow.
+     *
+     * @param CheckForOverflowUnderflow the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Csc.CheckForOverflowUnderflow" target="_top">.NET documentation</a>
+     */
     public void setCheckForOverflowUnderflow(boolean CheckForOverflowUnderflow) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +281,16 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ErrorEndLocation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Csc.ErrorEndLocation" target="_top">.NET documentation</a>
+     */
     public boolean getErrorEndLocation() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +305,20 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ErrorEndLocation.
+     *
+     * @param ErrorEndLocation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Csc.ErrorEndLocation" target="_top">.NET documentation</a>
+     */
     public void setErrorEndLocation(boolean ErrorEndLocation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +329,16 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GenerateFullPaths.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Csc.GenerateFullPaths" target="_top">.NET documentation</a>
+     */
     public boolean getGenerateFullPaths() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +353,20 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property GenerateFullPaths.
+     *
+     * @param GenerateFullPaths the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Csc.GenerateFullPaths" target="_top">.NET documentation</a>
+     */
     public void setGenerateFullPaths(boolean GenerateFullPaths) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +377,16 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NoStandardLib.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Csc.NoStandardLib" target="_top">.NET documentation</a>
+     */
     public boolean getNoStandardLib() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +401,20 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NoStandardLib.
+     *
+     * @param NoStandardLib the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Csc.NoStandardLib" target="_top">.NET documentation</a>
+     */
     public void setNoStandardLib(boolean NoStandardLib) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -284,6 +425,13 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseHostCompilerIfAvailable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Csc.UseHostCompilerIfAvailable" target="_top">.NET documentation</a>
+     */
     public boolean getUseHostCompilerIfAvailable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +446,13 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseHostCompilerIfAvailable.
+     *
+     * @param UseHostCompilerIfAvailable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Csc.UseHostCompilerIfAvailable" target="_top">.NET documentation</a>
+     */
     public void setUseHostCompilerIfAvailable(boolean UseHostCompilerIfAvailable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +463,16 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WarningLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Csc.WarningLevel" target="_top">.NET documentation</a>
+     */
     public int getWarningLevel() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +513,20 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WarningLevel.
+     *
+     * @param WarningLevel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Csc.WarningLevel" target="_top">.NET documentation</a>
+     */
     public void setWarningLevel(int WarningLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -358,6 +537,16 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ApplicationConfiguration.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Csc.ApplicationConfiguration" target="_top">.NET documentation</a>
+     */
     public java.lang.String getApplicationConfiguration() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -372,6 +561,20 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ApplicationConfiguration.
+     *
+     * @param ApplicationConfiguration the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Csc.ApplicationConfiguration" target="_top">.NET documentation</a>
+     */
     public void setApplicationConfiguration(java.lang.String ApplicationConfiguration) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -382,6 +585,16 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BaseAddress.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Csc.BaseAddress" target="_top">.NET documentation</a>
+     */
     public java.lang.String getBaseAddress() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -396,6 +609,20 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BaseAddress.
+     *
+     * @param BaseAddress the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Csc.BaseAddress" target="_top">.NET documentation</a>
+     */
     public void setBaseAddress(java.lang.String BaseAddress) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -406,6 +633,16 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DisabledWarnings.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Csc.DisabledWarnings" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDisabledWarnings() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -420,6 +657,20 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DisabledWarnings.
+     *
+     * @param DisabledWarnings the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Csc.DisabledWarnings" target="_top">.NET documentation</a>
+     */
     public void setDisabledWarnings(java.lang.String DisabledWarnings) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -430,6 +681,16 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DocumentationFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Csc.DocumentationFile" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDocumentationFile() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -444,6 +705,20 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DocumentationFile.
+     *
+     * @param DocumentationFile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Csc.DocumentationFile" target="_top">.NET documentation</a>
+     */
     public void setDocumentationFile(java.lang.String DocumentationFile) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -454,6 +729,16 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ErrorReport.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Csc.ErrorReport" target="_top">.NET documentation</a>
+     */
     public java.lang.String getErrorReport() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -468,6 +753,20 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ErrorReport.
+     *
+     * @param ErrorReport the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Csc.ErrorReport" target="_top">.NET documentation</a>
+     */
     public void setErrorReport(java.lang.String ErrorReport) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -478,6 +777,16 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LangVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Csc.LangVersion" target="_top">.NET documentation</a>
+     */
     public java.lang.String getLangVersion() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -492,6 +801,20 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LangVersion.
+     *
+     * @param LangVersion the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Csc.LangVersion" target="_top">.NET documentation</a>
+     */
     public void setLangVersion(java.lang.String LangVersion) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -502,6 +825,16 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ModuleAssemblyName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Csc.ModuleAssemblyName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getModuleAssemblyName() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -516,6 +849,20 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ModuleAssemblyName.
+     *
+     * @param ModuleAssemblyName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Csc.ModuleAssemblyName" target="_top">.NET documentation</a>
+     */
     public void setModuleAssemblyName(java.lang.String ModuleAssemblyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -526,6 +873,16 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PdbFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Csc.PdbFile" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPdbFile() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -540,6 +897,20 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PdbFile.
+     *
+     * @param PdbFile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Csc.PdbFile" target="_top">.NET documentation</a>
+     */
     public void setPdbFile(java.lang.String PdbFile) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -550,6 +921,16 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PreferredUILang.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Csc.PreferredUILang" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPreferredUILang() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -564,6 +945,20 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PreferredUILang.
+     *
+     * @param PreferredUILang the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Csc.PreferredUILang" target="_top">.NET documentation</a>
+     */
     public void setPreferredUILang(java.lang.String PreferredUILang) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -574,6 +969,16 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WarningsAsErrors.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Csc.WarningsAsErrors" target="_top">.NET documentation</a>
+     */
     public java.lang.String getWarningsAsErrors() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -588,6 +993,20 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WarningsAsErrors.
+     *
+     * @param WarningsAsErrors the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Csc.WarningsAsErrors" target="_top">.NET documentation</a>
+     */
     public void setWarningsAsErrors(java.lang.String WarningsAsErrors) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -598,6 +1017,16 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WarningsNotAsErrors.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Csc.WarningsNotAsErrors" target="_top">.NET documentation</a>
+     */
     public java.lang.String getWarningsNotAsErrors() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -612,6 +1041,20 @@ public class Csc extends microsoft.build.tasks.ManagedCompiler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WarningsNotAsErrors.
+     *
+     * @param WarningsNotAsErrors the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Csc.WarningsNotAsErrors" target="_top">.NET documentation</a>
+     */
     public void setWarningsNotAsErrors(java.lang.String WarningsNotAsErrors) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

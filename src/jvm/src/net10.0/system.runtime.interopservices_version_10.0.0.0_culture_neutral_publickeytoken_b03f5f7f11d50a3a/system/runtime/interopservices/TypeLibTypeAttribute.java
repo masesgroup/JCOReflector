@@ -100,7 +100,10 @@ public class TypeLibTypeAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TypeLibTypeAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class TypeLibTypeAttribute extends system.Attribute  {
     public TypeLibTypeAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param flags the argument of type {@code short}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.TypeLibTypeAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public TypeLibTypeAttribute(short flags) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +170,13 @@ public class TypeLibTypeAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param flags the argument of type {@code TypeLibTypeFlags}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.TypeLibTypeAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public TypeLibTypeAttribute(TypeLibTypeFlags flags) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +196,13 @@ public class TypeLibTypeAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.TypeLibTypeAttribute.Value" target="_top">.NET documentation</a>
+     */
     public TypeLibTypeFlags getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

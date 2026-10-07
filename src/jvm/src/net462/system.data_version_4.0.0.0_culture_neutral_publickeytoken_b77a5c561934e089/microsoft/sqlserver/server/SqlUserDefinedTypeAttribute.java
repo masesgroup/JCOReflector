@@ -100,7 +100,10 @@ public class SqlUserDefinedTypeAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SqlUserDefinedTypeAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,22 @@ public class SqlUserDefinedTypeAttribute extends system.Attribute  {
     public SqlUserDefinedTypeAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param format the argument of type {@code Format}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlUserDefinedTypeAttribute(Format format) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +188,13 @@ public class SqlUserDefinedTypeAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsByteOrdered.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.IsByteOrdered" target="_top">.NET documentation</a>
+     */
     public boolean getIsByteOrdered() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +209,13 @@ public class SqlUserDefinedTypeAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsByteOrdered.
+     *
+     * @param IsByteOrdered the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.IsByteOrdered" target="_top">.NET documentation</a>
+     */
     public void setIsByteOrdered(boolean IsByteOrdered) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +226,13 @@ public class SqlUserDefinedTypeAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsFixedLength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.IsFixedLength" target="_top">.NET documentation</a>
+     */
     public boolean getIsFixedLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +247,13 @@ public class SqlUserDefinedTypeAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsFixedLength.
+     *
+     * @param IsFixedLength the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.IsFixedLength" target="_top">.NET documentation</a>
+     */
     public void setIsFixedLength(boolean IsFixedLength) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +264,13 @@ public class SqlUserDefinedTypeAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxByteSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.MaxByteSize" target="_top">.NET documentation</a>
+     */
     public int getMaxByteSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +311,14 @@ public class SqlUserDefinedTypeAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxByteSize.
+     *
+     * @param MaxByteSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.MaxByteSize" target="_top">.NET documentation</a>
+     */
     public void setMaxByteSize(int MaxByteSize) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +329,13 @@ public class SqlUserDefinedTypeAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Format.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.Format" target="_top">.NET documentation</a>
+     */
     public Format getFormat() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +351,13 @@ public class SqlUserDefinedTypeAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -296,6 +372,13 @@ public class SqlUserDefinedTypeAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +389,13 @@ public class SqlUserDefinedTypeAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValidationMethodName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.ValidationMethodName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getValidationMethodName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +410,13 @@ public class SqlUserDefinedTypeAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ValidationMethodName.
+     *
+     * @param ValidationMethodName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.ValidationMethodName" target="_top">.NET documentation</a>
+     */
     public void setValidationMethodName(java.lang.String ValidationMethodName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

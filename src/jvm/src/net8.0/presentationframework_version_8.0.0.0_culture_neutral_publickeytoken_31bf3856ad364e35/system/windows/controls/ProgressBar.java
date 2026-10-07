@@ -100,7 +100,10 @@ public class ProgressBar extends system.windows.controls.primitives.RangeBase  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ProgressBar(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,20 @@ public class ProgressBar extends system.windows.controls.primitives.RangeBase  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.windows.media.animation.AnimationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ProgressBar.-ctor" target="_top">.NET documentation</a>
+     */
     public ProgressBar() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.OverflowException, system.NotSupportedException, system.PlatformNotSupportedException, system.windows.media.animation.AnimationException {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +178,19 @@ public class ProgressBar extends system.windows.controls.primitives.RangeBase  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member OnApplyTemplate.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ProgressBar.OnApplyTemplate" target="_top">.NET documentation</a>
+     */
     public void OnApplyTemplate() throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +205,21 @@ public class ProgressBar extends system.windows.controls.primitives.RangeBase  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsIndeterminate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ProgressBar.IsIndeterminate" target="_top">.NET documentation</a>
+     */
     public boolean getIsIndeterminate() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +234,21 @@ public class ProgressBar extends system.windows.controls.primitives.RangeBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsIndeterminate.
+     *
+     * @param IsIndeterminate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ProgressBar.IsIndeterminate" target="_top">.NET documentation</a>
+     */
     public void setIsIndeterminate(boolean IsIndeterminate) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +259,21 @@ public class ProgressBar extends system.windows.controls.primitives.RangeBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Orientation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ProgressBar.Orientation" target="_top">.NET documentation</a>
+     */
     public Orientation getOrientation() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +289,22 @@ public class ProgressBar extends system.windows.controls.primitives.RangeBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Orientation.
+     *
+     * @param Orientation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ProgressBar.Orientation" target="_top">.NET documentation</a>
+     */
     public void setOrientation(Orientation Orientation) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

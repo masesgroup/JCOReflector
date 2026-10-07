@@ -99,7 +99,10 @@ public class XmlTypeMapping extends system.xml.serialization.XmlMapping  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlTypeMapping(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class XmlTypeMapping extends system.xml.serialization.XmlMapping  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property TypeFullName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlTypeMapping.TypeFullName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTypeFullName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +182,13 @@ public class XmlTypeMapping extends system.xml.serialization.XmlMapping  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlTypeMapping.TypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +203,13 @@ public class XmlTypeMapping extends system.xml.serialization.XmlMapping  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XsdTypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlTypeMapping.XsdTypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXsdTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +224,13 @@ public class XmlTypeMapping extends system.xml.serialization.XmlMapping  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XsdTypeNamespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlTypeMapping.XsdTypeNamespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXsdTypeNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

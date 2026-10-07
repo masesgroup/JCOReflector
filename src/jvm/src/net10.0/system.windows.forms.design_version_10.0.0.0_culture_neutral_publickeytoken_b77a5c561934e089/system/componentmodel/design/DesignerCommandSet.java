@@ -102,7 +102,10 @@ public class DesignerCommandSet extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DesignerCommandSet(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class DesignerCommandSet extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerCommandSet.-ctor" target="_top">.NET documentation</a>
+     */
     public DesignerCommandSet() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,14 @@ public class DesignerCommandSet extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetCommands.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerCommandSet.GetCommands" target="_top">.NET documentation</a>
+     */
     public ICollection GetCommands(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +199,13 @@ public class DesignerCommandSet extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ActionLists.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerCommandSet.ActionLists" target="_top">.NET documentation</a>
+     */
     public DesignerActionListCollection getActionLists() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +221,13 @@ public class DesignerCommandSet extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Verbs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerCommandSet.Verbs" target="_top">.NET documentation</a>
+     */
     public DesignerVerbCollection getVerbs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

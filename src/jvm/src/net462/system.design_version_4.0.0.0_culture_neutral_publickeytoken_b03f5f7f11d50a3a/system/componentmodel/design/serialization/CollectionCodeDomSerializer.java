@@ -101,7 +101,10 @@ public class CollectionCodeDomSerializer extends system.componentmodel.design.se
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CollectionCodeDomSerializer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class CollectionCodeDomSerializer extends system.componentmodel.design.se
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.CollectionCodeDomSerializer.-ctor" target="_top">.NET documentation</a>
+     */
     public CollectionCodeDomSerializer() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +171,29 @@ public class CollectionCodeDomSerializer extends system.componentmodel.design.se
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Serialize.
+     *
+     * @param manager the argument of type {@code IDesignerSerializationManager}
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.design.serialization.CodeDomSerializerException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.CollectionCodeDomSerializer.Serialize" target="_top">.NET documentation</a>
+     */
     public NetObject Serialize(IDesignerSerializationManager manager, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.componentmodel.design.serialization.CodeDomSerializerException, system.TypeLoadException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

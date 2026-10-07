@@ -102,7 +102,10 @@ public class TimerEventSubscription extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TimerEventSubscription(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,14 @@ public class TimerEventSubscription extends NetObject  {
     public TimerEventSubscription() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param workflowInstanceId the argument of type {@code Guid}
+     * @param expiresAt the argument of type {@code DateTime}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.TimerEventSubscription.-ctor" target="_top">.NET documentation</a>
+     */
     public TimerEventSubscription(Guid workflowInstanceId, DateTime expiresAt) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +173,15 @@ public class TimerEventSubscription extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param timerId the argument of type {@code Guid}
+     * @param workflowInstanceId the argument of type {@code Guid}
+     * @param expiresAt the argument of type {@code DateTime}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.TimerEventSubscription.-ctor" target="_top">.NET documentation</a>
+     */
     public TimerEventSubscription(Guid timerId, Guid workflowInstanceId, DateTime expiresAt) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +201,13 @@ public class TimerEventSubscription extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ExpiresAt.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.TimerEventSubscription.ExpiresAt" target="_top">.NET documentation</a>
+     */
     public DateTime getExpiresAt() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +223,13 @@ public class TimerEventSubscription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SubscriptionId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.TimerEventSubscription.SubscriptionId" target="_top">.NET documentation</a>
+     */
     public Guid getSubscriptionId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +245,13 @@ public class TimerEventSubscription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WorkflowInstanceId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.TimerEventSubscription.WorkflowInstanceId" target="_top">.NET documentation</a>
+     */
     public Guid getWorkflowInstanceId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +267,13 @@ public class TimerEventSubscription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property QueueName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.TimerEventSubscription.QueueName" target="_top">.NET documentation</a>
+     */
     public IComparable getQueueName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +289,13 @@ public class TimerEventSubscription extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property QueueName.
+     *
+     * @param QueueName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.TimerEventSubscription.QueueName" target="_top">.NET documentation</a>
+     */
     public void setQueueName(IComparable QueueName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

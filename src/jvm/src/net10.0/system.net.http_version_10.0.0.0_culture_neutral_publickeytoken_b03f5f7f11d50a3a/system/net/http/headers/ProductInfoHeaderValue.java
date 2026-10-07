@@ -100,7 +100,10 @@ public class ProductInfoHeaderValue extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ProductInfoHeaderValue(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,22 @@ public class ProductInfoHeaderValue extends NetObject  {
     public ProductInfoHeaderValue() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param product the argument of type {@code ProductHeaderValue}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.ProductInfoHeaderValue.-ctor" target="_top">.NET documentation</a>
+     */
     public ProductInfoHeaderValue(ProductHeaderValue product) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +179,25 @@ public class ProductInfoHeaderValue extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param productName the argument of type {@code java.lang.String}
+     * @param productVersion the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.ProductInfoHeaderValue.-ctor" target="_top">.NET documentation</a>
+     */
     public ProductInfoHeaderValue(java.lang.String productName, java.lang.String productVersion) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.diagnostics.UnreachableException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +208,20 @@ public class ProductInfoHeaderValue extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param comment the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.ProductInfoHeaderValue.-ctor" target="_top">.NET documentation</a>
+     */
     public ProductInfoHeaderValue(java.lang.String comment) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -185,6 +237,15 @@ public class ProductInfoHeaderValue extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member TryParse.
+     *
+     * @param input the argument of type {@code java.lang.String}
+     * @param parsedValue the argument of type {@code JCORefOut<ProductInfoHeaderValue>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.ProductInfoHeaderValue.TryParse" target="_top">.NET documentation</a>
+     */
     public static boolean TryParse(java.lang.String input, JCORefOut<ProductInfoHeaderValue> parsedValue) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -199,6 +260,23 @@ public class ProductInfoHeaderValue extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Parse.
+     *
+     * @param input the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.ProductInfoHeaderValue.Parse" target="_top">.NET documentation</a>
+     */
     public static ProductInfoHeaderValue Parse(java.lang.String input) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -217,8 +295,12 @@ public class ProductInfoHeaderValue extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICloneable method available in ICloneable to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ICloneable.Clone" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public NetObject Clone() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICloneable to obtain the full interface.");
     }
@@ -227,6 +309,13 @@ public class ProductInfoHeaderValue extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Product.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.ProductInfoHeaderValue.Product" target="_top">.NET documentation</a>
+     */
     public ProductHeaderValue getProduct() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +331,13 @@ public class ProductInfoHeaderValue extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Comment.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.ProductInfoHeaderValue.Comment" target="_top">.NET documentation</a>
+     */
     public java.lang.String getComment() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

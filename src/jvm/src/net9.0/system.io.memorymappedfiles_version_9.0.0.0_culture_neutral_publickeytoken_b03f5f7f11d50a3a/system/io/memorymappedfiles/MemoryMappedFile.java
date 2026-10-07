@@ -109,7 +109,10 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MemoryMappedFile(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -164,6 +167,32 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateFromFile.
+     *
+     * @param fileHandle the argument of type {@code SafeFileHandle}
+     * @param mapName the argument of type {@code java.lang.String}
+     * @param capacity the argument of type {@code long}
+     * @param access the argument of type {@code MemoryMappedFileAccess}
+     * @param inheritability the argument of type {@code HandleInheritability}
+     * @param leaveOpen the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile" target="_top">.NET documentation</a>
+     */
     public static MemoryMappedFile CreateFromFile(SafeFileHandle fileHandle, java.lang.String mapName, long capacity, MemoryMappedFileAccess access, HandleInheritability inheritability, boolean leaveOpen) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -179,6 +208,33 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateFromFile.
+     *
+     * @param fileStream the argument of type {@code FileStream}
+     * @param mapName the argument of type {@code java.lang.String}
+     * @param capacity the argument of type {@code long}
+     * @param access the argument of type {@code MemoryMappedFileAccess}
+     * @param inheritability the argument of type {@code HandleInheritability}
+     * @param leaveOpen the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile" target="_top">.NET documentation</a>
+     */
     public static MemoryMappedFile CreateFromFile(FileStream fileStream, java.lang.String mapName, long capacity, MemoryMappedFileAccess access, HandleInheritability inheritability, boolean leaveOpen) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -194,6 +250,35 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateFromFile.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @param mode the argument of type {@code FileMode}
+     * @param mapName the argument of type {@code java.lang.String}
+     * @param capacity the argument of type {@code long}
+     * @param access the argument of type {@code MemoryMappedFileAccess}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile" target="_top">.NET documentation</a>
+     */
     public static MemoryMappedFile CreateFromFile(java.lang.String path, FileMode mode, java.lang.String mapName, long capacity, MemoryMappedFileAccess access) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.runtime.serialization.SerializationException, system.io.IOException, system.ApplicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -209,6 +294,31 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateFromFile.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @param mode the argument of type {@code FileMode}
+     * @param mapName the argument of type {@code java.lang.String}
+     * @param capacity the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile" target="_top">.NET documentation</a>
+     */
     public static MemoryMappedFile CreateFromFile(java.lang.String path, FileMode mode, java.lang.String mapName, long capacity) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.io.IOException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -224,6 +334,30 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateFromFile.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @param mode the argument of type {@code FileMode}
+     * @param mapName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile" target="_top">.NET documentation</a>
+     */
     public static MemoryMappedFile CreateFromFile(java.lang.String path, FileMode mode, java.lang.String mapName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.io.IOException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -239,6 +373,29 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateFromFile.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @param mode the argument of type {@code FileMode}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile" target="_top">.NET documentation</a>
+     */
     public static MemoryMappedFile CreateFromFile(java.lang.String path, FileMode mode) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.io.IOException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -254,6 +411,28 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateFromFile.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile" target="_top">.NET documentation</a>
+     */
     public static MemoryMappedFile CreateFromFile(java.lang.String path) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.io.IOException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -269,6 +448,31 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateNew.
+     *
+     * @param mapName the argument of type {@code java.lang.String}
+     * @param capacity the argument of type {@code long}
+     * @param access the argument of type {@code MemoryMappedFileAccess}
+     * @param options the argument of type {@code MemoryMappedFileOptions}
+     * @param inheritability the argument of type {@code HandleInheritability}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew" target="_top">.NET documentation</a>
+     */
     public static MemoryMappedFile CreateNew(java.lang.String mapName, long capacity, MemoryMappedFileAccess access, MemoryMappedFileOptions options, HandleInheritability inheritability) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -284,6 +488,27 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateNew.
+     *
+     * @param mapName the argument of type {@code java.lang.String}
+     * @param capacity the argument of type {@code long}
+     * @param access the argument of type {@code MemoryMappedFileAccess}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew" target="_top">.NET documentation</a>
+     */
     public static MemoryMappedFile CreateNew(java.lang.String mapName, long capacity, MemoryMappedFileAccess access) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -299,6 +524,26 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateNew.
+     *
+     * @param mapName the argument of type {@code java.lang.String}
+     * @param capacity the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew" target="_top">.NET documentation</a>
+     */
     public static MemoryMappedFile CreateNew(java.lang.String mapName, long capacity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -314,6 +559,28 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateOrOpen.
+     *
+     * @param mapName the argument of type {@code java.lang.String}
+     * @param capacity the argument of type {@code long}
+     * @param access the argument of type {@code MemoryMappedFileAccess}
+     * @param options the argument of type {@code MemoryMappedFileOptions}
+     * @param inheritability the argument of type {@code HandleInheritability}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen" target="_top">.NET documentation</a>
+     */
     public static MemoryMappedFile CreateOrOpen(java.lang.String mapName, long capacity, MemoryMappedFileAccess access, MemoryMappedFileOptions options, HandleInheritability inheritability) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -329,6 +596,27 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateOrOpen.
+     *
+     * @param mapName the argument of type {@code java.lang.String}
+     * @param capacity the argument of type {@code long}
+     * @param access the argument of type {@code MemoryMappedFileAccess}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen" target="_top">.NET documentation</a>
+     */
     public static MemoryMappedFile CreateOrOpen(java.lang.String mapName, long capacity, MemoryMappedFileAccess access) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -344,6 +632,26 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateOrOpen.
+     *
+     * @param mapName the argument of type {@code java.lang.String}
+     * @param capacity the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen" target="_top">.NET documentation</a>
+     */
     public static MemoryMappedFile CreateOrOpen(java.lang.String mapName, long capacity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -359,6 +667,25 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member OpenExisting.
+     *
+     * @param mapName the argument of type {@code java.lang.String}
+     * @param desiredAccessRights the argument of type {@code MemoryMappedFileRights}
+     * @param inheritability the argument of type {@code HandleInheritability}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting" target="_top">.NET documentation</a>
+     */
     public static MemoryMappedFile OpenExisting(java.lang.String mapName, MemoryMappedFileRights desiredAccessRights, HandleInheritability inheritability) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.PlatformNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -374,6 +701,22 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member OpenExisting.
+     *
+     * @param mapName the argument of type {@code java.lang.String}
+     * @param desiredAccessRights the argument of type {@code MemoryMappedFileRights}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting" target="_top">.NET documentation</a>
+     */
     public static MemoryMappedFile OpenExisting(java.lang.String mapName, MemoryMappedFileRights desiredAccessRights) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.PlatformNotSupportedException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -389,6 +732,21 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member OpenExisting.
+     *
+     * @param mapName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting" target="_top">.NET documentation</a>
+     */
     public static MemoryMappedFile OpenExisting(java.lang.String mapName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.PlatformNotSupportedException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -404,6 +762,27 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateViewAccessor.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewAccessor" target="_top">.NET documentation</a>
+     */
     public MemoryMappedViewAccessor CreateViewAccessor() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.io.IOException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -419,6 +798,31 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateViewAccessor.
+     *
+     * @param offset the argument of type {@code long}
+     * @param size the argument of type {@code long}
+     * @param access the argument of type {@code MemoryMappedFileAccess}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewAccessor" target="_top">.NET documentation</a>
+     */
     public MemoryMappedViewAccessor CreateViewAccessor(long offset, long size, MemoryMappedFileAccess access) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.io.IOException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -434,6 +838,29 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateViewAccessor.
+     *
+     * @param offset the argument of type {@code long}
+     * @param size the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewAccessor" target="_top">.NET documentation</a>
+     */
     public MemoryMappedViewAccessor CreateViewAccessor(long offset, long size) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.io.IOException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -449,6 +876,27 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateViewStream.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewStream" target="_top">.NET documentation</a>
+     */
     public MemoryMappedViewStream CreateViewStream() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.io.IOException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -464,6 +912,31 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateViewStream.
+     *
+     * @param offset the argument of type {@code long}
+     * @param size the argument of type {@code long}
+     * @param access the argument of type {@code MemoryMappedFileAccess}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewStream" target="_top">.NET documentation</a>
+     */
     public MemoryMappedViewStream CreateViewStream(long offset, long size, MemoryMappedFileAccess access) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.io.IOException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -479,6 +952,29 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateViewStream.
+     *
+     * @param offset the argument of type {@code long}
+     * @param size the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewStream" target="_top">.NET documentation</a>
+     */
     public MemoryMappedViewStream CreateViewStream(long offset, long size) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.io.IOException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -494,6 +990,14 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.MemoryMappedFiles.MemoryMappedFile.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -521,6 +1025,13 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SafeMemoryMappedFileHandle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.MemoryMappedFiles.MemoryMappedFile.SafeMemoryMappedFileHandle" target="_top">.NET documentation</a>
+     */
     public SafeMemoryMappedFileHandle getSafeMemoryMappedFileHandle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

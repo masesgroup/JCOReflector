@@ -103,7 +103,10 @@ public class PerformanceCounter extends system.componentmodel.Component  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PerformanceCounter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,17 @@ public class PerformanceCounter extends system.componentmodel.Component  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceCounter.-ctor" target="_top">.NET documentation</a>
+     */
     public PerformanceCounter() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +174,31 @@ public class PerformanceCounter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param categoryName the argument of type {@code java.lang.String}
+     * @param counterName the argument of type {@code java.lang.String}
+     * @param readOnly the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceCounter.-ctor" target="_top">.NET documentation</a>
+     */
     public PerformanceCounter(java.lang.String categoryName, java.lang.String counterName, boolean readOnly) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.security.SecurityException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +209,35 @@ public class PerformanceCounter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param categoryName the argument of type {@code java.lang.String}
+     * @param counterName the argument of type {@code java.lang.String}
+     * @param instanceName the argument of type {@code java.lang.String}
+     * @param readOnly the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceCounter.-ctor" target="_top">.NET documentation</a>
+     */
     public PerformanceCounter(java.lang.String categoryName, java.lang.String counterName, java.lang.String instanceName, boolean readOnly) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.security.SecurityException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.FormatException, system.io.IOException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException, system.OverflowException, system.threading.AbandonedMutexException {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +248,34 @@ public class PerformanceCounter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param categoryName the argument of type {@code java.lang.String}
+     * @param counterName the argument of type {@code java.lang.String}
+     * @param instanceName the argument of type {@code java.lang.String}
+     * @param machineName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceCounter.-ctor" target="_top">.NET documentation</a>
+     */
     public PerformanceCounter(java.lang.String categoryName, java.lang.String counterName, java.lang.String instanceName, java.lang.String machineName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.RankException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.security.SecurityException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException {
         try {
             // add reference to assemblyName.dll file
@@ -190,6 +286,31 @@ public class PerformanceCounter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param categoryName the argument of type {@code java.lang.String}
+     * @param counterName the argument of type {@code java.lang.String}
+     * @param instanceName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceCounter.-ctor" target="_top">.NET documentation</a>
+     */
     public PerformanceCounter(java.lang.String categoryName, java.lang.String counterName, java.lang.String instanceName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.security.SecurityException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException {
         try {
             // add reference to assemblyName.dll file
@@ -200,6 +321,34 @@ public class PerformanceCounter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param categoryName the argument of type {@code java.lang.String}
+     * @param counterName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceCounter.-ctor" target="_top">.NET documentation</a>
+     */
     public PerformanceCounter(java.lang.String categoryName, java.lang.String counterName) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.security.SecurityException, system.componentmodel.Win32Exception, system.ArgumentException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentNullException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.RankException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.io.IOException, system.UnauthorizedAccessException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException {
         try {
             // add reference to assemblyName.dll file
@@ -214,6 +363,34 @@ public class PerformanceCounter extends system.componentmodel.Component  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Decrement.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceCounter.Decrement" target="_top">.NET documentation</a>
+     */
     public long Decrement() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.io.IOException, system.security.SecurityException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException, system.OverflowException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +431,34 @@ public class PerformanceCounter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member Increment.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceCounter.Increment" target="_top">.NET documentation</a>
+     */
     public long Increment() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.io.IOException, system.security.SecurityException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException, system.OverflowException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +499,35 @@ public class PerformanceCounter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member IncrementBy.
+     *
+     * @param value the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceCounter.IncrementBy" target="_top">.NET documentation</a>
+     */
     public long IncrementBy(long value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.io.IOException, system.security.SecurityException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException, system.OverflowException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -334,6 +568,30 @@ public class PerformanceCounter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member NextValue.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceCounter.NextValue" target="_top">.NET documentation</a>
+     */
     public Single NextValue() throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException, system.security.SecurityException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -349,6 +607,35 @@ public class PerformanceCounter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member NextSample.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceCounter.NextSample" target="_top">.NET documentation</a>
+     */
     public CounterSample NextSample() throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.io.IOException, system.NotSupportedException, system.security.SecurityException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException, system.OverflowException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -364,6 +651,12 @@ public class PerformanceCounter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member BeginInit.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceCounter.BeginInit" target="_top">.NET documentation</a>
+     */
     public void BeginInit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -374,6 +667,12 @@ public class PerformanceCounter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member Close.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceCounter.Close" target="_top">.NET documentation</a>
+     */
     public void Close() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -384,6 +683,15 @@ public class PerformanceCounter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member CloseSharedResources.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceCounter.CloseSharedResources" target="_top">.NET documentation</a>
+     */
     public static void CloseSharedResources() throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -394,6 +702,34 @@ public class PerformanceCounter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member EndInit.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceCounter.EndInit" target="_top">.NET documentation</a>
+     */
     public void EndInit() throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.io.IOException, system.NotSupportedException, system.security.SecurityException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException, system.OverflowException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -404,6 +740,33 @@ public class PerformanceCounter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveInstance.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceCounter.RemoveInstance" target="_top">.NET documentation</a>
+     */
     public void RemoveInstance() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.io.IOException, system.security.SecurityException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException, system.OverflowException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -418,6 +781,13 @@ public class PerformanceCounter extends system.componentmodel.Component  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ReadOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceCounter.ReadOnly" target="_top">.NET documentation</a>
+     */
     public boolean getReadOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -432,6 +802,21 @@ public class PerformanceCounter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReadOnly.
+     *
+     * @param ReadOnly the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceCounter.ReadOnly" target="_top">.NET documentation</a>
+     */
     public void setReadOnly(boolean ReadOnly) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.security.SecurityException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -442,6 +827,30 @@ public class PerformanceCounter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RawValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceCounter.RawValue" target="_top">.NET documentation</a>
+     */
     public long getRawValue() throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException, system.security.SecurityException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -482,6 +891,34 @@ public class PerformanceCounter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RawValue.
+     *
+     * @param RawValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceCounter.RawValue" target="_top">.NET documentation</a>
+     */
     public void setRawValue(long RawValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.io.IOException, system.security.SecurityException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException, system.OverflowException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -492,6 +929,13 @@ public class PerformanceCounter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceLifetime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceCounter.InstanceLifetime" target="_top">.NET documentation</a>
+     */
     public PerformanceCounterInstanceLifetime getInstanceLifetime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -507,6 +951,22 @@ public class PerformanceCounter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InstanceLifetime.
+     *
+     * @param InstanceLifetime the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceCounter.InstanceLifetime" target="_top">.NET documentation</a>
+     */
     public void setInstanceLifetime(PerformanceCounterInstanceLifetime InstanceLifetime) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -517,6 +977,35 @@ public class PerformanceCounter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CounterType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceCounter.CounterType" target="_top">.NET documentation</a>
+     */
     public PerformanceCounterType getCounterType() throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.io.IOException, system.NotSupportedException, system.security.SecurityException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException, system.OverflowException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -532,6 +1021,13 @@ public class PerformanceCounter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CategoryName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceCounter.CategoryName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCategoryName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -546,6 +1042,25 @@ public class PerformanceCounter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CategoryName.
+     *
+     * @param CategoryName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceCounter.CategoryName" target="_top">.NET documentation</a>
+     */
     public void setCategoryName(java.lang.String CategoryName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -556,6 +1071,35 @@ public class PerformanceCounter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CounterHelp.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceCounter.CounterHelp" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCounterHelp() throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.io.IOException, system.NotSupportedException, system.security.SecurityException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException, system.OverflowException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -570,6 +1114,13 @@ public class PerformanceCounter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CounterName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceCounter.CounterName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCounterName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -584,6 +1135,25 @@ public class PerformanceCounter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CounterName.
+     *
+     * @param CounterName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceCounter.CounterName" target="_top">.NET documentation</a>
+     */
     public void setCounterName(java.lang.String CounterName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -594,6 +1164,13 @@ public class PerformanceCounter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceCounter.InstanceName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getInstanceName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -608,6 +1185,26 @@ public class PerformanceCounter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InstanceName.
+     *
+     * @param InstanceName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceCounter.InstanceName" target="_top">.NET documentation</a>
+     */
     public void setInstanceName(java.lang.String InstanceName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -618,6 +1215,13 @@ public class PerformanceCounter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MachineName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceCounter.MachineName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMachineName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -632,6 +1236,22 @@ public class PerformanceCounter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MachineName.
+     *
+     * @param MachineName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceCounter.MachineName" target="_top">.NET documentation</a>
+     */
     public void setMachineName(java.lang.String MachineName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

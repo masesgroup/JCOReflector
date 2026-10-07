@@ -114,7 +114,9 @@ public class DataSourceCacheExpiry extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public DataSourceCacheExpiry(java.lang.Object instance) {
         super(instance);

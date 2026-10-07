@@ -102,7 +102,10 @@ public class MethodBodyBlock extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MethodBodyBlock(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,18 @@ public class MethodBodyBlock extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetILBytes.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MethodBodyBlock.GetILBytes" target="_top">.NET documentation</a>
+     */
     public byte[] GetILBytes() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.BadImageFormatException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +195,17 @@ public class MethodBodyBlock extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetILContent.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MethodBodyBlock.GetILContent" target="_top">.NET documentation</a>
+     */
     public ImmutableArray_1 GetILContent() throws Throwable, system.ArgumentException, system.BadImageFormatException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +221,13 @@ public class MethodBodyBlock extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetILReader.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MethodBodyBlock.GetILReader" target="_top">.NET documentation</a>
+     */
     public BlobReader GetILReader() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +243,27 @@ public class MethodBodyBlock extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param reader the argument of type {@code BlobReader}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MethodBodyBlock.Create" target="_top">.NET documentation</a>
+     */
     public static MethodBodyBlock Create(BlobReader reader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.BadImageFormatException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.RankException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -229,6 +283,13 @@ public class MethodBodyBlock extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property LocalVariablesInitialized.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MethodBodyBlock.LocalVariablesInitialized" target="_top">.NET documentation</a>
+     */
     public boolean getLocalVariablesInitialized() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +304,13 @@ public class MethodBodyBlock extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxStack.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MethodBodyBlock.MaxStack" target="_top">.NET documentation</a>
+     */
     public int getMaxStack() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +351,13 @@ public class MethodBodyBlock extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Size.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MethodBodyBlock.Size" target="_top">.NET documentation</a>
+     */
     public int getSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -323,6 +398,13 @@ public class MethodBodyBlock extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExceptionRegions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MethodBodyBlock.ExceptionRegions" target="_top">.NET documentation</a>
+     */
     public ImmutableArray_1 getExceptionRegions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -338,6 +420,13 @@ public class MethodBodyBlock extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LocalSignature.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MethodBodyBlock.LocalSignature" target="_top">.NET documentation</a>
+     */
     public StandaloneSignatureHandle getLocalSignature() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

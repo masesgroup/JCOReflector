@@ -109,7 +109,10 @@ public class AssemblyName extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AssemblyName(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,12 @@ public class AssemblyName extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyName.-ctor" target="_top">.NET documentation</a>
+     */
     public AssemblyName() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +175,23 @@ public class AssemblyName extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param assemblyName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.io.FileLoadException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyName.-ctor" target="_top">.NET documentation</a>
+     */
     public AssemblyName(java.lang.String assemblyName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.io.FileLoadException {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +206,28 @@ public class AssemblyName extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ReferenceMatchesDefinition.
+     *
+     * @param reference the argument of type {@code AssemblyName}
+     * @param definition the argument of type {@code AssemblyName}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyName.ReferenceMatchesDefinition" target="_top">.NET documentation</a>
+     */
     public static boolean ReferenceMatchesDefinition(AssemblyName reference, AssemblyName definition) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -194,6 +242,13 @@ public class AssemblyName extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPublicKey.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyName.GetPublicKey" target="_top">.NET documentation</a>
+     */
     public byte[] GetPublicKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +272,19 @@ public class AssemblyName extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPublicKeyToken.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyName.GetPublicKeyToken" target="_top">.NET documentation</a>
+     */
     public byte[] GetPublicKeyToken() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +308,16 @@ public class AssemblyName extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyName.Clone" target="_top">.NET documentation</a>
+     */
     public NetObject Clone() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +333,26 @@ public class AssemblyName extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetAssemblyName.
+     *
+     * @param assemblyFile the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.io.FileLoadException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyName.GetAssemblyName" target="_top">.NET documentation</a>
+     */
     public static AssemblyName GetAssemblyName(java.lang.String assemblyFile) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.TypeLoadException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.io.FileLoadException, system.io.FileNotFoundException, system.NotSupportedException, system.MissingMethodException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -270,6 +368,23 @@ public class AssemblyName extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetObjectData.
+     *
+     * @param info the argument of type {@code SerializationInfo}
+     * @param context the argument of type {@code StreamingContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyName.GetObjectData" target="_top">.NET documentation</a>
+     */
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +395,22 @@ public class AssemblyName extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OnDeserialization.
+     *
+     * @param sender the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyName.OnDeserialization" target="_top">.NET documentation</a>
+     */
     public void OnDeserialization(NetObject sender) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +421,13 @@ public class AssemblyName extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetPublicKey.
+     *
+     * @param publicKey the argument of type {@code byte[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyName.SetPublicKey" target="_top">.NET documentation</a>
+     */
     public void SetPublicKey(byte[] publicKey) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +438,13 @@ public class AssemblyName extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetPublicKey.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyName.SetPublicKey" target="_top">.NET documentation</a>
+     */
     public void SetPublicKey(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +455,13 @@ public class AssemblyName extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetPublicKeyToken.
+     *
+     * @param publicKeyToken the argument of type {@code byte[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyName.SetPublicKeyToken" target="_top">.NET documentation</a>
+     */
     public void SetPublicKeyToken(byte[] publicKeyToken) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +472,13 @@ public class AssemblyName extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetPublicKeyToken.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyName.SetPublicKeyToken" target="_top">.NET documentation</a>
+     */
     public void SetPublicKeyToken(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -334,6 +493,13 @@ public class AssemblyName extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HashAlgorithm.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyName.HashAlgorithm" target="_top">.NET documentation</a>
+     */
     public AssemblyHashAlgorithm getHashAlgorithm() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -349,6 +515,13 @@ public class AssemblyName extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HashAlgorithm.
+     *
+     * @param HashAlgorithm the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyName.HashAlgorithm" target="_top">.NET documentation</a>
+     */
     public void setHashAlgorithm(AssemblyHashAlgorithm HashAlgorithm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -359,6 +532,13 @@ public class AssemblyName extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VersionCompatibility.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyName.VersionCompatibility" target="_top">.NET documentation</a>
+     */
     public AssemblyVersionCompatibility getVersionCompatibility() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -374,6 +554,13 @@ public class AssemblyName extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property VersionCompatibility.
+     *
+     * @param VersionCompatibility the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyName.VersionCompatibility" target="_top">.NET documentation</a>
+     */
     public void setVersionCompatibility(AssemblyVersionCompatibility VersionCompatibility) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -384,6 +571,13 @@ public class AssemblyName extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CultureInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyName.CultureInfo" target="_top">.NET documentation</a>
+     */
     public CultureInfo getCultureInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -399,6 +593,13 @@ public class AssemblyName extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CultureInfo.
+     *
+     * @param CultureInfo the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyName.CultureInfo" target="_top">.NET documentation</a>
+     */
     public void setCultureInfo(CultureInfo CultureInfo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -409,6 +610,13 @@ public class AssemblyName extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContentType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyName.ContentType" target="_top">.NET documentation</a>
+     */
     public AssemblyContentType getContentType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -424,6 +632,13 @@ public class AssemblyName extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ContentType.
+     *
+     * @param ContentType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyName.ContentType" target="_top">.NET documentation</a>
+     */
     public void setContentType(AssemblyContentType ContentType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -434,6 +649,13 @@ public class AssemblyName extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Flags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyName.Flags" target="_top">.NET documentation</a>
+     */
     public AssemblyNameFlags getFlags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -449,6 +671,13 @@ public class AssemblyName extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Flags.
+     *
+     * @param Flags the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyName.Flags" target="_top">.NET documentation</a>
+     */
     public void setFlags(AssemblyNameFlags Flags) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -459,6 +688,13 @@ public class AssemblyName extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProcessorArchitecture.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyName.ProcessorArchitecture" target="_top">.NET documentation</a>
+     */
     public ProcessorArchitecture getProcessorArchitecture() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -474,6 +710,13 @@ public class AssemblyName extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProcessorArchitecture.
+     *
+     * @param ProcessorArchitecture the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyName.ProcessorArchitecture" target="_top">.NET documentation</a>
+     */
     public void setProcessorArchitecture(ProcessorArchitecture ProcessorArchitecture) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -484,6 +727,24 @@ public class AssemblyName extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeyPair.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyName.KeyPair" target="_top">.NET documentation</a>
+     */
     public StrongNameKeyPair getKeyPair() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -499,6 +760,24 @@ public class AssemblyName extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeyPair.
+     *
+     * @param KeyPair the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyName.KeyPair" target="_top">.NET documentation</a>
+     */
     public void setKeyPair(StrongNameKeyPair KeyPair) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -509,6 +788,13 @@ public class AssemblyName extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CodeBase.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyName.CodeBase" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCodeBase() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -523,6 +809,13 @@ public class AssemblyName extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CodeBase.
+     *
+     * @param CodeBase the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyName.CodeBase" target="_top">.NET documentation</a>
+     */
     public void setCodeBase(java.lang.String CodeBase) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -533,6 +826,13 @@ public class AssemblyName extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CultureName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyName.CultureName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCultureName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -547,6 +847,24 @@ public class AssemblyName extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CultureName.
+     *
+     * @param CultureName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyName.CultureName" target="_top">.NET documentation</a>
+     */
     public void setCultureName(java.lang.String CultureName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -557,6 +875,24 @@ public class AssemblyName extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EscapedCodeBase.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyName.EscapedCodeBase" target="_top">.NET documentation</a>
+     */
     public java.lang.String getEscapedCodeBase() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -571,6 +907,19 @@ public class AssemblyName extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FullName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyName.FullName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFullName() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -585,6 +934,13 @@ public class AssemblyName extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyName.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -599,6 +955,13 @@ public class AssemblyName extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyName.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -609,6 +972,13 @@ public class AssemblyName extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Version.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyName.Version" target="_top">.NET documentation</a>
+     */
     public Version getVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -624,6 +994,13 @@ public class AssemblyName extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Version.
+     *
+     * @param Version the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyName.Version" target="_top">.NET documentation</a>
+     */
     public void setVersion(Version Version) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

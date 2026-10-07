@@ -107,7 +107,10 @@ public class IRemotingFormatterImplementation extends NetObject implements IRemo
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IRemotingFormatterImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class IRemotingFormatterImplementation extends NetObject implements IRemo
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Deserialize.
+     *
+     * @param serializationStream the argument of type {@code Stream}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.IRemotingFormatter.Deserialize" target="_top">.NET documentation</a>
+     */
     public NetObject Deserialize(Stream serializationStream) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -164,6 +175,15 @@ public class IRemotingFormatterImplementation extends NetObject implements IRemo
         }
     }
 
+    /**
+     * Invokes the .NET member Deserialize.
+     *
+     * @param serializationStream the argument of type {@code Stream}
+     * @param handler the argument of type {@code HeaderHandler}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.IRemotingFormatter.Deserialize" target="_top">.NET documentation</a>
+     */
     public NetObject Deserialize(Stream serializationStream, HeaderHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +199,14 @@ public class IRemotingFormatterImplementation extends NetObject implements IRemo
         }
     }
 
+    /**
+     * Invokes the .NET member Serialize.
+     *
+     * @param serializationStream the argument of type {@code Stream}
+     * @param graph the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.IRemotingFormatter.Serialize" target="_top">.NET documentation</a>
+     */
     public void Serialize(Stream serializationStream, NetObject graph) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +217,15 @@ public class IRemotingFormatterImplementation extends NetObject implements IRemo
         }
     }
 
+    /**
+     * Invokes the .NET member Serialize.
+     *
+     * @param serializationStream the argument of type {@code Stream}
+     * @param graph the argument of type {@code NetObject}
+     * @param headers the argument of type {@code Header[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.IRemotingFormatter.Serialize" target="_top">.NET documentation</a>
+     */
     public void Serialize(Stream serializationStream, NetObject graph, Header[] headers) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +240,13 @@ public class IRemotingFormatterImplementation extends NetObject implements IRemo
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SurrogateSelector.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.IRemotingFormatter.SurrogateSelector" target="_top">.NET documentation</a>
+     */
     public ISurrogateSelector getSurrogateSelector() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +262,13 @@ public class IRemotingFormatterImplementation extends NetObject implements IRemo
         }
     }
 
+    /**
+     * Sets the value of the .NET property SurrogateSelector.
+     *
+     * @param SurrogateSelector the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.IRemotingFormatter.SurrogateSelector" target="_top">.NET documentation</a>
+     */
     public void setSurrogateSelector(ISurrogateSelector SurrogateSelector) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +279,13 @@ public class IRemotingFormatterImplementation extends NetObject implements IRemo
         }
     }
 
+    /**
+     * Gets the value of the .NET property Binder.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.IRemotingFormatter.Binder" target="_top">.NET documentation</a>
+     */
     public SerializationBinder getBinder() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +301,13 @@ public class IRemotingFormatterImplementation extends NetObject implements IRemo
         }
     }
 
+    /**
+     * Sets the value of the .NET property Binder.
+     *
+     * @param Binder the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.IRemotingFormatter.Binder" target="_top">.NET documentation</a>
+     */
     public void setBinder(SerializationBinder Binder) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +318,13 @@ public class IRemotingFormatterImplementation extends NetObject implements IRemo
         }
     }
 
+    /**
+     * Gets the value of the .NET property Context.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.IRemotingFormatter.Context" target="_top">.NET documentation</a>
+     */
     public StreamingContext getContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +340,13 @@ public class IRemotingFormatterImplementation extends NetObject implements IRemo
         }
     }
 
+    /**
+     * Sets the value of the .NET property Context.
+     *
+     * @param Context the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.IRemotingFormatter.Context" target="_top">.NET documentation</a>
+     */
     public void setContext(StreamingContext Context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -105,7 +105,10 @@ public class CurrencyManager extends system.windows.forms.BindingManagerBase  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CurrencyManager(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class CurrencyManager extends system.windows.forms.BindingManagerBase  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetItemProperties.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.CurrencyManager.GetItemProperties" target="_top">.NET documentation</a>
+     */
     public PropertyDescriptorCollection GetItemProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +185,24 @@ public class CurrencyManager extends system.windows.forms.BindingManagerBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddNew.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.CurrencyManager.AddNew" target="_top">.NET documentation</a>
+     */
     public void AddNew() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.InvalidCastException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +213,18 @@ public class CurrencyManager extends system.windows.forms.BindingManagerBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member CancelCurrentEdit.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.CurrencyManager.CancelCurrentEdit" target="_top">.NET documentation</a>
+     */
     public void CancelCurrentEdit() throws Throwable, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidCastException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +235,22 @@ public class CurrencyManager extends system.windows.forms.BindingManagerBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member EndCurrentEdit.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.CurrencyManager.EndCurrentEdit" target="_top">.NET documentation</a>
+     */
     public void EndCurrentEdit() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.InvalidCastException, system.NotSupportedException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +261,22 @@ public class CurrencyManager extends system.windows.forms.BindingManagerBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member Refresh.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.CurrencyManager.Refresh" target="_top">.NET documentation</a>
+     */
     public void Refresh() throws Throwable, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidCastException, system.FormatException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.MissingMemberException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +287,13 @@ public class CurrencyManager extends system.windows.forms.BindingManagerBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAt.
+     *
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.CurrencyManager.RemoveAt" target="_top">.NET documentation</a>
+     */
     public void RemoveAt(int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +304,12 @@ public class CurrencyManager extends system.windows.forms.BindingManagerBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResumeBinding.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.CurrencyManager.ResumeBinding" target="_top">.NET documentation</a>
+     */
     public void ResumeBinding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +320,12 @@ public class CurrencyManager extends system.windows.forms.BindingManagerBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member SuspendBinding.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.CurrencyManager.SuspendBinding" target="_top">.NET documentation</a>
+     */
     public void SuspendBinding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +340,13 @@ public class CurrencyManager extends system.windows.forms.BindingManagerBase  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property List.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.CurrencyManager.List" target="_top">.NET documentation</a>
+     */
     public IList getList() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +367,13 @@ public class CurrencyManager extends system.windows.forms.BindingManagerBase  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addListChanged.
+     *
+     * @param handler the argument of type {@code ListChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addListChanged(ListChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +384,13 @@ public class CurrencyManager extends system.windows.forms.BindingManagerBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeListChanged.
+     *
+     * @param handler the argument of type {@code ListChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeListChanged(ListChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +401,13 @@ public class CurrencyManager extends system.windows.forms.BindingManagerBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member addMetaDataChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addMetaDataChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -299,6 +418,13 @@ public class CurrencyManager extends system.windows.forms.BindingManagerBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeMetaDataChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeMetaDataChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -309,6 +435,13 @@ public class CurrencyManager extends system.windows.forms.BindingManagerBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member addItemChanged.
+     *
+     * @param handler the argument of type {@code ItemChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addItemChanged(ItemChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -319,6 +452,13 @@ public class CurrencyManager extends system.windows.forms.BindingManagerBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeItemChanged.
+     *
+     * @param handler the argument of type {@code ItemChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeItemChanged(ItemChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

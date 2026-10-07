@@ -100,7 +100,10 @@ public class IKeyFrameAnimationImplementation extends NetObject implements IKeyF
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IKeyFrameAnimationImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,13 @@ public class IKeyFrameAnimationImplementation extends NetObject implements IKeyF
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property KeyFrames.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.IKeyFrameAnimation.KeyFrames" target="_top">.NET documentation</a>
+     */
     public IList getKeyFrames() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -161,6 +171,13 @@ public class IKeyFrameAnimationImplementation extends NetObject implements IKeyF
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeyFrames.
+     *
+     * @param KeyFrames the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.IKeyFrameAnimation.KeyFrames" target="_top">.NET documentation</a>
+     */
     public void setKeyFrames(IList KeyFrames) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

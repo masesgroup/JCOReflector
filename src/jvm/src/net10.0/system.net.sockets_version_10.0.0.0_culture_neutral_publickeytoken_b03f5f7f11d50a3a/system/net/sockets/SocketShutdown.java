@@ -114,7 +114,9 @@ public class SocketShutdown extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public SocketShutdown(java.lang.Object instance) {
         super(instance);

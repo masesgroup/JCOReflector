@@ -100,7 +100,10 @@ public class SystemPens extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SystemPens(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,27 @@ public class SystemPens extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member FromSystemColor.
+     *
+     * @param c the argument of type {@code Color}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemPens.FromSystemColor" target="_top">.NET documentation</a>
+     */
     public static Pen FromSystemColor(Color c) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -172,6 +196,28 @@ public class SystemPens extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ActiveBorder.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemPens.ActiveBorder" target="_top">.NET documentation</a>
+     */
     public static Pen getActiveBorder() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -187,6 +233,28 @@ public class SystemPens extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ActiveCaption.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemPens.ActiveCaption" target="_top">.NET documentation</a>
+     */
     public static Pen getActiveCaption() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -202,6 +270,28 @@ public class SystemPens extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ActiveCaptionText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemPens.ActiveCaptionText" target="_top">.NET documentation</a>
+     */
     public static Pen getActiveCaptionText() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -217,6 +307,28 @@ public class SystemPens extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AppWorkspace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemPens.AppWorkspace" target="_top">.NET documentation</a>
+     */
     public static Pen getAppWorkspace() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -232,6 +344,28 @@ public class SystemPens extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ButtonFace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemPens.ButtonFace" target="_top">.NET documentation</a>
+     */
     public static Pen getButtonFace() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -247,6 +381,28 @@ public class SystemPens extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ButtonHighlight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemPens.ButtonHighlight" target="_top">.NET documentation</a>
+     */
     public static Pen getButtonHighlight() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -262,6 +418,28 @@ public class SystemPens extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ButtonShadow.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemPens.ButtonShadow" target="_top">.NET documentation</a>
+     */
     public static Pen getButtonShadow() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -277,6 +455,28 @@ public class SystemPens extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Control.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemPens.Control" target="_top">.NET documentation</a>
+     */
     public static Pen getControl() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -292,6 +492,28 @@ public class SystemPens extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ControlDark.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemPens.ControlDark" target="_top">.NET documentation</a>
+     */
     public static Pen getControlDark() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -307,6 +529,28 @@ public class SystemPens extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ControlDarkDark.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemPens.ControlDarkDark" target="_top">.NET documentation</a>
+     */
     public static Pen getControlDarkDark() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -322,6 +566,28 @@ public class SystemPens extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ControlLight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemPens.ControlLight" target="_top">.NET documentation</a>
+     */
     public static Pen getControlLight() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -337,6 +603,28 @@ public class SystemPens extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ControlLightLight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemPens.ControlLightLight" target="_top">.NET documentation</a>
+     */
     public static Pen getControlLightLight() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -352,6 +640,28 @@ public class SystemPens extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ControlText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemPens.ControlText" target="_top">.NET documentation</a>
+     */
     public static Pen getControlText() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -367,6 +677,28 @@ public class SystemPens extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Desktop.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemPens.Desktop" target="_top">.NET documentation</a>
+     */
     public static Pen getDesktop() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -382,6 +714,28 @@ public class SystemPens extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GradientActiveCaption.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemPens.GradientActiveCaption" target="_top">.NET documentation</a>
+     */
     public static Pen getGradientActiveCaption() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -397,6 +751,28 @@ public class SystemPens extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GradientInactiveCaption.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemPens.GradientInactiveCaption" target="_top">.NET documentation</a>
+     */
     public static Pen getGradientInactiveCaption() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -412,6 +788,28 @@ public class SystemPens extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GrayText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemPens.GrayText" target="_top">.NET documentation</a>
+     */
     public static Pen getGrayText() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -427,6 +825,28 @@ public class SystemPens extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Highlight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemPens.Highlight" target="_top">.NET documentation</a>
+     */
     public static Pen getHighlight() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -442,6 +862,28 @@ public class SystemPens extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HighlightText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemPens.HighlightText" target="_top">.NET documentation</a>
+     */
     public static Pen getHighlightText() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -457,6 +899,28 @@ public class SystemPens extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HotTrack.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemPens.HotTrack" target="_top">.NET documentation</a>
+     */
     public static Pen getHotTrack() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -472,6 +936,28 @@ public class SystemPens extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InactiveBorder.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemPens.InactiveBorder" target="_top">.NET documentation</a>
+     */
     public static Pen getInactiveBorder() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -487,6 +973,28 @@ public class SystemPens extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InactiveCaption.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemPens.InactiveCaption" target="_top">.NET documentation</a>
+     */
     public static Pen getInactiveCaption() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -502,6 +1010,28 @@ public class SystemPens extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InactiveCaptionText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemPens.InactiveCaptionText" target="_top">.NET documentation</a>
+     */
     public static Pen getInactiveCaptionText() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -517,6 +1047,28 @@ public class SystemPens extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Info.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemPens.Info" target="_top">.NET documentation</a>
+     */
     public static Pen getInfo() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -532,6 +1084,28 @@ public class SystemPens extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InfoText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemPens.InfoText" target="_top">.NET documentation</a>
+     */
     public static Pen getInfoText() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -547,6 +1121,28 @@ public class SystemPens extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Menu.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemPens.Menu" target="_top">.NET documentation</a>
+     */
     public static Pen getMenu() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -562,6 +1158,28 @@ public class SystemPens extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MenuBar.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemPens.MenuBar" target="_top">.NET documentation</a>
+     */
     public static Pen getMenuBar() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -577,6 +1195,28 @@ public class SystemPens extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MenuHighlight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemPens.MenuHighlight" target="_top">.NET documentation</a>
+     */
     public static Pen getMenuHighlight() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -592,6 +1232,28 @@ public class SystemPens extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MenuText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemPens.MenuText" target="_top">.NET documentation</a>
+     */
     public static Pen getMenuText() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -607,6 +1269,28 @@ public class SystemPens extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ScrollBar.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemPens.ScrollBar" target="_top">.NET documentation</a>
+     */
     public static Pen getScrollBar() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -622,6 +1306,28 @@ public class SystemPens extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Window.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemPens.Window" target="_top">.NET documentation</a>
+     */
     public static Pen getWindow() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -637,6 +1343,28 @@ public class SystemPens extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WindowFrame.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemPens.WindowFrame" target="_top">.NET documentation</a>
+     */
     public static Pen getWindowFrame() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -652,6 +1380,28 @@ public class SystemPens extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WindowText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemPens.WindowText" target="_top">.NET documentation</a>
+     */
     public static Pen getWindowText() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

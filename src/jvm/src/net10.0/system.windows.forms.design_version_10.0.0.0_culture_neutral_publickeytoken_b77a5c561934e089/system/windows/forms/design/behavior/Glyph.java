@@ -103,7 +103,10 @@ public class Glyph extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Glyph(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,14 @@ public class Glyph extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetHitTest.
+     *
+     * @param p the argument of type {@code Point}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.Glyph.GetHitTest" target="_top">.NET documentation</a>
+     */
     public Cursor GetHitTest(Point p) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +182,13 @@ public class Glyph extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Paint.
+     *
+     * @param pe the argument of type {@code PaintEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.Glyph.Paint" target="_top">.NET documentation</a>
+     */
     public void Paint(PaintEventArgs pe) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +203,13 @@ public class Glyph extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Bounds.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.Glyph.Bounds" target="_top">.NET documentation</a>
+     */
     public Rectangle getBounds() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +225,13 @@ public class Glyph extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Behavior.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.Glyph.Behavior" target="_top">.NET documentation</a>
+     */
     public Behavior getBehavior() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

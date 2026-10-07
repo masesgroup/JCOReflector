@@ -100,7 +100,10 @@ public class IWebPartRowImplementation extends NetObject implements IWebPartRow 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IWebPartRowImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,13 @@ public class IWebPartRowImplementation extends NetObject implements IWebPartRow 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetRowData.
+     *
+     * @param callback the argument of type {@code RowCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.IWebPartRow.GetRowData" target="_top">.NET documentation</a>
+     */
     public void GetRowData(RowCallback callback) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -156,6 +166,13 @@ public class IWebPartRowImplementation extends NetObject implements IWebPartRow 
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Schema.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.IWebPartRow.Schema" target="_top">.NET documentation</a>
+     */
     public PropertyDescriptorCollection getSchema() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class PostBackOptions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PostBackOptions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class PostBackOptions extends NetObject  {
     public PostBackOptions() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param targetControl the argument of type {@code Control}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PostBackOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public PostBackOptions(Control targetControl) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +170,15 @@ public class PostBackOptions extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param targetControl the argument of type {@code Control}
+     * @param argument the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PostBackOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public PostBackOptions(Control targetControl, java.lang.String argument) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +189,22 @@ public class PostBackOptions extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param targetControl the argument of type {@code Control}
+     * @param argument the argument of type {@code java.lang.String}
+     * @param actionUrl the argument of type {@code java.lang.String}
+     * @param autoPostBack the argument of type {@code boolean}
+     * @param requiresJavaScriptProtocol the argument of type {@code boolean}
+     * @param trackFocus the argument of type {@code boolean}
+     * @param clientSubmit the argument of type {@code boolean}
+     * @param performValidation the argument of type {@code boolean}
+     * @param validationGroup the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PostBackOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public PostBackOptions(Control targetControl, java.lang.String argument, java.lang.String actionUrl, boolean autoPostBack, boolean requiresJavaScriptProtocol, boolean trackFocus, boolean clientSubmit, boolean performValidation, java.lang.String validationGroup) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -188,6 +224,13 @@ public class PostBackOptions extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AutoPostBack.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PostBackOptions.AutoPostBack" target="_top">.NET documentation</a>
+     */
     public boolean getAutoPostBack() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +245,13 @@ public class PostBackOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AutoPostBack.
+     *
+     * @param AutoPostBack the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PostBackOptions.AutoPostBack" target="_top">.NET documentation</a>
+     */
     public void setAutoPostBack(boolean AutoPostBack) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +262,13 @@ public class PostBackOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClientSubmit.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PostBackOptions.ClientSubmit" target="_top">.NET documentation</a>
+     */
     public boolean getClientSubmit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +283,13 @@ public class PostBackOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ClientSubmit.
+     *
+     * @param ClientSubmit the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PostBackOptions.ClientSubmit" target="_top">.NET documentation</a>
+     */
     public void setClientSubmit(boolean ClientSubmit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +300,13 @@ public class PostBackOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PerformValidation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PostBackOptions.PerformValidation" target="_top">.NET documentation</a>
+     */
     public boolean getPerformValidation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +321,13 @@ public class PostBackOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PerformValidation.
+     *
+     * @param PerformValidation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PostBackOptions.PerformValidation" target="_top">.NET documentation</a>
+     */
     public void setPerformValidation(boolean PerformValidation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +338,13 @@ public class PostBackOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequiresJavaScriptProtocol.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PostBackOptions.RequiresJavaScriptProtocol" target="_top">.NET documentation</a>
+     */
     public boolean getRequiresJavaScriptProtocol() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +359,13 @@ public class PostBackOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RequiresJavaScriptProtocol.
+     *
+     * @param RequiresJavaScriptProtocol the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PostBackOptions.RequiresJavaScriptProtocol" target="_top">.NET documentation</a>
+     */
     public void setRequiresJavaScriptProtocol(boolean RequiresJavaScriptProtocol) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -284,6 +376,13 @@ public class PostBackOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TrackFocus.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PostBackOptions.TrackFocus" target="_top">.NET documentation</a>
+     */
     public boolean getTrackFocus() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +397,13 @@ public class PostBackOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TrackFocus.
+     *
+     * @param TrackFocus the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PostBackOptions.TrackFocus" target="_top">.NET documentation</a>
+     */
     public void setTrackFocus(boolean TrackFocus) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +414,13 @@ public class PostBackOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ActionUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PostBackOptions.ActionUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getActionUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -322,6 +435,13 @@ public class PostBackOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ActionUrl.
+     *
+     * @param ActionUrl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PostBackOptions.ActionUrl" target="_top">.NET documentation</a>
+     */
     public void setActionUrl(java.lang.String ActionUrl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -332,6 +452,13 @@ public class PostBackOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Argument.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PostBackOptions.Argument" target="_top">.NET documentation</a>
+     */
     public java.lang.String getArgument() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -346,6 +473,13 @@ public class PostBackOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Argument.
+     *
+     * @param Argument the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PostBackOptions.Argument" target="_top">.NET documentation</a>
+     */
     public void setArgument(java.lang.String Argument) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -356,6 +490,13 @@ public class PostBackOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValidationGroup.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PostBackOptions.ValidationGroup" target="_top">.NET documentation</a>
+     */
     public java.lang.String getValidationGroup() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -370,6 +511,13 @@ public class PostBackOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ValidationGroup.
+     *
+     * @param ValidationGroup the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PostBackOptions.ValidationGroup" target="_top">.NET documentation</a>
+     */
     public void setValidationGroup(java.lang.String ValidationGroup) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -380,6 +528,13 @@ public class PostBackOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetControl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PostBackOptions.TargetControl" target="_top">.NET documentation</a>
+     */
     public Control getTargetControl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

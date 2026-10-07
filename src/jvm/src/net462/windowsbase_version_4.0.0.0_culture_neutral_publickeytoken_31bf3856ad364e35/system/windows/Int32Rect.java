@@ -102,7 +102,10 @@ public class Int32Rect extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Int32Rect(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,16 @@ public class Int32Rect extends system.ValueType  {
     public Int32Rect() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param x the argument of type {@code int}
+     * @param y the argument of type {@code int}
+     * @param width the argument of type {@code int}
+     * @param height the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Int32Rect.-ctor" target="_top">.NET documentation</a>
+     */
     public Int32Rect(int x, int y, int width, int height) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +180,14 @@ public class Int32Rect extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param value the argument of type {@code Int32Rect}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Int32Rect.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(Int32Rect value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +202,15 @@ public class Int32Rect extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param int32Rect1 the argument of type {@code Int32Rect}
+     * @param int32Rect2 the argument of type {@code Int32Rect}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Int32Rect.Equals" target="_top">.NET documentation</a>
+     */
     public static boolean Equals(Int32Rect int32Rect1, Int32Rect int32Rect2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -195,6 +225,23 @@ public class Int32Rect extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToString.
+     *
+     * @param provider the argument of type {@code IFormatProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Int32Rect.ToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String ToString(IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +256,26 @@ public class Int32Rect extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Parse.
+     *
+     * @param source the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Int32Rect.Parse" target="_top">.NET documentation</a>
+     */
     public static Int32Rect Parse(java.lang.String source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -227,8 +294,14 @@ public class Int32Rect extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIFormattable method available in IFormattable to obtain an object with an invocable method
+     *
+     * @param format the argument of type {@code java.lang.String}
+     * @param formatProvider the argument of type {@code IFormatProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IFormattable.ToString" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public java.lang.String ToString(java.lang.String format, IFormatProvider formatProvider) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
     }
@@ -237,6 +310,13 @@ public class Int32Rect extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HasArea.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Int32Rect.HasArea" target="_top">.NET documentation</a>
+     */
     public boolean getHasArea() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +331,13 @@ public class Int32Rect extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsEmpty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Int32Rect.IsEmpty" target="_top">.NET documentation</a>
+     */
     public boolean getIsEmpty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +352,13 @@ public class Int32Rect extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Height.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Int32Rect.Height" target="_top">.NET documentation</a>
+     */
     public int getHeight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +399,13 @@ public class Int32Rect extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Height.
+     *
+     * @param Height the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Int32Rect.Height" target="_top">.NET documentation</a>
+     */
     public void setHeight(int Height) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -315,6 +416,13 @@ public class Int32Rect extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Width.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Int32Rect.Width" target="_top">.NET documentation</a>
+     */
     public int getWidth() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -355,6 +463,13 @@ public class Int32Rect extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Width.
+     *
+     * @param Width the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Int32Rect.Width" target="_top">.NET documentation</a>
+     */
     public void setWidth(int Width) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -365,6 +480,13 @@ public class Int32Rect extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property X.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Int32Rect.X" target="_top">.NET documentation</a>
+     */
     public int getX() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -405,6 +527,13 @@ public class Int32Rect extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property X.
+     *
+     * @param X the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Int32Rect.X" target="_top">.NET documentation</a>
+     */
     public void setX(int X) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -415,6 +544,13 @@ public class Int32Rect extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Y.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Int32Rect.Y" target="_top">.NET documentation</a>
+     */
     public int getY() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -455,6 +591,13 @@ public class Int32Rect extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Y.
+     *
+     * @param Y the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Int32Rect.Y" target="_top">.NET documentation</a>
+     */
     public void setY(int Y) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -465,6 +608,13 @@ public class Int32Rect extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Empty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Int32Rect.Empty" target="_top">.NET documentation</a>
+     */
     public static Int32Rect getEmpty() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

@@ -101,7 +101,10 @@ public class Pkcs9SigningTime extends system.security.cryptography.pkcs.Pkcs9Att
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Pkcs9SigningTime(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,27 @@ public class Pkcs9SigningTime extends system.security.cryptography.pkcs.Pkcs9Att
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.Pkcs9SigningTime.-ctor" target="_top">.NET documentation</a>
+     */
     public Pkcs9SigningTime() throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidTimeZoneException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OverflowException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.security.cryptography.CryptographicException {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +182,26 @@ public class Pkcs9SigningTime extends system.security.cryptography.pkcs.Pkcs9Att
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param encodedSigningTime the argument of type {@code byte[]}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.Pkcs9SigningTime.-ctor" target="_top">.NET documentation</a>
+     */
     public Pkcs9SigningTime(byte[] encodedSigningTime) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +212,27 @@ public class Pkcs9SigningTime extends system.security.cryptography.pkcs.Pkcs9Att
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param signingTime the argument of type {@code DateTime}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.Pkcs9SigningTime.-ctor" target="_top">.NET documentation</a>
+     */
     public Pkcs9SigningTime(DateTime signingTime) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.security.SecurityException, system.OverflowException, system.FormatException, system.security.cryptography.CryptographicException {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +247,23 @@ public class Pkcs9SigningTime extends system.security.cryptography.pkcs.Pkcs9Att
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CopyFrom.
+     *
+     * @param asnEncodedData the argument of type {@code AsnEncodedData}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.Pkcs9SigningTime.CopyFrom" target="_top">.NET documentation</a>
+     */
     public void CopyFrom(AsnEncodedData asnEncodedData) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +278,24 @@ public class Pkcs9SigningTime extends system.security.cryptography.pkcs.Pkcs9Att
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SigningTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.formats.asn1.AsnContentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.Pkcs9SigningTime.SigningTime" target="_top">.NET documentation</a>
+     */
     public DateTime getSigningTime() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.formats.asn1.AsnContentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.FormatException, system.OverflowException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

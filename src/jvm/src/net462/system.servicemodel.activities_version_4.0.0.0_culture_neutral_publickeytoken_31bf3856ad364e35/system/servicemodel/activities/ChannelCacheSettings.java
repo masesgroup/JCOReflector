@@ -99,7 +99,10 @@ public class ChannelCacheSettings extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ChannelCacheSettings(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class ChannelCacheSettings extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.ChannelCacheSettings.-ctor" target="_top">.NET documentation</a>
+     */
     public ChannelCacheSettings() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class ChannelCacheSettings extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MaxItemsInCache.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.ChannelCacheSettings.MaxItemsInCache" target="_top">.NET documentation</a>
+     */
     public int getMaxItemsInCache() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +220,20 @@ public class ChannelCacheSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxItemsInCache.
+     *
+     * @param MaxItemsInCache the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.ChannelCacheSettings.MaxItemsInCache" target="_top">.NET documentation</a>
+     */
     public void setMaxItemsInCache(int MaxItemsInCache) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +244,13 @@ public class ChannelCacheSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IdleTimeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.ChannelCacheSettings.IdleTimeout" target="_top">.NET documentation</a>
+     */
     public TimeSpan getIdleTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +266,22 @@ public class ChannelCacheSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IdleTimeout.
+     *
+     * @param IdleTimeout the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.ChannelCacheSettings.IdleTimeout" target="_top">.NET documentation</a>
+     */
     public void setIdleTimeout(TimeSpan IdleTimeout) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +292,13 @@ public class ChannelCacheSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LeaseTimeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.ChannelCacheSettings.LeaseTimeout" target="_top">.NET documentation</a>
+     */
     public TimeSpan getLeaseTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +314,22 @@ public class ChannelCacheSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LeaseTimeout.
+     *
+     * @param LeaseTimeout the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.ChannelCacheSettings.LeaseTimeout" target="_top">.NET documentation</a>
+     */
     public void setLeaseTimeout(TimeSpan LeaseTimeout) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

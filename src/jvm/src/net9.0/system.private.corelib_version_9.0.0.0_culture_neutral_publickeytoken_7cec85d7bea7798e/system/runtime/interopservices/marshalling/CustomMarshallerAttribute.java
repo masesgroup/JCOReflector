@@ -100,7 +100,10 @@ public class CustomMarshallerAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CustomMarshallerAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,15 @@ public class CustomMarshallerAttribute extends system.Attribute  {
     public CustomMarshallerAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param managedType the argument of type {@code NetType}
+     * @param marshalMode the argument of type {@code MarshalMode}
+     * @param marshallerType the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.CustomMarshallerAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public CustomMarshallerAttribute(NetType managedType, MarshalMode marshalMode, NetType marshallerType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +181,13 @@ public class CustomMarshallerAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MarshalMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.CustomMarshallerAttribute.MarshalMode" target="_top">.NET documentation</a>
+     */
     public MarshalMode getMarshalMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +203,13 @@ public class CustomMarshallerAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ManagedType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.CustomMarshallerAttribute.ManagedType" target="_top">.NET documentation</a>
+     */
     public NetType getManagedType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +225,13 @@ public class CustomMarshallerAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MarshallerType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.CustomMarshallerAttribute.MarshallerType" target="_top">.NET documentation</a>
+     */
     public NetType getMarshallerType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

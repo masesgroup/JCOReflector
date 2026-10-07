@@ -105,7 +105,10 @@ public class XmlnsDictionary extends NetObjectEnumerable  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlnsDictionary(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,12 @@ public class XmlnsDictionary extends NetObjectEnumerable  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XmlnsDictionary.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlnsDictionary() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +171,14 @@ public class XmlnsDictionary extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param xmlnsDictionary the argument of type {@code XmlnsDictionary}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XmlnsDictionary.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlnsDictionary(XmlnsDictionary xmlnsDictionary) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +193,14 @@ public class XmlnsDictionary extends NetObjectEnumerable  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param key the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XmlnsDictionary.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(NetObject key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +215,13 @@ public class XmlnsDictionary extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetNamespacePrefixes.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XmlnsDictionary.GetNamespacePrefixes" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 GetNamespacePrefixes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +237,14 @@ public class XmlnsDictionary extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member DefaultNamespace.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XmlnsDictionary.DefaultNamespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String DefaultNamespace() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +259,15 @@ public class XmlnsDictionary extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetNamespace.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XmlnsDictionary.GetNamespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetNamespace(java.lang.String prefix) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +282,15 @@ public class XmlnsDictionary extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member LookupNamespace.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XmlnsDictionary.LookupNamespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String LookupNamespace(java.lang.String prefix) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +305,15 @@ public class XmlnsDictionary extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member LookupPrefix.
+     *
+     * @param xmlNamespace the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XmlnsDictionary.LookupPrefix" target="_top">.NET documentation</a>
+     */
     public java.lang.String LookupPrefix(java.lang.String xmlNamespace) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +328,25 @@ public class XmlnsDictionary extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param prefix the argument of type {@code NetObject}
+     * @param xmlNamespace the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XmlnsDictionary.Add" target="_top">.NET documentation</a>
+     */
     public void Add(NetObject prefix, NetObject xmlNamespace) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +357,21 @@ public class XmlnsDictionary extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @param xmlNamespace the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XmlnsDictionary.Add" target="_top">.NET documentation</a>
+     */
     public void Add(java.lang.String prefix, java.lang.String xmlNamespace) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +382,20 @@ public class XmlnsDictionary extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member Clear.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XmlnsDictionary.Clear" target="_top">.NET documentation</a>
+     */
     public void Clear() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +406,21 @@ public class XmlnsDictionary extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code Array}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XmlnsDictionary.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(Array array, int index) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +431,21 @@ public class XmlnsDictionary extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code DictionaryEntry[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XmlnsDictionary.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(DictionaryEntry[] array, int index) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -311,6 +456,20 @@ public class XmlnsDictionary extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member PopScope.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XmlnsDictionary.PopScope" target="_top">.NET documentation</a>
+     */
     public void PopScope() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +480,20 @@ public class XmlnsDictionary extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member PushScope.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XmlnsDictionary.PushScope" target="_top">.NET documentation</a>
+     */
     public void PushScope() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -331,6 +504,19 @@ public class XmlnsDictionary extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param prefix the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XmlnsDictionary.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(NetObject prefix) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -341,6 +527,20 @@ public class XmlnsDictionary extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XmlnsDictionary.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(java.lang.String prefix) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -351,6 +551,12 @@ public class XmlnsDictionary extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member Seal.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XmlnsDictionary.Seal" target="_top">.NET documentation</a>
+     */
     public void Seal() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -365,6 +571,13 @@ public class XmlnsDictionary extends NetObjectEnumerable  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsFixedSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XmlnsDictionary.IsFixedSize" target="_top">.NET documentation</a>
+     */
     public boolean getIsFixedSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -379,6 +592,13 @@ public class XmlnsDictionary extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsReadOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XmlnsDictionary.IsReadOnly" target="_top">.NET documentation</a>
+     */
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -393,6 +613,13 @@ public class XmlnsDictionary extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSynchronized.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XmlnsDictionary.IsSynchronized" target="_top">.NET documentation</a>
+     */
     public boolean getIsSynchronized() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -407,6 +634,13 @@ public class XmlnsDictionary extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Sealed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XmlnsDictionary.Sealed" target="_top">.NET documentation</a>
+     */
     public boolean getSealed() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -421,6 +655,13 @@ public class XmlnsDictionary extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Count.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XmlnsDictionary.Count" target="_top">.NET documentation</a>
+     */
     public int getCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -461,6 +702,22 @@ public class XmlnsDictionary extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Keys.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XmlnsDictionary.Keys" target="_top">.NET documentation</a>
+     */
     public ICollection getKeys() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -476,6 +733,23 @@ public class XmlnsDictionary extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Values.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XmlnsDictionary.Values" target="_top">.NET documentation</a>
+     */
     public ICollection getValues() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -491,6 +765,13 @@ public class XmlnsDictionary extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SyncRoot.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XmlnsDictionary.SyncRoot" target="_top">.NET documentation</a>
+     */
     public NetObject getSyncRoot() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

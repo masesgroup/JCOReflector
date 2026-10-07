@@ -104,7 +104,10 @@ public class EnumerableRowCollectionExtensions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EnumerableRowCollectionExtensions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,26 @@ public class EnumerableRowCollectionExtensions extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Select.
+     *
+     * @param <TRow> the type of the generic argument TRow
+     * @param <S> the type of the generic argument S
+     * @param source the argument of type {@code EnumerableRowCollection_1}
+     * @param selector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.EnumerableRowCollectionExtensions.Select" target="_top">.NET documentation</a>
+     */
     public static <TRow extends IJCOBridgeReflected, S extends IJCOBridgeReflected> EnumerableRowCollection_1 Select(EnumerableRowCollection_1 source, Func_2 selector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -172,6 +195,24 @@ public class EnumerableRowCollectionExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Cast.
+     *
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code EnumerableRowCollection}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.EnumerableRowCollectionExtensions.Cast" target="_top">.NET documentation</a>
+     */
     public static <TResult extends IJCOBridgeReflected> EnumerableRowCollection_1 Cast(EnumerableRowCollection source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -187,6 +228,25 @@ public class EnumerableRowCollectionExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Where.
+     *
+     * @param <TRow> the type of the generic argument TRow
+     * @param source the argument of type {@code EnumerableRowCollection_1}
+     * @param predicate the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.EnumerableRowCollectionExtensions.Where" target="_top">.NET documentation</a>
+     */
     public static <TRow extends IJCOBridgeReflected> EnumerableRowCollection_1 Where(EnumerableRowCollection_1 source, Func_2 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -202,6 +262,24 @@ public class EnumerableRowCollectionExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OrderBy.
+     *
+     * @param <TRow> the type of the generic argument TRow
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code EnumerableRowCollection_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.EnumerableRowCollectionExtensions.OrderBy" target="_top">.NET documentation</a>
+     */
     public static <TRow extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> OrderedEnumerableRowCollection_1 OrderBy(EnumerableRowCollection_1 source, Func_2 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -217,6 +295,23 @@ public class EnumerableRowCollectionExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OrderBy.
+     *
+     * @param <TRow> the type of the generic argument TRow
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code EnumerableRowCollection_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.EnumerableRowCollectionExtensions.OrderBy" target="_top">.NET documentation</a>
+     */
     public static <TRow extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> OrderedEnumerableRowCollection_1 OrderBy(EnumerableRowCollection_1 source, Func_2 keySelector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -232,6 +327,24 @@ public class EnumerableRowCollectionExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OrderByDescending.
+     *
+     * @param <TRow> the type of the generic argument TRow
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code EnumerableRowCollection_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.EnumerableRowCollectionExtensions.OrderByDescending" target="_top">.NET documentation</a>
+     */
     public static <TRow extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> OrderedEnumerableRowCollection_1 OrderByDescending(EnumerableRowCollection_1 source, Func_2 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -247,6 +360,23 @@ public class EnumerableRowCollectionExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OrderByDescending.
+     *
+     * @param <TRow> the type of the generic argument TRow
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code EnumerableRowCollection_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.EnumerableRowCollectionExtensions.OrderByDescending" target="_top">.NET documentation</a>
+     */
     public static <TRow extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> OrderedEnumerableRowCollection_1 OrderByDescending(EnumerableRowCollection_1 source, Func_2 keySelector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -262,6 +392,27 @@ public class EnumerableRowCollectionExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ThenBy.
+     *
+     * @param <TRow> the type of the generic argument TRow
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code OrderedEnumerableRowCollection_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.EnumerableRowCollectionExtensions.ThenBy" target="_top">.NET documentation</a>
+     */
     public static <TRow extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> OrderedEnumerableRowCollection_1 ThenBy(OrderedEnumerableRowCollection_1 source, Func_2 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -277,6 +428,26 @@ public class EnumerableRowCollectionExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ThenBy.
+     *
+     * @param <TRow> the type of the generic argument TRow
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code OrderedEnumerableRowCollection_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.EnumerableRowCollectionExtensions.ThenBy" target="_top">.NET documentation</a>
+     */
     public static <TRow extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> OrderedEnumerableRowCollection_1 ThenBy(OrderedEnumerableRowCollection_1 source, Func_2 keySelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -292,6 +463,27 @@ public class EnumerableRowCollectionExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ThenByDescending.
+     *
+     * @param <TRow> the type of the generic argument TRow
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code OrderedEnumerableRowCollection_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.EnumerableRowCollectionExtensions.ThenByDescending" target="_top">.NET documentation</a>
+     */
     public static <TRow extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> OrderedEnumerableRowCollection_1 ThenByDescending(OrderedEnumerableRowCollection_1 source, Func_2 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -307,6 +499,26 @@ public class EnumerableRowCollectionExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ThenByDescending.
+     *
+     * @param <TRow> the type of the generic argument TRow
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code OrderedEnumerableRowCollection_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.EnumerableRowCollectionExtensions.ThenByDescending" target="_top">.NET documentation</a>
+     */
     public static <TRow extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> OrderedEnumerableRowCollection_1 ThenByDescending(OrderedEnumerableRowCollection_1 source, Func_2 keySelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

@@ -109,7 +109,10 @@ public class DesignerView extends system.windows.controls.UserControl  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DesignerView(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -164,6 +167,22 @@ public class DesignerView extends system.windows.controls.UserControl  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetCommandMenuMode.
+     *
+     * @param obj the argument of type {@code DependencyObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.DesignerView.GetCommandMenuMode" target="_top">.NET documentation</a>
+     */
     public static CommandMenuMode GetCommandMenuMode(DependencyObject obj) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -179,6 +198,25 @@ public class DesignerView extends system.windows.controls.UserControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member FlushState.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.DesignerView.FlushState" target="_top">.NET documentation</a>
+     */
     public void FlushState() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +227,38 @@ public class DesignerView extends system.windows.controls.UserControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member InitializeComponent.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.xaml.XamlException if the .NET member raises it
+     * @throws system.windows.markup.XamlParseException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.DesignerView.InitializeComponent" target="_top">.NET documentation</a>
+     */
     public void InitializeComponent() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.configuration.ConfigurationException, system.UriFormatException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.io.IOException, system.NotSupportedException, system.OverflowException, system.collections.generic.KeyNotFoundException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.threading.ThreadAbortException, system.reflection.AmbiguousMatchException, system.xaml.XamlException, system.windows.markup.XamlParseException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +269,27 @@ public class DesignerView extends system.windows.controls.UserControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member MakeRootDesigner.
+     *
+     * @param modelItem the argument of type {@code ModelItem}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.DesignerView.MakeRootDesigner" target="_top">.NET documentation</a>
+     */
     public void MakeRootDesigner(ModelItem modelItem) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException, system.componentmodel.Win32Exception, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +300,26 @@ public class DesignerView extends system.windows.controls.UserControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member OnReferenceUpdated.
+     *
+     * @param updatedReference the argument of type {@code AssemblyName}
+     * @param isAdded the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.DesignerView.OnReferenceUpdated" target="_top">.NET documentation</a>
+     */
     public void OnReferenceUpdated(AssemblyName updatedReference, boolean isAdded) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +330,14 @@ public class DesignerView extends system.windows.controls.UserControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterViewElement.
+     *
+     * @param viewElement the argument of type {@code WorkflowViewElement}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.DesignerView.RegisterViewElement" target="_top">.NET documentation</a>
+     */
     public void RegisterViewElement(WorkflowViewElement viewElement) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +348,22 @@ public class DesignerView extends system.windows.controls.UserControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetCommandMenuMode.
+     *
+     * @param obj the argument of type {@code DependencyObject}
+     * @param value the argument of type {@code CommandMenuMode}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.DesignerView.SetCommandMenuMode" target="_top">.NET documentation</a>
+     */
     public static void SetCommandMenuMode(DependencyObject obj, CommandMenuMode value) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -239,6 +374,15 @@ public class DesignerView extends system.windows.controls.UserControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member UnregisterViewElement.
+     *
+     * @param viewElement the argument of type {@code WorkflowViewElement}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.DesignerView.UnregisterViewElement" target="_top">.NET documentation</a>
+     */
     public void UnregisterViewElement(WorkflowViewElement viewElement) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,8 +396,13 @@ public class DesignerView extends system.windows.controls.UserControl  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIComponentConnector method available in IComponentConnector to obtain an object with an invocable method
+     *
+     * @param connectionId the argument of type {@code int}
+     * @param target the argument of type {@code NetObject}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.IComponentConnector.Connect" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Connect(int connectionId, NetObject target) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComponentConnector to obtain the full interface.");
     }
@@ -262,6 +411,13 @@ public class DesignerView extends system.windows.controls.UserControl  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsMultipleSelectionMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.DesignerView.IsMultipleSelectionMode" target="_top">.NET documentation</a>
+     */
     public boolean getIsMultipleSelectionMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +432,13 @@ public class DesignerView extends system.windows.controls.UserControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsMultipleSelectionMode.
+     *
+     * @param IsMultipleSelectionMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.DesignerView.IsMultipleSelectionMode" target="_top">.NET documentation</a>
+     */
     public void setIsMultipleSelectionMode(boolean IsMultipleSelectionMode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +449,21 @@ public class DesignerView extends system.windows.controls.UserControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsReadOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.DesignerView.IsReadOnly" target="_top">.NET documentation</a>
+     */
     public boolean getIsReadOnly() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +478,21 @@ public class DesignerView extends system.windows.controls.UserControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsReadOnly.
+     *
+     * @param IsReadOnly the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.DesignerView.IsReadOnly" target="_top">.NET documentation</a>
+     */
     public void setIsReadOnly(boolean IsReadOnly) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +503,21 @@ public class DesignerView extends system.windows.controls.UserControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShouldCollapseAll.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.DesignerView.ShouldCollapseAll" target="_top">.NET documentation</a>
+     */
     public boolean getShouldCollapseAll() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -324,6 +532,21 @@ public class DesignerView extends system.windows.controls.UserControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ShouldCollapseAll.
+     *
+     * @param ShouldCollapseAll the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.DesignerView.ShouldCollapseAll" target="_top">.NET documentation</a>
+     */
     public void setShouldCollapseAll(boolean ShouldCollapseAll) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -334,6 +557,21 @@ public class DesignerView extends system.windows.controls.UserControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShouldExpandAll.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.DesignerView.ShouldExpandAll" target="_top">.NET documentation</a>
+     */
     public boolean getShouldExpandAll() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +586,21 @@ public class DesignerView extends system.windows.controls.UserControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ShouldExpandAll.
+     *
+     * @param ShouldExpandAll the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.DesignerView.ShouldExpandAll" target="_top">.NET documentation</a>
+     */
     public void setShouldExpandAll(boolean ShouldExpandAll) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -358,6 +611,19 @@ public class DesignerView extends system.windows.controls.UserControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ZoomFactor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.DesignerView.ZoomFactor" target="_top">.NET documentation</a>
+     */
     public double getZoomFactor() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -398,6 +664,13 @@ public class DesignerView extends system.windows.controls.UserControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Context.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.DesignerView.Context" target="_top">.NET documentation</a>
+     */
     public EditingContext getContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -413,6 +686,21 @@ public class DesignerView extends system.windows.controls.UserControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ActivitySchema.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.DesignerView.ActivitySchema" target="_top">.NET documentation</a>
+     */
     public ModelItem getActivitySchema() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -428,6 +716,21 @@ public class DesignerView extends system.windows.controls.UserControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ActivitySchema.
+     *
+     * @param ActivitySchema the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.DesignerView.ActivitySchema" target="_top">.NET documentation</a>
+     */
     public void setActivitySchema(ModelItem ActivitySchema) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -438,6 +741,13 @@ public class DesignerView extends system.windows.controls.UserControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WorkflowShellBarItemVisibility.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.DesignerView.WorkflowShellBarItemVisibility" target="_top">.NET documentation</a>
+     */
     public ShellBarItemVisibility getWorkflowShellBarItemVisibility() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -453,6 +763,19 @@ public class DesignerView extends system.windows.controls.UserControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WorkflowShellBarItemVisibility.
+     *
+     * @param WorkflowShellBarItemVisibility the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.DesignerView.WorkflowShellBarItemVisibility" target="_top">.NET documentation</a>
+     */
     public void setWorkflowShellBarItemVisibility(ShellBarItemVisibility WorkflowShellBarItemVisibility) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -463,6 +786,13 @@ public class DesignerView extends system.windows.controls.UserControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WorkflowShellHeaderItemsVisibility.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility" target="_top">.NET documentation</a>
+     */
     public ShellHeaderItemsVisibility getWorkflowShellHeaderItemsVisibility() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -478,6 +808,18 @@ public class DesignerView extends system.windows.controls.UserControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WorkflowShellHeaderItemsVisibility.
+     *
+     * @param WorkflowShellHeaderItemsVisibility the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility" target="_top">.NET documentation</a>
+     */
     public void setWorkflowShellHeaderItemsVisibility(ShellHeaderItemsVisibility WorkflowShellHeaderItemsVisibility) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -488,6 +830,21 @@ public class DesignerView extends system.windows.controls.UserControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FocusedViewElement.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.DesignerView.FocusedViewElement" target="_top">.NET documentation</a>
+     */
     public WorkflowViewElement getFocusedViewElement() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -503,6 +860,21 @@ public class DesignerView extends system.windows.controls.UserControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FocusedViewElement.
+     *
+     * @param FocusedViewElement the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.DesignerView.FocusedViewElement" target="_top">.NET documentation</a>
+     */
     public void setFocusedViewElement(WorkflowViewElement FocusedViewElement) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -513,6 +885,21 @@ public class DesignerView extends system.windows.controls.UserControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MenuItemStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.DesignerView.MenuItemStyle" target="_top">.NET documentation</a>
+     */
     public Style getMenuItemStyle() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -528,6 +915,21 @@ public class DesignerView extends system.windows.controls.UserControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MenuItemStyle.
+     *
+     * @param MenuItemStyle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.DesignerView.MenuItemStyle" target="_top">.NET documentation</a>
+     */
     public void setMenuItemStyle(Style MenuItemStyle) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -538,6 +940,21 @@ public class DesignerView extends system.windows.controls.UserControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MenuSeparatorStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.DesignerView.MenuSeparatorStyle" target="_top">.NET documentation</a>
+     */
     public Style getMenuSeparatorStyle() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -553,6 +970,21 @@ public class DesignerView extends system.windows.controls.UserControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MenuSeparatorStyle.
+     *
+     * @param MenuSeparatorStyle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.DesignerView.MenuSeparatorStyle" target="_top">.NET documentation</a>
+     */
     public void setMenuSeparatorStyle(Style MenuSeparatorStyle) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -563,6 +995,21 @@ public class DesignerView extends system.windows.controls.UserControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RootDesigner.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.DesignerView.RootDesigner" target="_top">.NET documentation</a>
+     */
     public UIElement getRootDesigner() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -578,6 +1025,21 @@ public class DesignerView extends system.windows.controls.UserControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RootDesigner.
+     *
+     * @param RootDesigner the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.DesignerView.RootDesigner" target="_top">.NET documentation</a>
+     */
     public void setRootDesigner(UIElement RootDesigner) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

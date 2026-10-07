@@ -110,7 +110,10 @@ public class FreeformActivityDesigner extends system.workflow.componentmodel.des
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FreeformActivityDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,12 @@ public class FreeformActivityDesigner extends system.workflow.componentmodel.des
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.FreeformActivityDesigner.-ctor" target="_top">.NET documentation</a>
+     */
     public FreeformActivityDesigner() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +180,22 @@ public class FreeformActivityDesigner extends system.workflow.componentmodel.des
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetNextSelectableObject.
+     *
+     * @param current the argument of type {@code NetObject}
+     * @param navigate the argument of type {@code DesignerNavigationDirection}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.FreeformActivityDesigner.GetNextSelectableObject" target="_top">.NET documentation</a>
+     */
     public NetObject GetNextSelectableObject(NetObject current, DesignerNavigationDirection navigate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +211,30 @@ public class FreeformActivityDesigner extends system.workflow.componentmodel.des
         }
     }
 
+    /**
+     * Invokes the .NET member AddConnector.
+     *
+     * @param source the argument of type {@code ConnectionPoint}
+     * @param target the argument of type {@code ConnectionPoint}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.FreeformActivityDesigner.AddConnector" target="_top">.NET documentation</a>
+     */
     public Connector AddConnector(ConnectionPoint source, ConnectionPoint target) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +250,23 @@ public class FreeformActivityDesigner extends system.workflow.componentmodel.des
         }
     }
 
+    /**
+     * Invokes the .NET member HitTest.
+     *
+     * @param point the argument of type {@code Point}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.FreeformActivityDesigner.HitTest" target="_top">.NET documentation</a>
+     */
     public HitTestInfo HitTest(Point point) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.NotSupportedException, system.runtime.interopservices.ExternalException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +282,24 @@ public class FreeformActivityDesigner extends system.workflow.componentmodel.des
         }
     }
 
+    /**
+     * Invokes the .NET member BringToFront.
+     *
+     * @param containedDesigner the argument of type {@code ActivityDesigner}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.FreeformActivityDesigner.BringToFront" target="_top">.NET documentation</a>
+     */
     public void BringToFront(ActivityDesigner containedDesigner) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +310,31 @@ public class FreeformActivityDesigner extends system.workflow.componentmodel.des
         }
     }
 
+    /**
+     * Invokes the .NET member InsertActivities.
+     *
+     * @param insertLocation the argument of type {@code HitTestInfo}
+     * @param activitiesToInsert the argument of type {@code ReadOnlyCollection_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.FreeformActivityDesigner.InsertActivities" target="_top">.NET documentation</a>
+     */
     public void InsertActivities(HitTestInfo insertLocation, ReadOnlyCollection_1 activitiesToInsert) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException, system.PlatformNotSupportedException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.MissingMethodException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +345,27 @@ public class FreeformActivityDesigner extends system.workflow.componentmodel.des
         }
     }
 
+    /**
+     * Invokes the .NET member MoveActivities.
+     *
+     * @param moveLocation the argument of type {@code HitTestInfo}
+     * @param activitiesToMove the argument of type {@code ReadOnlyCollection_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.FreeformActivityDesigner.MoveActivities" target="_top">.NET documentation</a>
+     */
     public void MoveActivities(HitTestInfo moveLocation, ReadOnlyCollection_1 activitiesToMove) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +376,29 @@ public class FreeformActivityDesigner extends system.workflow.componentmodel.des
         }
     }
 
+    /**
+     * Invokes the .NET member MoveContainedDesigner.
+     *
+     * @param containedDesigner the argument of type {@code ActivityDesigner}
+     * @param newLocation the argument of type {@code Point}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.FreeformActivityDesigner.MoveContainedDesigner" target="_top">.NET documentation</a>
+     */
     public void MoveContainedDesigner(ActivityDesigner containedDesigner, Point newLocation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.NotImplementedException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +409,24 @@ public class FreeformActivityDesigner extends system.workflow.componentmodel.des
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveConnector.
+     *
+     * @param connector the argument of type {@code Connector}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.FreeformActivityDesigner.RemoveConnector" target="_top">.NET documentation</a>
+     */
     public void RemoveConnector(Connector connector) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +437,29 @@ public class FreeformActivityDesigner extends system.workflow.componentmodel.des
         }
     }
 
+    /**
+     * Invokes the .NET member ResizeContainedDesigner.
+     *
+     * @param containedDesigner the argument of type {@code ActivityDesigner}
+     * @param newSize the argument of type {@code Size}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.FreeformActivityDesigner.ResizeContainedDesigner" target="_top">.NET documentation</a>
+     */
     public void ResizeContainedDesigner(ActivityDesigner containedDesigner, Size newSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.NotImplementedException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +470,24 @@ public class FreeformActivityDesigner extends system.workflow.componentmodel.des
         }
     }
 
+    /**
+     * Invokes the .NET member SendToBack.
+     *
+     * @param containedDesigner the argument of type {@code ActivityDesigner}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.FreeformActivityDesigner.SendToBack" target="_top">.NET documentation</a>
+     */
     public void SendToBack(ActivityDesigner containedDesigner) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +502,13 @@ public class FreeformActivityDesigner extends system.workflow.componentmodel.des
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AutoSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.FreeformActivityDesigner.AutoSize" target="_top">.NET documentation</a>
+     */
     public boolean getAutoSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +523,23 @@ public class FreeformActivityDesigner extends system.workflow.componentmodel.des
         }
     }
 
+    /**
+     * Sets the value of the .NET property AutoSize.
+     *
+     * @param AutoSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.FreeformActivityDesigner.AutoSize" target="_top">.NET documentation</a>
+     */
     public void setAutoSize(boolean AutoSize) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -314,6 +550,20 @@ public class FreeformActivityDesigner extends system.workflow.componentmodel.des
         }
     }
 
+    /**
+     * Gets the value of the .NET property EnableUserDrawnConnectors.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.FreeformActivityDesigner.EnableUserDrawnConnectors" target="_top">.NET documentation</a>
+     */
     public boolean getEnableUserDrawnConnectors() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -328,6 +578,13 @@ public class FreeformActivityDesigner extends system.workflow.componentmodel.des
         }
     }
 
+    /**
+     * Sets the value of the .NET property EnableUserDrawnConnectors.
+     *
+     * @param EnableUserDrawnConnectors the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.FreeformActivityDesigner.EnableUserDrawnConnectors" target="_top">.NET documentation</a>
+     */
     public void setEnableUserDrawnConnectors(boolean EnableUserDrawnConnectors) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -338,6 +595,14 @@ public class FreeformActivityDesigner extends system.workflow.componentmodel.des
         }
     }
 
+    /**
+     * Gets the value of the .NET property Connectors.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.FreeformActivityDesigner.Connectors" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getConnectors() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -353,6 +618,31 @@ public class FreeformActivityDesigner extends system.workflow.componentmodel.des
         }
     }
 
+    /**
+     * Gets the value of the .NET property AutoSizeMargin.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.FreeformActivityDesigner.AutoSizeMargin" target="_top">.NET documentation</a>
+     */
     public Size getAutoSizeMargin() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.FormatException, system.MulticastNotSupportedException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.MissingMethodException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -368,6 +658,23 @@ public class FreeformActivityDesigner extends system.workflow.componentmodel.des
         }
     }
 
+    /**
+     * Sets the value of the .NET property AutoSizeMargin.
+     *
+     * @param AutoSizeMargin the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.FreeformActivityDesigner.AutoSizeMargin" target="_top">.NET documentation</a>
+     */
     public void setAutoSizeMargin(Size AutoSizeMargin) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -378,6 +685,13 @@ public class FreeformActivityDesigner extends system.workflow.componentmodel.des
         }
     }
 
+    /**
+     * Gets the value of the .NET property AutoSizeMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.FreeformActivityDesigner.AutoSizeMode" target="_top">.NET documentation</a>
+     */
     public AutoSizeMode getAutoSizeMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -393,6 +707,23 @@ public class FreeformActivityDesigner extends system.workflow.componentmodel.des
         }
     }
 
+    /**
+     * Sets the value of the .NET property AutoSizeMode.
+     *
+     * @param AutoSizeMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.FreeformActivityDesigner.AutoSizeMode" target="_top">.NET documentation</a>
+     */
     public void setAutoSizeMode(AutoSizeMode AutoSizeMode) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -408,6 +739,13 @@ public class FreeformActivityDesigner extends system.workflow.componentmodel.des
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addConnectorAdded.
+     *
+     * @param handler the argument of type {@code ConnectorEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addConnectorAdded(ConnectorEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -418,6 +756,13 @@ public class FreeformActivityDesigner extends system.workflow.componentmodel.des
         }
     }
 
+    /**
+     * Invokes the .NET member removeConnectorAdded.
+     *
+     * @param handler the argument of type {@code ConnectorEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeConnectorAdded(ConnectorEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -428,6 +773,13 @@ public class FreeformActivityDesigner extends system.workflow.componentmodel.des
         }
     }
 
+    /**
+     * Invokes the .NET member addConnectorChanged.
+     *
+     * @param handler the argument of type {@code ConnectorEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addConnectorChanged(ConnectorEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -438,6 +790,13 @@ public class FreeformActivityDesigner extends system.workflow.componentmodel.des
         }
     }
 
+    /**
+     * Invokes the .NET member removeConnectorChanged.
+     *
+     * @param handler the argument of type {@code ConnectorEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeConnectorChanged(ConnectorEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -448,6 +807,13 @@ public class FreeformActivityDesigner extends system.workflow.componentmodel.des
         }
     }
 
+    /**
+     * Invokes the .NET member addConnectorRemoved.
+     *
+     * @param handler the argument of type {@code ConnectorEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addConnectorRemoved(ConnectorEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -458,6 +824,13 @@ public class FreeformActivityDesigner extends system.workflow.componentmodel.des
         }
     }
 
+    /**
+     * Invokes the .NET member removeConnectorRemoved.
+     *
+     * @param handler the argument of type {@code ConnectorEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeConnectorRemoved(ConnectorEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

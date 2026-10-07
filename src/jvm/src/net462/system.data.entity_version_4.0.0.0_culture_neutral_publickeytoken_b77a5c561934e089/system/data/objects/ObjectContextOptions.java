@@ -98,7 +98,10 @@ public class ObjectContextOptions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ObjectContextOptions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,13 @@ public class ObjectContextOptions extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property LazyLoadingEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContextOptions.LazyLoadingEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getLazyLoadingEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +181,13 @@ public class ObjectContextOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LazyLoadingEnabled.
+     *
+     * @param LazyLoadingEnabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContextOptions.LazyLoadingEnabled" target="_top">.NET documentation</a>
+     */
     public void setLazyLoadingEnabled(boolean LazyLoadingEnabled) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +198,13 @@ public class ObjectContextOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProxyCreationEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContextOptions.ProxyCreationEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getProxyCreationEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +219,13 @@ public class ObjectContextOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProxyCreationEnabled.
+     *
+     * @param ProxyCreationEnabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContextOptions.ProxyCreationEnabled" target="_top">.NET documentation</a>
+     */
     public void setProxyCreationEnabled(boolean ProxyCreationEnabled) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +236,13 @@ public class ObjectContextOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseConsistentNullReferenceBehavior.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContextOptions.UseConsistentNullReferenceBehavior" target="_top">.NET documentation</a>
+     */
     public boolean getUseConsistentNullReferenceBehavior() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +257,13 @@ public class ObjectContextOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseConsistentNullReferenceBehavior.
+     *
+     * @param UseConsistentNullReferenceBehavior the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContextOptions.UseConsistentNullReferenceBehavior" target="_top">.NET documentation</a>
+     */
     public void setUseConsistentNullReferenceBehavior(boolean UseConsistentNullReferenceBehavior) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +274,13 @@ public class ObjectContextOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseCSharpNullComparisonBehavior.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContextOptions.UseCSharpNullComparisonBehavior" target="_top">.NET documentation</a>
+     */
     public boolean getUseCSharpNullComparisonBehavior() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +295,13 @@ public class ObjectContextOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseCSharpNullComparisonBehavior.
+     *
+     * @param UseCSharpNullComparisonBehavior the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContextOptions.UseCSharpNullComparisonBehavior" target="_top">.NET documentation</a>
+     */
     public void setUseCSharpNullComparisonBehavior(boolean UseCSharpNullComparisonBehavior) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +312,13 @@ public class ObjectContextOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseLegacyPreserveChangesBehavior.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContextOptions.UseLegacyPreserveChangesBehavior" target="_top">.NET documentation</a>
+     */
     public boolean getUseLegacyPreserveChangesBehavior() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +333,13 @@ public class ObjectContextOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseLegacyPreserveChangesBehavior.
+     *
+     * @param UseLegacyPreserveChangesBehavior the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContextOptions.UseLegacyPreserveChangesBehavior" target="_top">.NET documentation</a>
+     */
     public void setUseLegacyPreserveChangesBehavior(boolean UseLegacyPreserveChangesBehavior) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class SubjectAlternativeNameBuilder extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SubjectAlternativeNameBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class SubjectAlternativeNameBuilder extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.SubjectAlternativeNameBuilder.-ctor" target="_top">.NET documentation</a>
+     */
     public SubjectAlternativeNameBuilder() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +171,25 @@ public class SubjectAlternativeNameBuilder extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Build.
+     *
+     * @param critical the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.SubjectAlternativeNameBuilder.Build" target="_top">.NET documentation</a>
+     */
     public X509Extension Build(boolean critical) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +205,26 @@ public class SubjectAlternativeNameBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddDnsName.
+     *
+     * @param dnsName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.SubjectAlternativeNameBuilder.AddDnsName" target="_top">.NET documentation</a>
+     */
     public void AddDnsName(java.lang.String dnsName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +235,25 @@ public class SubjectAlternativeNameBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddEmailAddress.
+     *
+     * @param emailAddress the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.SubjectAlternativeNameBuilder.AddEmailAddress" target="_top">.NET documentation</a>
+     */
     public void AddEmailAddress(java.lang.String emailAddress) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +264,15 @@ public class SubjectAlternativeNameBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddIpAddress.
+     *
+     * @param ipAddress the argument of type {@code IPAddress}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.SubjectAlternativeNameBuilder.AddIpAddress" target="_top">.NET documentation</a>
+     */
     public void AddIpAddress(IPAddress ipAddress) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +283,25 @@ public class SubjectAlternativeNameBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddUri.
+     *
+     * @param uri the argument of type {@code Uri}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.SubjectAlternativeNameBuilder.AddUri" target="_top">.NET documentation</a>
+     */
     public void AddUri(Uri uri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.UriFormatException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +312,26 @@ public class SubjectAlternativeNameBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddUserPrincipalName.
+     *
+     * @param upn the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.SubjectAlternativeNameBuilder.AddUserPrincipalName" target="_top">.NET documentation</a>
+     */
     public void AddUserPrincipalName(java.lang.String upn) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

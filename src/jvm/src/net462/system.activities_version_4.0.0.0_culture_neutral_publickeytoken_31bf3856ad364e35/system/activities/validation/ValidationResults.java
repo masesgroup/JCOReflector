@@ -101,7 +101,10 @@ public class ValidationResults extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ValidationResults(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,14 @@ public class ValidationResults extends NetObject  {
     public ValidationResults() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param allValidationErrors the argument of type {@code IList_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Validation.ValidationResults.-ctor" target="_top">.NET documentation</a>
+     */
     public ValidationResults(IList_1 allValidationErrors) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +181,14 @@ public class ValidationResults extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Errors.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Validation.ValidationResults.Errors" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getErrors() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +204,14 @@ public class ValidationResults extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Warnings.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Validation.ValidationResults.Warnings" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getWarnings() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

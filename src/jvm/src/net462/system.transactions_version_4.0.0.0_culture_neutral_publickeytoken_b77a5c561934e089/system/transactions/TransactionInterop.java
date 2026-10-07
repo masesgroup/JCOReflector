@@ -101,7 +101,10 @@ public class TransactionInterop extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TransactionInterop(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,32 @@ public class TransactionInterop extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetExportCookie.
+     *
+     * @param transaction the argument of type {@code Transaction}
+     * @param whereabouts the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.transactions.TransactionPromotionException if the .NET member raises it
+     * @throws system.transactions.TransactionException if the .NET member raises it
+     * @throws system.transactions.TransactionInDoubtException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.transactions.TransactionManagerCommunicationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Transactions.TransactionInterop.GetExportCookie" target="_top">.NET documentation</a>
+     */
     public static byte[] GetExportCookie(Transaction transaction, byte[] whereabouts) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.OverflowException, system.transactions.TransactionManagerCommunicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -177,6 +206,32 @@ public class TransactionInterop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetExportCookie.
+     *
+     * @param dupParam0 the argument of type {@code Transaction}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.transactions.TransactionPromotionException if the .NET member raises it
+     * @throws system.transactions.TransactionException if the .NET member raises it
+     * @throws system.transactions.TransactionInDoubtException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.transactions.TransactionManagerCommunicationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Transactions.TransactionInterop.GetExportCookie" target="_top">.NET documentation</a>
+     */
     public static byte[] GetExportCookie(Transaction dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.OverflowException, system.transactions.TransactionManagerCommunicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -200,6 +255,31 @@ public class TransactionInterop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTransmitterPropagationToken.
+     *
+     * @param transaction the argument of type {@code Transaction}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.transactions.TransactionPromotionException if the .NET member raises it
+     * @throws system.transactions.TransactionException if the .NET member raises it
+     * @throws system.transactions.TransactionInDoubtException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.transactions.TransactionManagerCommunicationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Transactions.TransactionInterop.GetTransmitterPropagationToken" target="_top">.NET documentation</a>
+     */
     public static byte[] GetTransmitterPropagationToken(Transaction transaction) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.OverflowException, system.transactions.TransactionManagerCommunicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -223,6 +303,40 @@ public class TransactionInterop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetWhereabouts.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.transactions.TransactionException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.transactions.TransactionManagerCommunicationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Transactions.TransactionInterop.GetWhereabouts" target="_top">.NET documentation</a>
+     */
     public static byte[] GetWhereabouts() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.transactions.TransactionException, system.IndexOutOfRangeException, system.OverflowException, system.transactions.TransactionManagerCommunicationException, system.RankException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -246,6 +360,30 @@ public class TransactionInterop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDtcTransaction.
+     *
+     * @param transaction the argument of type {@code Transaction}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.transactions.TransactionPromotionException if the .NET member raises it
+     * @throws system.transactions.TransactionException if the .NET member raises it
+     * @throws system.transactions.TransactionInDoubtException if the .NET member raises it
+     * @throws system.transactions.TransactionManagerCommunicationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Transactions.TransactionInterop.GetDtcTransaction" target="_top">.NET documentation</a>
+     */
     public static IDtcTransaction GetDtcTransaction(Transaction transaction) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -261,6 +399,41 @@ public class TransactionInterop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTransactionFromDtcTransaction.
+     *
+     * @param transactionNative the argument of type {@code IDtcTransaction}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.transactions.TransactionException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.transactions.TransactionManagerCommunicationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Transactions.TransactionInterop.GetTransactionFromDtcTransaction" target="_top">.NET documentation</a>
+     */
     public static Transaction GetTransactionFromDtcTransaction(IDtcTransaction transactionNative) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.transactions.TransactionException, system.IndexOutOfRangeException, system.OverflowException, system.transactions.TransactionManagerCommunicationException, system.RankException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -276,6 +449,41 @@ public class TransactionInterop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTransactionFromExportCookie.
+     *
+     * @param cookie the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.transactions.TransactionException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.transactions.TransactionManagerCommunicationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Transactions.TransactionInterop.GetTransactionFromExportCookie" target="_top">.NET documentation</a>
+     */
     public static Transaction GetTransactionFromExportCookie(byte[] cookie) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.transactions.TransactionException, system.IndexOutOfRangeException, system.OverflowException, system.transactions.TransactionManagerCommunicationException, system.RankException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -291,6 +499,41 @@ public class TransactionInterop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTransactionFromExportCookie.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.transactions.TransactionException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.transactions.TransactionManagerCommunicationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Transactions.TransactionInterop.GetTransactionFromExportCookie" target="_top">.NET documentation</a>
+     */
     public static Transaction GetTransactionFromExportCookie(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.transactions.TransactionException, system.IndexOutOfRangeException, system.OverflowException, system.transactions.TransactionManagerCommunicationException, system.RankException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -306,6 +549,39 @@ public class TransactionInterop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTransactionFromTransmitterPropagationToken.
+     *
+     * @param propagationToken the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.transactions.TransactionException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.transactions.TransactionManagerCommunicationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Transactions.TransactionInterop.GetTransactionFromTransmitterPropagationToken" target="_top">.NET documentation</a>
+     */
     public static Transaction GetTransactionFromTransmitterPropagationToken(byte[] propagationToken) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.transactions.TransactionException, system.IndexOutOfRangeException, system.OverflowException, system.transactions.TransactionManagerCommunicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -321,6 +597,39 @@ public class TransactionInterop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTransactionFromTransmitterPropagationToken.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.transactions.TransactionException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.transactions.TransactionManagerCommunicationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Transactions.TransactionInterop.GetTransactionFromTransmitterPropagationToken" target="_top">.NET documentation</a>
+     */
     public static Transaction GetTransactionFromTransmitterPropagationToken(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.transactions.TransactionException, system.IndexOutOfRangeException, system.OverflowException, system.transactions.TransactionManagerCommunicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

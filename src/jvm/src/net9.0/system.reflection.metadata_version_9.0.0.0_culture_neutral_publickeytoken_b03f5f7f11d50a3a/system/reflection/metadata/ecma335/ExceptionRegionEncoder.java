@@ -103,7 +103,10 @@ public class ExceptionRegionEncoder extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ExceptionRegionEncoder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,15 @@ public class ExceptionRegionEncoder extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsSmallExceptionRegion.
+     *
+     * @param startOffset the argument of type {@code int}
+     * @param length the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.ExceptionRegionEncoder.IsSmallExceptionRegion" target="_top">.NET documentation</a>
+     */
     public static boolean IsSmallExceptionRegion(int startOffset, int length) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -172,6 +184,14 @@ public class ExceptionRegionEncoder extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsSmallRegionCount.
+     *
+     * @param exceptionRegionCount the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.ExceptionRegionEncoder.IsSmallRegionCount" target="_top">.NET documentation</a>
+     */
     public static boolean IsSmallRegionCount(int exceptionRegionCount) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -186,6 +206,28 @@ public class ExceptionRegionEncoder extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param kind the argument of type {@code ExceptionRegionKind}
+     * @param tryOffset the argument of type {@code int}
+     * @param tryLength the argument of type {@code int}
+     * @param handlerOffset the argument of type {@code int}
+     * @param handlerLength the argument of type {@code int}
+     * @param catchType the argument of type {@code EntityHandle}
+     * @param filterOffset the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.ExceptionRegionEncoder.Add" target="_top">.NET documentation</a>
+     */
     public ExceptionRegionEncoder Add(ExceptionRegionKind kind, int tryOffset, int tryLength, int handlerOffset, int handlerLength, EntityHandle catchType, int filterOffset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +243,26 @@ public class ExceptionRegionEncoder extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddCatch.
+     *
+     * @param tryOffset the argument of type {@code int}
+     * @param tryLength the argument of type {@code int}
+     * @param handlerOffset the argument of type {@code int}
+     * @param handlerLength the argument of type {@code int}
+     * @param catchType the argument of type {@code EntityHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.ExceptionRegionEncoder.AddCatch" target="_top">.NET documentation</a>
+     */
     public ExceptionRegionEncoder AddCatch(int tryOffset, int tryLength, int handlerOffset, int handlerLength, EntityHandle catchType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +278,25 @@ public class ExceptionRegionEncoder extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddFault.
+     *
+     * @param tryOffset the argument of type {@code int}
+     * @param tryLength the argument of type {@code int}
+     * @param handlerOffset the argument of type {@code int}
+     * @param handlerLength the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.ExceptionRegionEncoder.AddFault" target="_top">.NET documentation</a>
+     */
     public ExceptionRegionEncoder AddFault(int tryOffset, int tryLength, int handlerOffset, int handlerLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +312,26 @@ public class ExceptionRegionEncoder extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddFilter.
+     *
+     * @param tryOffset the argument of type {@code int}
+     * @param tryLength the argument of type {@code int}
+     * @param handlerOffset the argument of type {@code int}
+     * @param handlerLength the argument of type {@code int}
+     * @param filterOffset the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.ExceptionRegionEncoder.AddFilter" target="_top">.NET documentation</a>
+     */
     public ExceptionRegionEncoder AddFilter(int tryOffset, int tryLength, int handlerOffset, int handlerLength, int filterOffset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +347,25 @@ public class ExceptionRegionEncoder extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddFinally.
+     *
+     * @param tryOffset the argument of type {@code int}
+     * @param tryLength the argument of type {@code int}
+     * @param handlerOffset the argument of type {@code int}
+     * @param handlerLength the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.ExceptionRegionEncoder.AddFinally" target="_top">.NET documentation</a>
+     */
     public ExceptionRegionEncoder AddFinally(int tryOffset, int tryLength, int handlerOffset, int handlerLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +385,13 @@ public class ExceptionRegionEncoder extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HasSmallFormat.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.ExceptionRegionEncoder.HasSmallFormat" target="_top">.NET documentation</a>
+     */
     public boolean getHasSmallFormat() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +406,13 @@ public class ExceptionRegionEncoder extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Builder.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.ExceptionRegionEncoder.Builder" target="_top">.NET documentation</a>
+     */
     public BlobBuilder getBuilder() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

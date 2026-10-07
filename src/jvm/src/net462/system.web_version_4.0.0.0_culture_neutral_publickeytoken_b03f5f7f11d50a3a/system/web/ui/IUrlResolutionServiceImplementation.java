@@ -98,7 +98,10 @@ public class IUrlResolutionServiceImplementation extends NetObject implements IU
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IUrlResolutionServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,14 @@ public class IUrlResolutionServiceImplementation extends NetObject implements IU
 
     // Methods section
     
+    /**
+     * Invokes the .NET member ResolveClientUrl.
+     *
+     * @param relativeUrl the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IUrlResolutionService.ResolveClientUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String ResolveClientUrl(java.lang.String relativeUrl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

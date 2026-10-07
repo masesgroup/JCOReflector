@@ -106,7 +106,10 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TextBoxBase(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,20 @@ public class TextBoxBase extends system.windows.controls.Control  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Redo.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.Redo" target="_top">.NET documentation</a>
+     */
     public boolean Redo() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +190,22 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member Undo.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.Undo" target="_top">.NET documentation</a>
+     */
     public boolean Undo() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +220,13 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member DeclareChangeBlock.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.DeclareChangeBlock" target="_top">.NET documentation</a>
+     */
     public IDisposable DeclareChangeBlock() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +242,22 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member AppendText.
+     *
+     * @param textData the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.AppendText" target="_top">.NET documentation</a>
+     */
     public void AppendText(java.lang.String textData) throws Throwable, system.ArgumentException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentNullException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +268,12 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member BeginChange.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.BeginChange" target="_top">.NET documentation</a>
+     */
     public void BeginChange() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +284,35 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member Copy.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.deployment.application.InvalidDeploymentException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.reflection.TargetException if the .NET member raises it
+     * @throws system.reflection.TargetParameterCountException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.Copy" target="_top">.NET documentation</a>
+     */
     public void Copy() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.security.SecurityException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.reflection.AmbiguousMatchException, system.io.IOException, system.io.FileFormatException, system.ObjectDisposedException, system.deployment.application.InvalidDeploymentException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.threading.ThreadStateException, system.SystemException, system.MulticastNotSupportedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +323,35 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member Cut.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.deployment.application.InvalidDeploymentException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.reflection.TargetException if the .NET member raises it
+     * @throws system.reflection.TargetParameterCountException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.Cut" target="_top">.NET documentation</a>
+     */
     public void Cut() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.security.SecurityException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.reflection.AmbiguousMatchException, system.io.IOException, system.io.FileFormatException, system.ObjectDisposedException, system.deployment.application.InvalidDeploymentException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.threading.ThreadStateException, system.SystemException, system.MulticastNotSupportedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +362,23 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member EndChange.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.EndChange" target="_top">.NET documentation</a>
+     */
     public void EndChange() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +389,23 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member LineDown.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.LineDown" target="_top">.NET documentation</a>
+     */
     public void LineDown() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.FormatException, system.MulticastNotSupportedException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +416,24 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member LineLeft.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.LineLeft" target="_top">.NET documentation</a>
+     */
     public void LineLeft() throws Throwable, system.ArgumentException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.FormatException, system.MulticastNotSupportedException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +444,24 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member LineRight.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.LineRight" target="_top">.NET documentation</a>
+     */
     public void LineRight() throws Throwable, system.ArgumentException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.FormatException, system.MulticastNotSupportedException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +472,23 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member LineUp.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.LineUp" target="_top">.NET documentation</a>
+     */
     public void LineUp() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.FormatException, system.MulticastNotSupportedException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +499,19 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member LockCurrentUndoUnit.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.LockCurrentUndoUnit" target="_top">.NET documentation</a>
+     */
     public void LockCurrentUndoUnit() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -302,6 +522,20 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member OnApplyTemplate.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.OnApplyTemplate" target="_top">.NET documentation</a>
+     */
     public void OnApplyTemplate() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -312,6 +546,24 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member PageDown.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.PageDown" target="_top">.NET documentation</a>
+     */
     public void PageDown() throws Throwable, system.ArgumentException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.FormatException, system.MulticastNotSupportedException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -322,6 +574,24 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member PageLeft.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.PageLeft" target="_top">.NET documentation</a>
+     */
     public void PageLeft() throws Throwable, system.ArgumentException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.FormatException, system.MulticastNotSupportedException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -332,6 +602,24 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member PageRight.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.PageRight" target="_top">.NET documentation</a>
+     */
     public void PageRight() throws Throwable, system.ArgumentException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.FormatException, system.MulticastNotSupportedException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -342,6 +630,24 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member PageUp.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.PageUp" target="_top">.NET documentation</a>
+     */
     public void PageUp() throws Throwable, system.ArgumentException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.FormatException, system.MulticastNotSupportedException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -352,6 +658,36 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member Paste.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.security.XmlSyntaxException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.deployment.application.InvalidDeploymentException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.windows.markup.XamlParseException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.Paste" target="_top">.NET documentation</a>
+     */
     public void Paste() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.threading.ThreadStateException, system.SystemException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.XmlSyntaxException, system.NullReferenceException, system.deployment.application.InvalidDeploymentException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.IOException, system.NotSupportedException, system.io.FileFormatException, system.NotImplementedException, system.io.FileNotFoundException, system.windows.markup.XamlParseException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -362,6 +698,24 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScrollToEnd.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.ScrollToEnd" target="_top">.NET documentation</a>
+     */
     public void ScrollToEnd() throws Throwable, system.ArgumentException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.FormatException, system.MulticastNotSupportedException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -372,6 +726,24 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScrollToHome.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.ScrollToHome" target="_top">.NET documentation</a>
+     */
     public void ScrollToHome() throws Throwable, system.ArgumentException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.FormatException, system.MulticastNotSupportedException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -382,6 +754,25 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScrollToHorizontalOffset.
+     *
+     * @param offset the argument of type {@code double}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.ScrollToHorizontalOffset" target="_top">.NET documentation</a>
+     */
     public void ScrollToHorizontalOffset(double offset) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.FormatException, system.MulticastNotSupportedException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -392,6 +783,25 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScrollToVerticalOffset.
+     *
+     * @param offset the argument of type {@code double}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.ScrollToVerticalOffset" target="_top">.NET documentation</a>
+     */
     public void ScrollToVerticalOffset(double offset) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.FormatException, system.MulticastNotSupportedException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -402,6 +812,19 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member SelectAll.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.SelectAll" target="_top">.NET documentation</a>
+     */
     public void SelectAll() throws Throwable, system.ArgumentException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentNullException, system.InvalidOperationException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -416,6 +839,21 @@ public class TextBoxBase extends system.windows.controls.Control  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AcceptsReturn.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.AcceptsReturn" target="_top">.NET documentation</a>
+     */
     public boolean getAcceptsReturn() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -430,6 +868,20 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AcceptsReturn.
+     *
+     * @param AcceptsReturn the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.AcceptsReturn" target="_top">.NET documentation</a>
+     */
     public void setAcceptsReturn(boolean AcceptsReturn) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -440,6 +892,21 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AcceptsTab.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.AcceptsTab" target="_top">.NET documentation</a>
+     */
     public boolean getAcceptsTab() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -454,6 +921,20 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AcceptsTab.
+     *
+     * @param AcceptsTab the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.AcceptsTab" target="_top">.NET documentation</a>
+     */
     public void setAcceptsTab(boolean AcceptsTab) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -464,6 +945,21 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AutoWordSelection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.AutoWordSelection" target="_top">.NET documentation</a>
+     */
     public boolean getAutoWordSelection() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -478,6 +974,20 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AutoWordSelection.
+     *
+     * @param AutoWordSelection the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.AutoWordSelection" target="_top">.NET documentation</a>
+     */
     public void setAutoWordSelection(boolean AutoWordSelection) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -488,6 +998,20 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanRedo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.CanRedo" target="_top">.NET documentation</a>
+     */
     public boolean getCanRedo() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -502,6 +1026,20 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanUndo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.CanUndo" target="_top">.NET documentation</a>
+     */
     public boolean getCanUndo() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -516,6 +1054,21 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsInactiveSelectionHighlightEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.IsInactiveSelectionHighlightEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getIsInactiveSelectionHighlightEnabled() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -530,6 +1083,20 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsInactiveSelectionHighlightEnabled.
+     *
+     * @param IsInactiveSelectionHighlightEnabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.IsInactiveSelectionHighlightEnabled" target="_top">.NET documentation</a>
+     */
     public void setIsInactiveSelectionHighlightEnabled(boolean IsInactiveSelectionHighlightEnabled) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -540,6 +1107,21 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsReadOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.IsReadOnly" target="_top">.NET documentation</a>
+     */
     public boolean getIsReadOnly() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -554,6 +1136,20 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsReadOnly.
+     *
+     * @param IsReadOnly the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.IsReadOnly" target="_top">.NET documentation</a>
+     */
     public void setIsReadOnly(boolean IsReadOnly) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -564,6 +1160,21 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsReadOnlyCaretVisible.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.IsReadOnlyCaretVisible" target="_top">.NET documentation</a>
+     */
     public boolean getIsReadOnlyCaretVisible() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -578,6 +1189,20 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsReadOnlyCaretVisible.
+     *
+     * @param IsReadOnlyCaretVisible the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.IsReadOnlyCaretVisible" target="_top">.NET documentation</a>
+     */
     public void setIsReadOnlyCaretVisible(boolean IsReadOnlyCaretVisible) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -588,6 +1213,21 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSelectionActive.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.IsSelectionActive" target="_top">.NET documentation</a>
+     */
     public boolean getIsSelectionActive() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -602,6 +1242,21 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsUndoEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.IsUndoEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getIsUndoEnabled() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -616,6 +1271,20 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsUndoEnabled.
+     *
+     * @param IsUndoEnabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.IsUndoEnabled" target="_top">.NET documentation</a>
+     */
     public void setIsUndoEnabled(boolean IsUndoEnabled) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -626,6 +1295,19 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExtentHeight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.ExtentHeight" target="_top">.NET documentation</a>
+     */
     public double getExtentHeight() throws Throwable, system.ArgumentException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.ArgumentNullException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -666,6 +1348,19 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExtentWidth.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.ExtentWidth" target="_top">.NET documentation</a>
+     */
     public double getExtentWidth() throws Throwable, system.ArgumentException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.ArgumentNullException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -706,6 +1401,19 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HorizontalOffset.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.HorizontalOffset" target="_top">.NET documentation</a>
+     */
     public double getHorizontalOffset() throws Throwable, system.ArgumentException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.ArgumentNullException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -746,6 +1454,21 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SelectionOpacity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.SelectionOpacity" target="_top">.NET documentation</a>
+     */
     public double getSelectionOpacity() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -786,6 +1509,21 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SelectionOpacity.
+     *
+     * @param SelectionOpacity the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.SelectionOpacity" target="_top">.NET documentation</a>
+     */
     public void setSelectionOpacity(double SelectionOpacity) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -796,6 +1534,19 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VerticalOffset.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.VerticalOffset" target="_top">.NET documentation</a>
+     */
     public double getVerticalOffset() throws Throwable, system.ArgumentException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.ArgumentNullException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -836,6 +1587,19 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ViewportHeight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.ViewportHeight" target="_top">.NET documentation</a>
+     */
     public double getViewportHeight() throws Throwable, system.ArgumentException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.ArgumentNullException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -876,6 +1640,19 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ViewportWidth.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.ViewportWidth" target="_top">.NET documentation</a>
+     */
     public double getViewportWidth() throws Throwable, system.ArgumentException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.ArgumentNullException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -916,6 +1693,21 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UndoLimit.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.UndoLimit" target="_top">.NET documentation</a>
+     */
     public int getUndoLimit() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -956,6 +1748,21 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UndoLimit.
+     *
+     * @param UndoLimit the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.UndoLimit" target="_top">.NET documentation</a>
+     */
     public void setUndoLimit(int UndoLimit) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -966,6 +1773,21 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HorizontalScrollBarVisibility.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.HorizontalScrollBarVisibility" target="_top">.NET documentation</a>
+     */
     public ScrollBarVisibility getHorizontalScrollBarVisibility() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -981,6 +1803,21 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HorizontalScrollBarVisibility.
+     *
+     * @param HorizontalScrollBarVisibility the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.HorizontalScrollBarVisibility" target="_top">.NET documentation</a>
+     */
     public void setHorizontalScrollBarVisibility(ScrollBarVisibility HorizontalScrollBarVisibility) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -991,6 +1828,21 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VerticalScrollBarVisibility.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.VerticalScrollBarVisibility" target="_top">.NET documentation</a>
+     */
     public ScrollBarVisibility getVerticalScrollBarVisibility() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1006,6 +1858,21 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property VerticalScrollBarVisibility.
+     *
+     * @param VerticalScrollBarVisibility the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.VerticalScrollBarVisibility" target="_top">.NET documentation</a>
+     */
     public void setVerticalScrollBarVisibility(ScrollBarVisibility VerticalScrollBarVisibility) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1016,6 +1883,13 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SpellCheck.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.SpellCheck" target="_top">.NET documentation</a>
+     */
     public SpellCheck getSpellCheck() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1031,6 +1905,21 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CaretBrush.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.CaretBrush" target="_top">.NET documentation</a>
+     */
     public Brush getCaretBrush() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1046,6 +1935,21 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CaretBrush.
+     *
+     * @param CaretBrush the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.CaretBrush" target="_top">.NET documentation</a>
+     */
     public void setCaretBrush(Brush CaretBrush) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1056,6 +1960,21 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SelectionBrush.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.SelectionBrush" target="_top">.NET documentation</a>
+     */
     public Brush getSelectionBrush() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1071,6 +1990,21 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SelectionBrush.
+     *
+     * @param SelectionBrush the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.SelectionBrush" target="_top">.NET documentation</a>
+     */
     public void setSelectionBrush(Brush SelectionBrush) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1081,6 +2015,21 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SelectionTextBrush.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.SelectionTextBrush" target="_top">.NET documentation</a>
+     */
     public Brush getSelectionTextBrush() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1096,6 +2045,21 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SelectionTextBrush.
+     *
+     * @param SelectionTextBrush the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.TextBoxBase.SelectionTextBrush" target="_top">.NET documentation</a>
+     */
     public void setSelectionTextBrush(Brush SelectionTextBrush) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1111,6 +2075,13 @@ public class TextBoxBase extends system.windows.controls.Control  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addTextChanged.
+     *
+     * @param handler the argument of type {@code TextChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addTextChanged(TextChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1121,6 +2092,13 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeTextChanged.
+     *
+     * @param handler the argument of type {@code TextChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeTextChanged(TextChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1131,6 +2109,13 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addSelectionChanged.
+     *
+     * @param handler the argument of type {@code RoutedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addSelectionChanged(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1141,6 +2126,13 @@ public class TextBoxBase extends system.windows.controls.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeSelectionChanged.
+     *
+     * @param handler the argument of type {@code RoutedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeSelectionChanged(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class ArrayShape extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ArrayShape(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,15 @@ public class ArrayShape extends system.ValueType  {
     public ArrayShape() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param rank the argument of type {@code int}
+     * @param sizes the argument of type {@code ImmutableArray_1}
+     * @param lowerBounds the argument of type {@code ImmutableArray_1}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.ArrayShape.-ctor" target="_top">.NET documentation</a>
+     */
     public ArrayShape(int rank, ImmutableArray_1 sizes, ImmutableArray_1 lowerBounds) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +181,13 @@ public class ArrayShape extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Rank.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.ArrayShape.Rank" target="_top">.NET documentation</a>
+     */
     public int getRank() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +228,13 @@ public class ArrayShape extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LowerBounds.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.ArrayShape.LowerBounds" target="_top">.NET documentation</a>
+     */
     public ImmutableArray_1 getLowerBounds() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +250,13 @@ public class ArrayShape extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Sizes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.ArrayShape.Sizes" target="_top">.NET documentation</a>
+     */
     public ImmutableArray_1 getSizes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -98,7 +98,10 @@ public class ReceiveSettings extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ReceiveSettings(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class ReceiveSettings extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.ReceiveSettings.-ctor" target="_top">.NET documentation</a>
+     */
     public ReceiveSettings() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,13 @@ public class ReceiveSettings extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CanCreateInstance.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.ReceiveSettings.CanCreateInstance" target="_top">.NET documentation</a>
+     */
     public boolean getCanCreateInstance() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +193,13 @@ public class ReceiveSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CanCreateInstance.
+     *
+     * @param CanCreateInstance the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.ReceiveSettings.CanCreateInstance" target="_top">.NET documentation</a>
+     */
     public void setCanCreateInstance(boolean CanCreateInstance) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +210,13 @@ public class ReceiveSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Action.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.ReceiveSettings.Action" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +231,13 @@ public class ReceiveSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Action.
+     *
+     * @param Action the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.ReceiveSettings.Action" target="_top">.NET documentation</a>
+     */
     public void setAction(java.lang.String Action) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +248,13 @@ public class ReceiveSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OwnerDisplayName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.ReceiveSettings.OwnerDisplayName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getOwnerDisplayName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +269,13 @@ public class ReceiveSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OwnerDisplayName.
+     *
+     * @param OwnerDisplayName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.ReceiveSettings.OwnerDisplayName" target="_top">.NET documentation</a>
+     */
     public void setOwnerDisplayName(java.lang.String OwnerDisplayName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class FormatUrl extends microsoft.build.tasks.TaskExtension  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FormatUrl(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,13 @@ public class FormatUrl extends microsoft.build.tasks.TaskExtension  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.FormatUrl.-ctor" target="_top">.NET documentation</a>
+     */
     public FormatUrl() throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +170,30 @@ public class FormatUrl extends microsoft.build.tasks.TaskExtension  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Execute.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.FormatUrl.Execute" target="_top">.NET documentation</a>
+     */
     public boolean Execute() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.UriFormatException, system.globalization.CultureNotFoundException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +212,13 @@ public class FormatUrl extends microsoft.build.tasks.TaskExtension  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property InputUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.FormatUrl.InputUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getInputUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +233,13 @@ public class FormatUrl extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InputUrl.
+     *
+     * @param InputUrl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.FormatUrl.InputUrl" target="_top">.NET documentation</a>
+     */
     public void setInputUrl(java.lang.String InputUrl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +250,13 @@ public class FormatUrl extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OutputUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.FormatUrl.OutputUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getOutputUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +271,13 @@ public class FormatUrl extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OutputUrl.
+     *
+     * @param OutputUrl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.FormatUrl.OutputUrl" target="_top">.NET documentation</a>
+     */
     public void setOutputUrl(java.lang.String OutputUrl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

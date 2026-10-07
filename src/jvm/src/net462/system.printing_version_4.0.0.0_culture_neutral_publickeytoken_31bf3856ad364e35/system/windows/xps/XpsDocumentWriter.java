@@ -107,7 +107,10 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XpsDocumentWriter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -162,6 +165,28 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateVisualsCollator.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.windows.xps.XpsWriterException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.XpsDocumentWriter.CreateVisualsCollator" target="_top">.NET documentation</a>
+     */
     public SerializerWriterCollator CreateVisualsCollator() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.windows.xps.XpsWriterException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +202,30 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
         }
     }
 
+    /**
+     * Invokes the .NET member CreateVisualsCollator.
+     *
+     * @param documentSequencePrintTicket the argument of type {@code PrintTicket}
+     * @param documentPrintTicket the argument of type {@code PrintTicket}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.windows.xps.XpsWriterException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.XpsDocumentWriter.CreateVisualsCollator" target="_top">.NET documentation</a>
+     */
     public SerializerWriterCollator CreateVisualsCollator(PrintTicket documentSequencePrintTicket, PrintTicket documentPrintTicket) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.windows.xps.XpsWriterException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +241,27 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
         }
     }
 
+    /**
+     * Invokes the .NET member CancelAsync.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.windows.xps.XpsWriterException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.XpsDocumentWriter.CancelAsync" target="_top">.NET documentation</a>
+     */
     public void CancelAsync() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.windows.xps.XpsWriterException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +272,46 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param documentPath the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.io.InvalidDataException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsWriterException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintingCanceledException if the .NET member raises it
+     * @throws system.DllNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.EndOfStreamException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.XpsDocumentWriter.Write" target="_top">.NET documentation</a>
+     */
     public void Write(java.lang.String documentPath) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException, system.io.FileFormatException, system.FormatException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.windows.xps.XpsPackagingException, system.io.InvalidDataException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.DllNotFoundException, system.IndexOutOfRangeException, system.io.EndOfStreamException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +322,57 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param documentPath the argument of type {@code java.lang.String}
+     * @param notificationLevel the argument of type {@code XpsDocumentNotificationLevel}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.io.InvalidDataException if the .NET member raises it
+     * @throws system.xaml.XamlException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.windows.markup.XamlParseException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsWriterException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintingCanceledException if the .NET member raises it
+     * @throws system.DllNotFoundException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.EndOfStreamException if the .NET member raises it
+     * @throws system.threading.SemaphoreFullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.XpsDocumentWriter.Write" target="_top">.NET documentation</a>
+     */
     public void Write(java.lang.String documentPath, XpsDocumentNotificationLevel notificationLevel) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.UriFormatException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.io.FileFormatException, system.FormatException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.windows.xps.XpsPackagingException, system.io.InvalidDataException, system.xaml.XamlException, system.NotImplementedException, system.windows.markup.XamlParseException, system.OverflowException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.printing.PrintQueueException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.DllNotFoundException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException, system.IndexOutOfRangeException, system.io.EndOfStreamException, system.threading.SemaphoreFullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +383,50 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param documentPaginator the argument of type {@code DocumentPaginator}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsWriterException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.printing.PrintingNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintingCanceledException if the .NET member raises it
+     * @throws system.DllNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.XpsDocumentWriter.Write" target="_top">.NET documentation</a>
+     */
     public void Write(DocumentPaginator documentPaginator) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.NullReferenceException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.IOException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.FileFormatException, system.FormatException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.UriFormatException, system.OutOfMemoryException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.DllNotFoundException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +437,51 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param documentPaginator the argument of type {@code DocumentPaginator}
+     * @param printTicket the argument of type {@code PrintTicket}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsWriterException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.printing.PrintingNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintingCanceledException if the .NET member raises it
+     * @throws system.DllNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.XpsDocumentWriter.Write" target="_top">.NET documentation</a>
+     */
     public void Write(DocumentPaginator documentPaginator, PrintTicket printTicket) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.NullReferenceException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.IOException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.FileFormatException, system.FormatException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.UriFormatException, system.OutOfMemoryException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.DllNotFoundException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +492,50 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param fixedDocument the argument of type {@code FixedDocument}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsWriterException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.printing.PrintingNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintingCanceledException if the .NET member raises it
+     * @throws system.DllNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.XpsDocumentWriter.Write" target="_top">.NET documentation</a>
+     */
     public void Write(FixedDocument fixedDocument) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.NullReferenceException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.IOException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.FileFormatException, system.FormatException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.UriFormatException, system.OutOfMemoryException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.DllNotFoundException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +546,51 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param fixedDocument the argument of type {@code FixedDocument}
+     * @param printTicket the argument of type {@code PrintTicket}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsWriterException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.printing.PrintingNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintingCanceledException if the .NET member raises it
+     * @throws system.DllNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.XpsDocumentWriter.Write" target="_top">.NET documentation</a>
+     */
     public void Write(FixedDocument fixedDocument, PrintTicket printTicket) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.NullReferenceException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.IOException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.FileFormatException, system.FormatException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.UriFormatException, system.OutOfMemoryException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.DllNotFoundException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +601,50 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param fixedDocumentSequence the argument of type {@code FixedDocumentSequence}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsWriterException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.printing.PrintingNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintingCanceledException if the .NET member raises it
+     * @throws system.DllNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.XpsDocumentWriter.Write" target="_top">.NET documentation</a>
+     */
     public void Write(FixedDocumentSequence fixedDocumentSequence) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.NullReferenceException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.IOException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.FileFormatException, system.FormatException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.UriFormatException, system.OutOfMemoryException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.DllNotFoundException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +655,51 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param fixedDocumentSequence the argument of type {@code FixedDocumentSequence}
+     * @param printTicket the argument of type {@code PrintTicket}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsWriterException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.printing.PrintingNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintingCanceledException if the .NET member raises it
+     * @throws system.DllNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.XpsDocumentWriter.Write" target="_top">.NET documentation</a>
+     */
     public void Write(FixedDocumentSequence fixedDocumentSequence, PrintTicket printTicket) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.NullReferenceException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.IOException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.FileFormatException, system.FormatException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.UriFormatException, system.OutOfMemoryException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.DllNotFoundException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +710,50 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param fixedPage the argument of type {@code FixedPage}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsWriterException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.printing.PrintingNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintingCanceledException if the .NET member raises it
+     * @throws system.DllNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.XpsDocumentWriter.Write" target="_top">.NET documentation</a>
+     */
     public void Write(FixedPage fixedPage) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.NullReferenceException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.IOException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.FileFormatException, system.FormatException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.UriFormatException, system.OutOfMemoryException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.DllNotFoundException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +764,51 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param fixedPage the argument of type {@code FixedPage}
+     * @param printTicket the argument of type {@code PrintTicket}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsWriterException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.printing.PrintingNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintingCanceledException if the .NET member raises it
+     * @throws system.DllNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.XpsDocumentWriter.Write" target="_top">.NET documentation</a>
+     */
     public void Write(FixedPage fixedPage, PrintTicket printTicket) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.NullReferenceException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.IOException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.FileFormatException, system.FormatException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.UriFormatException, system.OutOfMemoryException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.DllNotFoundException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -302,6 +819,50 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param visual the argument of type {@code Visual}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsWriterException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.printing.PrintingNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintingCanceledException if the .NET member raises it
+     * @throws system.DllNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.XpsDocumentWriter.Write" target="_top">.NET documentation</a>
+     */
     public void Write(Visual visual) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.NullReferenceException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.IOException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.FileFormatException, system.FormatException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.UriFormatException, system.OutOfMemoryException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.DllNotFoundException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -312,6 +873,51 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param visual the argument of type {@code Visual}
+     * @param printTicket the argument of type {@code PrintTicket}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsWriterException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.printing.PrintingNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintingCanceledException if the .NET member raises it
+     * @throws system.DllNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.XpsDocumentWriter.Write" target="_top">.NET documentation</a>
+     */
     public void Write(Visual visual, PrintTicket printTicket) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.NullReferenceException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.IOException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.FileFormatException, system.FormatException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.UriFormatException, system.OutOfMemoryException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.DllNotFoundException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -322,6 +928,44 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
         }
     }
 
+    /**
+     * Invokes the .NET member WriteAsync.
+     *
+     * @param documentPath the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.io.InvalidDataException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsWriterException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintingCanceledException if the .NET member raises it
+     * @throws system.DllNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.XpsDocumentWriter.WriteAsync" target="_top">.NET documentation</a>
+     */
     public void WriteAsync(java.lang.String documentPath) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException, system.io.FileFormatException, system.FormatException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.windows.xps.XpsPackagingException, system.io.InvalidDataException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.DllNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -332,6 +976,56 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
         }
     }
 
+    /**
+     * Invokes the .NET member WriteAsync.
+     *
+     * @param documentPath the argument of type {@code java.lang.String}
+     * @param notificationLevel the argument of type {@code XpsDocumentNotificationLevel}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.io.InvalidDataException if the .NET member raises it
+     * @throws system.xaml.XamlException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.windows.markup.XamlParseException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsWriterException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintingCanceledException if the .NET member raises it
+     * @throws system.DllNotFoundException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.EndOfStreamException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.XpsDocumentWriter.WriteAsync" target="_top">.NET documentation</a>
+     */
     public void WriteAsync(java.lang.String documentPath, XpsDocumentNotificationLevel notificationLevel) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.UriFormatException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.io.FileFormatException, system.FormatException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.windows.xps.XpsPackagingException, system.io.InvalidDataException, system.xaml.XamlException, system.NotImplementedException, system.windows.markup.XamlParseException, system.OverflowException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.printing.PrintQueueException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.DllNotFoundException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException, system.IndexOutOfRangeException, system.io.EndOfStreamException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -342,6 +1036,50 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
         }
     }
 
+    /**
+     * Invokes the .NET member WriteAsync.
+     *
+     * @param documentPaginator the argument of type {@code DocumentPaginator}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsWriterException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.printing.PrintingNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintingCanceledException if the .NET member raises it
+     * @throws system.DllNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.XpsDocumentWriter.WriteAsync" target="_top">.NET documentation</a>
+     */
     public void WriteAsync(DocumentPaginator documentPaginator) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.NullReferenceException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.IOException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.FileFormatException, system.FormatException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.UriFormatException, system.OutOfMemoryException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.DllNotFoundException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -352,6 +1090,43 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
         }
     }
 
+    /**
+     * Invokes the .NET member WriteAsync.
+     *
+     * @param documentPaginator the argument of type {@code DocumentPaginator}
+     * @param userSuppliedState the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsWriterException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintingCanceledException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.DllNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.XpsDocumentWriter.WriteAsync" target="_top">.NET documentation</a>
+     */
     public void WriteAsync(DocumentPaginator documentPaginator, NetObject userSuppliedState) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.NullReferenceException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.UriFormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.io.PathTooLongException, system.DllNotFoundException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -362,6 +1137,51 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
         }
     }
 
+    /**
+     * Invokes the .NET member WriteAsync.
+     *
+     * @param documentPaginator the argument of type {@code DocumentPaginator}
+     * @param printTicket the argument of type {@code PrintTicket}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsWriterException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.printing.PrintingNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintingCanceledException if the .NET member raises it
+     * @throws system.DllNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.XpsDocumentWriter.WriteAsync" target="_top">.NET documentation</a>
+     */
     public void WriteAsync(DocumentPaginator documentPaginator, PrintTicket printTicket) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.NullReferenceException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.IOException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.FileFormatException, system.FormatException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.UriFormatException, system.OutOfMemoryException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.DllNotFoundException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -372,6 +1192,44 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
         }
     }
 
+    /**
+     * Invokes the .NET member WriteAsync.
+     *
+     * @param documentPaginator the argument of type {@code DocumentPaginator}
+     * @param printTicket the argument of type {@code PrintTicket}
+     * @param userSuppliedState the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsWriterException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintingCanceledException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.DllNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.XpsDocumentWriter.WriteAsync" target="_top">.NET documentation</a>
+     */
     public void WriteAsync(DocumentPaginator documentPaginator, PrintTicket printTicket, NetObject userSuppliedState) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.NullReferenceException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.UriFormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.io.PathTooLongException, system.DllNotFoundException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -382,6 +1240,50 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
         }
     }
 
+    /**
+     * Invokes the .NET member WriteAsync.
+     *
+     * @param fixedDocument the argument of type {@code FixedDocument}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsWriterException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.printing.PrintingNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintingCanceledException if the .NET member raises it
+     * @throws system.DllNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.XpsDocumentWriter.WriteAsync" target="_top">.NET documentation</a>
+     */
     public void WriteAsync(FixedDocument fixedDocument) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.NullReferenceException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.IOException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.FileFormatException, system.FormatException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.UriFormatException, system.OutOfMemoryException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.DllNotFoundException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -392,6 +1294,43 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
         }
     }
 
+    /**
+     * Invokes the .NET member WriteAsync.
+     *
+     * @param fixedDocument the argument of type {@code FixedDocument}
+     * @param userSuppliedState the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsWriterException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintingCanceledException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.DllNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.XpsDocumentWriter.WriteAsync" target="_top">.NET documentation</a>
+     */
     public void WriteAsync(FixedDocument fixedDocument, NetObject userSuppliedState) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.NullReferenceException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.UriFormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.io.PathTooLongException, system.DllNotFoundException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -402,6 +1341,51 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
         }
     }
 
+    /**
+     * Invokes the .NET member WriteAsync.
+     *
+     * @param fixedDocument the argument of type {@code FixedDocument}
+     * @param printTicket the argument of type {@code PrintTicket}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsWriterException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.printing.PrintingNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintingCanceledException if the .NET member raises it
+     * @throws system.DllNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.XpsDocumentWriter.WriteAsync" target="_top">.NET documentation</a>
+     */
     public void WriteAsync(FixedDocument fixedDocument, PrintTicket printTicket) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.NullReferenceException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.IOException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.FileFormatException, system.FormatException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.UriFormatException, system.OutOfMemoryException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.DllNotFoundException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -412,6 +1396,44 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
         }
     }
 
+    /**
+     * Invokes the .NET member WriteAsync.
+     *
+     * @param fixedDocument the argument of type {@code FixedDocument}
+     * @param printTicket the argument of type {@code PrintTicket}
+     * @param userSuppliedState the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsWriterException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintingCanceledException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.DllNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.XpsDocumentWriter.WriteAsync" target="_top">.NET documentation</a>
+     */
     public void WriteAsync(FixedDocument fixedDocument, PrintTicket printTicket, NetObject userSuppliedState) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.NullReferenceException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.UriFormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.io.PathTooLongException, system.DllNotFoundException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -422,6 +1444,50 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
         }
     }
 
+    /**
+     * Invokes the .NET member WriteAsync.
+     *
+     * @param fixedDocumentSequence the argument of type {@code FixedDocumentSequence}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsWriterException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.printing.PrintingNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintingCanceledException if the .NET member raises it
+     * @throws system.DllNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.XpsDocumentWriter.WriteAsync" target="_top">.NET documentation</a>
+     */
     public void WriteAsync(FixedDocumentSequence fixedDocumentSequence) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.NullReferenceException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.IOException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.FileFormatException, system.FormatException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.UriFormatException, system.OutOfMemoryException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.DllNotFoundException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -432,6 +1498,43 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
         }
     }
 
+    /**
+     * Invokes the .NET member WriteAsync.
+     *
+     * @param fixedDocumentSequence the argument of type {@code FixedDocumentSequence}
+     * @param userSuppliedState the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsWriterException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintingCanceledException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.DllNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.XpsDocumentWriter.WriteAsync" target="_top">.NET documentation</a>
+     */
     public void WriteAsync(FixedDocumentSequence fixedDocumentSequence, NetObject userSuppliedState) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.NullReferenceException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.UriFormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.io.PathTooLongException, system.DllNotFoundException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -442,6 +1545,51 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
         }
     }
 
+    /**
+     * Invokes the .NET member WriteAsync.
+     *
+     * @param fixedDocumentSequence the argument of type {@code FixedDocumentSequence}
+     * @param printTicket the argument of type {@code PrintTicket}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsWriterException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.printing.PrintingNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintingCanceledException if the .NET member raises it
+     * @throws system.DllNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.XpsDocumentWriter.WriteAsync" target="_top">.NET documentation</a>
+     */
     public void WriteAsync(FixedDocumentSequence fixedDocumentSequence, PrintTicket printTicket) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.NullReferenceException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.IOException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.FileFormatException, system.FormatException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.UriFormatException, system.OutOfMemoryException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.DllNotFoundException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -452,6 +1600,44 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
         }
     }
 
+    /**
+     * Invokes the .NET member WriteAsync.
+     *
+     * @param fixedDocumentSequence the argument of type {@code FixedDocumentSequence}
+     * @param printTicket the argument of type {@code PrintTicket}
+     * @param userSuppliedState the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsWriterException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintingCanceledException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.DllNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.XpsDocumentWriter.WriteAsync" target="_top">.NET documentation</a>
+     */
     public void WriteAsync(FixedDocumentSequence fixedDocumentSequence, PrintTicket printTicket, NetObject userSuppliedState) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.NullReferenceException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.UriFormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.io.PathTooLongException, system.DllNotFoundException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -462,6 +1648,50 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
         }
     }
 
+    /**
+     * Invokes the .NET member WriteAsync.
+     *
+     * @param fixedPage the argument of type {@code FixedPage}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsWriterException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.printing.PrintingNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintingCanceledException if the .NET member raises it
+     * @throws system.DllNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.XpsDocumentWriter.WriteAsync" target="_top">.NET documentation</a>
+     */
     public void WriteAsync(FixedPage fixedPage) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.NullReferenceException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.IOException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.FileFormatException, system.FormatException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.UriFormatException, system.OutOfMemoryException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.DllNotFoundException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -472,6 +1702,43 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
         }
     }
 
+    /**
+     * Invokes the .NET member WriteAsync.
+     *
+     * @param fixedPage the argument of type {@code FixedPage}
+     * @param userSuppliedState the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsWriterException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintingCanceledException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.DllNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.XpsDocumentWriter.WriteAsync" target="_top">.NET documentation</a>
+     */
     public void WriteAsync(FixedPage fixedPage, NetObject userSuppliedState) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.NullReferenceException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.UriFormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.io.PathTooLongException, system.DllNotFoundException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -482,6 +1749,51 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
         }
     }
 
+    /**
+     * Invokes the .NET member WriteAsync.
+     *
+     * @param fixedPage the argument of type {@code FixedPage}
+     * @param printTicket the argument of type {@code PrintTicket}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsWriterException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.printing.PrintingNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintingCanceledException if the .NET member raises it
+     * @throws system.DllNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.XpsDocumentWriter.WriteAsync" target="_top">.NET documentation</a>
+     */
     public void WriteAsync(FixedPage fixedPage, PrintTicket printTicket) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.NullReferenceException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.IOException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.FileFormatException, system.FormatException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.UriFormatException, system.OutOfMemoryException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.DllNotFoundException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -492,6 +1804,44 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
         }
     }
 
+    /**
+     * Invokes the .NET member WriteAsync.
+     *
+     * @param fixedPage the argument of type {@code FixedPage}
+     * @param printTicket the argument of type {@code PrintTicket}
+     * @param userSuppliedState the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsWriterException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintingCanceledException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.DllNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.XpsDocumentWriter.WriteAsync" target="_top">.NET documentation</a>
+     */
     public void WriteAsync(FixedPage fixedPage, PrintTicket printTicket, NetObject userSuppliedState) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.NullReferenceException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.UriFormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.io.PathTooLongException, system.DllNotFoundException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -502,6 +1852,50 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
         }
     }
 
+    /**
+     * Invokes the .NET member WriteAsync.
+     *
+     * @param visual the argument of type {@code Visual}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsWriterException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.printing.PrintingNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintingCanceledException if the .NET member raises it
+     * @throws system.DllNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.XpsDocumentWriter.WriteAsync" target="_top">.NET documentation</a>
+     */
     public void WriteAsync(Visual visual) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.NullReferenceException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.IOException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.FileFormatException, system.FormatException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.UriFormatException, system.OutOfMemoryException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.DllNotFoundException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -512,6 +1906,43 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
         }
     }
 
+    /**
+     * Invokes the .NET member WriteAsync.
+     *
+     * @param visual the argument of type {@code Visual}
+     * @param userSuppliedState the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsWriterException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintingCanceledException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.DllNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.XpsDocumentWriter.WriteAsync" target="_top">.NET documentation</a>
+     */
     public void WriteAsync(Visual visual, NetObject userSuppliedState) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.NullReferenceException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.UriFormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.io.PathTooLongException, system.DllNotFoundException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -522,6 +1953,51 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
         }
     }
 
+    /**
+     * Invokes the .NET member WriteAsync.
+     *
+     * @param visual the argument of type {@code Visual}
+     * @param printTicket the argument of type {@code PrintTicket}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsWriterException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.printing.PrintingNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintingCanceledException if the .NET member raises it
+     * @throws system.DllNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.XpsDocumentWriter.WriteAsync" target="_top">.NET documentation</a>
+     */
     public void WriteAsync(Visual visual, PrintTicket printTicket) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.NullReferenceException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.IOException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.FileFormatException, system.FormatException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.UriFormatException, system.OutOfMemoryException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.DllNotFoundException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -532,6 +2008,44 @@ public class XpsDocumentWriter extends system.windows.documents.serialization.Se
         }
     }
 
+    /**
+     * Invokes the .NET member WriteAsync.
+     *
+     * @param visual the argument of type {@code Visual}
+     * @param printTicket the argument of type {@code PrintTicket}
+     * @param userSuppliedState the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsWriterException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintingCanceledException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.DllNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.XpsDocumentWriter.WriteAsync" target="_top">.NET documentation</a>
+     */
     public void WriteAsync(Visual visual, PrintTicket printTicket, NetObject userSuppliedState) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.NullReferenceException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.UriFormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.io.PathTooLongException, system.DllNotFoundException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

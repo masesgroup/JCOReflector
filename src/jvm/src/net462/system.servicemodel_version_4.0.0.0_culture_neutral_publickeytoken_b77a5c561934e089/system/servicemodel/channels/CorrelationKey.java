@@ -103,7 +103,10 @@ public class CorrelationKey extends system.runtime.durableinstancing.InstanceKey
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CorrelationKey(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,27 @@ public class CorrelationKey extends system.runtime.durableinstancing.InstanceKey
     public CorrelationKey() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param keyData the argument of type {@code IDictionary_2}
+     * @param scopeName the argument of type {@code XName}
+     * @param provider the argument of type {@code XNamespace}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.CorrelationKey.-ctor" target="_top">.NET documentation</a>
+     */
     public CorrelationKey(IDictionary_2 keyData, XName scopeName, XNamespace provider) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.OverflowException {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +196,13 @@ public class CorrelationKey extends system.runtime.durableinstancing.InstanceKey
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property KeyData.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.CorrelationKey.KeyData" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 getKeyData() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +218,13 @@ public class CorrelationKey extends system.runtime.durableinstancing.InstanceKey
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeyData.
+     *
+     * @param KeyData the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.CorrelationKey.KeyData" target="_top">.NET documentation</a>
+     */
     public void setKeyData(IDictionary_2 KeyData) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +235,13 @@ public class CorrelationKey extends system.runtime.durableinstancing.InstanceKey
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeyString.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.CorrelationKey.KeyString" target="_top">.NET documentation</a>
+     */
     public java.lang.String getKeyString() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +256,13 @@ public class CorrelationKey extends system.runtime.durableinstancing.InstanceKey
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeyString.
+     *
+     * @param KeyString the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.CorrelationKey.KeyString" target="_top">.NET documentation</a>
+     */
     public void setKeyString(java.lang.String KeyString) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +273,13 @@ public class CorrelationKey extends system.runtime.durableinstancing.InstanceKey
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.CorrelationKey.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +294,28 @@ public class CorrelationKey extends system.runtime.durableinstancing.InstanceKey
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.CorrelationKey.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +326,13 @@ public class CorrelationKey extends system.runtime.durableinstancing.InstanceKey
         }
     }
 
+    /**
+     * Gets the value of the .NET property ScopeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.CorrelationKey.ScopeName" target="_top">.NET documentation</a>
+     */
     public XName getScopeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +348,13 @@ public class CorrelationKey extends system.runtime.durableinstancing.InstanceKey
         }
     }
 
+    /**
+     * Sets the value of the .NET property ScopeName.
+     *
+     * @param ScopeName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.CorrelationKey.ScopeName" target="_top">.NET documentation</a>
+     */
     public void setScopeName(XName ScopeName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +365,13 @@ public class CorrelationKey extends system.runtime.durableinstancing.InstanceKey
         }
     }
 
+    /**
+     * Gets the value of the .NET property Provider.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.CorrelationKey.Provider" target="_top">.NET documentation</a>
+     */
     public XNamespace getProvider() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -285,6 +387,13 @@ public class CorrelationKey extends system.runtime.durableinstancing.InstanceKey
         }
     }
 
+    /**
+     * Sets the value of the .NET property Provider.
+     *
+     * @param Provider the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.CorrelationKey.Provider" target="_top">.NET documentation</a>
+     */
     public void setProvider(XNamespace Provider) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

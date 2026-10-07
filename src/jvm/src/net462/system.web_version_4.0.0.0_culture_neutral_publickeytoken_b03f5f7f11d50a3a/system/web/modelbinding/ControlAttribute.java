@@ -102,7 +102,10 @@ public class ControlAttribute extends system.web.modelbinding.ValueProviderSourc
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ControlAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class ControlAttribute extends system.web.modelbinding.ValueProviderSourc
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ControlAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ControlAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +168,13 @@ public class ControlAttribute extends system.web.modelbinding.ValueProviderSourc
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param controlID the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ControlAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ControlAttribute(java.lang.String controlID) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +185,14 @@ public class ControlAttribute extends system.web.modelbinding.ValueProviderSourc
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param controlID the argument of type {@code java.lang.String}
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ControlAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ControlAttribute(java.lang.String controlID, java.lang.String propertyName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -183,6 +207,13 @@ public class ControlAttribute extends system.web.modelbinding.ValueProviderSourc
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetModelName.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ControlAttribute.GetModelName" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetModelName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +228,20 @@ public class ControlAttribute extends system.web.modelbinding.ValueProviderSourc
         }
     }
 
+    /**
+     * Invokes the .NET member GetValueProvider.
+     *
+     * @param modelBindingExecutionContext the argument of type {@code ModelBindingExecutionContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ControlAttribute.GetValueProvider" target="_top">.NET documentation</a>
+     */
     public IValueProvider GetValueProvider(ModelBindingExecutionContext modelBindingExecutionContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +261,13 @@ public class ControlAttribute extends system.web.modelbinding.ValueProviderSourc
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ControlID.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ControlAttribute.ControlID" target="_top">.NET documentation</a>
+     */
     public java.lang.String getControlID() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +282,13 @@ public class ControlAttribute extends system.web.modelbinding.ValueProviderSourc
         }
     }
 
+    /**
+     * Sets the value of the .NET property ControlID.
+     *
+     * @param ControlID the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ControlAttribute.ControlID" target="_top">.NET documentation</a>
+     */
     public void setControlID(java.lang.String ControlID) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +299,13 @@ public class ControlAttribute extends system.web.modelbinding.ValueProviderSourc
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ControlAttribute.PropertyName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPropertyName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +320,13 @@ public class ControlAttribute extends system.web.modelbinding.ValueProviderSourc
         }
     }
 
+    /**
+     * Sets the value of the .NET property PropertyName.
+     *
+     * @param PropertyName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ControlAttribute.PropertyName" target="_top">.NET documentation</a>
+     */
     public void setPropertyName(java.lang.String PropertyName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

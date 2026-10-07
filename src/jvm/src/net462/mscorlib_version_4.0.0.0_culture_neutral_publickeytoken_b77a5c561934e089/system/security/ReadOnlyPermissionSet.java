@@ -100,7 +100,10 @@ public class ReadOnlyPermissionSet extends system.security.PermissionSet  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ReadOnlyPermissionSet(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,30 @@ public class ReadOnlyPermissionSet extends system.security.PermissionSet  {
     public ReadOnlyPermissionSet() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param permissionSetXml the argument of type {@code SecurityElement}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.reflection.TargetException if the .NET member raises it
+     * @throws system.reflection.TargetParameterCountException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.ReadOnlyPermissionSet.-ctor" target="_top">.NET documentation</a>
+     */
     public ReadOnlyPermissionSet(SecurityElement permissionSetXml) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NullReferenceException, system.security.SecurityException, system.NotImplementedException, system.NotSupportedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +192,26 @@ public class ReadOnlyPermissionSet extends system.security.PermissionSet  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Copy.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.reflection.TargetException if the .NET member raises it
+     * @throws system.reflection.TargetParameterCountException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.ReadOnlyPermissionSet.Copy" target="_top">.NET documentation</a>
+     */
     public PermissionSet Copy() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NullReferenceException, system.security.SecurityException, system.NotSupportedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +227,22 @@ public class ReadOnlyPermissionSet extends system.security.PermissionSet  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToXml.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.ReadOnlyPermissionSet.ToXml" target="_top">.NET documentation</a>
+     */
     public SecurityElement ToXml() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +258,31 @@ public class ReadOnlyPermissionSet extends system.security.PermissionSet  {
         }
     }
 
+    /**
+     * Invokes the .NET member FromXml.
+     *
+     * @param et the argument of type {@code SecurityElement}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.reflection.TargetException if the .NET member raises it
+     * @throws system.reflection.TargetParameterCountException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.ReadOnlyPermissionSet.FromXml" target="_top">.NET documentation</a>
+     */
     public void FromXml(SecurityElement et) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.TypeLoadException, system.security.SecurityException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -103,7 +103,10 @@ public class PermissionSetAttribute extends system.security.permissions.CodeAcce
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PermissionSetAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,13 @@ public class PermissionSetAttribute extends system.security.permissions.CodeAcce
     public PermissionSetAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param action the argument of type {@code SecurityAction}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PermissionSetAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public PermissionSetAttribute(SecurityAction action) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +178,13 @@ public class PermissionSetAttribute extends system.security.permissions.CodeAcce
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreatePermission.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PermissionSetAttribute.CreatePermission" target="_top">.NET documentation</a>
+     */
     public IPermission CreatePermission() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +200,13 @@ public class PermissionSetAttribute extends system.security.permissions.CodeAcce
         }
     }
 
+    /**
+     * Invokes the .NET member CreatePermissionSet.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PermissionSetAttribute.CreatePermissionSet" target="_top">.NET documentation</a>
+     */
     public PermissionSet CreatePermissionSet() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +226,13 @@ public class PermissionSetAttribute extends system.security.permissions.CodeAcce
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property UnicodeEncoded.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PermissionSetAttribute.UnicodeEncoded" target="_top">.NET documentation</a>
+     */
     public boolean getUnicodeEncoded() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +247,13 @@ public class PermissionSetAttribute extends system.security.permissions.CodeAcce
         }
     }
 
+    /**
+     * Sets the value of the .NET property UnicodeEncoded.
+     *
+     * @param UnicodeEncoded the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PermissionSetAttribute.UnicodeEncoded" target="_top">.NET documentation</a>
+     */
     public void setUnicodeEncoded(boolean UnicodeEncoded) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +264,13 @@ public class PermissionSetAttribute extends system.security.permissions.CodeAcce
         }
     }
 
+    /**
+     * Gets the value of the .NET property File.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PermissionSetAttribute.File" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +285,13 @@ public class PermissionSetAttribute extends system.security.permissions.CodeAcce
         }
     }
 
+    /**
+     * Sets the value of the .NET property File.
+     *
+     * @param File the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PermissionSetAttribute.File" target="_top">.NET documentation</a>
+     */
     public void setFile(java.lang.String File) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +302,13 @@ public class PermissionSetAttribute extends system.security.permissions.CodeAcce
         }
     }
 
+    /**
+     * Gets the value of the .NET property Hex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PermissionSetAttribute.Hex" target="_top">.NET documentation</a>
+     */
     public java.lang.String getHex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +323,13 @@ public class PermissionSetAttribute extends system.security.permissions.CodeAcce
         }
     }
 
+    /**
+     * Sets the value of the .NET property Hex.
+     *
+     * @param Hex the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PermissionSetAttribute.Hex" target="_top">.NET documentation</a>
+     */
     public void setHex(java.lang.String Hex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +340,13 @@ public class PermissionSetAttribute extends system.security.permissions.CodeAcce
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PermissionSetAttribute.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +361,13 @@ public class PermissionSetAttribute extends system.security.permissions.CodeAcce
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PermissionSetAttribute.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +378,13 @@ public class PermissionSetAttribute extends system.security.permissions.CodeAcce
         }
     }
 
+    /**
+     * Gets the value of the .NET property XML.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PermissionSetAttribute.XML" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXML() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -312,6 +399,13 @@ public class PermissionSetAttribute extends system.security.permissions.CodeAcce
         }
     }
 
+    /**
+     * Sets the value of the .NET property XML.
+     *
+     * @param XML the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PermissionSetAttribute.XML" target="_top">.NET documentation</a>
+     */
     public void setXML(java.lang.String XML) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

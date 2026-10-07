@@ -117,7 +117,10 @@ public class Enumerable extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Enumerable(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -170,6 +173,26 @@ public class Enumerable extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member All.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param predicate the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.All" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> boolean All(IEnumerable_1 source, Func_2 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -184,6 +207,26 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Any.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param predicate the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Any" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> boolean Any(IEnumerable_1 source, Func_2 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -198,6 +241,24 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Any.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Any" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> boolean Any(IEnumerable_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -212,6 +273,27 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param value the argument of type {@code TSource}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Contains" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> boolean Contains(IEnumerable_1 source, TSource value, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -226,6 +308,25 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param value the argument of type {@code TSource}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Contains" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> boolean Contains(IEnumerable_1 source, TSource value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -240,6 +341,27 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SequenceEqual.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param first the argument of type {@code IEnumerable_1}
+     * @param second the argument of type {@code IEnumerable_1}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.SequenceEqual" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> boolean SequenceEqual(IEnumerable_1 first, IEnumerable_1 second, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -254,6 +376,26 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SequenceEqual.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param first the argument of type {@code IEnumerable_1}
+     * @param second the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.SequenceEqual" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> boolean SequenceEqual(IEnumerable_1 first, IEnumerable_1 second) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -268,6 +410,26 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetNonEnumeratedCount.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param count the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.TryGetNonEnumeratedCount" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> boolean TryGetNonEnumeratedCount(IEnumerable_1 source, JCORefOut<java.util.concurrent.atomic.AtomicInteger> count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -282,6 +444,23 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Average.
+     *
+     * @param source the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Average" target="_top">.NET documentation</a>
+     */
     public static double Average(IEnumerable_1 source) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OverflowException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -322,6 +501,25 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Average.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param selector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Average" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> double Average(IEnumerable_1 source, Func_2 selector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -362,6 +560,22 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Max.
+     *
+     * @param source the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Max" target="_top">.NET documentation</a>
+     */
     public static double Max(IEnumerable_1 source) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -402,6 +616,25 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Max.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param selector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Max" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> double Max(IEnumerable_1 source, Func_2 selector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -442,6 +675,22 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Min.
+     *
+     * @param source the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Min" target="_top">.NET documentation</a>
+     */
     public static double Min(IEnumerable_1 source) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -482,6 +731,25 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Min.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param selector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Min" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> double Min(IEnumerable_1 source, Func_2 selector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -522,6 +790,23 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Sum.
+     *
+     * @param source the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Sum" target="_top">.NET documentation</a>
+     */
     public static double Sum(IEnumerable_1 source) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OverflowException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -562,6 +847,25 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Sum.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param selector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Sum" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> double Sum(IEnumerable_1 source, Func_2 selector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -602,6 +906,26 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Count.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param predicate the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Count" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> int Count(IEnumerable_1 source, Func_2 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -642,6 +966,25 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Count.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Count" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> int Count(IEnumerable_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -682,6 +1025,26 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LongCount.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param predicate the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.LongCount" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> long LongCount(IEnumerable_1 source, Func_2 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -722,6 +1085,25 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LongCount.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.LongCount" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> long LongCount(IEnumerable_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -762,6 +1144,30 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToDictionary.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TElement> the type of the generic argument TElement
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param elementSelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.ToDictionary" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> Dictionary_2 ToDictionary(IEnumerable_1 source, Func_2 keySelector, Func_2 elementSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -777,6 +1183,29 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToDictionary.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TElement> the type of the generic argument TElement
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param elementSelector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.ToDictionary" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> Dictionary_2 ToDictionary(IEnumerable_1 source, Func_2 keySelector, Func_2 elementSelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -792,6 +1221,28 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToDictionary.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.ToDictionary" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> Dictionary_2 ToDictionary(IEnumerable_1 source, Func_2 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -807,6 +1258,27 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToDictionary.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.ToDictionary" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> Dictionary_2 ToDictionary(IEnumerable_1 source, Func_2 keySelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -822,6 +1294,27 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToDictionary.
+     *
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TValue> the type of the generic argument TValue
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.ToDictionary" target="_top">.NET documentation</a>
+     */
     public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> Dictionary_2 ToDictionary(IEnumerable_1 source, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -837,6 +1330,26 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToDictionary.
+     *
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TValue> the type of the generic argument TValue
+     * @param source the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.ToDictionary" target="_top">.NET documentation</a>
+     */
     public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> Dictionary_2 ToDictionary(IEnumerable_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -852,6 +1365,26 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToHashSet.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.ToHashSet" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> HashSet_1 ToHashSet(IEnumerable_1 source, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -867,6 +1400,25 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToHashSet.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.ToHashSet" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> HashSet_1 ToHashSet(IEnumerable_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -882,6 +1434,25 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Range.
+     *
+     * @param start the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Range" target="_top">.NET documentation</a>
+     */
     public static IEnumerable_1 Range(int start, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -897,6 +1468,29 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GroupBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TElement> the type of the generic argument TElement
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param elementSelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.GroupBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> IEnumerable_1 GroupBy(IEnumerable_1 source, Func_2 keySelector, Func_2 elementSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -912,6 +1506,28 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GroupBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TElement> the type of the generic argument TElement
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param elementSelector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.GroupBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> IEnumerable_1 GroupBy(IEnumerable_1 source, Func_2 keySelector, Func_2 elementSelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -927,6 +1543,27 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GroupBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.GroupBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IEnumerable_1 GroupBy(IEnumerable_1 source, Func_2 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -942,6 +1579,26 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GroupBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.GroupBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IEnumerable_1 GroupBy(IEnumerable_1 source, Func_2 keySelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -957,6 +1614,27 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Zip.
+     *
+     * @param <TFirst> the type of the generic argument TFirst
+     * @param <TSecond> the type of the generic argument TSecond
+     * @param first the argument of type {@code IEnumerable_1}
+     * @param second the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Zip" target="_top">.NET documentation</a>
+     */
     public static <TFirst extends IJCOBridgeReflected, TSecond extends IJCOBridgeReflected> IEnumerable_1 Zip(IEnumerable_1 first, IEnumerable_1 second) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -972,6 +1650,29 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Zip.
+     *
+     * @param <TFirst> the type of the generic argument TFirst
+     * @param <TSecond> the type of the generic argument TSecond
+     * @param <TThird> the type of the generic argument TThird
+     * @param first the argument of type {@code IEnumerable_1}
+     * @param second the argument of type {@code IEnumerable_1}
+     * @param third the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Zip" target="_top">.NET documentation</a>
+     */
     public static <TFirst extends IJCOBridgeReflected, TSecond extends IJCOBridgeReflected, TThird extends IJCOBridgeReflected> IEnumerable_1 Zip(IEnumerable_1 first, IEnumerable_1 second, IEnumerable_1 third) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -987,6 +1688,25 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Cast.
+     *
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code IEnumerable}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Cast" target="_top">.NET documentation</a>
+     */
     public static <TResult extends IJCOBridgeReflected> IEnumerable_1 Cast(IEnumerable source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1002,6 +1722,14 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Empty.
+     *
+     * @param <TResult> the type of the generic argument TResult
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Empty" target="_top">.NET documentation</a>
+     */
     public static <TResult extends IJCOBridgeReflected> IEnumerable_1 Empty() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1017,6 +1745,31 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GroupBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TElement> the type of the generic argument TElement
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param elementSelector the argument of type {@code Func_2}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.GroupBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IEnumerable_1 GroupBy(IEnumerable_1 source, Func_2 keySelector, Func_2 elementSelector, Func_3 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1032,6 +1785,30 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GroupBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TElement> the type of the generic argument TElement
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param elementSelector the argument of type {@code Func_2}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.GroupBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IEnumerable_1 GroupBy(IEnumerable_1 source, Func_2 keySelector, Func_2 elementSelector, Func_3 resultSelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1047,6 +1824,29 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GroupBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.GroupBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IEnumerable_1 GroupBy(IEnumerable_1 source, Func_2 keySelector, Func_3 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1062,6 +1862,28 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GroupBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.GroupBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IEnumerable_1 GroupBy(IEnumerable_1 source, Func_2 keySelector, Func_3 resultSelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1077,6 +1899,33 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GroupJoin.
+     *
+     * @param <TOuter> the type of the generic argument TOuter
+     * @param <TInner> the type of the generic argument TInner
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TResult> the type of the generic argument TResult
+     * @param outer the argument of type {@code IEnumerable_1}
+     * @param inner the argument of type {@code IEnumerable_1}
+     * @param outerKeySelector the argument of type {@code Func_2}
+     * @param innerKeySelector the argument of type {@code Func_2}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.GroupJoin" target="_top">.NET documentation</a>
+     */
     public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IEnumerable_1 GroupJoin(IEnumerable_1 outer, IEnumerable_1 inner, Func_2 outerKeySelector, Func_2 innerKeySelector, Func_3 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1092,6 +1941,32 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GroupJoin.
+     *
+     * @param <TOuter> the type of the generic argument TOuter
+     * @param <TInner> the type of the generic argument TInner
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TResult> the type of the generic argument TResult
+     * @param outer the argument of type {@code IEnumerable_1}
+     * @param inner the argument of type {@code IEnumerable_1}
+     * @param outerKeySelector the argument of type {@code Func_2}
+     * @param innerKeySelector the argument of type {@code Func_2}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.GroupJoin" target="_top">.NET documentation</a>
+     */
     public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IEnumerable_1 GroupJoin(IEnumerable_1 outer, IEnumerable_1 inner, Func_2 outerKeySelector, Func_2 innerKeySelector, Func_3 resultSelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1107,6 +1982,33 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Join.
+     *
+     * @param <TOuter> the type of the generic argument TOuter
+     * @param <TInner> the type of the generic argument TInner
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TResult> the type of the generic argument TResult
+     * @param outer the argument of type {@code IEnumerable_1}
+     * @param inner the argument of type {@code IEnumerable_1}
+     * @param outerKeySelector the argument of type {@code Func_2}
+     * @param innerKeySelector the argument of type {@code Func_2}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Join" target="_top">.NET documentation</a>
+     */
     public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IEnumerable_1 Join(IEnumerable_1 outer, IEnumerable_1 inner, Func_2 outerKeySelector, Func_2 innerKeySelector, Func_3 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1122,6 +2024,32 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Join.
+     *
+     * @param <TOuter> the type of the generic argument TOuter
+     * @param <TInner> the type of the generic argument TInner
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TResult> the type of the generic argument TResult
+     * @param outer the argument of type {@code IEnumerable_1}
+     * @param inner the argument of type {@code IEnumerable_1}
+     * @param outerKeySelector the argument of type {@code Func_2}
+     * @param innerKeySelector the argument of type {@code Func_2}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Join" target="_top">.NET documentation</a>
+     */
     public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IEnumerable_1 Join(IEnumerable_1 outer, IEnumerable_1 inner, Func_2 outerKeySelector, Func_2 innerKeySelector, Func_3 resultSelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1137,6 +2065,25 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OfType.
+     *
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code IEnumerable}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.OfType" target="_top">.NET documentation</a>
+     */
     public static <TResult extends IJCOBridgeReflected> IEnumerable_1 OfType(IEnumerable source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1152,6 +2099,26 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Repeat.
+     *
+     * @param <TResult> the type of the generic argument TResult
+     * @param element the argument of type {@code TResult}
+     * @param count the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Repeat" target="_top">.NET documentation</a>
+     */
     public static <TResult extends IJCOBridgeReflected> IEnumerable_1 Repeat(TResult element, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1167,6 +2134,27 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Select.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param selector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Select" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IEnumerable_1 Select(IEnumerable_1 source, Func_2 selector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1182,6 +2170,27 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Select.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param selector the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Select" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IEnumerable_1 Select(IEnumerable_1 source, Func_3 selector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1197,6 +2206,29 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SelectMany.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TCollection> the type of the generic argument TCollection
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param collectionSelector the argument of type {@code Func_2}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.SelectMany" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TCollection extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IEnumerable_1 SelectMany(IEnumerable_1 source, Func_2 collectionSelector, Func_3 resultSelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1212,6 +2244,29 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SelectMany.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TCollection> the type of the generic argument TCollection
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param collectionSelector the argument of type {@code Func_3}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.SelectMany" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TCollection extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IEnumerable_1 SelectMany(IEnumerable_1 source, Func_3 collectionSelector, Func_3 resultSelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1227,6 +2282,27 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SelectMany.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param selector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.SelectMany" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IEnumerable_1 SelectMany(IEnumerable_1 source, Func_2 selector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1242,6 +2318,27 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SelectMany.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param selector the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.SelectMany" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IEnumerable_1 SelectMany(IEnumerable_1 source, Func_3 selector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1257,6 +2354,29 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Zip.
+     *
+     * @param <TFirst> the type of the generic argument TFirst
+     * @param <TSecond> the type of the generic argument TSecond
+     * @param <TResult> the type of the generic argument TResult
+     * @param first the argument of type {@code IEnumerable_1}
+     * @param second the argument of type {@code IEnumerable_1}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Zip" target="_top">.NET documentation</a>
+     */
     public static <TFirst extends IJCOBridgeReflected, TSecond extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IEnumerable_1 Zip(IEnumerable_1 first, IEnumerable_1 second, Func_3 resultSelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1272,6 +2392,26 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Chunk.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param size the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Chunk" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IEnumerable_1 Chunk(IEnumerable_1 source, int size) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1287,6 +2427,26 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Append.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param element the argument of type {@code TSource}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Append" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IEnumerable_1 Append(IEnumerable_1 source, TSource element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1302,6 +2462,15 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsEnumerable.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.AsEnumerable" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IEnumerable_1 AsEnumerable(IEnumerable_1 source) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1317,6 +2486,26 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Concat.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param first the argument of type {@code IEnumerable_1}
+     * @param second the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Concat" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IEnumerable_1 Concat(IEnumerable_1 first, IEnumerable_1 second) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1332,6 +2521,26 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DefaultIfEmpty.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param defaultValue the argument of type {@code TSource}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.DefaultIfEmpty" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IEnumerable_1 DefaultIfEmpty(IEnumerable_1 source, TSource defaultValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1347,6 +2556,24 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DefaultIfEmpty.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.DefaultIfEmpty" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IEnumerable_1 DefaultIfEmpty(IEnumerable_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1362,6 +2589,26 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Distinct.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Distinct" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IEnumerable_1 Distinct(IEnumerable_1 source, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1377,6 +2624,24 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Distinct.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Distinct" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IEnumerable_1 Distinct(IEnumerable_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1392,6 +2657,28 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DistinctBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.DistinctBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IEnumerable_1 DistinctBy(IEnumerable_1 source, Func_2 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1407,6 +2694,26 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DistinctBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.DistinctBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IEnumerable_1 DistinctBy(IEnumerable_1 source, Func_2 keySelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1422,6 +2729,27 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Except.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param first the argument of type {@code IEnumerable_1}
+     * @param second the argument of type {@code IEnumerable_1}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Except" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IEnumerable_1 Except(IEnumerable_1 first, IEnumerable_1 second, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1437,6 +2765,26 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Except.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param first the argument of type {@code IEnumerable_1}
+     * @param second the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Except" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IEnumerable_1 Except(IEnumerable_1 first, IEnumerable_1 second) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1452,6 +2800,29 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExceptBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param first the argument of type {@code IEnumerable_1}
+     * @param second the argument of type {@code IEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.ExceptBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IEnumerable_1 ExceptBy(IEnumerable_1 first, IEnumerable_1 second, Func_2 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1467,6 +2838,27 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExceptBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param first the argument of type {@code IEnumerable_1}
+     * @param second the argument of type {@code IEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.ExceptBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IEnumerable_1 ExceptBy(IEnumerable_1 first, IEnumerable_1 second, Func_2 keySelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1482,6 +2874,27 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Intersect.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param first the argument of type {@code IEnumerable_1}
+     * @param second the argument of type {@code IEnumerable_1}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Intersect" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IEnumerable_1 Intersect(IEnumerable_1 first, IEnumerable_1 second, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1497,6 +2910,25 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Intersect.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param first the argument of type {@code IEnumerable_1}
+     * @param second the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Intersect" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IEnumerable_1 Intersect(IEnumerable_1 first, IEnumerable_1 second) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1512,6 +2944,29 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IntersectBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param first the argument of type {@code IEnumerable_1}
+     * @param second the argument of type {@code IEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.IntersectBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IEnumerable_1 IntersectBy(IEnumerable_1 first, IEnumerable_1 second, Func_2 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1527,6 +2982,27 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IntersectBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param first the argument of type {@code IEnumerable_1}
+     * @param second the argument of type {@code IEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.IntersectBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IEnumerable_1 IntersectBy(IEnumerable_1 first, IEnumerable_1 second, Func_2 keySelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1542,6 +3018,26 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Prepend.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param element the argument of type {@code TSource}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Prepend" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IEnumerable_1 Prepend(IEnumerable_1 source, TSource element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1557,6 +3053,25 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Reverse.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Reverse" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IEnumerable_1 Reverse(IEnumerable_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1572,6 +3087,26 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Skip.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param count the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Skip" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IEnumerable_1 Skip(IEnumerable_1 source, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1587,6 +3122,26 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SkipLast.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param count the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.SkipLast" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IEnumerable_1 SkipLast(IEnumerable_1 source, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1602,6 +3157,26 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SkipWhile.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param predicate the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.SkipWhile" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IEnumerable_1 SkipWhile(IEnumerable_1 source, Func_2 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1617,6 +3192,26 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SkipWhile.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param predicate the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.SkipWhile" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IEnumerable_1 SkipWhile(IEnumerable_1 source, Func_3 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1632,6 +3227,26 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Take.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param count the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Take" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IEnumerable_1 Take(IEnumerable_1 source, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1647,6 +3262,26 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Take.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param range the argument of type {@code Range}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Take" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IEnumerable_1 Take(IEnumerable_1 source, Range range) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1662,6 +3297,26 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TakeLast.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param count the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.TakeLast" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IEnumerable_1 TakeLast(IEnumerable_1 source, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1677,6 +3332,26 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TakeWhile.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param predicate the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.TakeWhile" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IEnumerable_1 TakeWhile(IEnumerable_1 source, Func_2 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1692,6 +3367,26 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TakeWhile.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param predicate the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.TakeWhile" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IEnumerable_1 TakeWhile(IEnumerable_1 source, Func_3 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1707,6 +3402,27 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Union.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param first the argument of type {@code IEnumerable_1}
+     * @param second the argument of type {@code IEnumerable_1}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Union" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IEnumerable_1 Union(IEnumerable_1 first, IEnumerable_1 second, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1722,6 +3438,25 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Union.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param first the argument of type {@code IEnumerable_1}
+     * @param second the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Union" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IEnumerable_1 Union(IEnumerable_1 first, IEnumerable_1 second) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1737,6 +3472,29 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UnionBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param first the argument of type {@code IEnumerable_1}
+     * @param second the argument of type {@code IEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.UnionBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IEnumerable_1 UnionBy(IEnumerable_1 first, IEnumerable_1 second, Func_2 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1752,6 +3510,27 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UnionBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param first the argument of type {@code IEnumerable_1}
+     * @param second the argument of type {@code IEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.UnionBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IEnumerable_1 UnionBy(IEnumerable_1 first, IEnumerable_1 second, Func_2 keySelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1767,6 +3546,26 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Where.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param predicate the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Where" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IEnumerable_1 Where(IEnumerable_1 source, Func_2 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1782,6 +3581,26 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Where.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param predicate the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Where" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IEnumerable_1 Where(IEnumerable_1 source, Func_3 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1797,6 +3616,25 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToList.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.ToList" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> List_1 ToList(IEnumerable_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1812,6 +3650,30 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToLookup.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TElement> the type of the generic argument TElement
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param elementSelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.ToLookup" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> ILookup_2 ToLookup(IEnumerable_1 source, Func_2 keySelector, Func_2 elementSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1827,6 +3689,28 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToLookup.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TElement> the type of the generic argument TElement
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param elementSelector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.ToLookup" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> ILookup_2 ToLookup(IEnumerable_1 source, Func_2 keySelector, Func_2 elementSelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1842,6 +3726,28 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToLookup.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.ToLookup" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> ILookup_2 ToLookup(IEnumerable_1 source, Func_2 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1857,6 +3763,26 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToLookup.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.ToLookup" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> ILookup_2 ToLookup(IEnumerable_1 source, Func_2 keySelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1872,6 +3798,21 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Order.
+     *
+     * @param <T> the type of the generic argument T
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Order" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> IOrderedEnumerable_1 Order(IEnumerable_1 source, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1887,6 +3828,18 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Order.
+     *
+     * @param <T> the type of the generic argument T
+     * @param source the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.Order" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> IOrderedEnumerable_1 Order(IEnumerable_1 source) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1902,6 +3855,21 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OrderDescending.
+     *
+     * @param <T> the type of the generic argument T
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.OrderDescending" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> IOrderedEnumerable_1 OrderDescending(IEnumerable_1 source, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1917,6 +3885,18 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OrderDescending.
+     *
+     * @param <T> the type of the generic argument T
+     * @param source the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.OrderDescending" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> IOrderedEnumerable_1 OrderDescending(IEnumerable_1 source) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1932,6 +3912,27 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OrderBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.OrderBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IOrderedEnumerable_1 OrderBy(IEnumerable_1 source, Func_2 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1947,6 +3948,26 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OrderBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.OrderBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IOrderedEnumerable_1 OrderBy(IEnumerable_1 source, Func_2 keySelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1962,6 +3983,27 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OrderByDescending.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.OrderByDescending" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IOrderedEnumerable_1 OrderByDescending(IEnumerable_1 source, Func_2 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1977,6 +4019,26 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OrderByDescending.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.OrderByDescending" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IOrderedEnumerable_1 OrderByDescending(IEnumerable_1 source, Func_2 keySelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1992,6 +4054,28 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ThenBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IOrderedEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.ThenBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IOrderedEnumerable_1 ThenBy(IOrderedEnumerable_1 source, Func_2 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2007,6 +4091,27 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ThenBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IOrderedEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.ThenBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IOrderedEnumerable_1 ThenBy(IOrderedEnumerable_1 source, Func_2 keySelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2022,6 +4127,28 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ThenByDescending.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IOrderedEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.ThenByDescending" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IOrderedEnumerable_1 ThenByDescending(IOrderedEnumerable_1 source, Func_2 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2037,6 +4164,27 @@ public class Enumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ThenByDescending.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IOrderedEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Enumerable.ThenByDescending" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IOrderedEnumerable_1 ThenByDescending(IOrderedEnumerable_1 source, Func_2 keySelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

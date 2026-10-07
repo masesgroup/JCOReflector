@@ -103,7 +103,10 @@ public class ISessionStateModuleImplementation extends NetObject implements ISes
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ISessionStateModuleImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,14 @@ public class ISessionStateModuleImplementation extends NetObject implements ISes
 
     // Methods section
     
+    /**
+     * Invokes the .NET member ReleaseSessionStateAsync.
+     *
+     * @param context the argument of type {@code HttpContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SessionState.ISessionStateModule.ReleaseSessionStateAsync" target="_top">.NET documentation</a>
+     */
     public Task ReleaseSessionStateAsync(HttpContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -160,6 +171,12 @@ public class ISessionStateModuleImplementation extends NetObject implements ISes
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SessionState.ISessionStateModule.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +187,13 @@ public class ISessionStateModuleImplementation extends NetObject implements ISes
         }
     }
 
+    /**
+     * Invokes the .NET member Init.
+     *
+     * @param context the argument of type {@code HttpApplication}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SessionState.ISessionStateModule.Init" target="_top">.NET documentation</a>
+     */
     public void Init(HttpApplication context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +204,13 @@ public class ISessionStateModuleImplementation extends NetObject implements ISes
         }
     }
 
+    /**
+     * Invokes the .NET member ReleaseSessionState.
+     *
+     * @param context the argument of type {@code HttpContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SessionState.ISessionStateModule.ReleaseSessionState" target="_top">.NET documentation</a>
+     */
     public void ReleaseSessionState(HttpContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

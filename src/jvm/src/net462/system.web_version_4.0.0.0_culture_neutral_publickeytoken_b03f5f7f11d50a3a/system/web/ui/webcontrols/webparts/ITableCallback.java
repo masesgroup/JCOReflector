@@ -53,5 +53,10 @@ import system.collections.ICollectionImplementation;
  * @version 2.0.0.0
  */
 public interface ITableCallback {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param tableData the .NET argument of type {@code System.Collections.ICollection}
+     */
     public void Invoke(ICollection tableData);
 }

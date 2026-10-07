@@ -102,7 +102,10 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public NumberFormatInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class NumberFormatInfo extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public NumberFormatInfo() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,25 @@ public class NumberFormatInfo extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetInstance.
+     *
+     * @param formatProvider the argument of type {@code IFormatProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.GetInstance" target="_top">.NET documentation</a>
+     */
     public static NumberFormatInfo GetInstance(IFormatProvider formatProvider) throws Throwable, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.TypeInitializationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -178,6 +206,23 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReadOnly.
+     *
+     * @param nfi the argument of type {@code NumberFormatInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.ReadOnly" target="_top">.NET documentation</a>
+     */
     public static NumberFormatInfo ReadOnly(NumberFormatInfo nfi) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -193,6 +238,14 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.Clone" target="_top">.NET documentation</a>
+     */
     public NetObject Clone() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +261,14 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFormat.
+     *
+     * @param formatType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.GetFormat" target="_top">.NET documentation</a>
+     */
     public NetObject GetFormat(NetType formatType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +288,13 @@ public class NumberFormatInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsReadOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.IsReadOnly" target="_top">.NET documentation</a>
+     */
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +309,13 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrencyDecimalDigits.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.CurrencyDecimalDigits" target="_top">.NET documentation</a>
+     */
     public int getCurrencyDecimalDigits() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +356,22 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CurrencyDecimalDigits.
+     *
+     * @param CurrencyDecimalDigits the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.CurrencyDecimalDigits" target="_top">.NET documentation</a>
+     */
     public void setCurrencyDecimalDigits(int CurrencyDecimalDigits) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +382,13 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrencyNegativePattern.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.CurrencyNegativePattern" target="_top">.NET documentation</a>
+     */
     public int getCurrencyNegativePattern() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -331,6 +429,22 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CurrencyNegativePattern.
+     *
+     * @param CurrencyNegativePattern the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.CurrencyNegativePattern" target="_top">.NET documentation</a>
+     */
     public void setCurrencyNegativePattern(int CurrencyNegativePattern) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -341,6 +455,13 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrencyPositivePattern.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.CurrencyPositivePattern" target="_top">.NET documentation</a>
+     */
     public int getCurrencyPositivePattern() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -381,6 +502,22 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CurrencyPositivePattern.
+     *
+     * @param CurrencyPositivePattern the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.CurrencyPositivePattern" target="_top">.NET documentation</a>
+     */
     public void setCurrencyPositivePattern(int CurrencyPositivePattern) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -391,6 +528,13 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NumberDecimalDigits.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.NumberDecimalDigits" target="_top">.NET documentation</a>
+     */
     public int getNumberDecimalDigits() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -431,6 +575,22 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NumberDecimalDigits.
+     *
+     * @param NumberDecimalDigits the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.NumberDecimalDigits" target="_top">.NET documentation</a>
+     */
     public void setNumberDecimalDigits(int NumberDecimalDigits) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -441,6 +601,13 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NumberNegativePattern.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.NumberNegativePattern" target="_top">.NET documentation</a>
+     */
     public int getNumberNegativePattern() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -481,6 +648,22 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NumberNegativePattern.
+     *
+     * @param NumberNegativePattern the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.NumberNegativePattern" target="_top">.NET documentation</a>
+     */
     public void setNumberNegativePattern(int NumberNegativePattern) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -491,6 +674,13 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PercentDecimalDigits.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.PercentDecimalDigits" target="_top">.NET documentation</a>
+     */
     public int getPercentDecimalDigits() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -531,6 +721,22 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PercentDecimalDigits.
+     *
+     * @param PercentDecimalDigits the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.PercentDecimalDigits" target="_top">.NET documentation</a>
+     */
     public void setPercentDecimalDigits(int PercentDecimalDigits) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -541,6 +747,13 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PercentNegativePattern.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.PercentNegativePattern" target="_top">.NET documentation</a>
+     */
     public int getPercentNegativePattern() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -581,6 +794,22 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PercentNegativePattern.
+     *
+     * @param PercentNegativePattern the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.PercentNegativePattern" target="_top">.NET documentation</a>
+     */
     public void setPercentNegativePattern(int PercentNegativePattern) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -591,6 +820,13 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PercentPositivePattern.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.PercentPositivePattern" target="_top">.NET documentation</a>
+     */
     public int getPercentPositivePattern() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -631,6 +867,22 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PercentPositivePattern.
+     *
+     * @param PercentPositivePattern the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.PercentPositivePattern" target="_top">.NET documentation</a>
+     */
     public void setPercentPositivePattern(int PercentPositivePattern) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -641,6 +893,14 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrencyGroupSizes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.CurrencyGroupSizes" target="_top">.NET documentation</a>
+     */
     public int[] getCurrencyGroupSizes() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -664,6 +924,22 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CurrencyGroupSizes.
+     *
+     * @param CurrencyGroupSizes the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.CurrencyGroupSizes" target="_top">.NET documentation</a>
+     */
     public void setCurrencyGroupSizes(int[] CurrencyGroupSizes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -674,6 +950,14 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NumberGroupSizes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.NumberGroupSizes" target="_top">.NET documentation</a>
+     */
     public int[] getNumberGroupSizes() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -697,6 +981,22 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NumberGroupSizes.
+     *
+     * @param NumberGroupSizes the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.NumberGroupSizes" target="_top">.NET documentation</a>
+     */
     public void setNumberGroupSizes(int[] NumberGroupSizes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -707,6 +1007,14 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PercentGroupSizes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.PercentGroupSizes" target="_top">.NET documentation</a>
+     */
     public int[] getPercentGroupSizes() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -730,6 +1038,22 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PercentGroupSizes.
+     *
+     * @param PercentGroupSizes the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.PercentGroupSizes" target="_top">.NET documentation</a>
+     */
     public void setPercentGroupSizes(int[] PercentGroupSizes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -740,6 +1064,13 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DigitSubstitution.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.DigitSubstitution" target="_top">.NET documentation</a>
+     */
     public DigitShapes getDigitSubstitution() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -755,6 +1086,22 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DigitSubstitution.
+     *
+     * @param DigitSubstitution the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.DigitSubstitution" target="_top">.NET documentation</a>
+     */
     public void setDigitSubstitution(DigitShapes DigitSubstitution) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -765,6 +1112,24 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.CurrentInfo" target="_top">.NET documentation</a>
+     */
     public static NumberFormatInfo getCurrentInfo() throws Throwable, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.RankException, system.TypeInitializationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -780,6 +1145,21 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InvariantInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.InvariantInfo" target="_top">.NET documentation</a>
+     */
     public static NumberFormatInfo getInvariantInfo() throws Throwable, system.OutOfMemoryException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -795,6 +1175,13 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrencyDecimalSeparator.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.CurrencyDecimalSeparator" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCurrencyDecimalSeparator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -809,6 +1196,22 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CurrencyDecimalSeparator.
+     *
+     * @param CurrencyDecimalSeparator the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.CurrencyDecimalSeparator" target="_top">.NET documentation</a>
+     */
     public void setCurrencyDecimalSeparator(java.lang.String CurrencyDecimalSeparator) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -819,6 +1222,13 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrencyGroupSeparator.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.CurrencyGroupSeparator" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCurrencyGroupSeparator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -833,6 +1243,22 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CurrencyGroupSeparator.
+     *
+     * @param CurrencyGroupSeparator the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.CurrencyGroupSeparator" target="_top">.NET documentation</a>
+     */
     public void setCurrencyGroupSeparator(java.lang.String CurrencyGroupSeparator) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -843,6 +1269,13 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrencySymbol.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.CurrencySymbol" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCurrencySymbol() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -857,6 +1290,22 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CurrencySymbol.
+     *
+     * @param CurrencySymbol the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.CurrencySymbol" target="_top">.NET documentation</a>
+     */
     public void setCurrencySymbol(java.lang.String CurrencySymbol) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -867,6 +1316,13 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NaNSymbol.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.NaNSymbol" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNaNSymbol() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -881,6 +1337,22 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NaNSymbol.
+     *
+     * @param NaNSymbol the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.NaNSymbol" target="_top">.NET documentation</a>
+     */
     public void setNaNSymbol(java.lang.String NaNSymbol) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -891,6 +1363,13 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NegativeInfinitySymbol.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.NegativeInfinitySymbol" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNegativeInfinitySymbol() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -905,6 +1384,22 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NegativeInfinitySymbol.
+     *
+     * @param NegativeInfinitySymbol the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.NegativeInfinitySymbol" target="_top">.NET documentation</a>
+     */
     public void setNegativeInfinitySymbol(java.lang.String NegativeInfinitySymbol) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -915,6 +1410,13 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NegativeSign.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.NegativeSign" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNegativeSign() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -929,6 +1431,23 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NegativeSign.
+     *
+     * @param NegativeSign the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.NegativeSign" target="_top">.NET documentation</a>
+     */
     public void setNegativeSign(java.lang.String NegativeSign) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -939,6 +1458,13 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NumberDecimalSeparator.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.NumberDecimalSeparator" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNumberDecimalSeparator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -953,6 +1479,22 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NumberDecimalSeparator.
+     *
+     * @param NumberDecimalSeparator the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.NumberDecimalSeparator" target="_top">.NET documentation</a>
+     */
     public void setNumberDecimalSeparator(java.lang.String NumberDecimalSeparator) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -963,6 +1505,13 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NumberGroupSeparator.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.NumberGroupSeparator" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNumberGroupSeparator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -977,6 +1526,22 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NumberGroupSeparator.
+     *
+     * @param NumberGroupSeparator the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.NumberGroupSeparator" target="_top">.NET documentation</a>
+     */
     public void setNumberGroupSeparator(java.lang.String NumberGroupSeparator) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -987,6 +1552,13 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PercentDecimalSeparator.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.PercentDecimalSeparator" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPercentDecimalSeparator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1001,6 +1573,22 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PercentDecimalSeparator.
+     *
+     * @param PercentDecimalSeparator the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.PercentDecimalSeparator" target="_top">.NET documentation</a>
+     */
     public void setPercentDecimalSeparator(java.lang.String PercentDecimalSeparator) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1011,6 +1599,13 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PercentGroupSeparator.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.PercentGroupSeparator" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPercentGroupSeparator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1025,6 +1620,22 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PercentGroupSeparator.
+     *
+     * @param PercentGroupSeparator the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.PercentGroupSeparator" target="_top">.NET documentation</a>
+     */
     public void setPercentGroupSeparator(java.lang.String PercentGroupSeparator) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1035,6 +1646,13 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PercentSymbol.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.PercentSymbol" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPercentSymbol() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1049,6 +1667,22 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PercentSymbol.
+     *
+     * @param PercentSymbol the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.PercentSymbol" target="_top">.NET documentation</a>
+     */
     public void setPercentSymbol(java.lang.String PercentSymbol) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1059,6 +1693,13 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PerMilleSymbol.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.PerMilleSymbol" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPerMilleSymbol() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1073,6 +1714,22 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PerMilleSymbol.
+     *
+     * @param PerMilleSymbol the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.PerMilleSymbol" target="_top">.NET documentation</a>
+     */
     public void setPerMilleSymbol(java.lang.String PerMilleSymbol) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1083,6 +1740,13 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PositiveInfinitySymbol.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.PositiveInfinitySymbol" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPositiveInfinitySymbol() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1097,6 +1761,22 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PositiveInfinitySymbol.
+     *
+     * @param PositiveInfinitySymbol the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.PositiveInfinitySymbol" target="_top">.NET documentation</a>
+     */
     public void setPositiveInfinitySymbol(java.lang.String PositiveInfinitySymbol) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1107,6 +1787,13 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PositiveSign.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.PositiveSign" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPositiveSign() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1121,6 +1808,23 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PositiveSign.
+     *
+     * @param PositiveSign the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.PositiveSign" target="_top">.NET documentation</a>
+     */
     public void setPositiveSign(java.lang.String PositiveSign) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1131,6 +1835,14 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NativeDigits.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.NativeDigits" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getNativeDigits() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1154,6 +1866,23 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NativeDigits.
+     *
+     * @param NativeDigits the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.NumberFormatInfo.NativeDigits" target="_top">.NET documentation</a>
+     */
     public void setNativeDigits(java.lang.String[] NativeDigits) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

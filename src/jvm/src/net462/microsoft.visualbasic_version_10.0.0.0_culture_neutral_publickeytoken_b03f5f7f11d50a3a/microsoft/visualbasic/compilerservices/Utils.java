@@ -101,7 +101,10 @@ public class Utils extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Utils(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,28 @@ public class Utils extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CopyArray.
+     *
+     * @param arySrc the argument of type {@code Array}
+     * @param aryDest the argument of type {@code Array}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Utils.CopyArray" target="_top">.NET documentation</a>
+     */
     public static Array CopyArray(Array arySrc, Array aryDest) throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -171,6 +196,26 @@ public class Utils extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetCultureInfo.
+     *
+     * @param Culture the argument of type {@code CultureInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Utils.SetCultureInfo" target="_top">.NET documentation</a>
+     */
     public static NetObject SetCultureInfo(CultureInfo Culture) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -186,6 +231,28 @@ public class Utils extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetResourceString.
+     *
+     * @param ResourceKey the argument of type {@code java.lang.String}
+     * @param Args the argument of type {@code java.lang.String...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Utils.GetResourceString" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetResourceString(java.lang.String ResourceKey, java.lang.String... Args) throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -200,6 +267,28 @@ public class Utils extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetResourceString.
+     *
+     * @param dupParam0 the argument of type {@code java.lang.String}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Utils.GetResourceString" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetResourceString(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -214,6 +303,31 @@ public class Utils extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MethodToString.
+     *
+     * @param Method the argument of type {@code MethodBase}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Utils.MethodToString" target="_top">.NET documentation</a>
+     */
     public static java.lang.String MethodToString(MethodBase Method) throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -228,6 +342,24 @@ public class Utils extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ThrowException.
+     *
+     * @param hr the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Utils.ThrowException" target="_top">.NET documentation</a>
+     */
     public static void ThrowException(int hr) throws Throwable, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

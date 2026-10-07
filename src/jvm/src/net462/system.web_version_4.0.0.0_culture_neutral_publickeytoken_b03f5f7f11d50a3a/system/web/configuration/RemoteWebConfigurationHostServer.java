@@ -98,7 +98,10 @@ public class RemoteWebConfigurationHostServer extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RemoteWebConfigurationHostServer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class RemoteWebConfigurationHostServer extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.RemoteWebConfigurationHostServer.-ctor" target="_top">.NET documentation</a>
+     */
     public RemoteWebConfigurationHostServer() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +168,34 @@ public class RemoteWebConfigurationHostServer extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetData.
+     *
+     * @param fileName the argument of type {@code java.lang.String}
+     * @param getReadTimeOnly the argument of type {@code boolean}
+     * @param readTime the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicLong>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.EndOfStreamException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.RemoteWebConfigurationHostServer.GetData" target="_top">.NET documentation</a>
+     */
     public byte[] GetData(java.lang.String fileName, boolean getReadTimeOnly, JCORefOut<java.util.concurrent.atomic.AtomicLong> readTime) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.io.PathTooLongException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.io.EndOfStreamException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +219,38 @@ public class RemoteWebConfigurationHostServer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DoEncryptOrDecrypt.
+     *
+     * @param doEncrypt the argument of type {@code boolean}
+     * @param xmlString the argument of type {@code java.lang.String}
+     * @param protectionProviderName the argument of type {@code java.lang.String}
+     * @param protectionProviderType the argument of type {@code java.lang.String}
+     * @param paramKeys the argument of type {@code java.lang.String[]}
+     * @param paramValues the argument of type {@code java.lang.String[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.RemoteWebConfigurationHostServer.DoEncryptOrDecrypt" target="_top">.NET documentation</a>
+     */
     public java.lang.String DoEncryptOrDecrypt(boolean doEncrypt, java.lang.String xmlString, java.lang.String protectionProviderName, java.lang.String protectionProviderType, java.lang.String[] paramKeys, java.lang.String[] paramValues) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +265,38 @@ public class RemoteWebConfigurationHostServer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DoEncryptOrDecrypt.
+     *
+     * @param dupParam0 the argument of type {@code boolean}
+     * @param dupParam1 the argument of type {@code java.lang.String}
+     * @param dupParam2 the argument of type {@code java.lang.String}
+     * @param dupParam3 the argument of type {@code java.lang.String}
+     * @param dupParam4 the argument of type {@code JCORefOut}
+     * @param dupParam5 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.RemoteWebConfigurationHostServer.DoEncryptOrDecrypt" target="_top">.NET documentation</a>
+     */
     public java.lang.String DoEncryptOrDecrypt(boolean dupParam0, java.lang.String dupParam1, java.lang.String dupParam2, java.lang.String dupParam3, JCORefOut dupParam4, JCORefOut dupParam5) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +311,29 @@ public class RemoteWebConfigurationHostServer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFilePaths.
+     *
+     * @param webLevelAsInt the argument of type {@code int}
+     * @param path the argument of type {@code java.lang.String}
+     * @param site the argument of type {@code java.lang.String}
+     * @param locationSubPath the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.RemoteWebConfigurationHostServer.GetFilePaths" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetFilePaths(int webLevelAsInt, java.lang.String path, java.lang.String site, java.lang.String locationSubPath) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.SecurityException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.web.HttpException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +348,30 @@ public class RemoteWebConfigurationHostServer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFileDetails.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param exists the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicBoolean>}
+     * @param size the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicLong>}
+     * @param createDate the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicLong>}
+     * @param lastWriteDate the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicLong>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.RemoteWebConfigurationHostServer.GetFileDetails" target="_top">.NET documentation</a>
+     */
     public void GetFileDetails(java.lang.String name, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> exists, JCORefOut<java.util.concurrent.atomic.AtomicLong> size, JCORefOut<java.util.concurrent.atomic.AtomicLong> createDate, JCORefOut<java.util.concurrent.atomic.AtomicLong> lastWriteDate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +382,40 @@ public class RemoteWebConfigurationHostServer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteData.
+     *
+     * @param fileName the argument of type {@code java.lang.String}
+     * @param templateFileName the argument of type {@code java.lang.String}
+     * @param data the argument of type {@code byte[]}
+     * @param readTime the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicLong>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.security.accesscontrol.PrivilegeNotHeldException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidProgramException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.RemoteWebConfigurationHostServer.WriteData" target="_top">.NET documentation</a>
+     */
     public void WriteData(java.lang.String fileName, java.lang.String templateFileName, byte[] data, JCORefOut<java.util.concurrent.atomic.AtomicLong> readTime) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.io.PathTooLongException, system.FormatException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.OverflowException, system.SystemException, system.security.accesscontrol.PrivilegeNotHeldException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.InvalidProgramException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

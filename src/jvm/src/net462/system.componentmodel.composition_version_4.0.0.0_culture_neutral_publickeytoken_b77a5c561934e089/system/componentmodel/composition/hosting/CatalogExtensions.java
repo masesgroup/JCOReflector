@@ -100,7 +100,10 @@ public class CatalogExtensions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CatalogExtensions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,26 @@ public class CatalogExtensions extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateCompositionService.
+     *
+     * @param composablePartCatalog the argument of type {@code ComposablePartCatalog}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.composition.ChangeRejectedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.componentmodel.composition.CompositionException if the .NET member raises it
+     * @throws system.componentmodel.composition.ImportCardinalityMismatchException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.CatalogExtensions.CreateCompositionService" target="_top">.NET documentation</a>
+     */
     public static CompositionService CreateCompositionService(ComposablePartCatalog composablePartCatalog) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.MulticastNotSupportedException, system.componentmodel.composition.ChangeRejectedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.componentmodel.composition.CompositionException, system.componentmodel.composition.ImportCardinalityMismatchException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

@@ -102,7 +102,10 @@ public class RecipientServiceModelSecurityTokenRequirement extends system.servic
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RecipientServiceModelSecurityTokenRequirement(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,19 @@ public class RecipientServiceModelSecurityTokenRequirement extends system.servic
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.RecipientServiceModelSecurityTokenRequirement.-ctor" target="_top">.NET documentation</a>
+     */
     public RecipientServiceModelSecurityTokenRequirement() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +183,24 @@ public class RecipientServiceModelSecurityTokenRequirement extends system.servic
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SuppressAuditFailure.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.RecipientServiceModelSecurityTokenRequirement.SuppressAuditFailure" target="_top">.NET documentation</a>
+     */
     public boolean getSuppressAuditFailure() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +215,13 @@ public class RecipientServiceModelSecurityTokenRequirement extends system.servic
         }
     }
 
+    /**
+     * Sets the value of the .NET property SuppressAuditFailure.
+     *
+     * @param SuppressAuditFailure the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.RecipientServiceModelSecurityTokenRequirement.SuppressAuditFailure" target="_top">.NET documentation</a>
+     */
     public void setSuppressAuditFailure(boolean SuppressAuditFailure) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +232,24 @@ public class RecipientServiceModelSecurityTokenRequirement extends system.servic
         }
     }
 
+    /**
+     * Gets the value of the .NET property MessageAuthenticationAuditLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.RecipientServiceModelSecurityTokenRequirement.MessageAuthenticationAuditLevel" target="_top">.NET documentation</a>
+     */
     public AuditLevel getMessageAuthenticationAuditLevel() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +265,13 @@ public class RecipientServiceModelSecurityTokenRequirement extends system.servic
         }
     }
 
+    /**
+     * Sets the value of the .NET property MessageAuthenticationAuditLevel.
+     *
+     * @param MessageAuthenticationAuditLevel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.RecipientServiceModelSecurityTokenRequirement.MessageAuthenticationAuditLevel" target="_top">.NET documentation</a>
+     */
     public void setMessageAuthenticationAuditLevel(AuditLevel MessageAuthenticationAuditLevel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +282,24 @@ public class RecipientServiceModelSecurityTokenRequirement extends system.servic
         }
     }
 
+    /**
+     * Gets the value of the .NET property AuditLogLocation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.RecipientServiceModelSecurityTokenRequirement.AuditLogLocation" target="_top">.NET documentation</a>
+     */
     public AuditLogLocation getAuditLogLocation() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +315,13 @@ public class RecipientServiceModelSecurityTokenRequirement extends system.servic
         }
     }
 
+    /**
+     * Sets the value of the .NET property AuditLogLocation.
+     *
+     * @param AuditLogLocation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.RecipientServiceModelSecurityTokenRequirement.AuditLogLocation" target="_top">.NET documentation</a>
+     */
     public void setAuditLogLocation(AuditLogLocation AuditLogLocation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +332,24 @@ public class RecipientServiceModelSecurityTokenRequirement extends system.servic
         }
     }
 
+    /**
+     * Gets the value of the .NET property ListenUri.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.RecipientServiceModelSecurityTokenRequirement.ListenUri" target="_top">.NET documentation</a>
+     */
     public Uri getListenUri() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +365,13 @@ public class RecipientServiceModelSecurityTokenRequirement extends system.servic
         }
     }
 
+    /**
+     * Sets the value of the .NET property ListenUri.
+     *
+     * @param ListenUri the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.RecipientServiceModelSecurityTokenRequirement.ListenUri" target="_top">.NET documentation</a>
+     */
     public void setListenUri(Uri ListenUri) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

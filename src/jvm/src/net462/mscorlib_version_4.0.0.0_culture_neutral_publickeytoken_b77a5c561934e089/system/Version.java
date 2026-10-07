@@ -99,7 +99,10 @@ public class Version extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Version(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class Version extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Version.-ctor" target="_top">.NET documentation</a>
+     */
     public Version() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,15 @@ public class Version extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param major the argument of type {@code int}
+     * @param minor the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Version.-ctor" target="_top">.NET documentation</a>
+     */
     public Version(int major, int minor) throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +184,16 @@ public class Version extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param major the argument of type {@code int}
+     * @param minor the argument of type {@code int}
+     * @param build the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Version.-ctor" target="_top">.NET documentation</a>
+     */
     public Version(int major, int minor, int build) throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +204,17 @@ public class Version extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param major the argument of type {@code int}
+     * @param minor the argument of type {@code int}
+     * @param build the argument of type {@code int}
+     * @param revision the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Version.-ctor" target="_top">.NET documentation</a>
+     */
     public Version(int major, int minor, int build, int revision) throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -186,6 +225,18 @@ public class Version extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param version the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Version.-ctor" target="_top">.NET documentation</a>
+     */
     public Version(java.lang.String version) throws Throwable, system.ArgumentNullException, system.FormatException, system.OverflowException, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -200,6 +251,14 @@ public class Version extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param obj the argument of type {@code Version}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Version.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(Version obj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +273,20 @@ public class Version extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryParse.
+     *
+     * @param input the argument of type {@code java.lang.String}
+     * @param result the argument of type {@code JCORefOut<Version>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Version.TryParse" target="_top">.NET documentation</a>
+     */
     public static boolean TryParse(java.lang.String input, JCORefOut<Version> result) throws Throwable, system.ArgumentNullException, system.FormatException, system.OverflowException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -228,6 +301,15 @@ public class Version extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CompareTo.
+     *
+     * @param version the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Version.CompareTo" target="_top">.NET documentation</a>
+     */
     public int CompareTo(NetObject version) throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +350,14 @@ public class Version extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CompareTo.
+     *
+     * @param value the argument of type {@code Version}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Version.CompareTo" target="_top">.NET documentation</a>
+     */
     public int CompareTo(Version value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +398,13 @@ public class Version extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Version.Clone" target="_top">.NET documentation</a>
+     */
     public NetObject Clone() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -323,6 +420,24 @@ public class Version extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToString.
+     *
+     * @param fieldCount the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Version.ToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String ToString(int fieldCount) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -337,6 +452,19 @@ public class Version extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Parse.
+     *
+     * @param input the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Version.Parse" target="_top">.NET documentation</a>
+     */
     public static Version Parse(java.lang.String input) throws Throwable, system.ArgumentNullException, system.FormatException, system.OverflowException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -356,6 +484,13 @@ public class Version extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MajorRevision.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Version.MajorRevision" target="_top">.NET documentation</a>
+     */
     public short getMajorRevision() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -396,6 +531,13 @@ public class Version extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinorRevision.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Version.MinorRevision" target="_top">.NET documentation</a>
+     */
     public short getMinorRevision() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -436,6 +578,13 @@ public class Version extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Build.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Version.Build" target="_top">.NET documentation</a>
+     */
     public int getBuild() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -476,6 +625,13 @@ public class Version extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Major.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Version.Major" target="_top">.NET documentation</a>
+     */
     public int getMajor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -516,6 +672,13 @@ public class Version extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Minor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Version.Minor" target="_top">.NET documentation</a>
+     */
     public int getMinor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -556,6 +719,13 @@ public class Version extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Revision.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Version.Revision" target="_top">.NET documentation</a>
+     */
     public int getRevision() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

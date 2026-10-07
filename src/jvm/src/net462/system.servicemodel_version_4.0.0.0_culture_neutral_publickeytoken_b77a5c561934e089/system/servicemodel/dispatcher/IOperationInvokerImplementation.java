@@ -101,7 +101,10 @@ public class IOperationInvokerImplementation extends NetObject implements IOpera
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IOperationInvokerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,17 @@ public class IOperationInvokerImplementation extends NetObject implements IOpera
 
     // Methods section
     
+    /**
+     * Invokes the .NET member InvokeBegin.
+     *
+     * @param instance the argument of type {@code NetObject}
+     * @param inputs the argument of type {@code NetObject[]}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IOperationInvoker.InvokeBegin" target="_top">.NET documentation</a>
+     */
     public IAsyncResult InvokeBegin(NetObject instance, NetObject[] inputs, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -158,6 +172,16 @@ public class IOperationInvokerImplementation extends NetObject implements IOpera
         }
     }
 
+    /**
+     * Invokes the .NET member Invoke.
+     *
+     * @param instance the argument of type {@code NetObject}
+     * @param inputs the argument of type {@code NetObject[]}
+     * @param outputs the argument of type {@code JCORefOut<NetObject[]>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IOperationInvoker.Invoke" target="_top">.NET documentation</a>
+     */
     public NetObject Invoke(NetObject instance, NetObject[] inputs, JCORefOut<NetObject[]> outputs) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +197,16 @@ public class IOperationInvokerImplementation extends NetObject implements IOpera
         }
     }
 
+    /**
+     * Invokes the .NET member InvokeEnd.
+     *
+     * @param instance the argument of type {@code NetObject}
+     * @param outputs the argument of type {@code JCORefOut<NetObject[]>}
+     * @param result the argument of type {@code IAsyncResult}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IOperationInvoker.InvokeEnd" target="_top">.NET documentation</a>
+     */
     public NetObject InvokeEnd(NetObject instance, JCORefOut<NetObject[]> outputs, IAsyncResult result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +222,13 @@ public class IOperationInvokerImplementation extends NetObject implements IOpera
         }
     }
 
+    /**
+     * Invokes the .NET member AllocateInputs.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IOperationInvoker.AllocateInputs" target="_top">.NET documentation</a>
+     */
     public NetObject[] AllocateInputs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +254,13 @@ public class IOperationInvokerImplementation extends NetObject implements IOpera
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsSynchronous.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IOperationInvoker.IsSynchronous" target="_top">.NET documentation</a>
+     */
     public boolean getIsSynchronous() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

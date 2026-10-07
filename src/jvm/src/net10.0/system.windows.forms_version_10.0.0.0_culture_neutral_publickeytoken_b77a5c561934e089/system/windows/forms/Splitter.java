@@ -111,7 +111,10 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Splitter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,24 @@ public class Splitter extends system.windows.forms.Control  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Splitter.-ctor" target="_top">.NET documentation</a>
+     */
     public Splitter() throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidCastException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +197,13 @@ public class Splitter extends system.windows.forms.Control  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property TabStop.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Splitter.TabStop" target="_top">.NET documentation</a>
+     */
     public boolean getTabStop() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +218,13 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TabStop.
+     *
+     * @param TabStop the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Splitter.TabStop" target="_top">.NET documentation</a>
+     */
     public void setTabStop(boolean TabStop) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +235,13 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinExtra.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Splitter.MinExtra" target="_top">.NET documentation</a>
+     */
     public int getMinExtra() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +282,13 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MinExtra.
+     *
+     * @param MinExtra the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Splitter.MinExtra" target="_top">.NET documentation</a>
+     */
     public void setMinExtra(int MinExtra) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +299,13 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Splitter.MinSize" target="_top">.NET documentation</a>
+     */
     public int getMinSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +346,13 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MinSize.
+     *
+     * @param MinSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Splitter.MinSize" target="_top">.NET documentation</a>
+     */
     public void setMinSize(int MinSize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +363,20 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SplitPosition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Splitter.SplitPosition" target="_top">.NET documentation</a>
+     */
     public int getSplitPosition() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -340,6 +417,27 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SplitPosition.
+     *
+     * @param SplitPosition the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Splitter.SplitPosition" target="_top">.NET documentation</a>
+     */
     public void setSplitPosition(int SplitPosition) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.MulticastNotSupportedException, system.NullReferenceException, system.componentmodel.InvalidAsynchronousStateException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -350,6 +448,13 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BorderStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Splitter.BorderStyle" target="_top">.NET documentation</a>
+     */
     public BorderStyle getBorderStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -365,6 +470,26 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BorderStyle.
+     *
+     * @param BorderStyle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Splitter.BorderStyle" target="_top">.NET documentation</a>
+     */
     public void setBorderStyle(BorderStyle BorderStyle) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.InvalidCastException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -375,6 +500,21 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ImeMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Splitter.ImeMode" target="_top">.NET documentation</a>
+     */
     public ImeMode getImeMode() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -390,6 +530,24 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ImeMode.
+     *
+     * @param ImeMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Splitter.ImeMode" target="_top">.NET documentation</a>
+     */
     public void setImeMode(ImeMode ImeMode) throws Throwable, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidCastException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -405,6 +563,13 @@ public class Splitter extends system.windows.forms.Control  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addBackgroundImageChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addBackgroundImageChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -415,6 +580,13 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeBackgroundImageChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeBackgroundImageChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -425,6 +597,13 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addBackgroundImageLayoutChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addBackgroundImageLayoutChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -435,6 +614,13 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeBackgroundImageLayoutChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeBackgroundImageLayoutChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -445,6 +631,13 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addEnter.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addEnter(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -455,6 +648,13 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeEnter.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeEnter(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -465,6 +665,13 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addFontChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addFontChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -475,6 +682,13 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeFontChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeFontChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -485,6 +699,13 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addForeColorChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addForeColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -495,6 +716,13 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeForeColorChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeForeColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -505,6 +733,13 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addImeModeChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addImeModeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -515,6 +750,13 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeImeModeChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeImeModeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -525,6 +767,13 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addLeave.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addLeave(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -535,6 +784,13 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeLeave.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeLeave(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -545,6 +801,13 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addTabStopChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addTabStopChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -555,6 +818,13 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeTabStopChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeTabStopChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -565,6 +835,13 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addTextChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -575,6 +852,13 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeTextChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -585,6 +869,13 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addKeyDown.
+     *
+     * @param handler the argument of type {@code KeyEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addKeyDown(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -595,6 +886,13 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeKeyDown.
+     *
+     * @param handler the argument of type {@code KeyEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeKeyDown(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -605,6 +903,13 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addKeyUp.
+     *
+     * @param handler the argument of type {@code KeyEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addKeyUp(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -615,6 +920,13 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeKeyUp.
+     *
+     * @param handler the argument of type {@code KeyEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeKeyUp(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -625,6 +937,13 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addKeyPress.
+     *
+     * @param handler the argument of type {@code KeyPressEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addKeyPress(KeyPressEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -635,6 +954,13 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeKeyPress.
+     *
+     * @param handler the argument of type {@code KeyPressEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeKeyPress(KeyPressEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -645,6 +971,13 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addSplitterMoved.
+     *
+     * @param handler the argument of type {@code SplitterEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addSplitterMoved(SplitterEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -655,6 +988,13 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeSplitterMoved.
+     *
+     * @param handler the argument of type {@code SplitterEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeSplitterMoved(SplitterEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -665,6 +1005,13 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member addSplitterMoving.
+     *
+     * @param handler the argument of type {@code SplitterEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addSplitterMoving(SplitterEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -675,6 +1022,13 @@ public class Splitter extends system.windows.forms.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeSplitterMoving.
+     *
+     * @param handler the argument of type {@code SplitterEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeSplitterMoving(SplitterEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

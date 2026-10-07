@@ -99,7 +99,10 @@ public class XamlObjectReaderSettings extends system.xaml.XamlReaderSettings  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XamlObjectReaderSettings(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class XamlObjectReaderSettings extends system.xaml.XamlReaderSettings  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectReaderSettings.-ctor" target="_top">.NET documentation</a>
+     */
     public XamlObjectReaderSettings() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class XamlObjectReaderSettings extends system.xaml.XamlReaderSettings  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RequireExplicitContentVisibility.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectReaderSettings.RequireExplicitContentVisibility" target="_top">.NET documentation</a>
+     */
     public boolean getRequireExplicitContentVisibility() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +194,13 @@ public class XamlObjectReaderSettings extends system.xaml.XamlReaderSettings  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RequireExplicitContentVisibility.
+     *
+     * @param RequireExplicitContentVisibility the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectReaderSettings.RequireExplicitContentVisibility" target="_top">.NET documentation</a>
+     */
     public void setRequireExplicitContentVisibility(boolean RequireExplicitContentVisibility) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

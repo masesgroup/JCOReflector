@@ -102,7 +102,10 @@ public class IRouteConstraintImplementation extends NetObject implements IRouteC
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IRouteConstraintImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,18 @@ public class IRouteConstraintImplementation extends NetObject implements IRouteC
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Match.
+     *
+     * @param httpContext the argument of type {@code HttpContextBase}
+     * @param route the argument of type {@code Route}
+     * @param parameterName the argument of type {@code java.lang.String}
+     * @param values the argument of type {@code RouteValueDictionary}
+     * @param routeDirection the argument of type {@code RouteDirection}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Routing.IRouteConstraint.Match" target="_top">.NET documentation</a>
+     */
     public boolean Match(HttpContextBase httpContext, Route route, java.lang.String parameterName, RouteValueDictionary values, RouteDirection routeDirection) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

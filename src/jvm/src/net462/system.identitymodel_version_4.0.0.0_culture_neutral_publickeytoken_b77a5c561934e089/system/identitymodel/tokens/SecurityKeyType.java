@@ -114,7 +114,9 @@ public class SecurityKeyType extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public SecurityKeyType(java.lang.Object instance) {
         super(instance);

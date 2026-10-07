@@ -98,7 +98,10 @@ public class IProcessInitializerImplementation extends NetObject implements IPro
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IProcessInitializerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,12 @@ public class IProcessInitializerImplementation extends NetObject implements IPro
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Shutdown.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.IProcessInitializer.Shutdown" target="_top">.NET documentation</a>
+     */
     public void Shutdown() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -150,6 +159,13 @@ public class IProcessInitializerImplementation extends NetObject implements IPro
         }
     }
 
+    /**
+     * Invokes the .NET member Startup.
+     *
+     * @param punkProcessControl the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.IProcessInitializer.Startup" target="_top">.NET documentation</a>
+     */
     public void Startup(NetObject punkProcessControl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

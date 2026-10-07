@@ -99,7 +99,10 @@ public class TrackingParticipant extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TrackingParticipant(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,13 @@ public class TrackingParticipant extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property TrackingProfile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.TrackingParticipant.TrackingProfile" target="_top">.NET documentation</a>
+     */
     public TrackingProfile getTrackingProfile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +181,13 @@ public class TrackingParticipant extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TrackingProfile.
+     *
+     * @param TrackingProfile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.TrackingParticipant.TrackingProfile" target="_top">.NET documentation</a>
+     */
     public void setTrackingProfile(TrackingProfile TrackingProfile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class FaultDescription extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FaultDescription(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,24 @@ public class FaultDescription extends NetObject  {
     public FaultDescription() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param action the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.FaultDescription.-ctor" target="_top">.NET documentation</a>
+     */
     public FaultDescription(java.lang.String action) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +185,13 @@ public class FaultDescription extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ShouldSerializeProtectionLevel.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.FaultDescription.ShouldSerializeProtectionLevel" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeProtectionLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +210,13 @@ public class FaultDescription extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HasProtectionLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.FaultDescription.HasProtectionLevel" target="_top">.NET documentation</a>
+     */
     public boolean getHasProtectionLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +231,13 @@ public class FaultDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProtectionLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.FaultDescription.ProtectionLevel" target="_top">.NET documentation</a>
+     */
     public ProtectionLevel getProtectionLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +253,24 @@ public class FaultDescription extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProtectionLevel.
+     *
+     * @param ProtectionLevel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.FaultDescription.ProtectionLevel" target="_top">.NET documentation</a>
+     */
     public void setProtectionLevel(ProtectionLevel ProtectionLevel) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +281,13 @@ public class FaultDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Action.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.FaultDescription.Action" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +302,13 @@ public class FaultDescription extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Action.
+     *
+     * @param Action the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.FaultDescription.Action" target="_top">.NET documentation</a>
+     */
     public void setAction(java.lang.String Action) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +319,21 @@ public class FaultDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.FaultDescription.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +348,23 @@ public class FaultDescription extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.FaultDescription.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +375,13 @@ public class FaultDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Namespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.FaultDescription.Namespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +396,13 @@ public class FaultDescription extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Namespace.
+     *
+     * @param Namespace the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.FaultDescription.Namespace" target="_top">.NET documentation</a>
+     */
     public void setNamespace(java.lang.String Namespace) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +413,13 @@ public class FaultDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DetailType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.FaultDescription.DetailType" target="_top">.NET documentation</a>
+     */
     public NetType getDetailType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +435,13 @@ public class FaultDescription extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DetailType.
+     *
+     * @param DetailType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.FaultDescription.DetailType" target="_top">.NET documentation</a>
+     */
     public void setDetailType(NetType DetailType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

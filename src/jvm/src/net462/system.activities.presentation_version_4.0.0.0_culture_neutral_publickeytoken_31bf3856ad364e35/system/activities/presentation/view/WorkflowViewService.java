@@ -103,7 +103,10 @@ public class WorkflowViewService extends system.activities.presentation.services
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WorkflowViewService(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,13 @@ public class WorkflowViewService extends system.activities.presentation.services
     public WorkflowViewService() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param context the argument of type {@code EditingContext}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.WorkflowViewService.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowViewService(EditingContext context) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +178,22 @@ public class WorkflowViewService extends system.activities.presentation.services
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetModel.
+     *
+     * @param view the argument of type {@code DependencyObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.WorkflowViewService.GetModel" target="_top">.NET documentation</a>
+     */
     public ModelItem GetModel(DependencyObject view) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +209,28 @@ public class WorkflowViewService extends system.activities.presentation.services
         }
     }
 
+    /**
+     * Invokes the .NET member GetViewElement.
+     *
+     * @param modelItem the argument of type {@code ModelItem}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.WorkflowViewService.GetViewElement" target="_top">.NET documentation</a>
+     */
     public WorkflowViewElement GetViewElement(ModelItem modelItem) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.TypeLoadException, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +246,28 @@ public class WorkflowViewService extends system.activities.presentation.services
         }
     }
 
+    /**
+     * Invokes the .NET member GetView.
+     *
+     * @param model the argument of type {@code ModelItem}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.WorkflowViewService.GetView" target="_top">.NET documentation</a>
+     */
     public DependencyObject GetView(ModelItem model) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.TypeLoadException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

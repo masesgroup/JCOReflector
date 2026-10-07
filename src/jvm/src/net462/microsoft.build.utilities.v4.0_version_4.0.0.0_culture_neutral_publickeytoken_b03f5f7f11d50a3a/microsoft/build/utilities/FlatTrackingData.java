@@ -111,7 +111,10 @@ public class FlatTrackingData extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FlatTrackingData(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -161,6 +164,30 @@ public class FlatTrackingData extends NetObject  {
     public FlatTrackingData() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param ownerTask the argument of type {@code ITask}
+     * @param tlogFiles the argument of type {@code ITaskItem[]}
+     * @param skipMissingFiles the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.-ctor" target="_top">.NET documentation</a>
+     */
     public FlatTrackingData(ITask ownerTask, ITaskItem[] tlogFiles, boolean skipMissingFiles) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.io.PathTooLongException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.OverflowException, system.RankException, system.collections.generic.KeyNotFoundException, system.io.IOException {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +198,30 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param ownerTask the argument of type {@code ITask}
+     * @param tlogFiles the argument of type {@code ITaskItem[]}
+     * @param missingFileTimeUtc the argument of type {@code DateTime}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.-ctor" target="_top">.NET documentation</a>
+     */
     public FlatTrackingData(ITask ownerTask, ITaskItem[] tlogFiles, DateTime missingFileTimeUtc) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.io.PathTooLongException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.OverflowException, system.RankException, system.collections.generic.KeyNotFoundException, system.io.IOException {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +232,29 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param tlogFiles the argument of type {@code ITaskItem[]}
+     * @param skipMissingFiles the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.-ctor" target="_top">.NET documentation</a>
+     */
     public FlatTrackingData(ITaskItem[] tlogFiles, boolean skipMissingFiles) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.io.PathTooLongException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.OverflowException, system.RankException, system.collections.generic.KeyNotFoundException, system.io.IOException {
         try {
             // add reference to assemblyName.dll file
@@ -191,6 +265,30 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param tlogFiles the argument of type {@code ITaskItem[]}
+     * @param tlogFilesToIgnore the argument of type {@code ITaskItem[]}
+     * @param missingFileTimeUtc the argument of type {@code DateTime}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.-ctor" target="_top">.NET documentation</a>
+     */
     public FlatTrackingData(ITaskItem[] tlogFiles, ITaskItem[] tlogFilesToIgnore, DateTime missingFileTimeUtc) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.io.PathTooLongException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.OverflowException, system.RankException, system.collections.generic.KeyNotFoundException, system.io.IOException {
         try {
             // add reference to assemblyName.dll file
@@ -201,6 +299,32 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param tlogFiles the argument of type {@code ITaskItem[]}
+     * @param tlogFilesToIgnore the argument of type {@code ITaskItem[]}
+     * @param missingFileTimeUtc the argument of type {@code DateTime}
+     * @param excludedInputPaths the argument of type {@code java.lang.String[]}
+     * @param sharedLastWriteTimeUtcCache the argument of type {@code IDictionary_2}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.-ctor" target="_top">.NET documentation</a>
+     */
     public FlatTrackingData(ITaskItem[] tlogFiles, ITaskItem[] tlogFilesToIgnore, DateTime missingFileTimeUtc, java.lang.String[] excludedInputPaths, IDictionary_2 sharedLastWriteTimeUtcCache) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.io.PathTooLongException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.OverflowException, system.RankException, system.collections.generic.KeyNotFoundException, system.io.IOException {
         try {
             // add reference to assemblyName.dll file
@@ -211,6 +335,29 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param tlogFiles the argument of type {@code ITaskItem[]}
+     * @param missingFileTimeUtc the argument of type {@code DateTime}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.-ctor" target="_top">.NET documentation</a>
+     */
     public FlatTrackingData(ITaskItem[] tlogFiles, DateTime missingFileTimeUtc) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.io.PathTooLongException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.OverflowException, system.RankException, system.collections.generic.KeyNotFoundException, system.io.IOException {
         try {
             // add reference to assemblyName.dll file
@@ -226,6 +373,22 @@ public class FlatTrackingData extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member FileIsExcludedFromDependencyCheck.
+     *
+     * @param fileName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.FileIsExcludedFromDependencyCheck" target="_top">.NET documentation</a>
+     */
     public boolean FileIsExcludedFromDependencyCheck(java.lang.String fileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +403,32 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsUpToDate.
+     *
+     * @param hostTask the argument of type {@code Task}
+     * @param upToDateCheckType the argument of type {@code UpToDateCheckType}
+     * @param readTLogNames the argument of type {@code ITaskItem[]}
+     * @param writeTLogNames the argument of type {@code ITaskItem[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.IsUpToDate" target="_top">.NET documentation</a>
+     */
     public static boolean IsUpToDate(Task hostTask, UpToDateCheckType upToDateCheckType, ITaskItem[] readTLogNames, ITaskItem[] writeTLogNames) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.OverflowException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -254,6 +443,25 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsUpToDate.
+     *
+     * @param Log the argument of type {@code TaskLoggingHelper}
+     * @param upToDateCheckType the argument of type {@code UpToDateCheckType}
+     * @param inputs the argument of type {@code FlatTrackingData}
+     * @param outputs the argument of type {@code FlatTrackingData}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.IsUpToDate" target="_top">.NET documentation</a>
+     */
     public static boolean IsUpToDate(TaskLoggingHelper Log, UpToDateCheckType upToDateCheckType, FlatTrackingData inputs, FlatTrackingData outputs) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.OverflowException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -268,6 +476,16 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetLastWriteTimeUtc.
+     *
+     * @param file the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.GetLastWriteTimeUtc" target="_top">.NET documentation</a>
+     */
     public DateTime GetLastWriteTimeUtc(java.lang.String file) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +501,31 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FinalizeTLogs.
+     *
+     * @param trackedOperationsSucceeded the argument of type {@code boolean}
+     * @param readTLogNames the argument of type {@code ITaskItem[]}
+     * @param writeTLogNames the argument of type {@code ITaskItem[]}
+     * @param trackedFilesToRemoveFromTLogs the argument of type {@code ITaskItem[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.FinalizeTLogs" target="_top">.NET documentation</a>
+     */
     public static void FinalizeTLogs(boolean trackedOperationsSucceeded, ITaskItem[] readTLogNames, ITaskItem[] writeTLogNames, ITaskItem[] trackedFilesToRemoveFromTLogs) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.OverflowException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -293,6 +536,31 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SaveTlog.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.SaveTlog" target="_top">.NET documentation</a>
+     */
     public void SaveTlog() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.RankException, system.InvalidOperationException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +571,32 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SaveTlog.
+     *
+     * @param includeInTLog the argument of type {@code DependencyFilter}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.SaveTlog" target="_top">.NET documentation</a>
+     */
     public void SaveTlog(DependencyFilter includeInTLog) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.RankException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -313,6 +607,21 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UpdateFileEntryDetails.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.UpdateFileEntryDetails" target="_top">.NET documentation</a>
+     */
     public void UpdateFileEntryDetails() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidTimeZoneException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -327,6 +636,13 @@ public class FlatTrackingData extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SkipMissingFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.SkipMissingFiles" target="_top">.NET documentation</a>
+     */
     public boolean getSkipMissingFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -341,6 +657,13 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SkipMissingFiles.
+     *
+     * @param SkipMissingFiles the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.SkipMissingFiles" target="_top">.NET documentation</a>
+     */
     public void setSkipMissingFiles(boolean SkipMissingFiles) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -351,6 +674,13 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TlogsAvailable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.TlogsAvailable" target="_top">.NET documentation</a>
+     */
     public boolean getTlogsAvailable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -365,6 +695,13 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TlogsAvailable.
+     *
+     * @param TlogsAvailable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.TlogsAvailable" target="_top">.NET documentation</a>
+     */
     public void setTlogsAvailable(boolean TlogsAvailable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -375,6 +712,13 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TreatRootMarkersAsEntries.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.TreatRootMarkersAsEntries" target="_top">.NET documentation</a>
+     */
     public boolean getTreatRootMarkersAsEntries() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -389,6 +733,13 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TreatRootMarkersAsEntries.
+     *
+     * @param TreatRootMarkersAsEntries the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.TreatRootMarkersAsEntries" target="_top">.NET documentation</a>
+     */
     public void setTreatRootMarkersAsEntries(boolean TreatRootMarkersAsEntries) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -399,6 +750,13 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TlogFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.TlogFiles" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getTlogFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -420,6 +778,13 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TlogFiles.
+     *
+     * @param TlogFiles the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.TlogFiles" target="_top">.NET documentation</a>
+     */
     public void setTlogFiles(ITaskItem[] TlogFiles) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -430,6 +795,13 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DependencyTable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.DependencyTable" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 getDependencyTable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -445,6 +817,13 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MissingFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.MissingFiles" target="_top">.NET documentation</a>
+     */
     public List_1 getMissingFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -460,6 +839,13 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MissingFiles.
+     *
+     * @param MissingFiles the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.MissingFiles" target="_top">.NET documentation</a>
+     */
     public void setMissingFiles(List_1 MissingFiles) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -470,6 +856,18 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NewestFileTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.NewestFileTime" target="_top">.NET documentation</a>
+     */
     public DateTime getNewestFileTime() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -485,6 +883,22 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NewestFileTime.
+     *
+     * @param NewestFileTime the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.NewestFileTime" target="_top">.NET documentation</a>
+     */
     public void setNewestFileTime(DateTime NewestFileTime) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -495,6 +909,13 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NewestFileTimeUtc.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.NewestFileTimeUtc" target="_top">.NET documentation</a>
+     */
     public DateTime getNewestFileTimeUtc() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -510,6 +931,22 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NewestFileTimeUtc.
+     *
+     * @param NewestFileTimeUtc the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.NewestFileTimeUtc" target="_top">.NET documentation</a>
+     */
     public void setNewestFileTimeUtc(DateTime NewestFileTimeUtc) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -520,6 +957,18 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NewestTLogTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.NewestTLogTime" target="_top">.NET documentation</a>
+     */
     public DateTime getNewestTLogTime() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -535,6 +984,22 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NewestTLogTime.
+     *
+     * @param NewestTLogTime the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.NewestTLogTime" target="_top">.NET documentation</a>
+     */
     public void setNewestTLogTime(DateTime NewestTLogTime) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -545,6 +1010,13 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NewestTLogTimeUtc.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.NewestTLogTimeUtc" target="_top">.NET documentation</a>
+     */
     public DateTime getNewestTLogTimeUtc() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -560,6 +1032,22 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NewestTLogTimeUtc.
+     *
+     * @param NewestTLogTimeUtc the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.NewestTLogTimeUtc" target="_top">.NET documentation</a>
+     */
     public void setNewestTLogTimeUtc(DateTime NewestTLogTimeUtc) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -570,6 +1058,18 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OldestFileTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.OldestFileTime" target="_top">.NET documentation</a>
+     */
     public DateTime getOldestFileTime() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -585,6 +1085,22 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OldestFileTime.
+     *
+     * @param OldestFileTime the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.OldestFileTime" target="_top">.NET documentation</a>
+     */
     public void setOldestFileTime(DateTime OldestFileTime) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -595,6 +1111,13 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OldestFileTimeUtc.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.OldestFileTimeUtc" target="_top">.NET documentation</a>
+     */
     public DateTime getOldestFileTimeUtc() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -610,6 +1133,22 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OldestFileTimeUtc.
+     *
+     * @param OldestFileTimeUtc the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.OldestFileTimeUtc" target="_top">.NET documentation</a>
+     */
     public void setOldestFileTimeUtc(DateTime OldestFileTimeUtc) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -620,6 +1159,13 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NewestFileName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.NewestFileName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNewestFileName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -634,6 +1180,13 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NewestFileName.
+     *
+     * @param NewestFileName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.NewestFileName" target="_top">.NET documentation</a>
+     */
     public void setNewestFileName(java.lang.String NewestFileName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -644,6 +1197,13 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NewestTLogFileName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.NewestTLogFileName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNewestTLogFileName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -658,6 +1218,13 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NewestTLogFileName.
+     *
+     * @param NewestTLogFileName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.NewestTLogFileName" target="_top">.NET documentation</a>
+     */
     public void setNewestTLogFileName(java.lang.String NewestTLogFileName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -668,6 +1235,13 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OldestFileName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.OldestFileName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getOldestFileName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -682,6 +1256,13 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OldestFileName.
+     *
+     * @param OldestFileName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.FlatTrackingData.OldestFileName" target="_top">.NET documentation</a>
+     */
     public void setOldestFileName(java.lang.String OldestFileName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

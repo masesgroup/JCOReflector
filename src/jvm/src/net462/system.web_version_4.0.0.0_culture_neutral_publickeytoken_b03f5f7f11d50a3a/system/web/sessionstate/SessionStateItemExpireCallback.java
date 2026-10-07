@@ -157,7 +157,10 @@ public class SessionStateItemExpireCallback extends JCVoidDelegate implements IJ
         callerInstance = instance;
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SessionStateItemExpireCallback(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
@@ -179,6 +182,14 @@ public class SessionStateItemExpireCallback extends JCVoidDelegate implements IJ
         return JCOBridgeInstance.translateException(ne);
     }
 
+    /**
+     * Invokes the .NET member DynamicInvoke.
+     *
+     * @param id the argument of type {@code java.lang.String}
+     * @param item the argument of type {@code SessionStateStoreData}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Delegate.DynamicInvoke" target="_top">.NET documentation</a>
+     */
     public void DynamicInvoke(java.lang.String id, SessionStateStoreData item) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,7 +201,10 @@ public class SessionStateItemExpireCallback extends JCVoidDelegate implements IJ
     }
 
     /**
-     * Methods invoked in JVM when an event is raised in CLR 
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param id the .NET argument of type {@code System.String}
+     * @param item the .NET argument of type {@code System.Web.SessionState.SessionStateStoreData}
      */
     public void Invoke(java.lang.String id, SessionStateStoreData item) {
     }

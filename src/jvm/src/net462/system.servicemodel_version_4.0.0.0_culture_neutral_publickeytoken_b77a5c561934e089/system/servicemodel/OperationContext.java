@@ -115,7 +115,10 @@ public class OperationContext extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public OperationContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -165,6 +168,24 @@ public class OperationContext extends NetObject  {
     public OperationContext() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param channel the argument of type {@code IContextChannel}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.OperationContext.-ctor" target="_top">.NET documentation</a>
+     */
     public OperationContext(IContextChannel channel) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +201,29 @@ public class OperationContext extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member SetTransactionComplete.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.transactions.TransactionException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.OperationContext.SetTransactionComplete" target="_top">.NET documentation</a>
+     */
     public void SetTransactionComplete() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.transactions.TransactionException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +238,24 @@ public class OperationContext extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HasSupportingTokens.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.OperationContext.HasSupportingTokens" target="_top">.NET documentation</a>
+     */
     public boolean getHasSupportingTokens() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +270,13 @@ public class OperationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsUserContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.OperationContext.IsUserContext" target="_top">.NET documentation</a>
+     */
     public boolean getIsUserContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +291,24 @@ public class OperationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportingTokens.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.OperationContext.SupportingTokens" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getSupportingTokens() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +324,13 @@ public class OperationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClaimsPrincipal.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.OperationContext.ClaimsPrincipal" target="_top">.NET documentation</a>
+     */
     public ClaimsPrincipal getClaimsPrincipal() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +346,13 @@ public class OperationContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ClaimsPrincipal.
+     *
+     * @param ClaimsPrincipal the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.OperationContext.ClaimsPrincipal" target="_top">.NET documentation</a>
+     */
     public void setClaimsPrincipal(ClaimsPrincipal ClaimsPrincipal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +363,13 @@ public class OperationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IncomingMessageHeaders.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.OperationContext.IncomingMessageHeaders" target="_top">.NET documentation</a>
+     */
     public MessageHeaders getIncomingMessageHeaders() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +385,21 @@ public class OperationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OutgoingMessageHeaders.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.OperationContext.OutgoingMessageHeaders" target="_top">.NET documentation</a>
+     */
     public MessageHeaders getOutgoingMessageHeaders() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +415,13 @@ public class OperationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IncomingMessageProperties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.OperationContext.IncomingMessageProperties" target="_top">.NET documentation</a>
+     */
     public MessageProperties getIncomingMessageProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -307,6 +437,13 @@ public class OperationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OutgoingMessageProperties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.OperationContext.OutgoingMessageProperties" target="_top">.NET documentation</a>
+     */
     public MessageProperties getOutgoingMessageProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -322,6 +459,13 @@ public class OperationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IncomingMessageVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.OperationContext.IncomingMessageVersion" target="_top">.NET documentation</a>
+     */
     public MessageVersion getIncomingMessageVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -337,6 +481,13 @@ public class OperationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequestContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.OperationContext.RequestContext" target="_top">.NET documentation</a>
+     */
     public RequestContext getRequestContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -352,6 +503,13 @@ public class OperationContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RequestContext.
+     *
+     * @param RequestContext the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.OperationContext.RequestContext" target="_top">.NET documentation</a>
+     */
     public void setRequestContext(RequestContext RequestContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -362,6 +520,13 @@ public class OperationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EndpointDispatcher.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.OperationContext.EndpointDispatcher" target="_top">.NET documentation</a>
+     */
     public EndpointDispatcher getEndpointDispatcher() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -377,6 +542,13 @@ public class OperationContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EndpointDispatcher.
+     *
+     * @param EndpointDispatcher the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.OperationContext.EndpointDispatcher" target="_top">.NET documentation</a>
+     */
     public void setEndpointDispatcher(EndpointDispatcher EndpointDispatcher) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -387,6 +559,13 @@ public class OperationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Channel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.OperationContext.Channel" target="_top">.NET documentation</a>
+     */
     public IContextChannel getChannel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -402,6 +581,25 @@ public class OperationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Extensions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.OperationContext.Extensions" target="_top">.NET documentation</a>
+     */
     public IExtensionCollection_1 getExtensions() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -417,6 +615,13 @@ public class OperationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.OperationContext.InstanceContext" target="_top">.NET documentation</a>
+     */
     public InstanceContext getInstanceContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -432,6 +637,20 @@ public class OperationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Current.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.OperationContext.Current" target="_top">.NET documentation</a>
+     */
     public static OperationContext getCurrent() throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -447,6 +666,23 @@ public class OperationContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Current.
+     *
+     * @param Current the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.OperationContext.Current" target="_top">.NET documentation</a>
+     */
     public static void setCurrent(OperationContext Current) throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.security.SecurityException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -457,6 +693,13 @@ public class OperationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Host.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.OperationContext.Host" target="_top">.NET documentation</a>
+     */
     public ServiceHostBase getHost() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -472,6 +715,24 @@ public class OperationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ServiceSecurityContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.OperationContext.ServiceSecurityContext" target="_top">.NET documentation</a>
+     */
     public ServiceSecurityContext getServiceSecurityContext() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -487,6 +748,13 @@ public class OperationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SessionId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.OperationContext.SessionId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSessionId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -506,6 +774,13 @@ public class OperationContext extends NetObject  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addOperationCompleted.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addOperationCompleted(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -516,6 +791,13 @@ public class OperationContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeOperationCompleted.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeOperationCompleted(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class AddedConditionAction extends system.workflow.activities.rules.RuleC
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AddedConditionAction(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class AddedConditionAction extends system.workflow.activities.rules.RuleC
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.AddedConditionAction.-ctor" target="_top">.NET documentation</a>
+     */
     public AddedConditionAction() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +166,14 @@ public class AddedConditionAction extends system.workflow.activities.rules.RuleC
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param addedConditionDefinition the argument of type {@code RuleCondition}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.AddedConditionAction.-ctor" target="_top">.NET documentation</a>
+     */
     public AddedConditionAction(RuleCondition addedConditionDefinition) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +192,13 @@ public class AddedConditionAction extends system.workflow.activities.rules.RuleC
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ConditionDefinition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.AddedConditionAction.ConditionDefinition" target="_top">.NET documentation</a>
+     */
     public RuleCondition getConditionDefinition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +214,14 @@ public class AddedConditionAction extends system.workflow.activities.rules.RuleC
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConditionDefinition.
+     *
+     * @param ConditionDefinition the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.AddedConditionAction.ConditionDefinition" target="_top">.NET documentation</a>
+     */
     public void setConditionDefinition(RuleCondition ConditionDefinition) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

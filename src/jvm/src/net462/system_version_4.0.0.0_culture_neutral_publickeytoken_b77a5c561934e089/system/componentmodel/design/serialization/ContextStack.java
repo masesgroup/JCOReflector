@@ -98,7 +98,10 @@ public class ContextStack extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ContextStack(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class ContextStack extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.ContextStack.-ctor" target="_top">.NET documentation</a>
+     */
     public ContextStack() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +168,14 @@ public class ContextStack extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Pop.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.ContextStack.Pop" target="_top">.NET documentation</a>
+     */
     public NetObject Pop() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +191,15 @@ public class ContextStack extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Append.
+     *
+     * @param context the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.ContextStack.Append" target="_top">.NET documentation</a>
+     */
     public void Append(NetObject context) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +210,15 @@ public class ContextStack extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Push.
+     *
+     * @param context the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.ContextStack.Push" target="_top">.NET documentation</a>
+     */
     public void Push(NetObject context) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +233,14 @@ public class ContextStack extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Current.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.ContextStack.Current" target="_top">.NET documentation</a>
+     */
     public NetObject getCurrent() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

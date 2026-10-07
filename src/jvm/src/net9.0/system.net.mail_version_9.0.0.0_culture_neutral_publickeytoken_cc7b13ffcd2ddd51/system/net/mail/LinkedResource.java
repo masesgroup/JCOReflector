@@ -104,7 +104,10 @@ public class LinkedResource extends system.net.mail.AttachmentBase  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public LinkedResource(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,19 @@ public class LinkedResource extends system.net.mail.AttachmentBase  {
     public LinkedResource() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param contentStream the argument of type {@code Stream}
+     * @param contentType the argument of type {@code ContentType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Mail.LinkedResource.-ctor" target="_top">.NET documentation</a>
+     */
     public LinkedResource(Stream contentStream, ContentType contentType) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +180,23 @@ public class LinkedResource extends system.net.mail.AttachmentBase  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param contentStream the argument of type {@code Stream}
+     * @param mediaType the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Mail.LinkedResource.-ctor" target="_top">.NET documentation</a>
+     */
     public LinkedResource(Stream contentStream, java.lang.String mediaType) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +207,18 @@ public class LinkedResource extends system.net.mail.AttachmentBase  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param contentStream the argument of type {@code Stream}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Mail.LinkedResource.-ctor" target="_top">.NET documentation</a>
+     */
     public LinkedResource(Stream contentStream) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -184,6 +229,21 @@ public class LinkedResource extends system.net.mail.AttachmentBase  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param fileName the argument of type {@code java.lang.String}
+     * @param contentType the argument of type {@code ContentType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Mail.LinkedResource.-ctor" target="_top">.NET documentation</a>
+     */
     public LinkedResource(java.lang.String fileName, ContentType contentType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.runtime.serialization.SerializationException, system.FormatException, system.NotSupportedException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -194,6 +254,24 @@ public class LinkedResource extends system.net.mail.AttachmentBase  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param fileName the argument of type {@code java.lang.String}
+     * @param mediaType the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Mail.LinkedResource.-ctor" target="_top">.NET documentation</a>
+     */
     public LinkedResource(java.lang.String fileName, java.lang.String mediaType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.runtime.serialization.SerializationException, system.PlatformNotSupportedException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -204,6 +282,23 @@ public class LinkedResource extends system.net.mail.AttachmentBase  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param fileName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Mail.LinkedResource.-ctor" target="_top">.NET documentation</a>
+     */
     public LinkedResource(java.lang.String fileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.runtime.serialization.SerializationException, system.PlatformNotSupportedException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -219,6 +314,24 @@ public class LinkedResource extends system.net.mail.AttachmentBase  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateLinkedResourceFromString.
+     *
+     * @param content the argument of type {@code java.lang.String}
+     * @param contentType the argument of type {@code ContentType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Mail.LinkedResource.CreateLinkedResourceFromString" target="_top">.NET documentation</a>
+     */
     public static LinkedResource CreateLinkedResourceFromString(java.lang.String content, ContentType contentType) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -234,6 +347,27 @@ public class LinkedResource extends system.net.mail.AttachmentBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateLinkedResourceFromString.
+     *
+     * @param content the argument of type {@code java.lang.String}
+     * @param contentEncoding the argument of type {@code Encoding}
+     * @param mediaType the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Mail.LinkedResource.CreateLinkedResourceFromString" target="_top">.NET documentation</a>
+     */
     public static LinkedResource CreateLinkedResourceFromString(java.lang.String content, Encoding contentEncoding, java.lang.String mediaType) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -249,6 +383,25 @@ public class LinkedResource extends system.net.mail.AttachmentBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateLinkedResourceFromString.
+     *
+     * @param content the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Mail.LinkedResource.CreateLinkedResourceFromString" target="_top">.NET documentation</a>
+     */
     public static LinkedResource CreateLinkedResourceFromString(java.lang.String content) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -268,6 +421,25 @@ public class LinkedResource extends system.net.mail.AttachmentBase  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ContentLink.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Mail.LinkedResource.ContentLink" target="_top">.NET documentation</a>
+     */
     public Uri getContentLink() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.UriFormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +455,29 @@ public class LinkedResource extends system.net.mail.AttachmentBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ContentLink.
+     *
+     * @param ContentLink the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Mail.LinkedResource.ContentLink" target="_top">.NET documentation</a>
+     */
     public void setContentLink(Uri ContentLink) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.UriFormatException, system.FormatException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

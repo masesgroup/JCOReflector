@@ -100,7 +100,10 @@ public class KeyContainerPermissionAccessEntryCollection extends NetObjectEnumer
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public KeyContainerPermissionAccessEntryCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class KeyContainerPermissionAccessEntryCollection extends NetObjectEnumer
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.KeyContainerPermissionAccessEntryCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public KeyContainerPermissionAccessEntryCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,14 @@ public class KeyContainerPermissionAccessEntryCollection extends NetObjectEnumer
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param accessEntry the argument of type {@code KeyContainerPermissionAccessEntry}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.KeyContainerPermissionAccessEntryCollection.Add" target="_top">.NET documentation</a>
+     */
     public int Add(KeyContainerPermissionAccessEntry accessEntry) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +218,14 @@ public class KeyContainerPermissionAccessEntryCollection extends NetObjectEnumer
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param accessEntry the argument of type {@code KeyContainerPermissionAccessEntry}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.KeyContainerPermissionAccessEntryCollection.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(KeyContainerPermissionAccessEntry accessEntry) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +266,12 @@ public class KeyContainerPermissionAccessEntryCollection extends NetObjectEnumer
         }
     }
 
+    /**
+     * Invokes the .NET member Clear.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.KeyContainerPermissionAccessEntryCollection.Clear" target="_top">.NET documentation</a>
+     */
     public void Clear() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +282,24 @@ public class KeyContainerPermissionAccessEntryCollection extends NetObjectEnumer
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code Array}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.KeyContainerPermissionAccessEntryCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(Array array, int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +310,14 @@ public class KeyContainerPermissionAccessEntryCollection extends NetObjectEnumer
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code KeyContainerPermissionAccessEntry[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.KeyContainerPermissionAccessEntryCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(KeyContainerPermissionAccessEntry[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +328,13 @@ public class KeyContainerPermissionAccessEntryCollection extends NetObjectEnumer
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param accessEntry the argument of type {@code KeyContainerPermissionAccessEntry}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.KeyContainerPermissionAccessEntryCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(KeyContainerPermissionAccessEntry accessEntry) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -285,6 +349,13 @@ public class KeyContainerPermissionAccessEntryCollection extends NetObjectEnumer
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsSynchronized.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.KeyContainerPermissionAccessEntryCollection.IsSynchronized" target="_top">.NET documentation</a>
+     */
     public boolean getIsSynchronized() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -299,6 +370,13 @@ public class KeyContainerPermissionAccessEntryCollection extends NetObjectEnumer
         }
     }
 
+    /**
+     * Gets the value of the .NET property Count.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.KeyContainerPermissionAccessEntryCollection.Count" target="_top">.NET documentation</a>
+     */
     public int getCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -339,6 +417,13 @@ public class KeyContainerPermissionAccessEntryCollection extends NetObjectEnumer
         }
     }
 
+    /**
+     * Gets the value of the .NET property SyncRoot.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.KeyContainerPermissionAccessEntryCollection.SyncRoot" target="_top">.NET documentation</a>
+     */
     public NetObject getSyncRoot() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

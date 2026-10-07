@@ -103,7 +103,10 @@ public class XsltFunctions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XsltFunctions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,25 @@ public class XsltFunctions extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param s1 the argument of type {@code java.lang.String}
+     * @param s2 the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XsltFunctions.Contains" target="_top">.NET documentation</a>
+     */
     public static boolean Contains(java.lang.String s1, java.lang.String s2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -170,6 +192,28 @@ public class XsltFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Lang.
+     *
+     * @param value the argument of type {@code java.lang.String}
+     * @param context the argument of type {@code XPathNavigator}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XsltFunctions.Lang" target="_top">.NET documentation</a>
+     */
     public static boolean Lang(java.lang.String value, XPathNavigator context) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -184,6 +228,25 @@ public class XsltFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member StartsWith.
+     *
+     * @param s1 the argument of type {@code java.lang.String}
+     * @param s2 the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XsltFunctions.StartsWith" target="_top">.NET documentation</a>
+     */
     public static boolean StartsWith(java.lang.String s1, java.lang.String s2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -198,6 +261,25 @@ public class XsltFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MSNumber.
+     *
+     * @param value the argument of type {@code IList_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XsltFunctions.MSNumber" target="_top">.NET documentation</a>
+     */
     public static double MSNumber(IList_1 value) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OverflowException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -238,6 +320,30 @@ public class XsltFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MSStringCompare.
+     *
+     * @param s1 the argument of type {@code java.lang.String}
+     * @param s2 the argument of type {@code java.lang.String}
+     * @param lang the argument of type {@code java.lang.String}
+     * @param options the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XsltFunctions.MSStringCompare" target="_top">.NET documentation</a>
+     */
     public static double MSStringCompare(java.lang.String s1, java.lang.String s2, java.lang.String lang, java.lang.String options) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -278,6 +384,16 @@ public class XsltFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Round.
+     *
+     * @param value the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XsltFunctions.Round" target="_top">.NET documentation</a>
+     */
     public static double Round(double value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -318,6 +434,14 @@ public class XsltFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BaseUri.
+     *
+     * @param navigator the argument of type {@code XPathNavigator}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XsltFunctions.BaseUri" target="_top">.NET documentation</a>
+     */
     public static java.lang.String BaseUri(XPathNavigator navigator) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -332,6 +456,14 @@ public class XsltFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EXslObjectType.
+     *
+     * @param value the argument of type {@code IList_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XsltFunctions.EXslObjectType" target="_top">.NET documentation</a>
+     */
     public static java.lang.String EXslObjectType(IList_1 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -346,6 +478,30 @@ public class XsltFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MSFormatDateTime.
+     *
+     * @param dateTime the argument of type {@code java.lang.String}
+     * @param format the argument of type {@code java.lang.String}
+     * @param lang the argument of type {@code java.lang.String}
+     * @param isDate the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XsltFunctions.MSFormatDateTime" target="_top">.NET documentation</a>
+     */
     public static java.lang.String MSFormatDateTime(java.lang.String dateTime, java.lang.String format, java.lang.String lang, boolean isDate) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -360,6 +516,19 @@ public class XsltFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MSLocalName.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XsltFunctions.MSLocalName" target="_top">.NET documentation</a>
+     */
     public static java.lang.String MSLocalName(java.lang.String name) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -374,6 +543,20 @@ public class XsltFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MSNamespaceUri.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param currentNode the argument of type {@code XPathNavigator}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XsltFunctions.MSNamespaceUri" target="_top">.NET documentation</a>
+     */
     public static java.lang.String MSNamespaceUri(java.lang.String name, XPathNavigator currentNode) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -388,6 +571,19 @@ public class XsltFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MSUtc.
+     *
+     * @param dateTime the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XsltFunctions.MSUtc" target="_top">.NET documentation</a>
+     */
     public static java.lang.String MSUtc(java.lang.String dateTime) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -402,6 +598,25 @@ public class XsltFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member NormalizeSpace.
+     *
+     * @param value the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XsltFunctions.NormalizeSpace" target="_top">.NET documentation</a>
+     */
     public static java.lang.String NormalizeSpace(java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -416,6 +631,23 @@ public class XsltFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OuterXml.
+     *
+     * @param navigator the argument of type {@code XPathNavigator}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XsltFunctions.OuterXml" target="_top">.NET documentation</a>
+     */
     public static java.lang.String OuterXml(XPathNavigator navigator) throws Throwable, system.NotSupportedException, system.ArgumentException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -430,6 +662,23 @@ public class XsltFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Substring.
+     *
+     * @param value the argument of type {@code java.lang.String}
+     * @param startIndex the argument of type {@code double}
+     * @param length the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XsltFunctions.Substring" target="_top">.NET documentation</a>
+     */
     public static java.lang.String Substring(java.lang.String value, double startIndex, double length) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -444,6 +693,22 @@ public class XsltFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Substring.
+     *
+     * @param value the argument of type {@code java.lang.String}
+     * @param startIndex the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XsltFunctions.Substring" target="_top">.NET documentation</a>
+     */
     public static java.lang.String Substring(java.lang.String value, double startIndex) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -458,6 +723,23 @@ public class XsltFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SubstringAfter.
+     *
+     * @param s1 the argument of type {@code java.lang.String}
+     * @param s2 the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XsltFunctions.SubstringAfter" target="_top">.NET documentation</a>
+     */
     public static java.lang.String SubstringAfter(java.lang.String s1, java.lang.String s2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -472,6 +754,23 @@ public class XsltFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SubstringBefore.
+     *
+     * @param s1 the argument of type {@code java.lang.String}
+     * @param s2 the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XsltFunctions.SubstringBefore" target="_top">.NET documentation</a>
+     */
     public static java.lang.String SubstringBefore(java.lang.String s1, java.lang.String s2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -486,6 +785,27 @@ public class XsltFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Translate.
+     *
+     * @param arg the argument of type {@code java.lang.String}
+     * @param mapString the argument of type {@code java.lang.String}
+     * @param transString the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XsltFunctions.Translate" target="_top">.NET documentation</a>
+     */
     public static java.lang.String Translate(java.lang.String arg, java.lang.String mapString, java.lang.String transString) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -500,6 +820,17 @@ public class XsltFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SystemProperty.
+     *
+     * @param name the argument of type {@code XmlQualifiedName}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XsltFunctions.SystemProperty" target="_top">.NET documentation</a>
+     */
     public static XPathItem SystemProperty(XmlQualifiedName name) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

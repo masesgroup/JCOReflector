@@ -103,7 +103,10 @@ public class Measurement_1<T extends IJCOBridgeReflected> extends system.ValueTy
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Measurement_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,23 @@ public class Measurement_1<T extends IJCOBridgeReflected> extends system.ValueTy
     public Measurement_1() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code T}
+     * @param tags the argument of type {@code IEnumerable_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Measurement-1.-ctor" target="_top">.NET documentation</a>
+     */
     public Measurement_1(T value, IEnumerable_1 tags) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +185,20 @@ public class Measurement_1<T extends IJCOBridgeReflected> extends system.ValueTy
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code T}
+     * @param tags the argument of type {@code KeyValuePair_2...}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Measurement-1.-ctor" target="_top">.NET documentation</a>
+     */
     public Measurement_1(T value, KeyValuePair_2... tags) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -177,6 +211,23 @@ public class Measurement_1<T extends IJCOBridgeReflected> extends system.ValueTy
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code T}
+     * @param tags the argument of type {@code TagList}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Measurement-1.-ctor" target="_top">.NET documentation</a>
+     */
     public Measurement_1(T value, TagList tags) throws Throwable, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -189,6 +240,13 @@ public class Measurement_1<T extends IJCOBridgeReflected> extends system.ValueTy
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code T}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Measurement-1.-ctor" target="_top">.NET documentation</a>
+     */
     public Measurement_1(T value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -210,6 +268,13 @@ public class Measurement_1<T extends IJCOBridgeReflected> extends system.ValueTy
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Measurement-1.Value" target="_top">.NET documentation</a>
+     */
     public T getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

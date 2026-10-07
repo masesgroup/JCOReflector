@@ -110,7 +110,10 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IInputElementImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
 
     // Methods section
     
+    /**
+     * Invokes the .NET member CaptureMouse.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.IInputElement.CaptureMouse" target="_top">.NET documentation</a>
+     */
     public boolean CaptureMouse() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -166,6 +176,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member CaptureStylus.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.IInputElement.CaptureStylus" target="_top">.NET documentation</a>
+     */
     public boolean CaptureStylus() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +197,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member Focus.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.IInputElement.Focus" target="_top">.NET documentation</a>
+     */
     public boolean Focus() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +218,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member RaiseEvent.
+     *
+     * @param e the argument of type {@code RoutedEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.IInputElement.RaiseEvent" target="_top">.NET documentation</a>
+     */
     public void RaiseEvent(RoutedEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +235,12 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member ReleaseMouseCapture.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.IInputElement.ReleaseMouseCapture" target="_top">.NET documentation</a>
+     */
     public void ReleaseMouseCapture() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +251,12 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member ReleaseStylusCapture.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.IInputElement.ReleaseStylusCapture" target="_top">.NET documentation</a>
+     */
     public void ReleaseStylusCapture() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +271,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Focusable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.IInputElement.Focusable" target="_top">.NET documentation</a>
+     */
     public boolean getFocusable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +292,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Sets the value of the .NET property Focusable.
+     *
+     * @param Focusable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.IInputElement.Focusable" target="_top">.NET documentation</a>
+     */
     public void setFocusable(boolean Focusable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +309,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.IInputElement.IsEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getIsEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +330,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsKeyboardFocused.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.IInputElement.IsKeyboardFocused" target="_top">.NET documentation</a>
+     */
     public boolean getIsKeyboardFocused() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +351,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsKeyboardFocusWithin.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.IInputElement.IsKeyboardFocusWithin" target="_top">.NET documentation</a>
+     */
     public boolean getIsKeyboardFocusWithin() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +372,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsMouseCaptured.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.IInputElement.IsMouseCaptured" target="_top">.NET documentation</a>
+     */
     public boolean getIsMouseCaptured() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +393,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsMouseDirectlyOver.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.IInputElement.IsMouseDirectlyOver" target="_top">.NET documentation</a>
+     */
     public boolean getIsMouseDirectlyOver() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -322,6 +414,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsMouseOver.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.IInputElement.IsMouseOver" target="_top">.NET documentation</a>
+     */
     public boolean getIsMouseOver() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -336,6 +435,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsStylusCaptured.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.IInputElement.IsStylusCaptured" target="_top">.NET documentation</a>
+     */
     public boolean getIsStylusCaptured() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -350,6 +456,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsStylusDirectlyOver.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.IInputElement.IsStylusDirectlyOver" target="_top">.NET documentation</a>
+     */
     public boolean getIsStylusDirectlyOver() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -364,6 +477,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsStylusOver.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.IInputElement.IsStylusOver" target="_top">.NET documentation</a>
+     */
     public boolean getIsStylusOver() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -383,6 +503,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addGotKeyboardFocus.
+     *
+     * @param handler the argument of type {@code KeyboardFocusChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addGotKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -393,6 +520,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removeGotKeyboardFocus.
+     *
+     * @param handler the argument of type {@code KeyboardFocusChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeGotKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -403,6 +537,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addLostKeyboardFocus.
+     *
+     * @param handler the argument of type {@code KeyboardFocusChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addLostKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -413,6 +554,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removeLostKeyboardFocus.
+     *
+     * @param handler the argument of type {@code KeyboardFocusChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeLostKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -423,6 +571,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewGotKeyboardFocus.
+     *
+     * @param handler the argument of type {@code KeyboardFocusChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewGotKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -433,6 +588,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewGotKeyboardFocus.
+     *
+     * @param handler the argument of type {@code KeyboardFocusChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewGotKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -443,6 +605,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewLostKeyboardFocus.
+     *
+     * @param handler the argument of type {@code KeyboardFocusChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewLostKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -453,6 +622,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewLostKeyboardFocus.
+     *
+     * @param handler the argument of type {@code KeyboardFocusChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewLostKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -463,6 +639,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addKeyDown.
+     *
+     * @param handler the argument of type {@code KeyEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addKeyDown(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -473,6 +656,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removeKeyDown.
+     *
+     * @param handler the argument of type {@code KeyEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeKeyDown(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -483,6 +673,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addKeyUp.
+     *
+     * @param handler the argument of type {@code KeyEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addKeyUp(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -493,6 +690,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removeKeyUp.
+     *
+     * @param handler the argument of type {@code KeyEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeKeyUp(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -503,6 +707,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewKeyDown.
+     *
+     * @param handler the argument of type {@code KeyEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewKeyDown(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -513,6 +724,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewKeyDown.
+     *
+     * @param handler the argument of type {@code KeyEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewKeyDown(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -523,6 +741,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewKeyUp.
+     *
+     * @param handler the argument of type {@code KeyEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewKeyUp(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -533,6 +758,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewKeyUp.
+     *
+     * @param handler the argument of type {@code KeyEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewKeyUp(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -543,6 +775,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addMouseLeftButtonDown.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addMouseLeftButtonDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -553,6 +792,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removeMouseLeftButtonDown.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeMouseLeftButtonDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -563,6 +809,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addMouseLeftButtonUp.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addMouseLeftButtonUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -573,6 +826,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removeMouseLeftButtonUp.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeMouseLeftButtonUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -583,6 +843,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addMouseRightButtonDown.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addMouseRightButtonDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -593,6 +860,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removeMouseRightButtonDown.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeMouseRightButtonDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -603,6 +877,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addMouseRightButtonUp.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addMouseRightButtonUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -613,6 +894,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removeMouseRightButtonUp.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeMouseRightButtonUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -623,6 +911,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewMouseLeftButtonDown.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewMouseLeftButtonDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -633,6 +928,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewMouseLeftButtonDown.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewMouseLeftButtonDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -643,6 +945,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewMouseLeftButtonUp.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewMouseLeftButtonUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -653,6 +962,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewMouseLeftButtonUp.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewMouseLeftButtonUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -663,6 +979,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewMouseRightButtonDown.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewMouseRightButtonDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -673,6 +996,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewMouseRightButtonDown.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewMouseRightButtonDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -683,6 +1013,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewMouseRightButtonUp.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewMouseRightButtonUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -693,6 +1030,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewMouseRightButtonUp.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewMouseRightButtonUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -703,6 +1047,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addGotMouseCapture.
+     *
+     * @param handler the argument of type {@code MouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addGotMouseCapture(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -713,6 +1064,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removeGotMouseCapture.
+     *
+     * @param handler the argument of type {@code MouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeGotMouseCapture(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -723,6 +1081,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addLostMouseCapture.
+     *
+     * @param handler the argument of type {@code MouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addLostMouseCapture(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -733,6 +1098,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removeLostMouseCapture.
+     *
+     * @param handler the argument of type {@code MouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeLostMouseCapture(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -743,6 +1115,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addMouseEnter.
+     *
+     * @param handler the argument of type {@code MouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addMouseEnter(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -753,6 +1132,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removeMouseEnter.
+     *
+     * @param handler the argument of type {@code MouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeMouseEnter(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -763,6 +1149,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addMouseLeave.
+     *
+     * @param handler the argument of type {@code MouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addMouseLeave(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -773,6 +1166,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removeMouseLeave.
+     *
+     * @param handler the argument of type {@code MouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeMouseLeave(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -783,6 +1183,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addMouseMove.
+     *
+     * @param handler the argument of type {@code MouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addMouseMove(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -793,6 +1200,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removeMouseMove.
+     *
+     * @param handler the argument of type {@code MouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeMouseMove(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -803,6 +1217,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewMouseMove.
+     *
+     * @param handler the argument of type {@code MouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewMouseMove(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -813,6 +1234,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewMouseMove.
+     *
+     * @param handler the argument of type {@code MouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewMouseMove(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -823,6 +1251,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addMouseWheel.
+     *
+     * @param handler the argument of type {@code MouseWheelEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addMouseWheel(MouseWheelEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -833,6 +1268,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removeMouseWheel.
+     *
+     * @param handler the argument of type {@code MouseWheelEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeMouseWheel(MouseWheelEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -843,6 +1285,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewMouseWheel.
+     *
+     * @param handler the argument of type {@code MouseWheelEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewMouseWheel(MouseWheelEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -853,6 +1302,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewMouseWheel.
+     *
+     * @param handler the argument of type {@code MouseWheelEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewMouseWheel(MouseWheelEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -863,6 +1319,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewStylusButtonDown.
+     *
+     * @param handler the argument of type {@code StylusButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewStylusButtonDown(StylusButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -873,6 +1336,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewStylusButtonDown.
+     *
+     * @param handler the argument of type {@code StylusButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewStylusButtonDown(StylusButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -883,6 +1353,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewStylusButtonUp.
+     *
+     * @param handler the argument of type {@code StylusButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewStylusButtonUp(StylusButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -893,6 +1370,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewStylusButtonUp.
+     *
+     * @param handler the argument of type {@code StylusButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewStylusButtonUp(StylusButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -903,6 +1387,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addStylusButtonDown.
+     *
+     * @param handler the argument of type {@code StylusButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addStylusButtonDown(StylusButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -913,6 +1404,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removeStylusButtonDown.
+     *
+     * @param handler the argument of type {@code StylusButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeStylusButtonDown(StylusButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -923,6 +1421,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addStylusButtonUp.
+     *
+     * @param handler the argument of type {@code StylusButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addStylusButtonUp(StylusButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -933,6 +1438,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removeStylusButtonUp.
+     *
+     * @param handler the argument of type {@code StylusButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeStylusButtonUp(StylusButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -943,6 +1455,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewStylusDown.
+     *
+     * @param handler the argument of type {@code StylusDownEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewStylusDown(StylusDownEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -953,6 +1472,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewStylusDown.
+     *
+     * @param handler the argument of type {@code StylusDownEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewStylusDown(StylusDownEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -963,6 +1489,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addStylusDown.
+     *
+     * @param handler the argument of type {@code StylusDownEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addStylusDown(StylusDownEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -973,6 +1506,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removeStylusDown.
+     *
+     * @param handler the argument of type {@code StylusDownEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeStylusDown(StylusDownEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -983,6 +1523,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addGotStylusCapture.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addGotStylusCapture(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -993,6 +1540,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removeGotStylusCapture.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeGotStylusCapture(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1003,6 +1557,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addLostStylusCapture.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addLostStylusCapture(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1013,6 +1574,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removeLostStylusCapture.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeLostStylusCapture(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1023,6 +1591,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewStylusInAirMove.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewStylusInAirMove(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1033,6 +1608,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewStylusInAirMove.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewStylusInAirMove(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1043,6 +1625,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewStylusInRange.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewStylusInRange(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1053,6 +1642,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewStylusInRange.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewStylusInRange(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1063,6 +1659,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewStylusMove.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewStylusMove(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1073,6 +1676,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewStylusMove.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewStylusMove(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1083,6 +1693,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewStylusOutOfRange.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewStylusOutOfRange(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1093,6 +1710,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewStylusOutOfRange.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewStylusOutOfRange(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1103,6 +1727,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewStylusUp.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewStylusUp(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1113,6 +1744,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewStylusUp.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewStylusUp(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1123,6 +1761,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addStylusEnter.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addStylusEnter(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1133,6 +1778,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removeStylusEnter.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeStylusEnter(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1143,6 +1795,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addStylusInAirMove.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addStylusInAirMove(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1153,6 +1812,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removeStylusInAirMove.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeStylusInAirMove(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1163,6 +1829,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addStylusInRange.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addStylusInRange(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1173,6 +1846,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removeStylusInRange.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeStylusInRange(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1183,6 +1863,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addStylusLeave.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addStylusLeave(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1193,6 +1880,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removeStylusLeave.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeStylusLeave(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1203,6 +1897,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addStylusMove.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addStylusMove(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1213,6 +1914,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removeStylusMove.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeStylusMove(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1223,6 +1931,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addStylusOutOfRange.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addStylusOutOfRange(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1233,6 +1948,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removeStylusOutOfRange.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeStylusOutOfRange(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1243,6 +1965,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addStylusUp.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addStylusUp(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1253,6 +1982,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removeStylusUp.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeStylusUp(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1263,6 +1999,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewStylusSystemGesture.
+     *
+     * @param handler the argument of type {@code StylusSystemGestureEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewStylusSystemGesture(StylusSystemGestureEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1273,6 +2016,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewStylusSystemGesture.
+     *
+     * @param handler the argument of type {@code StylusSystemGestureEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewStylusSystemGesture(StylusSystemGestureEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1283,6 +2033,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addStylusSystemGesture.
+     *
+     * @param handler the argument of type {@code StylusSystemGestureEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addStylusSystemGesture(StylusSystemGestureEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1293,6 +2050,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removeStylusSystemGesture.
+     *
+     * @param handler the argument of type {@code StylusSystemGestureEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeStylusSystemGesture(StylusSystemGestureEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1303,6 +2067,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewTextInput.
+     *
+     * @param handler the argument of type {@code TextCompositionEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewTextInput(TextCompositionEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1313,6 +2084,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewTextInput.
+     *
+     * @param handler the argument of type {@code TextCompositionEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewTextInput(TextCompositionEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1323,6 +2101,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member addTextInput.
+     *
+     * @param handler the argument of type {@code TextCompositionEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addTextInput(TextCompositionEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1333,6 +2118,13 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
+    /**
+     * Invokes the .NET member removeTextInput.
+     *
+     * @param handler the argument of type {@code TextCompositionEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeTextInput(TextCompositionEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

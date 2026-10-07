@@ -99,7 +99,10 @@ public class ComCompatibleVersionAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ComCompatibleVersionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,16 @@ public class ComCompatibleVersionAttribute extends system.Attribute  {
     public ComCompatibleVersionAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param major the argument of type {@code int}
+     * @param minor the argument of type {@code int}
+     * @param build the argument of type {@code int}
+     * @param revision the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComCompatibleVersionAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ComCompatibleVersionAttribute(int major, int minor, int build, int revision) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +181,13 @@ public class ComCompatibleVersionAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BuildNumber.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComCompatibleVersionAttribute.BuildNumber" target="_top">.NET documentation</a>
+     */
     public int getBuildNumber() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +228,13 @@ public class ComCompatibleVersionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MajorVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComCompatibleVersionAttribute.MajorVersion" target="_top">.NET documentation</a>
+     */
     public int getMajorVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +275,13 @@ public class ComCompatibleVersionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinorVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComCompatibleVersionAttribute.MinorVersion" target="_top">.NET documentation</a>
+     */
     public int getMinorVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +322,13 @@ public class ComCompatibleVersionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RevisionNumber.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComCompatibleVersionAttribute.RevisionNumber" target="_top">.NET documentation</a>
+     */
     public int getRevisionNumber() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

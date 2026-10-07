@@ -104,7 +104,10 @@ public class Zone extends system.security.policy.EvidenceBase  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Zone(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,13 @@ public class Zone extends system.security.policy.EvidenceBase  {
     public Zone() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param zone the argument of type {@code SecurityZone}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.Zone.-ctor" target="_top">.NET documentation</a>
+     */
     public Zone(SecurityZone zone) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +179,13 @@ public class Zone extends system.security.policy.EvidenceBase  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Copy.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.Zone.Copy" target="_top">.NET documentation</a>
+     */
     public NetObject Copy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +201,14 @@ public class Zone extends system.security.policy.EvidenceBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateIdentityPermission.
+     *
+     * @param evidence the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.Zone.CreateIdentityPermission" target="_top">.NET documentation</a>
+     */
     public IPermission CreateIdentityPermission(Evidence evidence) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +224,14 @@ public class Zone extends system.security.policy.EvidenceBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateFromUrl.
+     *
+     * @param url the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.Zone.CreateFromUrl" target="_top">.NET documentation</a>
+     */
     public static Zone CreateFromUrl(java.lang.String url) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -218,6 +251,13 @@ public class Zone extends system.security.policy.EvidenceBase  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SecurityZone.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.Zone.SecurityZone" target="_top">.NET documentation</a>
+     */
     public SecurityZone getSecurityZone() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

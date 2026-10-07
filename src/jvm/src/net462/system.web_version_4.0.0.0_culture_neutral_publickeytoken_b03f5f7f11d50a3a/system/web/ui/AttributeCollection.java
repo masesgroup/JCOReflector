@@ -103,7 +103,10 @@ public class AttributeCollection extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AttributeCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,13 @@ public class AttributeCollection extends NetObject  {
     public AttributeCollection() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param bag the argument of type {@code StateBag}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.AttributeCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public AttributeCollection(StateBag bag) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +178,26 @@ public class AttributeCollection extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.AttributeCollection.Add" target="_top">.NET documentation</a>
+     */
     public void Add(java.lang.String key, java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +208,21 @@ public class AttributeCollection extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddAttributes.
+     *
+     * @param writer the argument of type {@code HtmlTextWriter}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.AttributeCollection.AddAttributes" target="_top">.NET documentation</a>
+     */
     public void AddAttributes(HtmlTextWriter writer) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.web.HttpException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +233,12 @@ public class AttributeCollection extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Clear.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.AttributeCollection.Clear" target="_top">.NET documentation</a>
+     */
     public void Clear() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +249,20 @@ public class AttributeCollection extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.AttributeCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(java.lang.String key) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +273,21 @@ public class AttributeCollection extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Render.
+     *
+     * @param writer the argument of type {@code HtmlTextWriter}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.AttributeCollection.Render" target="_top">.NET documentation</a>
+     */
     public void Render(HtmlTextWriter writer) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.web.HttpException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +302,13 @@ public class AttributeCollection extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Count.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.AttributeCollection.Count" target="_top">.NET documentation</a>
+     */
     public int getCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +349,13 @@ public class AttributeCollection extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Keys.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.AttributeCollection.Keys" target="_top">.NET documentation</a>
+     */
     public ICollection getKeys() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +371,13 @@ public class AttributeCollection extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CssStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.AttributeCollection.CssStyle" target="_top">.NET documentation</a>
+     */
     public CssStyleCollection getCssStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -102,7 +102,10 @@ public class ConnectionStringsExpressionBuilder extends system.web.compilation.E
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ConnectionStringsExpressionBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class ConnectionStringsExpressionBuilder extends system.web.compilation.E
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ConnectionStringsExpressionBuilder.-ctor" target="_top">.NET documentation</a>
+     */
     public ConnectionStringsExpressionBuilder() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,19 @@ public class ConnectionStringsExpressionBuilder extends system.web.compilation.E
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetCodeExpression.
+     *
+     * @param entry the argument of type {@code BoundPropertyEntry}
+     * @param parsedData the argument of type {@code NetObject}
+     * @param context the argument of type {@code ExpressionBuilderContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ConnectionStringsExpressionBuilder.GetCodeExpression" target="_top">.NET documentation</a>
+     */
     public CodeExpression GetCodeExpression(BoundPropertyEntry entry, NetObject parsedData, ExpressionBuilderContext context) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +200,30 @@ public class ConnectionStringsExpressionBuilder extends system.web.compilation.E
         }
     }
 
+    /**
+     * Invokes the .NET member EvaluateExpression.
+     *
+     * @param target the argument of type {@code NetObject}
+     * @param entry the argument of type {@code BoundPropertyEntry}
+     * @param parsedData the argument of type {@code NetObject}
+     * @param context the argument of type {@code ExpressionBuilderContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ConnectionStringsExpressionBuilder.EvaluateExpression" target="_top">.NET documentation</a>
+     */
     public NetObject EvaluateExpression(NetObject target, BoundPropertyEntry entry, NetObject parsedData, ExpressionBuilderContext context) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.configuration.ConfigurationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +239,25 @@ public class ConnectionStringsExpressionBuilder extends system.web.compilation.E
         }
     }
 
+    /**
+     * Invokes the .NET member ParseExpression.
+     *
+     * @param expression the argument of type {@code java.lang.String}
+     * @param propertyType the argument of type {@code NetType}
+     * @param context the argument of type {@code ExpressionBuilderContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ConnectionStringsExpressionBuilder.ParseExpression" target="_top">.NET documentation</a>
+     */
     public NetObject ParseExpression(java.lang.String expression, NetType propertyType, ExpressionBuilderContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +273,27 @@ public class ConnectionStringsExpressionBuilder extends system.web.compilation.E
         }
     }
 
+    /**
+     * Invokes the .NET member GetConnectionString.
+     *
+     * @param connectionStringName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ConnectionStringsExpressionBuilder.GetConnectionString" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetConnectionString(java.lang.String connectionStringName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.configuration.ConfigurationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -222,6 +308,27 @@ public class ConnectionStringsExpressionBuilder extends system.web.compilation.E
         }
     }
 
+    /**
+     * Invokes the .NET member GetConnectionStringProviderName.
+     *
+     * @param connectionStringName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ConnectionStringsExpressionBuilder.GetConnectionStringProviderName" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetConnectionStringProviderName(java.lang.String connectionStringName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.configuration.ConfigurationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

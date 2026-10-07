@@ -102,7 +102,10 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WorkflowDesignerColors(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,23 @@ public class WorkflowDesignerColors extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property FontSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.FontSize" target="_top">.NET documentation</a>
+     */
     public static double getFontSize() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.OverflowException, system.InvalidOperationException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.xaml.XamlParseException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -199,6 +219,13 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyInspectorBackgroundBrushKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.PropertyInspectorBackgroundBrushKey" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getPropertyInspectorBackgroundBrushKey() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -213,6 +240,13 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyInspectorBorderBrushKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.PropertyInspectorBorderBrushKey" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getPropertyInspectorBorderBrushKey() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -227,6 +261,13 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyInspectorCategoryCaptionTextBrushKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.PropertyInspectorCategoryCaptionTextBrushKey" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getPropertyInspectorCategoryCaptionTextBrushKey() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -241,6 +282,13 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyInspectorPaneBrushKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.PropertyInspectorPaneBrushKey" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getPropertyInspectorPaneBrushKey() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -255,6 +303,13 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyInspectorPopupBrushKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.PropertyInspectorPopupBrushKey" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getPropertyInspectorPopupBrushKey() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -269,6 +324,13 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyInspectorSelectedBackgroundBrushKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.PropertyInspectorSelectedBackgroundBrushKey" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getPropertyInspectorSelectedBackgroundBrushKey() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -283,6 +345,13 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyInspectorSelectedForegroundBrushKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.PropertyInspectorSelectedForegroundBrushKey" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getPropertyInspectorSelectedForegroundBrushKey() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -297,6 +366,13 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyInspectorTextBrushKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.PropertyInspectorTextBrushKey" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getPropertyInspectorTextBrushKey() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -311,6 +387,13 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyInspectorToolBarBackgroundBrushKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.PropertyInspectorToolBarBackgroundBrushKey" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getPropertyInspectorToolBarBackgroundBrushKey() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -325,6 +408,13 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyInspectorToolBarItemHoverBackgroundBrushKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.PropertyInspectorToolBarItemHoverBackgroundBrushKey" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getPropertyInspectorToolBarItemHoverBackgroundBrushKey() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -339,6 +429,13 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyInspectorToolBarItemHoverBorderBrushKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.PropertyInspectorToolBarItemHoverBorderBrushKey" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getPropertyInspectorToolBarItemHoverBorderBrushKey() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -353,6 +450,13 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyInspectorToolBarItemSelectedBackgroundBrushKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.PropertyInspectorToolBarItemSelectedBackgroundBrushKey" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getPropertyInspectorToolBarItemSelectedBackgroundBrushKey() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -367,6 +471,13 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyInspectorToolBarItemSelectedBorderBrushKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.PropertyInspectorToolBarItemSelectedBorderBrushKey" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getPropertyInspectorToolBarItemSelectedBorderBrushKey() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -381,6 +492,13 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyInspectorToolBarSeparatorBrushKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.PropertyInspectorToolBarSeparatorBrushKey" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getPropertyInspectorToolBarSeparatorBrushKey() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -395,6 +513,13 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyInspectorToolBarTextBoxBorderBrushKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.PropertyInspectorToolBarTextBoxBorderBrushKey" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getPropertyInspectorToolBarTextBoxBorderBrushKey() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -409,6 +534,26 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FontWeight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.FontWeight" target="_top">.NET documentation</a>
+     */
     public static FontWeight getFontWeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.xaml.XamlParseException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -424,6 +569,32 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DesignerViewExpandAllCollapseAllButtonBrush.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.windows.markup.XamlParseException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.DesignerViewExpandAllCollapseAllButtonBrush" target="_top">.NET documentation</a>
+     */
     public static Brush getDesignerViewExpandAllCollapseAllButtonBrush() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.windows.markup.XamlParseException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -439,6 +610,32 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DesignerViewExpandAllCollapseAllButtonMouseOverBrush.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.windows.markup.XamlParseException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.DesignerViewExpandAllCollapseAllButtonMouseOverBrush" target="_top">.NET documentation</a>
+     */
     public static Brush getDesignerViewExpandAllCollapseAllButtonMouseOverBrush() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.windows.markup.XamlParseException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -454,6 +651,32 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DesignerViewExpandAllCollapseAllPressedBrush.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.windows.markup.XamlParseException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.DesignerViewExpandAllCollapseAllPressedBrush" target="_top">.NET documentation</a>
+     */
     public static Brush getDesignerViewExpandAllCollapseAllPressedBrush() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.windows.markup.XamlParseException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -469,6 +692,32 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FlowchartExpressionButtonBrush.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.windows.markup.XamlParseException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.FlowchartExpressionButtonBrush" target="_top">.NET documentation</a>
+     */
     public static Brush getFlowchartExpressionButtonBrush() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.windows.markup.XamlParseException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -484,6 +733,32 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FlowchartExpressionButtonMouseOverBrush.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.windows.markup.XamlParseException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.FlowchartExpressionButtonMouseOverBrush" target="_top">.NET documentation</a>
+     */
     public static Brush getFlowchartExpressionButtonMouseOverBrush() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.windows.markup.XamlParseException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -499,6 +774,32 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FlowchartExpressionButtonPressedBrush.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.windows.markup.XamlParseException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.FlowchartExpressionButtonPressedBrush" target="_top">.NET documentation</a>
+     */
     public static Brush getFlowchartExpressionButtonPressedBrush() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.windows.markup.XamlParseException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -514,6 +815,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ActivityDesignerSelectedTitleForegroundColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.ActivityDesignerSelectedTitleForegroundColor" target="_top">.NET documentation</a>
+     */
     public static Color getActivityDesignerSelectedTitleForegroundColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -529,6 +851,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AnnotationBackgroundGradientBeginColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.AnnotationBackgroundGradientBeginColor" target="_top">.NET documentation</a>
+     */
     public static Color getAnnotationBackgroundGradientBeginColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -544,6 +887,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AnnotationBackgroundGradientEndColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.AnnotationBackgroundGradientEndColor" target="_top">.NET documentation</a>
+     */
     public static Color getAnnotationBackgroundGradientEndColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -559,6 +923,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AnnotationBackgroundGradientMiddleColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.AnnotationBackgroundGradientMiddleColor" target="_top">.NET documentation</a>
+     */
     public static Color getAnnotationBackgroundGradientMiddleColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -574,6 +959,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AnnotationBorderColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.AnnotationBorderColor" target="_top">.NET documentation</a>
+     */
     public static Color getAnnotationBorderColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -589,6 +995,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AnnotationDockButtonColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.AnnotationDockButtonColor" target="_top">.NET documentation</a>
+     */
     public static Color getAnnotationDockButtonColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -604,6 +1031,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AnnotationDockButtonHoverBackgroundColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.AnnotationDockButtonHoverBackgroundColor" target="_top">.NET documentation</a>
+     */
     public static Color getAnnotationDockButtonHoverBackgroundColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -619,6 +1067,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AnnotationDockButtonHoverBorderColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.AnnotationDockButtonHoverBorderColor" target="_top">.NET documentation</a>
+     */
     public static Color getAnnotationDockButtonHoverBorderColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -634,6 +1103,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AnnotationDockButtonHoverColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.AnnotationDockButtonHoverColor" target="_top">.NET documentation</a>
+     */
     public static Color getAnnotationDockButtonHoverColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -649,6 +1139,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AnnotationDockTextColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.AnnotationDockTextColor" target="_top">.NET documentation</a>
+     */
     public static Color getAnnotationDockTextColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -664,6 +1175,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AnnotationUndockTextColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.AnnotationUndockTextColor" target="_top">.NET documentation</a>
+     */
     public static Color getAnnotationUndockTextColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -679,6 +1211,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContextMenuBackgroundGradientBeginColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.ContextMenuBackgroundGradientBeginColor" target="_top">.NET documentation</a>
+     */
     public static Color getContextMenuBackgroundGradientBeginColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -694,6 +1247,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContextMenuBackgroundGradientEndColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.ContextMenuBackgroundGradientEndColor" target="_top">.NET documentation</a>
+     */
     public static Color getContextMenuBackgroundGradientEndColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -709,6 +1283,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContextMenuBorderColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.ContextMenuBorderColor" target="_top">.NET documentation</a>
+     */
     public static Color getContextMenuBorderColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -724,6 +1319,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContextMenuIconAreaColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.ContextMenuIconAreaColor" target="_top">.NET documentation</a>
+     */
     public static Color getContextMenuIconAreaColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -739,6 +1355,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContextMenuItemTextColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.ContextMenuItemTextColor" target="_top">.NET documentation</a>
+     */
     public static Color getContextMenuItemTextColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -754,6 +1391,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContextMenuItemTextDisabledColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.ContextMenuItemTextDisabledColor" target="_top">.NET documentation</a>
+     */
     public static Color getContextMenuItemTextDisabledColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -769,6 +1427,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContextMenuItemTextHoverColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.ContextMenuItemTextHoverColor" target="_top">.NET documentation</a>
+     */
     public static Color getContextMenuItemTextHoverColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -784,6 +1463,24 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContextMenuItemTextHoverQuirkedColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.ContextMenuItemTextHoverQuirkedColor" target="_top">.NET documentation</a>
+     */
     public static Color getContextMenuItemTextHoverQuirkedColor() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.IOException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -799,6 +1496,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContextMenuItemTextSelectedColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.ContextMenuItemTextSelectedColor" target="_top">.NET documentation</a>
+     */
     public static Color getContextMenuItemTextSelectedColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -814,6 +1532,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContextMenuMouseOverBeginColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.ContextMenuMouseOverBeginColor" target="_top">.NET documentation</a>
+     */
     public static Color getContextMenuMouseOverBeginColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -829,6 +1568,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContextMenuMouseOverBorderColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.ContextMenuMouseOverBorderColor" target="_top">.NET documentation</a>
+     */
     public static Color getContextMenuMouseOverBorderColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -844,6 +1604,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContextMenuMouseOverEndColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.ContextMenuMouseOverEndColor" target="_top">.NET documentation</a>
+     */
     public static Color getContextMenuMouseOverEndColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -859,6 +1640,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContextMenuMouseOverMiddle1Color.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.ContextMenuMouseOverMiddle1Color" target="_top">.NET documentation</a>
+     */
     public static Color getContextMenuMouseOverMiddle1Color() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -874,6 +1676,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContextMenuMouseOverMiddle2Color.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.ContextMenuMouseOverMiddle2Color" target="_top">.NET documentation</a>
+     */
     public static Color getContextMenuMouseOverMiddle2Color() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -889,6 +1712,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContextMenuSeparatorColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.ContextMenuSeparatorColor" target="_top">.NET documentation</a>
+     */
     public static Color getContextMenuSeparatorColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -904,6 +1748,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DesignerViewBackgroundColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.DesignerViewBackgroundColor" target="_top">.NET documentation</a>
+     */
     public static Color getDesignerViewBackgroundColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -919,6 +1784,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DesignerViewShellBarCaptionActiveColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.DesignerViewShellBarCaptionActiveColor" target="_top">.NET documentation</a>
+     */
     public static Color getDesignerViewShellBarCaptionActiveColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -934,6 +1820,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DesignerViewShellBarCaptionColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.DesignerViewShellBarCaptionColor" target="_top">.NET documentation</a>
+     */
     public static Color getDesignerViewShellBarCaptionColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -949,6 +1856,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DesignerViewShellBarColorGradientBeginColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.DesignerViewShellBarColorGradientBeginColor" target="_top">.NET documentation</a>
+     */
     public static Color getDesignerViewShellBarColorGradientBeginColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -964,6 +1892,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DesignerViewShellBarColorGradientEndColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.DesignerViewShellBarColorGradientEndColor" target="_top">.NET documentation</a>
+     */
     public static Color getDesignerViewShellBarColorGradientEndColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -979,6 +1928,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DesignerViewShellBarControlBackgroundColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.DesignerViewShellBarControlBackgroundColor" target="_top">.NET documentation</a>
+     */
     public static Color getDesignerViewShellBarControlBackgroundColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -994,6 +1964,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DesignerViewShellBarHoverColorGradientBeginColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.DesignerViewShellBarHoverColorGradientBeginColor" target="_top">.NET documentation</a>
+     */
     public static Color getDesignerViewShellBarHoverColorGradientBeginColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1009,6 +2000,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DesignerViewShellBarHoverColorGradientEndColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.DesignerViewShellBarHoverColorGradientEndColor" target="_top">.NET documentation</a>
+     */
     public static Color getDesignerViewShellBarHoverColorGradientEndColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1024,6 +2036,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DesignerViewShellBarSelectedColorGradientBeginColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.DesignerViewShellBarSelectedColorGradientBeginColor" target="_top">.NET documentation</a>
+     */
     public static Color getDesignerViewShellBarSelectedColorGradientBeginColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1039,6 +2072,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DesignerViewShellBarSelectedColorGradientEndColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.DesignerViewShellBarSelectedColorGradientEndColor" target="_top">.NET documentation</a>
+     */
     public static Color getDesignerViewShellBarSelectedColorGradientEndColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1054,6 +2108,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DesignerViewStatusBarBackgroundColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.DesignerViewStatusBarBackgroundColor" target="_top">.NET documentation</a>
+     */
     public static Color getDesignerViewStatusBarBackgroundColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1069,6 +2144,24 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FlowchartConnectorColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.FlowchartConnectorColor" target="_top">.NET documentation</a>
+     */
     public static Color getFlowchartConnectorColor() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.IOException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1084,6 +2177,24 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GridViewRowHoverColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.GridViewRowHoverColor" target="_top">.NET documentation</a>
+     */
     public static Color getGridViewRowHoverColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.io.IOException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1099,6 +2210,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OutlineViewBackgroundColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.OutlineViewBackgroundColor" target="_top">.NET documentation</a>
+     */
     public static Color getOutlineViewBackgroundColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1114,6 +2246,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OutlineViewCollapsedArrowBorderColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.OutlineViewCollapsedArrowBorderColor" target="_top">.NET documentation</a>
+     */
     public static Color getOutlineViewCollapsedArrowBorderColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1129,6 +2282,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OutlineViewCollapsedArrowHoverBorderColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.OutlineViewCollapsedArrowHoverBorderColor" target="_top">.NET documentation</a>
+     */
     public static Color getOutlineViewCollapsedArrowHoverBorderColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1144,6 +2318,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OutlineViewExpandedArrowBorderColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.OutlineViewExpandedArrowBorderColor" target="_top">.NET documentation</a>
+     */
     public static Color getOutlineViewExpandedArrowBorderColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1159,6 +2354,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OutlineViewExpandedArrowColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.OutlineViewExpandedArrowColor" target="_top">.NET documentation</a>
+     */
     public static Color getOutlineViewExpandedArrowColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1174,6 +2390,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OutlineViewItemHighlightBackgroundColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.OutlineViewItemHighlightBackgroundColor" target="_top">.NET documentation</a>
+     */
     public static Color getOutlineViewItemHighlightBackgroundColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1189,6 +2426,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OutlineViewItemSelectedTextColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.OutlineViewItemSelectedTextColor" target="_top">.NET documentation</a>
+     */
     public static Color getOutlineViewItemSelectedTextColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1204,6 +2462,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OutlineViewItemTextColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.OutlineViewItemTextColor" target="_top">.NET documentation</a>
+     */
     public static Color getOutlineViewItemTextColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1219,6 +2498,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyToolBarHightlightedButtonForegroundColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.PropertyToolBarHightlightedButtonForegroundColor" target="_top">.NET documentation</a>
+     */
     public static Color getPropertyToolBarHightlightedButtonForegroundColor() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1234,6 +2534,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WorkflowViewElementBackgroundColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.WorkflowViewElementBackgroundColor" target="_top">.NET documentation</a>
+     */
     public static Color getWorkflowViewElementBackgroundColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1249,6 +2570,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WorkflowViewElementBorderColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.WorkflowViewElementBorderColor" target="_top">.NET documentation</a>
+     */
     public static Color getWorkflowViewElementBorderColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1264,6 +2606,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WorkflowViewElementCaptionColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.WorkflowViewElementCaptionColor" target="_top">.NET documentation</a>
+     */
     public static Color getWorkflowViewElementCaptionColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1279,6 +2642,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WorkflowViewElementSelectedBackgroundColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.WorkflowViewElementSelectedBackgroundColor" target="_top">.NET documentation</a>
+     */
     public static Color getWorkflowViewElementSelectedBackgroundColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1294,6 +2678,27 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WorkflowViewElementSelectedBorderColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.WorkflowViewElementSelectedBorderColor" target="_top">.NET documentation</a>
+     */
     public static Color getWorkflowViewElementSelectedBorderColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1309,6 +2714,24 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WorkflowViewElementSelectedCaptionColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.WorkflowViewElementSelectedCaptionColor" target="_top">.NET documentation</a>
+     */
     public static Color getWorkflowViewElementSelectedCaptionColor() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.IOException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1324,6 +2747,24 @@ public class WorkflowDesignerColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FontFamily.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowDesignerColors.FontFamily" target="_top">.NET documentation</a>
+     */
     public static FontFamily getFontFamily() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.xaml.XamlParseException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

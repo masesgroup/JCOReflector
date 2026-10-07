@@ -104,7 +104,10 @@ public class MembershipProvider extends system.configuration.provider.ProviderBa
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MembershipProvider(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,16 @@ public class MembershipProvider extends system.configuration.provider.ProviderBa
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ChangePassword.
+     *
+     * @param username the argument of type {@code java.lang.String}
+     * @param oldPassword the argument of type {@code java.lang.String}
+     * @param newPassword the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipProvider.ChangePassword" target="_top">.NET documentation</a>
+     */
     public boolean ChangePassword(java.lang.String username, java.lang.String oldPassword, java.lang.String newPassword) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +184,17 @@ public class MembershipProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Invokes the .NET member ChangePasswordQuestionAndAnswer.
+     *
+     * @param username the argument of type {@code java.lang.String}
+     * @param password the argument of type {@code java.lang.String}
+     * @param newPasswordQuestion the argument of type {@code java.lang.String}
+     * @param newPasswordAnswer the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipProvider.ChangePasswordQuestionAndAnswer" target="_top">.NET documentation</a>
+     */
     public boolean ChangePasswordQuestionAndAnswer(java.lang.String username, java.lang.String password, java.lang.String newPasswordQuestion, java.lang.String newPasswordAnswer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +209,15 @@ public class MembershipProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Invokes the .NET member DeleteUser.
+     *
+     * @param username the argument of type {@code java.lang.String}
+     * @param deleteAllRelatedData the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipProvider.DeleteUser" target="_top">.NET documentation</a>
+     */
     public boolean DeleteUser(java.lang.String username, boolean deleteAllRelatedData) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +232,14 @@ public class MembershipProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Invokes the .NET member UnlockUser.
+     *
+     * @param userName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipProvider.UnlockUser" target="_top">.NET documentation</a>
+     */
     public boolean UnlockUser(java.lang.String userName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +254,15 @@ public class MembershipProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Invokes the .NET member ValidateUser.
+     *
+     * @param username the argument of type {@code java.lang.String}
+     * @param password the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipProvider.ValidateUser" target="_top">.NET documentation</a>
+     */
     public boolean ValidateUser(java.lang.String username, java.lang.String password) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +277,13 @@ public class MembershipProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Invokes the .NET member GetNumberOfUsersOnline.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipProvider.GetNumberOfUsersOnline" target="_top">.NET documentation</a>
+     */
     public int GetNumberOfUsersOnline() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +324,15 @@ public class MembershipProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Invokes the .NET member GetPassword.
+     *
+     * @param username the argument of type {@code java.lang.String}
+     * @param answer the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipProvider.GetPassword" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetPassword(java.lang.String username, java.lang.String answer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +347,14 @@ public class MembershipProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Invokes the .NET member GetUserNameByEmail.
+     *
+     * @param email the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipProvider.GetUserNameByEmail" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetUserNameByEmail(java.lang.String email) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +369,15 @@ public class MembershipProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Invokes the .NET member ResetPassword.
+     *
+     * @param username the argument of type {@code java.lang.String}
+     * @param answer the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipProvider.ResetPassword" target="_top">.NET documentation</a>
+     */
     public java.lang.String ResetPassword(java.lang.String username, java.lang.String answer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -309,6 +392,21 @@ public class MembershipProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Invokes the .NET member CreateUser.
+     *
+     * @param username the argument of type {@code java.lang.String}
+     * @param password the argument of type {@code java.lang.String}
+     * @param email the argument of type {@code java.lang.String}
+     * @param passwordQuestion the argument of type {@code java.lang.String}
+     * @param passwordAnswer the argument of type {@code java.lang.String}
+     * @param isApproved the argument of type {@code boolean}
+     * @param providerUserKey the argument of type {@code NetObject}
+     * @param status the argument of type {@code JCORefOut<MembershipCreateStatus>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipProvider.CreateUser" target="_top">.NET documentation</a>
+     */
     public MembershipUser CreateUser(java.lang.String username, java.lang.String password, java.lang.String email, java.lang.String passwordQuestion, java.lang.String passwordAnswer, boolean isApproved, NetObject providerUserKey, JCORefOut<MembershipCreateStatus> status) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -324,6 +422,15 @@ public class MembershipProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Invokes the .NET member GetUser.
+     *
+     * @param providerUserKey the argument of type {@code NetObject}
+     * @param userIsOnline the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipProvider.GetUser" target="_top">.NET documentation</a>
+     */
     public MembershipUser GetUser(NetObject providerUserKey, boolean userIsOnline) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -339,6 +446,15 @@ public class MembershipProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Invokes the .NET member GetUser.
+     *
+     * @param username the argument of type {@code java.lang.String}
+     * @param userIsOnline the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipProvider.GetUser" target="_top">.NET documentation</a>
+     */
     public MembershipUser GetUser(java.lang.String username, boolean userIsOnline) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -354,6 +470,17 @@ public class MembershipProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Invokes the .NET member FindUsersByEmail.
+     *
+     * @param emailToMatch the argument of type {@code java.lang.String}
+     * @param pageIndex the argument of type {@code int}
+     * @param pageSize the argument of type {@code int}
+     * @param totalRecords the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipProvider.FindUsersByEmail" target="_top">.NET documentation</a>
+     */
     public MembershipUserCollection FindUsersByEmail(java.lang.String emailToMatch, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -369,6 +496,17 @@ public class MembershipProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Invokes the .NET member FindUsersByName.
+     *
+     * @param usernameToMatch the argument of type {@code java.lang.String}
+     * @param pageIndex the argument of type {@code int}
+     * @param pageSize the argument of type {@code int}
+     * @param totalRecords the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipProvider.FindUsersByName" target="_top">.NET documentation</a>
+     */
     public MembershipUserCollection FindUsersByName(java.lang.String usernameToMatch, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -384,6 +522,16 @@ public class MembershipProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Invokes the .NET member GetAllUsers.
+     *
+     * @param pageIndex the argument of type {@code int}
+     * @param pageSize the argument of type {@code int}
+     * @param totalRecords the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipProvider.GetAllUsers" target="_top">.NET documentation</a>
+     */
     public MembershipUserCollection GetAllUsers(int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -399,6 +547,13 @@ public class MembershipProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Invokes the .NET member UpdateUser.
+     *
+     * @param user the argument of type {@code MembershipUser}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipProvider.UpdateUser" target="_top">.NET documentation</a>
+     */
     public void UpdateUser(MembershipUser user) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -413,6 +568,13 @@ public class MembershipProvider extends system.configuration.provider.ProviderBa
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EnablePasswordReset.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipProvider.EnablePasswordReset" target="_top">.NET documentation</a>
+     */
     public boolean getEnablePasswordReset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -427,6 +589,13 @@ public class MembershipProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Gets the value of the .NET property EnablePasswordRetrieval.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipProvider.EnablePasswordRetrieval" target="_top">.NET documentation</a>
+     */
     public boolean getEnablePasswordRetrieval() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -441,6 +610,13 @@ public class MembershipProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequiresQuestionAndAnswer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipProvider.RequiresQuestionAndAnswer" target="_top">.NET documentation</a>
+     */
     public boolean getRequiresQuestionAndAnswer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -455,6 +631,13 @@ public class MembershipProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequiresUniqueEmail.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipProvider.RequiresUniqueEmail" target="_top">.NET documentation</a>
+     */
     public boolean getRequiresUniqueEmail() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -469,6 +652,13 @@ public class MembershipProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxInvalidPasswordAttempts.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipProvider.MaxInvalidPasswordAttempts" target="_top">.NET documentation</a>
+     */
     public int getMaxInvalidPasswordAttempts() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -509,6 +699,13 @@ public class MembershipProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinRequiredNonAlphanumericCharacters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipProvider.MinRequiredNonAlphanumericCharacters" target="_top">.NET documentation</a>
+     */
     public int getMinRequiredNonAlphanumericCharacters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -549,6 +746,13 @@ public class MembershipProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinRequiredPasswordLength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipProvider.MinRequiredPasswordLength" target="_top">.NET documentation</a>
+     */
     public int getMinRequiredPasswordLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -589,6 +793,13 @@ public class MembershipProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Gets the value of the .NET property PasswordAttemptWindow.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipProvider.PasswordAttemptWindow" target="_top">.NET documentation</a>
+     */
     public int getPasswordAttemptWindow() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -629,6 +840,13 @@ public class MembershipProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Gets the value of the .NET property ApplicationName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipProvider.ApplicationName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getApplicationName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -643,6 +861,13 @@ public class MembershipProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Sets the value of the .NET property ApplicationName.
+     *
+     * @param ApplicationName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipProvider.ApplicationName" target="_top">.NET documentation</a>
+     */
     public void setApplicationName(java.lang.String ApplicationName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -653,6 +878,13 @@ public class MembershipProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Gets the value of the .NET property PasswordStrengthRegularExpression.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipProvider.PasswordStrengthRegularExpression" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPasswordStrengthRegularExpression() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -667,6 +899,13 @@ public class MembershipProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Gets the value of the .NET property PasswordFormat.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipProvider.PasswordFormat" target="_top">.NET documentation</a>
+     */
     public MembershipPasswordFormat getPasswordFormat() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -687,6 +926,13 @@ public class MembershipProvider extends system.configuration.provider.ProviderBa
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addValidatingPassword.
+     *
+     * @param handler the argument of type {@code MembershipValidatePasswordEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addValidatingPassword(MembershipValidatePasswordEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -697,6 +943,13 @@ public class MembershipProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Invokes the .NET member removeValidatingPassword.
+     *
+     * @param handler the argument of type {@code MembershipValidatePasswordEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeValidatingPassword(MembershipValidatePasswordEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

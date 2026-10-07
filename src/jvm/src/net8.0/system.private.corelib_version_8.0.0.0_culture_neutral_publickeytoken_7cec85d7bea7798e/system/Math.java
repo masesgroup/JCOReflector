@@ -106,7 +106,10 @@ public class Math extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Math(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,25 @@ public class Math extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Clamp.
+     *
+     * @param value the argument of type {@code byte}
+     * @param min the argument of type {@code byte}
+     * @param max the argument of type {@code byte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Clamp" target="_top">.NET documentation</a>
+     */
     public static byte Clamp(byte value, byte min, byte max) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -199,6 +221,15 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Max.
+     *
+     * @param val1 the argument of type {@code byte}
+     * @param val2 the argument of type {@code byte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Max" target="_top">.NET documentation</a>
+     */
     public static byte Max(byte val1, byte val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -239,6 +270,15 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Min.
+     *
+     * @param val1 the argument of type {@code byte}
+     * @param val2 the argument of type {@code byte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Min" target="_top">.NET documentation</a>
+     */
     public static byte Min(byte val1, byte val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -279,6 +319,19 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Abs.
+     *
+     * @param value the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Abs" target="_top">.NET documentation</a>
+     */
     public static double Abs(double value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -319,6 +372,14 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Acos.
+     *
+     * @param d the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Acos" target="_top">.NET documentation</a>
+     */
     public static double Acos(double d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -359,6 +420,14 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Acosh.
+     *
+     * @param d the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Acosh" target="_top">.NET documentation</a>
+     */
     public static double Acosh(double d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -399,6 +468,14 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Asin.
+     *
+     * @param d the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Asin" target="_top">.NET documentation</a>
+     */
     public static double Asin(double d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -439,6 +516,14 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Asinh.
+     *
+     * @param d the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Asinh" target="_top">.NET documentation</a>
+     */
     public static double Asinh(double d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -479,6 +564,14 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Atan.
+     *
+     * @param d the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Atan" target="_top">.NET documentation</a>
+     */
     public static double Atan(double d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -519,6 +612,15 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Atan2.
+     *
+     * @param y the argument of type {@code double}
+     * @param x the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Atan2" target="_top">.NET documentation</a>
+     */
     public static double Atan2(double y, double x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -559,6 +661,14 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Atanh.
+     *
+     * @param d the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Atanh" target="_top">.NET documentation</a>
+     */
     public static double Atanh(double d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -599,6 +709,19 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BitDecrement.
+     *
+     * @param x the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.BitDecrement" target="_top">.NET documentation</a>
+     */
     public static double BitDecrement(double x) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -639,6 +762,19 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BitIncrement.
+     *
+     * @param x the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.BitIncrement" target="_top">.NET documentation</a>
+     */
     public static double BitIncrement(double x) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -679,6 +815,14 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Cbrt.
+     *
+     * @param d the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Cbrt" target="_top">.NET documentation</a>
+     */
     public static double Cbrt(double d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -719,6 +863,14 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Ceiling.
+     *
+     * @param a the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Ceiling" target="_top">.NET documentation</a>
+     */
     public static double Ceiling(double a) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -759,6 +911,25 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Clamp.
+     *
+     * @param value the argument of type {@code double}
+     * @param min the argument of type {@code double}
+     * @param max the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Clamp" target="_top">.NET documentation</a>
+     */
     public static double Clamp(double value, double min, double max) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -799,6 +970,18 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CopySign.
+     *
+     * @param x the argument of type {@code double}
+     * @param y the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.CopySign" target="_top">.NET documentation</a>
+     */
     public static double CopySign(double x, double y) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -839,6 +1022,14 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Cos.
+     *
+     * @param d the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Cos" target="_top">.NET documentation</a>
+     */
     public static double Cos(double d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -879,6 +1070,14 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Cosh.
+     *
+     * @param value the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Cosh" target="_top">.NET documentation</a>
+     */
     public static double Cosh(double value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -919,6 +1118,14 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Exp.
+     *
+     * @param d the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Exp" target="_top">.NET documentation</a>
+     */
     public static double Exp(double d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -959,6 +1166,14 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Floor.
+     *
+     * @param d the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Floor" target="_top">.NET documentation</a>
+     */
     public static double Floor(double d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -999,6 +1214,16 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FusedMultiplyAdd.
+     *
+     * @param x the argument of type {@code double}
+     * @param y the argument of type {@code double}
+     * @param z the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.FusedMultiplyAdd" target="_top">.NET documentation</a>
+     */
     public static double FusedMultiplyAdd(double x, double y, double z) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1039,6 +1264,19 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IEEERemainder.
+     *
+     * @param x the argument of type {@code double}
+     * @param y the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.IEEERemainder" target="_top">.NET documentation</a>
+     */
     public static double IEEERemainder(double x, double y) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1079,6 +1317,15 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Log.
+     *
+     * @param a the argument of type {@code double}
+     * @param newBase the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Log" target="_top">.NET documentation</a>
+     */
     public static double Log(double a, double newBase) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1119,6 +1366,14 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Log.
+     *
+     * @param d the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Log" target="_top">.NET documentation</a>
+     */
     public static double Log(double d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1159,6 +1414,14 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Log10.
+     *
+     * @param d the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Log10" target="_top">.NET documentation</a>
+     */
     public static double Log10(double d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1199,6 +1462,14 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Log2.
+     *
+     * @param x the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Log2" target="_top">.NET documentation</a>
+     */
     public static double Log2(double x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1239,6 +1510,18 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Max.
+     *
+     * @param val1 the argument of type {@code double}
+     * @param val2 the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Max" target="_top">.NET documentation</a>
+     */
     public static double Max(double val1, double val2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1279,6 +1562,18 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MaxMagnitude.
+     *
+     * @param x the argument of type {@code double}
+     * @param y the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.MaxMagnitude" target="_top">.NET documentation</a>
+     */
     public static double MaxMagnitude(double x, double y) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1319,6 +1614,18 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Min.
+     *
+     * @param val1 the argument of type {@code double}
+     * @param val2 the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Min" target="_top">.NET documentation</a>
+     */
     public static double Min(double val1, double val2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1359,6 +1666,18 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MinMagnitude.
+     *
+     * @param x the argument of type {@code double}
+     * @param y the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.MinMagnitude" target="_top">.NET documentation</a>
+     */
     public static double MinMagnitude(double x, double y) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1399,6 +1718,15 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Pow.
+     *
+     * @param x the argument of type {@code double}
+     * @param y the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Pow" target="_top">.NET documentation</a>
+     */
     public static double Pow(double x, double y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1439,6 +1767,14 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReciprocalEstimate.
+     *
+     * @param d the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.ReciprocalEstimate" target="_top">.NET documentation</a>
+     */
     public static double ReciprocalEstimate(double d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1479,6 +1815,14 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReciprocalSqrtEstimate.
+     *
+     * @param d the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.ReciprocalSqrtEstimate" target="_top">.NET documentation</a>
+     */
     public static double ReciprocalSqrtEstimate(double d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1519,6 +1863,27 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Round.
+     *
+     * @param value the argument of type {@code double}
+     * @param digits the argument of type {@code int}
+     * @param mode the argument of type {@code MidpointRounding}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Round" target="_top">.NET documentation</a>
+     */
     public static double Round(double value, int digits, MidpointRounding mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1559,6 +1924,25 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Round.
+     *
+     * @param value the argument of type {@code double}
+     * @param digits the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Round" target="_top">.NET documentation</a>
+     */
     public static double Round(double value, int digits) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1599,6 +1983,22 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Round.
+     *
+     * @param value the argument of type {@code double}
+     * @param mode the argument of type {@code MidpointRounding}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Round" target="_top">.NET documentation</a>
+     */
     public static double Round(double value, MidpointRounding mode) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1639,6 +2039,19 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Round.
+     *
+     * @param a the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Round" target="_top">.NET documentation</a>
+     */
     public static double Round(double a) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1679,6 +2092,20 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScaleB.
+     *
+     * @param x the argument of type {@code double}
+     * @param n the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.ScaleB" target="_top">.NET documentation</a>
+     */
     public static double ScaleB(double x, int n) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1719,6 +2146,14 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Sin.
+     *
+     * @param a the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Sin" target="_top">.NET documentation</a>
+     */
     public static double Sin(double a) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1759,6 +2194,14 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Sinh.
+     *
+     * @param value the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Sinh" target="_top">.NET documentation</a>
+     */
     public static double Sinh(double value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1799,6 +2242,14 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Sqrt.
+     *
+     * @param d the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Sqrt" target="_top">.NET documentation</a>
+     */
     public static double Sqrt(double d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1839,6 +2290,14 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Tan.
+     *
+     * @param a the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Tan" target="_top">.NET documentation</a>
+     */
     public static double Tan(double a) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1879,6 +2338,14 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Tanh.
+     *
+     * @param value the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Tanh" target="_top">.NET documentation</a>
+     */
     public static double Tanh(double value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1919,6 +2386,14 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Truncate.
+     *
+     * @param d the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Truncate" target="_top">.NET documentation</a>
+     */
     public static double Truncate(double d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1959,6 +2434,24 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Abs.
+     *
+     * @param value the argument of type {@code short}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Abs" target="_top">.NET documentation</a>
+     */
     public static short Abs(short value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1999,6 +2492,25 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Clamp.
+     *
+     * @param value the argument of type {@code short}
+     * @param min the argument of type {@code short}
+     * @param max the argument of type {@code short}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Clamp" target="_top">.NET documentation</a>
+     */
     public static short Clamp(short value, short min, short max) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2039,6 +2551,15 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Max.
+     *
+     * @param val1 the argument of type {@code short}
+     * @param val2 the argument of type {@code short}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Max" target="_top">.NET documentation</a>
+     */
     public static short Max(short val1, short val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2079,6 +2600,15 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Min.
+     *
+     * @param val1 the argument of type {@code short}
+     * @param val2 the argument of type {@code short}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Min" target="_top">.NET documentation</a>
+     */
     public static short Min(short val1, short val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2119,6 +2649,24 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Abs.
+     *
+     * @param value the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Abs" target="_top">.NET documentation</a>
+     */
     public static int Abs(int value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2159,6 +2707,25 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Clamp.
+     *
+     * @param value the argument of type {@code int}
+     * @param min the argument of type {@code int}
+     * @param max the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Clamp" target="_top">.NET documentation</a>
+     */
     public static int Clamp(int value, int min, int max) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2199,6 +2766,16 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DivRem.
+     *
+     * @param a the argument of type {@code int}
+     * @param b the argument of type {@code int}
+     * @param result the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.DivRem" target="_top">.NET documentation</a>
+     */
     public static int DivRem(int a, int b, JCORefOut<java.util.concurrent.atomic.AtomicInteger> result) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2239,6 +2816,19 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ILogB.
+     *
+     * @param x the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.ILogB" target="_top">.NET documentation</a>
+     */
     public static int ILogB(double x) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2279,6 +2869,15 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Max.
+     *
+     * @param val1 the argument of type {@code int}
+     * @param val2 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Max" target="_top">.NET documentation</a>
+     */
     public static int Max(int val1, int val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2319,6 +2918,15 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Min.
+     *
+     * @param val1 the argument of type {@code int}
+     * @param val2 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Min" target="_top">.NET documentation</a>
+     */
     public static int Min(int val1, int val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2359,6 +2967,26 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Sign.
+     *
+     * @param value the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Sign" target="_top">.NET documentation</a>
+     */
     public static int Sign(double value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2399,6 +3027,14 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Sign.
+     *
+     * @param value the argument of type {@code short}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Sign" target="_top">.NET documentation</a>
+     */
     public static int Sign(short value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2439,6 +3075,14 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Sign.
+     *
+     * @param value the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Sign" target="_top">.NET documentation</a>
+     */
     public static int Sign(int value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2479,6 +3123,14 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Sign.
+     *
+     * @param value the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Sign" target="_top">.NET documentation</a>
+     */
     public static int Sign(long value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2519,6 +3171,14 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Sign.
+     *
+     * @param value the argument of type {@code SByte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Sign" target="_top">.NET documentation</a>
+     */
     public static int Sign(SByte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2559,6 +3219,26 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Sign.
+     *
+     * @param value the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Sign" target="_top">.NET documentation</a>
+     */
     public static int Sign(Single value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2599,6 +3279,14 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Sign.
+     *
+     * @param value the argument of type {@code Decimal}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Sign" target="_top">.NET documentation</a>
+     */
     public static int Sign(Decimal value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2639,6 +3327,24 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Abs.
+     *
+     * @param value the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Abs" target="_top">.NET documentation</a>
+     */
     public static long Abs(long value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2679,6 +3385,15 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BigMul.
+     *
+     * @param a the argument of type {@code int}
+     * @param b the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.BigMul" target="_top">.NET documentation</a>
+     */
     public static long BigMul(int a, int b) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2719,6 +3434,16 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BigMul.
+     *
+     * @param a the argument of type {@code long}
+     * @param b the argument of type {@code long}
+     * @param low the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicLong>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.BigMul" target="_top">.NET documentation</a>
+     */
     public static long BigMul(long a, long b, JCORefOut<java.util.concurrent.atomic.AtomicLong> low) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2759,6 +3484,25 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Clamp.
+     *
+     * @param value the argument of type {@code long}
+     * @param min the argument of type {@code long}
+     * @param max the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Clamp" target="_top">.NET documentation</a>
+     */
     public static long Clamp(long value, long min, long max) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2799,6 +3543,16 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DivRem.
+     *
+     * @param a the argument of type {@code long}
+     * @param b the argument of type {@code long}
+     * @param result the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicLong>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.DivRem" target="_top">.NET documentation</a>
+     */
     public static long DivRem(long a, long b, JCORefOut<java.util.concurrent.atomic.AtomicLong> result) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2839,6 +3593,15 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Max.
+     *
+     * @param val1 the argument of type {@code long}
+     * @param val2 the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Max" target="_top">.NET documentation</a>
+     */
     public static long Max(long val1, long val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2879,6 +3642,15 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Min.
+     *
+     * @param val1 the argument of type {@code long}
+     * @param val2 the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Min" target="_top">.NET documentation</a>
+     */
     public static long Min(long val1, long val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2919,6 +3691,24 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Abs.
+     *
+     * @param value the argument of type {@code SByte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Abs" target="_top">.NET documentation</a>
+     */
     public static SByte Abs(SByte value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2934,6 +3724,25 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Clamp.
+     *
+     * @param value the argument of type {@code SByte}
+     * @param min the argument of type {@code SByte}
+     * @param max the argument of type {@code SByte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Clamp" target="_top">.NET documentation</a>
+     */
     public static SByte Clamp(SByte value, SByte min, SByte max) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2949,6 +3758,15 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Max.
+     *
+     * @param val1 the argument of type {@code SByte}
+     * @param val2 the argument of type {@code SByte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Max" target="_top">.NET documentation</a>
+     */
     public static SByte Max(SByte val1, SByte val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2964,6 +3782,15 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Min.
+     *
+     * @param val1 the argument of type {@code SByte}
+     * @param val2 the argument of type {@code SByte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Min" target="_top">.NET documentation</a>
+     */
     public static SByte Min(SByte val1, SByte val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2979,6 +3806,19 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Abs.
+     *
+     * @param value the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Abs" target="_top">.NET documentation</a>
+     */
     public static Single Abs(Single value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2994,6 +3834,25 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Clamp.
+     *
+     * @param value the argument of type {@code Single}
+     * @param min the argument of type {@code Single}
+     * @param max the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Clamp" target="_top">.NET documentation</a>
+     */
     public static Single Clamp(Single value, Single min, Single max) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -3009,6 +3868,18 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Max.
+     *
+     * @param val1 the argument of type {@code Single}
+     * @param val2 the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Max" target="_top">.NET documentation</a>
+     */
     public static Single Max(Single val1, Single val2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -3024,6 +3895,18 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Min.
+     *
+     * @param val1 the argument of type {@code Single}
+     * @param val2 the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Min" target="_top">.NET documentation</a>
+     */
     public static Single Min(Single val1, Single val2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -3039,6 +3922,14 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Abs.
+     *
+     * @param value the argument of type {@code Decimal}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Abs" target="_top">.NET documentation</a>
+     */
     public static Decimal Abs(Decimal value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -3054,6 +3945,20 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Ceiling.
+     *
+     * @param d the argument of type {@code Decimal}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Ceiling" target="_top">.NET documentation</a>
+     */
     public static Decimal Ceiling(Decimal d) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -3069,6 +3974,22 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Clamp.
+     *
+     * @param value the argument of type {@code Decimal}
+     * @param min the argument of type {@code Decimal}
+     * @param max the argument of type {@code Decimal}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Clamp" target="_top">.NET documentation</a>
+     */
     public static Decimal Clamp(Decimal value, Decimal min, Decimal max) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -3084,6 +4005,20 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Floor.
+     *
+     * @param d the argument of type {@code Decimal}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Floor" target="_top">.NET documentation</a>
+     */
     public static Decimal Floor(Decimal d) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -3099,6 +4034,21 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Max.
+     *
+     * @param val1 the argument of type {@code Decimal}
+     * @param val2 the argument of type {@code Decimal}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Max" target="_top">.NET documentation</a>
+     */
     public static Decimal Max(Decimal val1, Decimal val2) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -3114,6 +4064,21 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Min.
+     *
+     * @param val1 the argument of type {@code Decimal}
+     * @param val2 the argument of type {@code Decimal}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Min" target="_top">.NET documentation</a>
+     */
     public static Decimal Min(Decimal val1, Decimal val2) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -3129,6 +4094,26 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Round.
+     *
+     * @param d the argument of type {@code Decimal}
+     * @param decimals the argument of type {@code int}
+     * @param mode the argument of type {@code MidpointRounding}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Round" target="_top">.NET documentation</a>
+     */
     public static Decimal Round(Decimal d, int decimals, MidpointRounding mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -3144,6 +4129,25 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Round.
+     *
+     * @param d the argument of type {@code Decimal}
+     * @param decimals the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Round" target="_top">.NET documentation</a>
+     */
     public static Decimal Round(Decimal d, int decimals) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -3159,6 +4163,25 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Round.
+     *
+     * @param d the argument of type {@code Decimal}
+     * @param mode the argument of type {@code MidpointRounding}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Round" target="_top">.NET documentation</a>
+     */
     public static Decimal Round(Decimal d, MidpointRounding mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -3174,6 +4197,24 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Round.
+     *
+     * @param d the argument of type {@code Decimal}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Round" target="_top">.NET documentation</a>
+     */
     public static Decimal Round(Decimal d) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -3189,6 +4230,20 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Truncate.
+     *
+     * @param d the argument of type {@code Decimal}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Truncate" target="_top">.NET documentation</a>
+     */
     public static Decimal Truncate(Decimal d) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -3204,6 +4259,15 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DivRem.
+     *
+     * @param left the argument of type {@code byte}
+     * @param right the argument of type {@code byte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.DivRem" target="_top">.NET documentation</a>
+     */
     public static ValueTuple_2 DivRem(byte left, byte right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -3219,6 +4283,14 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SinCos.
+     *
+     * @param x the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.SinCos" target="_top">.NET documentation</a>
+     */
     public static ValueTuple_2 SinCos(double x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -3234,6 +4306,15 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DivRem.
+     *
+     * @param left the argument of type {@code short}
+     * @param right the argument of type {@code short}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.DivRem" target="_top">.NET documentation</a>
+     */
     public static ValueTuple_2 DivRem(short left, short right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -3249,6 +4330,15 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DivRem.
+     *
+     * @param left the argument of type {@code int}
+     * @param right the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.DivRem" target="_top">.NET documentation</a>
+     */
     public static ValueTuple_2 DivRem(int left, int right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -3264,6 +4354,15 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DivRem.
+     *
+     * @param left the argument of type {@code long}
+     * @param right the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.DivRem" target="_top">.NET documentation</a>
+     */
     public static ValueTuple_2 DivRem(long left, long right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -3279,6 +4378,15 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DivRem.
+     *
+     * @param left the argument of type {@code SByte}
+     * @param right the argument of type {@code SByte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.DivRem" target="_top">.NET documentation</a>
+     */
     public static ValueTuple_2 DivRem(SByte left, SByte right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -3294,6 +4402,15 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DivRem.
+     *
+     * @param left the argument of type {@code UInt16}
+     * @param right the argument of type {@code UInt16}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.DivRem" target="_top">.NET documentation</a>
+     */
     public static ValueTuple_2 DivRem(UInt16 left, UInt16 right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -3309,6 +4426,15 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DivRem.
+     *
+     * @param left the argument of type {@code UInt32}
+     * @param right the argument of type {@code UInt32}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.DivRem" target="_top">.NET documentation</a>
+     */
     public static ValueTuple_2 DivRem(UInt32 left, UInt32 right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -3324,6 +4450,15 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DivRem.
+     *
+     * @param left the argument of type {@code UInt64}
+     * @param right the argument of type {@code UInt64}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.DivRem" target="_top">.NET documentation</a>
+     */
     public static ValueTuple_2 DivRem(UInt64 left, UInt64 right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -3339,6 +4474,25 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Clamp.
+     *
+     * @param value the argument of type {@code UInt16}
+     * @param min the argument of type {@code UInt16}
+     * @param max the argument of type {@code UInt16}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Clamp" target="_top">.NET documentation</a>
+     */
     public static UInt16 Clamp(UInt16 value, UInt16 min, UInt16 max) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -3354,6 +4508,15 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Max.
+     *
+     * @param val1 the argument of type {@code UInt16}
+     * @param val2 the argument of type {@code UInt16}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Max" target="_top">.NET documentation</a>
+     */
     public static UInt16 Max(UInt16 val1, UInt16 val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -3369,6 +4532,15 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Min.
+     *
+     * @param val1 the argument of type {@code UInt16}
+     * @param val2 the argument of type {@code UInt16}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Min" target="_top">.NET documentation</a>
+     */
     public static UInt16 Min(UInt16 val1, UInt16 val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -3384,6 +4556,25 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Clamp.
+     *
+     * @param value the argument of type {@code UInt32}
+     * @param min the argument of type {@code UInt32}
+     * @param max the argument of type {@code UInt32}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Clamp" target="_top">.NET documentation</a>
+     */
     public static UInt32 Clamp(UInt32 value, UInt32 min, UInt32 max) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -3399,6 +4590,15 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Max.
+     *
+     * @param val1 the argument of type {@code UInt32}
+     * @param val2 the argument of type {@code UInt32}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Max" target="_top">.NET documentation</a>
+     */
     public static UInt32 Max(UInt32 val1, UInt32 val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -3414,6 +4614,15 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Min.
+     *
+     * @param val1 the argument of type {@code UInt32}
+     * @param val2 the argument of type {@code UInt32}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Min" target="_top">.NET documentation</a>
+     */
     public static UInt32 Min(UInt32 val1, UInt32 val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -3429,6 +4638,16 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BigMul.
+     *
+     * @param a the argument of type {@code UInt64}
+     * @param b the argument of type {@code UInt64}
+     * @param low the argument of type {@code JCORefOut<UInt64>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.BigMul" target="_top">.NET documentation</a>
+     */
     public static UInt64 BigMul(UInt64 a, UInt64 b, JCORefOut<UInt64> low) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -3444,6 +4663,25 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Clamp.
+     *
+     * @param value the argument of type {@code UInt64}
+     * @param min the argument of type {@code UInt64}
+     * @param max the argument of type {@code UInt64}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Clamp" target="_top">.NET documentation</a>
+     */
     public static UInt64 Clamp(UInt64 value, UInt64 min, UInt64 max) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -3459,6 +4697,15 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Max.
+     *
+     * @param val1 the argument of type {@code UInt64}
+     * @param val2 the argument of type {@code UInt64}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Max" target="_top">.NET documentation</a>
+     */
     public static UInt64 Max(UInt64 val1, UInt64 val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -3474,6 +4721,15 @@ public class Math extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Min.
+     *
+     * @param val1 the argument of type {@code UInt64}
+     * @param val2 the argument of type {@code UInt64}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Math.Min" target="_top">.NET documentation</a>
+     */
     public static UInt64 Min(UInt64 val1, UInt64 val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

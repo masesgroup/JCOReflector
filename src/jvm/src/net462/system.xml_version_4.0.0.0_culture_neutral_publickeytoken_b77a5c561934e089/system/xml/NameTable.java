@@ -99,7 +99,10 @@ public class NameTable extends system.xml.XmlNameTable  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public NameTable(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class NameTable extends system.xml.XmlNameTable  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.NameTable.-ctor" target="_top">.NET documentation</a>
+     */
     public NameTable() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +169,18 @@ public class NameTable extends system.xml.XmlNameTable  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param key the argument of type {@code char[]}
+     * @param start the argument of type {@code int}
+     * @param len the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.NameTable.Add" target="_top">.NET documentation</a>
+     */
     public java.lang.String Add(char[] key, int start, int len) throws Throwable, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +195,18 @@ public class NameTable extends system.xml.XmlNameTable  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.NameTable.Add" target="_top">.NET documentation</a>
+     */
     public java.lang.String Add(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +221,16 @@ public class NameTable extends system.xml.XmlNameTable  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.NameTable.Add" target="_top">.NET documentation</a>
+     */
     public java.lang.String Add(java.lang.String key) throws Throwable, system.ArgumentNullException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +245,17 @@ public class NameTable extends system.xml.XmlNameTable  {
         }
     }
 
+    /**
+     * Invokes the .NET member Get.
+     *
+     * @param key the argument of type {@code char[]}
+     * @param start the argument of type {@code int}
+     * @param len the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.NameTable.Get" target="_top">.NET documentation</a>
+     */
     public java.lang.String Get(char[] key, int start, int len) throws Throwable, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +270,17 @@ public class NameTable extends system.xml.XmlNameTable  {
         }
     }
 
+    /**
+     * Invokes the .NET member Get.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.NameTable.Get" target="_top">.NET documentation</a>
+     */
     public java.lang.String Get(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +295,16 @@ public class NameTable extends system.xml.XmlNameTable  {
         }
     }
 
+    /**
+     * Invokes the .NET member Get.
+     *
+     * @param value the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.NameTable.Get" target="_top">.NET documentation</a>
+     */
     public java.lang.String Get(java.lang.String value) throws Throwable, system.ArgumentNullException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

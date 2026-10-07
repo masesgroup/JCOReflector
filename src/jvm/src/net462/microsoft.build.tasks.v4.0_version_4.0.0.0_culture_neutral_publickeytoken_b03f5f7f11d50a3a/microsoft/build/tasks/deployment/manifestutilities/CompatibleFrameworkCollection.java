@@ -99,7 +99,10 @@ public class CompatibleFrameworkCollection extends NetObjectEnumerable  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CompatibleFrameworkCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,14 @@ public class CompatibleFrameworkCollection extends NetObjectEnumerable  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param compatibleFramework the argument of type {@code CompatibleFramework}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFrameworkCollection.Add" target="_top">.NET documentation</a>
+     */
     public void Add(CompatibleFramework compatibleFramework) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -164,6 +175,12 @@ public class CompatibleFrameworkCollection extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member Clear.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFrameworkCollection.Clear" target="_top">.NET documentation</a>
+     */
     public void Clear() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +195,13 @@ public class CompatibleFrameworkCollection extends NetObjectEnumerable  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Count.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFrameworkCollection.Count" target="_top">.NET documentation</a>
+     */
     public int getCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

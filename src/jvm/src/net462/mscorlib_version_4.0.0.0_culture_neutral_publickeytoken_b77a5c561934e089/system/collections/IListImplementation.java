@@ -101,7 +101,10 @@ public class IListImplementation extends IEnumerableImplementation implements IL
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IListImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,14 @@ public class IListImplementation extends IEnumerableImplementation implements IL
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IList.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -157,6 +168,14 @@ public class IListImplementation extends IEnumerableImplementation implements IL
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IList.Add" target="_top">.NET documentation</a>
+     */
     public int Add(NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +216,14 @@ public class IListImplementation extends IEnumerableImplementation implements IL
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IList.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +264,12 @@ public class IListImplementation extends IEnumerableImplementation implements IL
         }
     }
 
+    /**
+     * Invokes the .NET member Clear.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IList.Clear" target="_top">.NET documentation</a>
+     */
     public void Clear() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +280,14 @@ public class IListImplementation extends IEnumerableImplementation implements IL
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code Array}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IList.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(Array array, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +298,14 @@ public class IListImplementation extends IEnumerableImplementation implements IL
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IList.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(int index, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +316,13 @@ public class IListImplementation extends IEnumerableImplementation implements IL
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IList.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +333,13 @@ public class IListImplementation extends IEnumerableImplementation implements IL
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAt.
+     *
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IList.RemoveAt" target="_top">.NET documentation</a>
+     */
     public void RemoveAt(int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +354,13 @@ public class IListImplementation extends IEnumerableImplementation implements IL
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsFixedSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IList.IsFixedSize" target="_top">.NET documentation</a>
+     */
     public boolean getIsFixedSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +375,13 @@ public class IListImplementation extends IEnumerableImplementation implements IL
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsReadOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IList.IsReadOnly" target="_top">.NET documentation</a>
+     */
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -319,6 +396,13 @@ public class IListImplementation extends IEnumerableImplementation implements IL
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSynchronized.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IList.IsSynchronized" target="_top">.NET documentation</a>
+     */
     public boolean getIsSynchronized() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -333,6 +417,13 @@ public class IListImplementation extends IEnumerableImplementation implements IL
         }
     }
 
+    /**
+     * Gets the value of the .NET property Count.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IList.Count" target="_top">.NET documentation</a>
+     */
     public int getCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -373,6 +464,13 @@ public class IListImplementation extends IEnumerableImplementation implements IL
         }
     }
 
+    /**
+     * Gets the value of the .NET property SyncRoot.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IList.SyncRoot" target="_top">.NET documentation</a>
+     */
     public NetObject getSyncRoot() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

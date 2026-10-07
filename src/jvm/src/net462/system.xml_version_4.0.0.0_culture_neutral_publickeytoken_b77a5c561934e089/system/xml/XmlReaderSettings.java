@@ -107,7 +107,10 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlReaderSettings(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,21 @@ public class XmlReaderSettings extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlReaderSettings() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +182,25 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param resolver the argument of type {@code XmlResolver}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlReaderSettings(XmlResolver resolver) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +215,13 @@ public class XmlReaderSettings extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.Clone" target="_top">.NET documentation</a>
+     */
     public XmlReaderSettings Clone() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +237,24 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Reset.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.Reset" target="_top">.NET documentation</a>
+     */
     public void Reset() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +269,13 @@ public class XmlReaderSettings extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Async.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.Async" target="_top">.NET documentation</a>
+     */
     public boolean getAsync() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +290,22 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Async.
+     *
+     * @param Async the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.Async" target="_top">.NET documentation</a>
+     */
     public void setAsync(boolean Async) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +316,13 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CheckCharacters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.CheckCharacters" target="_top">.NET documentation</a>
+     */
     public boolean getCheckCharacters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +337,22 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CheckCharacters.
+     *
+     * @param CheckCharacters the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.CheckCharacters" target="_top">.NET documentation</a>
+     */
     public void setCheckCharacters(boolean CheckCharacters) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +363,13 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CloseInput.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.CloseInput" target="_top">.NET documentation</a>
+     */
     public boolean getCloseInput() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +384,22 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CloseInput.
+     *
+     * @param CloseInput the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.CloseInput" target="_top">.NET documentation</a>
+     */
     public void setCloseInput(boolean CloseInput) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +410,13 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IgnoreComments.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.IgnoreComments" target="_top">.NET documentation</a>
+     */
     public boolean getIgnoreComments() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +431,22 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IgnoreComments.
+     *
+     * @param IgnoreComments the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.IgnoreComments" target="_top">.NET documentation</a>
+     */
     public void setIgnoreComments(boolean IgnoreComments) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +457,13 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IgnoreProcessingInstructions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.IgnoreProcessingInstructions" target="_top">.NET documentation</a>
+     */
     public boolean getIgnoreProcessingInstructions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -317,6 +478,22 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IgnoreProcessingInstructions.
+     *
+     * @param IgnoreProcessingInstructions the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.IgnoreProcessingInstructions" target="_top">.NET documentation</a>
+     */
     public void setIgnoreProcessingInstructions(boolean IgnoreProcessingInstructions) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -327,6 +504,13 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IgnoreWhitespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.IgnoreWhitespace" target="_top">.NET documentation</a>
+     */
     public boolean getIgnoreWhitespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -341,6 +525,22 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IgnoreWhitespace.
+     *
+     * @param IgnoreWhitespace the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.IgnoreWhitespace" target="_top">.NET documentation</a>
+     */
     public void setIgnoreWhitespace(boolean IgnoreWhitespace) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -351,6 +551,13 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProhibitDtd.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.ProhibitDtd" target="_top">.NET documentation</a>
+     */
     public boolean getProhibitDtd() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -365,6 +572,22 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProhibitDtd.
+     *
+     * @param ProhibitDtd the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.ProhibitDtd" target="_top">.NET documentation</a>
+     */
     public void setProhibitDtd(boolean ProhibitDtd) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -375,6 +598,13 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LineNumberOffset.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.LineNumberOffset" target="_top">.NET documentation</a>
+     */
     public int getLineNumberOffset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -415,6 +645,22 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LineNumberOffset.
+     *
+     * @param LineNumberOffset the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.LineNumberOffset" target="_top">.NET documentation</a>
+     */
     public void setLineNumberOffset(int LineNumberOffset) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -425,6 +671,13 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LinePositionOffset.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.LinePositionOffset" target="_top">.NET documentation</a>
+     */
     public int getLinePositionOffset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -465,6 +718,22 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LinePositionOffset.
+     *
+     * @param LinePositionOffset the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.LinePositionOffset" target="_top">.NET documentation</a>
+     */
     public void setLinePositionOffset(int LinePositionOffset) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -475,6 +744,13 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxCharactersFromEntities.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.MaxCharactersFromEntities" target="_top">.NET documentation</a>
+     */
     public long getMaxCharactersFromEntities() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -515,6 +791,22 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxCharactersFromEntities.
+     *
+     * @param MaxCharactersFromEntities the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.MaxCharactersFromEntities" target="_top">.NET documentation</a>
+     */
     public void setMaxCharactersFromEntities(long MaxCharactersFromEntities) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -525,6 +817,13 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxCharactersInDocument.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.MaxCharactersInDocument" target="_top">.NET documentation</a>
+     */
     public long getMaxCharactersInDocument() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -565,6 +864,22 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxCharactersInDocument.
+     *
+     * @param MaxCharactersInDocument the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.MaxCharactersInDocument" target="_top">.NET documentation</a>
+     */
     public void setMaxCharactersInDocument(long MaxCharactersInDocument) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -575,6 +890,13 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConformanceLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.ConformanceLevel" target="_top">.NET documentation</a>
+     */
     public ConformanceLevel getConformanceLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -590,6 +912,22 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConformanceLevel.
+     *
+     * @param ConformanceLevel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.ConformanceLevel" target="_top">.NET documentation</a>
+     */
     public void setConformanceLevel(ConformanceLevel ConformanceLevel) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -600,6 +938,13 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DtdProcessing.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.DtdProcessing" target="_top">.NET documentation</a>
+     */
     public DtdProcessing getDtdProcessing() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -615,6 +960,22 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DtdProcessing.
+     *
+     * @param DtdProcessing the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.DtdProcessing" target="_top">.NET documentation</a>
+     */
     public void setDtdProcessing(DtdProcessing DtdProcessing) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -625,6 +986,24 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Schemas.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.Schemas" target="_top">.NET documentation</a>
+     */
     public XmlSchemaSet getSchemas() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.xml.schema.XmlSchemaException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -640,6 +1019,22 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Schemas.
+     *
+     * @param Schemas the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.Schemas" target="_top">.NET documentation</a>
+     */
     public void setSchemas(XmlSchemaSet Schemas) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -650,6 +1045,13 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValidationFlags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.ValidationFlags" target="_top">.NET documentation</a>
+     */
     public XmlSchemaValidationFlags getValidationFlags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -665,6 +1067,22 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ValidationFlags.
+     *
+     * @param ValidationFlags the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.ValidationFlags" target="_top">.NET documentation</a>
+     */
     public void setValidationFlags(XmlSchemaValidationFlags ValidationFlags) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -675,6 +1093,13 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValidationType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.ValidationType" target="_top">.NET documentation</a>
+     */
     public ValidationType getValidationType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -690,6 +1115,22 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ValidationType.
+     *
+     * @param ValidationType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.ValidationType" target="_top">.NET documentation</a>
+     */
     public void setValidationType(ValidationType ValidationType) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -700,6 +1141,13 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NameTable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.NameTable" target="_top">.NET documentation</a>
+     */
     public XmlNameTable getNameTable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -715,6 +1163,22 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NameTable.
+     *
+     * @param NameTable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.NameTable" target="_top">.NET documentation</a>
+     */
     public void setNameTable(XmlNameTable NameTable) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -725,6 +1189,22 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlResolver.
+     *
+     * @param XmlResolver the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReaderSettings.XmlResolver" target="_top">.NET documentation</a>
+     */
     public void setXmlResolver(XmlResolver XmlResolver) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -740,6 +1220,13 @@ public class XmlReaderSettings extends NetObject  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addValidationEventHandler.
+     *
+     * @param handler the argument of type {@code ValidationEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addValidationEventHandler(ValidationEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -750,6 +1237,13 @@ public class XmlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeValidationEventHandler.
+     *
+     * @param handler the argument of type {@code ValidationEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeValidationEventHandler(ValidationEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

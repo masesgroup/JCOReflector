@@ -101,7 +101,10 @@ public class XmlSchemaGroupRef extends system.xml.schema.XmlSchemaParticle  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlSchemaGroupRef(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class XmlSchemaGroupRef extends system.xml.schema.XmlSchemaParticle  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaGroupRef.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlSchemaGroupRef() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +175,13 @@ public class XmlSchemaGroupRef extends system.xml.schema.XmlSchemaParticle  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Particle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaGroupRef.Particle" target="_top">.NET documentation</a>
+     */
     public XmlSchemaGroupBase getParticle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +197,13 @@ public class XmlSchemaGroupRef extends system.xml.schema.XmlSchemaParticle  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RefName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaGroupRef.RefName" target="_top">.NET documentation</a>
+     */
     public XmlQualifiedName getRefName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +219,13 @@ public class XmlSchemaGroupRef extends system.xml.schema.XmlSchemaParticle  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RefName.
+     *
+     * @param RefName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaGroupRef.RefName" target="_top">.NET documentation</a>
+     */
     public void setRefName(XmlQualifiedName RefName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

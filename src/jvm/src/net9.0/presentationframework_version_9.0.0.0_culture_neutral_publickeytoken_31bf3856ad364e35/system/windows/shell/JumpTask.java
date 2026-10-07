@@ -99,7 +99,10 @@ public class JumpTask extends system.windows.shell.JumpItem  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public JumpTask(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class JumpTask extends system.windows.shell.JumpItem  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Shell.JumpTask.-ctor" target="_top">.NET documentation</a>
+     */
     public JumpTask() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class JumpTask extends system.windows.shell.JumpItem  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IconResourceIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Shell.JumpTask.IconResourceIndex" target="_top">.NET documentation</a>
+     */
     public int getIconResourceIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +220,13 @@ public class JumpTask extends system.windows.shell.JumpItem  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IconResourceIndex.
+     *
+     * @param IconResourceIndex the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Shell.JumpTask.IconResourceIndex" target="_top">.NET documentation</a>
+     */
     public void setIconResourceIndex(int IconResourceIndex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +237,13 @@ public class JumpTask extends system.windows.shell.JumpItem  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ApplicationPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Shell.JumpTask.ApplicationPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getApplicationPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +258,13 @@ public class JumpTask extends system.windows.shell.JumpItem  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ApplicationPath.
+     *
+     * @param ApplicationPath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Shell.JumpTask.ApplicationPath" target="_top">.NET documentation</a>
+     */
     public void setApplicationPath(java.lang.String ApplicationPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +275,13 @@ public class JumpTask extends system.windows.shell.JumpItem  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Arguments.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Shell.JumpTask.Arguments" target="_top">.NET documentation</a>
+     */
     public java.lang.String getArguments() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +296,13 @@ public class JumpTask extends system.windows.shell.JumpItem  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Arguments.
+     *
+     * @param Arguments the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Shell.JumpTask.Arguments" target="_top">.NET documentation</a>
+     */
     public void setArguments(java.lang.String Arguments) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +313,13 @@ public class JumpTask extends system.windows.shell.JumpItem  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Description.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Shell.JumpTask.Description" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +334,13 @@ public class JumpTask extends system.windows.shell.JumpItem  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Description.
+     *
+     * @param Description the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Shell.JumpTask.Description" target="_top">.NET documentation</a>
+     */
     public void setDescription(java.lang.String Description) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +351,13 @@ public class JumpTask extends system.windows.shell.JumpItem  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IconResourcePath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Shell.JumpTask.IconResourcePath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getIconResourcePath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +372,13 @@ public class JumpTask extends system.windows.shell.JumpItem  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IconResourcePath.
+     *
+     * @param IconResourcePath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Shell.JumpTask.IconResourcePath" target="_top">.NET documentation</a>
+     */
     public void setIconResourcePath(java.lang.String IconResourcePath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +389,13 @@ public class JumpTask extends system.windows.shell.JumpItem  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Title.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Shell.JumpTask.Title" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTitle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -324,6 +410,13 @@ public class JumpTask extends system.windows.shell.JumpItem  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Title.
+     *
+     * @param Title the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Shell.JumpTask.Title" target="_top">.NET documentation</a>
+     */
     public void setTitle(java.lang.String Title) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -334,6 +427,13 @@ public class JumpTask extends system.windows.shell.JumpItem  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WorkingDirectory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Shell.JumpTask.WorkingDirectory" target="_top">.NET documentation</a>
+     */
     public java.lang.String getWorkingDirectory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +448,13 @@ public class JumpTask extends system.windows.shell.JumpItem  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WorkingDirectory.
+     *
+     * @param WorkingDirectory the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Shell.JumpTask.WorkingDirectory" target="_top">.NET documentation</a>
+     */
     public void setWorkingDirectory(java.lang.String WorkingDirectory) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

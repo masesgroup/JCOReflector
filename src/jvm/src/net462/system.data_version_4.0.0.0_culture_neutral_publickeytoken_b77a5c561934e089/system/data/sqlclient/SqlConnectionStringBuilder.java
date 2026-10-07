@@ -105,7 +105,10 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SqlConnectionStringBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,23 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlConnectionStringBuilder() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +182,23 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param connectionString the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlConnectionStringBuilder(java.lang.String connectionString) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +213,15 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ContainsKey.
+     *
+     * @param keyword the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.ContainsKey" target="_top">.NET documentation</a>
+     */
     public boolean ContainsKey(java.lang.String keyword) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +236,23 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param keyword the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.Remove" target="_top">.NET documentation</a>
+     */
     public boolean Remove(java.lang.String keyword) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +267,17 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Invokes the .NET member ShouldSerialize.
+     *
+     * @param keyword the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.ShouldSerialize" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerialize(java.lang.String keyword) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +292,24 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetValue.
+     *
+     * @param keyword the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code JCORefOut<NetObject>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.TryGetValue" target="_top">.NET documentation</a>
+     */
     public boolean TryGetValue(java.lang.String keyword, JCORefOut<NetObject> value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +324,21 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Invokes the .NET member Clear.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.Clear" target="_top">.NET documentation</a>
+     */
     public void Clear() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +353,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AsynchronousProcessing.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.AsynchronousProcessing" target="_top">.NET documentation</a>
+     */
     public boolean getAsynchronousProcessing() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +374,22 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property AsynchronousProcessing.
+     *
+     * @param AsynchronousProcessing the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.AsynchronousProcessing" target="_top">.NET documentation</a>
+     */
     public void setAsynchronousProcessing(boolean AsynchronousProcessing) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +400,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConnectionReset.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.ConnectionReset" target="_top">.NET documentation</a>
+     */
     public boolean getConnectionReset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -284,6 +421,22 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConnectionReset.
+     *
+     * @param ConnectionReset the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.ConnectionReset" target="_top">.NET documentation</a>
+     */
     public void setConnectionReset(boolean ConnectionReset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +447,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContextConnection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.ContextConnection" target="_top">.NET documentation</a>
+     */
     public boolean getContextConnection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +468,22 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property ContextConnection.
+     *
+     * @param ContextConnection the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.ContextConnection" target="_top">.NET documentation</a>
+     */
     public void setContextConnection(boolean ContextConnection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +494,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Gets the value of the .NET property Encrypt.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.Encrypt" target="_top">.NET documentation</a>
+     */
     public boolean getEncrypt() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -332,6 +515,22 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property Encrypt.
+     *
+     * @param Encrypt the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.Encrypt" target="_top">.NET documentation</a>
+     */
     public void setEncrypt(boolean Encrypt) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -342,6 +541,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Gets the value of the .NET property Enlist.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.Enlist" target="_top">.NET documentation</a>
+     */
     public boolean getEnlist() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -356,6 +562,22 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property Enlist.
+     *
+     * @param Enlist the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.Enlist" target="_top">.NET documentation</a>
+     */
     public void setEnlist(boolean Enlist) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -366,6 +588,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Gets the value of the .NET property IntegratedSecurity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.IntegratedSecurity" target="_top">.NET documentation</a>
+     */
     public boolean getIntegratedSecurity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -380,6 +609,22 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property IntegratedSecurity.
+     *
+     * @param IntegratedSecurity the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.IntegratedSecurity" target="_top">.NET documentation</a>
+     */
     public void setIntegratedSecurity(boolean IntegratedSecurity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -390,6 +635,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Gets the value of the .NET property MultipleActiveResultSets.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.MultipleActiveResultSets" target="_top">.NET documentation</a>
+     */
     public boolean getMultipleActiveResultSets() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -404,6 +656,22 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property MultipleActiveResultSets.
+     *
+     * @param MultipleActiveResultSets the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.MultipleActiveResultSets" target="_top">.NET documentation</a>
+     */
     public void setMultipleActiveResultSets(boolean MultipleActiveResultSets) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -414,6 +682,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Gets the value of the .NET property MultiSubnetFailover.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover" target="_top">.NET documentation</a>
+     */
     public boolean getMultiSubnetFailover() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -428,6 +703,22 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property MultiSubnetFailover.
+     *
+     * @param MultiSubnetFailover the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover" target="_top">.NET documentation</a>
+     */
     public void setMultiSubnetFailover(boolean MultiSubnetFailover) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -438,6 +729,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Gets the value of the .NET property PersistSecurityInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.PersistSecurityInfo" target="_top">.NET documentation</a>
+     */
     public boolean getPersistSecurityInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -452,6 +750,22 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property PersistSecurityInfo.
+     *
+     * @param PersistSecurityInfo the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.PersistSecurityInfo" target="_top">.NET documentation</a>
+     */
     public void setPersistSecurityInfo(boolean PersistSecurityInfo) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -462,6 +776,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Gets the value of the .NET property Pooling.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.Pooling" target="_top">.NET documentation</a>
+     */
     public boolean getPooling() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -476,6 +797,22 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property Pooling.
+     *
+     * @param Pooling the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.Pooling" target="_top">.NET documentation</a>
+     */
     public void setPooling(boolean Pooling) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -486,6 +823,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Gets the value of the .NET property Replication.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.Replication" target="_top">.NET documentation</a>
+     */
     public boolean getReplication() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -500,6 +844,22 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property Replication.
+     *
+     * @param Replication the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.Replication" target="_top">.NET documentation</a>
+     */
     public void setReplication(boolean Replication) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -510,6 +870,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Gets the value of the .NET property TransparentNetworkIPResolution.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.TransparentNetworkIPResolution" target="_top">.NET documentation</a>
+     */
     public boolean getTransparentNetworkIPResolution() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -524,6 +891,22 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property TransparentNetworkIPResolution.
+     *
+     * @param TransparentNetworkIPResolution the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.TransparentNetworkIPResolution" target="_top">.NET documentation</a>
+     */
     public void setTransparentNetworkIPResolution(boolean TransparentNetworkIPResolution) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -534,6 +917,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Gets the value of the .NET property TrustServerCertificate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.TrustServerCertificate" target="_top">.NET documentation</a>
+     */
     public boolean getTrustServerCertificate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -548,6 +938,22 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property TrustServerCertificate.
+     *
+     * @param TrustServerCertificate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.TrustServerCertificate" target="_top">.NET documentation</a>
+     */
     public void setTrustServerCertificate(boolean TrustServerCertificate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -558,6 +964,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Gets the value of the .NET property UserInstance.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance" target="_top">.NET documentation</a>
+     */
     public boolean getUserInstance() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -572,6 +985,22 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property UserInstance.
+     *
+     * @param UserInstance the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance" target="_top">.NET documentation</a>
+     */
     public void setUserInstance(boolean UserInstance) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -582,6 +1011,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConnectRetryCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.ConnectRetryCount" target="_top">.NET documentation</a>
+     */
     public int getConnectRetryCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -622,6 +1058,23 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConnectRetryCount.
+     *
+     * @param ConnectRetryCount the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.ConnectRetryCount" target="_top">.NET documentation</a>
+     */
     public void setConnectRetryCount(int ConnectRetryCount) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -632,6 +1085,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConnectRetryInterval.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.ConnectRetryInterval" target="_top">.NET documentation</a>
+     */
     public int getConnectRetryInterval() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -672,6 +1132,23 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConnectRetryInterval.
+     *
+     * @param ConnectRetryInterval the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.ConnectRetryInterval" target="_top">.NET documentation</a>
+     */
     public void setConnectRetryInterval(int ConnectRetryInterval) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -682,6 +1159,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConnectTimeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.ConnectTimeout" target="_top">.NET documentation</a>
+     */
     public int getConnectTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -722,6 +1206,23 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConnectTimeout.
+     *
+     * @param ConnectTimeout the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.ConnectTimeout" target="_top">.NET documentation</a>
+     */
     public void setConnectTimeout(int ConnectTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -732,6 +1233,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Gets the value of the .NET property LoadBalanceTimeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.LoadBalanceTimeout" target="_top">.NET documentation</a>
+     */
     public int getLoadBalanceTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -772,6 +1280,23 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property LoadBalanceTimeout.
+     *
+     * @param LoadBalanceTimeout the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.LoadBalanceTimeout" target="_top">.NET documentation</a>
+     */
     public void setLoadBalanceTimeout(int LoadBalanceTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -782,6 +1307,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxPoolSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.MaxPoolSize" target="_top">.NET documentation</a>
+     */
     public int getMaxPoolSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -822,6 +1354,23 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxPoolSize.
+     *
+     * @param MaxPoolSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.MaxPoolSize" target="_top">.NET documentation</a>
+     */
     public void setMaxPoolSize(int MaxPoolSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -832,6 +1381,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinPoolSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.MinPoolSize" target="_top">.NET documentation</a>
+     */
     public int getMinPoolSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -872,6 +1428,23 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property MinPoolSize.
+     *
+     * @param MinPoolSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.MinPoolSize" target="_top">.NET documentation</a>
+     */
     public void setMinPoolSize(int MinPoolSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -882,6 +1455,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Gets the value of the .NET property PacketSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.PacketSize" target="_top">.NET documentation</a>
+     */
     public int getPacketSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -922,6 +1502,25 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property PacketSize.
+     *
+     * @param PacketSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.PacketSize" target="_top">.NET documentation</a>
+     */
     public void setPacketSize(int PacketSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -932,6 +1531,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Gets the value of the .NET property ApplicationIntent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent" target="_top">.NET documentation</a>
+     */
     public ApplicationIntent getApplicationIntent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -947,6 +1553,25 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property ApplicationIntent.
+     *
+     * @param ApplicationIntent the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent" target="_top">.NET documentation</a>
+     */
     public void setApplicationIntent(ApplicationIntent ApplicationIntent) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -957,6 +1582,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Gets the value of the .NET property PoolBlockingPeriod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod" target="_top">.NET documentation</a>
+     */
     public PoolBlockingPeriod getPoolBlockingPeriod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -972,6 +1604,25 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property PoolBlockingPeriod.
+     *
+     * @param PoolBlockingPeriod the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod" target="_top">.NET documentation</a>
+     */
     public void setPoolBlockingPeriod(PoolBlockingPeriod PoolBlockingPeriod) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -982,6 +1633,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Gets the value of the .NET property Authentication.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.Authentication" target="_top">.NET documentation</a>
+     */
     public SqlAuthenticationMethod getAuthentication() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -997,6 +1655,25 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property Authentication.
+     *
+     * @param Authentication the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.Authentication" target="_top">.NET documentation</a>
+     */
     public void setAuthentication(SqlAuthenticationMethod Authentication) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1007,6 +1684,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Gets the value of the .NET property ColumnEncryptionSetting.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.ColumnEncryptionSetting" target="_top">.NET documentation</a>
+     */
     public SqlConnectionColumnEncryptionSetting getColumnEncryptionSetting() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1022,6 +1706,25 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property ColumnEncryptionSetting.
+     *
+     * @param ColumnEncryptionSetting the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.ColumnEncryptionSetting" target="_top">.NET documentation</a>
+     */
     public void setColumnEncryptionSetting(SqlConnectionColumnEncryptionSetting ColumnEncryptionSetting) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1032,6 +1735,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Gets the value of the .NET property ApplicationName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getApplicationName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1046,6 +1756,22 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property ApplicationName.
+     *
+     * @param ApplicationName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationName" target="_top">.NET documentation</a>
+     */
     public void setApplicationName(java.lang.String ApplicationName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1056,6 +1782,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Gets the value of the .NET property AttachDBFilename.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAttachDBFilename() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1070,6 +1803,22 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property AttachDBFilename.
+     *
+     * @param AttachDBFilename the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename" target="_top">.NET documentation</a>
+     */
     public void setAttachDBFilename(java.lang.String AttachDBFilename) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1080,6 +1829,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentLanguage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.CurrentLanguage" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCurrentLanguage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1094,6 +1850,22 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property CurrentLanguage.
+     *
+     * @param CurrentLanguage the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.CurrentLanguage" target="_top">.NET documentation</a>
+     */
     public void setCurrentLanguage(java.lang.String CurrentLanguage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1104,6 +1876,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataSource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.DataSource" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDataSource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1118,6 +1897,22 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataSource.
+     *
+     * @param DataSource the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.DataSource" target="_top">.NET documentation</a>
+     */
     public void setDataSource(java.lang.String DataSource) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1128,6 +1923,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Gets the value of the .NET property EnclaveAttestationUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.EnclaveAttestationUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getEnclaveAttestationUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1142,6 +1944,22 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property EnclaveAttestationUrl.
+     *
+     * @param EnclaveAttestationUrl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.EnclaveAttestationUrl" target="_top">.NET documentation</a>
+     */
     public void setEnclaveAttestationUrl(java.lang.String EnclaveAttestationUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1152,6 +1970,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Gets the value of the .NET property FailoverPartner.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.FailoverPartner" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFailoverPartner() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1166,6 +1991,22 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property FailoverPartner.
+     *
+     * @param FailoverPartner the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.FailoverPartner" target="_top">.NET documentation</a>
+     */
     public void setFailoverPartner(java.lang.String FailoverPartner) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1176,6 +2017,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Gets the value of the .NET property InitialCatalog.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.InitialCatalog" target="_top">.NET documentation</a>
+     */
     public java.lang.String getInitialCatalog() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1190,6 +2038,22 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property InitialCatalog.
+     *
+     * @param InitialCatalog the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.InitialCatalog" target="_top">.NET documentation</a>
+     */
     public void setInitialCatalog(java.lang.String InitialCatalog) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1200,6 +2064,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Gets the value of the .NET property NetworkLibrary.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.NetworkLibrary" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNetworkLibrary() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1214,6 +2085,24 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property NetworkLibrary.
+     *
+     * @param NetworkLibrary the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.NetworkLibrary" target="_top">.NET documentation</a>
+     */
     public void setNetworkLibrary(java.lang.String NetworkLibrary) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1224,6 +2113,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Gets the value of the .NET property Password.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.Password" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPassword() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1238,6 +2134,22 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property Password.
+     *
+     * @param Password the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.Password" target="_top">.NET documentation</a>
+     */
     public void setPassword(java.lang.String Password) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1248,6 +2160,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Gets the value of the .NET property TransactionBinding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.TransactionBinding" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTransactionBinding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1262,6 +2181,22 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property TransactionBinding.
+     *
+     * @param TransactionBinding the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.TransactionBinding" target="_top">.NET documentation</a>
+     */
     public void setTransactionBinding(java.lang.String TransactionBinding) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1272,6 +2207,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeSystemVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.TypeSystemVersion" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTypeSystemVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1286,6 +2228,22 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property TypeSystemVersion.
+     *
+     * @param TypeSystemVersion the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.TypeSystemVersion" target="_top">.NET documentation</a>
+     */
     public void setTypeSystemVersion(java.lang.String TypeSystemVersion) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1296,6 +2254,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Gets the value of the .NET property UserID.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.UserID" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUserID() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1310,6 +2275,22 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property UserID.
+     *
+     * @param UserID the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.UserID" target="_top">.NET documentation</a>
+     */
     public void setUserID(java.lang.String UserID) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1320,6 +2301,13 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Gets the value of the .NET property WorkstationID.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.WorkstationID" target="_top">.NET documentation</a>
+     */
     public java.lang.String getWorkstationID() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1334,6 +2322,22 @@ public class SqlConnectionStringBuilder extends system.data.common.DbConnectionS
         }
     }
 
+    /**
+     * Sets the value of the .NET property WorkstationID.
+     *
+     * @param WorkstationID the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlConnectionStringBuilder.WorkstationID" target="_top">.NET documentation</a>
+     */
     public void setWorkstationID(java.lang.String WorkstationID) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class InteropTrackingRecord extends system.activities.tracking.CustomTrac
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public InteropTrackingRecord(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,21 @@ public class InteropTrackingRecord extends system.activities.tracking.CustomTrac
     public InteropTrackingRecord() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param activityDisplayName the argument of type {@code java.lang.String}
+     * @param v1TrackingRecord the argument of type {@code TrackingRecord}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.InteropTrackingRecord.-ctor" target="_top">.NET documentation</a>
+     */
     public InteropTrackingRecord(java.lang.String activityDisplayName, TrackingRecord v1TrackingRecord) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +187,13 @@ public class InteropTrackingRecord extends system.activities.tracking.CustomTrac
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property TrackingRecord.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.InteropTrackingRecord.TrackingRecord" target="_top">.NET documentation</a>
+     */
     public TrackingRecord getTrackingRecord() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +209,13 @@ public class InteropTrackingRecord extends system.activities.tracking.CustomTrac
         }
     }
 
+    /**
+     * Sets the value of the .NET property TrackingRecord.
+     *
+     * @param TrackingRecord the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.InteropTrackingRecord.TrackingRecord" target="_top">.NET documentation</a>
+     */
     public void setTrackingRecord(TrackingRecord TrackingRecord) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

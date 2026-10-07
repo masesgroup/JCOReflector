@@ -104,7 +104,10 @@ public class FtpWebResponse extends system.net.WebResponse  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FtpWebResponse(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,16 @@ public class FtpWebResponse extends system.net.WebResponse  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetResponseStream.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.FtpWebResponse.GetResponseStream" target="_top">.NET documentation</a>
+     */
     public Stream GetResponseStream() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +187,15 @@ public class FtpWebResponse extends system.net.WebResponse  {
         }
     }
 
+    /**
+     * Invokes the .NET member Close.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.FtpWebResponse.Close" target="_top">.NET documentation</a>
+     */
     public void Close() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +210,13 @@ public class FtpWebResponse extends system.net.WebResponse  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property LastModified.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.FtpWebResponse.LastModified" target="_top">.NET documentation</a>
+     */
     public DateTime getLastModified() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +232,13 @@ public class FtpWebResponse extends system.net.WebResponse  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StatusCode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.FtpWebResponse.StatusCode" target="_top">.NET documentation</a>
+     */
     public FtpStatusCode getStatusCode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +254,13 @@ public class FtpWebResponse extends system.net.WebResponse  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BannerMessage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.FtpWebResponse.BannerMessage" target="_top">.NET documentation</a>
+     */
     public java.lang.String getBannerMessage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +275,13 @@ public class FtpWebResponse extends system.net.WebResponse  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExitMessage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.FtpWebResponse.ExitMessage" target="_top">.NET documentation</a>
+     */
     public java.lang.String getExitMessage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +296,13 @@ public class FtpWebResponse extends system.net.WebResponse  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StatusDescription.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.FtpWebResponse.StatusDescription" target="_top">.NET documentation</a>
+     */
     public java.lang.String getStatusDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +317,13 @@ public class FtpWebResponse extends system.net.WebResponse  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WelcomeMessage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.FtpWebResponse.WelcomeMessage" target="_top">.NET documentation</a>
+     */
     public java.lang.String getWelcomeMessage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

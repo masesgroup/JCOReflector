@@ -108,7 +108,10 @@ public class RelationshipManager extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RelationshipManager(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -163,6 +166,13 @@ public class RelationshipManager extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetAllRelatedEnds.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.RelationshipManager.GetAllRelatedEnds" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 GetAllRelatedEnds() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +188,28 @@ public class RelationshipManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRelatedCollection.
+     *
+     * @param <TTargetEntity> the type of the generic argument TTargetEntity
+     * @param relationshipName the argument of type {@code java.lang.String}
+     * @param targetRoleName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.data.MappingException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.RelationshipManager.GetRelatedCollection" target="_top">.NET documentation</a>
+     */
     public <TTargetEntity extends IJCOBridgeReflected> EntityCollection_1 GetRelatedCollection(java.lang.String relationshipName, java.lang.String targetRoleName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.data.MappingException, system.data.MetadataException, system.NotImplementedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +225,28 @@ public class RelationshipManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRelatedReference.
+     *
+     * @param <TTargetEntity> the type of the generic argument TTargetEntity
+     * @param relationshipName the argument of type {@code java.lang.String}
+     * @param targetRoleName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.data.MappingException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.RelationshipManager.GetRelatedReference" target="_top">.NET documentation</a>
+     */
     public <TTargetEntity extends IJCOBridgeReflected> EntityReference_1 GetRelatedReference(java.lang.String relationshipName, java.lang.String targetRoleName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.data.MappingException, system.data.MetadataException, system.NotImplementedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +262,27 @@ public class RelationshipManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRelatedEnd.
+     *
+     * @param relationshipName the argument of type {@code java.lang.String}
+     * @param targetRoleName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.data.MappingException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.RelationshipManager.GetRelatedEnd" target="_top">.NET documentation</a>
+     */
     public IRelatedEnd GetRelatedEnd(java.lang.String relationshipName, java.lang.String targetRoleName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.data.MappingException, system.data.MetadataException, system.NotImplementedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +298,15 @@ public class RelationshipManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param owner the argument of type {@code IEntityWithRelationships}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.RelationshipManager.Create" target="_top">.NET documentation</a>
+     */
     public static RelationshipManager Create(IEntityWithRelationships owner) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -238,6 +322,30 @@ public class RelationshipManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member InitializeRelatedCollection.
+     *
+     * @param <TTargetEntity> the type of the generic argument TTargetEntity
+     * @param relationshipName the argument of type {@code java.lang.String}
+     * @param targetRoleName the argument of type {@code java.lang.String}
+     * @param entityCollection the argument of type {@code EntityCollection_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.data.MappingException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.RelationshipManager.InitializeRelatedCollection" target="_top">.NET documentation</a>
+     */
     public <TTargetEntity extends IJCOBridgeReflected> void InitializeRelatedCollection(java.lang.String relationshipName, java.lang.String targetRoleName, EntityCollection_1 entityCollection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +356,30 @@ public class RelationshipManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member InitializeRelatedReference.
+     *
+     * @param <TTargetEntity> the type of the generic argument TTargetEntity
+     * @param relationshipName the argument of type {@code java.lang.String}
+     * @param targetRoleName the argument of type {@code java.lang.String}
+     * @param entityReference the argument of type {@code EntityReference_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.data.MappingException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.RelationshipManager.InitializeRelatedReference" target="_top">.NET documentation</a>
+     */
     public <TTargetEntity extends IJCOBridgeReflected> void InitializeRelatedReference(java.lang.String relationshipName, java.lang.String targetRoleName, EntityReference_1 entityReference) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +390,22 @@ public class RelationshipManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OnDeserialized.
+     *
+     * @param context the argument of type {@code StreamingContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.RelationshipManager.OnDeserialized" target="_top">.NET documentation</a>
+     */
     public void OnDeserialized(StreamingContext context) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.threading.LockRecursionException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +416,28 @@ public class RelationshipManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OnSerializing.
+     *
+     * @param context the argument of type {@code StreamingContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.RelationshipManager.OnSerializing" target="_top">.NET documentation</a>
+     */
     public void OnSerializing(StreamingContext context) throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.LockRecursionException, system.ArgumentNullException, system.threading.SynchronizationLockException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException, system.NullReferenceException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

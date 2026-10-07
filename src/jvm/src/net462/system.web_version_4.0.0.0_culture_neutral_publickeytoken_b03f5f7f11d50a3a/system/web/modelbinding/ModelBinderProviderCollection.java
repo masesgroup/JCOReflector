@@ -108,7 +108,10 @@ public class ModelBinderProviderCollection extends system.collections.objectmode
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ModelBinderProviderCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,12 @@ public class ModelBinderProviderCollection extends system.collections.objectmode
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBinderProviderCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public ModelBinderProviderCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,14 @@ public class ModelBinderProviderCollection extends system.collections.objectmode
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param list the argument of type {@code IList_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBinderProviderCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public ModelBinderProviderCollection(IList_1 list) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +196,27 @@ public class ModelBinderProviderCollection extends system.collections.objectmode
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetBinder.
+     *
+     * @param modelBindingExecutionContext the argument of type {@code ModelBindingExecutionContext}
+     * @param bindingContext the argument of type {@code ModelBindingContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBinderProviderCollection.GetBinder" target="_top">.NET documentation</a>
+     */
     public IModelBinder GetBinder(ModelBindingExecutionContext modelBindingExecutionContext, ModelBindingContext bindingContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +232,25 @@ public class ModelBinderProviderCollection extends system.collections.objectmode
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterBinderForGenericType.
+     *
+     * @param modelType the argument of type {@code NetType}
+     * @param modelBinderFactory the argument of type {@code Func_2}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBinderProviderCollection.RegisterBinderForGenericType" target="_top">.NET documentation</a>
+     */
     public void RegisterBinderForGenericType(NetType modelType, Func_2 modelBinderFactory) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +261,25 @@ public class ModelBinderProviderCollection extends system.collections.objectmode
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterBinderForGenericType.
+     *
+     * @param modelType the argument of type {@code NetType}
+     * @param modelBinderType the argument of type {@code NetType}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBinderProviderCollection.RegisterBinderForGenericType" target="_top">.NET documentation</a>
+     */
     public void RegisterBinderForGenericType(NetType modelType, NetType modelBinderType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +290,25 @@ public class ModelBinderProviderCollection extends system.collections.objectmode
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterBinderForGenericType.
+     *
+     * @param modelType the argument of type {@code NetType}
+     * @param modelBinder the argument of type {@code IModelBinder}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBinderProviderCollection.RegisterBinderForGenericType" target="_top">.NET documentation</a>
+     */
     public void RegisterBinderForGenericType(NetType modelType, IModelBinder modelBinder) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +319,15 @@ public class ModelBinderProviderCollection extends system.collections.objectmode
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterBinderForType.
+     *
+     * @param modelType the argument of type {@code NetType}
+     * @param modelBinderFactory the argument of type {@code Func_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBinderProviderCollection.RegisterBinderForType" target="_top">.NET documentation</a>
+     */
     public void RegisterBinderForType(NetType modelType, Func_1 modelBinderFactory) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +338,15 @@ public class ModelBinderProviderCollection extends system.collections.objectmode
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterBinderForType.
+     *
+     * @param modelType the argument of type {@code NetType}
+     * @param modelBinder the argument of type {@code IModelBinder}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBinderProviderCollection.RegisterBinderForType" target="_top">.NET documentation</a>
+     */
     public void RegisterBinderForType(NetType modelType, IModelBinder modelBinder) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

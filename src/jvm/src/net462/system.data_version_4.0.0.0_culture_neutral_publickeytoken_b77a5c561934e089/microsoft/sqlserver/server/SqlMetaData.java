@@ -125,7 +125,10 @@ public class SqlMetaData extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SqlMetaData(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -175,6 +178,22 @@ public class SqlMetaData extends NetObject  {
     public SqlMetaData() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param dbType the argument of type {@code SqlDbType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlMetaData(java.lang.String name, SqlDbType dbType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -185,6 +204,26 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param dbType the argument of type {@code SqlDbType}
+     * @param useServerDefault the argument of type {@code boolean}
+     * @param isUniqueKey the argument of type {@code boolean}
+     * @param columnSortOrder the argument of type {@code SortOrder}
+     * @param sortOrdinal the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlMetaData(java.lang.String name, SqlDbType dbType, boolean useServerDefault, boolean isUniqueKey, SortOrder columnSortOrder, int sortOrdinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -195,6 +234,24 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param dbType the argument of type {@code SqlDbType}
+     * @param precision the argument of type {@code byte}
+     * @param scale the argument of type {@code byte}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlMetaData(java.lang.String name, SqlDbType dbType, byte precision, byte scale) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -205,6 +262,28 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param dbType the argument of type {@code SqlDbType}
+     * @param precision the argument of type {@code byte}
+     * @param scale the argument of type {@code byte}
+     * @param useServerDefault the argument of type {@code boolean}
+     * @param isUniqueKey the argument of type {@code boolean}
+     * @param columnSortOrder the argument of type {@code SortOrder}
+     * @param sortOrdinal the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlMetaData(java.lang.String name, SqlDbType dbType, byte precision, byte scale, boolean useServerDefault, boolean isUniqueKey, SortOrder columnSortOrder, int sortOrdinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -215,6 +294,23 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param dbType the argument of type {@code SqlDbType}
+     * @param maxLength the argument of type {@code long}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlMetaData(java.lang.String name, SqlDbType dbType, long maxLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -225,6 +321,27 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param dbType the argument of type {@code SqlDbType}
+     * @param maxLength the argument of type {@code long}
+     * @param useServerDefault the argument of type {@code boolean}
+     * @param isUniqueKey the argument of type {@code boolean}
+     * @param columnSortOrder the argument of type {@code SortOrder}
+     * @param sortOrdinal the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlMetaData(java.lang.String name, SqlDbType dbType, long maxLength, boolean useServerDefault, boolean isUniqueKey, SortOrder columnSortOrder, int sortOrdinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -235,6 +352,32 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param dbType the argument of type {@code SqlDbType}
+     * @param maxLength the argument of type {@code long}
+     * @param precision the argument of type {@code byte}
+     * @param scale the argument of type {@code byte}
+     * @param locale the argument of type {@code long}
+     * @param compareOptions the argument of type {@code SqlCompareOptions}
+     * @param userDefinedType the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws microsoft.sqlserver.server.InvalidUdtException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlMetaData(java.lang.String name, SqlDbType dbType, long maxLength, byte precision, byte scale, long locale, SqlCompareOptions compareOptions, NetType userDefinedType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, microsoft.sqlserver.server.InvalidUdtException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -245,6 +388,33 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param dbType the argument of type {@code SqlDbType}
+     * @param maxLength the argument of type {@code long}
+     * @param precision the argument of type {@code byte}
+     * @param scale the argument of type {@code byte}
+     * @param localeId the argument of type {@code long}
+     * @param compareOptions the argument of type {@code SqlCompareOptions}
+     * @param userDefinedType the argument of type {@code NetType}
+     * @param useServerDefault the argument of type {@code boolean}
+     * @param isUniqueKey the argument of type {@code boolean}
+     * @param columnSortOrder the argument of type {@code SortOrder}
+     * @param sortOrdinal the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws microsoft.sqlserver.server.InvalidUdtException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlMetaData(java.lang.String name, SqlDbType dbType, long maxLength, byte precision, byte scale, long localeId, SqlCompareOptions compareOptions, NetType userDefinedType, boolean useServerDefault, boolean isUniqueKey, SortOrder columnSortOrder, int sortOrdinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, microsoft.sqlserver.server.InvalidUdtException {
         try {
             // add reference to assemblyName.dll file
@@ -255,6 +425,25 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param dbType the argument of type {@code SqlDbType}
+     * @param maxLength the argument of type {@code long}
+     * @param locale the argument of type {@code long}
+     * @param compareOptions the argument of type {@code SqlCompareOptions}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlMetaData(java.lang.String name, SqlDbType dbType, long maxLength, long locale, SqlCompareOptions compareOptions) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -265,6 +454,29 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param dbType the argument of type {@code SqlDbType}
+     * @param maxLength the argument of type {@code long}
+     * @param locale the argument of type {@code long}
+     * @param compareOptions the argument of type {@code SqlCompareOptions}
+     * @param useServerDefault the argument of type {@code boolean}
+     * @param isUniqueKey the argument of type {@code boolean}
+     * @param columnSortOrder the argument of type {@code SortOrder}
+     * @param sortOrdinal the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlMetaData(java.lang.String name, SqlDbType dbType, long maxLength, long locale, SqlCompareOptions compareOptions, boolean useServerDefault, boolean isUniqueKey, SortOrder columnSortOrder, int sortOrdinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -275,6 +487,25 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param dbType the argument of type {@code SqlDbType}
+     * @param database the argument of type {@code java.lang.String}
+     * @param owningSchema the argument of type {@code java.lang.String}
+     * @param objectName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlMetaData(java.lang.String name, SqlDbType dbType, java.lang.String database, java.lang.String owningSchema, java.lang.String objectName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -285,6 +516,29 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param dbType the argument of type {@code SqlDbType}
+     * @param database the argument of type {@code java.lang.String}
+     * @param owningSchema the argument of type {@code java.lang.String}
+     * @param objectName the argument of type {@code java.lang.String}
+     * @param useServerDefault the argument of type {@code boolean}
+     * @param isUniqueKey the argument of type {@code boolean}
+     * @param columnSortOrder the argument of type {@code SortOrder}
+     * @param sortOrdinal the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlMetaData(java.lang.String name, SqlDbType dbType, java.lang.String database, java.lang.String owningSchema, java.lang.String objectName, boolean useServerDefault, boolean isUniqueKey, SortOrder columnSortOrder, int sortOrdinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -295,6 +549,24 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param dbType the argument of type {@code SqlDbType}
+     * @param userDefinedType the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws microsoft.sqlserver.server.InvalidUdtException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlMetaData(java.lang.String name, SqlDbType dbType, NetType userDefinedType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, microsoft.sqlserver.server.InvalidUdtException {
         try {
             // add reference to assemblyName.dll file
@@ -305,6 +577,25 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param dbType the argument of type {@code SqlDbType}
+     * @param userDefinedType the argument of type {@code NetType}
+     * @param serverTypeName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws microsoft.sqlserver.server.InvalidUdtException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlMetaData(java.lang.String name, SqlDbType dbType, NetType userDefinedType, java.lang.String serverTypeName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, microsoft.sqlserver.server.InvalidUdtException {
         try {
             // add reference to assemblyName.dll file
@@ -315,6 +606,29 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param dbType the argument of type {@code SqlDbType}
+     * @param userDefinedType the argument of type {@code NetType}
+     * @param serverTypeName the argument of type {@code java.lang.String}
+     * @param useServerDefault the argument of type {@code boolean}
+     * @param isUniqueKey the argument of type {@code boolean}
+     * @param columnSortOrder the argument of type {@code SortOrder}
+     * @param sortOrdinal the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws microsoft.sqlserver.server.InvalidUdtException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlMetaData(java.lang.String name, SqlDbType dbType, NetType userDefinedType, java.lang.String serverTypeName, boolean useServerDefault, boolean isUniqueKey, SortOrder columnSortOrder, int sortOrdinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, microsoft.sqlserver.server.InvalidUdtException {
         try {
             // add reference to assemblyName.dll file
@@ -330,6 +644,23 @@ public class SqlMetaData extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Adjust.
+     *
+     * @param value the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Adjust" target="_top">.NET documentation</a>
+     */
     public boolean Adjust(boolean value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -344,6 +675,23 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Adjust.
+     *
+     * @param value the argument of type {@code byte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Adjust" target="_top">.NET documentation</a>
+     */
     public byte Adjust(byte value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -384,6 +732,23 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Adjust.
+     *
+     * @param value the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Adjust" target="_top">.NET documentation</a>
+     */
     public byte[] Adjust(byte[] value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -407,6 +772,23 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Adjust.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Adjust" target="_top">.NET documentation</a>
+     */
     public byte[] Adjust(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -430,6 +812,23 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Adjust.
+     *
+     * @param value the argument of type {@code char}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Adjust" target="_top">.NET documentation</a>
+     */
     public char Adjust(char value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -444,6 +843,23 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Adjust.
+     *
+     * @param value the argument of type {@code char[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Adjust" target="_top">.NET documentation</a>
+     */
     public char[] Adjust(char[] value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -467,6 +883,23 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Adjust.
+     *
+     * @param value the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Adjust" target="_top">.NET documentation</a>
+     */
     public double Adjust(double value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -507,6 +940,23 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Adjust.
+     *
+     * @param value the argument of type {@code short}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Adjust" target="_top">.NET documentation</a>
+     */
     public short Adjust(short value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -547,6 +997,23 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Adjust.
+     *
+     * @param value the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Adjust" target="_top">.NET documentation</a>
+     */
     public int Adjust(int value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -587,6 +1054,23 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Adjust.
+     *
+     * @param value the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Adjust" target="_top">.NET documentation</a>
+     */
     public long Adjust(long value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -627,6 +1111,24 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member InferFromValue.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.data.sqltypes.SqlNullValueException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.InferFromValue" target="_top">.NET documentation</a>
+     */
     public static SqlMetaData InferFromValue(NetObject value, java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.data.sqltypes.SqlNullValueException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -642,6 +1144,23 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Adjust.
+     *
+     * @param value the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Adjust" target="_top">.NET documentation</a>
+     */
     public Single Adjust(Single value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -657,6 +1176,24 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Adjust.
+     *
+     * @param value the argument of type {@code SqlBinary}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.data.sqltypes.SqlNullValueException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Adjust" target="_top">.NET documentation</a>
+     */
     public SqlBinary Adjust(SqlBinary value) throws Throwable, system.data.sqltypes.SqlNullValueException, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -672,6 +1209,23 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Adjust.
+     *
+     * @param value the argument of type {@code SqlBoolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Adjust" target="_top">.NET documentation</a>
+     */
     public SqlBoolean Adjust(SqlBoolean value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -687,6 +1241,23 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Adjust.
+     *
+     * @param value the argument of type {@code SqlByte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Adjust" target="_top">.NET documentation</a>
+     */
     public SqlByte Adjust(SqlByte value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -702,6 +1273,25 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Adjust.
+     *
+     * @param value the argument of type {@code SqlBytes}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.data.sqltypes.SqlNullValueException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.data.sqltypes.SqlTypeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Adjust" target="_top">.NET documentation</a>
+     */
     public SqlBytes Adjust(SqlBytes value) throws Throwable, system.data.sqltypes.SqlNullValueException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqltypes.SqlTypeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -717,6 +1307,25 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Adjust.
+     *
+     * @param value the argument of type {@code SqlChars}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.data.sqltypes.SqlNullValueException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.data.sqltypes.SqlTypeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Adjust" target="_top">.NET documentation</a>
+     */
     public SqlChars Adjust(SqlChars value) throws Throwable, system.data.sqltypes.SqlNullValueException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqltypes.SqlTypeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -732,6 +1341,24 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Adjust.
+     *
+     * @param value the argument of type {@code SqlDateTime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.data.sqltypes.SqlNullValueException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Adjust" target="_top">.NET documentation</a>
+     */
     public SqlDateTime Adjust(SqlDateTime value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -747,6 +1374,28 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Adjust.
+     *
+     * @param value the argument of type {@code SqlDecimal}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.data.sqltypes.SqlNullValueException if the .NET member raises it
+     * @throws system.data.sqltypes.SqlTruncateException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.DivideByZeroException if the .NET member raises it
+     * @throws system.data.sqltypes.SqlTypeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Adjust" target="_top">.NET documentation</a>
+     */
     public SqlDecimal Adjust(SqlDecimal value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.DivideByZeroException, system.data.sqltypes.SqlTypeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -762,6 +1411,23 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Adjust.
+     *
+     * @param value the argument of type {@code SqlDouble}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Adjust" target="_top">.NET documentation</a>
+     */
     public SqlDouble Adjust(SqlDouble value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -777,6 +1443,23 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Adjust.
+     *
+     * @param value the argument of type {@code SqlGuid}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Adjust" target="_top">.NET documentation</a>
+     */
     public SqlGuid Adjust(SqlGuid value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -792,6 +1475,23 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Adjust.
+     *
+     * @param value the argument of type {@code SqlInt16}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Adjust" target="_top">.NET documentation</a>
+     */
     public SqlInt16 Adjust(SqlInt16 value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -807,6 +1507,23 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Adjust.
+     *
+     * @param value the argument of type {@code SqlInt32}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Adjust" target="_top">.NET documentation</a>
+     */
     public SqlInt32 Adjust(SqlInt32 value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -822,6 +1539,23 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Adjust.
+     *
+     * @param value the argument of type {@code SqlInt64}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Adjust" target="_top">.NET documentation</a>
+     */
     public SqlInt64 Adjust(SqlInt64 value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -837,6 +1571,24 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Adjust.
+     *
+     * @param value the argument of type {@code SqlMoney}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.data.sqltypes.SqlNullValueException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Adjust" target="_top">.NET documentation</a>
+     */
     public SqlMoney Adjust(SqlMoney value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -852,6 +1604,23 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Adjust.
+     *
+     * @param value the argument of type {@code SqlSingle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Adjust" target="_top">.NET documentation</a>
+     */
     public SqlSingle Adjust(SqlSingle value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -867,6 +1636,27 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Adjust.
+     *
+     * @param value the argument of type {@code SqlString}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.data.sqltypes.SqlNullValueException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Adjust" target="_top">.NET documentation</a>
+     */
     public SqlString Adjust(SqlString value) throws Throwable, system.data.sqltypes.SqlNullValueException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -882,6 +1672,23 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Adjust.
+     *
+     * @param value the argument of type {@code SqlXml}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Adjust" target="_top">.NET documentation</a>
+     */
     public SqlXml Adjust(SqlXml value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -897,6 +1704,21 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Adjust.
+     *
+     * @param value the argument of type {@code DateTime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Adjust" target="_top">.NET documentation</a>
+     */
     public DateTime Adjust(DateTime value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -912,6 +1734,23 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Adjust.
+     *
+     * @param value the argument of type {@code DateTimeOffset}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Adjust" target="_top">.NET documentation</a>
+     */
     public DateTimeOffset Adjust(DateTimeOffset value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -927,6 +1766,28 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Adjust.
+     *
+     * @param value the argument of type {@code Decimal}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.data.sqltypes.SqlNullValueException if the .NET member raises it
+     * @throws system.data.sqltypes.SqlTruncateException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.DivideByZeroException if the .NET member raises it
+     * @throws system.data.sqltypes.SqlTypeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Adjust" target="_top">.NET documentation</a>
+     */
     public Decimal Adjust(Decimal value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.DivideByZeroException, system.data.sqltypes.SqlTypeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -942,6 +1803,23 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Adjust.
+     *
+     * @param value the argument of type {@code Guid}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Adjust" target="_top">.NET documentation</a>
+     */
     public Guid Adjust(Guid value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -957,6 +1835,28 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Adjust.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.data.sqltypes.SqlNullValueException if the .NET member raises it
+     * @throws system.data.sqltypes.SqlTruncateException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.DivideByZeroException if the .NET member raises it
+     * @throws system.data.sqltypes.SqlTypeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Adjust" target="_top">.NET documentation</a>
+     */
     public NetObject Adjust(NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.DivideByZeroException, system.data.sqltypes.SqlTypeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -972,6 +1872,23 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Adjust.
+     *
+     * @param value the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Adjust" target="_top">.NET documentation</a>
+     */
     public java.lang.String Adjust(java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -986,6 +1903,23 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Adjust.
+     *
+     * @param value the argument of type {@code TimeSpan}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Adjust" target="_top">.NET documentation</a>
+     */
     public TimeSpan Adjust(TimeSpan value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1005,6 +1939,13 @@ public class SqlMetaData extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsUniqueKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.IsUniqueKey" target="_top">.NET documentation</a>
+     */
     public boolean getIsUniqueKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1019,6 +1960,13 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseServerDefault.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.UseServerDefault" target="_top">.NET documentation</a>
+     */
     public boolean getUseServerDefault() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1033,6 +1981,13 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Precision.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Precision" target="_top">.NET documentation</a>
+     */
     public byte getPrecision() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1073,6 +2028,13 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Scale.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Scale" target="_top">.NET documentation</a>
+     */
     public byte getScale() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1113,6 +2075,13 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SortOrdinal.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.SortOrdinal" target="_top">.NET documentation</a>
+     */
     public int getSortOrdinal() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1153,6 +2122,13 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LocaleId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.LocaleId" target="_top">.NET documentation</a>
+     */
     public long getLocaleId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1193,6 +2169,13 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Max.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Max" target="_top">.NET documentation</a>
+     */
     public static long getMax() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1233,6 +2216,13 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxLength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.MaxLength" target="_top">.NET documentation</a>
+     */
     public long getMaxLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1273,6 +2263,13 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DbType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.DbType" target="_top">.NET documentation</a>
+     */
     public DbType getDbType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1288,6 +2285,13 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SortOrder.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.SortOrder" target="_top">.NET documentation</a>
+     */
     public SortOrder getSortOrder() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1303,6 +2307,13 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SqlDbType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.SqlDbType" target="_top">.NET documentation</a>
+     */
     public SqlDbType getSqlDbType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1318,6 +2329,13 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CompareOptions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.CompareOptions" target="_top">.NET documentation</a>
+     */
     public SqlCompareOptions getCompareOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1333,6 +2351,13 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1347,6 +2372,13 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.TypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1361,6 +2393,13 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlSchemaCollectionDatabase.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionDatabase" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlSchemaCollectionDatabase() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1375,6 +2414,13 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlSchemaCollectionName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlSchemaCollectionName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1389,6 +2435,13 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlSchemaCollectionOwningSchema.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionOwningSchema" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlSchemaCollectionOwningSchema() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1403,6 +2456,13 @@ public class SqlMetaData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Type.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMetaData.Type" target="_top">.NET documentation</a>
+     */
     public NetType getType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

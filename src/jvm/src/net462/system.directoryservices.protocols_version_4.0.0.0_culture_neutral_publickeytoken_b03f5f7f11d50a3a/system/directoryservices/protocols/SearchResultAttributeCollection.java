@@ -102,7 +102,10 @@ public class SearchResultAttributeCollection extends system.collections.Dictiona
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SearchResultAttributeCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,20 @@ public class SearchResultAttributeCollection extends system.collections.Dictiona
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param attributeName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.SearchResultAttributeCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(java.lang.String attributeName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +188,14 @@ public class SearchResultAttributeCollection extends system.collections.Dictiona
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code DirectoryAttribute[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.SearchResultAttributeCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(DirectoryAttribute[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +210,13 @@ public class SearchResultAttributeCollection extends system.collections.Dictiona
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AttributeNames.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.SearchResultAttributeCollection.AttributeNames" target="_top">.NET documentation</a>
+     */
     public ICollection getAttributeNames() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +232,13 @@ public class SearchResultAttributeCollection extends system.collections.Dictiona
         }
     }
 
+    /**
+     * Gets the value of the .NET property Values.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.SearchResultAttributeCollection.Values" target="_top">.NET documentation</a>
+     */
     public ICollection getValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

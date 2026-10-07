@@ -110,7 +110,10 @@ public class Meter extends NetObject implements AutoCloseable {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Meter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,25 @@ public class Meter extends NetObject implements AutoCloseable {
     public Meter() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param options the argument of type {@code MeterOptions}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Meter.-ctor" target="_top">.NET documentation</a>
+     */
     public Meter(MeterOptions options) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +192,28 @@ public class Meter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param version the argument of type {@code java.lang.String}
+     * @param tags the argument of type {@code IEnumerable_1}
+     * @param scope the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Meter.-ctor" target="_top">.NET documentation</a>
+     */
     public Meter(java.lang.String name, java.lang.String version, IEnumerable_1 tags, NetObject scope) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +224,27 @@ public class Meter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param version the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Meter.-ctor" target="_top">.NET documentation</a>
+     */
     public Meter(java.lang.String name, java.lang.String version) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -190,6 +255,26 @@ public class Meter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Meter.-ctor" target="_top">.NET documentation</a>
+     */
     public Meter(java.lang.String name) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -205,6 +290,27 @@ public class Meter extends NetObject implements AutoCloseable {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateCounter.
+     *
+     * @param <T> the type of the generic argument T
+     * @param name the argument of type {@code java.lang.String}
+     * @param unit the argument of type {@code java.lang.String}
+     * @param description the argument of type {@code java.lang.String}
+     * @param tags the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Meter.CreateCounter" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> Counter_1 CreateCounter(java.lang.String name, java.lang.String unit, java.lang.String description, IEnumerable_1 tags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +326,25 @@ public class Meter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateCounter.
+     *
+     * @param <T> the type of the generic argument T
+     * @param name the argument of type {@code java.lang.String}
+     * @param unit the argument of type {@code java.lang.String}
+     * @param description the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Meter.CreateCounter" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> Counter_1 CreateCounter(java.lang.String name, java.lang.String unit, java.lang.String description) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +360,27 @@ public class Meter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateGauge.
+     *
+     * @param <T> the type of the generic argument T
+     * @param name the argument of type {@code java.lang.String}
+     * @param unit the argument of type {@code java.lang.String}
+     * @param description the argument of type {@code java.lang.String}
+     * @param tags the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Meter.CreateGauge" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> Gauge_1 CreateGauge(java.lang.String name, java.lang.String unit, java.lang.String description, IEnumerable_1 tags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +396,23 @@ public class Meter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateGauge.
+     *
+     * @param <T> the type of the generic argument T
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Meter.CreateGauge" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> Gauge_1 CreateGauge(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +428,28 @@ public class Meter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateHistogram.
+     *
+     * @param <T> the type of the generic argument T
+     * @param name the argument of type {@code java.lang.String}
+     * @param unit the argument of type {@code java.lang.String}
+     * @param description the argument of type {@code java.lang.String}
+     * @param tags the argument of type {@code IEnumerable_1}
+     * @param advice the argument of type {@code InstrumentAdvice_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Meter.CreateHistogram" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> Histogram_1 CreateHistogram(java.lang.String name, java.lang.String unit, java.lang.String description, IEnumerable_1 tags, InstrumentAdvice_1 advice) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +465,26 @@ public class Meter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateHistogram.
+     *
+     * @param <T> the type of the generic argument T
+     * @param name the argument of type {@code java.lang.String}
+     * @param unit the argument of type {@code java.lang.String}
+     * @param description the argument of type {@code java.lang.String}
+     * @param tags the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Meter.CreateHistogram" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> Histogram_1 CreateHistogram(java.lang.String name, java.lang.String unit, java.lang.String description, IEnumerable_1 tags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +500,25 @@ public class Meter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateHistogram.
+     *
+     * @param <T> the type of the generic argument T
+     * @param name the argument of type {@code java.lang.String}
+     * @param unit the argument of type {@code java.lang.String}
+     * @param description the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Meter.CreateHistogram" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> Histogram_1 CreateHistogram(java.lang.String name, java.lang.String unit, java.lang.String description) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +534,23 @@ public class Meter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateHistogram.
+     *
+     * @param <T> the type of the generic argument T
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Meter.CreateHistogram" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> Histogram_1 CreateHistogram(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -325,6 +566,28 @@ public class Meter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateObservableCounter.
+     *
+     * @param <T> the type of the generic argument T
+     * @param name the argument of type {@code java.lang.String}
+     * @param observeValues the argument of type {@code Func_1}
+     * @param unit the argument of type {@code java.lang.String}
+     * @param description the argument of type {@code java.lang.String}
+     * @param tags the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Meter.CreateObservableCounter" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> ObservableCounter_1 CreateObservableCounter(java.lang.String name, Func_1 observeValues, java.lang.String unit, java.lang.String description, IEnumerable_1 tags) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -340,6 +603,27 @@ public class Meter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateObservableCounter.
+     *
+     * @param <T> the type of the generic argument T
+     * @param name the argument of type {@code java.lang.String}
+     * @param observeValues the argument of type {@code Func_1}
+     * @param unit the argument of type {@code java.lang.String}
+     * @param description the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Meter.CreateObservableCounter" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> ObservableCounter_1 CreateObservableCounter(java.lang.String name, Func_1 observeValues, java.lang.String unit, java.lang.String description) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -355,6 +639,28 @@ public class Meter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateObservableGauge.
+     *
+     * @param <T> the type of the generic argument T
+     * @param name the argument of type {@code java.lang.String}
+     * @param observeValues the argument of type {@code Func_1}
+     * @param unit the argument of type {@code java.lang.String}
+     * @param description the argument of type {@code java.lang.String}
+     * @param tags the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Meter.CreateObservableGauge" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> ObservableGauge_1 CreateObservableGauge(java.lang.String name, Func_1 observeValues, java.lang.String unit, java.lang.String description, IEnumerable_1 tags) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -370,6 +676,27 @@ public class Meter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateObservableGauge.
+     *
+     * @param <T> the type of the generic argument T
+     * @param name the argument of type {@code java.lang.String}
+     * @param observeValues the argument of type {@code Func_1}
+     * @param unit the argument of type {@code java.lang.String}
+     * @param description the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Meter.CreateObservableGauge" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> ObservableGauge_1 CreateObservableGauge(java.lang.String name, Func_1 observeValues, java.lang.String unit, java.lang.String description) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -385,6 +712,28 @@ public class Meter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateObservableUpDownCounter.
+     *
+     * @param <T> the type of the generic argument T
+     * @param name the argument of type {@code java.lang.String}
+     * @param observeValues the argument of type {@code Func_1}
+     * @param unit the argument of type {@code java.lang.String}
+     * @param description the argument of type {@code java.lang.String}
+     * @param tags the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Meter.CreateObservableUpDownCounter" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> ObservableUpDownCounter_1 CreateObservableUpDownCounter(java.lang.String name, Func_1 observeValues, java.lang.String unit, java.lang.String description, IEnumerable_1 tags) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -400,6 +749,27 @@ public class Meter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateObservableUpDownCounter.
+     *
+     * @param <T> the type of the generic argument T
+     * @param name the argument of type {@code java.lang.String}
+     * @param observeValues the argument of type {@code Func_1}
+     * @param unit the argument of type {@code java.lang.String}
+     * @param description the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Meter.CreateObservableUpDownCounter" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> ObservableUpDownCounter_1 CreateObservableUpDownCounter(java.lang.String name, Func_1 observeValues, java.lang.String unit, java.lang.String description) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -415,6 +785,27 @@ public class Meter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateUpDownCounter.
+     *
+     * @param <T> the type of the generic argument T
+     * @param name the argument of type {@code java.lang.String}
+     * @param unit the argument of type {@code java.lang.String}
+     * @param description the argument of type {@code java.lang.String}
+     * @param tags the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Meter.CreateUpDownCounter" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> UpDownCounter_1 CreateUpDownCounter(java.lang.String name, java.lang.String unit, java.lang.String description, IEnumerable_1 tags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -430,6 +821,25 @@ public class Meter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateUpDownCounter.
+     *
+     * @param <T> the type of the generic argument T
+     * @param name the argument of type {@code java.lang.String}
+     * @param unit the argument of type {@code java.lang.String}
+     * @param description the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Meter.CreateUpDownCounter" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> UpDownCounter_1 CreateUpDownCounter(java.lang.String name, java.lang.String unit, java.lang.String description) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -445,6 +855,21 @@ public class Meter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Meter.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -472,6 +897,13 @@ public class Meter extends NetObject implements AutoCloseable {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Tags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Meter.Tags" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 getTags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -487,6 +919,13 @@ public class Meter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Tags.
+     *
+     * @param Tags the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Meter.Tags" target="_top">.NET documentation</a>
+     */
     public void setTags(IEnumerable_1 Tags) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -497,6 +936,13 @@ public class Meter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Scope.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Meter.Scope" target="_top">.NET documentation</a>
+     */
     public NetObject getScope() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -512,6 +958,13 @@ public class Meter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Scope.
+     *
+     * @param Scope the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Meter.Scope" target="_top">.NET documentation</a>
+     */
     public void setScope(NetObject Scope) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -522,6 +975,13 @@ public class Meter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Meter.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -536,6 +996,13 @@ public class Meter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Meter.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -546,6 +1013,13 @@ public class Meter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TelemetrySchemaUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Meter.TelemetrySchemaUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTelemetrySchemaUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -560,6 +1034,13 @@ public class Meter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TelemetrySchemaUrl.
+     *
+     * @param TelemetrySchemaUrl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Meter.TelemetrySchemaUrl" target="_top">.NET documentation</a>
+     */
     public void setTelemetrySchemaUrl(java.lang.String TelemetrySchemaUrl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -570,6 +1051,13 @@ public class Meter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Version.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Meter.Version" target="_top">.NET documentation</a>
+     */
     public java.lang.String getVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -584,6 +1072,13 @@ public class Meter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Version.
+     *
+     * @param Version the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Meter.Version" target="_top">.NET documentation</a>
+     */
     public void setVersion(java.lang.String Version) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

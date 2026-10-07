@@ -52,5 +52,11 @@ import microsoft.visualbasic.devices.NetworkAvailableEventArgs;
  * @version 2.0.0.0
  */
 public interface INetworkAvailableEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code Microsoft.VisualBasic.Devices.NetworkAvailableEventArgs}
+     */
     public void Invoke(NetObject sender, NetworkAvailableEventArgs e);
 }

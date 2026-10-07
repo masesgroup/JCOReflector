@@ -103,7 +103,10 @@ public class SupportingTokenSpecification extends system.servicemodel.security.S
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SupportingTokenSpecification(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,21 @@ public class SupportingTokenSpecification extends system.servicemodel.security.S
     public SupportingTokenSpecification() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param token the argument of type {@code SecurityToken}
+     * @param tokenPolicies the argument of type {@code ReadOnlyCollection_1}
+     * @param attachmentMode the argument of type {@code SecurityTokenAttachmentMode}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SupportingTokenSpecification.-ctor" target="_top">.NET documentation</a>
+     */
     public SupportingTokenSpecification(SecurityToken token, ReadOnlyCollection_1 tokenPolicies, SecurityTokenAttachmentMode attachmentMode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +181,28 @@ public class SupportingTokenSpecification extends system.servicemodel.security.S
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param token the argument of type {@code SecurityToken}
+     * @param tokenPolicies the argument of type {@code ReadOnlyCollection_1}
+     * @param attachmentMode the argument of type {@code SecurityTokenAttachmentMode}
+     * @param tokenParameters the argument of type {@code SecurityTokenParameters}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SupportingTokenSpecification.-ctor" target="_top">.NET documentation</a>
+     */
     public SupportingTokenSpecification(SecurityToken token, ReadOnlyCollection_1 tokenPolicies, SecurityTokenAttachmentMode attachmentMode, SecurityTokenParameters tokenParameters) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +222,13 @@ public class SupportingTokenSpecification extends system.servicemodel.security.S
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SecurityTokenAttachmentMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SupportingTokenSpecification.SecurityTokenAttachmentMode" target="_top">.NET documentation</a>
+     */
     public SecurityTokenAttachmentMode getSecurityTokenAttachmentMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

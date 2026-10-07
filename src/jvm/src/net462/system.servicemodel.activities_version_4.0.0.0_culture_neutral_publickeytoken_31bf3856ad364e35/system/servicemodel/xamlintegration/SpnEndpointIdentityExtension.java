@@ -102,7 +102,10 @@ public class SpnEndpointIdentityExtension extends system.windows.markup.MarkupEx
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SpnEndpointIdentityExtension(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class SpnEndpointIdentityExtension extends system.windows.markup.MarkupEx
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.XamlIntegration.SpnEndpointIdentityExtension.-ctor" target="_top">.NET documentation</a>
+     */
     public SpnEndpointIdentityExtension() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +168,20 @@ public class SpnEndpointIdentityExtension extends system.windows.markup.MarkupEx
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param identity the argument of type {@code SpnEndpointIdentity}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.XamlIntegration.SpnEndpointIdentityExtension.-ctor" target="_top">.NET documentation</a>
+     */
     public SpnEndpointIdentityExtension(SpnEndpointIdentity identity) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -173,6 +196,26 @@ public class SpnEndpointIdentityExtension extends system.windows.markup.MarkupEx
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ProvideValue.
+     *
+     * @param serviceProvider the argument of type {@code IServiceProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.XamlIntegration.SpnEndpointIdentityExtension.ProvideValue" target="_top">.NET documentation</a>
+     */
     public NetObject ProvideValue(IServiceProvider serviceProvider) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +235,13 @@ public class SpnEndpointIdentityExtension extends system.windows.markup.MarkupEx
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SpnName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.XamlIntegration.SpnEndpointIdentityExtension.SpnName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSpnName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +256,13 @@ public class SpnEndpointIdentityExtension extends system.windows.markup.MarkupEx
         }
     }
 
+    /**
+     * Sets the value of the .NET property SpnName.
+     *
+     * @param SpnName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.XamlIntegration.SpnEndpointIdentityExtension.SpnName" target="_top">.NET documentation</a>
+     */
     public void setSpnName(java.lang.String SpnName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class StyleSelector extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public StyleSelector(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class StyleSelector extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.StyleSelector.-ctor" target="_top">.NET documentation</a>
+     */
     public StyleSelector() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,15 @@ public class StyleSelector extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member SelectStyle.
+     *
+     * @param item the argument of type {@code NetObject}
+     * @param container the argument of type {@code DependencyObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.StyleSelector.SelectStyle" target="_top">.NET documentation</a>
+     */
     public Style SelectStyle(NetObject item, DependencyObject container) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class CSharpArgumentInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CSharpArgumentInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,15 @@ public class CSharpArgumentInfo extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param flags the argument of type {@code CSharpArgumentInfoFlags}
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo.Create" target="_top">.NET documentation</a>
+     */
     public static CSharpArgumentInfo Create(CSharpArgumentInfoFlags flags, java.lang.String name) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

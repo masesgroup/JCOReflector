@@ -106,7 +106,10 @@ public class MultiBinding extends system.windows.data.BindingBase  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MultiBinding(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,26 @@ public class MultiBinding extends system.windows.data.BindingBase  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.MultiBinding.-ctor" target="_top">.NET documentation</a>
+     */
     public MultiBinding() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.MissingMethodException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +190,13 @@ public class MultiBinding extends system.windows.data.BindingBase  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ShouldSerializeBindings.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.MultiBinding.ShouldSerializeBindings" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeBindings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +211,13 @@ public class MultiBinding extends system.windows.data.BindingBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member ShouldSerializeValidationRules.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.MultiBinding.ShouldSerializeValidationRules" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeValidationRules() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,8 +235,12 @@ public class MultiBinding extends system.windows.data.BindingBase  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIAddChild method available in IAddChild to obtain an object with an invocable method
+     *
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.IAddChild.AddChild" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void AddChild(NetObject value) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
@@ -207,8 +248,12 @@ public class MultiBinding extends system.windows.data.BindingBase  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIAddChild method available in IAddChild to obtain an object with an invocable method
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.IAddChild.AddText" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void AddText(java.lang.String text) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
@@ -217,6 +262,13 @@ public class MultiBinding extends system.windows.data.BindingBase  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property NotifyOnSourceUpdated.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.MultiBinding.NotifyOnSourceUpdated" target="_top">.NET documentation</a>
+     */
     public boolean getNotifyOnSourceUpdated() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +283,21 @@ public class MultiBinding extends system.windows.data.BindingBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NotifyOnSourceUpdated.
+     *
+     * @param NotifyOnSourceUpdated the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.MultiBinding.NotifyOnSourceUpdated" target="_top">.NET documentation</a>
+     */
     public void setNotifyOnSourceUpdated(boolean NotifyOnSourceUpdated) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +308,13 @@ public class MultiBinding extends system.windows.data.BindingBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NotifyOnTargetUpdated.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.MultiBinding.NotifyOnTargetUpdated" target="_top">.NET documentation</a>
+     */
     public boolean getNotifyOnTargetUpdated() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +329,21 @@ public class MultiBinding extends system.windows.data.BindingBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NotifyOnTargetUpdated.
+     *
+     * @param NotifyOnTargetUpdated the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.MultiBinding.NotifyOnTargetUpdated" target="_top">.NET documentation</a>
+     */
     public void setNotifyOnTargetUpdated(boolean NotifyOnTargetUpdated) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +354,13 @@ public class MultiBinding extends system.windows.data.BindingBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NotifyOnValidationError.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.MultiBinding.NotifyOnValidationError" target="_top">.NET documentation</a>
+     */
     public boolean getNotifyOnValidationError() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +375,21 @@ public class MultiBinding extends system.windows.data.BindingBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NotifyOnValidationError.
+     *
+     * @param NotifyOnValidationError the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.MultiBinding.NotifyOnValidationError" target="_top">.NET documentation</a>
+     */
     public void setNotifyOnValidationError(boolean NotifyOnValidationError) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +400,13 @@ public class MultiBinding extends system.windows.data.BindingBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValidatesOnDataErrors.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.MultiBinding.ValidatesOnDataErrors" target="_top">.NET documentation</a>
+     */
     public boolean getValidatesOnDataErrors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +421,21 @@ public class MultiBinding extends system.windows.data.BindingBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ValidatesOnDataErrors.
+     *
+     * @param ValidatesOnDataErrors the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.MultiBinding.ValidatesOnDataErrors" target="_top">.NET documentation</a>
+     */
     public void setValidatesOnDataErrors(boolean ValidatesOnDataErrors) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -313,6 +446,13 @@ public class MultiBinding extends system.windows.data.BindingBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValidatesOnExceptions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.MultiBinding.ValidatesOnExceptions" target="_top">.NET documentation</a>
+     */
     public boolean getValidatesOnExceptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -327,6 +467,21 @@ public class MultiBinding extends system.windows.data.BindingBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ValidatesOnExceptions.
+     *
+     * @param ValidatesOnExceptions the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.MultiBinding.ValidatesOnExceptions" target="_top">.NET documentation</a>
+     */
     public void setValidatesOnExceptions(boolean ValidatesOnExceptions) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -337,6 +492,13 @@ public class MultiBinding extends system.windows.data.BindingBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValidatesOnNotifyDataErrors.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.MultiBinding.ValidatesOnNotifyDataErrors" target="_top">.NET documentation</a>
+     */
     public boolean getValidatesOnNotifyDataErrors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -351,6 +513,21 @@ public class MultiBinding extends system.windows.data.BindingBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ValidatesOnNotifyDataErrors.
+     *
+     * @param ValidatesOnNotifyDataErrors the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.MultiBinding.ValidatesOnNotifyDataErrors" target="_top">.NET documentation</a>
+     */
     public void setValidatesOnNotifyDataErrors(boolean ValidatesOnNotifyDataErrors) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -361,6 +538,13 @@ public class MultiBinding extends system.windows.data.BindingBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValidationRules.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.MultiBinding.ValidationRules" target="_top">.NET documentation</a>
+     */
     public Collection_1 getValidationRules() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -376,6 +560,13 @@ public class MultiBinding extends system.windows.data.BindingBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Bindings.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.MultiBinding.Bindings" target="_top">.NET documentation</a>
+     */
     public Collection_1 getBindings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -391,6 +582,13 @@ public class MultiBinding extends system.windows.data.BindingBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConverterCulture.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.MultiBinding.ConverterCulture" target="_top">.NET documentation</a>
+     */
     public CultureInfo getConverterCulture() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -406,6 +604,21 @@ public class MultiBinding extends system.windows.data.BindingBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConverterCulture.
+     *
+     * @param ConverterCulture the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.MultiBinding.ConverterCulture" target="_top">.NET documentation</a>
+     */
     public void setConverterCulture(CultureInfo ConverterCulture) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -416,6 +629,13 @@ public class MultiBinding extends system.windows.data.BindingBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConverterParameter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.MultiBinding.ConverterParameter" target="_top">.NET documentation</a>
+     */
     public NetObject getConverterParameter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -431,6 +651,21 @@ public class MultiBinding extends system.windows.data.BindingBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConverterParameter.
+     *
+     * @param ConverterParameter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.MultiBinding.ConverterParameter" target="_top">.NET documentation</a>
+     */
     public void setConverterParameter(NetObject ConverterParameter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -441,6 +676,13 @@ public class MultiBinding extends system.windows.data.BindingBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Mode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.MultiBinding.Mode" target="_top">.NET documentation</a>
+     */
     public BindingMode getMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -456,6 +698,21 @@ public class MultiBinding extends system.windows.data.BindingBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Mode.
+     *
+     * @param Mode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.MultiBinding.Mode" target="_top">.NET documentation</a>
+     */
     public void setMode(BindingMode Mode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -466,6 +723,13 @@ public class MultiBinding extends system.windows.data.BindingBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Converter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.MultiBinding.Converter" target="_top">.NET documentation</a>
+     */
     public IMultiValueConverter getConverter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -481,6 +745,21 @@ public class MultiBinding extends system.windows.data.BindingBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Converter.
+     *
+     * @param Converter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.MultiBinding.Converter" target="_top">.NET documentation</a>
+     */
     public void setConverter(IMultiValueConverter Converter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -491,6 +770,13 @@ public class MultiBinding extends system.windows.data.BindingBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UpdateSourceExceptionFilter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.MultiBinding.UpdateSourceExceptionFilter" target="_top">.NET documentation</a>
+     */
     public UpdateSourceExceptionFilterCallback getUpdateSourceExceptionFilter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -505,6 +791,13 @@ public class MultiBinding extends system.windows.data.BindingBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UpdateSourceExceptionFilter.
+     *
+     * @param UpdateSourceExceptionFilter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.MultiBinding.UpdateSourceExceptionFilter" target="_top">.NET documentation</a>
+     */
     public void setUpdateSourceExceptionFilter(UpdateSourceExceptionFilterCallback UpdateSourceExceptionFilter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -515,6 +808,13 @@ public class MultiBinding extends system.windows.data.BindingBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UpdateSourceTrigger.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.MultiBinding.UpdateSourceTrigger" target="_top">.NET documentation</a>
+     */
     public UpdateSourceTrigger getUpdateSourceTrigger() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -530,6 +830,21 @@ public class MultiBinding extends system.windows.data.BindingBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UpdateSourceTrigger.
+     *
+     * @param UpdateSourceTrigger the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.MultiBinding.UpdateSourceTrigger" target="_top">.NET documentation</a>
+     */
     public void setUpdateSourceTrigger(UpdateSourceTrigger UpdateSourceTrigger) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

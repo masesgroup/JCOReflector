@@ -98,7 +98,10 @@ public class IPostBackEventHandlerImplementation extends NetObject implements IP
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IPostBackEventHandlerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,13 @@ public class IPostBackEventHandlerImplementation extends NetObject implements IP
 
     // Methods section
     
+    /**
+     * Invokes the .NET member RaisePostBackEvent.
+     *
+     * @param eventArgument the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IPostBackEventHandler.RaisePostBackEvent" target="_top">.NET documentation</a>
+     */
     public void RaisePostBackEvent(java.lang.String eventArgument) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

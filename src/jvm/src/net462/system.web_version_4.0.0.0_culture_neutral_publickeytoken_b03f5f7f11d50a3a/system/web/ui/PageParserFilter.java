@@ -104,7 +104,10 @@ public class PageParserFilter extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PageParserFilter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,14 @@ public class PageParserFilter extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AllowBaseType.
+     *
+     * @param baseType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PageParserFilter.AllowBaseType" target="_top">.NET documentation</a>
+     */
     public boolean AllowBaseType(NetType baseType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +182,15 @@ public class PageParserFilter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AllowControl.
+     *
+     * @param controlType the argument of type {@code NetType}
+     * @param builder the argument of type {@code ControlBuilder}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PageParserFilter.AllowControl" target="_top">.NET documentation</a>
+     */
     public boolean AllowControl(NetType controlType, ControlBuilder builder) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +205,14 @@ public class PageParserFilter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AllowServerSideInclude.
+     *
+     * @param includeVirtualPath the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PageParserFilter.AllowServerSideInclude" target="_top">.NET documentation</a>
+     */
     public boolean AllowServerSideInclude(java.lang.String includeVirtualPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +227,15 @@ public class PageParserFilter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AllowVirtualReference.
+     *
+     * @param referenceVirtualPath the argument of type {@code java.lang.String}
+     * @param referenceType the argument of type {@code VirtualReferenceType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PageParserFilter.AllowVirtualReference" target="_top">.NET documentation</a>
+     */
     public boolean AllowVirtualReference(java.lang.String referenceVirtualPath, VirtualReferenceType referenceType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +250,15 @@ public class PageParserFilter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ProcessCodeConstruct.
+     *
+     * @param codeType the argument of type {@code CodeConstructType}
+     * @param code the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PageParserFilter.ProcessCodeConstruct" target="_top">.NET documentation</a>
+     */
     public boolean ProcessCodeConstruct(CodeConstructType codeType, java.lang.String code) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +273,16 @@ public class PageParserFilter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ProcessDataBindingAttribute.
+     *
+     * @param controlId the argument of type {@code java.lang.String}
+     * @param name the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PageParserFilter.ProcessDataBindingAttribute" target="_top">.NET documentation</a>
+     */
     public boolean ProcessDataBindingAttribute(java.lang.String controlId, java.lang.String name, java.lang.String value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +297,16 @@ public class PageParserFilter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ProcessEventHookup.
+     *
+     * @param controlId the argument of type {@code java.lang.String}
+     * @param eventName the argument of type {@code java.lang.String}
+     * @param handlerName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PageParserFilter.ProcessEventHookup" target="_top">.NET documentation</a>
+     */
     public boolean ProcessEventHookup(java.lang.String controlId, java.lang.String eventName, java.lang.String handlerName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +321,13 @@ public class PageParserFilter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetNoCompileUserControlType.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PageParserFilter.GetNoCompileUserControlType" target="_top">.NET documentation</a>
+     */
     public NetType GetNoCompileUserControlType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +343,14 @@ public class PageParserFilter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCompilationMode.
+     *
+     * @param current the argument of type {@code CompilationMode}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PageParserFilter.GetCompilationMode" target="_top">.NET documentation</a>
+     */
     public CompilationMode GetCompilationMode(CompilationMode current) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -285,6 +366,13 @@ public class PageParserFilter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ParseComplete.
+     *
+     * @param rootBuilder the argument of type {@code ControlBuilder}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PageParserFilter.ParseComplete" target="_top">.NET documentation</a>
+     */
     public void ParseComplete(ControlBuilder rootBuilder) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +383,14 @@ public class PageParserFilter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PreprocessDirective.
+     *
+     * @param directiveName the argument of type {@code java.lang.String}
+     * @param attributes the argument of type {@code IDictionary}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PageParserFilter.PreprocessDirective" target="_top">.NET documentation</a>
+     */
     public void PreprocessDirective(java.lang.String directiveName, IDictionary attributes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -309,6 +405,13 @@ public class PageParserFilter extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowCode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PageParserFilter.AllowCode" target="_top">.NET documentation</a>
+     */
     public boolean getAllowCode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -323,6 +426,13 @@ public class PageParserFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NumberOfControlsAllowed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PageParserFilter.NumberOfControlsAllowed" target="_top">.NET documentation</a>
+     */
     public int getNumberOfControlsAllowed() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -363,6 +473,13 @@ public class PageParserFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NumberOfDirectDependenciesAllowed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PageParserFilter.NumberOfDirectDependenciesAllowed" target="_top">.NET documentation</a>
+     */
     public int getNumberOfDirectDependenciesAllowed() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -403,6 +520,13 @@ public class PageParserFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TotalNumberOfDependenciesAllowed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PageParserFilter.TotalNumberOfDependenciesAllowed" target="_top">.NET documentation</a>
+     */
     public int getTotalNumberOfDependenciesAllowed() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class BasicHttpsSecurity extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BasicHttpsSecurity(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,26 @@ public class BasicHttpsSecurity extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.BasicHttpsSecurity.-ctor" target="_top">.NET documentation</a>
+     */
     public BasicHttpsSecurity() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +185,13 @@ public class BasicHttpsSecurity extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ShouldSerializeMessage.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.BasicHttpsSecurity.ShouldSerializeMessage" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeMessage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +206,13 @@ public class BasicHttpsSecurity extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ShouldSerializeTransport.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.BasicHttpsSecurity.ShouldSerializeTransport" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeTransport() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +231,13 @@ public class BasicHttpsSecurity extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Message.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.BasicHttpsSecurity.Message" target="_top">.NET documentation</a>
+     */
     public BasicHttpMessageSecurity getMessage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +253,13 @@ public class BasicHttpsSecurity extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Message.
+     *
+     * @param Message the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.BasicHttpsSecurity.Message" target="_top">.NET documentation</a>
+     */
     public void setMessage(BasicHttpMessageSecurity Message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +270,13 @@ public class BasicHttpsSecurity extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Mode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.BasicHttpsSecurity.Mode" target="_top">.NET documentation</a>
+     */
     public BasicHttpsSecurityMode getMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +292,24 @@ public class BasicHttpsSecurity extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Mode.
+     *
+     * @param Mode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.BasicHttpsSecurity.Mode" target="_top">.NET documentation</a>
+     */
     public void setMode(BasicHttpsSecurityMode Mode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +320,13 @@ public class BasicHttpsSecurity extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Transport.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.BasicHttpsSecurity.Transport" target="_top">.NET documentation</a>
+     */
     public HttpTransportSecurity getTransport() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +342,13 @@ public class BasicHttpsSecurity extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Transport.
+     *
+     * @param Transport the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.BasicHttpsSecurity.Transport" target="_top">.NET documentation</a>
+     */
     public void setTransport(HttpTransportSecurity Transport) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

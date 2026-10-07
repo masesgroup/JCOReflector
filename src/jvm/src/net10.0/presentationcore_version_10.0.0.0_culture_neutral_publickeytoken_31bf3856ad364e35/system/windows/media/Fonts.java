@@ -101,7 +101,10 @@ public class Fonts extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Fonts(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,35 @@ public class Fonts extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetFontFamilies.
+     *
+     * @param location the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.net.WebException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Fonts.GetFontFamilies" target="_top">.NET documentation</a>
+     */
     public static ICollection_1 GetFontFamilies(java.lang.String location) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.UriFormatException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.IOException, system.net.WebException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -169,6 +201,36 @@ public class Fonts extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFontFamilies.
+     *
+     * @param baseUri the argument of type {@code Uri}
+     * @param location the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.net.WebException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Fonts.GetFontFamilies" target="_top">.NET documentation</a>
+     */
     public static ICollection_1 GetFontFamilies(Uri baseUri, java.lang.String location) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.diagnostics.UnreachableException, system.UriFormatException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.IOException, system.net.WebException, system.xml.XmlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -184,6 +246,35 @@ public class Fonts extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFontFamilies.
+     *
+     * @param baseUri the argument of type {@code Uri}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.net.WebException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Fonts.GetFontFamilies" target="_top">.NET documentation</a>
+     */
     public static ICollection_1 GetFontFamilies(Uri baseUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.UriFormatException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.IOException, system.net.WebException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -199,6 +290,35 @@ public class Fonts extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypefaces.
+     *
+     * @param location the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.net.WebException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Fonts.GetTypefaces" target="_top">.NET documentation</a>
+     */
     public static ICollection_1 GetTypefaces(java.lang.String location) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.UriFormatException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.IOException, system.net.WebException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -214,6 +334,34 @@ public class Fonts extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypefaces.
+     *
+     * @param baseUri the argument of type {@code Uri}
+     * @param location the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.net.WebException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Fonts.GetTypefaces" target="_top">.NET documentation</a>
+     */
     public static ICollection_1 GetTypefaces(Uri baseUri, java.lang.String location) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.UriFormatException, system.ObjectDisposedException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.IOException, system.net.WebException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -229,6 +377,35 @@ public class Fonts extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypefaces.
+     *
+     * @param baseUri the argument of type {@code Uri}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.net.WebException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Fonts.GetTypefaces" target="_top">.NET documentation</a>
+     */
     public static ICollection_1 GetTypefaces(Uri baseUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.UriFormatException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.IOException, system.net.WebException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -248,6 +425,13 @@ public class Fonts extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SystemFontFamilies.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Fonts.SystemFontFamilies" target="_top">.NET documentation</a>
+     */
     public static ICollection_1 getSystemFontFamilies() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -263,6 +447,13 @@ public class Fonts extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SystemTypefaces.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Fonts.SystemTypefaces" target="_top">.NET documentation</a>
+     */
     public static ICollection_1 getSystemTypefaces() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

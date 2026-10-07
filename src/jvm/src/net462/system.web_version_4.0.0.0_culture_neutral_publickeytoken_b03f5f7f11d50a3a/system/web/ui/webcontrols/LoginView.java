@@ -106,7 +106,10 @@ public class LoginView extends system.web.ui.Control implements system.web.ui.IN
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public LoginView(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,12 @@ public class LoginView extends system.web.ui.Control implements system.web.ui.IN
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.LoginView.-ctor" target="_top">.NET documentation</a>
+     */
     public LoginView() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +176,24 @@ public class LoginView extends system.web.ui.Control implements system.web.ui.IN
     
     // Methods section
     
+    /**
+     * Invokes the .NET member DataBind.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.LoginView.DataBind" target="_top">.NET documentation</a>
+     */
     public void DataBind() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.configuration.provider.ProviderException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +204,24 @@ public class LoginView extends system.web.ui.Control implements system.web.ui.IN
         }
     }
 
+    /**
+     * Invokes the .NET member Focus.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.LoginView.Focus" target="_top">.NET documentation</a>
+     */
     public void Focus() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +236,13 @@ public class LoginView extends system.web.ui.Control implements system.web.ui.IN
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AnonymousTemplate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.LoginView.AnonymousTemplate" target="_top">.NET documentation</a>
+     */
     public ITemplate getAnonymousTemplate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +258,13 @@ public class LoginView extends system.web.ui.Control implements system.web.ui.IN
         }
     }
 
+    /**
+     * Sets the value of the .NET property AnonymousTemplate.
+     *
+     * @param AnonymousTemplate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.LoginView.AnonymousTemplate" target="_top">.NET documentation</a>
+     */
     public void setAnonymousTemplate(ITemplate AnonymousTemplate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +275,13 @@ public class LoginView extends system.web.ui.Control implements system.web.ui.IN
         }
     }
 
+    /**
+     * Gets the value of the .NET property LoggedInTemplate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.LoginView.LoggedInTemplate" target="_top">.NET documentation</a>
+     */
     public ITemplate getLoggedInTemplate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +297,13 @@ public class LoginView extends system.web.ui.Control implements system.web.ui.IN
         }
     }
 
+    /**
+     * Sets the value of the .NET property LoggedInTemplate.
+     *
+     * @param LoggedInTemplate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.LoginView.LoggedInTemplate" target="_top">.NET documentation</a>
+     */
     public void setLoggedInTemplate(ITemplate LoggedInTemplate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +314,13 @@ public class LoginView extends system.web.ui.Control implements system.web.ui.IN
         }
     }
 
+    /**
+     * Gets the value of the .NET property RoleGroups.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.LoginView.RoleGroups" target="_top">.NET documentation</a>
+     */
     public RoleGroupCollection getRoleGroups() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +341,13 @@ public class LoginView extends system.web.ui.Control implements system.web.ui.IN
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addViewChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addViewChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +358,13 @@ public class LoginView extends system.web.ui.Control implements system.web.ui.IN
         }
     }
 
+    /**
+     * Invokes the .NET member removeViewChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeViewChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +375,13 @@ public class LoginView extends system.web.ui.Control implements system.web.ui.IN
         }
     }
 
+    /**
+     * Invokes the .NET member addViewChanging.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addViewChanging(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +392,13 @@ public class LoginView extends system.web.ui.Control implements system.web.ui.IN
         }
     }
 
+    /**
+     * Invokes the .NET member removeViewChanging.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeViewChanging(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

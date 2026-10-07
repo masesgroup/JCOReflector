@@ -104,7 +104,10 @@ public class ITypeProviderCreatorImplementation extends NetObject implements ITy
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ITypeProviderCreatorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,14 @@ public class ITypeProviderCreatorImplementation extends NetObject implements ITy
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetTypeResolutionService.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.ITypeProviderCreator.GetTypeResolutionService" target="_top">.NET documentation</a>
+     */
     public ITypeResolutionService GetTypeResolutionService(NetObject obj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -161,6 +172,14 @@ public class ITypeProviderCreatorImplementation extends NetObject implements ITy
         }
     }
 
+    /**
+     * Invokes the .NET member GetLocalAssembly.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.ITypeProviderCreator.GetLocalAssembly" target="_top">.NET documentation</a>
+     */
     public Assembly GetLocalAssembly(NetObject obj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +195,14 @@ public class ITypeProviderCreatorImplementation extends NetObject implements ITy
         }
     }
 
+    /**
+     * Invokes the .NET member GetTransientAssembly.
+     *
+     * @param assemblyName the argument of type {@code AssemblyName}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.ITypeProviderCreator.GetTransientAssembly" target="_top">.NET documentation</a>
+     */
     public Assembly GetTransientAssembly(AssemblyName assemblyName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +218,14 @@ public class ITypeProviderCreatorImplementation extends NetObject implements ITy
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeProvider.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.ITypeProviderCreator.GetTypeProvider" target="_top">.NET documentation</a>
+     */
     public ITypeProvider GetTypeProvider(NetObject obj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class Scope extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Scope(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,14 @@ public class Scope extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Scope.-ctor" target="_top">.NET documentation</a>
+     */
     public Scope() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +169,15 @@ public class Scope extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param appliesToAddress the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Scope.-ctor" target="_top">.NET documentation</a>
+     */
     public Scope(java.lang.String appliesToAddress) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +188,16 @@ public class Scope extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param appliesToAddress the argument of type {@code java.lang.String}
+     * @param encryptingCredentials the argument of type {@code EncryptingCredentials}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Scope.-ctor" target="_top">.NET documentation</a>
+     */
     public Scope(java.lang.String appliesToAddress, EncryptingCredentials encryptingCredentials) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +208,16 @@ public class Scope extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param appliesToAddress the argument of type {@code java.lang.String}
+     * @param signingCredentials the argument of type {@code SigningCredentials}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Scope.-ctor" target="_top">.NET documentation</a>
+     */
     public Scope(java.lang.String appliesToAddress, SigningCredentials signingCredentials) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -188,6 +228,17 @@ public class Scope extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param appliesToAddress the argument of type {@code java.lang.String}
+     * @param signingCredentials the argument of type {@code SigningCredentials}
+     * @param encryptingCredentials the argument of type {@code EncryptingCredentials}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Scope.-ctor" target="_top">.NET documentation</a>
+     */
     public Scope(java.lang.String appliesToAddress, SigningCredentials signingCredentials, EncryptingCredentials encryptingCredentials) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -206,6 +257,13 @@ public class Scope extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SymmetricKeyEncryptionRequired.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Scope.SymmetricKeyEncryptionRequired" target="_top">.NET documentation</a>
+     */
     public boolean getSymmetricKeyEncryptionRequired() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +278,13 @@ public class Scope extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SymmetricKeyEncryptionRequired.
+     *
+     * @param SymmetricKeyEncryptionRequired the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Scope.SymmetricKeyEncryptionRequired" target="_top">.NET documentation</a>
+     */
     public void setSymmetricKeyEncryptionRequired(boolean SymmetricKeyEncryptionRequired) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +295,13 @@ public class Scope extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TokenEncryptionRequired.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Scope.TokenEncryptionRequired" target="_top">.NET documentation</a>
+     */
     public boolean getTokenEncryptionRequired() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +316,13 @@ public class Scope extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TokenEncryptionRequired.
+     *
+     * @param TokenEncryptionRequired the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Scope.TokenEncryptionRequired" target="_top">.NET documentation</a>
+     */
     public void setTokenEncryptionRequired(boolean TokenEncryptionRequired) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +333,13 @@ public class Scope extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Properties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Scope.Properties" target="_top">.NET documentation</a>
+     */
     public Dictionary_2 getProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +355,13 @@ public class Scope extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EncryptingCredentials.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Scope.EncryptingCredentials" target="_top">.NET documentation</a>
+     */
     public EncryptingCredentials getEncryptingCredentials() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -284,6 +377,13 @@ public class Scope extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EncryptingCredentials.
+     *
+     * @param EncryptingCredentials the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Scope.EncryptingCredentials" target="_top">.NET documentation</a>
+     */
     public void setEncryptingCredentials(EncryptingCredentials EncryptingCredentials) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +394,13 @@ public class Scope extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SigningCredentials.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Scope.SigningCredentials" target="_top">.NET documentation</a>
+     */
     public SigningCredentials getSigningCredentials() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -309,6 +416,13 @@ public class Scope extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SigningCredentials.
+     *
+     * @param SigningCredentials the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Scope.SigningCredentials" target="_top">.NET documentation</a>
+     */
     public void setSigningCredentials(SigningCredentials SigningCredentials) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -319,6 +433,13 @@ public class Scope extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AppliesToAddress.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Scope.AppliesToAddress" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAppliesToAddress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -333,6 +454,13 @@ public class Scope extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AppliesToAddress.
+     *
+     * @param AppliesToAddress the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Scope.AppliesToAddress" target="_top">.NET documentation</a>
+     */
     public void setAppliesToAddress(java.lang.String AppliesToAddress) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -343,6 +471,13 @@ public class Scope extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReplyToAddress.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Scope.ReplyToAddress" target="_top">.NET documentation</a>
+     */
     public java.lang.String getReplyToAddress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -357,6 +492,13 @@ public class Scope extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReplyToAddress.
+     *
+     * @param ReplyToAddress the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Scope.ReplyToAddress" target="_top">.NET documentation</a>
+     */
     public void setReplyToAddress(java.lang.String ReplyToAddress) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

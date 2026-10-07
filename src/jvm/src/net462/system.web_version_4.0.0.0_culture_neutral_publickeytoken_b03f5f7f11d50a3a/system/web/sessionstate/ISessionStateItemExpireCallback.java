@@ -52,5 +52,11 @@ import system.web.sessionstate.SessionStateStoreData;
  * @version 2.0.0.0
  */
 public interface ISessionStateItemExpireCallback {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param id the .NET argument of type {@code System.String}
+     * @param item the .NET argument of type {@code System.Web.SessionState.SessionStateStoreData}
+     */
     public void Invoke(java.lang.String id, SessionStateStoreData item);
 }

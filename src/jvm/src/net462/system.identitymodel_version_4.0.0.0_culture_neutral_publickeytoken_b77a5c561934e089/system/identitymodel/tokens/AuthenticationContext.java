@@ -99,7 +99,10 @@ public class AuthenticationContext extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AuthenticationContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class AuthenticationContext extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.AuthenticationContext.-ctor" target="_top">.NET documentation</a>
+     */
     public AuthenticationContext() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class AuthenticationContext extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Authorities.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.AuthenticationContext.Authorities" target="_top">.NET documentation</a>
+     */
     public Collection_1 getAuthorities() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +195,13 @@ public class AuthenticationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContextClass.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.AuthenticationContext.ContextClass" target="_top">.NET documentation</a>
+     */
     public java.lang.String getContextClass() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +216,13 @@ public class AuthenticationContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ContextClass.
+     *
+     * @param ContextClass the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.AuthenticationContext.ContextClass" target="_top">.NET documentation</a>
+     */
     public void setContextClass(java.lang.String ContextClass) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +233,13 @@ public class AuthenticationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContextDeclaration.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.AuthenticationContext.ContextDeclaration" target="_top">.NET documentation</a>
+     */
     public java.lang.String getContextDeclaration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +254,13 @@ public class AuthenticationContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ContextDeclaration.
+     *
+     * @param ContextDeclaration the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.AuthenticationContext.ContextDeclaration" target="_top">.NET documentation</a>
+     */
     public void setContextDeclaration(java.lang.String ContextDeclaration) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

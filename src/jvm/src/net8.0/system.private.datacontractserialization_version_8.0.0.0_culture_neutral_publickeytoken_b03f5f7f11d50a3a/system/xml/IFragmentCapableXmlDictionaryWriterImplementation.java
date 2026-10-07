@@ -99,7 +99,10 @@ public class IFragmentCapableXmlDictionaryWriterImplementation extends NetObject
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IFragmentCapableXmlDictionaryWriterImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,12 @@ public class IFragmentCapableXmlDictionaryWriterImplementation extends NetObject
 
     // Methods section
     
+    /**
+     * Invokes the .NET member EndFragment.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.IFragmentCapableXmlDictionaryWriter.EndFragment" target="_top">.NET documentation</a>
+     */
     public void EndFragment() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -151,6 +160,14 @@ public class IFragmentCapableXmlDictionaryWriterImplementation extends NetObject
         }
     }
 
+    /**
+     * Invokes the .NET member StartFragment.
+     *
+     * @param stream the argument of type {@code Stream}
+     * @param generateSelfContainedTextFragment the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.IFragmentCapableXmlDictionaryWriter.StartFragment" target="_top">.NET documentation</a>
+     */
     public void StartFragment(Stream stream, boolean generateSelfContainedTextFragment) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -161,6 +178,15 @@ public class IFragmentCapableXmlDictionaryWriterImplementation extends NetObject
         }
     }
 
+    /**
+     * Invokes the .NET member WriteFragment.
+     *
+     * @param buffer the argument of type {@code byte[]}
+     * @param offset the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.IFragmentCapableXmlDictionaryWriter.WriteFragment" target="_top">.NET documentation</a>
+     */
     public void WriteFragment(byte[] buffer, int offset, int count) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +197,15 @@ public class IFragmentCapableXmlDictionaryWriterImplementation extends NetObject
         }
     }
 
+    /**
+     * Invokes the .NET member WriteFragment.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.IFragmentCapableXmlDictionaryWriter.WriteFragment" target="_top">.NET documentation</a>
+     */
     public void WriteFragment(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +220,13 @@ public class IFragmentCapableXmlDictionaryWriterImplementation extends NetObject
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CanFragment.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.IFragmentCapableXmlDictionaryWriter.CanFragment" target="_top">.NET documentation</a>
+     */
     public boolean getCanFragment() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

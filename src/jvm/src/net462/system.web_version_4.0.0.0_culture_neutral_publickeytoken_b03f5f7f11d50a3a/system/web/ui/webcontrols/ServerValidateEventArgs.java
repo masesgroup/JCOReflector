@@ -99,7 +99,10 @@ public class ServerValidateEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ServerValidateEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class ServerValidateEventArgs extends system.EventArgs  {
     public ServerValidateEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code java.lang.String}
+     * @param isValid the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ServerValidateEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ServerValidateEventArgs(java.lang.String value, boolean isValid) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +179,13 @@ public class ServerValidateEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsValid.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ServerValidateEventArgs.IsValid" target="_top">.NET documentation</a>
+     */
     public boolean getIsValid() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +200,13 @@ public class ServerValidateEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsValid.
+     *
+     * @param IsValid the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ServerValidateEventArgs.IsValid" target="_top">.NET documentation</a>
+     */
     public void setIsValid(boolean IsValid) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +217,13 @@ public class ServerValidateEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ServerValidateEventArgs.Value" target="_top">.NET documentation</a>
+     */
     public java.lang.String getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

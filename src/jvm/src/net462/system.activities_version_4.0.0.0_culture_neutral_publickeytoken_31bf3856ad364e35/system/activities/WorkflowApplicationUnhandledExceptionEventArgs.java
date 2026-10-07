@@ -100,7 +100,10 @@ public class WorkflowApplicationUnhandledExceptionEventArgs extends system.activ
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WorkflowApplicationUnhandledExceptionEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class WorkflowApplicationUnhandledExceptionEventArgs extends system.activ
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ExceptionSource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.WorkflowApplicationUnhandledExceptionEventArgs.ExceptionSource" target="_top">.NET documentation</a>
+     */
     public Activity getExceptionSource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +184,13 @@ public class WorkflowApplicationUnhandledExceptionEventArgs extends system.activ
         }
     }
 
+    /**
+     * Sets the value of the .NET property ExceptionSource.
+     *
+     * @param ExceptionSource the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.WorkflowApplicationUnhandledExceptionEventArgs.ExceptionSource" target="_top">.NET documentation</a>
+     */
     public void setExceptionSource(Activity ExceptionSource) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +201,13 @@ public class WorkflowApplicationUnhandledExceptionEventArgs extends system.activ
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnhandledException.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.WorkflowApplicationUnhandledExceptionEventArgs.UnhandledException" target="_top">.NET documentation</a>
+     */
     public NetException getUnhandledException() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +223,13 @@ public class WorkflowApplicationUnhandledExceptionEventArgs extends system.activ
         }
     }
 
+    /**
+     * Sets the value of the .NET property UnhandledException.
+     *
+     * @param UnhandledException the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.WorkflowApplicationUnhandledExceptionEventArgs.UnhandledException" target="_top">.NET documentation</a>
+     */
     public void setUnhandledException(NetException UnhandledException) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +240,13 @@ public class WorkflowApplicationUnhandledExceptionEventArgs extends system.activ
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExceptionSourceInstanceId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.WorkflowApplicationUnhandledExceptionEventArgs.ExceptionSourceInstanceId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getExceptionSourceInstanceId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +261,13 @@ public class WorkflowApplicationUnhandledExceptionEventArgs extends system.activ
         }
     }
 
+    /**
+     * Sets the value of the .NET property ExceptionSourceInstanceId.
+     *
+     * @param ExceptionSourceInstanceId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.WorkflowApplicationUnhandledExceptionEventArgs.ExceptionSourceInstanceId" target="_top">.NET documentation</a>
+     */
     public void setExceptionSourceInstanceId(java.lang.String ExceptionSourceInstanceId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

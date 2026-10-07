@@ -108,7 +108,10 @@ public class CategoriesDocument extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CategoriesDocument(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -161,6 +164,20 @@ public class CategoriesDocument extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param reader the argument of type {@code XmlReader}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.CategoriesDocument.Load" target="_top">.NET documentation</a>
+     */
     public static CategoriesDocument Load(XmlReader reader) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -176,6 +193,19 @@ public class CategoriesDocument extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFormatter.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.CategoriesDocument.GetFormatter" target="_top">.NET documentation</a>
+     */
     public CategoriesDocumentFormatter GetFormatter() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +221,15 @@ public class CategoriesDocument extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param categories the argument of type {@code Collection_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.CategoriesDocument.Create" target="_top">.NET documentation</a>
+     */
     public static InlineCategoriesDocument Create(Collection_1 categories) throws Throwable, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -206,6 +245,17 @@ public class CategoriesDocument extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param categories the argument of type {@code Collection_1}
+     * @param isFixed the argument of type {@code boolean}
+     * @param scheme the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.CategoriesDocument.Create" target="_top">.NET documentation</a>
+     */
     public static InlineCategoriesDocument Create(Collection_1 categories, boolean isFixed, java.lang.String scheme) throws Throwable, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -221,6 +271,26 @@ public class CategoriesDocument extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param linkToCategoriesDocument the argument of type {@code Uri}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.CategoriesDocument.Create" target="_top">.NET documentation</a>
+     */
     public static ReferencedCategoriesDocument Create(Uri linkToCategoriesDocument) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -236,6 +306,18 @@ public class CategoriesDocument extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Save.
+     *
+     * @param writer the argument of type {@code XmlWriter}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.CategoriesDocument.Save" target="_top">.NET documentation</a>
+     */
     public void Save(XmlWriter writer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +332,15 @@ public class CategoriesDocument extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AttributeExtensions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.CategoriesDocument.AttributeExtensions" target="_top">.NET documentation</a>
+     */
     public Dictionary_2 getAttributeExtensions() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +356,21 @@ public class CategoriesDocument extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ElementExtensions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.CategoriesDocument.ElementExtensions" target="_top">.NET documentation</a>
+     */
     public SyndicationElementExtensionCollection getElementExtensions() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +386,13 @@ public class CategoriesDocument extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Language.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.CategoriesDocument.Language" target="_top">.NET documentation</a>
+     */
     public java.lang.String getLanguage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +407,13 @@ public class CategoriesDocument extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Language.
+     *
+     * @param Language the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.CategoriesDocument.Language" target="_top">.NET documentation</a>
+     */
     public void setLanguage(java.lang.String Language) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +424,13 @@ public class CategoriesDocument extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BaseUri.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.CategoriesDocument.BaseUri" target="_top">.NET documentation</a>
+     */
     public Uri getBaseUri() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -319,6 +446,13 @@ public class CategoriesDocument extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BaseUri.
+     *
+     * @param BaseUri the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.CategoriesDocument.BaseUri" target="_top">.NET documentation</a>
+     */
     public void setBaseUri(Uri BaseUri) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

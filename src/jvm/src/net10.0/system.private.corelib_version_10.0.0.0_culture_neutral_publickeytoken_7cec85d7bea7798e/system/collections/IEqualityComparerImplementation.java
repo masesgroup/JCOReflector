@@ -98,7 +98,10 @@ public class IEqualityComparerImplementation extends NetObject implements IEqual
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IEqualityComparerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,15 @@ public class IEqualityComparerImplementation extends NetObject implements IEqual
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param x the argument of type {@code NetObject}
+     * @param y the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IEqualityComparer.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(NetObject x, NetObject y) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -154,6 +166,14 @@ public class IEqualityComparerImplementation extends NetObject implements IEqual
         }
     }
 
+    /**
+     * Invokes the .NET member GetHashCode.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IEqualityComparer.GetHashCode" target="_top">.NET documentation</a>
+     */
     public int GetHashCode(NetObject obj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

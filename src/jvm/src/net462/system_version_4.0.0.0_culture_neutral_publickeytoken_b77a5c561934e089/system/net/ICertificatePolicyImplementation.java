@@ -101,7 +101,10 @@ public class ICertificatePolicyImplementation extends NetObject implements ICert
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ICertificatePolicyImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,17 @@ public class ICertificatePolicyImplementation extends NetObject implements ICert
 
     // Methods section
     
+    /**
+     * Invokes the .NET member CheckValidationResult.
+     *
+     * @param srvPoint the argument of type {@code ServicePoint}
+     * @param certificate the argument of type {@code X509Certificate}
+     * @param request the argument of type {@code WebRequest}
+     * @param certificateProblem the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ICertificatePolicy.CheckValidationResult" target="_top">.NET documentation</a>
+     */
     public boolean CheckValidationResult(ServicePoint srvPoint, X509Certificate certificate, WebRequest request, int certificateProblem) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -102,7 +102,10 @@ public class FontWeight extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FontWeight(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,14 @@ public class FontWeight extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param obj the argument of type {@code FontWeight}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FontWeight.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(FontWeight obj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +182,15 @@ public class FontWeight extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Compare.
+     *
+     * @param left the argument of type {@code FontWeight}
+     * @param right the argument of type {@code FontWeight}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FontWeight.Compare" target="_top">.NET documentation</a>
+     */
     public static int Compare(FontWeight left, FontWeight right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -211,6 +231,13 @@ public class FontWeight extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToOpenTypeWeight.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FontWeight.ToOpenTypeWeight" target="_top">.NET documentation</a>
+     */
     public int ToOpenTypeWeight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +278,25 @@ public class FontWeight extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member FromOpenTypeWeight.
+     *
+     * @param weightValue the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FontWeight.FromOpenTypeWeight" target="_top">.NET documentation</a>
+     */
     public static FontWeight FromOpenTypeWeight(int weightValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -269,8 +315,14 @@ public class FontWeight extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIFormattable method available in IFormattable to obtain an object with an invocable method
+     *
+     * @param format the argument of type {@code java.lang.String}
+     * @param formatProvider the argument of type {@code IFormatProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IFormattable.ToString" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public java.lang.String ToString(java.lang.String format, IFormatProvider formatProvider) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
     }

@@ -100,7 +100,10 @@ public class Eval extends microsoft.jscript.AST  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Eval(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,25 @@ public class Eval extends microsoft.jscript.AST  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member JScriptEvaluate.
+     *
+     * @param source the argument of type {@code NetObject}
+     * @param engine the argument of type {@code VsaEngine}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @throws microsoft.jscript.EndOfFile if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Eval.JScriptEvaluate" target="_top">.NET documentation</a>
+     */
     public static NetObject JScriptEvaluate(NetObject source, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, microsoft.jscript.vsa.JSVsaException, microsoft.jscript.EndOfFile, system.IndexOutOfRangeException, system.NullReferenceException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -170,6 +192,26 @@ public class Eval extends microsoft.jscript.AST  {
         }
     }
 
+    /**
+     * Invokes the .NET member JScriptEvaluate.
+     *
+     * @param source the argument of type {@code NetObject}
+     * @param unsafeOption the argument of type {@code NetObject}
+     * @param engine the argument of type {@code VsaEngine}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @throws microsoft.jscript.EndOfFile if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Eval.JScriptEvaluate" target="_top">.NET documentation</a>
+     */
     public static NetObject JScriptEvaluate(NetObject source, NetObject unsafeOption, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, microsoft.jscript.vsa.JSVsaException, microsoft.jscript.EndOfFile, system.IndexOutOfRangeException, system.NullReferenceException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

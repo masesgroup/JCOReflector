@@ -102,7 +102,10 @@ public class ApplicationAccessControlAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ApplicationAccessControlAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class ApplicationAccessControlAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ApplicationAccessControlAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ApplicationAccessControlAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +168,13 @@ public class ApplicationAccessControlAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param val the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ApplicationAccessControlAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ApplicationAccessControlAttribute(boolean val) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -177,6 +193,13 @@ public class ApplicationAccessControlAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ApplicationAccessControlAttribute.Value" target="_top">.NET documentation</a>
+     */
     public boolean getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +214,13 @@ public class ApplicationAccessControlAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Value.
+     *
+     * @param Value the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ApplicationAccessControlAttribute.Value" target="_top">.NET documentation</a>
+     */
     public void setValue(boolean Value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +231,13 @@ public class ApplicationAccessControlAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AccessChecksLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ApplicationAccessControlAttribute.AccessChecksLevel" target="_top">.NET documentation</a>
+     */
     public AccessChecksLevelOption getAccessChecksLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +253,13 @@ public class ApplicationAccessControlAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AccessChecksLevel.
+     *
+     * @param AccessChecksLevel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ApplicationAccessControlAttribute.AccessChecksLevel" target="_top">.NET documentation</a>
+     */
     public void setAccessChecksLevel(AccessChecksLevelOption AccessChecksLevel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +270,13 @@ public class ApplicationAccessControlAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Authentication.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ApplicationAccessControlAttribute.Authentication" target="_top">.NET documentation</a>
+     */
     public AuthenticationOption getAuthentication() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +292,13 @@ public class ApplicationAccessControlAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Authentication.
+     *
+     * @param Authentication the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ApplicationAccessControlAttribute.Authentication" target="_top">.NET documentation</a>
+     */
     public void setAuthentication(AuthenticationOption Authentication) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +309,13 @@ public class ApplicationAccessControlAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ImpersonationLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ApplicationAccessControlAttribute.ImpersonationLevel" target="_top">.NET documentation</a>
+     */
     public ImpersonationLevelOption getImpersonationLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +331,13 @@ public class ApplicationAccessControlAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ImpersonationLevel.
+     *
+     * @param ImpersonationLevel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ApplicationAccessControlAttribute.ImpersonationLevel" target="_top">.NET documentation</a>
+     */
     public void setImpersonationLevel(ImpersonationLevelOption ImpersonationLevel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

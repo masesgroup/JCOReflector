@@ -103,7 +103,9 @@ public class AuthenticationTagMismatchException extends system.security.cryptogr
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public AuthenticationTagMismatchException(java.lang.Object instance) {
         super(instance);

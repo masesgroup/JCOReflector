@@ -98,7 +98,10 @@ public class SqlNotificationRequest extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SqlNotificationRequest(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,13 @@ public class SqlNotificationRequest extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Sql.SqlNotificationRequest.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlNotificationRequest() throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -155,6 +165,16 @@ public class SqlNotificationRequest extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param userData the argument of type {@code java.lang.String}
+     * @param options the argument of type {@code java.lang.String}
+     * @param timeout the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Sql.SqlNotificationRequest.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlNotificationRequest(java.lang.String userData, java.lang.String options, int timeout) throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -173,6 +193,13 @@ public class SqlNotificationRequest extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Timeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Sql.SqlNotificationRequest.Timeout" target="_top">.NET documentation</a>
+     */
     public int getTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +240,14 @@ public class SqlNotificationRequest extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Timeout.
+     *
+     * @param Timeout the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Sql.SqlNotificationRequest.Timeout" target="_top">.NET documentation</a>
+     */
     public void setTimeout(int Timeout) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +258,13 @@ public class SqlNotificationRequest extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Options.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Sql.SqlNotificationRequest.Options" target="_top">.NET documentation</a>
+     */
     public java.lang.String getOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +279,14 @@ public class SqlNotificationRequest extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Options.
+     *
+     * @param Options the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Sql.SqlNotificationRequest.Options" target="_top">.NET documentation</a>
+     */
     public void setOptions(java.lang.String Options) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +297,13 @@ public class SqlNotificationRequest extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UserData.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Sql.SqlNotificationRequest.UserData" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUserData() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +318,14 @@ public class SqlNotificationRequest extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UserData.
+     *
+     * @param UserData the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Sql.SqlNotificationRequest.UserData" target="_top">.NET documentation</a>
+     */
     public void setUserData(java.lang.String UserData) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

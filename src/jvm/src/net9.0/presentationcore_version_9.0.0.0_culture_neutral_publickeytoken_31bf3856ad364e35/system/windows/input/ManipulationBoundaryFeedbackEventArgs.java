@@ -104,7 +104,10 @@ public class ManipulationBoundaryFeedbackEventArgs extends system.windows.input.
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ManipulationBoundaryFeedbackEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -163,6 +166,18 @@ public class ManipulationBoundaryFeedbackEventArgs extends system.windows.input.
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Manipulators.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationBoundaryFeedbackEventArgs.Manipulators" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 getManipulators() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +193,13 @@ public class ManipulationBoundaryFeedbackEventArgs extends system.windows.input.
         }
     }
 
+    /**
+     * Gets the value of the .NET property ManipulationContainer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationBoundaryFeedbackEventArgs.ManipulationContainer" target="_top">.NET documentation</a>
+     */
     public IInputElement getManipulationContainer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +215,13 @@ public class ManipulationBoundaryFeedbackEventArgs extends system.windows.input.
         }
     }
 
+    /**
+     * Sets the value of the .NET property ManipulationContainer.
+     *
+     * @param ManipulationContainer the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationBoundaryFeedbackEventArgs.ManipulationContainer" target="_top">.NET documentation</a>
+     */
     public void setManipulationContainer(IInputElement ManipulationContainer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +232,13 @@ public class ManipulationBoundaryFeedbackEventArgs extends system.windows.input.
         }
     }
 
+    /**
+     * Gets the value of the .NET property BoundaryFeedback.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationBoundaryFeedbackEventArgs.BoundaryFeedback" target="_top">.NET documentation</a>
+     */
     public ManipulationDelta getBoundaryFeedback() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +254,13 @@ public class ManipulationBoundaryFeedbackEventArgs extends system.windows.input.
         }
     }
 
+    /**
+     * Sets the value of the .NET property BoundaryFeedback.
+     *
+     * @param BoundaryFeedback the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationBoundaryFeedbackEventArgs.BoundaryFeedback" target="_top">.NET documentation</a>
+     */
     public void setBoundaryFeedback(ManipulationDelta BoundaryFeedback) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

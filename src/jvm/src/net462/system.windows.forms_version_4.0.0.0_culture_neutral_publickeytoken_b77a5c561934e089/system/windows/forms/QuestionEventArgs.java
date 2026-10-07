@@ -99,7 +99,10 @@ public class QuestionEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public QuestionEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class QuestionEventArgs extends system.EventArgs  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.QuestionEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public QuestionEventArgs() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,13 @@ public class QuestionEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param response the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.QuestionEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public QuestionEventArgs(boolean response) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +190,13 @@ public class QuestionEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Response.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.QuestionEventArgs.Response" target="_top">.NET documentation</a>
+     */
     public boolean getResponse() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +211,13 @@ public class QuestionEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Response.
+     *
+     * @param Response the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.QuestionEventArgs.Response" target="_top">.NET documentation</a>
+     */
     public void setResponse(boolean Response) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

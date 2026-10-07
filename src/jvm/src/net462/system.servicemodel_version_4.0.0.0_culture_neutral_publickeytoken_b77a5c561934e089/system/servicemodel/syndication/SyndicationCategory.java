@@ -101,7 +101,10 @@ public class SyndicationCategory extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SyndicationCategory(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class SyndicationCategory extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.SyndicationCategory.-ctor" target="_top">.NET documentation</a>
+     */
     public SyndicationCategory() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,13 @@ public class SyndicationCategory extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.SyndicationCategory.-ctor" target="_top">.NET documentation</a>
+     */
     public SyndicationCategory(java.lang.String name) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +184,15 @@ public class SyndicationCategory extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param scheme the argument of type {@code java.lang.String}
+     * @param label the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.SyndicationCategory.-ctor" target="_top">.NET documentation</a>
+     */
     public SyndicationCategory(java.lang.String name, java.lang.String scheme, java.lang.String label) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +207,27 @@ public class SyndicationCategory extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.SyndicationCategory.Clone" target="_top">.NET documentation</a>
+     */
     public SyndicationCategory Clone() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +247,15 @@ public class SyndicationCategory extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AttributeExtensions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.SyndicationCategory.AttributeExtensions" target="_top">.NET documentation</a>
+     */
     public Dictionary_2 getAttributeExtensions() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +271,21 @@ public class SyndicationCategory extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ElementExtensions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.SyndicationCategory.ElementExtensions" target="_top">.NET documentation</a>
+     */
     public SyndicationElementExtensionCollection getElementExtensions() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +301,13 @@ public class SyndicationCategory extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Label.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.SyndicationCategory.Label" target="_top">.NET documentation</a>
+     */
     public java.lang.String getLabel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +322,13 @@ public class SyndicationCategory extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Label.
+     *
+     * @param Label the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.SyndicationCategory.Label" target="_top">.NET documentation</a>
+     */
     public void setLabel(java.lang.String Label) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +339,13 @@ public class SyndicationCategory extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.SyndicationCategory.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +360,13 @@ public class SyndicationCategory extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.SyndicationCategory.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +377,13 @@ public class SyndicationCategory extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Scheme.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.SyndicationCategory.Scheme" target="_top">.NET documentation</a>
+     */
     public java.lang.String getScheme() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +398,13 @@ public class SyndicationCategory extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Scheme.
+     *
+     * @param Scheme the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.SyndicationCategory.Scheme" target="_top">.NET documentation</a>
+     */
     public void setScheme(java.lang.String Scheme) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

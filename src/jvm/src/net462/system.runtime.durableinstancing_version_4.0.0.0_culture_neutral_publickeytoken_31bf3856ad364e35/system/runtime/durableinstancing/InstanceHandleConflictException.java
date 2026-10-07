@@ -105,7 +105,9 @@ public class InstanceHandleConflictException extends system.runtime.durableinsta
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public InstanceHandleConflictException(java.lang.Object instance) {
         super(instance);
@@ -166,6 +168,24 @@ public class InstanceHandleConflictException extends system.runtime.durableinsta
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param commandName the argument of type {@code XName}
+     * @param instanceId the argument of type {@code Guid}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceHandleConflictException.-ctor" target="_top">.NET documentation</a>
+     */
     public InstanceHandleConflictException(XName commandName, Guid instanceId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +196,27 @@ public class InstanceHandleConflictException extends system.runtime.durableinsta
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param commandName the argument of type {@code XName}
+     * @param instanceId the argument of type {@code Guid}
+     * @param innerException the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceHandleConflictException.-ctor" target="_top">.NET documentation</a>
+     */
     public InstanceHandleConflictException(XName commandName, Guid instanceId, NetException innerException) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -186,6 +227,16 @@ public class InstanceHandleConflictException extends system.runtime.durableinsta
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param commandName the argument of type {@code XName}
+     * @param instanceId the argument of type {@code Guid}
+     * @param message the argument of type {@code java.lang.String}
+     * @param innerException the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceHandleConflictException.-ctor" target="_top">.NET documentation</a>
+     */
     public InstanceHandleConflictException(XName commandName, Guid instanceId, java.lang.String message, NetException innerException) throws Throwable {
         try {
             // add reference to assemblyName.dll file

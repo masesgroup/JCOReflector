@@ -99,7 +99,10 @@ public class ZLibCompressionOptions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ZLibCompressionOptions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class ZLibCompressionOptions extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Compression.ZLibCompressionOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public ZLibCompressionOptions() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class ZLibCompressionOptions extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CompressionLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Compression.ZLibCompressionOptions.CompressionLevel" target="_top">.NET documentation</a>
+     */
     public int getCompressionLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +220,24 @@ public class ZLibCompressionOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CompressionLevel.
+     *
+     * @param CompressionLevel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Compression.ZLibCompressionOptions.CompressionLevel" target="_top">.NET documentation</a>
+     */
     public void setCompressionLevel(int CompressionLevel) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +248,13 @@ public class ZLibCompressionOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CompressionStrategy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Compression.ZLibCompressionOptions.CompressionStrategy" target="_top">.NET documentation</a>
+     */
     public ZLibCompressionStrategy getCompressionStrategy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +270,24 @@ public class ZLibCompressionOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CompressionStrategy.
+     *
+     * @param CompressionStrategy the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Compression.ZLibCompressionOptions.CompressionStrategy" target="_top">.NET documentation</a>
+     */
     public void setCompressionStrategy(ZLibCompressionStrategy CompressionStrategy) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

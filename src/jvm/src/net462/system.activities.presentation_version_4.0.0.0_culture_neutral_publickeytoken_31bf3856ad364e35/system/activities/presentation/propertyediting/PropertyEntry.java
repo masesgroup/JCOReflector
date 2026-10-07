@@ -105,7 +105,10 @@ public class PropertyEntry extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PropertyEntry(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,23 @@ public class PropertyEntry extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member MatchesPredicate.
+     *
+     * @param predicate the argument of type {@code PropertyFilterPredicate}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.PropertyEntry.MatchesPredicate" target="_top">.NET documentation</a>
+     */
     public boolean MatchesPredicate(PropertyFilterPredicate predicate) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +192,18 @@ public class PropertyEntry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ApplyFilter.
+     *
+     * @param filter the argument of type {@code PropertyFilter}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.PropertyEntry.ApplyFilter" target="_top">.NET documentation</a>
+     */
     public void ApplyFilter(PropertyFilter filter) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +218,13 @@ public class PropertyEntry extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsAdvanced.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.PropertyEntry.IsAdvanced" target="_top">.NET documentation</a>
+     */
     public boolean getIsAdvanced() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +239,13 @@ public class PropertyEntry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsReadOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.PropertyEntry.IsReadOnly" target="_top">.NET documentation</a>
+     */
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +260,13 @@ public class PropertyEntry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MatchesFilter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.PropertyEntry.MatchesFilter" target="_top">.NET documentation</a>
+     */
     public boolean getMatchesFilter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +281,17 @@ public class PropertyEntry extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MatchesFilter.
+     *
+     * @param MatchesFilter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.PropertyEntry.MatchesFilter" target="_top">.NET documentation</a>
+     */
     public void setMatchesFilter(boolean MatchesFilter) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +302,13 @@ public class PropertyEntry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ParentValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.PropertyEntry.ParentValue" target="_top">.NET documentation</a>
+     */
     public PropertyValue getParentValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +324,13 @@ public class PropertyEntry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.PropertyEntry.PropertyValue" target="_top">.NET documentation</a>
+     */
     public PropertyValue getPropertyValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +346,13 @@ public class PropertyEntry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyValueEditor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.PropertyEntry.PropertyValueEditor" target="_top">.NET documentation</a>
+     */
     public PropertyValueEditor getPropertyValueEditor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +368,13 @@ public class PropertyEntry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StandardValues.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.PropertyEntry.StandardValues" target="_top">.NET documentation</a>
+     */
     public ICollection getStandardValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +390,13 @@ public class PropertyEntry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CategoryName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.PropertyEntry.CategoryName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCategoryName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -312,6 +411,13 @@ public class PropertyEntry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Description.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.PropertyEntry.Description" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -326,6 +432,13 @@ public class PropertyEntry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DisplayName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.PropertyEntry.DisplayName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDisplayName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -340,6 +453,13 @@ public class PropertyEntry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.PropertyEntry.PropertyName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPropertyName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -354,6 +474,13 @@ public class PropertyEntry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.PropertyEntry.PropertyType" target="_top">.NET documentation</a>
+     */
     public NetType getPropertyType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -374,6 +501,13 @@ public class PropertyEntry extends NetObject  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addPropertyChanged.
+     *
+     * @param handler the argument of type {@code PropertyChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPropertyChanged(PropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -384,6 +518,13 @@ public class PropertyEntry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePropertyChanged.
+     *
+     * @param handler the argument of type {@code PropertyChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePropertyChanged(PropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

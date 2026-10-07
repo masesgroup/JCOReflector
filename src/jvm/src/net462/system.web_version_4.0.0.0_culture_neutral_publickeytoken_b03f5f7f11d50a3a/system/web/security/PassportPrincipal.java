@@ -100,7 +100,10 @@ public class PassportPrincipal extends system.security.principal.GenericPrincipa
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PassportPrincipal(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,18 @@ public class PassportPrincipal extends system.security.principal.GenericPrincipa
     public PassportPrincipal() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param identity the argument of type {@code PassportIdentity}
+     * @param roles the argument of type {@code java.lang.String[]}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.PassportPrincipal.-ctor" target="_top">.NET documentation</a>
+     */
     public PassportPrincipal(PassportIdentity identity, java.lang.String[] roles) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file

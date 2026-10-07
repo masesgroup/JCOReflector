@@ -52,5 +52,11 @@ import system.windows.controls.primitives.ItemsChangedEventArgs;
  * @version 2.0.0.0
  */
 public interface IItemsChangedEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.Windows.Controls.Primitives.ItemsChangedEventArgs}
+     */
     public void Invoke(NetObject sender, ItemsChangedEventArgs e);
 }

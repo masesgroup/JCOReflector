@@ -100,7 +100,10 @@ public class SqlBulkCopyColumnMappingCollection extends system.collections.Colle
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SqlBulkCopyColumnMappingCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,18 @@ public class SqlBulkCopyColumnMappingCollection extends system.collections.Colle
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param value the argument of type {@code SqlBulkCopyColumnMapping}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(SqlBulkCopyColumnMapping value) throws Throwable, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +184,18 @@ public class SqlBulkCopyColumnMappingCollection extends system.collections.Colle
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param value the argument of type {@code SqlBulkCopyColumnMapping}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(SqlBulkCopyColumnMapping value) throws Throwable, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +236,24 @@ public class SqlBulkCopyColumnMappingCollection extends system.collections.Colle
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param sourceColumnIndex the argument of type {@code int}
+     * @param destinationColumnIndex the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.Add" target="_top">.NET documentation</a>
+     */
     public SqlBulkCopyColumnMapping Add(int sourceColumnIndex, int destinationColumnIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +269,24 @@ public class SqlBulkCopyColumnMappingCollection extends system.collections.Colle
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param sourceColumnIndex the argument of type {@code int}
+     * @param destinationColumn the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.Add" target="_top">.NET documentation</a>
+     */
     public SqlBulkCopyColumnMapping Add(int sourceColumnIndex, java.lang.String destinationColumn) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +302,23 @@ public class SqlBulkCopyColumnMappingCollection extends system.collections.Colle
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param bulkCopyColumnMapping the argument of type {@code SqlBulkCopyColumnMapping}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.Add" target="_top">.NET documentation</a>
+     */
     public SqlBulkCopyColumnMapping Add(SqlBulkCopyColumnMapping bulkCopyColumnMapping) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +334,24 @@ public class SqlBulkCopyColumnMappingCollection extends system.collections.Colle
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param sourceColumn the argument of type {@code java.lang.String}
+     * @param destinationColumnIndex the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.Add" target="_top">.NET documentation</a>
+     */
     public SqlBulkCopyColumnMapping Add(java.lang.String sourceColumn, int destinationColumnIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +367,24 @@ public class SqlBulkCopyColumnMappingCollection extends system.collections.Colle
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param sourceColumn the argument of type {@code java.lang.String}
+     * @param destinationColumn the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.Add" target="_top">.NET documentation</a>
+     */
     public SqlBulkCopyColumnMapping Add(java.lang.String sourceColumn, java.lang.String destinationColumn) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -284,6 +400,21 @@ public class SqlBulkCopyColumnMappingCollection extends system.collections.Colle
         }
     }
 
+    /**
+     * Invokes the .NET member ClearNewSqlBulkCopyColumnMappingCollection.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.ClearNewSqlBulkCopyColumnMappingCollection" target="_top">.NET documentation</a>
+     */
     public void ClearNewSqlBulkCopyColumnMappingCollection() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +425,15 @@ public class SqlBulkCopyColumnMappingCollection extends system.collections.Colle
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code SqlBulkCopyColumnMapping[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(SqlBulkCopyColumnMapping[] array, int index) throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +444,23 @@ public class SqlBulkCopyColumnMappingCollection extends system.collections.Colle
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param value the argument of type {@code SqlBulkCopyColumnMapping}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(int index, SqlBulkCopyColumnMapping value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -314,6 +471,23 @@ public class SqlBulkCopyColumnMappingCollection extends system.collections.Colle
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param value the argument of type {@code SqlBulkCopyColumnMapping}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(SqlBulkCopyColumnMapping value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -324,6 +498,22 @@ public class SqlBulkCopyColumnMappingCollection extends system.collections.Colle
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAtNewSqlBulkCopyColumnMappingCollection.
+     *
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlBulkCopyColumnMappingCollection.RemoveAtNewSqlBulkCopyColumnMappingCollection" target="_top">.NET documentation</a>
+     */
     public void RemoveAtNewSqlBulkCopyColumnMappingCollection(int index) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

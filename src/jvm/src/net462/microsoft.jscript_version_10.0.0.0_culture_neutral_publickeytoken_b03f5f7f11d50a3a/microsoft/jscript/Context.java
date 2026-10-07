@@ -99,7 +99,10 @@ public class Context extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Context(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,13 @@ public class Context extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetToken.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Context.GetToken" target="_top">.NET documentation</a>
+     */
     public JSToken GetToken() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +179,14 @@ public class Context extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCode.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Context.GetCode" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetCode() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +205,13 @@ public class Context extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EndColumn.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Context.EndColumn" target="_top">.NET documentation</a>
+     */
     public int getEndColumn() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +252,13 @@ public class Context extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EndLine.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Context.EndLine" target="_top">.NET documentation</a>
+     */
     public int getEndLine() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +299,13 @@ public class Context extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EndPosition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Context.EndPosition" target="_top">.NET documentation</a>
+     */
     public int getEndPosition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -307,6 +346,13 @@ public class Context extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StartColumn.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Context.StartColumn" target="_top">.NET documentation</a>
+     */
     public int getStartColumn() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -347,6 +393,13 @@ public class Context extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StartLine.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Context.StartLine" target="_top">.NET documentation</a>
+     */
     public int getStartLine() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -387,6 +440,13 @@ public class Context extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StartPosition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Context.StartPosition" target="_top">.NET documentation</a>
+     */
     public int getStartPosition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

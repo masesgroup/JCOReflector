@@ -100,7 +100,10 @@ public class ActiveDesignSurfaceChangedEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ActiveDesignSurfaceChangedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class ActiveDesignSurfaceChangedEventArgs extends system.EventArgs  {
     public ActiveDesignSurfaceChangedEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param oldSurface the argument of type {@code DesignSurface}
+     * @param newSurface the argument of type {@code DesignSurface}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ActiveDesignSurfaceChangedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ActiveDesignSurfaceChangedEventArgs(DesignSurface oldSurface, DesignSurface newSurface) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +180,13 @@ public class ActiveDesignSurfaceChangedEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property NewSurface.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ActiveDesignSurfaceChangedEventArgs.NewSurface" target="_top">.NET documentation</a>
+     */
     public DesignSurface getNewSurface() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +202,13 @@ public class ActiveDesignSurfaceChangedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OldSurface.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ActiveDesignSurfaceChangedEventArgs.OldSurface" target="_top">.NET documentation</a>
+     */
     public DesignSurface getOldSurface() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

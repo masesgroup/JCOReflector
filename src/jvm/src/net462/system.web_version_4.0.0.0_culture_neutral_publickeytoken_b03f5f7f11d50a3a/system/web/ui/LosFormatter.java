@@ -101,7 +101,10 @@ public class LosFormatter extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public LosFormatter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class LosFormatter extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.LosFormatter.-ctor" target="_top">.NET documentation</a>
+     */
     public LosFormatter() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,14 @@ public class LosFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param enableMac the argument of type {@code boolean}
+     * @param macKeyModifier the argument of type {@code byte[]}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.LosFormatter.-ctor" target="_top">.NET documentation</a>
+     */
     public LosFormatter(boolean enableMac, byte[] macKeyModifier) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +185,16 @@ public class LosFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param enableMac the argument of type {@code boolean}
+     * @param macKeyModifier the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.LosFormatter.-ctor" target="_top">.NET documentation</a>
+     */
     public LosFormatter(boolean enableMac, java.lang.String macKeyModifier) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +209,27 @@ public class LosFormatter extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Deserialize.
+     *
+     * @param stream the argument of type {@code Stream}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.EndOfStreamException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.LosFormatter.Deserialize" target="_top">.NET documentation</a>
+     */
     public NetObject Deserialize(Stream stream) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.threading.ThreadAbortException, system.InvalidOperationException, system.web.HttpException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.io.EndOfStreamException, system.io.IOException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +245,29 @@ public class LosFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Deserialize.
+     *
+     * @param input the argument of type {@code TextReader}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.EndOfStreamException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.LosFormatter.Deserialize" target="_top">.NET documentation</a>
+     */
     public NetObject Deserialize(TextReader input) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.threading.ThreadAbortException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.ObjectDisposedException, system.io.EndOfStreamException, system.io.IOException, system.OutOfMemoryException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +283,35 @@ public class LosFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Deserialize.
+     *
+     * @param input the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.web.HttpRequestValidationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.EndOfStreamException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.LosFormatter.Deserialize" target="_top">.NET documentation</a>
+     */
     public NetObject Deserialize(java.lang.String input) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.web.HttpException, system.resources.MissingManifestResourceException, system.web.HttpRequestValidationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.security.cryptography.CryptographicException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.io.EndOfStreamException, system.io.IOException, system.NotImplementedException, system.TypeLoadException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +327,28 @@ public class LosFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Serialize.
+     *
+     * @param stream the argument of type {@code Stream}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.LosFormatter.Serialize" target="_top">.NET documentation</a>
+     */
     public void Serialize(Stream stream, NetObject value) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.UnauthorizedAccessException, system.threading.ThreadAbortException, system.web.HttpException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +359,26 @@ public class LosFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Serialize.
+     *
+     * @param output the argument of type {@code TextWriter}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.LosFormatter.Serialize" target="_top">.NET documentation</a>
+     */
     public void Serialize(TextWriter output, NetObject value) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.threading.ThreadAbortException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

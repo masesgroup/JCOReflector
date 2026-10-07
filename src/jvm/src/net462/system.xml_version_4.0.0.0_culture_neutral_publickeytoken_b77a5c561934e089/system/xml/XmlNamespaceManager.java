@@ -102,7 +102,10 @@ public class XmlNamespaceManager extends NetObjectEnumerable  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlNamespaceManager(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,13 @@ public class XmlNamespaceManager extends NetObjectEnumerable  {
     public XmlNamespaceManager() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param nameTable the argument of type {@code XmlNameTable}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlNamespaceManager.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlNamespaceManager(XmlNameTable nameTable) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +177,14 @@ public class XmlNamespaceManager extends NetObjectEnumerable  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member HasNamespace.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlNamespaceManager.HasNamespace" target="_top">.NET documentation</a>
+     */
     public boolean HasNamespace(java.lang.String prefix) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +199,16 @@ public class XmlNamespaceManager extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member PopScope.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlNamespaceManager.PopScope" target="_top">.NET documentation</a>
+     */
     public boolean PopScope() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +223,17 @@ public class XmlNamespaceManager extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetNamespacesInScope.
+     *
+     * @param scope the argument of type {@code XmlNamespaceScope}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlNamespaceManager.GetNamespacesInScope" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 GetNamespacesInScope(XmlNamespaceScope scope) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +249,15 @@ public class XmlNamespaceManager extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member LookupNamespace.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlNamespaceManager.LookupNamespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String LookupNamespace(java.lang.String prefix) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +272,15 @@ public class XmlNamespaceManager extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member LookupPrefix.
+     *
+     * @param uri the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlNamespaceManager.LookupPrefix" target="_top">.NET documentation</a>
+     */
     public java.lang.String LookupPrefix(java.lang.String uri) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +295,26 @@ public class XmlNamespaceManager extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddNamespace.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @param uri the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlNamespaceManager.AddNamespace" target="_top">.NET documentation</a>
+     */
     public void AddNamespace(java.lang.String prefix, java.lang.String uri) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +325,12 @@ public class XmlNamespaceManager extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member PushScope.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlNamespaceManager.PushScope" target="_top">.NET documentation</a>
+     */
     public void PushScope() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +341,15 @@ public class XmlNamespaceManager extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveNamespace.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @param uri the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlNamespaceManager.RemoveNamespace" target="_top">.NET documentation</a>
+     */
     public void RemoveNamespace(java.lang.String prefix, java.lang.String uri) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +364,14 @@ public class XmlNamespaceManager extends NetObjectEnumerable  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DefaultNamespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlNamespaceManager.DefaultNamespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDefaultNamespace() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +386,13 @@ public class XmlNamespaceManager extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NameTable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlNamespaceManager.NameTable" target="_top">.NET documentation</a>
+     */
     public XmlNameTable getNameTable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

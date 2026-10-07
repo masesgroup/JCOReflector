@@ -129,7 +129,10 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public GridView(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -176,6 +179,12 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.-ctor" target="_top">.NET documentation</a>
+     */
     public GridView() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -190,6 +199,31 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsBindableType.
+     *
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.web.HttpRequestValidationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.IsBindableType" target="_top">.NET documentation</a>
+     */
     public boolean IsBindableType(NetType type) throws Throwable, system.ArgumentException, system.web.HttpException, system.ArgumentNullException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +238,12 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Invokes the .NET member DataBind.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.DataBind" target="_top">.NET documentation</a>
+     */
     public void DataBind() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +254,24 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Invokes the .NET member DeleteRow.
+     *
+     * @param rowIndex the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.DeleteRow" target="_top">.NET documentation</a>
+     */
     public void DeleteRow(int rowIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.MulticastNotSupportedException, system.web.HttpException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +282,20 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Invokes the .NET member SelectRow.
+     *
+     * @param rowIndex the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.SelectRow" target="_top">.NET documentation</a>
+     */
     public void SelectRow(int rowIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +306,19 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Invokes the .NET member SetEditRow.
+     *
+     * @param rowIndex the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.SetEditRow" target="_top">.NET documentation</a>
+     */
     public void SetEditRow(int rowIndex) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.web.HttpException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +329,23 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Invokes the .NET member SetPageIndex.
+     *
+     * @param rowIndex the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.SetPageIndex" target="_top">.NET documentation</a>
+     */
     public void SetPageIndex(int rowIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.web.HttpException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +356,22 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Invokes the .NET member Sort.
+     *
+     * @param sortExpression the argument of type {@code java.lang.String}
+     * @param sortDirection the argument of type {@code SortDirection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.Sort" target="_top">.NET documentation</a>
+     */
     public void Sort(java.lang.String sortExpression, SortDirection sortDirection) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.web.HttpException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +382,24 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Invokes the .NET member UpdateRow.
+     *
+     * @param rowIndex the argument of type {@code int}
+     * @param causesValidation the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.UpdateRow" target="_top">.NET documentation</a>
+     */
     public void UpdateRow(int rowIndex, boolean causesValidation) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.web.HttpException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,8 +413,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIPostBackContainer method available in IPostBackContainer to obtain an object with an invocable method
+     *
+     * @param buttonControl the argument of type {@code IButtonControl}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.IPostBackContainer.GetPostBackOptions" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public PostBackOptions GetPostBackOptions(IButtonControl buttonControl) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackContainer to obtain the full interface.");
     }
@@ -286,8 +427,12 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIPostBackEventHandler method available in IPostBackEventHandler to obtain an object with an invocable method
+     *
+     * @param eventArgument the argument of type {@code java.lang.String}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IPostBackEventHandler.RaisePostBackEvent" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void RaisePostBackEvent(java.lang.String eventArgument) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackEventHandler to obtain the full interface.");
     }
@@ -295,8 +440,14 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICallbackContainer method available in ICallbackContainer to obtain an object with an invocable method
+     *
+     * @param buttonControl the argument of type {@code IButtonControl}
+     * @param argument the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ICallbackContainer.GetCallbackScript" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public java.lang.String GetCallbackScript(IButtonControl buttonControl, java.lang.String argument) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICallbackContainer to obtain the full interface.");
     }
@@ -304,8 +455,12 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICallbackEventHandler method available in ICallbackEventHandler to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ICallbackEventHandler.GetCallbackResult" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public java.lang.String GetCallbackResult() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICallbackEventHandler to obtain the full interface.");
     }
@@ -313,8 +468,12 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICallbackEventHandler method available in ICallbackEventHandler to obtain an object with an invocable method
+     *
+     * @param eventArgument the argument of type {@code java.lang.String}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void RaiseCallbackEvent(java.lang.String eventArgument) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICallbackEventHandler to obtain the full interface.");
     }
@@ -323,6 +482,22 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowCustomPaging.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.AllowCustomPaging" target="_top">.NET documentation</a>
+     */
     public boolean getAllowCustomPaging() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -337,6 +512,21 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowCustomPaging.
+     *
+     * @param AllowCustomPaging the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.AllowCustomPaging" target="_top">.NET documentation</a>
+     */
     public void setAllowCustomPaging(boolean AllowCustomPaging) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -347,6 +537,22 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowPaging.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.AllowPaging" target="_top">.NET documentation</a>
+     */
     public boolean getAllowPaging() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -361,6 +567,21 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowPaging.
+     *
+     * @param AllowPaging the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.AllowPaging" target="_top">.NET documentation</a>
+     */
     public void setAllowPaging(boolean AllowPaging) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -371,6 +592,22 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowSorting.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.AllowSorting" target="_top">.NET documentation</a>
+     */
     public boolean getAllowSorting() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -385,6 +622,21 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowSorting.
+     *
+     * @param AllowSorting the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.AllowSorting" target="_top">.NET documentation</a>
+     */
     public void setAllowSorting(boolean AllowSorting) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -395,6 +647,22 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property AutoGenerateColumns.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.AutoGenerateColumns" target="_top">.NET documentation</a>
+     */
     public boolean getAutoGenerateColumns() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -409,6 +677,21 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property AutoGenerateColumns.
+     *
+     * @param AutoGenerateColumns the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.AutoGenerateColumns" target="_top">.NET documentation</a>
+     */
     public void setAutoGenerateColumns(boolean AutoGenerateColumns) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -419,6 +702,22 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property AutoGenerateDeleteButton.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.AutoGenerateDeleteButton" target="_top">.NET documentation</a>
+     */
     public boolean getAutoGenerateDeleteButton() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -433,6 +732,21 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property AutoGenerateDeleteButton.
+     *
+     * @param AutoGenerateDeleteButton the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.AutoGenerateDeleteButton" target="_top">.NET documentation</a>
+     */
     public void setAutoGenerateDeleteButton(boolean AutoGenerateDeleteButton) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -443,6 +757,22 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property AutoGenerateEditButton.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.AutoGenerateEditButton" target="_top">.NET documentation</a>
+     */
     public boolean getAutoGenerateEditButton() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -457,6 +787,21 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property AutoGenerateEditButton.
+     *
+     * @param AutoGenerateEditButton the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.AutoGenerateEditButton" target="_top">.NET documentation</a>
+     */
     public void setAutoGenerateEditButton(boolean AutoGenerateEditButton) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -467,6 +812,22 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property AutoGenerateSelectButton.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.AutoGenerateSelectButton" target="_top">.NET documentation</a>
+     */
     public boolean getAutoGenerateSelectButton() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -481,6 +842,21 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property AutoGenerateSelectButton.
+     *
+     * @param AutoGenerateSelectButton the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.AutoGenerateSelectButton" target="_top">.NET documentation</a>
+     */
     public void setAutoGenerateSelectButton(boolean AutoGenerateSelectButton) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -491,6 +867,22 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property EnableModelValidation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.EnableModelValidation" target="_top">.NET documentation</a>
+     */
     public boolean getEnableModelValidation() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -505,6 +897,21 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property EnableModelValidation.
+     *
+     * @param EnableModelValidation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.EnableModelValidation" target="_top">.NET documentation</a>
+     */
     public void setEnableModelValidation(boolean EnableModelValidation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -515,6 +922,22 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property EnablePersistedSelection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.EnablePersistedSelection" target="_top">.NET documentation</a>
+     */
     public boolean getEnablePersistedSelection() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -529,6 +952,21 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property EnablePersistedSelection.
+     *
+     * @param EnablePersistedSelection the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.EnablePersistedSelection" target="_top">.NET documentation</a>
+     */
     public void setEnablePersistedSelection(boolean EnablePersistedSelection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -539,6 +977,22 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property EnableSortingAndPagingCallbacks.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.EnableSortingAndPagingCallbacks" target="_top">.NET documentation</a>
+     */
     public boolean getEnableSortingAndPagingCallbacks() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -553,6 +1007,21 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property EnableSortingAndPagingCallbacks.
+     *
+     * @param EnableSortingAndPagingCallbacks the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.EnableSortingAndPagingCallbacks" target="_top">.NET documentation</a>
+     */
     public void setEnableSortingAndPagingCallbacks(boolean EnableSortingAndPagingCallbacks) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -563,6 +1032,22 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShowFooter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.ShowFooter" target="_top">.NET documentation</a>
+     */
     public boolean getShowFooter() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -577,6 +1062,21 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property ShowFooter.
+     *
+     * @param ShowFooter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.ShowFooter" target="_top">.NET documentation</a>
+     */
     public void setShowFooter(boolean ShowFooter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -587,6 +1087,22 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShowHeader.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.ShowHeader" target="_top">.NET documentation</a>
+     */
     public boolean getShowHeader() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -601,6 +1117,21 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property ShowHeader.
+     *
+     * @param ShowHeader the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.ShowHeader" target="_top">.NET documentation</a>
+     */
     public void setShowHeader(boolean ShowHeader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -611,6 +1142,22 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShowHeaderWhenEmpty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.ShowHeaderWhenEmpty" target="_top">.NET documentation</a>
+     */
     public boolean getShowHeaderWhenEmpty() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -625,6 +1172,21 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property ShowHeaderWhenEmpty.
+     *
+     * @param ShowHeaderWhenEmpty the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.ShowHeaderWhenEmpty" target="_top">.NET documentation</a>
+     */
     public void setShowHeaderWhenEmpty(boolean ShowHeaderWhenEmpty) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -635,6 +1197,22 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseAccessibleHeader.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.UseAccessibleHeader" target="_top">.NET documentation</a>
+     */
     public boolean getUseAccessibleHeader() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -649,6 +1227,21 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseAccessibleHeader.
+     *
+     * @param UseAccessibleHeader the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.UseAccessibleHeader" target="_top">.NET documentation</a>
+     */
     public void setUseAccessibleHeader(boolean UseAccessibleHeader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -659,6 +1252,20 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property CellPadding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.CellPadding" target="_top">.NET documentation</a>
+     */
     public int getCellPadding() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -699,6 +1306,20 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property CellPadding.
+     *
+     * @param CellPadding the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.CellPadding" target="_top">.NET documentation</a>
+     */
     public void setCellPadding(int CellPadding) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -709,6 +1330,20 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property CellSpacing.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.CellSpacing" target="_top">.NET documentation</a>
+     */
     public int getCellSpacing() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -749,6 +1384,20 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property CellSpacing.
+     *
+     * @param CellSpacing the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.CellSpacing" target="_top">.NET documentation</a>
+     */
     public void setCellSpacing(int CellSpacing) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -759,6 +1408,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property EditIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.EditIndex" target="_top">.NET documentation</a>
+     */
     public int getEditIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -799,6 +1455,18 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property EditIndex.
+     *
+     * @param EditIndex the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.EditIndex" target="_top">.NET documentation</a>
+     */
     public void setEditIndex(int EditIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -809,6 +1477,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property PageCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.PageCount" target="_top">.NET documentation</a>
+     */
     public int getPageCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -849,6 +1524,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property PageIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.PageIndex" target="_top">.NET documentation</a>
+     */
     public int getPageIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -889,6 +1571,19 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property PageIndex.
+     *
+     * @param PageIndex the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.PageIndex" target="_top">.NET documentation</a>
+     */
     public void setPageIndex(int PageIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -899,6 +1594,22 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property PageSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.PageSize" target="_top">.NET documentation</a>
+     */
     public int getPageSize() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -939,6 +1650,21 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property PageSize.
+     *
+     * @param PageSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.PageSize" target="_top">.NET documentation</a>
+     */
     public void setPageSize(int PageSize) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -949,6 +1675,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property SelectedIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.SelectedIndex" target="_top">.NET documentation</a>
+     */
     public int getSelectedIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -989,6 +1722,21 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property SelectedIndex.
+     *
+     * @param SelectedIndex the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.SelectedIndex" target="_top">.NET documentation</a>
+     */
     public void setSelectedIndex(int SelectedIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -999,6 +1747,22 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property VirtualItemCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.VirtualItemCount" target="_top">.NET documentation</a>
+     */
     public int getVirtualItemCount() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1039,6 +1803,21 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property VirtualItemCount.
+     *
+     * @param VirtualItemCount the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.VirtualItemCount" target="_top">.NET documentation</a>
+     */
     public void setVirtualItemCount(int VirtualItemCount) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1049,6 +1828,24 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property SelectedValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.SelectedValue" target="_top">.NET documentation</a>
+     */
     public NetObject getSelectedValue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1064,6 +1861,20 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property BackImageUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.BackImageUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getBackImageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1078,6 +1889,20 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property BackImageUrl.
+     *
+     * @param BackImageUrl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.BackImageUrl" target="_top">.NET documentation</a>
+     */
     public void setBackImageUrl(java.lang.String BackImageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1088,6 +1913,22 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property Caption.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.Caption" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCaption() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1102,6 +1943,21 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property Caption.
+     *
+     * @param Caption the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.Caption" target="_top">.NET documentation</a>
+     */
     public void setCaption(java.lang.String Caption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1112,6 +1968,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property DeleteMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.DeleteMethod" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDeleteMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1126,6 +1989,27 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property DeleteMethod.
+     *
+     * @param DeleteMethod the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.DeleteMethod" target="_top">.NET documentation</a>
+     */
     public void setDeleteMethod(java.lang.String DeleteMethod) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.web.HttpException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1136,6 +2020,22 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property EmptyDataText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.EmptyDataText" target="_top">.NET documentation</a>
+     */
     public java.lang.String getEmptyDataText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1150,6 +2050,21 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property EmptyDataText.
+     *
+     * @param EmptyDataText the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.EmptyDataText" target="_top">.NET documentation</a>
+     */
     public void setEmptyDataText(java.lang.String EmptyDataText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1160,6 +2075,22 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property RowHeaderColumn.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.RowHeaderColumn" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRowHeaderColumn() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1174,6 +2105,21 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property RowHeaderColumn.
+     *
+     * @param RowHeaderColumn the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.RowHeaderColumn" target="_top">.NET documentation</a>
+     */
     public void setRowHeaderColumn(java.lang.String RowHeaderColumn) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1184,6 +2130,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property SortExpression.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.SortExpression" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSortExpression() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1198,6 +2151,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property UpdateMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.UpdateMethod" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUpdateMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1212,6 +2172,27 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property UpdateMethod.
+     *
+     * @param UpdateMethod the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.UpdateMethod" target="_top">.NET documentation</a>
+     */
     public void setUpdateMethod(java.lang.String UpdateMethod) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.web.HttpException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1222,6 +2203,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClientIDRowSuffix.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.ClientIDRowSuffix" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getClientIDRowSuffix() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1245,6 +2233,23 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property ClientIDRowSuffix.
+     *
+     * @param ClientIDRowSuffix the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.ClientIDRowSuffix" target="_top">.NET documentation</a>
+     */
     public void setClientIDRowSuffix(java.lang.String[] ClientIDRowSuffix) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1255,6 +2260,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataKeyNames.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.DataKeyNames" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getDataKeyNames() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1278,6 +2290,23 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataKeyNames.
+     *
+     * @param DataKeyNames the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.DataKeyNames" target="_top">.NET documentation</a>
+     */
     public void setDataKeyNames(java.lang.String[] DataKeyNames) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1288,6 +2317,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property ColumnsGenerator.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.ColumnsGenerator" target="_top">.NET documentation</a>
+     */
     public IAutoFieldGenerator getColumnsGenerator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1303,6 +2339,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property ColumnsGenerator.
+     *
+     * @param ColumnsGenerator the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.ColumnsGenerator" target="_top">.NET documentation</a>
+     */
     public void setColumnsGenerator(IAutoFieldGenerator ColumnsGenerator) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1313,6 +2356,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property EmptyDataTemplate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.EmptyDataTemplate" target="_top">.NET documentation</a>
+     */
     public ITemplate getEmptyDataTemplate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1328,6 +2378,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property EmptyDataTemplate.
+     *
+     * @param EmptyDataTemplate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.EmptyDataTemplate" target="_top">.NET documentation</a>
+     */
     public void setEmptyDataTemplate(ITemplate EmptyDataTemplate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1338,6 +2395,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property PagerTemplate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.PagerTemplate" target="_top">.NET documentation</a>
+     */
     public ITemplate getPagerTemplate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1353,6 +2417,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property PagerTemplate.
+     *
+     * @param PagerTemplate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.PagerTemplate" target="_top">.NET documentation</a>
+     */
     public void setPagerTemplate(ITemplate PagerTemplate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1363,6 +2434,19 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property Columns.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.Columns" target="_top">.NET documentation</a>
+     */
     public DataControlFieldCollection getColumns() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1378,6 +2462,25 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property SelectedDataKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.SelectedDataKey" target="_top">.NET documentation</a>
+     */
     public DataKey getSelectedDataKey() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1393,6 +2496,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property SelectedPersistedDataKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.SelectedPersistedDataKey" target="_top">.NET documentation</a>
+     */
     public DataKey getSelectedPersistedDataKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1408,6 +2518,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property SelectedPersistedDataKey.
+     *
+     * @param SelectedPersistedDataKey the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.SelectedPersistedDataKey" target="_top">.NET documentation</a>
+     */
     public void setSelectedPersistedDataKey(DataKey SelectedPersistedDataKey) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1418,6 +2535,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClientIDRowSuffixDataKeys.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.ClientIDRowSuffixDataKeys" target="_top">.NET documentation</a>
+     */
     public DataKeyArray getClientIDRowSuffixDataKeys() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1433,6 +2557,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataKeys.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.DataKeys" target="_top">.NET documentation</a>
+     */
     public DataKeyArray getDataKeys() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1448,6 +2579,20 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property GridLines.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.GridLines" target="_top">.NET documentation</a>
+     */
     public GridLines getGridLines() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1463,6 +2608,20 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property GridLines.
+     *
+     * @param GridLines the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.GridLines" target="_top">.NET documentation</a>
+     */
     public void setGridLines(GridLines GridLines) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1473,6 +2632,25 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property BottomPagerRow.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.BottomPagerRow" target="_top">.NET documentation</a>
+     */
     public GridViewRow getBottomPagerRow() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.configuration.provider.ProviderException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1488,6 +2666,25 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property FooterRow.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.FooterRow" target="_top">.NET documentation</a>
+     */
     public GridViewRow getFooterRow() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.configuration.provider.ProviderException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1503,6 +2700,25 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property HeaderRow.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.HeaderRow" target="_top">.NET documentation</a>
+     */
     public GridViewRow getHeaderRow() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.configuration.provider.ProviderException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1518,6 +2734,26 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property SelectedRow.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.SelectedRow" target="_top">.NET documentation</a>
+     */
     public GridViewRow getSelectedRow() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.provider.ProviderException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1533,6 +2769,25 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property TopPagerRow.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.TopPagerRow" target="_top">.NET documentation</a>
+     */
     public GridViewRow getTopPagerRow() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.configuration.provider.ProviderException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1548,6 +2803,25 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property Rows.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.Rows" target="_top">.NET documentation</a>
+     */
     public GridViewRowCollection getRows() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.configuration.provider.ProviderException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1563,6 +2837,20 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property HorizontalAlign.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.HorizontalAlign" target="_top">.NET documentation</a>
+     */
     public HorizontalAlign getHorizontalAlign() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1578,6 +2866,20 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property HorizontalAlign.
+     *
+     * @param HorizontalAlign the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.HorizontalAlign" target="_top">.NET documentation</a>
+     */
     public void setHorizontalAlign(HorizontalAlign HorizontalAlign) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1588,6 +2890,19 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property PagerSettings.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.PagerSettings" target="_top">.NET documentation</a>
+     */
     public PagerSettings getPagerSettings() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1603,6 +2918,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property SortDirection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.SortDirection" target="_top">.NET documentation</a>
+     */
     public SortDirection getSortDirection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1618,6 +2940,22 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property CaptionAlign.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.CaptionAlign" target="_top">.NET documentation</a>
+     */
     public TableCaptionAlign getCaptionAlign() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1633,6 +2971,21 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property CaptionAlign.
+     *
+     * @param CaptionAlign the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.CaptionAlign" target="_top">.NET documentation</a>
+     */
     public void setCaptionAlign(TableCaptionAlign CaptionAlign) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1643,6 +2996,14 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property AlternatingRowStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.AlternatingRowStyle" target="_top">.NET documentation</a>
+     */
     public TableItemStyle getAlternatingRowStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1658,6 +3019,14 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property EditRowStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.EditRowStyle" target="_top">.NET documentation</a>
+     */
     public TableItemStyle getEditRowStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1673,6 +3042,14 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property EmptyDataRowStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.EmptyDataRowStyle" target="_top">.NET documentation</a>
+     */
     public TableItemStyle getEmptyDataRowStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1688,6 +3065,14 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property FooterStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.FooterStyle" target="_top">.NET documentation</a>
+     */
     public TableItemStyle getFooterStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1703,6 +3088,14 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property HeaderStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.HeaderStyle" target="_top">.NET documentation</a>
+     */
     public TableItemStyle getHeaderStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1718,6 +3111,14 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property PagerStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.PagerStyle" target="_top">.NET documentation</a>
+     */
     public TableItemStyle getPagerStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1733,6 +3134,14 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property RowStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.RowStyle" target="_top">.NET documentation</a>
+     */
     public TableItemStyle getRowStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1748,6 +3157,14 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property SelectedRowStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.SelectedRowStyle" target="_top">.NET documentation</a>
+     */
     public TableItemStyle getSelectedRowStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1763,6 +3180,14 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property SortedAscendingCellStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.SortedAscendingCellStyle" target="_top">.NET documentation</a>
+     */
     public TableItemStyle getSortedAscendingCellStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1778,6 +3203,14 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property SortedAscendingHeaderStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.SortedAscendingHeaderStyle" target="_top">.NET documentation</a>
+     */
     public TableItemStyle getSortedAscendingHeaderStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1793,6 +3226,14 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property SortedDescendingCellStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.SortedDescendingCellStyle" target="_top">.NET documentation</a>
+     */
     public TableItemStyle getSortedDescendingCellStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1808,6 +3249,14 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property SortedDescendingHeaderStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridView.SortedDescendingHeaderStyle" target="_top">.NET documentation</a>
+     */
     public TableItemStyle getSortedDescendingHeaderStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1828,6 +3277,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addPageIndexChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPageIndexChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1838,6 +3294,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Invokes the .NET member removePageIndexChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePageIndexChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1848,6 +3311,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Invokes the .NET member addSelectedIndexChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addSelectedIndexChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1858,6 +3328,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Invokes the .NET member removeSelectedIndexChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeSelectedIndexChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1868,6 +3345,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Invokes the .NET member addSorted.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addSorted(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1878,6 +3362,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Invokes the .NET member removeSorted.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeSorted(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1888,6 +3379,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Invokes the .NET member addRowCancelingEdit.
+     *
+     * @param handler the argument of type {@code GridViewCancelEditEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowCancelingEdit(GridViewCancelEditEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1898,6 +3396,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowCancelingEdit.
+     *
+     * @param handler the argument of type {@code GridViewCancelEditEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowCancelingEdit(GridViewCancelEditEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1908,6 +3413,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Invokes the .NET member addRowCommand.
+     *
+     * @param handler the argument of type {@code GridViewCommandEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowCommand(GridViewCommandEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1918,6 +3430,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowCommand.
+     *
+     * @param handler the argument of type {@code GridViewCommandEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowCommand(GridViewCommandEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1928,6 +3447,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Invokes the .NET member addRowDeleted.
+     *
+     * @param handler the argument of type {@code GridViewDeletedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowDeleted(GridViewDeletedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1938,6 +3464,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowDeleted.
+     *
+     * @param handler the argument of type {@code GridViewDeletedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowDeleted(GridViewDeletedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1948,6 +3481,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Invokes the .NET member addRowDeleting.
+     *
+     * @param handler the argument of type {@code GridViewDeleteEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowDeleting(GridViewDeleteEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1958,6 +3498,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowDeleting.
+     *
+     * @param handler the argument of type {@code GridViewDeleteEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowDeleting(GridViewDeleteEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1968,6 +3515,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Invokes the .NET member addRowEditing.
+     *
+     * @param handler the argument of type {@code GridViewEditEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowEditing(GridViewEditEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1978,6 +3532,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowEditing.
+     *
+     * @param handler the argument of type {@code GridViewEditEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowEditing(GridViewEditEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1988,6 +3549,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Invokes the .NET member addPageIndexChanging.
+     *
+     * @param handler the argument of type {@code GridViewPageEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPageIndexChanging(GridViewPageEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1998,6 +3566,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Invokes the .NET member removePageIndexChanging.
+     *
+     * @param handler the argument of type {@code GridViewPageEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePageIndexChanging(GridViewPageEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2008,6 +3583,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Invokes the .NET member addRowCreated.
+     *
+     * @param handler the argument of type {@code GridViewRowEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowCreated(GridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2018,6 +3600,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowCreated.
+     *
+     * @param handler the argument of type {@code GridViewRowEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowCreated(GridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2028,6 +3617,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Invokes the .NET member addRowDataBound.
+     *
+     * @param handler the argument of type {@code GridViewRowEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowDataBound(GridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2038,6 +3634,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowDataBound.
+     *
+     * @param handler the argument of type {@code GridViewRowEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowDataBound(GridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2048,6 +3651,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Invokes the .NET member addSelectedIndexChanging.
+     *
+     * @param handler the argument of type {@code GridViewSelectEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addSelectedIndexChanging(GridViewSelectEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2058,6 +3668,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Invokes the .NET member removeSelectedIndexChanging.
+     *
+     * @param handler the argument of type {@code GridViewSelectEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeSelectedIndexChanging(GridViewSelectEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2068,6 +3685,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Invokes the .NET member addSorting.
+     *
+     * @param handler the argument of type {@code GridViewSortEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addSorting(GridViewSortEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2078,6 +3702,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Invokes the .NET member removeSorting.
+     *
+     * @param handler the argument of type {@code GridViewSortEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeSorting(GridViewSortEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2088,6 +3719,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Invokes the .NET member addRowUpdated.
+     *
+     * @param handler the argument of type {@code GridViewUpdatedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowUpdated(GridViewUpdatedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2098,6 +3736,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowUpdated.
+     *
+     * @param handler the argument of type {@code GridViewUpdatedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowUpdated(GridViewUpdatedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2108,6 +3753,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Invokes the .NET member addRowUpdating.
+     *
+     * @param handler the argument of type {@code GridViewUpdateEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowUpdating(GridViewUpdateEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2118,6 +3770,13 @@ public class GridView extends system.web.ui.webcontrols.CompositeDataBoundContro
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowUpdating.
+     *
+     * @param handler the argument of type {@code GridViewUpdateEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowUpdating(GridViewUpdateEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

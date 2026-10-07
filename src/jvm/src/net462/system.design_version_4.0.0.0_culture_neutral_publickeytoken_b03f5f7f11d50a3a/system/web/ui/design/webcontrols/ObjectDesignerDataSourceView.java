@@ -102,7 +102,10 @@ public class ObjectDesignerDataSourceView extends system.web.ui.design.DesignerD
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ObjectDesignerDataSourceView(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,15 @@ public class ObjectDesignerDataSourceView extends system.web.ui.design.DesignerD
     public ObjectDesignerDataSourceView() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param owner the argument of type {@code ObjectDataSourceDesigner}
+     * @param viewName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebControls.ObjectDesignerDataSourceView.-ctor" target="_top">.NET documentation</a>
+     */
     public ObjectDesignerDataSourceView(ObjectDataSourceDesigner owner, java.lang.String viewName) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +179,31 @@ public class ObjectDesignerDataSourceView extends system.web.ui.design.DesignerD
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetDesignTimeData.
+     *
+     * @param minimumRows the argument of type {@code int}
+     * @param isSampleData the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicBoolean>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.data.DataException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebControls.ObjectDesignerDataSourceView.GetDesignTimeData" target="_top">.NET documentation</a>
+     */
     public IEnumerable GetDesignTimeData(int minimumRows, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isSampleData) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException, system.data.DataException, system.RankException, system.NullReferenceException, system.NotImplementedException, system.InvalidTimeZoneException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

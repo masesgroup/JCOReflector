@@ -100,7 +100,10 @@ public class SimpleMailWebEventProvider extends system.web.management.MailWebEve
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SimpleMailWebEventProvider(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,29 @@ public class SimpleMailWebEventProvider extends system.web.management.MailWebEve
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Initialize.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param config the argument of type {@code NameValueCollection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.SimpleMailWebEventProvider.Initialize" target="_top">.NET documentation</a>
+     */
     public void Initialize(java.lang.String name, NameValueCollection config) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.OverflowException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.web.HttpException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

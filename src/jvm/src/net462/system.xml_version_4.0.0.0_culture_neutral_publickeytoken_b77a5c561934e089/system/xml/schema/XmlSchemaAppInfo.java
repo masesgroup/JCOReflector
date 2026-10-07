@@ -100,7 +100,10 @@ public class XmlSchemaAppInfo extends system.xml.schema.XmlSchemaObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlSchemaAppInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class XmlSchemaAppInfo extends system.xml.schema.XmlSchemaObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaAppInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlSchemaAppInfo() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class XmlSchemaAppInfo extends system.xml.schema.XmlSchemaObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Source.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaAppInfo.Source" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +195,13 @@ public class XmlSchemaAppInfo extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Source.
+     *
+     * @param Source the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaAppInfo.Source" target="_top">.NET documentation</a>
+     */
     public void setSource(java.lang.String Source) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +212,13 @@ public class XmlSchemaAppInfo extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Markup.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaAppInfo.Markup" target="_top">.NET documentation</a>
+     */
     public final XmlNode[] getMarkup() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +240,13 @@ public class XmlSchemaAppInfo extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Markup.
+     *
+     * @param Markup the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaAppInfo.Markup" target="_top">.NET documentation</a>
+     */
     public void setMarkup(XmlNode[] Markup) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

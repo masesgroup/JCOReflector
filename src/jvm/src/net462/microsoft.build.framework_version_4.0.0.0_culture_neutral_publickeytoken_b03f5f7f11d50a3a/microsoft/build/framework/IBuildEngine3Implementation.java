@@ -111,7 +111,10 @@ public class IBuildEngine3Implementation extends NetObject implements IBuildEngi
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IBuildEngine3Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,17 @@ public class IBuildEngine3Implementation extends NetObject implements IBuildEngi
 
     // Methods section
     
+    /**
+     * Invokes the .NET member BuildProjectFile.
+     *
+     * @param projectFileName the argument of type {@code java.lang.String}
+     * @param targetNames the argument of type {@code java.lang.String[]}
+     * @param globalProperties the argument of type {@code IDictionary}
+     * @param targetOutputs the argument of type {@code IDictionary}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.IBuildEngine3.BuildProjectFile" target="_top">.NET documentation</a>
+     */
     public boolean BuildProjectFile(java.lang.String projectFileName, java.lang.String[] targetNames, IDictionary globalProperties, IDictionary targetOutputs) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -167,6 +181,17 @@ public class IBuildEngine3Implementation extends NetObject implements IBuildEngi
         }
     }
 
+    /**
+     * Invokes the .NET member BuildProjectFile.
+     *
+     * @param dupParam0 the argument of type {@code java.lang.String}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @param dupParam2 the argument of type {@code IDictionary}
+     * @param dupParam3 the argument of type {@code IDictionary}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.IBuildEngine3.BuildProjectFile" target="_top">.NET documentation</a>
+     */
     public boolean BuildProjectFile(java.lang.String dupParam0, JCORefOut dupParam1, IDictionary dupParam2, IDictionary dupParam3) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +206,18 @@ public class IBuildEngine3Implementation extends NetObject implements IBuildEngi
         }
     }
 
+    /**
+     * Invokes the .NET member BuildProjectFile.
+     *
+     * @param projectFileName the argument of type {@code java.lang.String}
+     * @param targetNames the argument of type {@code java.lang.String[]}
+     * @param globalProperties the argument of type {@code IDictionary}
+     * @param targetOutputs the argument of type {@code IDictionary}
+     * @param toolsVersion the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.IBuildEngine3.BuildProjectFile" target="_top">.NET documentation</a>
+     */
     public boolean BuildProjectFile(java.lang.String projectFileName, java.lang.String[] targetNames, IDictionary globalProperties, IDictionary targetOutputs, java.lang.String toolsVersion) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +232,18 @@ public class IBuildEngine3Implementation extends NetObject implements IBuildEngi
         }
     }
 
+    /**
+     * Invokes the .NET member BuildProjectFile.
+     *
+     * @param dupParam0 the argument of type {@code java.lang.String}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @param dupParam2 the argument of type {@code IDictionary}
+     * @param dupParam3 the argument of type {@code IDictionary}
+     * @param dupParam4 the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.IBuildEngine3.BuildProjectFile" target="_top">.NET documentation</a>
+     */
     public boolean BuildProjectFile(java.lang.String dupParam0, JCORefOut dupParam1, IDictionary dupParam2, IDictionary dupParam3, java.lang.String dupParam4) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +258,20 @@ public class IBuildEngine3Implementation extends NetObject implements IBuildEngi
         }
     }
 
+    /**
+     * Invokes the .NET member BuildProjectFilesInParallel.
+     *
+     * @param projectFileNames the argument of type {@code java.lang.String[]}
+     * @param targetNames the argument of type {@code java.lang.String[]}
+     * @param globalProperties the argument of type {@code IDictionary[]}
+     * @param targetOutputsPerProject the argument of type {@code IDictionary[]}
+     * @param toolsVersion the argument of type {@code java.lang.String[]}
+     * @param useResultsCache the argument of type {@code boolean}
+     * @param unloadProjectsOnCompletion the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.IBuildEngine3.BuildProjectFilesInParallel" target="_top">.NET documentation</a>
+     */
     public boolean BuildProjectFilesInParallel(java.lang.String[] projectFileNames, java.lang.String[] targetNames, IDictionary[] globalProperties, IDictionary[] targetOutputsPerProject, java.lang.String[] toolsVersion, boolean useResultsCache, boolean unloadProjectsOnCompletion) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +286,20 @@ public class IBuildEngine3Implementation extends NetObject implements IBuildEngi
         }
     }
 
+    /**
+     * Invokes the .NET member BuildProjectFilesInParallel.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @param dupParam2 the argument of type {@code IDictionary[]}
+     * @param dupParam3 the argument of type {@code IDictionary[]}
+     * @param dupParam4 the argument of type {@code JCORefOut}
+     * @param dupParam5 the argument of type {@code boolean}
+     * @param dupParam6 the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.IBuildEngine3.BuildProjectFilesInParallel" target="_top">.NET documentation</a>
+     */
     public boolean BuildProjectFilesInParallel(JCORefOut dupParam0, JCORefOut dupParam1, IDictionary[] dupParam2, IDictionary[] dupParam3, JCORefOut dupParam4, boolean dupParam5, boolean dupParam6) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +314,19 @@ public class IBuildEngine3Implementation extends NetObject implements IBuildEngi
         }
     }
 
+    /**
+     * Invokes the .NET member BuildProjectFilesInParallel.
+     *
+     * @param projectFileNames the argument of type {@code java.lang.String[]}
+     * @param targetNames the argument of type {@code java.lang.String[]}
+     * @param globalProperties the argument of type {@code IDictionary[]}
+     * @param removeGlobalProperties the argument of type {@code IList_1[]}
+     * @param toolsVersion the argument of type {@code java.lang.String[]}
+     * @param returnTargetOutputs the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.IBuildEngine3.BuildProjectFilesInParallel" target="_top">.NET documentation</a>
+     */
     public BuildEngineResult BuildProjectFilesInParallel(java.lang.String[] projectFileNames, java.lang.String[] targetNames, IDictionary[] globalProperties, IList_1[] removeGlobalProperties, java.lang.String[] toolsVersion, boolean returnTargetOutputs) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +342,19 @@ public class IBuildEngine3Implementation extends NetObject implements IBuildEngi
         }
     }
 
+    /**
+     * Invokes the .NET member BuildProjectFilesInParallel.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @param dupParam2 the argument of type {@code IDictionary[]}
+     * @param dupParam3 the argument of type {@code IList_1[]}
+     * @param dupParam4 the argument of type {@code JCORefOut}
+     * @param dupParam5 the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.IBuildEngine3.BuildProjectFilesInParallel" target="_top">.NET documentation</a>
+     */
     public BuildEngineResult BuildProjectFilesInParallel(JCORefOut dupParam0, JCORefOut dupParam1, IDictionary[] dupParam2, IList_1[] dupParam3, JCORefOut dupParam4, boolean dupParam5) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +370,13 @@ public class IBuildEngine3Implementation extends NetObject implements IBuildEngi
         }
     }
 
+    /**
+     * Invokes the .NET member LogCustomEvent.
+     *
+     * @param e the argument of type {@code CustomBuildEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.IBuildEngine3.LogCustomEvent" target="_top">.NET documentation</a>
+     */
     public void LogCustomEvent(CustomBuildEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +387,13 @@ public class IBuildEngine3Implementation extends NetObject implements IBuildEngi
         }
     }
 
+    /**
+     * Invokes the .NET member LogErrorEvent.
+     *
+     * @param e the argument of type {@code BuildErrorEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.IBuildEngine3.LogErrorEvent" target="_top">.NET documentation</a>
+     */
     public void LogErrorEvent(BuildErrorEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -287,6 +404,13 @@ public class IBuildEngine3Implementation extends NetObject implements IBuildEngi
         }
     }
 
+    /**
+     * Invokes the .NET member LogMessageEvent.
+     *
+     * @param e the argument of type {@code BuildMessageEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.IBuildEngine3.LogMessageEvent" target="_top">.NET documentation</a>
+     */
     public void LogMessageEvent(BuildMessageEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -297,6 +421,13 @@ public class IBuildEngine3Implementation extends NetObject implements IBuildEngi
         }
     }
 
+    /**
+     * Invokes the .NET member LogWarningEvent.
+     *
+     * @param e the argument of type {@code BuildWarningEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.IBuildEngine3.LogWarningEvent" target="_top">.NET documentation</a>
+     */
     public void LogWarningEvent(BuildWarningEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -307,6 +438,12 @@ public class IBuildEngine3Implementation extends NetObject implements IBuildEngi
         }
     }
 
+    /**
+     * Invokes the .NET member Reacquire.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.IBuildEngine3.Reacquire" target="_top">.NET documentation</a>
+     */
     public void Reacquire() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -317,6 +454,12 @@ public class IBuildEngine3Implementation extends NetObject implements IBuildEngi
         }
     }
 
+    /**
+     * Invokes the .NET member Yield.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.IBuildEngine3.Yield" target="_top">.NET documentation</a>
+     */
     public void Yield() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -331,6 +474,13 @@ public class IBuildEngine3Implementation extends NetObject implements IBuildEngi
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ContinueOnError.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.IBuildEngine3.ContinueOnError" target="_top">.NET documentation</a>
+     */
     public boolean getContinueOnError() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -345,6 +495,13 @@ public class IBuildEngine3Implementation extends NetObject implements IBuildEngi
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsRunningMultipleNodes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.IBuildEngine3.IsRunningMultipleNodes" target="_top">.NET documentation</a>
+     */
     public boolean getIsRunningMultipleNodes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -359,6 +516,13 @@ public class IBuildEngine3Implementation extends NetObject implements IBuildEngi
         }
     }
 
+    /**
+     * Gets the value of the .NET property ColumnNumberOfTaskNode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.IBuildEngine3.ColumnNumberOfTaskNode" target="_top">.NET documentation</a>
+     */
     public int getColumnNumberOfTaskNode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -399,6 +563,13 @@ public class IBuildEngine3Implementation extends NetObject implements IBuildEngi
         }
     }
 
+    /**
+     * Gets the value of the .NET property LineNumberOfTaskNode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.IBuildEngine3.LineNumberOfTaskNode" target="_top">.NET documentation</a>
+     */
     public int getLineNumberOfTaskNode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -439,6 +610,13 @@ public class IBuildEngine3Implementation extends NetObject implements IBuildEngi
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProjectFileOfTaskNode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.IBuildEngine3.ProjectFileOfTaskNode" target="_top">.NET documentation</a>
+     */
     public java.lang.String getProjectFileOfTaskNode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

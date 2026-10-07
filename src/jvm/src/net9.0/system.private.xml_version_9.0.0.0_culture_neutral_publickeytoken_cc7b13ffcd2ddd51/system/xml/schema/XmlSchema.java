@@ -113,7 +113,10 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlSchema(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,18 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchema.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlSchema() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +189,31 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Read.
+     *
+     * @param stream the argument of type {@code Stream}
+     * @param validationEventHandler the argument of type {@code ValidationEventHandler}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchema.Read" target="_top">.NET documentation</a>
+     */
     public static XmlSchema Read(Stream stream, ValidationEventHandler validationEventHandler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.io.IOException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.xml.schema.XmlSchemaException, system.diagnostics.UnreachableException, system.UriFormatException, system.xml.XmlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -189,6 +229,30 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Read.
+     *
+     * @param reader the argument of type {@code TextReader}
+     * @param validationEventHandler the argument of type {@code ValidationEventHandler}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchema.Read" target="_top">.NET documentation</a>
+     */
     public static XmlSchema Read(TextReader reader, ValidationEventHandler validationEventHandler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.xml.schema.XmlSchemaException, system.diagnostics.UnreachableException, system.UriFormatException, system.xml.XmlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -204,6 +268,32 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Read.
+     *
+     * @param reader the argument of type {@code XmlReader}
+     * @param validationEventHandler the argument of type {@code ValidationEventHandler}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchema.Read" target="_top">.NET documentation</a>
+     */
     public static XmlSchema Read(XmlReader reader, ValidationEventHandler validationEventHandler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.xml.schema.XmlSchemaException, system.diagnostics.UnreachableException, system.UriFormatException, system.xml.XmlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -219,6 +309,27 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Compile.
+     *
+     * @param validationEventHandler the argument of type {@code ValidationEventHandler}
+     * @param resolver the argument of type {@code XmlResolver}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchema.Compile" target="_top">.NET documentation</a>
+     */
     public void Compile(ValidationEventHandler validationEventHandler, XmlResolver resolver) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.UriFormatException, system.FormatException, system.xml.schema.XmlSchemaException, system.ArrayTypeMismatchException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +340,26 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Compile.
+     *
+     * @param validationEventHandler the argument of type {@code ValidationEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchema.Compile" target="_top">.NET documentation</a>
+     */
     public void Compile(ValidationEventHandler validationEventHandler) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.UriFormatException, system.FormatException, system.xml.schema.XmlSchemaException, system.ArrayTypeMismatchException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +370,36 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param stream the argument of type {@code Stream}
+     * @param namespaceManager the argument of type {@code XmlNamespaceManager}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.io.FileLoadException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchema.Write" target="_top">.NET documentation</a>
+     */
     public void Write(Stream stream, XmlNamespaceManager namespaceManager) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.diagnostics.tracing.EventSourceException, system.io.FileLoadException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.diagnostics.UnreachableException, system.UriFormatException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +410,29 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param stream the argument of type {@code Stream}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.io.FileLoadException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchema.Write" target="_top">.NET documentation</a>
+     */
     public void Write(Stream stream) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException, system.io.FileNotFoundException, system.MulticastNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.FileLoadException, system.UriFormatException, system.NotImplementedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +443,36 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param writer the argument of type {@code TextWriter}
+     * @param namespaceManager the argument of type {@code XmlNamespaceManager}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.io.FileLoadException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchema.Write" target="_top">.NET documentation</a>
+     */
     public void Write(TextWriter writer, XmlNamespaceManager namespaceManager) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.diagnostics.tracing.EventSourceException, system.FormatException, system.io.FileLoadException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.diagnostics.UnreachableException, system.UriFormatException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +483,32 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param writer the argument of type {@code TextWriter}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.io.FileLoadException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchema.Write" target="_top">.NET documentation</a>
+     */
     public void Write(TextWriter writer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.OutOfMemoryException, system.io.FileNotFoundException, system.MulticastNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.FileLoadException, system.UriFormatException, system.NotImplementedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +519,38 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param writer the argument of type {@code XmlWriter}
+     * @param namespaceManager the argument of type {@code XmlNamespaceManager}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.io.FileLoadException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchema.Write" target="_top">.NET documentation</a>
+     */
     public void Write(XmlWriter writer, XmlNamespaceManager namespaceManager) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.NullReferenceException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.diagnostics.tracing.EventSourceException, system.io.FileLoadException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.collections.generic.KeyNotFoundException, system.diagnostics.UnreachableException, system.UriFormatException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +561,35 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param writer the argument of type {@code XmlWriter}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.io.FileLoadException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchema.Write" target="_top">.NET documentation</a>
+     */
     public void Write(XmlWriter writer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.diagnostics.tracing.EventSourceException, system.FormatException, system.io.FileLoadException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.diagnostics.UnreachableException, system.UriFormatException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +604,13 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsCompiled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchema.IsCompiled" target="_top">.NET documentation</a>
+     */
     public boolean getIsCompiled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -317,6 +625,13 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Id.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchema.Id" target="_top">.NET documentation</a>
+     */
     public java.lang.String getId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -331,6 +646,13 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Id.
+     *
+     * @param Id the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchema.Id" target="_top">.NET documentation</a>
+     */
     public void setId(java.lang.String Id) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -341,6 +663,13 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetNamespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchema.TargetNamespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTargetNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -355,6 +684,13 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TargetNamespace.
+     *
+     * @param TargetNamespace the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchema.TargetNamespace" target="_top">.NET documentation</a>
+     */
     public void setTargetNamespace(java.lang.String TargetNamespace) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -365,6 +701,13 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Version.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchema.Version" target="_top">.NET documentation</a>
+     */
     public java.lang.String getVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -379,6 +722,13 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Version.
+     *
+     * @param Version the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchema.Version" target="_top">.NET documentation</a>
+     */
     public void setVersion(java.lang.String Version) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -389,6 +739,13 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BlockDefault.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchema.BlockDefault" target="_top">.NET documentation</a>
+     */
     public XmlSchemaDerivationMethod getBlockDefault() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -404,6 +761,13 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BlockDefault.
+     *
+     * @param BlockDefault the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchema.BlockDefault" target="_top">.NET documentation</a>
+     */
     public void setBlockDefault(XmlSchemaDerivationMethod BlockDefault) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -414,6 +778,13 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FinalDefault.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchema.FinalDefault" target="_top">.NET documentation</a>
+     */
     public XmlSchemaDerivationMethod getFinalDefault() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -429,6 +800,13 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FinalDefault.
+     *
+     * @param FinalDefault the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchema.FinalDefault" target="_top">.NET documentation</a>
+     */
     public void setFinalDefault(XmlSchemaDerivationMethod FinalDefault) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -439,6 +817,13 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AttributeFormDefault.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchema.AttributeFormDefault" target="_top">.NET documentation</a>
+     */
     public XmlSchemaForm getAttributeFormDefault() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -454,6 +839,13 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AttributeFormDefault.
+     *
+     * @param AttributeFormDefault the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchema.AttributeFormDefault" target="_top">.NET documentation</a>
+     */
     public void setAttributeFormDefault(XmlSchemaForm AttributeFormDefault) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -464,6 +856,13 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ElementFormDefault.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchema.ElementFormDefault" target="_top">.NET documentation</a>
+     */
     public XmlSchemaForm getElementFormDefault() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -479,6 +878,13 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ElementFormDefault.
+     *
+     * @param ElementFormDefault the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchema.ElementFormDefault" target="_top">.NET documentation</a>
+     */
     public void setElementFormDefault(XmlSchemaForm ElementFormDefault) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -489,6 +895,13 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Includes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchema.Includes" target="_top">.NET documentation</a>
+     */
     public XmlSchemaObjectCollection getIncludes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -504,6 +917,13 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Items.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchema.Items" target="_top">.NET documentation</a>
+     */
     public XmlSchemaObjectCollection getItems() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -519,6 +939,18 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AttributeGroups.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchema.AttributeGroups" target="_top">.NET documentation</a>
+     */
     public XmlSchemaObjectTable getAttributeGroups() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -534,6 +966,18 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Attributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchema.Attributes" target="_top">.NET documentation</a>
+     */
     public XmlSchemaObjectTable getAttributes() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -549,6 +993,18 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Elements.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchema.Elements" target="_top">.NET documentation</a>
+     */
     public XmlSchemaObjectTable getElements() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -564,6 +1020,13 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Groups.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchema.Groups" target="_top">.NET documentation</a>
+     */
     public XmlSchemaObjectTable getGroups() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -579,6 +1042,13 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Notations.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchema.Notations" target="_top">.NET documentation</a>
+     */
     public XmlSchemaObjectTable getNotations() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -594,6 +1064,18 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SchemaTypes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchema.SchemaTypes" target="_top">.NET documentation</a>
+     */
     public XmlSchemaObjectTable getSchemaTypes() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -609,6 +1091,13 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnhandledAttributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchema.UnhandledAttributes" target="_top">.NET documentation</a>
+     */
     public final XmlAttribute[] getUnhandledAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -630,6 +1119,13 @@ public class XmlSchema extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UnhandledAttributes.
+     *
+     * @param UnhandledAttributes the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchema.UnhandledAttributes" target="_top">.NET documentation</a>
+     */
     public void setUnhandledAttributes(XmlAttribute[] UnhandledAttributes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

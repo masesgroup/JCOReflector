@@ -102,7 +102,10 @@ public class XmlLicenseTransform extends system.security.cryptography.xml.Transf
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlLicenseTransform(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class XmlLicenseTransform extends system.security.cryptography.xml.Transf
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.XmlLicenseTransform.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlLicenseTransform() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,13 @@ public class XmlLicenseTransform extends system.security.cryptography.xml.Transf
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetOutput.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.XmlLicenseTransform.GetOutput" target="_top">.NET documentation</a>
+     */
     public NetObject GetOutput() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +194,22 @@ public class XmlLicenseTransform extends system.security.cryptography.xml.Transf
         }
     }
 
+    /**
+     * Invokes the .NET member GetOutput.
+     *
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.XmlLicenseTransform.GetOutput" target="_top">.NET documentation</a>
+     */
     public NetObject GetOutput(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +225,22 @@ public class XmlLicenseTransform extends system.security.cryptography.xml.Transf
         }
     }
 
+    /**
+     * Invokes the .NET member LoadInnerXml.
+     *
+     * @param nodeList the argument of type {@code XmlNodeList}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.XmlLicenseTransform.LoadInnerXml" target="_top">.NET documentation</a>
+     */
     public void LoadInnerXml(XmlNodeList nodeList) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +251,32 @@ public class XmlLicenseTransform extends system.security.cryptography.xml.Transf
         }
     }
 
+    /**
+     * Invokes the .NET member LoadInput.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.xml.xpath.XPathException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.XmlLicenseTransform.LoadInput" target="_top">.NET documentation</a>
+     */
     public void LoadInput(NetObject obj) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.xml.xpath.XPathException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.diagnostics.UnreachableException, system.TypeLoadException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +291,13 @@ public class XmlLicenseTransform extends system.security.cryptography.xml.Transf
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Decryptor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.XmlLicenseTransform.Decryptor" target="_top">.NET documentation</a>
+     */
     public IRelDecryptor getDecryptor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +313,13 @@ public class XmlLicenseTransform extends system.security.cryptography.xml.Transf
         }
     }
 
+    /**
+     * Sets the value of the .NET property Decryptor.
+     *
+     * @param Decryptor the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.XmlLicenseTransform.Decryptor" target="_top">.NET documentation</a>
+     */
     public void setDecryptor(IRelDecryptor Decryptor) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

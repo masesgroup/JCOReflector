@@ -103,7 +103,10 @@ public class Network extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Network(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,12 @@ public class Network extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Devices.Network.-ctor" target="_top">.NET documentation</a>
+     */
     public Network() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,32 @@ public class Network extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Ping.
+     *
+     * @param hostNameOrAddress the argument of type {@code java.lang.String}
+     * @param timeout the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.net.networkinformation.NetworkInformationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.net.sockets.SocketException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.threading.tasks.TaskCanceledException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @throws system.net.networkinformation.PingException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Devices.Network.Ping" target="_top">.NET documentation</a>
+     */
     public boolean Ping(java.lang.String hostNameOrAddress, int timeout) throws Throwable, system.OutOfMemoryException, system.PlatformNotSupportedException, system.net.networkinformation.NetworkInformationException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.net.sockets.SocketException, system.componentmodel.Win32Exception, system.threading.tasks.TaskCanceledException, system.AggregateException, system.net.networkinformation.PingException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +213,32 @@ public class Network extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Ping.
+     *
+     * @param hostNameOrAddress the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.net.networkinformation.NetworkInformationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.net.sockets.SocketException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.threading.tasks.TaskCanceledException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @throws system.net.networkinformation.PingException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Devices.Network.Ping" target="_top">.NET documentation</a>
+     */
     public boolean Ping(java.lang.String hostNameOrAddress) throws Throwable, system.OutOfMemoryException, system.net.networkinformation.NetworkInformationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.NotSupportedException, system.net.sockets.SocketException, system.componentmodel.Win32Exception, system.threading.tasks.TaskCanceledException, system.AggregateException, system.net.networkinformation.PingException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +253,36 @@ public class Network extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Ping.
+     *
+     * @param address the argument of type {@code Uri}
+     * @param timeout the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.net.networkinformation.NetworkInformationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.net.sockets.SocketException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.threading.tasks.TaskCanceledException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @throws system.net.networkinformation.PingException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Devices.Network.Ping" target="_top">.NET documentation</a>
+     */
     public boolean Ping(Uri address, int timeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.UriFormatException, system.OutOfMemoryException, system.net.networkinformation.NetworkInformationException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.NotSupportedException, system.net.sockets.SocketException, system.componentmodel.Win32Exception, system.threading.tasks.TaskCanceledException, system.AggregateException, system.net.networkinformation.PingException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +297,35 @@ public class Network extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Ping.
+     *
+     * @param address the argument of type {@code Uri}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.net.networkinformation.NetworkInformationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.net.sockets.SocketException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.threading.tasks.TaskCanceledException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @throws system.net.networkinformation.PingException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Devices.Network.Ping" target="_top">.NET documentation</a>
+     */
     public boolean Ping(Uri address) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.UriFormatException, system.OutOfMemoryException, system.net.networkinformation.NetworkInformationException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.NotSupportedException, system.net.sockets.SocketException, system.componentmodel.Win32Exception, system.threading.tasks.TaskCanceledException, system.AggregateException, system.net.networkinformation.PingException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +340,41 @@ public class Network extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DownloadFile.
+     *
+     * @param address the argument of type {@code java.lang.String}
+     * @param destinationFileName the argument of type {@code java.lang.String}
+     * @param userName the argument of type {@code java.lang.String}
+     * @param password the argument of type {@code java.lang.String}
+     * @param showUI the argument of type {@code boolean}
+     * @param connectionTimeout the argument of type {@code int}
+     * @param overwrite the argument of type {@code boolean}
+     * @param onUserCancel the argument of type {@code UICancelOption}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.net.WebException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Devices.Network.DownloadFile" target="_top">.NET documentation</a>
+     */
     public void DownloadFile(java.lang.String address, java.lang.String destinationFileName, java.lang.String userName, java.lang.String password, boolean showUI, int connectionTimeout, boolean overwrite, UICancelOption onUserCancel) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.io.IOException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.UriFormatException, system.componentmodel.InvalidAsynchronousStateException, system.OutOfMemoryException, system.net.WebException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +385,38 @@ public class Network extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DownloadFile.
+     *
+     * @param address the argument of type {@code java.lang.String}
+     * @param destinationFileName the argument of type {@code java.lang.String}
+     * @param userName the argument of type {@code java.lang.String}
+     * @param password the argument of type {@code java.lang.String}
+     * @param showUI the argument of type {@code boolean}
+     * @param connectionTimeout the argument of type {@code int}
+     * @param overwrite the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @throws system.net.WebException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Devices.Network.DownloadFile" target="_top">.NET documentation</a>
+     */
     public void DownloadFile(java.lang.String address, java.lang.String destinationFileName, java.lang.String userName, java.lang.String password, boolean showUI, int connectionTimeout, boolean overwrite) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.OutOfMemoryException, system.io.IOException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.InvalidAsynchronousStateException, system.net.WebException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +427,33 @@ public class Network extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DownloadFile.
+     *
+     * @param address the argument of type {@code java.lang.String}
+     * @param destinationFileName the argument of type {@code java.lang.String}
+     * @param userName the argument of type {@code java.lang.String}
+     * @param password the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.net.WebException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Devices.Network.DownloadFile" target="_top">.NET documentation</a>
+     */
     public void DownloadFile(java.lang.String address, java.lang.String destinationFileName, java.lang.String userName, java.lang.String password) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.diagnostics.UnreachableException, system.io.IOException, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.NotSupportedException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.net.WebException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +464,31 @@ public class Network extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DownloadFile.
+     *
+     * @param address the argument of type {@code java.lang.String}
+     * @param destinationFileName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.net.WebException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Devices.Network.DownloadFile" target="_top">.NET documentation</a>
+     */
     public void DownloadFile(java.lang.String address, java.lang.String destinationFileName) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.diagnostics.UnreachableException, system.io.IOException, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.NotSupportedException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.net.WebException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +499,42 @@ public class Network extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DownloadFile.
+     *
+     * @param address the argument of type {@code Uri}
+     * @param destinationFileName the argument of type {@code java.lang.String}
+     * @param networkCredentials the argument of type {@code ICredentials}
+     * @param showUI the argument of type {@code boolean}
+     * @param connectionTimeout the argument of type {@code int}
+     * @param overwrite the argument of type {@code boolean}
+     * @param onUserCancel the argument of type {@code UICancelOption}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.net.WebException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Devices.Network.DownloadFile" target="_top">.NET documentation</a>
+     */
     public void DownloadFile(Uri address, java.lang.String destinationFileName, ICredentials networkCredentials, boolean showUI, int connectionTimeout, boolean overwrite, UICancelOption onUserCancel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.io.IOException, system.componentmodel.Win32Exception, system.NotSupportedException, system.MulticastNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.WaitHandleCannotBeOpenedException, system.FormatException, system.BadImageFormatException, system.componentmodel.InvalidEnumArgumentException, system.diagnostics.UnreachableException, system.UriFormatException, system.net.WebException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +545,41 @@ public class Network extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DownloadFile.
+     *
+     * @param address the argument of type {@code Uri}
+     * @param destinationFileName the argument of type {@code java.lang.String}
+     * @param networkCredentials the argument of type {@code ICredentials}
+     * @param showUI the argument of type {@code boolean}
+     * @param connectionTimeout the argument of type {@code int}
+     * @param overwrite the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @throws system.net.WebException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Devices.Network.DownloadFile" target="_top">.NET documentation</a>
+     */
     public void DownloadFile(Uri address, java.lang.String destinationFileName, ICredentials networkCredentials, boolean showUI, int connectionTimeout, boolean overwrite) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.io.IOException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.FormatException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.UriFormatException, system.componentmodel.InvalidAsynchronousStateException, system.net.WebException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +590,43 @@ public class Network extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DownloadFile.
+     *
+     * @param address the argument of type {@code Uri}
+     * @param destinationFileName the argument of type {@code java.lang.String}
+     * @param userName the argument of type {@code java.lang.String}
+     * @param password the argument of type {@code java.lang.String}
+     * @param showUI the argument of type {@code boolean}
+     * @param connectionTimeout the argument of type {@code int}
+     * @param overwrite the argument of type {@code boolean}
+     * @param onUserCancel the argument of type {@code UICancelOption}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @throws system.net.WebException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Devices.Network.DownloadFile" target="_top">.NET documentation</a>
+     */
     public void DownloadFile(Uri address, java.lang.String destinationFileName, java.lang.String userName, java.lang.String password, boolean showUI, int connectionTimeout, boolean overwrite, UICancelOption onUserCancel) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.io.IOException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.FormatException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.UriFormatException, system.componentmodel.InvalidAsynchronousStateException, system.net.WebException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +637,37 @@ public class Network extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DownloadFile.
+     *
+     * @param address the argument of type {@code Uri}
+     * @param destinationFileName the argument of type {@code java.lang.String}
+     * @param userName the argument of type {@code java.lang.String}
+     * @param password the argument of type {@code java.lang.String}
+     * @param showUI the argument of type {@code boolean}
+     * @param connectionTimeout the argument of type {@code int}
+     * @param overwrite the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @throws system.net.WebException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Devices.Network.DownloadFile" target="_top">.NET documentation</a>
+     */
     public void DownloadFile(Uri address, java.lang.String destinationFileName, java.lang.String userName, java.lang.String password, boolean showUI, int connectionTimeout, boolean overwrite) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.io.IOException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.InvalidAsynchronousStateException, system.net.WebException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +678,31 @@ public class Network extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DownloadFile.
+     *
+     * @param address the argument of type {@code Uri}
+     * @param destinationFileName the argument of type {@code java.lang.String}
+     * @param userName the argument of type {@code java.lang.String}
+     * @param password the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.net.WebException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Devices.Network.DownloadFile" target="_top">.NET documentation</a>
+     */
     public void DownloadFile(Uri address, java.lang.String destinationFileName, java.lang.String userName, java.lang.String password) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.io.IOException, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.net.WebException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +713,29 @@ public class Network extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DownloadFile.
+     *
+     * @param address the argument of type {@code Uri}
+     * @param destinationFileName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.net.WebException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Devices.Network.DownloadFile" target="_top">.NET documentation</a>
+     */
     public void DownloadFile(Uri address, java.lang.String destinationFileName) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.io.IOException, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.net.WebException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +746,41 @@ public class Network extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UploadFile.
+     *
+     * @param sourceFileName the argument of type {@code java.lang.String}
+     * @param address the argument of type {@code java.lang.String}
+     * @param userName the argument of type {@code java.lang.String}
+     * @param password the argument of type {@code java.lang.String}
+     * @param showUI the argument of type {@code boolean}
+     * @param connectionTimeout the argument of type {@code int}
+     * @param onUserCancel the argument of type {@code UICancelOption}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @throws system.net.WebException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Devices.Network.UploadFile" target="_top">.NET documentation</a>
+     */
     public void UploadFile(java.lang.String sourceFileName, java.lang.String address, java.lang.String userName, java.lang.String password, boolean showUI, int connectionTimeout, UICancelOption onUserCancel) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.UriFormatException, system.io.FileNotFoundException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.IOException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.InvalidAsynchronousStateException, system.net.WebException, system.ArrayTypeMismatchException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -330,6 +791,37 @@ public class Network extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UploadFile.
+     *
+     * @param sourceFileName the argument of type {@code java.lang.String}
+     * @param address the argument of type {@code java.lang.String}
+     * @param userName the argument of type {@code java.lang.String}
+     * @param password the argument of type {@code java.lang.String}
+     * @param showUI the argument of type {@code boolean}
+     * @param connectionTimeout the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.net.WebException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Devices.Network.UploadFile" target="_top">.NET documentation</a>
+     */
     public void UploadFile(java.lang.String sourceFileName, java.lang.String address, java.lang.String userName, java.lang.String password, boolean showUI, int connectionTimeout) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.OutOfMemoryException, system.UriFormatException, system.io.FileNotFoundException, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.net.WebException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -340,6 +832,33 @@ public class Network extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UploadFile.
+     *
+     * @param sourceFileName the argument of type {@code java.lang.String}
+     * @param address the argument of type {@code java.lang.String}
+     * @param userName the argument of type {@code java.lang.String}
+     * @param password the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.net.WebException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Devices.Network.UploadFile" target="_top">.NET documentation</a>
+     */
     public void UploadFile(java.lang.String sourceFileName, java.lang.String address, java.lang.String userName, java.lang.String password) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.diagnostics.UnreachableException, system.io.FileNotFoundException, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.net.WebException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -350,6 +869,31 @@ public class Network extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UploadFile.
+     *
+     * @param sourceFileName the argument of type {@code java.lang.String}
+     * @param address the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.net.WebException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Devices.Network.UploadFile" target="_top">.NET documentation</a>
+     */
     public void UploadFile(java.lang.String sourceFileName, java.lang.String address) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.diagnostics.UnreachableException, system.io.FileNotFoundException, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.net.WebException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -360,6 +904,45 @@ public class Network extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UploadFile.
+     *
+     * @param sourceFileName the argument of type {@code java.lang.String}
+     * @param address the argument of type {@code Uri}
+     * @param networkCredentials the argument of type {@code ICredentials}
+     * @param showUI the argument of type {@code boolean}
+     * @param connectionTimeout the argument of type {@code int}
+     * @param onUserCancel the argument of type {@code UICancelOption}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.net.WebException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Devices.Network.UploadFile" target="_top">.NET documentation</a>
+     */
     public void UploadFile(java.lang.String sourceFileName, Uri address, ICredentials networkCredentials, boolean showUI, int connectionTimeout, UICancelOption onUserCancel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.componentmodel.Win32Exception, system.NotSupportedException, system.MulticastNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.WaitHandleCannotBeOpenedException, system.io.IOException, system.BadImageFormatException, system.componentmodel.InvalidEnumArgumentException, system.diagnostics.UnreachableException, system.UriFormatException, system.net.WebException, system.OverflowException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -370,6 +953,42 @@ public class Network extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UploadFile.
+     *
+     * @param sourceFileName the argument of type {@code java.lang.String}
+     * @param address the argument of type {@code Uri}
+     * @param networkCredentials the argument of type {@code ICredentials}
+     * @param showUI the argument of type {@code boolean}
+     * @param connectionTimeout the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @throws system.net.WebException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Devices.Network.UploadFile" target="_top">.NET documentation</a>
+     */
     public void UploadFile(java.lang.String sourceFileName, Uri address, ICredentials networkCredentials, boolean showUI, int connectionTimeout) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.IOException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.UriFormatException, system.componentmodel.InvalidAsynchronousStateException, system.net.WebException, system.OverflowException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -380,6 +999,44 @@ public class Network extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UploadFile.
+     *
+     * @param sourceFileName the argument of type {@code java.lang.String}
+     * @param address the argument of type {@code Uri}
+     * @param userName the argument of type {@code java.lang.String}
+     * @param password the argument of type {@code java.lang.String}
+     * @param showUI the argument of type {@code boolean}
+     * @param connectionTimeout the argument of type {@code int}
+     * @param onUserCancel the argument of type {@code UICancelOption}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @throws system.net.WebException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Devices.Network.UploadFile" target="_top">.NET documentation</a>
+     */
     public void UploadFile(java.lang.String sourceFileName, Uri address, java.lang.String userName, java.lang.String password, boolean showUI, int connectionTimeout, UICancelOption onUserCancel) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.IOException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.UriFormatException, system.componentmodel.InvalidAsynchronousStateException, system.net.WebException, system.OverflowException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -390,6 +1047,38 @@ public class Network extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UploadFile.
+     *
+     * @param sourceFileName the argument of type {@code java.lang.String}
+     * @param address the argument of type {@code Uri}
+     * @param userName the argument of type {@code java.lang.String}
+     * @param password the argument of type {@code java.lang.String}
+     * @param showUI the argument of type {@code boolean}
+     * @param connectionTimeout the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @throws system.net.WebException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Devices.Network.UploadFile" target="_top">.NET documentation</a>
+     */
     public void UploadFile(java.lang.String sourceFileName, Uri address, java.lang.String userName, java.lang.String password, boolean showUI, int connectionTimeout) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.NotSupportedException, system.io.IOException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.InvalidAsynchronousStateException, system.net.WebException, system.FormatException, system.ArrayTypeMismatchException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -400,6 +1089,33 @@ public class Network extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UploadFile.
+     *
+     * @param sourceFileName the argument of type {@code java.lang.String}
+     * @param address the argument of type {@code Uri}
+     * @param userName the argument of type {@code java.lang.String}
+     * @param password the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.net.WebException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Devices.Network.UploadFile" target="_top">.NET documentation</a>
+     */
     public void UploadFile(java.lang.String sourceFileName, Uri address, java.lang.String userName, java.lang.String password) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.io.FileNotFoundException, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.net.WebException, system.OutOfMemoryException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -410,6 +1126,31 @@ public class Network extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UploadFile.
+     *
+     * @param sourceFileName the argument of type {@code java.lang.String}
+     * @param address the argument of type {@code Uri}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.net.WebException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Devices.Network.UploadFile" target="_top">.NET documentation</a>
+     */
     public void UploadFile(java.lang.String sourceFileName, Uri address) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.io.FileNotFoundException, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.net.WebException, system.OutOfMemoryException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -424,6 +1165,22 @@ public class Network extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsAvailable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.net.sockets.SocketException if the .NET member raises it
+     * @throws system.net.networkinformation.NetworkInformationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Devices.Network.IsAvailable" target="_top">.NET documentation</a>
+     */
     public boolean getIsAvailable() throws Throwable, system.OutOfMemoryException, system.PlatformNotSupportedException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.net.sockets.SocketException, system.net.networkinformation.NetworkInformationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -443,6 +1200,13 @@ public class Network extends NetObject  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addNetworkAvailabilityChanged.
+     *
+     * @param handler the argument of type {@code NetworkAvailableEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addNetworkAvailabilityChanged(NetworkAvailableEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -453,6 +1217,13 @@ public class Network extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeNetworkAvailabilityChanged.
+     *
+     * @param handler the argument of type {@code NetworkAvailableEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeNetworkAvailabilityChanged(NetworkAvailableEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

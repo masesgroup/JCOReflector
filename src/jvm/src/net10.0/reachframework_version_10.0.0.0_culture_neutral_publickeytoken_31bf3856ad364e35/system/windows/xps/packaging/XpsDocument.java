@@ -117,7 +117,10 @@ public class XpsDocument extends system.windows.xps.packaging.XpsPartBase implem
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XpsDocument(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -167,6 +170,27 @@ public class XpsDocument extends system.windows.xps.packaging.XpsPartBase implem
     public XpsDocument() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param _package the argument of type {@code Package}
+     * @param compressionOption the argument of type {@code CompressionOption}
+     * @param path the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsDocument.-ctor" target="_top">.NET documentation</a>
+     */
     public XpsDocument(Package _package, CompressionOption compressionOption, java.lang.String path) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException {
         try {
             // add reference to assemblyName.dll file
@@ -177,6 +201,24 @@ public class XpsDocument extends system.windows.xps.packaging.XpsPartBase implem
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param _package the argument of type {@code Package}
+     * @param compressionOption the argument of type {@code CompressionOption}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsDocument.-ctor" target="_top">.NET documentation</a>
+     */
     public XpsDocument(Package _package, CompressionOption compressionOption) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.diagnostics.UnreachableException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -187,6 +229,23 @@ public class XpsDocument extends system.windows.xps.packaging.XpsPartBase implem
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param _package the argument of type {@code Package}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsDocument.-ctor" target="_top">.NET documentation</a>
+     */
     public XpsDocument(Package _package) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -197,6 +256,36 @@ public class XpsDocument extends system.windows.xps.packaging.XpsPartBase implem
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @param packageAccess the argument of type {@code FileAccess}
+     * @param compressionOption the argument of type {@code CompressionOption}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.InvalidDataException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsDocument.-ctor" target="_top">.NET documentation</a>
+     */
     public XpsDocument(java.lang.String path, FileAccess packageAccess, CompressionOption compressionOption) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.diagnostics.UnreachableException, system.OutOfMemoryException, system.UriFormatException, system.ObjectDisposedException, system.io.InvalidDataException, system.FormatException, system.io.IOException, system.xml.XmlException, system.io.FileFormatException, system.RankException, system.ArrayTypeMismatchException, system.UnauthorizedAccessException, system.collections.generic.KeyNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -207,6 +296,32 @@ public class XpsDocument extends system.windows.xps.packaging.XpsPartBase implem
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @param packageAccess the argument of type {@code FileAccess}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.io.InvalidDataException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsDocument.-ctor" target="_top">.NET documentation</a>
+     */
     public XpsDocument(java.lang.String path, FileAccess packageAccess) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.OutOfMemoryException, system.InvalidOperationException, system.io.InvalidDataException, system.ObjectDisposedException, system.xml.XmlException, system.io.FileFormatException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.UnauthorizedAccessException {
         try {
             // add reference to assemblyName.dll file
@@ -222,6 +337,38 @@ public class XpsDocument extends system.windows.xps.packaging.XpsPartBase implem
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetFixedDocumentSequence.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.io.InvalidDataException if the .NET member raises it
+     * @throws system.xaml.XamlSchemaException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.xaml.XamlException if the .NET member raises it
+     * @throws system.windows.markup.XamlParseException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsDocument.GetFixedDocumentSequence" target="_top">.NET documentation</a>
+     */
     public FixedDocumentSequence GetFixedDocumentSequence() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.windows.xps.XpsPackagingException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.UriFormatException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.io.InvalidDataException, system.xaml.XamlSchemaException, system.NotImplementedException, system.xaml.XamlException, system.windows.markup.XamlParseException, system.componentmodel.InvalidEnumArgumentException, system.InvalidCastException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +384,31 @@ public class XpsDocument extends system.windows.xps.packaging.XpsPartBase implem
         }
     }
 
+    /**
+     * Invokes the .NET member AddFixedDocumentSequence.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.io.InvalidDataException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsDocument.AddFixedDocumentSequence" target="_top">.NET documentation</a>
+     */
     public IXpsFixedDocumentSequenceWriter AddFixedDocumentSequence() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.windows.xps.XpsPackagingException, system.io.IOException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.io.FileFormatException, system.xml.XmlException, system.io.InvalidDataException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.NullReferenceException, system.FormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +424,37 @@ public class XpsDocument extends system.windows.xps.packaging.XpsPartBase implem
         }
     }
 
+    /**
+     * Invokes the .NET member SignDigitally.
+     *
+     * @param certificate the argument of type {@code X509Certificate}
+     * @param embedCertificate the argument of type {@code boolean}
+     * @param restrictions the argument of type {@code XpsDigSigPartAlteringRestrictions}
+     * @param id the argument of type {@code Guid}
+     * @param testIsSignable the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.InvalidDataException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicUnexpectedOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsDocument.SignDigitally" target="_top">.NET documentation</a>
+     */
     public XpsDigitalSignature SignDigitally(X509Certificate certificate, boolean embedCertificate, XpsDigSigPartAlteringRestrictions restrictions, Guid id, boolean testIsSignable) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.FormatException, system.io.IOException, system.io.InvalidDataException, system.collections.generic.KeyNotFoundException, system.windows.xps.XpsPackagingException, system.io.FileFormatException, system.xml.XmlException, system.security.cryptography.CryptographicException, system.security.cryptography.CryptographicUnexpectedOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +470,36 @@ public class XpsDocument extends system.windows.xps.packaging.XpsPartBase implem
         }
     }
 
+    /**
+     * Invokes the .NET member SignDigitally.
+     *
+     * @param certificate the argument of type {@code X509Certificate}
+     * @param embedCertificate the argument of type {@code boolean}
+     * @param restrictions the argument of type {@code XpsDigSigPartAlteringRestrictions}
+     * @param id the argument of type {@code Guid}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.InvalidDataException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicUnexpectedOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsDocument.SignDigitally" target="_top">.NET documentation</a>
+     */
     public XpsDigitalSignature SignDigitally(X509Certificate certificate, boolean embedCertificate, XpsDigSigPartAlteringRestrictions restrictions, Guid id) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.FormatException, system.io.IOException, system.io.InvalidDataException, system.collections.generic.KeyNotFoundException, system.windows.xps.XpsPackagingException, system.io.FileFormatException, system.xml.XmlException, system.security.cryptography.CryptographicException, system.security.cryptography.CryptographicUnexpectedOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +515,33 @@ public class XpsDocument extends system.windows.xps.packaging.XpsPartBase implem
         }
     }
 
+    /**
+     * Invokes the .NET member SignDigitally.
+     *
+     * @param certificate the argument of type {@code X509Certificate}
+     * @param embedCertificate the argument of type {@code boolean}
+     * @param restrictions the argument of type {@code XpsDigSigPartAlteringRestrictions}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.io.InvalidDataException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicUnexpectedOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsDocument.SignDigitally" target="_top">.NET documentation</a>
+     */
     public XpsDigitalSignature SignDigitally(X509Certificate certificate, boolean embedCertificate, XpsDigSigPartAlteringRestrictions restrictions) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.io.IOException, system.ArgumentNullException, system.io.InvalidDataException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.windows.xps.XpsPackagingException, system.PlatformNotSupportedException, system.io.FileFormatException, system.xml.XmlException, system.security.cryptography.CryptographicException, system.FormatException, system.security.cryptography.CryptographicUnexpectedOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -297,6 +557,29 @@ public class XpsDocument extends system.windows.xps.packaging.XpsPartBase implem
         }
     }
 
+    /**
+     * Invokes the .NET member AddThumbnail.
+     *
+     * @param imageType the argument of type {@code XpsImageType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.InvalidDataException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsDocument.AddThumbnail" target="_top">.NET documentation</a>
+     */
     public XpsThumbnail AddThumbnail(XpsImageType imageType) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.io.IOException, system.ArgumentNullException, system.IndexOutOfRangeException, system.io.InvalidDataException, system.OutOfMemoryException, system.windows.xps.XpsPackagingException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -312,6 +595,23 @@ public class XpsDocument extends system.windows.xps.packaging.XpsPartBase implem
         }
     }
 
+    /**
+     * Invokes the .NET member CreateXpsDocumentWriter.
+     *
+     * @param xpsDocument the argument of type {@code XpsDocument}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsDocument.CreateXpsDocumentWriter" target="_top">.NET documentation</a>
+     */
     public static XpsDocumentWriter CreateXpsDocumentWriter(XpsDocument xpsDocument) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -327,6 +627,24 @@ public class XpsDocument extends system.windows.xps.packaging.XpsPartBase implem
         }
     }
 
+    /**
+     * Invokes the .NET member Close.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsDocument.Close" target="_top">.NET documentation</a>
+     */
     public void Close() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.io.IOException, system.ArgumentNullException, system.io.FileFormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.xml.XmlException, system.NotSupportedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -337,6 +655,30 @@ public class XpsDocument extends system.windows.xps.packaging.XpsPartBase implem
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveSignature.
+     *
+     * @param signature the argument of type {@code XpsDigitalSignature}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.io.InvalidDataException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsDocument.RemoveSignature" target="_top">.NET documentation</a>
+     */
     public void RemoveSignature(XpsDigitalSignature signature) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.NullReferenceException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.io.IOException, system.ArgumentNullException, system.io.FileFormatException, system.OutOfMemoryException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.io.InvalidDataException, system.windows.xps.XpsPackagingException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -350,8 +692,11 @@ public class XpsDocument extends system.windows.xps.packaging.XpsPartBase implem
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDisposable method available in IDisposable to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IDisposable.Dispose" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Dispose() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
     }
@@ -373,6 +718,18 @@ public class XpsDocument extends system.windows.xps.packaging.XpsPartBase implem
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsReader.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsDocument.IsReader" target="_top">.NET documentation</a>
+     */
     public boolean getIsReader() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -387,6 +744,28 @@ public class XpsDocument extends system.windows.xps.packaging.XpsPartBase implem
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSignable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.io.InvalidDataException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsDocument.IsSignable" target="_top">.NET documentation</a>
+     */
     public boolean getIsSignable() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.io.IOException, system.ArgumentNullException, system.IndexOutOfRangeException, system.io.FileFormatException, system.xml.XmlException, system.io.InvalidDataException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.windows.xps.XpsPackagingException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -401,6 +780,18 @@ public class XpsDocument extends system.windows.xps.packaging.XpsPartBase implem
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsWriter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsDocument.IsWriter" target="_top">.NET documentation</a>
+     */
     public boolean getIsWriter() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -415,6 +806,29 @@ public class XpsDocument extends system.windows.xps.packaging.XpsPartBase implem
         }
     }
 
+    /**
+     * Gets the value of the .NET property Signatures.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.io.InvalidDataException if the .NET member raises it
+     * @throws system.windows.xps.XpsPackagingException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsDocument.Signatures" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getSignatures() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.io.IOException, system.io.FileFormatException, system.OutOfMemoryException, system.io.InvalidDataException, system.windows.xps.XpsPackagingException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -430,6 +844,25 @@ public class XpsDocument extends system.windows.xps.packaging.XpsPartBase implem
         }
     }
 
+    /**
+     * Gets the value of the .NET property CoreDocumentProperties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsDocument.CoreDocumentProperties" target="_top">.NET documentation</a>
+     */
     public PackageProperties getCoreDocumentProperties() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.io.IOException, system.ArgumentNullException, system.io.FileFormatException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -445,6 +878,28 @@ public class XpsDocument extends system.windows.xps.packaging.XpsPartBase implem
         }
     }
 
+    /**
+     * Gets the value of the .NET property FixedDocumentSequenceReader.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.io.InvalidDataException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsDocument.FixedDocumentSequenceReader" target="_top">.NET documentation</a>
+     */
     public IXpsFixedDocumentSequenceReader getFixedDocumentSequenceReader() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.io.IOException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.io.FileFormatException, system.xml.XmlException, system.io.InvalidDataException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -460,6 +915,26 @@ public class XpsDocument extends system.windows.xps.packaging.XpsPartBase implem
         }
     }
 
+    /**
+     * Gets the value of the .NET property Thumbnail.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.io.InvalidDataException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsDocument.Thumbnail" target="_top">.NET documentation</a>
+     */
     public XpsThumbnail getThumbnail() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.io.IOException, system.ArgumentNullException, system.IndexOutOfRangeException, system.io.FileFormatException, system.xml.XmlException, system.io.InvalidDataException, system.OutOfMemoryException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -475,6 +950,18 @@ public class XpsDocument extends system.windows.xps.packaging.XpsPartBase implem
         }
     }
 
+    /**
+     * Sets the value of the .NET property Thumbnail.
+     *
+     * @param Thumbnail the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsDocument.Thumbnail" target="_top">.NET documentation</a>
+     */
     public void setThumbnail(XpsThumbnail Thumbnail) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class XsltSettings extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XsltSettings(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class XsltSettings extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.XsltSettings.-ctor" target="_top">.NET documentation</a>
+     */
     public XsltSettings() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,14 @@ public class XsltSettings extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param enableDocumentFunction the argument of type {@code boolean}
+     * @param enableScript the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.XsltSettings.-ctor" target="_top">.NET documentation</a>
+     */
     public XsltSettings(boolean enableDocumentFunction, boolean enableScript) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +191,13 @@ public class XsltSettings extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EnableDocumentFunction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.XsltSettings.EnableDocumentFunction" target="_top">.NET documentation</a>
+     */
     public boolean getEnableDocumentFunction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +212,13 @@ public class XsltSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EnableDocumentFunction.
+     *
+     * @param EnableDocumentFunction the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.XsltSettings.EnableDocumentFunction" target="_top">.NET documentation</a>
+     */
     public void setEnableDocumentFunction(boolean EnableDocumentFunction) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +229,13 @@ public class XsltSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EnableScript.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.XsltSettings.EnableScript" target="_top">.NET documentation</a>
+     */
     public boolean getEnableScript() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +250,13 @@ public class XsltSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EnableScript.
+     *
+     * @param EnableScript the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.XsltSettings.EnableScript" target="_top">.NET documentation</a>
+     */
     public void setEnableScript(boolean EnableScript) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +267,13 @@ public class XsltSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Default.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.XsltSettings.Default" target="_top">.NET documentation</a>
+     */
     public static XsltSettings getDefault() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -237,6 +289,13 @@ public class XsltSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TrustedXslt.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.XsltSettings.TrustedXslt" target="_top">.NET documentation</a>
+     */
     public static XsltSettings getTrustedXslt() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

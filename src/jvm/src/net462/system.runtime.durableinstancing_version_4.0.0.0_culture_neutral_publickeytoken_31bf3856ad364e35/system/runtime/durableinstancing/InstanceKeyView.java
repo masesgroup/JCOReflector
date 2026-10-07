@@ -103,7 +103,10 @@ public class InstanceKeyView extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public InstanceKeyView(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -162,6 +165,22 @@ public class InstanceKeyView extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property InstanceKeyMetadata.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceKeyView.InstanceKeyMetadata" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 getInstanceKeyMetadata() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +196,13 @@ public class InstanceKeyView extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InstanceKeyMetadata.
+     *
+     * @param InstanceKeyMetadata the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceKeyView.InstanceKeyMetadata" target="_top">.NET documentation</a>
+     */
     public void setInstanceKeyMetadata(IDictionary_2 InstanceKeyMetadata) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +213,13 @@ public class InstanceKeyView extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceKeyView.InstanceKey" target="_top">.NET documentation</a>
+     */
     public Guid getInstanceKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +235,13 @@ public class InstanceKeyView extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InstanceKey.
+     *
+     * @param InstanceKey the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceKeyView.InstanceKey" target="_top">.NET documentation</a>
+     */
     public void setInstanceKey(Guid InstanceKey) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +252,13 @@ public class InstanceKeyView extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceKeyState.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceKeyView.InstanceKeyState" target="_top">.NET documentation</a>
+     */
     public InstanceKeyState getInstanceKeyState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +274,13 @@ public class InstanceKeyView extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InstanceKeyState.
+     *
+     * @param InstanceKeyState the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceKeyView.InstanceKeyState" target="_top">.NET documentation</a>
+     */
     public void setInstanceKeyState(InstanceKeyState InstanceKeyState) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +291,13 @@ public class InstanceKeyView extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceKeyMetadataConsistency.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceKeyView.InstanceKeyMetadataConsistency" target="_top">.NET documentation</a>
+     */
     public InstanceValueConsistency getInstanceKeyMetadataConsistency() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +313,13 @@ public class InstanceKeyView extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InstanceKeyMetadataConsistency.
+     *
+     * @param InstanceKeyMetadataConsistency the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceKeyView.InstanceKeyMetadataConsistency" target="_top">.NET documentation</a>
+     */
     public void setInstanceKeyMetadataConsistency(InstanceValueConsistency InstanceKeyMetadataConsistency) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

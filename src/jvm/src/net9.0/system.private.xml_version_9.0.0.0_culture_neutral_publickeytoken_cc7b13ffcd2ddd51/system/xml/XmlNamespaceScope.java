@@ -114,7 +114,9 @@ public class XmlNamespaceScope extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public XmlNamespaceScope(java.lang.Object instance) {
         super(instance);

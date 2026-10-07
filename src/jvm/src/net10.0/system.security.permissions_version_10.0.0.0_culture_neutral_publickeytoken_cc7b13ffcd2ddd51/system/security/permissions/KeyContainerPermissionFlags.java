@@ -114,7 +114,9 @@ public class KeyContainerPermissionFlags extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public KeyContainerPermissionFlags(java.lang.Object instance) {
         super(instance);

@@ -98,7 +98,10 @@ public class ContextInformation extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ContextInformation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,26 @@ public class ContextInformation extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetSection.
+     *
+     * @param sectionName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ContextInformation.GetSection" target="_top">.NET documentation</a>
+     */
     public NetObject GetSection(java.lang.String sectionName) throws Throwable, system.configuration.ConfigurationErrorsException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +195,13 @@ public class ContextInformation extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsMachineLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ContextInformation.IsMachineLevel" target="_top">.NET documentation</a>
+     */
     public boolean getIsMachineLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +216,13 @@ public class ContextInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HostingContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ContextInformation.HostingContext" target="_top">.NET documentation</a>
+     */
     public NetObject getHostingContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

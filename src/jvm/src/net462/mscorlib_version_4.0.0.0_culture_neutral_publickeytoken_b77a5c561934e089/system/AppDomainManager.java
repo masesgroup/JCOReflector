@@ -108,7 +108,10 @@ public class AppDomainManager extends system.MarshalByRefObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AppDomainManager(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,12 @@ public class AppDomainManager extends system.MarshalByRefObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainManager.-ctor" target="_top">.NET documentation</a>
+     */
     public AppDomainManager() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +178,14 @@ public class AppDomainManager extends system.MarshalByRefObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CheckSecuritySettings.
+     *
+     * @param state the argument of type {@code SecurityState}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainManager.CheckSecuritySettings" target="_top">.NET documentation</a>
+     */
     public boolean CheckSecuritySettings(SecurityState state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +200,26 @@ public class AppDomainManager extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateDomain.
+     *
+     * @param friendlyName the argument of type {@code java.lang.String}
+     * @param securityInfo the argument of type {@code Evidence}
+     * @param appDomainInfo the argument of type {@code AppDomainSetup}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.XmlSyntaxException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainManager.CreateDomain" target="_top">.NET documentation</a>
+     */
     public AppDomain CreateDomain(java.lang.String friendlyName, Evidence securityInfo, AppDomainSetup appDomainInfo) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.security.XmlSyntaxException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +235,13 @@ public class AppDomainManager extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member InitializeNewDomain.
+     *
+     * @param appDomainInfo the argument of type {@code AppDomainSetup}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainManager.InitializeNewDomain" target="_top">.NET documentation</a>
+     */
     public void InitializeNewDomain(AppDomainSetup appDomainInfo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +256,13 @@ public class AppDomainManager extends system.MarshalByRefObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property InitializationFlags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainManager.InitializationFlags" target="_top">.NET documentation</a>
+     */
     public AppDomainManagerInitializationOptions getInitializationFlags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +278,13 @@ public class AppDomainManager extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InitializationFlags.
+     *
+     * @param InitializationFlags the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainManager.InitializationFlags" target="_top">.NET documentation</a>
+     */
     public void setInitializationFlags(AppDomainManagerInitializationOptions InitializationFlags) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +295,25 @@ public class AppDomainManager extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EntryAssembly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainManager.EntryAssembly" target="_top">.NET documentation</a>
+     */
     public Assembly getEntryAssembly() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +329,13 @@ public class AppDomainManager extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ApplicationActivator.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainManager.ApplicationActivator" target="_top">.NET documentation</a>
+     */
     public ApplicationActivator getApplicationActivator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +351,13 @@ public class AppDomainManager extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HostSecurityManager.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainManager.HostSecurityManager" target="_top">.NET documentation</a>
+     */
     public HostSecurityManager getHostSecurityManager() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +373,13 @@ public class AppDomainManager extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HostExecutionContextManager.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainManager.HostExecutionContextManager" target="_top">.NET documentation</a>
+     */
     public HostExecutionContextManager getHostExecutionContextManager() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

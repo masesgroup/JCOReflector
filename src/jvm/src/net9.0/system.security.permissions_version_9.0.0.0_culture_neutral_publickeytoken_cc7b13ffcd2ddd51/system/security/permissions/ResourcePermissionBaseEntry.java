@@ -98,7 +98,10 @@ public class ResourcePermissionBaseEntry extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ResourcePermissionBaseEntry(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class ResourcePermissionBaseEntry extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.ResourcePermissionBaseEntry.-ctor" target="_top">.NET documentation</a>
+     */
     public ResourcePermissionBaseEntry() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -155,6 +164,14 @@ public class ResourcePermissionBaseEntry extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param permissionAccess the argument of type {@code int}
+     * @param permissionAccessPath the argument of type {@code java.lang.String[]}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.ResourcePermissionBaseEntry.-ctor" target="_top">.NET documentation</a>
+     */
     public ResourcePermissionBaseEntry(int permissionAccess, java.lang.String[] permissionAccessPath) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -173,6 +190,13 @@ public class ResourcePermissionBaseEntry extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PermissionAccess.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.ResourcePermissionBaseEntry.PermissionAccess" target="_top">.NET documentation</a>
+     */
     public int getPermissionAccess() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +237,13 @@ public class ResourcePermissionBaseEntry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PermissionAccessPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.ResourcePermissionBaseEntry.PermissionAccessPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getPermissionAccessPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

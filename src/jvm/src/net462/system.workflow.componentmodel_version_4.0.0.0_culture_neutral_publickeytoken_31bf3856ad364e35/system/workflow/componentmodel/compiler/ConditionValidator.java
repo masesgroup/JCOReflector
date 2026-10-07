@@ -101,7 +101,10 @@ public class ConditionValidator extends system.workflow.componentmodel.compiler.
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ConditionValidator(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class ConditionValidator extends system.workflow.componentmodel.compiler.
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.ConditionValidator.-ctor" target="_top">.NET documentation</a>
+     */
     public ConditionValidator() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +171,25 @@ public class ConditionValidator extends system.workflow.componentmodel.compiler.
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Validate.
+     *
+     * @param manager the argument of type {@code ValidationManager}
+     * @param obj the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.ConditionValidator.Validate" target="_top">.NET documentation</a>
+     */
     public ValidationErrorCollection Validate(ValidationManager manager, NetObject obj) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

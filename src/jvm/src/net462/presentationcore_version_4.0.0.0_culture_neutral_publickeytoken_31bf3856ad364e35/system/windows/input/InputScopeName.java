@@ -99,7 +99,10 @@ public class InputScopeName extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public InputScopeName(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class InputScopeName extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InputScopeName.-ctor" target="_top">.NET documentation</a>
+     */
     public InputScopeName() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,13 @@ public class InputScopeName extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param nameValue the argument of type {@code InputScopeNameValue}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InputScopeName.-ctor" target="_top">.NET documentation</a>
+     */
     public InputScopeName(InputScopeNameValue nameValue) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +186,14 @@ public class InputScopeName extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AddChild.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InputScopeName.AddChild" target="_top">.NET documentation</a>
+     */
     public void AddChild(NetObject value) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +204,13 @@ public class InputScopeName extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddText.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InputScopeName.AddText" target="_top">.NET documentation</a>
+     */
     public void AddText(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +225,13 @@ public class InputScopeName extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property NameValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InputScopeName.NameValue" target="_top">.NET documentation</a>
+     */
     public InputScopeNameValue getNameValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +247,24 @@ public class InputScopeName extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NameValue.
+     *
+     * @param NameValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InputScopeName.NameValue" target="_top">.NET documentation</a>
+     */
     public void setNameValue(InputScopeNameValue NameValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

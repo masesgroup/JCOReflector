@@ -101,7 +101,10 @@ public class Interlocked extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Interlocked(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,26 @@ public class Interlocked extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CompareExchange.
+     *
+     * @param location1 the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Double>>}
+     * @param value the argument of type {@code double}
+     * @param comparand the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Interlocked.CompareExchange" target="_top">.NET documentation</a>
+     */
     public static double CompareExchange(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Double>> location1, double value, double comparand) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -194,6 +217,25 @@ public class Interlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Exchange.
+     *
+     * @param location1 the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Double>>}
+     * @param value the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Interlocked.Exchange" target="_top">.NET documentation</a>
+     */
     public static double Exchange(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Double>> location1, double value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -234,6 +276,15 @@ public class Interlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param location1 the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param value the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Interlocked.Add" target="_top">.NET documentation</a>
+     */
     public static int Add(JCORefOut<java.util.concurrent.atomic.AtomicInteger> location1, int value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -274,6 +325,15 @@ public class Interlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member And.
+     *
+     * @param location1 the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param value the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Interlocked.And" target="_top">.NET documentation</a>
+     */
     public static int And(JCORefOut<java.util.concurrent.atomic.AtomicInteger> location1, int value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -314,6 +374,16 @@ public class Interlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CompareExchange.
+     *
+     * @param location1 the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param value the argument of type {@code int}
+     * @param comparand the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Interlocked.CompareExchange" target="_top">.NET documentation</a>
+     */
     public static int CompareExchange(JCORefOut<java.util.concurrent.atomic.AtomicInteger> location1, int value, int comparand) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -354,6 +424,15 @@ public class Interlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Exchange.
+     *
+     * @param location1 the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param value the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Interlocked.Exchange" target="_top">.NET documentation</a>
+     */
     public static int Exchange(JCORefOut<java.util.concurrent.atomic.AtomicInteger> location1, int value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -394,6 +473,15 @@ public class Interlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Or.
+     *
+     * @param location1 the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param value the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Interlocked.Or" target="_top">.NET documentation</a>
+     */
     public static int Or(JCORefOut<java.util.concurrent.atomic.AtomicInteger> location1, int value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -434,6 +522,15 @@ public class Interlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param location1 the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicLong>}
+     * @param value the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Interlocked.Add" target="_top">.NET documentation</a>
+     */
     public static long Add(JCORefOut<java.util.concurrent.atomic.AtomicLong> location1, long value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -474,6 +571,15 @@ public class Interlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member And.
+     *
+     * @param location1 the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicLong>}
+     * @param value the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Interlocked.And" target="_top">.NET documentation</a>
+     */
     public static long And(JCORefOut<java.util.concurrent.atomic.AtomicLong> location1, long value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -514,6 +620,16 @@ public class Interlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CompareExchange.
+     *
+     * @param location1 the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicLong>}
+     * @param value the argument of type {@code long}
+     * @param comparand the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Interlocked.CompareExchange" target="_top">.NET documentation</a>
+     */
     public static long CompareExchange(JCORefOut<java.util.concurrent.atomic.AtomicLong> location1, long value, long comparand) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -554,6 +670,15 @@ public class Interlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Exchange.
+     *
+     * @param location1 the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicLong>}
+     * @param value the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Interlocked.Exchange" target="_top">.NET documentation</a>
+     */
     public static long Exchange(JCORefOut<java.util.concurrent.atomic.AtomicLong> location1, long value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -594,6 +719,15 @@ public class Interlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Or.
+     *
+     * @param location1 the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicLong>}
+     * @param value the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Interlocked.Or" target="_top">.NET documentation</a>
+     */
     public static long Or(JCORefOut<java.util.concurrent.atomic.AtomicLong> location1, long value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -634,6 +768,26 @@ public class Interlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CompareExchange.
+     *
+     * @param location1 the argument of type {@code JCORefOut<Single>}
+     * @param value the argument of type {@code Single}
+     * @param comparand the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Interlocked.CompareExchange" target="_top">.NET documentation</a>
+     */
     public static Single CompareExchange(JCORefOut<Single> location1, Single value, Single comparand) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -649,6 +803,25 @@ public class Interlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Exchange.
+     *
+     * @param location1 the argument of type {@code JCORefOut<Single>}
+     * @param value the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Interlocked.Exchange" target="_top">.NET documentation</a>
+     */
     public static Single Exchange(JCORefOut<Single> location1, Single value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -664,6 +837,16 @@ public class Interlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CompareExchange.
+     *
+     * @param location1 the argument of type {@code JCORefOut<NetObject>}
+     * @param value the argument of type {@code NetObject}
+     * @param comparand the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Interlocked.CompareExchange" target="_top">.NET documentation</a>
+     */
     public static NetObject CompareExchange(JCORefOut<NetObject> location1, NetObject value, NetObject comparand) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -679,6 +862,15 @@ public class Interlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Exchange.
+     *
+     * @param location1 the argument of type {@code JCORefOut<NetObject>}
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Interlocked.Exchange" target="_top">.NET documentation</a>
+     */
     public static NetObject Exchange(JCORefOut<NetObject> location1, NetObject value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -694,6 +886,25 @@ public class Interlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param location1 the argument of type {@code JCORefOut<UInt32>}
+     * @param value the argument of type {@code UInt32}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Interlocked.Add" target="_top">.NET documentation</a>
+     */
     public static UInt32 Add(JCORefOut<UInt32> location1, UInt32 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -709,6 +920,25 @@ public class Interlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member And.
+     *
+     * @param location1 the argument of type {@code JCORefOut<UInt32>}
+     * @param value the argument of type {@code UInt32}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Interlocked.And" target="_top">.NET documentation</a>
+     */
     public static UInt32 And(JCORefOut<UInt32> location1, UInt32 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -724,6 +954,26 @@ public class Interlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CompareExchange.
+     *
+     * @param location1 the argument of type {@code JCORefOut<UInt32>}
+     * @param value the argument of type {@code UInt32}
+     * @param comparand the argument of type {@code UInt32}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Interlocked.CompareExchange" target="_top">.NET documentation</a>
+     */
     public static UInt32 CompareExchange(JCORefOut<UInt32> location1, UInt32 value, UInt32 comparand) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -739,6 +989,25 @@ public class Interlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Exchange.
+     *
+     * @param location1 the argument of type {@code JCORefOut<UInt32>}
+     * @param value the argument of type {@code UInt32}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Interlocked.Exchange" target="_top">.NET documentation</a>
+     */
     public static UInt32 Exchange(JCORefOut<UInt32> location1, UInt32 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -754,6 +1023,25 @@ public class Interlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Or.
+     *
+     * @param location1 the argument of type {@code JCORefOut<UInt32>}
+     * @param value the argument of type {@code UInt32}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Interlocked.Or" target="_top">.NET documentation</a>
+     */
     public static UInt32 Or(JCORefOut<UInt32> location1, UInt32 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -769,6 +1057,25 @@ public class Interlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param location1 the argument of type {@code JCORefOut<UInt64>}
+     * @param value the argument of type {@code UInt64}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Interlocked.Add" target="_top">.NET documentation</a>
+     */
     public static UInt64 Add(JCORefOut<UInt64> location1, UInt64 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -784,6 +1091,25 @@ public class Interlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member And.
+     *
+     * @param location1 the argument of type {@code JCORefOut<UInt64>}
+     * @param value the argument of type {@code UInt64}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Interlocked.And" target="_top">.NET documentation</a>
+     */
     public static UInt64 And(JCORefOut<UInt64> location1, UInt64 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -799,6 +1125,26 @@ public class Interlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CompareExchange.
+     *
+     * @param location1 the argument of type {@code JCORefOut<UInt64>}
+     * @param value the argument of type {@code UInt64}
+     * @param comparand the argument of type {@code UInt64}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Interlocked.CompareExchange" target="_top">.NET documentation</a>
+     */
     public static UInt64 CompareExchange(JCORefOut<UInt64> location1, UInt64 value, UInt64 comparand) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -814,6 +1160,25 @@ public class Interlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Exchange.
+     *
+     * @param location1 the argument of type {@code JCORefOut<UInt64>}
+     * @param value the argument of type {@code UInt64}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Interlocked.Exchange" target="_top">.NET documentation</a>
+     */
     public static UInt64 Exchange(JCORefOut<UInt64> location1, UInt64 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -829,6 +1194,25 @@ public class Interlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Or.
+     *
+     * @param location1 the argument of type {@code JCORefOut<UInt64>}
+     * @param value the argument of type {@code UInt64}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Interlocked.Or" target="_top">.NET documentation</a>
+     */
     public static UInt64 Or(JCORefOut<UInt64> location1, UInt64 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -844,6 +1228,12 @@ public class Interlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MemoryBarrier.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Interlocked.MemoryBarrier" target="_top">.NET documentation</a>
+     */
     public static void MemoryBarrier() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -854,6 +1244,12 @@ public class Interlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MemoryBarrierProcessWide.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Interlocked.MemoryBarrierProcessWide" target="_top">.NET documentation</a>
+     */
     public static void MemoryBarrierProcessWide() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

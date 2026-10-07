@@ -103,7 +103,10 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HttpWorkerRequest(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,14 @@ public class HttpWorkerRequest extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member HasEntityBody.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.HasEntityBody" target="_top">.NET documentation</a>
+     */
     public boolean HasEntityBody() throws Throwable, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +181,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member HeadersSent.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.HeadersSent" target="_top">.NET documentation</a>
+     */
     public boolean HeadersSent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +202,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsClientConnected.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.IsClientConnected" target="_top">.NET documentation</a>
+     */
     public boolean IsClientConnected() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +223,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsEntireEntityBodyIsPreloaded.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.IsEntireEntityBodyIsPreloaded" target="_top">.NET documentation</a>
+     */
     public boolean IsEntireEntityBodyIsPreloaded() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +244,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsSecure.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.IsSecure" target="_top">.NET documentation</a>
+     */
     public boolean IsSecure() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +265,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetClientCertificate.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetClientCertificate" target="_top">.NET documentation</a>
+     */
     public byte[] GetClientCertificate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +295,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetClientCertificateBinaryIssuer.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetClientCertificateBinaryIssuer" target="_top">.NET documentation</a>
+     */
     public byte[] GetClientCertificateBinaryIssuer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +325,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetClientCertificatePublicKey.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetClientCertificatePublicKey" target="_top">.NET documentation</a>
+     */
     public byte[] GetClientCertificatePublicKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +355,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPreloadedEntityBody.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetPreloadedEntityBody" target="_top">.NET documentation</a>
+     */
     public byte[] GetPreloadedEntityBody() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +385,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetQueryStringRawBytes.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetQueryStringRawBytes" target="_top">.NET documentation</a>
+     */
     public byte[] GetQueryStringRawBytes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -341,6 +415,15 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EndRead.
+     *
+     * @param asyncResult the argument of type {@code IAsyncResult}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.EndRead" target="_top">.NET documentation</a>
+     */
     public int EndRead(IAsyncResult asyncResult) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -381,6 +464,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetClientCertificateEncoding.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetClientCertificateEncoding" target="_top">.NET documentation</a>
+     */
     public int GetClientCertificateEncoding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -421,6 +511,17 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetKnownRequestHeaderIndex.
+     *
+     * @param header the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetKnownRequestHeaderIndex" target="_top">.NET documentation</a>
+     */
     public static int GetKnownRequestHeaderIndex(java.lang.String header) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -461,6 +562,17 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetKnownResponseHeaderIndex.
+     *
+     * @param header the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetKnownResponseHeaderIndex" target="_top">.NET documentation</a>
+     */
     public static int GetKnownResponseHeaderIndex(java.lang.String header) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -501,6 +613,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetLocalPort.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetLocalPort" target="_top">.NET documentation</a>
+     */
     public int GetLocalPort() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -541,6 +660,15 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPreloadedEntityBody.
+     *
+     * @param buffer the argument of type {@code byte[]}
+     * @param offset the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetPreloadedEntityBody" target="_top">.NET documentation</a>
+     */
     public int GetPreloadedEntityBody(byte[] buffer, int offset) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -581,6 +709,15 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPreloadedEntityBody.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetPreloadedEntityBody" target="_top">.NET documentation</a>
+     */
     public int GetPreloadedEntityBody(JCORefOut dupParam0, int dupParam1) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -621,6 +758,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPreloadedEntityBodyLength.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetPreloadedEntityBodyLength" target="_top">.NET documentation</a>
+     */
     public int GetPreloadedEntityBodyLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -661,6 +805,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRemotePort.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetRemotePort" target="_top">.NET documentation</a>
+     */
     public int GetRemotePort() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -701,6 +852,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRequestReason.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetRequestReason" target="_top">.NET documentation</a>
+     */
     public int GetRequestReason() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -741,6 +899,23 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTotalEntityBodyLength.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetTotalEntityBodyLength" target="_top">.NET documentation</a>
+     */
     public int GetTotalEntityBodyLength() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -781,6 +956,15 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReadEntityBody.
+     *
+     * @param buffer the argument of type {@code byte[]}
+     * @param size the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.ReadEntityBody" target="_top">.NET documentation</a>
+     */
     public int ReadEntityBody(byte[] buffer, int size) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -821,6 +1005,15 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReadEntityBody.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.ReadEntityBody" target="_top">.NET documentation</a>
+     */
     public int ReadEntityBody(JCORefOut dupParam0, int dupParam1) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -861,6 +1054,17 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReadEntityBody.
+     *
+     * @param buffer the argument of type {@code byte[]}
+     * @param offset the argument of type {@code int}
+     * @param size the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.ReadEntityBody" target="_top">.NET documentation</a>
+     */
     public int ReadEntityBody(byte[] buffer, int offset, int size) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -901,6 +1105,17 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReadEntityBody.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.ReadEntityBody" target="_top">.NET documentation</a>
+     */
     public int ReadEntityBody(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -941,6 +1156,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetBytesRead.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetBytesRead" target="_top">.NET documentation</a>
+     */
     public long GetBytesRead() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -981,6 +1203,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetConnectionID.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetConnectionID" target="_top">.NET documentation</a>
+     */
     public long GetConnectionID() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1021,6 +1250,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetUrlContextID.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetUrlContextID" target="_top">.NET documentation</a>
+     */
     public long GetUrlContextID() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1061,6 +1297,19 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetClientCertificateValidFrom.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetClientCertificateValidFrom" target="_top">.NET documentation</a>
+     */
     public DateTime GetClientCertificateValidFrom() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidTimeZoneException, system.OverflowException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1076,6 +1325,19 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetClientCertificateValidUntil.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetClientCertificateValidUntil" target="_top">.NET documentation</a>
+     */
     public DateTime GetClientCertificateValidUntil() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidTimeZoneException, system.OverflowException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1091,6 +1353,16 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BeginFlush.
+     *
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.BeginFlush" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginFlush(AsyncCallback callback, NetObject state) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1106,6 +1378,19 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BeginRead.
+     *
+     * @param buffer the argument of type {@code byte[]}
+     * @param offset the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.BeginRead" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginRead(byte[] buffer, int offset, int count, AsyncCallback callback, NetObject state) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1121,6 +1406,19 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BeginRead.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code int}
+     * @param dupParam3 the argument of type {@code AsyncCallback}
+     * @param dupParam4 the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.BeginRead" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginRead(JCORefOut dupParam0, int dupParam1, int dupParam2, AsyncCallback dupParam3, NetObject dupParam4) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1136,6 +1434,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetAppPath.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetAppPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetAppPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1150,6 +1455,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetAppPathTranslated.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetAppPathTranslated" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetAppPathTranslated() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1164,6 +1476,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetAppPoolID.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetAppPoolID" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetAppPoolID() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1178,6 +1497,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFilePath.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetFilePath" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetFilePath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1192,6 +1518,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFilePathTranslated.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetFilePathTranslated" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetFilePathTranslated() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1206,6 +1539,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetHttpVerbName.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetHttpVerbName" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetHttpVerbName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1220,6 +1560,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetHttpVersion.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetHttpVersion" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetHttpVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1234,6 +1581,14 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetKnownRequestHeader.
+     *
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetKnownRequestHeader" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetKnownRequestHeader(int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1248,6 +1603,14 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetKnownRequestHeaderName.
+     *
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetKnownRequestHeaderName" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetKnownRequestHeaderName(int index) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1262,6 +1625,14 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetKnownResponseHeaderName.
+     *
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetKnownResponseHeaderName" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetKnownResponseHeaderName(int index) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1276,6 +1647,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetLocalAddress.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetLocalAddress" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetLocalAddress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1290,6 +1668,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPathInfo.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetPathInfo" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetPathInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1304,6 +1689,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetProtocol.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetProtocol" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetProtocol() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1318,6 +1710,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetQueryString.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetQueryString" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetQueryString() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1332,6 +1731,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRawUrl.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetRawUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetRawUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1346,6 +1752,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRemoteAddress.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetRemoteAddress" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetRemoteAddress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1360,6 +1773,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRemoteName.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetRemoteName" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetRemoteName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1374,6 +1794,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetServerName.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetServerName" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetServerName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1388,6 +1815,14 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetServerVariable.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetServerVariable" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetServerVariable(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1402,6 +1837,14 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetStatusDescription.
+     *
+     * @param code the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetStatusDescription" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetStatusDescription(int code) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1416,6 +1859,14 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetUnknownRequestHeader.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetUnknownRequestHeader" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetUnknownRequestHeader(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1430,6 +1881,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetUriPath.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.GetUriPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetUriPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1444,6 +1902,14 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MapPath.
+     *
+     * @param virtualPath the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.MapPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String MapPath(java.lang.String virtualPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1458,6 +1924,12 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CloseConnection.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.CloseConnection" target="_top">.NET documentation</a>
+     */
     public void CloseConnection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1468,6 +1940,14 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EndFlush.
+     *
+     * @param asyncResult the argument of type {@code IAsyncResult}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.EndFlush" target="_top">.NET documentation</a>
+     */
     public void EndFlush(IAsyncResult asyncResult) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1478,6 +1958,12 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EndOfRequest.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.EndOfRequest" target="_top">.NET documentation</a>
+     */
     public void EndOfRequest() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1488,6 +1974,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FlushResponse.
+     *
+     * @param finalFlush the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.FlushResponse" target="_top">.NET documentation</a>
+     */
     public void FlushResponse(boolean finalFlush) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1498,6 +1991,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SendCalculatedContentLength.
+     *
+     * @param contentLength the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.SendCalculatedContentLength" target="_top">.NET documentation</a>
+     */
     public void SendCalculatedContentLength(int contentLength) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1508,6 +2008,14 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SendCalculatedContentLength.
+     *
+     * @param contentLength the argument of type {@code long}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.SendCalculatedContentLength" target="_top">.NET documentation</a>
+     */
     public void SendCalculatedContentLength(long contentLength) throws Throwable, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1518,6 +2026,14 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SendKnownResponseHeader.
+     *
+     * @param index the argument of type {@code int}
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.SendKnownResponseHeader" target="_top">.NET documentation</a>
+     */
     public void SendKnownResponseHeader(int index, java.lang.String value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1528,6 +2044,15 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SendResponseFromFile.
+     *
+     * @param filename the argument of type {@code java.lang.String}
+     * @param offset the argument of type {@code long}
+     * @param length the argument of type {@code long}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.SendResponseFromFile" target="_top">.NET documentation</a>
+     */
     public void SendResponseFromFile(java.lang.String filename, long offset, long length) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1538,6 +2063,14 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SendResponseFromMemory.
+     *
+     * @param data the argument of type {@code byte[]}
+     * @param length the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.SendResponseFromMemory" target="_top">.NET documentation</a>
+     */
     public void SendResponseFromMemory(byte[] data, int length) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1548,6 +2081,14 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SendResponseFromMemory.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.SendResponseFromMemory" target="_top">.NET documentation</a>
+     */
     public void SendResponseFromMemory(JCORefOut dupParam0, int dupParam1) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1558,6 +2099,14 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SendStatus.
+     *
+     * @param statusCode the argument of type {@code int}
+     * @param statusDescription the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.SendStatus" target="_top">.NET documentation</a>
+     */
     public void SendStatus(int statusCode, java.lang.String statusDescription) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1568,6 +2117,14 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SendUnknownResponseHeader.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.SendUnknownResponseHeader" target="_top">.NET documentation</a>
+     */
     public void SendUnknownResponseHeader(java.lang.String name, java.lang.String value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1582,6 +2139,13 @@ public class HttpWorkerRequest extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SupportsAsyncFlush.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.SupportsAsyncFlush" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsAsyncFlush() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1596,6 +2160,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsAsyncRead.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.SupportsAsyncRead" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsAsyncRead() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1610,6 +2181,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequestTraceIdentifier.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.RequestTraceIdentifier" target="_top">.NET documentation</a>
+     */
     public Guid getRequestTraceIdentifier() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1625,6 +2203,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MachineConfigPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.MachineConfigPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMachineConfigPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1639,6 +2224,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MachineInstallDirectory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.MachineInstallDirectory" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMachineInstallDirectory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1653,6 +2245,13 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RootWebConfigPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpWorkerRequest.RootWebConfigPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRootWebConfigPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

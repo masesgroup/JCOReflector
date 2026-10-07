@@ -100,7 +100,10 @@ public class TreeNodeStyleCollection extends system.web.ui.StateManagedCollectio
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TreeNodeStyleCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,14 @@ public class TreeNodeStyleCollection extends system.web.ui.StateManagedCollectio
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param style the argument of type {@code TreeNodeStyle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TreeNodeStyleCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(TreeNodeStyle style) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +180,14 @@ public class TreeNodeStyleCollection extends system.web.ui.StateManagedCollectio
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param style the argument of type {@code TreeNodeStyle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TreeNodeStyleCollection.Add" target="_top">.NET documentation</a>
+     */
     public int Add(TreeNodeStyle style) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +228,14 @@ public class TreeNodeStyleCollection extends system.web.ui.StateManagedCollectio
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param style the argument of type {@code TreeNodeStyle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TreeNodeStyleCollection.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(TreeNodeStyle style) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +276,15 @@ public class TreeNodeStyleCollection extends system.web.ui.StateManagedCollectio
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param styleArray the argument of type {@code TreeNodeStyle[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TreeNodeStyleCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(TreeNodeStyle[] styleArray, int index) throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +295,14 @@ public class TreeNodeStyleCollection extends system.web.ui.StateManagedCollectio
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param style the argument of type {@code TreeNodeStyle}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TreeNodeStyleCollection.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(int index, TreeNodeStyle style) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +313,13 @@ public class TreeNodeStyleCollection extends system.web.ui.StateManagedCollectio
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param style the argument of type {@code TreeNodeStyle}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TreeNodeStyleCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(TreeNodeStyle style) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +330,13 @@ public class TreeNodeStyleCollection extends system.web.ui.StateManagedCollectio
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAt.
+     *
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TreeNodeStyleCollection.RemoveAt" target="_top">.NET documentation</a>
+     */
     public void RemoveAt(int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class AccessDataSource extends system.web.ui.webcontrols.SqlDataSource  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AccessDataSource(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class AccessDataSource extends system.web.ui.webcontrols.SqlDataSource  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.AccessDataSource.-ctor" target="_top">.NET documentation</a>
+     */
     public AccessDataSource() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,16 @@ public class AccessDataSource extends system.web.ui.webcontrols.SqlDataSource  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param dataFile the argument of type {@code java.lang.String}
+     * @param selectCommand the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.AccessDataSource.-ctor" target="_top">.NET documentation</a>
+     */
     public AccessDataSource(java.lang.String dataFile, java.lang.String selectCommand) throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +193,13 @@ public class AccessDataSource extends system.web.ui.webcontrols.SqlDataSource  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DataFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.AccessDataSource.DataFile" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDataFile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +214,13 @@ public class AccessDataSource extends system.web.ui.webcontrols.SqlDataSource  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataFile.
+     *
+     * @param DataFile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.AccessDataSource.DataFile" target="_top">.NET documentation</a>
+     */
     public void setDataFile(java.lang.String DataFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

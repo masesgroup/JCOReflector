@@ -100,7 +100,10 @@ public class HttpHeadersNonValidated extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HttpHeadersNonValidated(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,25 @@ public class HttpHeadersNonValidated extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param headerName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpHeadersNonValidated.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(java.lang.String headerName) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.ArgumentException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +191,27 @@ public class HttpHeadersNonValidated extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetValues.
+     *
+     * @param headerName the argument of type {@code java.lang.String}
+     * @param values the argument of type {@code JCORefOut<HeaderStringValues>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpHeadersNonValidated.TryGetValues" target="_top">.NET documentation</a>
+     */
     public boolean TryGetValues(java.lang.String headerName, JCORefOut<HeaderStringValues> values) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.ArgumentException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,8 +229,13 @@ public class HttpHeadersNonValidated extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIReadOnlyDictionary_2 method available in IReadOnlyDictionary_2 to obtain an object with an invocable method
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.IReadOnlyDictionary-2.ContainsKey" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean ContainsKey(java.lang.String key) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReadOnlyDictionary_2 to obtain the full interface.");
     }
@@ -195,8 +243,14 @@ public class HttpHeadersNonValidated extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIReadOnlyDictionary_2 method available in IReadOnlyDictionary_2 to obtain an object with an invocable method
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code JCORefOut<HeaderStringValues>}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.IReadOnlyDictionary-2.TryGetValue" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean TryGetValue(java.lang.String key, JCORefOut<HeaderStringValues> value) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReadOnlyDictionary_2 to obtain the full interface.");
     }
@@ -205,6 +259,13 @@ public class HttpHeadersNonValidated extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Count.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpHeadersNonValidated.Count" target="_top">.NET documentation</a>
+     */
     public int getCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

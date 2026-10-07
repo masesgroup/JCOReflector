@@ -100,7 +100,10 @@ public class Pick extends system.activities.NativeActivity  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Pick(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,13 @@ public class Pick extends system.activities.NativeActivity  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.Pick.-ctor" target="_top">.NET documentation</a>
+     */
     public Pick() throws Throwable, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +175,17 @@ public class Pick extends system.activities.NativeActivity  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Branches.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.Pick.Branches" target="_top">.NET documentation</a>
+     */
     public Collection_1 getBranches() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

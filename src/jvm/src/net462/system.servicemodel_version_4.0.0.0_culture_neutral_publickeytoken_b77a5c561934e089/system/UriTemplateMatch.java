@@ -102,7 +102,10 @@ public class UriTemplateMatch extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UriTemplateMatch(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class UriTemplateMatch extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.UriTemplateMatch.-ctor" target="_top">.NET documentation</a>
+     */
     public UriTemplateMatch() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +176,13 @@ public class UriTemplateMatch extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RelativePathSegments.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.UriTemplateMatch.RelativePathSegments" target="_top">.NET documentation</a>
+     */
     public Collection_1 getRelativePathSegments() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +198,14 @@ public class UriTemplateMatch extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WildcardPathSegments.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.UriTemplateMatch.WildcardPathSegments" target="_top">.NET documentation</a>
+     */
     public Collection_1 getWildcardPathSegments() throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +221,16 @@ public class UriTemplateMatch extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BoundVariables.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.UriTemplateMatch.BoundVariables" target="_top">.NET documentation</a>
+     */
     public NameValueCollection getBoundVariables() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +246,26 @@ public class UriTemplateMatch extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property QueryParameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.UriTemplateMatch.QueryParameters" target="_top">.NET documentation</a>
+     */
     public NameValueCollection getQueryParameters() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.UriFormatException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +281,13 @@ public class UriTemplateMatch extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Data.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.UriTemplateMatch.Data" target="_top">.NET documentation</a>
+     */
     public NetObject getData() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +303,13 @@ public class UriTemplateMatch extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Data.
+     *
+     * @param Data the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.UriTemplateMatch.Data" target="_top">.NET documentation</a>
+     */
     public void setData(NetObject Data) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +320,23 @@ public class UriTemplateMatch extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BaseUri.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.UriTemplateMatch.BaseUri" target="_top">.NET documentation</a>
+     */
     public Uri getBaseUri() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.OutOfMemoryException, system.UriFormatException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +352,13 @@ public class UriTemplateMatch extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BaseUri.
+     *
+     * @param BaseUri the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.UriTemplateMatch.BaseUri" target="_top">.NET documentation</a>
+     */
     public void setBaseUri(Uri BaseUri) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +369,13 @@ public class UriTemplateMatch extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequestUri.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.UriTemplateMatch.RequestUri" target="_top">.NET documentation</a>
+     */
     public Uri getRequestUri() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +391,13 @@ public class UriTemplateMatch extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RequestUri.
+     *
+     * @param RequestUri the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.UriTemplateMatch.RequestUri" target="_top">.NET documentation</a>
+     */
     public void setRequestUri(Uri RequestUri) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -302,6 +408,13 @@ public class UriTemplateMatch extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Template.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.UriTemplateMatch.Template" target="_top">.NET documentation</a>
+     */
     public UriTemplate getTemplate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -317,6 +430,13 @@ public class UriTemplateMatch extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Template.
+     *
+     * @param Template the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.UriTemplateMatch.Template" target="_top">.NET documentation</a>
+     */
     public void setTemplate(UriTemplate Template) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

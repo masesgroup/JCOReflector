@@ -103,7 +103,10 @@ public class DataBoundControlDesigner extends system.web.ui.design.webcontrols.B
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataBoundControlDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,12 @@ public class DataBoundControlDesigner extends system.web.ui.design.webcontrols.B
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebControls.DataBoundControlDesigner.-ctor" target="_top">.NET documentation</a>
+     */
     public DataBoundControlDesigner() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,8 +176,12 @@ public class DataBoundControlDesigner extends system.web.ui.design.webcontrols.B
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDataBindingSchemaProvider method available in IDataBindingSchemaProvider to obtain an object with an invocable method
+     *
+     * @param preferSilent the argument of type {@code boolean}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IDataBindingSchemaProvider.RefreshSchema" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void RefreshSchema(boolean preferSilent) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataBindingSchemaProvider to obtain the full interface.");
     }
@@ -176,8 +189,12 @@ public class DataBoundControlDesigner extends system.web.ui.design.webcontrols.B
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDataSourceProvider method available in IDataSourceProvider to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IDataSourceProvider.GetResolvedSelectedDataSource" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public IEnumerable GetResolvedSelectedDataSource() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataSourceProvider to obtain the full interface.");
     }
@@ -185,8 +202,12 @@ public class DataBoundControlDesigner extends system.web.ui.design.webcontrols.B
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDataSourceProvider method available in IDataSourceProvider to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IDataSourceProvider.GetSelectedDataSource" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public NetObject GetSelectedDataSource() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataSourceProvider to obtain the full interface.");
     }
@@ -195,6 +216,21 @@ public class DataBoundControlDesigner extends system.web.ui.design.webcontrols.B
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DataMember.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebControls.DataBoundControlDesigner.DataMember" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDataMember() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +245,27 @@ public class DataBoundControlDesigner extends system.web.ui.design.webcontrols.B
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataMember.
+     *
+     * @param DataMember the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebControls.DataBoundControlDesigner.DataMember" target="_top">.NET documentation</a>
+     */
     public void setDataMember(java.lang.String DataMember) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.OverflowException, system.PlatformNotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +276,21 @@ public class DataBoundControlDesigner extends system.web.ui.design.webcontrols.B
         }
     }
 
+    /**
+     * Gets the value of the .NET property DesignerView.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebControls.DataBoundControlDesigner.DesignerView" target="_top">.NET documentation</a>
+     */
     public DesignerDataSourceView getDesignerView() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +306,13 @@ public class DataBoundControlDesigner extends system.web.ui.design.webcontrols.B
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataSourceDesigner.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebControls.DataBoundControlDesigner.DataSourceDesigner" target="_top">.NET documentation</a>
+     */
     public IDataSourceDesigner getDataSourceDesigner() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

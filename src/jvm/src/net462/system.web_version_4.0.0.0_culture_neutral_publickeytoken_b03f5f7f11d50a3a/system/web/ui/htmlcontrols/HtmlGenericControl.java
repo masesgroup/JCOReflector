@@ -99,7 +99,10 @@ public class HtmlGenericControl extends system.web.ui.htmlcontrols.HtmlContainer
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HtmlGenericControl(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class HtmlGenericControl extends system.web.ui.htmlcontrols.HtmlContainer
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.HtmlControls.HtmlGenericControl.-ctor" target="_top">.NET documentation</a>
+     */
     public HtmlGenericControl() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,13 @@ public class HtmlGenericControl extends system.web.ui.htmlcontrols.HtmlContainer
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param tag the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.HtmlControls.HtmlGenericControl.-ctor" target="_top">.NET documentation</a>
+     */
     public HtmlGenericControl(java.lang.String tag) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +190,13 @@ public class HtmlGenericControl extends system.web.ui.htmlcontrols.HtmlContainer
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property TagName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.HtmlControls.HtmlGenericControl.TagName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTagName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +211,13 @@ public class HtmlGenericControl extends system.web.ui.htmlcontrols.HtmlContainer
         }
     }
 
+    /**
+     * Sets the value of the .NET property TagName.
+     *
+     * @param TagName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.HtmlControls.HtmlGenericControl.TagName" target="_top">.NET documentation</a>
+     */
     public void setTagName(java.lang.String TagName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

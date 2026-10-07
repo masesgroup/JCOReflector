@@ -102,7 +102,10 @@ public class FontStyle extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FontStyle(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,14 @@ public class FontStyle extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param obj the argument of type {@code FontStyle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FontStyle.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(FontStyle obj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,8 +185,14 @@ public class FontStyle extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIFormattable method available in IFormattable to obtain an object with an invocable method
+     *
+     * @param format the argument of type {@code java.lang.String}
+     * @param formatProvider the argument of type {@code IFormatProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IFormattable.ToString" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public java.lang.String ToString(java.lang.String format, IFormatProvider formatProvider) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
     }

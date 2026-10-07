@@ -99,7 +99,10 @@ public class DesignerConfigurationService extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DesignerConfigurationService(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class DesignerConfigurationService extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AnnotationEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DesignerConfigurationService.AnnotationEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getAnnotationEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +182,20 @@ public class DesignerConfigurationService extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AnnotationEnabled.
+     *
+     * @param AnnotationEnabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DesignerConfigurationService.AnnotationEnabled" target="_top">.NET documentation</a>
+     */
     public void setAnnotationEnabled(boolean AnnotationEnabled) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +206,13 @@ public class DesignerConfigurationService extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AutoConnectEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DesignerConfigurationService.AutoConnectEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getAutoConnectEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +227,13 @@ public class DesignerConfigurationService extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AutoConnectEnabled.
+     *
+     * @param AutoConnectEnabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DesignerConfigurationService.AutoConnectEnabled" target="_top">.NET documentation</a>
+     */
     public void setAutoConnectEnabled(boolean AutoConnectEnabled) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +244,13 @@ public class DesignerConfigurationService extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AutoSplitEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DesignerConfigurationService.AutoSplitEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getAutoSplitEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +265,13 @@ public class DesignerConfigurationService extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AutoSplitEnabled.
+     *
+     * @param AutoSplitEnabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DesignerConfigurationService.AutoSplitEnabled" target="_top">.NET documentation</a>
+     */
     public void setAutoSplitEnabled(boolean AutoSplitEnabled) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +282,13 @@ public class DesignerConfigurationService extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AutoSurroundWithSequenceEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DesignerConfigurationService.AutoSurroundWithSequenceEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getAutoSurroundWithSequenceEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +303,13 @@ public class DesignerConfigurationService extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AutoSurroundWithSequenceEnabled.
+     *
+     * @param AutoSurroundWithSequenceEnabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DesignerConfigurationService.AutoSurroundWithSequenceEnabled" target="_top">.NET documentation</a>
+     */
     public void setAutoSurroundWithSequenceEnabled(boolean AutoSurroundWithSequenceEnabled) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +320,13 @@ public class DesignerConfigurationService extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BackgroundValidationEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DesignerConfigurationService.BackgroundValidationEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getBackgroundValidationEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +341,20 @@ public class DesignerConfigurationService extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BackgroundValidationEnabled.
+     *
+     * @param BackgroundValidationEnabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DesignerConfigurationService.BackgroundValidationEnabled" target="_top">.NET documentation</a>
+     */
     public void setBackgroundValidationEnabled(boolean BackgroundValidationEnabled) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +365,13 @@ public class DesignerConfigurationService extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LoadingFromUntrustedSourceEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DesignerConfigurationService.LoadingFromUntrustedSourceEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getLoadingFromUntrustedSourceEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +386,20 @@ public class DesignerConfigurationService extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LoadingFromUntrustedSourceEnabled.
+     *
+     * @param LoadingFromUntrustedSourceEnabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DesignerConfigurationService.LoadingFromUntrustedSourceEnabled" target="_top">.NET documentation</a>
+     */
     public void setLoadingFromUntrustedSourceEnabled(boolean LoadingFromUntrustedSourceEnabled) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -302,6 +410,13 @@ public class DesignerConfigurationService extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MultipleItemsContextMenuEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DesignerConfigurationService.MultipleItemsContextMenuEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getMultipleItemsContextMenuEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -316,6 +431,20 @@ public class DesignerConfigurationService extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MultipleItemsContextMenuEnabled.
+     *
+     * @param MultipleItemsContextMenuEnabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DesignerConfigurationService.MultipleItemsContextMenuEnabled" target="_top">.NET documentation</a>
+     */
     public void setMultipleItemsContextMenuEnabled(boolean MultipleItemsContextMenuEnabled) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -326,6 +455,13 @@ public class DesignerConfigurationService extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MultipleItemsDragDropEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DesignerConfigurationService.MultipleItemsDragDropEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getMultipleItemsDragDropEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -340,6 +476,20 @@ public class DesignerConfigurationService extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MultipleItemsDragDropEnabled.
+     *
+     * @param MultipleItemsDragDropEnabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DesignerConfigurationService.MultipleItemsDragDropEnabled" target="_top">.NET documentation</a>
+     */
     public void setMultipleItemsDragDropEnabled(boolean MultipleItemsDragDropEnabled) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -350,6 +500,13 @@ public class DesignerConfigurationService extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NamespaceConversionEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DesignerConfigurationService.NamespaceConversionEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getNamespaceConversionEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -364,6 +521,20 @@ public class DesignerConfigurationService extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NamespaceConversionEnabled.
+     *
+     * @param NamespaceConversionEnabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DesignerConfigurationService.NamespaceConversionEnabled" target="_top">.NET documentation</a>
+     */
     public void setNamespaceConversionEnabled(boolean NamespaceConversionEnabled) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -374,6 +545,13 @@ public class DesignerConfigurationService extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PanModeEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DesignerConfigurationService.PanModeEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getPanModeEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -388,6 +566,20 @@ public class DesignerConfigurationService extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PanModeEnabled.
+     *
+     * @param PanModeEnabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DesignerConfigurationService.PanModeEnabled" target="_top">.NET documentation</a>
+     */
     public void setPanModeEnabled(boolean PanModeEnabled) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -398,6 +590,13 @@ public class DesignerConfigurationService extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RubberBandSelectionEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DesignerConfigurationService.RubberBandSelectionEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getRubberBandSelectionEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -412,6 +611,20 @@ public class DesignerConfigurationService extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RubberBandSelectionEnabled.
+     *
+     * @param RubberBandSelectionEnabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DesignerConfigurationService.RubberBandSelectionEnabled" target="_top">.NET documentation</a>
+     */
     public void setRubberBandSelectionEnabled(boolean RubberBandSelectionEnabled) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -422,6 +635,13 @@ public class DesignerConfigurationService extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetFrameworkName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName" target="_top">.NET documentation</a>
+     */
     public FrameworkName getTargetFrameworkName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -437,6 +657,20 @@ public class DesignerConfigurationService extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TargetFrameworkName.
+     *
+     * @param TargetFrameworkName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName" target="_top">.NET documentation</a>
+     */
     public void setTargetFrameworkName(FrameworkName TargetFrameworkName) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

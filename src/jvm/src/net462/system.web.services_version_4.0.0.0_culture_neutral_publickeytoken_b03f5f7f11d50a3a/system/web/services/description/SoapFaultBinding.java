@@ -100,7 +100,10 @@ public class SoapFaultBinding extends system.web.services.description.ServiceDes
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SoapFaultBinding(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class SoapFaultBinding extends system.web.services.description.ServiceDes
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapFaultBinding.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapFaultBinding() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class SoapFaultBinding extends system.web.services.description.ServiceDes
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Encoding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapFaultBinding.Encoding" target="_top">.NET documentation</a>
+     */
     public java.lang.String getEncoding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +195,13 @@ public class SoapFaultBinding extends system.web.services.description.ServiceDes
         }
     }
 
+    /**
+     * Sets the value of the .NET property Encoding.
+     *
+     * @param Encoding the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapFaultBinding.Encoding" target="_top">.NET documentation</a>
+     */
     public void setEncoding(java.lang.String Encoding) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +212,13 @@ public class SoapFaultBinding extends system.web.services.description.ServiceDes
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapFaultBinding.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +233,13 @@ public class SoapFaultBinding extends system.web.services.description.ServiceDes
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapFaultBinding.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +250,13 @@ public class SoapFaultBinding extends system.web.services.description.ServiceDes
         }
     }
 
+    /**
+     * Gets the value of the .NET property Namespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapFaultBinding.Namespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +271,13 @@ public class SoapFaultBinding extends system.web.services.description.ServiceDes
         }
     }
 
+    /**
+     * Sets the value of the .NET property Namespace.
+     *
+     * @param Namespace the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapFaultBinding.Namespace" target="_top">.NET documentation</a>
+     */
     public void setNamespace(java.lang.String Namespace) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +288,13 @@ public class SoapFaultBinding extends system.web.services.description.ServiceDes
         }
     }
 
+    /**
+     * Gets the value of the .NET property Use.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapFaultBinding.Use" target="_top">.NET documentation</a>
+     */
     public SoapBindingUse getUse() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +310,13 @@ public class SoapFaultBinding extends system.web.services.description.ServiceDes
         }
     }
 
+    /**
+     * Sets the value of the .NET property Use.
+     *
+     * @param Use the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapFaultBinding.Use" target="_top">.NET documentation</a>
+     */
     public void setUse(SoapBindingUse Use) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

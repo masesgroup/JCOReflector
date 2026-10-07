@@ -129,7 +129,10 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ContentElement(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -176,6 +179,24 @@ public class ContentElement extends system.windows.DependencyObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.-ctor" target="_top">.NET documentation</a>
+     */
     public ContentElement() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -190,6 +211,23 @@ public class ContentElement extends system.windows.DependencyObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CaptureMouse.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.CaptureMouse" target="_top">.NET documentation</a>
+     */
     public boolean CaptureMouse() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ArgumentNullException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +242,20 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CaptureStylus.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.CaptureStylus" target="_top">.NET documentation</a>
+     */
     public boolean CaptureStylus() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +270,28 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CaptureTouch.
+     *
+     * @param touchDevice the argument of type {@code TouchDevice}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.CaptureTouch" target="_top">.NET documentation</a>
+     */
     public boolean CaptureTouch(TouchDevice touchDevice) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +306,23 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Focus.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.Focus" target="_top">.NET documentation</a>
+     */
     public boolean Focus() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ArgumentNullException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +337,14 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MoveFocus.
+     *
+     * @param request the argument of type {@code TraversalRequest}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.MoveFocus" target="_top">.NET documentation</a>
+     */
     public boolean MoveFocus(TraversalRequest request) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +359,28 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReleaseTouchCapture.
+     *
+     * @param touchDevice the argument of type {@code TouchDevice}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.ReleaseTouchCapture" target="_top">.NET documentation</a>
+     */
     public boolean ReleaseTouchCapture(TouchDevice touchDevice) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +395,19 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ShouldSerializeCommandBindings.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.ShouldSerializeCommandBindings" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeCommandBindings() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +422,19 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ShouldSerializeInputBindings.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.ShouldSerializeInputBindings" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeInputBindings() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -302,6 +449,26 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetAnimationBaseValue.
+     *
+     * @param dp the argument of type {@code DependencyProperty}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.GetAnimationBaseValue" target="_top">.NET documentation</a>
+     */
     public NetObject GetAnimationBaseValue(DependencyProperty dp) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.security.SecurityException, system.io.IOException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -317,6 +484,14 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PredictFocus.
+     *
+     * @param direction the argument of type {@code FocusNavigationDirection}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.PredictFocus" target="_top">.NET documentation</a>
+     */
     public DependencyObject PredictFocus(FocusNavigationDirection direction) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -332,6 +507,24 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddToEventRoute.
+     *
+     * @param route the argument of type {@code EventRoute}
+     * @param e the argument of type {@code RoutedEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.AddToEventRoute" target="_top">.NET documentation</a>
+     */
     public void AddToEventRoute(EventRoute route, RoutedEventArgs e) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -342,6 +535,27 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ApplyAnimationClock.
+     *
+     * @param dp the argument of type {@code DependencyProperty}
+     * @param clock the argument of type {@code AnimationClock}
+     * @param handoffBehavior the argument of type {@code HandoffBehavior}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.windows.media.animation.AnimationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.ApplyAnimationClock" target="_top">.NET documentation</a>
+     */
     public void ApplyAnimationClock(DependencyProperty dp, AnimationClock clock, HandoffBehavior handoffBehavior) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.MulticastNotSupportedException, system.windows.media.animation.AnimationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -352,6 +566,23 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ApplyAnimationClock.
+     *
+     * @param dp the argument of type {@code DependencyProperty}
+     * @param clock the argument of type {@code AnimationClock}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.ApplyAnimationClock" target="_top">.NET documentation</a>
+     */
     public void ApplyAnimationClock(DependencyProperty dp, AnimationClock clock) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -362,6 +593,28 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BeginAnimation.
+     *
+     * @param dp the argument of type {@code DependencyProperty}
+     * @param animation the argument of type {@code AnimationTimeline}
+     * @param handoffBehavior the argument of type {@code HandoffBehavior}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.windows.media.animation.AnimationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.BeginAnimation" target="_top">.NET documentation</a>
+     */
     public void BeginAnimation(DependencyProperty dp, AnimationTimeline animation, HandoffBehavior handoffBehavior) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.windows.media.animation.AnimationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -372,6 +625,24 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BeginAnimation.
+     *
+     * @param dp the argument of type {@code DependencyProperty}
+     * @param animation the argument of type {@code AnimationTimeline}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.windows.media.animation.AnimationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.BeginAnimation" target="_top">.NET documentation</a>
+     */
     public void BeginAnimation(DependencyProperty dp, AnimationTimeline animation) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.MulticastNotSupportedException, system.windows.media.animation.AnimationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -382,6 +653,25 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RaiseEvent.
+     *
+     * @param e the argument of type {@code RoutedEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.RaiseEvent" target="_top">.NET documentation</a>
+     */
     public void RaiseEvent(RoutedEventArgs e) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -392,6 +682,20 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReleaseAllTouchCaptures.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.ReleaseAllTouchCaptures" target="_top">.NET documentation</a>
+     */
     public void ReleaseAllTouchCaptures() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -402,6 +706,22 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReleaseMouseCapture.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.ReleaseMouseCapture" target="_top">.NET documentation</a>
+     */
     public void ReleaseMouseCapture() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ArgumentNullException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -412,6 +732,19 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReleaseStylusCapture.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.ReleaseStylusCapture" target="_top">.NET documentation</a>
+     */
     public void ReleaseStylusCapture() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -426,6 +759,21 @@ public class ContentElement extends system.windows.DependencyObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowDrop.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.AllowDrop" target="_top">.NET documentation</a>
+     */
     public boolean getAllowDrop() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -440,6 +788,22 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowDrop.
+     *
+     * @param AllowDrop the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.AllowDrop" target="_top">.NET documentation</a>
+     */
     public void setAllowDrop(boolean AllowDrop) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -450,6 +814,21 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AreAnyTouchesCaptured.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.AreAnyTouchesCaptured" target="_top">.NET documentation</a>
+     */
     public boolean getAreAnyTouchesCaptured() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -464,6 +843,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AreAnyTouchesCapturedWithin.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.AreAnyTouchesCapturedWithin" target="_top">.NET documentation</a>
+     */
     public boolean getAreAnyTouchesCapturedWithin() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -478,6 +864,21 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AreAnyTouchesDirectlyOver.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.AreAnyTouchesDirectlyOver" target="_top">.NET documentation</a>
+     */
     public boolean getAreAnyTouchesDirectlyOver() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -492,6 +893,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AreAnyTouchesOver.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.AreAnyTouchesOver" target="_top">.NET documentation</a>
+     */
     public boolean getAreAnyTouchesOver() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -506,6 +914,21 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Focusable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.Focusable" target="_top">.NET documentation</a>
+     */
     public boolean getFocusable() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -520,6 +943,22 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Focusable.
+     *
+     * @param Focusable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.Focusable" target="_top">.NET documentation</a>
+     */
     public void setFocusable(boolean Focusable) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -530,6 +969,18 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HasAnimatedProperties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.HasAnimatedProperties" target="_top">.NET documentation</a>
+     */
     public boolean getHasAnimatedProperties() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -544,6 +995,21 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.IsEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getIsEnabled() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -558,6 +1024,22 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsEnabled.
+     *
+     * @param IsEnabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.IsEnabled" target="_top">.NET documentation</a>
+     */
     public void setIsEnabled(boolean IsEnabled) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -568,6 +1050,21 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsFocused.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.IsFocused" target="_top">.NET documentation</a>
+     */
     public boolean getIsFocused() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -582,6 +1079,21 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsInputMethodEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.IsInputMethodEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getIsInputMethodEnabled() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -596,6 +1108,17 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsKeyboardFocused.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.IsKeyboardFocused" target="_top">.NET documentation</a>
+     */
     public boolean getIsKeyboardFocused() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -610,6 +1133,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsKeyboardFocusWithin.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.IsKeyboardFocusWithin" target="_top">.NET documentation</a>
+     */
     public boolean getIsKeyboardFocusWithin() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -624,6 +1154,21 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsMouseCaptured.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.IsMouseCaptured" target="_top">.NET documentation</a>
+     */
     public boolean getIsMouseCaptured() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -638,6 +1183,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsMouseCaptureWithin.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.IsMouseCaptureWithin" target="_top">.NET documentation</a>
+     */
     public boolean getIsMouseCaptureWithin() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -652,6 +1204,17 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsMouseDirectlyOver.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.IsMouseDirectlyOver" target="_top">.NET documentation</a>
+     */
     public boolean getIsMouseDirectlyOver() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -666,6 +1229,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsMouseOver.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.IsMouseOver" target="_top">.NET documentation</a>
+     */
     public boolean getIsMouseOver() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -680,6 +1250,21 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsStylusCaptured.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.IsStylusCaptured" target="_top">.NET documentation</a>
+     */
     public boolean getIsStylusCaptured() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -694,6 +1279,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsStylusCaptureWithin.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.IsStylusCaptureWithin" target="_top">.NET documentation</a>
+     */
     public boolean getIsStylusCaptureWithin() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -708,6 +1300,21 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsStylusDirectlyOver.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.IsStylusDirectlyOver" target="_top">.NET documentation</a>
+     */
     public boolean getIsStylusDirectlyOver() throws Throwable, system.ArgumentException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -722,6 +1329,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsStylusOver.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.IsStylusOver" target="_top">.NET documentation</a>
+     */
     public boolean getIsStylusOver() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -736,6 +1350,21 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TouchesCaptured.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.TouchesCaptured" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 getTouchesCaptured() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -751,6 +1380,21 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TouchesCapturedWithin.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.TouchesCapturedWithin" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 getTouchesCapturedWithin() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -766,6 +1410,21 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TouchesDirectlyOver.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.TouchesDirectlyOver" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 getTouchesDirectlyOver() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -781,6 +1440,21 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TouchesOver.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.TouchesOver" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 getTouchesOver() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -796,6 +1470,24 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CommandBindings.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.CommandBindings" target="_top">.NET documentation</a>
+     */
     public CommandBindingCollection getCommandBindings() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -811,6 +1503,24 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InputBindings.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ContentElement.InputBindings" target="_top">.NET documentation</a>
+     */
     public InputBindingCollection getInputBindings() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -831,6 +1541,13 @@ public class ContentElement extends system.windows.DependencyObject  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addFocusableChanged.
+     *
+     * @param handler the argument of type {@code DependencyPropertyChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addFocusableChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -841,6 +1558,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeFocusableChanged.
+     *
+     * @param handler the argument of type {@code DependencyPropertyChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeFocusableChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -851,6 +1575,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addIsEnabledChanged.
+     *
+     * @param handler the argument of type {@code DependencyPropertyChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addIsEnabledChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -861,6 +1592,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeIsEnabledChanged.
+     *
+     * @param handler the argument of type {@code DependencyPropertyChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeIsEnabledChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -871,6 +1609,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addIsKeyboardFocusedChanged.
+     *
+     * @param handler the argument of type {@code DependencyPropertyChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addIsKeyboardFocusedChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -881,6 +1626,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeIsKeyboardFocusedChanged.
+     *
+     * @param handler the argument of type {@code DependencyPropertyChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeIsKeyboardFocusedChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -891,6 +1643,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addIsKeyboardFocusWithinChanged.
+     *
+     * @param handler the argument of type {@code DependencyPropertyChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addIsKeyboardFocusWithinChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -901,6 +1660,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeIsKeyboardFocusWithinChanged.
+     *
+     * @param handler the argument of type {@code DependencyPropertyChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeIsKeyboardFocusWithinChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -911,6 +1677,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addIsMouseCapturedChanged.
+     *
+     * @param handler the argument of type {@code DependencyPropertyChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addIsMouseCapturedChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -921,6 +1694,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeIsMouseCapturedChanged.
+     *
+     * @param handler the argument of type {@code DependencyPropertyChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeIsMouseCapturedChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -931,6 +1711,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addIsMouseCaptureWithinChanged.
+     *
+     * @param handler the argument of type {@code DependencyPropertyChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addIsMouseCaptureWithinChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -941,6 +1728,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeIsMouseCaptureWithinChanged.
+     *
+     * @param handler the argument of type {@code DependencyPropertyChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeIsMouseCaptureWithinChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -951,6 +1745,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addIsMouseDirectlyOverChanged.
+     *
+     * @param handler the argument of type {@code DependencyPropertyChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addIsMouseDirectlyOverChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -961,6 +1762,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeIsMouseDirectlyOverChanged.
+     *
+     * @param handler the argument of type {@code DependencyPropertyChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeIsMouseDirectlyOverChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -971,6 +1779,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addIsStylusCapturedChanged.
+     *
+     * @param handler the argument of type {@code DependencyPropertyChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addIsStylusCapturedChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -981,6 +1796,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeIsStylusCapturedChanged.
+     *
+     * @param handler the argument of type {@code DependencyPropertyChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeIsStylusCapturedChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -991,6 +1813,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addIsStylusCaptureWithinChanged.
+     *
+     * @param handler the argument of type {@code DependencyPropertyChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addIsStylusCaptureWithinChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1001,6 +1830,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeIsStylusCaptureWithinChanged.
+     *
+     * @param handler the argument of type {@code DependencyPropertyChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeIsStylusCaptureWithinChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1011,6 +1847,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addIsStylusDirectlyOverChanged.
+     *
+     * @param handler the argument of type {@code DependencyPropertyChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addIsStylusDirectlyOverChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1021,6 +1864,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeIsStylusDirectlyOverChanged.
+     *
+     * @param handler the argument of type {@code DependencyPropertyChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeIsStylusDirectlyOverChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1031,6 +1881,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addDragEnter.
+     *
+     * @param handler the argument of type {@code DragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addDragEnter(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1041,6 +1898,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeDragEnter.
+     *
+     * @param handler the argument of type {@code DragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeDragEnter(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1051,6 +1915,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addDragLeave.
+     *
+     * @param handler the argument of type {@code DragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addDragLeave(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1061,6 +1932,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeDragLeave.
+     *
+     * @param handler the argument of type {@code DragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeDragLeave(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1071,6 +1949,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addDragOver.
+     *
+     * @param handler the argument of type {@code DragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addDragOver(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1081,6 +1966,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeDragOver.
+     *
+     * @param handler the argument of type {@code DragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeDragOver(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1091,6 +1983,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addDrop.
+     *
+     * @param handler the argument of type {@code DragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addDrop(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1101,6 +2000,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeDrop.
+     *
+     * @param handler the argument of type {@code DragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeDrop(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1111,6 +2017,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewDragEnter.
+     *
+     * @param handler the argument of type {@code DragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewDragEnter(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1121,6 +2034,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewDragEnter.
+     *
+     * @param handler the argument of type {@code DragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewDragEnter(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1131,6 +2051,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewDragLeave.
+     *
+     * @param handler the argument of type {@code DragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewDragLeave(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1141,6 +2068,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewDragLeave.
+     *
+     * @param handler the argument of type {@code DragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewDragLeave(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1151,6 +2085,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewDragOver.
+     *
+     * @param handler the argument of type {@code DragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewDragOver(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1161,6 +2102,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewDragOver.
+     *
+     * @param handler the argument of type {@code DragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewDragOver(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1171,6 +2119,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewDrop.
+     *
+     * @param handler the argument of type {@code DragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewDrop(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1181,6 +2136,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewDrop.
+     *
+     * @param handler the argument of type {@code DragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewDrop(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1191,6 +2153,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addGiveFeedback.
+     *
+     * @param handler the argument of type {@code GiveFeedbackEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addGiveFeedback(GiveFeedbackEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1201,6 +2170,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeGiveFeedback.
+     *
+     * @param handler the argument of type {@code GiveFeedbackEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeGiveFeedback(GiveFeedbackEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1211,6 +2187,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewGiveFeedback.
+     *
+     * @param handler the argument of type {@code GiveFeedbackEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewGiveFeedback(GiveFeedbackEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1221,6 +2204,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewGiveFeedback.
+     *
+     * @param handler the argument of type {@code GiveFeedbackEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewGiveFeedback(GiveFeedbackEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1231,6 +2221,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addGotKeyboardFocus.
+     *
+     * @param handler the argument of type {@code KeyboardFocusChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addGotKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1241,6 +2238,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeGotKeyboardFocus.
+     *
+     * @param handler the argument of type {@code KeyboardFocusChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeGotKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1251,6 +2255,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addLostKeyboardFocus.
+     *
+     * @param handler the argument of type {@code KeyboardFocusChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addLostKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1261,6 +2272,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeLostKeyboardFocus.
+     *
+     * @param handler the argument of type {@code KeyboardFocusChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeLostKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1271,6 +2289,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewGotKeyboardFocus.
+     *
+     * @param handler the argument of type {@code KeyboardFocusChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewGotKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1281,6 +2306,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewGotKeyboardFocus.
+     *
+     * @param handler the argument of type {@code KeyboardFocusChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewGotKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1291,6 +2323,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewLostKeyboardFocus.
+     *
+     * @param handler the argument of type {@code KeyboardFocusChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewLostKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1301,6 +2340,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewLostKeyboardFocus.
+     *
+     * @param handler the argument of type {@code KeyboardFocusChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewLostKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1311,6 +2357,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addKeyDown.
+     *
+     * @param handler the argument of type {@code KeyEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addKeyDown(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1321,6 +2374,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeKeyDown.
+     *
+     * @param handler the argument of type {@code KeyEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeKeyDown(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1331,6 +2391,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addKeyUp.
+     *
+     * @param handler the argument of type {@code KeyEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addKeyUp(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1341,6 +2408,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeKeyUp.
+     *
+     * @param handler the argument of type {@code KeyEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeKeyUp(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1351,6 +2425,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewKeyDown.
+     *
+     * @param handler the argument of type {@code KeyEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewKeyDown(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1361,6 +2442,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewKeyDown.
+     *
+     * @param handler the argument of type {@code KeyEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewKeyDown(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1371,6 +2459,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewKeyUp.
+     *
+     * @param handler the argument of type {@code KeyEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewKeyUp(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1381,6 +2476,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewKeyUp.
+     *
+     * @param handler the argument of type {@code KeyEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewKeyUp(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1391,6 +2493,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addMouseDown.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addMouseDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1401,6 +2510,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeMouseDown.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeMouseDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1411,6 +2527,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addMouseLeftButtonDown.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addMouseLeftButtonDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1421,6 +2544,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeMouseLeftButtonDown.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeMouseLeftButtonDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1431,6 +2561,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addMouseLeftButtonUp.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addMouseLeftButtonUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1441,6 +2578,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeMouseLeftButtonUp.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeMouseLeftButtonUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1451,6 +2595,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addMouseRightButtonDown.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addMouseRightButtonDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1461,6 +2612,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeMouseRightButtonDown.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeMouseRightButtonDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1471,6 +2629,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addMouseRightButtonUp.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addMouseRightButtonUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1481,6 +2646,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeMouseRightButtonUp.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeMouseRightButtonUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1491,6 +2663,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addMouseUp.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addMouseUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1501,6 +2680,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeMouseUp.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeMouseUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1511,6 +2697,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewMouseDown.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewMouseDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1521,6 +2714,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewMouseDown.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewMouseDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1531,6 +2731,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewMouseLeftButtonDown.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewMouseLeftButtonDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1541,6 +2748,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewMouseLeftButtonDown.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewMouseLeftButtonDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1551,6 +2765,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewMouseLeftButtonUp.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewMouseLeftButtonUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1561,6 +2782,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewMouseLeftButtonUp.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewMouseLeftButtonUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1571,6 +2799,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewMouseRightButtonDown.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewMouseRightButtonDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1581,6 +2816,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewMouseRightButtonDown.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewMouseRightButtonDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1591,6 +2833,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewMouseRightButtonUp.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewMouseRightButtonUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1601,6 +2850,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewMouseRightButtonUp.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewMouseRightButtonUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1611,6 +2867,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewMouseUp.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewMouseUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1621,6 +2884,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewMouseUp.
+     *
+     * @param handler the argument of type {@code MouseButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewMouseUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1631,6 +2901,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addGotMouseCapture.
+     *
+     * @param handler the argument of type {@code MouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addGotMouseCapture(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1641,6 +2918,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeGotMouseCapture.
+     *
+     * @param handler the argument of type {@code MouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeGotMouseCapture(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1651,6 +2935,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addLostMouseCapture.
+     *
+     * @param handler the argument of type {@code MouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addLostMouseCapture(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1661,6 +2952,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeLostMouseCapture.
+     *
+     * @param handler the argument of type {@code MouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeLostMouseCapture(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1671,6 +2969,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addMouseEnter.
+     *
+     * @param handler the argument of type {@code MouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addMouseEnter(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1681,6 +2986,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeMouseEnter.
+     *
+     * @param handler the argument of type {@code MouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeMouseEnter(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1691,6 +3003,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addMouseLeave.
+     *
+     * @param handler the argument of type {@code MouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addMouseLeave(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1701,6 +3020,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeMouseLeave.
+     *
+     * @param handler the argument of type {@code MouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeMouseLeave(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1711,6 +3037,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addMouseMove.
+     *
+     * @param handler the argument of type {@code MouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addMouseMove(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1721,6 +3054,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeMouseMove.
+     *
+     * @param handler the argument of type {@code MouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeMouseMove(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1731,6 +3071,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewMouseMove.
+     *
+     * @param handler the argument of type {@code MouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewMouseMove(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1741,6 +3088,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewMouseMove.
+     *
+     * @param handler the argument of type {@code MouseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewMouseMove(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1751,6 +3105,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addMouseWheel.
+     *
+     * @param handler the argument of type {@code MouseWheelEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addMouseWheel(MouseWheelEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1761,6 +3122,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeMouseWheel.
+     *
+     * @param handler the argument of type {@code MouseWheelEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeMouseWheel(MouseWheelEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1771,6 +3139,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewMouseWheel.
+     *
+     * @param handler the argument of type {@code MouseWheelEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewMouseWheel(MouseWheelEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1781,6 +3156,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewMouseWheel.
+     *
+     * @param handler the argument of type {@code MouseWheelEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewMouseWheel(MouseWheelEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1791,6 +3173,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addQueryCursor.
+     *
+     * @param handler the argument of type {@code QueryCursorEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addQueryCursor(QueryCursorEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1801,6 +3190,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeQueryCursor.
+     *
+     * @param handler the argument of type {@code QueryCursorEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeQueryCursor(QueryCursorEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1811,6 +3207,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewStylusButtonDown.
+     *
+     * @param handler the argument of type {@code StylusButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewStylusButtonDown(StylusButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1821,6 +3224,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewStylusButtonDown.
+     *
+     * @param handler the argument of type {@code StylusButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewStylusButtonDown(StylusButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1831,6 +3241,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewStylusButtonUp.
+     *
+     * @param handler the argument of type {@code StylusButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewStylusButtonUp(StylusButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1841,6 +3258,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewStylusButtonUp.
+     *
+     * @param handler the argument of type {@code StylusButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewStylusButtonUp(StylusButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1851,6 +3275,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addStylusButtonDown.
+     *
+     * @param handler the argument of type {@code StylusButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addStylusButtonDown(StylusButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1861,6 +3292,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeStylusButtonDown.
+     *
+     * @param handler the argument of type {@code StylusButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeStylusButtonDown(StylusButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1871,6 +3309,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addStylusButtonUp.
+     *
+     * @param handler the argument of type {@code StylusButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addStylusButtonUp(StylusButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1881,6 +3326,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeStylusButtonUp.
+     *
+     * @param handler the argument of type {@code StylusButtonEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeStylusButtonUp(StylusButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1891,6 +3343,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewStylusDown.
+     *
+     * @param handler the argument of type {@code StylusDownEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewStylusDown(StylusDownEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1901,6 +3360,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewStylusDown.
+     *
+     * @param handler the argument of type {@code StylusDownEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewStylusDown(StylusDownEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1911,6 +3377,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addStylusDown.
+     *
+     * @param handler the argument of type {@code StylusDownEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addStylusDown(StylusDownEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1921,6 +3394,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeStylusDown.
+     *
+     * @param handler the argument of type {@code StylusDownEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeStylusDown(StylusDownEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1931,6 +3411,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addGotStylusCapture.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addGotStylusCapture(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1941,6 +3428,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeGotStylusCapture.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeGotStylusCapture(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1951,6 +3445,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addLostStylusCapture.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addLostStylusCapture(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1961,6 +3462,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeLostStylusCapture.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeLostStylusCapture(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1971,6 +3479,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewStylusInAirMove.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewStylusInAirMove(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1981,6 +3496,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewStylusInAirMove.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewStylusInAirMove(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1991,6 +3513,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewStylusInRange.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewStylusInRange(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2001,6 +3530,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewStylusInRange.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewStylusInRange(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2011,6 +3547,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewStylusMove.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewStylusMove(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2021,6 +3564,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewStylusMove.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewStylusMove(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2031,6 +3581,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewStylusOutOfRange.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewStylusOutOfRange(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2041,6 +3598,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewStylusOutOfRange.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewStylusOutOfRange(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2051,6 +3615,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewStylusUp.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewStylusUp(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2061,6 +3632,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewStylusUp.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewStylusUp(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2071,6 +3649,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addStylusEnter.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addStylusEnter(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2081,6 +3666,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeStylusEnter.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeStylusEnter(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2091,6 +3683,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addStylusInAirMove.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addStylusInAirMove(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2101,6 +3700,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeStylusInAirMove.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeStylusInAirMove(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2111,6 +3717,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addStylusInRange.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addStylusInRange(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2121,6 +3734,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeStylusInRange.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeStylusInRange(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2131,6 +3751,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addStylusLeave.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addStylusLeave(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2141,6 +3768,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeStylusLeave.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeStylusLeave(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2151,6 +3785,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addStylusMove.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addStylusMove(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2161,6 +3802,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeStylusMove.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeStylusMove(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2171,6 +3819,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addStylusOutOfRange.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addStylusOutOfRange(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2181,6 +3836,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeStylusOutOfRange.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeStylusOutOfRange(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2191,6 +3853,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addStylusUp.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addStylusUp(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2201,6 +3870,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeStylusUp.
+     *
+     * @param handler the argument of type {@code StylusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeStylusUp(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2211,6 +3887,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewStylusSystemGesture.
+     *
+     * @param handler the argument of type {@code StylusSystemGestureEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewStylusSystemGesture(StylusSystemGestureEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2221,6 +3904,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewStylusSystemGesture.
+     *
+     * @param handler the argument of type {@code StylusSystemGestureEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewStylusSystemGesture(StylusSystemGestureEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2231,6 +3921,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addStylusSystemGesture.
+     *
+     * @param handler the argument of type {@code StylusSystemGestureEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addStylusSystemGesture(StylusSystemGestureEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2241,6 +3938,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeStylusSystemGesture.
+     *
+     * @param handler the argument of type {@code StylusSystemGestureEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeStylusSystemGesture(StylusSystemGestureEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2251,6 +3955,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewTextInput.
+     *
+     * @param handler the argument of type {@code TextCompositionEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewTextInput(TextCompositionEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2261,6 +3972,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewTextInput.
+     *
+     * @param handler the argument of type {@code TextCompositionEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewTextInput(TextCompositionEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2271,6 +3989,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addTextInput.
+     *
+     * @param handler the argument of type {@code TextCompositionEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addTextInput(TextCompositionEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2281,6 +4006,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeTextInput.
+     *
+     * @param handler the argument of type {@code TextCompositionEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeTextInput(TextCompositionEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2291,6 +4023,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addPreviewQueryContinueDrag.
+     *
+     * @param handler the argument of type {@code QueryContinueDragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreviewQueryContinueDrag(QueryContinueDragEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2301,6 +4040,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePreviewQueryContinueDrag.
+     *
+     * @param handler the argument of type {@code QueryContinueDragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreviewQueryContinueDrag(QueryContinueDragEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2311,6 +4057,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addQueryContinueDrag.
+     *
+     * @param handler the argument of type {@code QueryContinueDragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addQueryContinueDrag(QueryContinueDragEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2321,6 +4074,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeQueryContinueDrag.
+     *
+     * @param handler the argument of type {@code QueryContinueDragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeQueryContinueDrag(QueryContinueDragEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2331,6 +4091,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addGotFocus.
+     *
+     * @param handler the argument of type {@code RoutedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addGotFocus(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2341,6 +4108,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeGotFocus.
+     *
+     * @param handler the argument of type {@code RoutedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeGotFocus(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2351,6 +4125,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addLostFocus.
+     *
+     * @param handler the argument of type {@code RoutedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addLostFocus(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2361,6 +4142,13 @@ public class ContentElement extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeLostFocus.
+     *
+     * @param handler the argument of type {@code RoutedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeLostFocus(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

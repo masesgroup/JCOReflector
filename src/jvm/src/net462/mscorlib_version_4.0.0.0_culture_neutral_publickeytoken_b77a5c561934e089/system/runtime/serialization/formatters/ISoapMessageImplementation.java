@@ -99,7 +99,10 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ISoapMessageImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,13 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ParamValues.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.ISoapMessage.ParamValues" target="_top">.NET documentation</a>
+     */
     public final NetObject[] getParamValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -166,6 +176,13 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
         }
     }
 
+    /**
+     * Sets the value of the .NET property ParamValues.
+     *
+     * @param ParamValues the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.ISoapMessage.ParamValues" target="_top">.NET documentation</a>
+     */
     public void setParamValues(NetObject[] ParamValues) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +193,13 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
         }
     }
 
+    /**
+     * Gets the value of the .NET property Headers.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.ISoapMessage.Headers" target="_top">.NET documentation</a>
+     */
     public final Header[] getHeaders() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +221,13 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
         }
     }
 
+    /**
+     * Sets the value of the .NET property Headers.
+     *
+     * @param Headers the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.ISoapMessage.Headers" target="_top">.NET documentation</a>
+     */
     public void setHeaders(Header[] Headers) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +238,13 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
         }
     }
 
+    /**
+     * Gets the value of the .NET property MethodName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.ISoapMessage.MethodName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMethodName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +259,13 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
         }
     }
 
+    /**
+     * Sets the value of the .NET property MethodName.
+     *
+     * @param MethodName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.ISoapMessage.MethodName" target="_top">.NET documentation</a>
+     */
     public void setMethodName(java.lang.String MethodName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +276,13 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlNameSpace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.ISoapMessage.XmlNameSpace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlNameSpace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +297,13 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlNameSpace.
+     *
+     * @param XmlNameSpace the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.ISoapMessage.XmlNameSpace" target="_top">.NET documentation</a>
+     */
     public void setXmlNameSpace(java.lang.String XmlNameSpace) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +314,13 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
         }
     }
 
+    /**
+     * Gets the value of the .NET property ParamNames.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.ISoapMessage.ParamNames" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getParamNames() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +344,13 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
         }
     }
 
+    /**
+     * Sets the value of the .NET property ParamNames.
+     *
+     * @param ParamNames the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.ISoapMessage.ParamNames" target="_top">.NET documentation</a>
+     */
     public void setParamNames(java.lang.String[] ParamNames) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +361,13 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
         }
     }
 
+    /**
+     * Gets the value of the .NET property ParamTypes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.ISoapMessage.ParamTypes" target="_top">.NET documentation</a>
+     */
     public final NetType[] getParamTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -309,6 +389,13 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
         }
     }
 
+    /**
+     * Sets the value of the .NET property ParamTypes.
+     *
+     * @param ParamTypes the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.ISoapMessage.ParamTypes" target="_top">.NET documentation</a>
+     */
     public void setParamTypes(NetType[] ParamTypes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

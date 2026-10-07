@@ -100,7 +100,10 @@ public class SoapUnknownHeader extends system.web.services.protocols.SoapHeader 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SoapUnknownHeader(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class SoapUnknownHeader extends system.web.services.protocols.SoapHeader 
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapUnknownHeader.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapUnknownHeader() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,24 @@ public class SoapUnknownHeader extends system.web.services.protocols.SoapHeader 
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Element.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapUnknownHeader.Element" target="_top">.NET documentation</a>
+     */
     public XmlElement getElement() throws Throwable, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.xml.XmlException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +207,13 @@ public class SoapUnknownHeader extends system.web.services.protocols.SoapHeader 
         }
     }
 
+    /**
+     * Sets the value of the .NET property Element.
+     *
+     * @param Element the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapUnknownHeader.Element" target="_top">.NET documentation</a>
+     */
     public void setElement(XmlElement Element) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

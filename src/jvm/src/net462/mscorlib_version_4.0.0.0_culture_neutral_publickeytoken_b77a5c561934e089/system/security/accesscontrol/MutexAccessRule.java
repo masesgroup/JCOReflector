@@ -102,7 +102,10 @@ public class MutexAccessRule extends system.security.accesscontrol.AccessRule  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MutexAccessRule(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,19 @@ public class MutexAccessRule extends system.security.accesscontrol.AccessRule  {
     public MutexAccessRule() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param identity the argument of type {@code IdentityReference}
+     * @param eventRights the argument of type {@code MutexRights}
+     * @param type the argument of type {@code AccessControlType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.MutexAccessRule.-ctor" target="_top">.NET documentation</a>
+     */
     public MutexAccessRule(IdentityReference identity, MutexRights eventRights, AccessControlType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +178,19 @@ public class MutexAccessRule extends system.security.accesscontrol.AccessRule  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param identity the argument of type {@code java.lang.String}
+     * @param eventRights the argument of type {@code MutexRights}
+     * @param type the argument of type {@code AccessControlType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.MutexAccessRule.-ctor" target="_top">.NET documentation</a>
+     */
     public MutexAccessRule(java.lang.String identity, MutexRights eventRights, AccessControlType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +210,13 @@ public class MutexAccessRule extends system.security.accesscontrol.AccessRule  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MutexRights.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.MutexAccessRule.MutexRights" target="_top">.NET documentation</a>
+     */
     public MutexRights getMutexRights() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

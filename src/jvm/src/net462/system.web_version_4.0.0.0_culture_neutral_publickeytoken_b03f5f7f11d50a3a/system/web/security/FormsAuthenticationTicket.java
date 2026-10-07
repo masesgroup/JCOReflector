@@ -99,7 +99,10 @@ public class FormsAuthenticationTicket extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FormsAuthenticationTicket(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,29 @@ public class FormsAuthenticationTicket extends NetObject  {
     public FormsAuthenticationTicket() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param version the argument of type {@code int}
+     * @param name the argument of type {@code java.lang.String}
+     * @param issueDate the argument of type {@code DateTime}
+     * @param expiration the argument of type {@code DateTime}
+     * @param isPersistent the argument of type {@code boolean}
+     * @param userData the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.FormsAuthenticationTicket.-ctor" target="_top">.NET documentation</a>
+     */
     public FormsAuthenticationTicket(int version, java.lang.String name, DateTime issueDate, DateTime expiration, boolean isPersistent, java.lang.String userData) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.IndexOutOfRangeException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationException {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +185,19 @@ public class FormsAuthenticationTicket extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param version the argument of type {@code int}
+     * @param name the argument of type {@code java.lang.String}
+     * @param issueDate the argument of type {@code DateTime}
+     * @param expiration the argument of type {@code DateTime}
+     * @param isPersistent the argument of type {@code boolean}
+     * @param userData the argument of type {@code java.lang.String}
+     * @param cookiePath the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.FormsAuthenticationTicket.-ctor" target="_top">.NET documentation</a>
+     */
     public FormsAuthenticationTicket(int version, java.lang.String name, DateTime issueDate, DateTime expiration, boolean isPersistent, java.lang.String userData, java.lang.String cookiePath) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +208,28 @@ public class FormsAuthenticationTicket extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param isPersistent the argument of type {@code boolean}
+     * @param timeout the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.FormsAuthenticationTicket.-ctor" target="_top">.NET documentation</a>
+     */
     public FormsAuthenticationTicket(java.lang.String name, boolean isPersistent, int timeout) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidTimeZoneException, system.OverflowException, system.NotSupportedException, system.web.HttpException, system.IndexOutOfRangeException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationException {
         try {
             // add reference to assemblyName.dll file
@@ -188,6 +249,19 @@ public class FormsAuthenticationTicket extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Expired.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.FormsAuthenticationTicket.Expired" target="_top">.NET documentation</a>
+     */
     public boolean getExpired() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +276,13 @@ public class FormsAuthenticationTicket extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsPersistent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.FormsAuthenticationTicket.IsPersistent" target="_top">.NET documentation</a>
+     */
     public boolean getIsPersistent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +297,13 @@ public class FormsAuthenticationTicket extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Version.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.FormsAuthenticationTicket.Version" target="_top">.NET documentation</a>
+     */
     public int getVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +344,13 @@ public class FormsAuthenticationTicket extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Expiration.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.FormsAuthenticationTicket.Expiration" target="_top">.NET documentation</a>
+     */
     public DateTime getExpiration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +366,13 @@ public class FormsAuthenticationTicket extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IssueDate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.FormsAuthenticationTicket.IssueDate" target="_top">.NET documentation</a>
+     */
     public DateTime getIssueDate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +388,13 @@ public class FormsAuthenticationTicket extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CookiePath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.FormsAuthenticationTicket.CookiePath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCookiePath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +409,13 @@ public class FormsAuthenticationTicket extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.FormsAuthenticationTicket.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -314,6 +430,13 @@ public class FormsAuthenticationTicket extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UserData.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.FormsAuthenticationTicket.UserData" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUserData() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

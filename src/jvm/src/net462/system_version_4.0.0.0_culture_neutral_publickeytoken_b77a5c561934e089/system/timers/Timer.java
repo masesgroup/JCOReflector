@@ -104,7 +104,10 @@ public class Timer extends system.componentmodel.Component  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Timer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,15 @@ public class Timer extends system.componentmodel.Component  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Timers.Timer.-ctor" target="_top">.NET documentation</a>
+     */
     public Timer() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +173,26 @@ public class Timer extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param interval the argument of type {@code double}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Timers.Timer.-ctor" target="_top">.NET documentation</a>
+     */
     public Timer(double interval) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +207,14 @@ public class Timer extends system.componentmodel.Component  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member BeginInit.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Timers.Timer.BeginInit" target="_top">.NET documentation</a>
+     */
     public void BeginInit() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +225,14 @@ public class Timer extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member Close.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Timers.Timer.Close" target="_top">.NET documentation</a>
+     */
     public void Close() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +243,18 @@ public class Timer extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member EndInit.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Timers.Timer.EndInit" target="_top">.NET documentation</a>
+     */
     public void EndInit() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +265,18 @@ public class Timer extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member Start.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Timers.Timer.Start" target="_top">.NET documentation</a>
+     */
     public void Start() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +287,18 @@ public class Timer extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member Stop.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Timers.Timer.Stop" target="_top">.NET documentation</a>
+     */
     public void Stop() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +313,13 @@ public class Timer extends system.componentmodel.Component  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AutoReset.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Timers.Timer.AutoReset" target="_top">.NET documentation</a>
+     */
     public boolean getAutoReset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +334,18 @@ public class Timer extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AutoReset.
+     *
+     * @param AutoReset the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Timers.Timer.AutoReset" target="_top">.NET documentation</a>
+     */
     public void setAutoReset(boolean AutoReset) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +356,13 @@ public class Timer extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Enabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Timers.Timer.Enabled" target="_top">.NET documentation</a>
+     */
     public boolean getEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +377,20 @@ public class Timer extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Enabled.
+     *
+     * @param Enabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Timers.Timer.Enabled" target="_top">.NET documentation</a>
+     */
     public void setEnabled(boolean Enabled) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.InvalidOperationException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +401,13 @@ public class Timer extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Interval.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Timers.Timer.Interval" target="_top">.NET documentation</a>
+     */
     public double getInterval() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -317,6 +448,25 @@ public class Timer extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Interval.
+     *
+     * @param Interval the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Timers.Timer.Interval" target="_top">.NET documentation</a>
+     */
     public void setInterval(double Interval) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -327,6 +477,13 @@ public class Timer extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SynchronizingObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Timers.Timer.SynchronizingObject" target="_top">.NET documentation</a>
+     */
     public ISynchronizeInvoke getSynchronizingObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -342,6 +499,13 @@ public class Timer extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SynchronizingObject.
+     *
+     * @param SynchronizingObject the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Timers.Timer.SynchronizingObject" target="_top">.NET documentation</a>
+     */
     public void setSynchronizingObject(ISynchronizeInvoke SynchronizingObject) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -357,6 +521,13 @@ public class Timer extends system.componentmodel.Component  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addElapsed.
+     *
+     * @param handler the argument of type {@code ElapsedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addElapsed(ElapsedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -367,6 +538,13 @@ public class Timer extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeElapsed.
+     *
+     * @param handler the argument of type {@code ElapsedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeElapsed(ElapsedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

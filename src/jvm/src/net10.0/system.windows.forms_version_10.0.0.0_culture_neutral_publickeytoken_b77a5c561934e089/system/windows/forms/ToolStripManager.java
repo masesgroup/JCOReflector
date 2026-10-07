@@ -103,7 +103,10 @@ public class ToolStripManager extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ToolStripManager(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,21 @@ public class ToolStripManager extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsShortcutDefined.
+     *
+     * @param shortcut the argument of type {@code Keys}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripManager.IsShortcutDefined" target="_top">.NET documentation</a>
+     */
     public static boolean IsShortcutDefined(Keys shortcut) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -170,6 +188,14 @@ public class ToolStripManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsValidShortcut.
+     *
+     * @param shortcut the argument of type {@code Keys}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripManager.IsValidShortcut" target="_top">.NET documentation</a>
+     */
     public static boolean IsValidShortcut(Keys shortcut) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -184,6 +210,33 @@ public class ToolStripManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Merge.
+     *
+     * @param sourceToolStrip the argument of type {@code ToolStrip}
+     * @param targetName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripManager.Merge" target="_top">.NET documentation</a>
+     */
     public static boolean Merge(ToolStrip sourceToolStrip, java.lang.String targetName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidCastException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException, system.runtime.interopservices.ExternalException, system.MulticastNotSupportedException, system.threading.ThreadStateException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -198,6 +251,30 @@ public class ToolStripManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Merge.
+     *
+     * @param sourceToolStrip the argument of type {@code ToolStrip}
+     * @param targetToolStrip the argument of type {@code ToolStrip}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripManager.Merge" target="_top">.NET documentation</a>
+     */
     public static boolean Merge(ToolStrip sourceToolStrip, ToolStrip targetToolStrip) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidCastException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.threading.ThreadStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -212,6 +289,30 @@ public class ToolStripManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RevertMerge.
+     *
+     * @param targetName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripManager.RevertMerge" target="_top">.NET documentation</a>
+     */
     public static boolean RevertMerge(java.lang.String targetName) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidCastException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException, system.runtime.interopservices.ExternalException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.threading.ThreadStateException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -226,6 +327,28 @@ public class ToolStripManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RevertMerge.
+     *
+     * @param targetToolStrip the argument of type {@code ToolStrip}
+     * @param sourceToolStrip the argument of type {@code ToolStrip}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripManager.RevertMerge" target="_top">.NET documentation</a>
+     */
     public static boolean RevertMerge(ToolStrip targetToolStrip, ToolStrip sourceToolStrip) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidCastException, system.threading.SynchronizationLockException, system.MulticastNotSupportedException, system.threading.ThreadStateException, system.componentmodel.Win32Exception, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -240,6 +363,27 @@ public class ToolStripManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RevertMerge.
+     *
+     * @param targetToolStrip the argument of type {@code ToolStrip}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripManager.RevertMerge" target="_top">.NET documentation</a>
+     */
     public static boolean RevertMerge(ToolStrip targetToolStrip) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidCastException, system.threading.SynchronizationLockException, system.MulticastNotSupportedException, system.threading.ThreadStateException, system.componentmodel.Win32Exception, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -254,6 +398,24 @@ public class ToolStripManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FindToolStrip.
+     *
+     * @param toolStripName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripManager.FindToolStrip" target="_top">.NET documentation</a>
+     */
     public static ToolStrip FindToolStrip(java.lang.String toolStripName) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidCastException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -269,6 +431,33 @@ public class ToolStripManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LoadSettings.
+     *
+     * @param targetForm the argument of type {@code Form}
+     * @param key the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.configuration.SettingsPropertyNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripManager.LoadSettings" target="_top">.NET documentation</a>
+     */
     public static void LoadSettings(Form targetForm, java.lang.String key) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidCastException, system.globalization.CultureNotFoundException, system.configuration.SettingsPropertyNotFoundException, system.FormatException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -279,6 +468,30 @@ public class ToolStripManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LoadSettings.
+     *
+     * @param targetForm the argument of type {@code Form}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.configuration.SettingsPropertyNotFoundException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripManager.LoadSettings" target="_top">.NET documentation</a>
+     */
     public static void LoadSettings(Form targetForm) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidCastException, system.configuration.SettingsPropertyNotFoundException, system.componentmodel.Win32Exception, system.NullReferenceException, system.componentmodel.InvalidEnumArgumentException, system.FormatException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -289,6 +502,32 @@ public class ToolStripManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SaveSettings.
+     *
+     * @param sourceForm the argument of type {@code Form}
+     * @param key the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.configuration.SettingsPropertyNotFoundException if the .NET member raises it
+     * @throws system.configuration.SettingsPropertyIsReadOnlyException if the .NET member raises it
+     * @throws system.configuration.SettingsPropertyWrongTypeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripManager.SaveSettings" target="_top">.NET documentation</a>
+     */
     public static void SaveSettings(Form sourceForm, java.lang.String key) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidCastException, system.globalization.CultureNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.FormatException, system.configuration.SettingsPropertyNotFoundException, system.configuration.SettingsPropertyIsReadOnlyException, system.configuration.SettingsPropertyWrongTypeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -299,6 +538,29 @@ public class ToolStripManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SaveSettings.
+     *
+     * @param sourceForm the argument of type {@code Form}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.configuration.SettingsPropertyNotFoundException if the .NET member raises it
+     * @throws system.configuration.SettingsPropertyIsReadOnlyException if the .NET member raises it
+     * @throws system.configuration.SettingsPropertyWrongTypeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripManager.SaveSettings" target="_top">.NET documentation</a>
+     */
     public static void SaveSettings(Form sourceForm) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.FormatException, system.configuration.SettingsPropertyNotFoundException, system.configuration.SettingsPropertyIsReadOnlyException, system.configuration.SettingsPropertyWrongTypeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -313,6 +575,21 @@ public class ToolStripManager extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property VisualStylesEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripManager.VisualStylesEnabled" target="_top">.NET documentation</a>
+     */
     public static boolean getVisualStylesEnabled() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -327,6 +604,25 @@ public class ToolStripManager extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property VisualStylesEnabled.
+     *
+     * @param VisualStylesEnabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripManager.VisualStylesEnabled" target="_top">.NET documentation</a>
+     */
     public static void setVisualStylesEnabled(boolean VisualStylesEnabled) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.threading.LockRecursionException, system.NullReferenceException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -337,6 +633,13 @@ public class ToolStripManager extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RenderMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripManager.RenderMode" target="_top">.NET documentation</a>
+     */
     public static ToolStripManagerRenderMode getRenderMode() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -352,6 +655,26 @@ public class ToolStripManager extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RenderMode.
+     *
+     * @param RenderMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripManager.RenderMode" target="_top">.NET documentation</a>
+     */
     public static void setRenderMode(ToolStripManagerRenderMode RenderMode) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.threading.LockRecursionException, system.NotSupportedException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -362,6 +685,13 @@ public class ToolStripManager extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Renderer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripManager.Renderer" target="_top">.NET documentation</a>
+     */
     public static ToolStripRenderer getRenderer() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -377,6 +707,22 @@ public class ToolStripManager extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Renderer.
+     *
+     * @param Renderer the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripManager.Renderer" target="_top">.NET documentation</a>
+     */
     public static void setRenderer(ToolStripRenderer Renderer) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.threading.LockRecursionException, system.NullReferenceException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

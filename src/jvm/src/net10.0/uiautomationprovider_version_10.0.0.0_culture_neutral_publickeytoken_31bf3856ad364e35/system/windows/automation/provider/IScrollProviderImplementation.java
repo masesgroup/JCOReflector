@@ -99,7 +99,10 @@ public class IScrollProviderImplementation extends NetObject implements IScrollP
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IScrollProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,14 @@ public class IScrollProviderImplementation extends NetObject implements IScrollP
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Scroll.
+     *
+     * @param horizontalAmount the argument of type {@code ScrollAmount}
+     * @param verticalAmount the argument of type {@code ScrollAmount}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IScrollProvider.Scroll" target="_top">.NET documentation</a>
+     */
     public void Scroll(ScrollAmount horizontalAmount, ScrollAmount verticalAmount) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -151,6 +162,14 @@ public class IScrollProviderImplementation extends NetObject implements IScrollP
         }
     }
 
+    /**
+     * Invokes the .NET member SetScrollPercent.
+     *
+     * @param horizontalPercent the argument of type {@code double}
+     * @param verticalPercent the argument of type {@code double}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent" target="_top">.NET documentation</a>
+     */
     public void SetScrollPercent(double horizontalPercent, double verticalPercent) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -165,6 +184,13 @@ public class IScrollProviderImplementation extends NetObject implements IScrollP
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HorizontallyScrollable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IScrollProvider.HorizontallyScrollable" target="_top">.NET documentation</a>
+     */
     public boolean getHorizontallyScrollable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +205,13 @@ public class IScrollProviderImplementation extends NetObject implements IScrollP
         }
     }
 
+    /**
+     * Gets the value of the .NET property VerticallyScrollable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IScrollProvider.VerticallyScrollable" target="_top">.NET documentation</a>
+     */
     public boolean getVerticallyScrollable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +226,13 @@ public class IScrollProviderImplementation extends NetObject implements IScrollP
         }
     }
 
+    /**
+     * Gets the value of the .NET property HorizontalScrollPercent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent" target="_top">.NET documentation</a>
+     */
     public double getHorizontalScrollPercent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +273,13 @@ public class IScrollProviderImplementation extends NetObject implements IScrollP
         }
     }
 
+    /**
+     * Gets the value of the .NET property HorizontalViewSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IScrollProvider.HorizontalViewSize" target="_top">.NET documentation</a>
+     */
     public double getHorizontalViewSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +320,13 @@ public class IScrollProviderImplementation extends NetObject implements IScrollP
         }
     }
 
+    /**
+     * Gets the value of the .NET property VerticalScrollPercent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IScrollProvider.VerticalScrollPercent" target="_top">.NET documentation</a>
+     */
     public double getVerticalScrollPercent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -313,6 +367,13 @@ public class IScrollProviderImplementation extends NetObject implements IScrollP
         }
     }
 
+    /**
+     * Gets the value of the .NET property VerticalViewSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IScrollProvider.VerticalViewSize" target="_top">.NET documentation</a>
+     */
     public double getVerticalViewSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

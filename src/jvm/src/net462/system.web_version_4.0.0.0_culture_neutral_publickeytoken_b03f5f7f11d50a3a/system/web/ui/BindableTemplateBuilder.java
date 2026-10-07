@@ -103,7 +103,10 @@ public class BindableTemplateBuilder extends system.web.ui.TemplateBuilder  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BindableTemplateBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,12 @@ public class BindableTemplateBuilder extends system.web.ui.TemplateBuilder  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.BindableTemplateBuilder.-ctor" target="_top">.NET documentation</a>
+     */
     public BindableTemplateBuilder() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,20 @@ public class BindableTemplateBuilder extends system.web.ui.TemplateBuilder  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ExtractValues.
+     *
+     * @param container the argument of type {@code Control}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.BindableTemplateBuilder.ExtractValues" target="_top">.NET documentation</a>
+     */
     public IOrderedDictionary ExtractValues(Control container) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +202,31 @@ public class BindableTemplateBuilder extends system.web.ui.TemplateBuilder  {
         }
     }
 
+    /**
+     * Invokes the .NET member OnAppendToParentBuilder.
+     *
+     * @param parentBuilder the argument of type {@code ControlBuilder}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.web.HttpParseException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.BindableTemplateBuilder.OnAppendToParentBuilder" target="_top">.NET documentation</a>
+     */
     public void OnAppendToParentBuilder(ControlBuilder parentBuilder) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.reflection.AmbiguousMatchException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException, system.TypeLoadException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.web.HttpParseException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -102,7 +102,10 @@ public class ServiceContractGenerationContext extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ServiceContractGenerationContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,26 @@ public class ServiceContractGenerationContext extends NetObject  {
     public ServiceContractGenerationContext() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param serviceContractGenerator the argument of type {@code ServiceContractGenerator}
+     * @param contract the argument of type {@code ContractDescription}
+     * @param contractType the argument of type {@code CodeTypeDeclaration}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceContractGenerationContext.-ctor" target="_top">.NET documentation</a>
+     */
     public ServiceContractGenerationContext(ServiceContractGenerator serviceContractGenerator, ContractDescription contract, CodeTypeDeclaration contractType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +185,30 @@ public class ServiceContractGenerationContext extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param serviceContractGenerator the argument of type {@code ServiceContractGenerator}
+     * @param contract the argument of type {@code ContractDescription}
+     * @param contractType the argument of type {@code CodeTypeDeclaration}
+     * @param duplexCallbackType the argument of type {@code CodeTypeDeclaration}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceContractGenerationContext.-ctor" target="_top">.NET documentation</a>
+     */
     public ServiceContractGenerationContext(ServiceContractGenerator serviceContractGenerator, ContractDescription contract, CodeTypeDeclaration contractType, CodeTypeDeclaration duplexCallbackType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +228,13 @@ public class ServiceContractGenerationContext extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ContractType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceContractGenerationContext.ContractType" target="_top">.NET documentation</a>
+     */
     public CodeTypeDeclaration getContractType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +250,13 @@ public class ServiceContractGenerationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DuplexCallbackType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceContractGenerationContext.DuplexCallbackType" target="_top">.NET documentation</a>
+     */
     public CodeTypeDeclaration getDuplexCallbackType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +272,13 @@ public class ServiceContractGenerationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Operations.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceContractGenerationContext.Operations" target="_top">.NET documentation</a>
+     */
     public Collection_1 getOperations() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +294,13 @@ public class ServiceContractGenerationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Contract.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceContractGenerationContext.Contract" target="_top">.NET documentation</a>
+     */
     public ContractDescription getContract() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +316,13 @@ public class ServiceContractGenerationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ServiceContractGenerator.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceContractGenerationContext.ServiceContractGenerator" target="_top">.NET documentation</a>
+     */
     public ServiceContractGenerator getServiceContractGenerator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class OutputMessage extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public OutputMessage(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,13 @@ public class OutputMessage extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetArguments.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessage.GetArguments" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] GetArguments() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +191,13 @@ public class OutputMessage extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Type.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessage.Type" target="_top">.NET documentation</a>
+     */
     public OutputMessageType getType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +213,13 @@ public class OutputMessage extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessage.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +234,13 @@ public class OutputMessage extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Text.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessage.Text" target="_top">.NET documentation</a>
+     */
     public java.lang.String getText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

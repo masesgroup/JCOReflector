@@ -100,7 +100,10 @@ public class VScrollProperties extends system.windows.forms.ScrollProperties  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public VScrollProperties(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class VScrollProperties extends system.windows.forms.ScrollProperties  {
     public VScrollProperties() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param container the argument of type {@code ScrollableControl}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VScrollProperties.-ctor" target="_top">.NET documentation</a>
+     */
     public VScrollProperties(ScrollableControl container) throws Throwable {
         try {
             // add reference to assemblyName.dll file

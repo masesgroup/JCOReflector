@@ -101,7 +101,10 @@ public class CorrelationTokenCollection extends system.collections.objectmodel.K
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CorrelationTokenCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,13 @@ public class CorrelationTokenCollection extends system.collections.objectmodel.K
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.CorrelationTokenCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public CorrelationTokenCollection() throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +172,25 @@ public class CorrelationTokenCollection extends system.collections.objectmodel.K
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetCorrelationToken.
+     *
+     * @param activity the argument of type {@code Activity}
+     * @param correlationTokenName the argument of type {@code java.lang.String}
+     * @param ownerActivityName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.CorrelationTokenCollection.GetCorrelationToken" target="_top">.NET documentation</a>
+     */
     public static CorrelationToken GetCorrelationToken(Activity activity, java.lang.String correlationTokenName, java.lang.String ownerActivityName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -177,6 +206,16 @@ public class CorrelationTokenCollection extends system.collections.objectmodel.K
         }
     }
 
+    /**
+     * Invokes the .NET member GetItem.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.CorrelationTokenCollection.GetItem" target="_top">.NET documentation</a>
+     */
     public CorrelationToken GetItem(java.lang.String key) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

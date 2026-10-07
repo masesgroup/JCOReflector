@@ -99,7 +99,10 @@ public class RecycleLimitInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RecycleLimitInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,15 @@ public class RecycleLimitInfo extends NetObject  {
     public RecycleLimitInfo() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param currentPrivateBytes the argument of type {@code long}
+     * @param recycleLimit the argument of type {@code long}
+     * @param recycleLimitNearFrequency the argument of type {@code RecycleLimitNotificationFrequency}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.RecycleLimitInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public RecycleLimitInfo(long currentPrivateBytes, long recycleLimit, RecycleLimitNotificationFrequency recycleLimitNearFrequency) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +180,13 @@ public class RecycleLimitInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RequestGC.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.RecycleLimitInfo.RequestGC" target="_top">.NET documentation</a>
+     */
     public boolean getRequestGC() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +201,13 @@ public class RecycleLimitInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RequestGC.
+     *
+     * @param RequestGC the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.RecycleLimitInfo.RequestGC" target="_top">.NET documentation</a>
+     */
     public void setRequestGC(boolean RequestGC) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +218,13 @@ public class RecycleLimitInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentPrivateBytes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.RecycleLimitInfo.CurrentPrivateBytes" target="_top">.NET documentation</a>
+     */
     public long getCurrentPrivateBytes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +265,13 @@ public class RecycleLimitInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RecycleLimit.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.RecycleLimitInfo.RecycleLimit" target="_top">.NET documentation</a>
+     */
     public long getRecycleLimit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +312,13 @@ public class RecycleLimitInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TrimFrequency.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.RecycleLimitInfo.TrimFrequency" target="_top">.NET documentation</a>
+     */
     public RecycleLimitNotificationFrequency getTrimFrequency() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

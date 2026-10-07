@@ -101,7 +101,10 @@ public class ExpandoObject extends NetObjectEnumerable  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ExpandoObject(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class ExpandoObject extends NetObjectEnumerable  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.ExpandoObject.-ctor" target="_top">.NET documentation</a>
+     */
     public ExpandoObject() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,8 +174,13 @@ public class ExpandoObject extends NetObjectEnumerable  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDynamicMetaObjectProvider method available in IDynamicMetaObjectProvider to obtain an object with an invocable method
+     *
+     * @param parameter the argument of type {@code Expression}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public DynamicMetaObject GetMetaObject(Expression parameter) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDynamicMetaObjectProvider to obtain the full interface.");
     }
@@ -174,8 +188,13 @@ public class ExpandoObject extends NetObjectEnumerable  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDictionary_2 method available in IDictionary_2 to obtain an object with an invocable method
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.IDictionary-2.ContainsKey" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean ContainsKey(java.lang.String key) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDictionary_2 to obtain the full interface.");
     }
@@ -183,8 +202,13 @@ public class ExpandoObject extends NetObjectEnumerable  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDictionary_2 method available in IDictionary_2 to obtain an object with an invocable method
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.IDictionary-2.Remove" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean Remove(java.lang.String key) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDictionary_2 to obtain the full interface.");
     }
@@ -192,8 +216,14 @@ public class ExpandoObject extends NetObjectEnumerable  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDictionary_2 method available in IDictionary_2 to obtain an object with an invocable method
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code JCORefOut<NetObject>}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.IDictionary-2.TryGetValue" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean TryGetValue(java.lang.String key, JCORefOut<NetObject> value) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDictionary_2 to obtain the full interface.");
     }
@@ -201,8 +231,13 @@ public class ExpandoObject extends NetObjectEnumerable  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDictionary_2 method available in IDictionary_2 to obtain an object with an invocable method
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.IDictionary-2.Add" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Add(java.lang.String key, NetObject value) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDictionary_2 to obtain the full interface.");
     }
@@ -210,8 +245,13 @@ public class ExpandoObject extends NetObjectEnumerable  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICollection_1 method available in ICollection_1 to obtain an object with an invocable method
+     *
+     * @param item the argument of type {@code KeyValuePair_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.ICollection-1.Contains" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean Contains(KeyValuePair_2 item) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection_1 to obtain the full interface.");
     }
@@ -219,8 +259,13 @@ public class ExpandoObject extends NetObjectEnumerable  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICollection_1 method available in ICollection_1 to obtain an object with an invocable method
+     *
+     * @param item the argument of type {@code KeyValuePair_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.ICollection-1.Remove" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean Remove(KeyValuePair_2 item) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection_1 to obtain the full interface.");
     }
@@ -228,8 +273,12 @@ public class ExpandoObject extends NetObjectEnumerable  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICollection_1 method available in ICollection_1 to obtain an object with an invocable method
+     *
+     * @param item the argument of type {@code KeyValuePair_2}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.ICollection-1.Add" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Add(KeyValuePair_2 item) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection_1 to obtain the full interface.");
     }
@@ -237,8 +286,11 @@ public class ExpandoObject extends NetObjectEnumerable  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICollection_1 method available in ICollection_1 to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.ICollection-1.Clear" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Clear() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection_1 to obtain the full interface.");
     }
@@ -246,8 +298,13 @@ public class ExpandoObject extends NetObjectEnumerable  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICollection_1 method available in ICollection_1 to obtain an object with an invocable method
+     *
+     * @param array the argument of type {@code KeyValuePair_2[]}
+     * @param arrayIndex the argument of type {@code int}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.ICollection-1.CopyTo" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void CopyTo(KeyValuePair_2[] array, int arrayIndex) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection_1 to obtain the full interface.");
     }

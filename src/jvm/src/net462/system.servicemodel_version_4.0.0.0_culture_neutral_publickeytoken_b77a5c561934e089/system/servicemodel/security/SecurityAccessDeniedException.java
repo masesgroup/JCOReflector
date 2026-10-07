@@ -103,7 +103,9 @@ public class SecurityAccessDeniedException extends system.servicemodel.Communica
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public SecurityAccessDeniedException(java.lang.Object instance) {
         super(instance);

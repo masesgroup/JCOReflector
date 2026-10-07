@@ -106,7 +106,10 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDebugConvertImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,14 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetManagedCharObject.
+     *
+     * @param i the argument of type {@code UInt16}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IDebugConvert.GetManagedCharObject" target="_top">.NET documentation</a>
+     */
     public NetObject GetManagedCharObject(UInt16 i) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -163,6 +174,14 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
         }
     }
 
+    /**
+     * Invokes the .NET member GetManagedInt64Object.
+     *
+     * @param i the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IDebugConvert.GetManagedInt64Object" target="_top">.NET documentation</a>
+     */
     public NetObject GetManagedInt64Object(long i) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +197,14 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
         }
     }
 
+    /**
+     * Invokes the .NET member GetManagedObject.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IDebugConvert.GetManagedObject" target="_top">.NET documentation</a>
+     */
     public NetObject GetManagedObject(NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +220,14 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
         }
     }
 
+    /**
+     * Invokes the .NET member GetManagedUInt64Object.
+     *
+     * @param i the argument of type {@code UInt64}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IDebugConvert.GetManagedUInt64Object" target="_top">.NET documentation</a>
+     */
     public NetObject GetManagedUInt64Object(UInt64 i) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +243,16 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
         }
     }
 
+    /**
+     * Invokes the .NET member ToPrimitive.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @param typeCode the argument of type {@code TypeCode}
+     * @param truncationPermitted the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IDebugConvert.ToPrimitive" target="_top">.NET documentation</a>
+     */
     public NetObject ToPrimitive(NetObject value, TypeCode typeCode, boolean truncationPermitted) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +268,14 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
         }
     }
 
+    /**
+     * Invokes the .NET member BooleanToString.
+     *
+     * @param value the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IDebugConvert.BooleanToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String BooleanToString(boolean value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +290,15 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
         }
     }
 
+    /**
+     * Invokes the .NET member ByteToString.
+     *
+     * @param value the argument of type {@code byte}
+     * @param radix the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IDebugConvert.ByteToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String ByteToString(byte value, int radix) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +313,14 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
         }
     }
 
+    /**
+     * Invokes the .NET member DoubleToDateString.
+     *
+     * @param value the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IDebugConvert.DoubleToDateString" target="_top">.NET documentation</a>
+     */
     public java.lang.String DoubleToDateString(double value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +335,14 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
         }
     }
 
+    /**
+     * Invokes the .NET member DoubleToString.
+     *
+     * @param value the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IDebugConvert.DoubleToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String DoubleToString(double value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +357,15 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
         }
     }
 
+    /**
+     * Invokes the .NET member GetErrorMessageForHR.
+     *
+     * @param hr the argument of type {@code int}
+     * @param engine the argument of type {@code IJSVsaEngine}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IDebugConvert.GetErrorMessageForHR" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetErrorMessageForHR(int hr, IJSVsaEngine engine) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +380,15 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
         }
     }
 
+    /**
+     * Invokes the .NET member Int16ToString.
+     *
+     * @param value the argument of type {@code short}
+     * @param radix the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IDebugConvert.Int16ToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String Int16ToString(short value, int radix) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -307,6 +403,15 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
         }
     }
 
+    /**
+     * Invokes the .NET member Int32ToString.
+     *
+     * @param value the argument of type {@code int}
+     * @param radix the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IDebugConvert.Int32ToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String Int32ToString(int value, int radix) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +426,15 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
         }
     }
 
+    /**
+     * Invokes the .NET member Int64ToString.
+     *
+     * @param value the argument of type {@code long}
+     * @param radix the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IDebugConvert.Int64ToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String Int64ToString(long value, int radix) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +449,17 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
         }
     }
 
+    /**
+     * Invokes the .NET member RegexpToString.
+     *
+     * @param source the argument of type {@code java.lang.String}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @param global the argument of type {@code boolean}
+     * @param multiline the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IDebugConvert.RegexpToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String RegexpToString(java.lang.String source, boolean ignoreCase, boolean global, boolean multiline) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -349,6 +474,15 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
         }
     }
 
+    /**
+     * Invokes the .NET member SByteToString.
+     *
+     * @param value the argument of type {@code SByte}
+     * @param radix the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IDebugConvert.SByteToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String SByteToString(SByte value, int radix) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -363,6 +497,14 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
         }
     }
 
+    /**
+     * Invokes the .NET member SingleToString.
+     *
+     * @param value the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IDebugConvert.SingleToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String SingleToString(Single value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -377,6 +519,14 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
         }
     }
 
+    /**
+     * Invokes the .NET member StringToPrintable.
+     *
+     * @param source the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IDebugConvert.StringToPrintable" target="_top">.NET documentation</a>
+     */
     public java.lang.String StringToPrintable(java.lang.String source) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -391,6 +541,15 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
         }
     }
 
+    /**
+     * Invokes the .NET member UInt16ToString.
+     *
+     * @param value the argument of type {@code UInt16}
+     * @param radix the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IDebugConvert.UInt16ToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String UInt16ToString(UInt16 value, int radix) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -405,6 +564,15 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
         }
     }
 
+    /**
+     * Invokes the .NET member UInt32ToString.
+     *
+     * @param value the argument of type {@code UInt32}
+     * @param radix the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IDebugConvert.UInt32ToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String UInt32ToString(UInt32 value, int radix) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -419,6 +587,15 @@ public class IDebugConvertImplementation extends NetObject implements IDebugConv
         }
     }
 
+    /**
+     * Invokes the .NET member UInt64ToString.
+     *
+     * @param value the argument of type {@code UInt64}
+     * @param radix the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IDebugConvert.UInt64ToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String UInt64ToString(UInt64 value, int radix) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class VerifyNameControl extends system.directoryservices.protocols.Direct
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public VerifyNameControl(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,22 @@ public class VerifyNameControl extends system.directoryservices.protocols.Direct
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.VerifyNameControl.-ctor" target="_top">.NET documentation</a>
+     */
     public VerifyNameControl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +175,20 @@ public class VerifyNameControl extends system.directoryservices.protocols.Direct
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param serverName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.VerifyNameControl.-ctor" target="_top">.NET documentation</a>
+     */
     public VerifyNameControl(java.lang.String serverName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +199,21 @@ public class VerifyNameControl extends system.directoryservices.protocols.Direct
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param serverName the argument of type {@code java.lang.String}
+     * @param flag the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.VerifyNameControl.-ctor" target="_top">.NET documentation</a>
+     */
     public VerifyNameControl(java.lang.String serverName, int flag) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +228,26 @@ public class VerifyNameControl extends system.directoryservices.protocols.Direct
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetValue.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.directoryservices.protocols.BerConversionException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.VerifyNameControl.GetValue" target="_top">.NET documentation</a>
+     */
     public byte[] GetValue() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.AccessViolationException, system.directoryservices.protocols.BerConversionException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +275,13 @@ public class VerifyNameControl extends system.directoryservices.protocols.Direct
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Flag.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.VerifyNameControl.Flag" target="_top">.NET documentation</a>
+     */
     public int getFlag() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +322,13 @@ public class VerifyNameControl extends system.directoryservices.protocols.Direct
         }
     }
 
+    /**
+     * Sets the value of the .NET property Flag.
+     *
+     * @param Flag the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.VerifyNameControl.Flag" target="_top">.NET documentation</a>
+     */
     public void setFlag(int Flag) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +339,13 @@ public class VerifyNameControl extends system.directoryservices.protocols.Direct
         }
     }
 
+    /**
+     * Gets the value of the .NET property ServerName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.VerifyNameControl.ServerName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getServerName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +360,14 @@ public class VerifyNameControl extends system.directoryservices.protocols.Direct
         }
     }
 
+    /**
+     * Sets the value of the .NET property ServerName.
+     *
+     * @param ServerName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.VerifyNameControl.ServerName" target="_top">.NET documentation</a>
+     */
     public void setServerName(java.lang.String ServerName) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

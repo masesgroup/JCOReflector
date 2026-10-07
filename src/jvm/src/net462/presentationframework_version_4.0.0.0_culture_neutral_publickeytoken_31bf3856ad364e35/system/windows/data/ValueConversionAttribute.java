@@ -99,7 +99,10 @@ public class ValueConversionAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ValueConversionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,15 @@ public class ValueConversionAttribute extends system.Attribute  {
     public ValueConversionAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param sourceType the argument of type {@code NetType}
+     * @param targetType the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.ValueConversionAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ValueConversionAttribute(NetType sourceType, NetType targetType) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +180,13 @@ public class ValueConversionAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ParameterType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.ValueConversionAttribute.ParameterType" target="_top">.NET documentation</a>
+     */
     public NetType getParameterType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +202,13 @@ public class ValueConversionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ParameterType.
+     *
+     * @param ParameterType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.ValueConversionAttribute.ParameterType" target="_top">.NET documentation</a>
+     */
     public void setParameterType(NetType ParameterType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +219,13 @@ public class ValueConversionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SourceType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.ValueConversionAttribute.SourceType" target="_top">.NET documentation</a>
+     */
     public NetType getSourceType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +241,13 @@ public class ValueConversionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.ValueConversionAttribute.TargetType" target="_top">.NET documentation</a>
+     */
     public NetType getTargetType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -98,7 +98,10 @@ public class IStateFormatterImplementation extends NetObject implements IStateFo
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IStateFormatterImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,14 @@ public class IStateFormatterImplementation extends NetObject implements IStateFo
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Deserialize.
+     *
+     * @param serializedState the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IStateFormatter.Deserialize" target="_top">.NET documentation</a>
+     */
     public NetObject Deserialize(java.lang.String serializedState) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -155,6 +166,14 @@ public class IStateFormatterImplementation extends NetObject implements IStateFo
         }
     }
 
+    /**
+     * Invokes the .NET member Serialize.
+     *
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IStateFormatter.Serialize" target="_top">.NET documentation</a>
+     */
     public java.lang.String Serialize(NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

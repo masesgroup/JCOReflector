@@ -104,7 +104,10 @@ public class ArrayExtension extends system.windows.markup.MarkupExtension  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ArrayExtension(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,12 @@ public class ArrayExtension extends system.windows.markup.MarkupExtension  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.ArrayExtension.-ctor" target="_top">.NET documentation</a>
+     */
     public ArrayExtension() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,16 @@ public class ArrayExtension extends system.windows.markup.MarkupExtension  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param elements the argument of type {@code Array}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.ArrayExtension.-ctor" target="_top">.NET documentation</a>
+     */
     public ArrayExtension(Array elements) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +190,14 @@ public class ArrayExtension extends system.windows.markup.MarkupExtension  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param arrayType the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.ArrayExtension.-ctor" target="_top">.NET documentation</a>
+     */
     public ArrayExtension(NetType arrayType) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -185,6 +212,26 @@ public class ArrayExtension extends system.windows.markup.MarkupExtension  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ProvideValue.
+     *
+     * @param serviceProvider the argument of type {@code IServiceProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.ArrayExtension.ProvideValue" target="_top">.NET documentation</a>
+     */
     public NetObject ProvideValue(IServiceProvider serviceProvider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +247,14 @@ public class ArrayExtension extends system.windows.markup.MarkupExtension  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddChild.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.ArrayExtension.AddChild" target="_top">.NET documentation</a>
+     */
     public void AddChild(NetObject value) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +265,14 @@ public class ArrayExtension extends system.windows.markup.MarkupExtension  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddText.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.ArrayExtension.AddText" target="_top">.NET documentation</a>
+     */
     public void AddText(java.lang.String text) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +287,13 @@ public class ArrayExtension extends system.windows.markup.MarkupExtension  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Items.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.ArrayExtension.Items" target="_top">.NET documentation</a>
+     */
     public IList getItems() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +309,13 @@ public class ArrayExtension extends system.windows.markup.MarkupExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Type.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.ArrayExtension.Type" target="_top">.NET documentation</a>
+     */
     public NetType getType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +331,13 @@ public class ArrayExtension extends system.windows.markup.MarkupExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Type.
+     *
+     * @param Type the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.ArrayExtension.Type" target="_top">.NET documentation</a>
+     */
     public void setType(NetType Type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

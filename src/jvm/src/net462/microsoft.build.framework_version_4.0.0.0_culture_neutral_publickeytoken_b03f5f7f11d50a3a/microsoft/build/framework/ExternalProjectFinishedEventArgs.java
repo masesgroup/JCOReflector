@@ -100,7 +100,10 @@ public class ExternalProjectFinishedEventArgs extends microsoft.build.framework.
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ExternalProjectFinishedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,20 @@ public class ExternalProjectFinishedEventArgs extends microsoft.build.framework.
     public ExternalProjectFinishedEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param helpKeyword the argument of type {@code java.lang.String}
+     * @param senderName the argument of type {@code java.lang.String}
+     * @param projectFile the argument of type {@code java.lang.String}
+     * @param succeeded the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ExternalProjectFinishedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ExternalProjectFinishedEventArgs(java.lang.String message, java.lang.String helpKeyword, java.lang.String senderName, java.lang.String projectFile, boolean succeeded) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +177,23 @@ public class ExternalProjectFinishedEventArgs extends microsoft.build.framework.
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param helpKeyword the argument of type {@code java.lang.String}
+     * @param senderName the argument of type {@code java.lang.String}
+     * @param projectFile the argument of type {@code java.lang.String}
+     * @param succeeded the argument of type {@code boolean}
+     * @param eventTimestamp the argument of type {@code DateTime}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ExternalProjectFinishedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ExternalProjectFinishedEventArgs(java.lang.String message, java.lang.String helpKeyword, java.lang.String senderName, java.lang.String projectFile, boolean succeeded, DateTime eventTimestamp) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +213,13 @@ public class ExternalProjectFinishedEventArgs extends microsoft.build.framework.
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Succeeded.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ExternalProjectFinishedEventArgs.Succeeded" target="_top">.NET documentation</a>
+     */
     public boolean getSucceeded() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +234,13 @@ public class ExternalProjectFinishedEventArgs extends microsoft.build.framework.
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProjectFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ExternalProjectFinishedEventArgs.ProjectFile" target="_top">.NET documentation</a>
+     */
     public java.lang.String getProjectFile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

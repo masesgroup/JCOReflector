@@ -105,7 +105,10 @@ public class OperationBehaviorAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public OperationBehaviorAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,12 @@ public class OperationBehaviorAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.OperationBehaviorAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public OperationBehaviorAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,8 +178,13 @@ public class OperationBehaviorAttribute extends system.Attribute  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIOperationBehavior method available in IOperationBehavior to obtain an object with an invocable method
+     *
+     * @param operationDescription the argument of type {@code OperationDescription}
+     * @param bindingParameters the argument of type {@code BindingParameterCollection}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IOperationBehavior.AddBindingParameters" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void AddBindingParameters(OperationDescription operationDescription, BindingParameterCollection bindingParameters) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
     }
@@ -178,8 +192,13 @@ public class OperationBehaviorAttribute extends system.Attribute  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIOperationBehavior method available in IOperationBehavior to obtain an object with an invocable method
+     *
+     * @param operationDescription the argument of type {@code OperationDescription}
+     * @param clientOperation the argument of type {@code ClientOperation}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IOperationBehavior.ApplyClientBehavior" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ApplyClientBehavior(OperationDescription operationDescription, ClientOperation clientOperation) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
     }
@@ -187,8 +206,13 @@ public class OperationBehaviorAttribute extends system.Attribute  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIOperationBehavior method available in IOperationBehavior to obtain an object with an invocable method
+     *
+     * @param operationDescription the argument of type {@code OperationDescription}
+     * @param dispatchOperation the argument of type {@code DispatchOperation}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IOperationBehavior.ApplyDispatchBehavior" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ApplyDispatchBehavior(OperationDescription operationDescription, DispatchOperation dispatchOperation) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
     }
@@ -196,8 +220,12 @@ public class OperationBehaviorAttribute extends system.Attribute  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIOperationBehavior method available in IOperationBehavior to obtain an object with an invocable method
+     *
+     * @param operationDescription the argument of type {@code OperationDescription}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IOperationBehavior.Validate" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Validate(OperationDescription operationDescription) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
     }
@@ -206,6 +234,13 @@ public class OperationBehaviorAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AutoDisposeParameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.OperationBehaviorAttribute.AutoDisposeParameters" target="_top">.NET documentation</a>
+     */
     public boolean getAutoDisposeParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +255,13 @@ public class OperationBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AutoDisposeParameters.
+     *
+     * @param AutoDisposeParameters the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.OperationBehaviorAttribute.AutoDisposeParameters" target="_top">.NET documentation</a>
+     */
     public void setAutoDisposeParameters(boolean AutoDisposeParameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +272,13 @@ public class OperationBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TransactionAutoComplete.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete" target="_top">.NET documentation</a>
+     */
     public boolean getTransactionAutoComplete() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +293,13 @@ public class OperationBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TransactionAutoComplete.
+     *
+     * @param TransactionAutoComplete the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete" target="_top">.NET documentation</a>
+     */
     public void setTransactionAutoComplete(boolean TransactionAutoComplete) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +310,13 @@ public class OperationBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TransactionScopeRequired.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired" target="_top">.NET documentation</a>
+     */
     public boolean getTransactionScopeRequired() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +331,13 @@ public class OperationBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TransactionScopeRequired.
+     *
+     * @param TransactionScopeRequired the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired" target="_top">.NET documentation</a>
+     */
     public void setTransactionScopeRequired(boolean TransactionScopeRequired) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +348,13 @@ public class OperationBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Impersonation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.OperationBehaviorAttribute.Impersonation" target="_top">.NET documentation</a>
+     */
     public ImpersonationOption getImpersonation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +370,24 @@ public class OperationBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Impersonation.
+     *
+     * @param Impersonation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.OperationBehaviorAttribute.Impersonation" target="_top">.NET documentation</a>
+     */
     public void setImpersonation(ImpersonationOption Impersonation) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +398,13 @@ public class OperationBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReleaseInstanceMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode" target="_top">.NET documentation</a>
+     */
     public ReleaseInstanceMode getReleaseInstanceMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +420,24 @@ public class OperationBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReleaseInstanceMode.
+     *
+     * @param ReleaseInstanceMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode" target="_top">.NET documentation</a>
+     */
     public void setReleaseInstanceMode(ReleaseInstanceMode ReleaseInstanceMode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

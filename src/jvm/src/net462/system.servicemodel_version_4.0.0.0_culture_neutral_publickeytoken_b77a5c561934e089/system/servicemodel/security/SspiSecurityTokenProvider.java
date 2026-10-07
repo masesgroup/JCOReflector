@@ -101,7 +101,10 @@ public class SspiSecurityTokenProvider extends system.identitymodel.selectors.Se
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SspiSecurityTokenProvider(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,23 @@ public class SspiSecurityTokenProvider extends system.identitymodel.selectors.Se
     public SspiSecurityTokenProvider() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param credential the argument of type {@code NetworkCredential}
+     * @param extractGroupsForWindowsAccounts the argument of type {@code boolean}
+     * @param allowUnauthenticatedCallers the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SspiSecurityTokenProvider.-ctor" target="_top">.NET documentation</a>
+     */
     public SspiSecurityTokenProvider(NetworkCredential credential, boolean extractGroupsForWindowsAccounts, boolean allowUnauthenticatedCallers) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +181,23 @@ public class SspiSecurityTokenProvider extends system.identitymodel.selectors.Se
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param credential the argument of type {@code NetworkCredential}
+     * @param allowNtlm the argument of type {@code boolean}
+     * @param impersonationLevel the argument of type {@code TokenImpersonationLevel}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SspiSecurityTokenProvider.-ctor" target="_top">.NET documentation</a>
+     */
     public SspiSecurityTokenProvider(NetworkCredential credential, boolean allowNtlm, TokenImpersonationLevel impersonationLevel) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file

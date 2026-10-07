@@ -100,7 +100,10 @@ public class ProofDescriptor extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ProofDescriptor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,13 @@ public class ProofDescriptor extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ApplyTo.
+     *
+     * @param response the argument of type {@code RequestSecurityTokenResponse}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.ProofDescriptor.ApplyTo" target="_top">.NET documentation</a>
+     */
     public void ApplyTo(RequestSecurityTokenResponse response) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -167,6 +177,13 @@ public class ProofDescriptor extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property KeyIdentifier.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.ProofDescriptor.KeyIdentifier" target="_top">.NET documentation</a>
+     */
     public SecurityKeyIdentifier getKeyIdentifier() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

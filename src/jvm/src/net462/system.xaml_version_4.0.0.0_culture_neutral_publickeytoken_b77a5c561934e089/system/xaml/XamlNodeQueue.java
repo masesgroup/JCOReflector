@@ -100,7 +100,10 @@ public class XamlNodeQueue extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XamlNodeQueue(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class XamlNodeQueue extends NetObject  {
     public XamlNodeQueue() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param schemaContext the argument of type {@code XamlSchemaContext}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlNodeQueue.-ctor" target="_top">.NET documentation</a>
+     */
     public XamlNodeQueue(XamlSchemaContext schemaContext) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +180,13 @@ public class XamlNodeQueue extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsEmpty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlNodeQueue.IsEmpty" target="_top">.NET documentation</a>
+     */
     public boolean getIsEmpty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +201,13 @@ public class XamlNodeQueue extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Count.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlNodeQueue.Count" target="_top">.NET documentation</a>
+     */
     public int getCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +248,13 @@ public class XamlNodeQueue extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Writer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlNodeQueue.Writer" target="_top">.NET documentation</a>
+     */
     public XamlWriter getWriter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

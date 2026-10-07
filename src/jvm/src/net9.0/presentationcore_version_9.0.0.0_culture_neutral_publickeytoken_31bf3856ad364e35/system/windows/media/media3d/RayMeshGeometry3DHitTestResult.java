@@ -101,7 +101,10 @@ public class RayMeshGeometry3DHitTestResult extends system.windows.media.media3d
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RayMeshGeometry3DHitTestResult(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class RayMeshGeometry3DHitTestResult extends system.windows.media.media3d
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property VertexWeight1.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.RayMeshGeometry3DHitTestResult.VertexWeight1" target="_top">.NET documentation</a>
+     */
     public double getVertexWeight1() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +210,13 @@ public class RayMeshGeometry3DHitTestResult extends system.windows.media.media3d
         }
     }
 
+    /**
+     * Gets the value of the .NET property VertexWeight2.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.RayMeshGeometry3DHitTestResult.VertexWeight2" target="_top">.NET documentation</a>
+     */
     public double getVertexWeight2() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +257,13 @@ public class RayMeshGeometry3DHitTestResult extends system.windows.media.media3d
         }
     }
 
+    /**
+     * Gets the value of the .NET property VertexWeight3.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.RayMeshGeometry3DHitTestResult.VertexWeight3" target="_top">.NET documentation</a>
+     */
     public double getVertexWeight3() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +304,13 @@ public class RayMeshGeometry3DHitTestResult extends system.windows.media.media3d
         }
     }
 
+    /**
+     * Gets the value of the .NET property VertexIndex1.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.RayMeshGeometry3DHitTestResult.VertexIndex1" target="_top">.NET documentation</a>
+     */
     public int getVertexIndex1() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +351,13 @@ public class RayMeshGeometry3DHitTestResult extends system.windows.media.media3d
         }
     }
 
+    /**
+     * Gets the value of the .NET property VertexIndex2.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.RayMeshGeometry3DHitTestResult.VertexIndex2" target="_top">.NET documentation</a>
+     */
     public int getVertexIndex2() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -360,6 +398,13 @@ public class RayMeshGeometry3DHitTestResult extends system.windows.media.media3d
         }
     }
 
+    /**
+     * Gets the value of the .NET property VertexIndex3.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.RayMeshGeometry3DHitTestResult.VertexIndex3" target="_top">.NET documentation</a>
+     */
     public int getVertexIndex3() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -400,6 +445,13 @@ public class RayMeshGeometry3DHitTestResult extends system.windows.media.media3d
         }
     }
 
+    /**
+     * Gets the value of the .NET property MeshHit.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.RayMeshGeometry3DHitTestResult.MeshHit" target="_top">.NET documentation</a>
+     */
     public MeshGeometry3D getMeshHit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -103,7 +103,10 @@ public class CompositionBatch extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CompositionBatch(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,17 @@ public class CompositionBatch extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.CompositionBatch.-ctor" target="_top">.NET documentation</a>
+     */
     public CompositionBatch() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +174,20 @@ public class CompositionBatch extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param partsToAdd the argument of type {@code IEnumerable_1}
+     * @param partsToRemove the argument of type {@code IEnumerable_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.CompositionBatch.-ctor" target="_top">.NET documentation</a>
+     */
     public CompositionBatch(IEnumerable_1 partsToAdd, IEnumerable_1 partsToRemove) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +202,20 @@ public class CompositionBatch extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AddExport.
+     *
+     * @param export the argument of type {@code Export}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.CompositionBatch.AddExport" target="_top">.NET documentation</a>
+     */
     public ComposablePart AddExport(Export export) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +231,16 @@ public class CompositionBatch extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddPart.
+     *
+     * @param part the argument of type {@code ComposablePart}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.CompositionBatch.AddPart" target="_top">.NET documentation</a>
+     */
     public void AddPart(ComposablePart part) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +251,16 @@ public class CompositionBatch extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemovePart.
+     *
+     * @param part the argument of type {@code ComposablePart}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.CompositionBatch.RemovePart" target="_top">.NET documentation</a>
+     */
     public void RemovePart(ComposablePart part) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +275,14 @@ public class CompositionBatch extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PartsToAdd.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.CompositionBatch.PartsToAdd" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getPartsToAdd() throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +298,14 @@ public class CompositionBatch extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PartsToRemove.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.CompositionBatch.PartsToRemove" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getPartsToRemove() throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

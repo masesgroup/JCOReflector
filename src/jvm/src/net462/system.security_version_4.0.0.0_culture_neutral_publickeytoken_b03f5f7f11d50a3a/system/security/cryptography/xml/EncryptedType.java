@@ -104,7 +104,10 @@ public class EncryptedType extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EncryptedType(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,13 @@ public class EncryptedType extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetXml.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.EncryptedType.GetXml" target="_top">.NET documentation</a>
+     */
     public XmlElement GetXml() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +182,14 @@ public class EncryptedType extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddProperty.
+     *
+     * @param ep the argument of type {@code EncryptionProperty}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.EncryptedType.AddProperty" target="_top">.NET documentation</a>
+     */
     public void AddProperty(EncryptionProperty ep) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +200,13 @@ public class EncryptedType extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LoadXml.
+     *
+     * @param value the argument of type {@code XmlElement}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.EncryptedType.LoadXml" target="_top">.NET documentation</a>
+     */
     public void LoadXml(XmlElement value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +221,13 @@ public class EncryptedType extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CipherData.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.EncryptedType.CipherData" target="_top">.NET documentation</a>
+     */
     public CipherData getCipherData() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +243,14 @@ public class EncryptedType extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CipherData.
+     *
+     * @param CipherData the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.EncryptedType.CipherData" target="_top">.NET documentation</a>
+     */
     public void setCipherData(CipherData CipherData) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +261,13 @@ public class EncryptedType extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EncryptionMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.EncryptedType.EncryptionMethod" target="_top">.NET documentation</a>
+     */
     public EncryptionMethod getEncryptionMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +283,13 @@ public class EncryptedType extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EncryptionMethod.
+     *
+     * @param EncryptionMethod the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.EncryptedType.EncryptionMethod" target="_top">.NET documentation</a>
+     */
     public void setEncryptionMethod(EncryptionMethod EncryptionMethod) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +300,13 @@ public class EncryptedType extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EncryptionProperties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.EncryptedType.EncryptionProperties" target="_top">.NET documentation</a>
+     */
     public EncryptionPropertyCollection getEncryptionProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +322,13 @@ public class EncryptedType extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeyInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.EncryptedType.KeyInfo" target="_top">.NET documentation</a>
+     */
     public KeyInfo getKeyInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +344,13 @@ public class EncryptedType extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeyInfo.
+     *
+     * @param KeyInfo the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.EncryptedType.KeyInfo" target="_top">.NET documentation</a>
+     */
     public void setKeyInfo(KeyInfo KeyInfo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +361,13 @@ public class EncryptedType extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Encoding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.EncryptedType.Encoding" target="_top">.NET documentation</a>
+     */
     public java.lang.String getEncoding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +382,13 @@ public class EncryptedType extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Encoding.
+     *
+     * @param Encoding the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.EncryptedType.Encoding" target="_top">.NET documentation</a>
+     */
     public void setEncoding(java.lang.String Encoding) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +399,13 @@ public class EncryptedType extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Id.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.EncryptedType.Id" target="_top">.NET documentation</a>
+     */
     public java.lang.String getId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -324,6 +420,13 @@ public class EncryptedType extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Id.
+     *
+     * @param Id the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.EncryptedType.Id" target="_top">.NET documentation</a>
+     */
     public void setId(java.lang.String Id) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -334,6 +437,13 @@ public class EncryptedType extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MimeType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.EncryptedType.MimeType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMimeType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +458,13 @@ public class EncryptedType extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MimeType.
+     *
+     * @param MimeType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.EncryptedType.MimeType" target="_top">.NET documentation</a>
+     */
     public void setMimeType(java.lang.String MimeType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -358,6 +475,13 @@ public class EncryptedType extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Type.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.EncryptedType.Type" target="_top">.NET documentation</a>
+     */
     public java.lang.String getType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -372,6 +496,13 @@ public class EncryptedType extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Type.
+     *
+     * @param Type the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.EncryptedType.Type" target="_top">.NET documentation</a>
+     */
     public void setType(java.lang.String Type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

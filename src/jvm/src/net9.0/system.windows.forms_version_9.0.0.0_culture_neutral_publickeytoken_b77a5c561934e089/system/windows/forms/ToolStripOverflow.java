@@ -103,7 +103,10 @@ public class ToolStripOverflow extends system.windows.forms.ToolStripDropDown  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ToolStripOverflow(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,29 @@ public class ToolStripOverflow extends system.windows.forms.ToolStripDropDown  {
     public ToolStripOverflow() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param parentItem the argument of type {@code ToolStripItem}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripOverflow.-ctor" target="_top">.NET documentation</a>
+     */
     public ToolStripOverflow(ToolStripItem parentItem) throws Throwable, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.threading.ThreadStateException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +194,22 @@ public class ToolStripOverflow extends system.windows.forms.ToolStripDropDown  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetPreferredSize.
+     *
+     * @param constrainingSize the argument of type {@code Size}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripOverflow.GetPreferredSize" target="_top">.NET documentation</a>
+     */
     public Size GetPreferredSize(Size constrainingSize) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

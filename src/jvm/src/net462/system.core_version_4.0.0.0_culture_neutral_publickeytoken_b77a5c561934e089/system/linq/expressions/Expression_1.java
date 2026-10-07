@@ -104,7 +104,10 @@ public class Expression_1<TDelegate extends IJCOBridgeReflected> extends system.
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Expression_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,23 @@ public class Expression_1<TDelegate extends IJCOBridgeReflected> extends system.
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Update.
+     *
+     * @param body the argument of type {@code Expression}
+     * @param parameters the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression-1.Update" target="_top">.NET documentation</a>
+     */
     public Expression_1 Update(Expression body, IEnumerable_1 parameters) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +194,23 @@ public class Expression_1<TDelegate extends IJCOBridgeReflected> extends system.
         }
     }
 
+    /**
+     * Invokes the .NET member CompileNewExpression_1.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression-1.CompileNewExpression_1" target="_top">.NET documentation</a>
+     */
     public TDelegate CompileNewExpression_1() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.NotImplementedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.collections.generic.KeyNotFoundException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +225,22 @@ public class Expression_1<TDelegate extends IJCOBridgeReflected> extends system.
         }
     }
 
+    /**
+     * Invokes the .NET member CompileNewExpression_1.
+     *
+     * @param preferInterpretation the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression-1.CompileNewExpression_1" target="_top">.NET documentation</a>
+     */
     public TDelegate CompileNewExpression_1(boolean preferInterpretation) throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +255,24 @@ public class Expression_1<TDelegate extends IJCOBridgeReflected> extends system.
         }
     }
 
+    /**
+     * Invokes the .NET member CompileNewExpression_1.
+     *
+     * @param debugInfoGenerator the argument of type {@code DebugInfoGenerator}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression-1.CompileNewExpression_1" target="_top">.NET documentation</a>
+     */
     public TDelegate CompileNewExpression_1(DebugInfoGenerator debugInfoGenerator) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.collections.generic.KeyNotFoundException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

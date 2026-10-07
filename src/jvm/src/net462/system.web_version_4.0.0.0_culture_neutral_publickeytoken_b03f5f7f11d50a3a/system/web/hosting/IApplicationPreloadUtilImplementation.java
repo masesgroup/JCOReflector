@@ -98,7 +98,10 @@ public class IApplicationPreloadUtilImplementation extends NetObject implements 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IApplicationPreloadUtilImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,16 @@ public class IApplicationPreloadUtilImplementation extends NetObject implements 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetApplicationPreloadInfo.
+     *
+     * @param context the argument of type {@code java.lang.String}
+     * @param enabled the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicBoolean>}
+     * @param startupObjType the argument of type {@code JCORefOut}
+     * @param parametersForStartupObj the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.IApplicationPreloadUtil.GetApplicationPreloadInfo" target="_top">.NET documentation</a>
+     */
     public void GetApplicationPreloadInfo(java.lang.String context, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> enabled, JCORefOut startupObjType, JCORefOut parametersForStartupObj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -150,6 +163,15 @@ public class IApplicationPreloadUtilImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member ReportApplicationPreloadFailure.
+     *
+     * @param context the argument of type {@code java.lang.String}
+     * @param errorCode the argument of type {@code int}
+     * @param errorMessage the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.IApplicationPreloadUtil.ReportApplicationPreloadFailure" target="_top">.NET documentation</a>
+     */
     public void ReportApplicationPreloadFailure(java.lang.String context, int errorCode, java.lang.String errorMessage) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

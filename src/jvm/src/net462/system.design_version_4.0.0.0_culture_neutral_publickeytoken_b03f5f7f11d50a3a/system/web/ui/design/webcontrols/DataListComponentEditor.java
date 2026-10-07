@@ -99,7 +99,10 @@ public class DataListComponentEditor extends system.web.ui.design.webcontrols.Ba
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataListComponentEditor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class DataListComponentEditor extends system.web.ui.design.webcontrols.Ba
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebControls.DataListComponentEditor.-ctor" target="_top">.NET documentation</a>
+     */
     public DataListComponentEditor() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,13 @@ public class DataListComponentEditor extends system.web.ui.design.webcontrols.Ba
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param initialPage the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebControls.DataListComponentEditor.-ctor" target="_top">.NET documentation</a>
+     */
     public DataListComponentEditor(int initialPage) throws Throwable {
         try {
             // add reference to assemblyName.dll file

@@ -105,7 +105,10 @@ public class RowUpdatedEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RowUpdatedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,25 @@ public class RowUpdatedEventArgs extends system.EventArgs  {
     public RowUpdatedEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param dataRow the argument of type {@code DataRow}
+     * @param command the argument of type {@code IDbCommand}
+     * @param statementType the argument of type {@code StatementType}
+     * @param tableMapping the argument of type {@code DataTableMapping}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.RowUpdatedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public RowUpdatedEventArgs(DataRow dataRow, IDbCommand command, StatementType statementType, DataTableMapping tableMapping) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +192,15 @@ public class RowUpdatedEventArgs extends system.EventArgs  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CopyToRows.
+     *
+     * @param array the argument of type {@code DataRow[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.RowUpdatedEventArgs.CopyToRows" target="_top">.NET documentation</a>
+     */
     public void CopyToRows(DataRow[] array) throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +211,16 @@ public class RowUpdatedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Invokes the .NET member CopyToRows.
+     *
+     * @param array the argument of type {@code DataRow[]}
+     * @param arrayIndex the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.RowUpdatedEventArgs.CopyToRows" target="_top">.NET documentation</a>
+     */
     public void CopyToRows(DataRow[] array, int arrayIndex) throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +235,13 @@ public class RowUpdatedEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RecordsAffected.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.RowUpdatedEventArgs.RecordsAffected" target="_top">.NET documentation</a>
+     */
     public int getRecordsAffected() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +282,13 @@ public class RowUpdatedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RowCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.RowUpdatedEventArgs.RowCount" target="_top">.NET documentation</a>
+     */
     public int getRowCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +329,13 @@ public class RowUpdatedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TableMapping.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.RowUpdatedEventArgs.TableMapping" target="_top">.NET documentation</a>
+     */
     public DataTableMapping getTableMapping() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +351,13 @@ public class RowUpdatedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Row.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.RowUpdatedEventArgs.Row" target="_top">.NET documentation</a>
+     */
     public DataRow getRow() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +373,13 @@ public class RowUpdatedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Command.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.RowUpdatedEventArgs.Command" target="_top">.NET documentation</a>
+     */
     public IDbCommand getCommand() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -319,6 +395,13 @@ public class RowUpdatedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StatementType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.RowUpdatedEventArgs.StatementType" target="_top">.NET documentation</a>
+     */
     public StatementType getStatementType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -334,6 +417,13 @@ public class RowUpdatedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Status.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.RowUpdatedEventArgs.Status" target="_top">.NET documentation</a>
+     */
     public UpdateStatus getStatus() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -349,6 +439,22 @@ public class RowUpdatedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Status.
+     *
+     * @param Status the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.RowUpdatedEventArgs.Status" target="_top">.NET documentation</a>
+     */
     public void setStatus(UpdateStatus Status) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -359,6 +465,13 @@ public class RowUpdatedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Errors.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.RowUpdatedEventArgs.Errors" target="_top">.NET documentation</a>
+     */
     public NetException getErrors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -374,6 +487,13 @@ public class RowUpdatedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Errors.
+     *
+     * @param Errors the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.RowUpdatedEventArgs.Errors" target="_top">.NET documentation</a>
+     */
     public void setErrors(NetException Errors) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

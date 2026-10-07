@@ -102,7 +102,10 @@ public class SendSettings extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SendSettings(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class SendSettings extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.SendSettings.-ctor" target="_top">.NET documentation</a>
+     */
     public SendSettings() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +176,13 @@ public class SendSettings extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsOneWay.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.SendSettings.IsOneWay" target="_top">.NET documentation</a>
+     */
     public boolean getIsOneWay() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +197,13 @@ public class SendSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsOneWay.
+     *
+     * @param IsOneWay the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.SendSettings.IsOneWay" target="_top">.NET documentation</a>
+     */
     public void setIsOneWay(boolean IsOneWay) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +214,13 @@ public class SendSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequirePersistBeforeSend.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.SendSettings.RequirePersistBeforeSend" target="_top">.NET documentation</a>
+     */
     public boolean getRequirePersistBeforeSend() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +235,13 @@ public class SendSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RequirePersistBeforeSend.
+     *
+     * @param RequirePersistBeforeSend the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.SendSettings.RequirePersistBeforeSend" target="_top">.NET documentation</a>
+     */
     public void setRequirePersistBeforeSend(boolean RequirePersistBeforeSend) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +252,13 @@ public class SendSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProtectionLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.SendSettings.ProtectionLevel" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getProtectionLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +274,13 @@ public class SendSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProtectionLevel.
+     *
+     * @param ProtectionLevel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.SendSettings.ProtectionLevel" target="_top">.NET documentation</a>
+     */
     public void setProtectionLevel(Nullable_1 ProtectionLevel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +291,13 @@ public class SendSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TokenImpersonationLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.SendSettings.TokenImpersonationLevel" target="_top">.NET documentation</a>
+     */
     public TokenImpersonationLevel getTokenImpersonationLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +313,13 @@ public class SendSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TokenImpersonationLevel.
+     *
+     * @param TokenImpersonationLevel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.SendSettings.TokenImpersonationLevel" target="_top">.NET documentation</a>
+     */
     public void setTokenImpersonationLevel(TokenImpersonationLevel TokenImpersonationLevel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +330,13 @@ public class SendSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Endpoint.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.SendSettings.Endpoint" target="_top">.NET documentation</a>
+     */
     public Endpoint getEndpoint() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +352,13 @@ public class SendSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Endpoint.
+     *
+     * @param Endpoint the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.SendSettings.Endpoint" target="_top">.NET documentation</a>
+     */
     public void setEndpoint(Endpoint Endpoint) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +369,13 @@ public class SendSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EndpointConfigurationName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.SendSettings.EndpointConfigurationName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getEndpointConfigurationName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +390,13 @@ public class SendSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EndpointConfigurationName.
+     *
+     * @param EndpointConfigurationName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.SendSettings.EndpointConfigurationName" target="_top">.NET documentation</a>
+     */
     public void setEndpointConfigurationName(java.lang.String EndpointConfigurationName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -314,6 +407,13 @@ public class SendSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OwnerDisplayName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.SendSettings.OwnerDisplayName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getOwnerDisplayName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -328,6 +428,13 @@ public class SendSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OwnerDisplayName.
+     *
+     * @param OwnerDisplayName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.SendSettings.OwnerDisplayName" target="_top">.NET documentation</a>
+     */
     public void setOwnerDisplayName(java.lang.String OwnerDisplayName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -338,6 +445,13 @@ public class SendSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EndpointAddress.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.SendSettings.EndpointAddress" target="_top">.NET documentation</a>
+     */
     public Uri getEndpointAddress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -353,6 +467,13 @@ public class SendSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EndpointAddress.
+     *
+     * @param EndpointAddress the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.SendSettings.EndpointAddress" target="_top">.NET documentation</a>
+     */
     public void setEndpointAddress(Uri EndpointAddress) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

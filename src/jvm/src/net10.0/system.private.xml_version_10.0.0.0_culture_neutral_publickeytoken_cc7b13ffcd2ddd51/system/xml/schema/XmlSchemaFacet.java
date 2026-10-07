@@ -99,7 +99,10 @@ public class XmlSchemaFacet extends system.xml.schema.XmlSchemaAnnotated  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlSchemaFacet(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,13 @@ public class XmlSchemaFacet extends system.xml.schema.XmlSchemaAnnotated  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsFixed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaFacet.IsFixed" target="_top">.NET documentation</a>
+     */
     public boolean getIsFixed() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +180,13 @@ public class XmlSchemaFacet extends system.xml.schema.XmlSchemaAnnotated  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsFixed.
+     *
+     * @param IsFixed the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaFacet.IsFixed" target="_top">.NET documentation</a>
+     */
     public void setIsFixed(boolean IsFixed) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +197,13 @@ public class XmlSchemaFacet extends system.xml.schema.XmlSchemaAnnotated  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaFacet.Value" target="_top">.NET documentation</a>
+     */
     public java.lang.String getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +218,13 @@ public class XmlSchemaFacet extends system.xml.schema.XmlSchemaAnnotated  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Value.
+     *
+     * @param Value the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaFacet.Value" target="_top">.NET documentation</a>
+     */
     public void setValue(java.lang.String Value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -98,7 +98,10 @@ public class IObserver_1Implementation<T extends IJCOBridgeReflected> extends Ne
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IObserver_1Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,12 @@ public class IObserver_1Implementation<T extends IJCOBridgeReflected> extends Ne
 
     // Methods section
     
+    /**
+     * Invokes the .NET member OnCompleted.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IObserver-1.OnCompleted" target="_top">.NET documentation</a>
+     */
     public void OnCompleted() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -150,6 +159,13 @@ public class IObserver_1Implementation<T extends IJCOBridgeReflected> extends Ne
         }
     }
 
+    /**
+     * Invokes the .NET member OnError.
+     *
+     * @param error the argument of type {@code NetException}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IObserver-1.OnError" target="_top">.NET documentation</a>
+     */
     public void OnError(NetException error) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -160,6 +176,13 @@ public class IObserver_1Implementation<T extends IJCOBridgeReflected> extends Ne
         }
     }
 
+    /**
+     * Invokes the .NET member OnNext.
+     *
+     * @param value the argument of type {@code T}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IObserver-1.OnNext" target="_top">.NET documentation</a>
+     */
     public void OnNext(T value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

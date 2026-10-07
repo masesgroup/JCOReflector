@@ -103,7 +103,10 @@ public class FrozenSet extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FrozenSet(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,25 @@ public class FrozenSet extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ToFrozenSet.
+     *
+     * @param <T> the type of the generic argument T
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Frozen.FrozenSet.ToFrozenSet" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> FrozenSet_1 ToFrozenSet(IEnumerable_1 source, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

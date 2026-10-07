@@ -102,7 +102,10 @@ public class ITypeDescriptorFilterServiceImplementation extends NetObject implem
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ITypeDescriptorFilterServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,15 @@ public class ITypeDescriptorFilterServiceImplementation extends NetObject implem
 
     // Methods section
     
+    /**
+     * Invokes the .NET member FilterAttributes.
+     *
+     * @param component the argument of type {@code IComponent}
+     * @param attributes the argument of type {@code IDictionary}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ITypeDescriptorFilterService.FilterAttributes" target="_top">.NET documentation</a>
+     */
     public boolean FilterAttributes(IComponent component, IDictionary attributes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -158,6 +170,15 @@ public class ITypeDescriptorFilterServiceImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Invokes the .NET member FilterEvents.
+     *
+     * @param component the argument of type {@code IComponent}
+     * @param events the argument of type {@code IDictionary}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ITypeDescriptorFilterService.FilterEvents" target="_top">.NET documentation</a>
+     */
     public boolean FilterEvents(IComponent component, IDictionary events) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +193,15 @@ public class ITypeDescriptorFilterServiceImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Invokes the .NET member FilterProperties.
+     *
+     * @param component the argument of type {@code IComponent}
+     * @param properties the argument of type {@code IDictionary}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ITypeDescriptorFilterService.FilterProperties" target="_top">.NET documentation</a>
+     */
     public boolean FilterProperties(IComponent component, IDictionary properties) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

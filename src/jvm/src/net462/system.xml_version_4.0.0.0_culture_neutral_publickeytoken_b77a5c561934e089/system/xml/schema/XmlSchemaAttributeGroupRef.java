@@ -100,7 +100,10 @@ public class XmlSchemaAttributeGroupRef extends system.xml.schema.XmlSchemaAnnot
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlSchemaAttributeGroupRef(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class XmlSchemaAttributeGroupRef extends system.xml.schema.XmlSchemaAnnot
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaAttributeGroupRef.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlSchemaAttributeGroupRef() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class XmlSchemaAttributeGroupRef extends system.xml.schema.XmlSchemaAnnot
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RefName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaAttributeGroupRef.RefName" target="_top">.NET documentation</a>
+     */
     public XmlQualifiedName getRefName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +196,13 @@ public class XmlSchemaAttributeGroupRef extends system.xml.schema.XmlSchemaAnnot
         }
     }
 
+    /**
+     * Sets the value of the .NET property RefName.
+     *
+     * @param RefName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaAttributeGroupRef.RefName" target="_top">.NET documentation</a>
+     */
     public void setRefName(XmlQualifiedName RefName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

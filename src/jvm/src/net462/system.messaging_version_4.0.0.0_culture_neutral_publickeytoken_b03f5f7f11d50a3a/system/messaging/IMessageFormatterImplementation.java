@@ -101,7 +101,10 @@ public class IMessageFormatterImplementation extends NetObject implements IMessa
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IMessageFormatterImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,14 @@ public class IMessageFormatterImplementation extends NetObject implements IMessa
 
     // Methods section
     
+    /**
+     * Invokes the .NET member CanRead.
+     *
+     * @param message the argument of type {@code Message}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.IMessageFormatter.CanRead" target="_top">.NET documentation</a>
+     */
     public boolean CanRead(Message message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -157,6 +168,13 @@ public class IMessageFormatterImplementation extends NetObject implements IMessa
         }
     }
 
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.IMessageFormatter.Clone" target="_top">.NET documentation</a>
+     */
     public NetObject Clone() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +190,14 @@ public class IMessageFormatterImplementation extends NetObject implements IMessa
         }
     }
 
+    /**
+     * Invokes the .NET member Read.
+     *
+     * @param message the argument of type {@code Message}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.IMessageFormatter.Read" target="_top">.NET documentation</a>
+     */
     public NetObject Read(Message message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +213,14 @@ public class IMessageFormatterImplementation extends NetObject implements IMessa
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param message the argument of type {@code Message}
+     * @param obj the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.IMessageFormatter.Write" target="_top">.NET documentation</a>
+     */
     public void Write(Message message, NetObject obj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -109,7 +109,10 @@ public class TypeLibConverter extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TypeLibConverter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,12 @@ public class TypeLibConverter extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.TypeLibConverter.-ctor" target="_top">.NET documentation</a>
+     */
     public TypeLibConverter() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +179,31 @@ public class TypeLibConverter extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetPrimaryInteropAssembly.
+     *
+     * @param g the argument of type {@code Guid}
+     * @param major the argument of type {@code int}
+     * @param minor the argument of type {@code int}
+     * @param lcid the argument of type {@code int}
+     * @param asmName the argument of type {@code JCORefOut}
+     * @param asmCodeBase the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.TypeLibConverter.GetPrimaryInteropAssembly" target="_top">.NET documentation</a>
+     */
     public boolean GetPrimaryInteropAssembly(Guid g, int major, int minor, int lcid, JCORefOut asmName, JCORefOut asmCodeBase) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +218,17 @@ public class TypeLibConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertAssemblyToTypeLib.
+     *
+     * @param assembly the argument of type {@code Assembly}
+     * @param strTypeLibName the argument of type {@code java.lang.String}
+     * @param flags the argument of type {@code TypeLibExporterFlags}
+     * @param notifySink the argument of type {@code ITypeLibExporterNotifySink}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.TypeLibConverter.ConvertAssemblyToTypeLib" target="_top">.NET documentation</a>
+     */
     public NetObject ConvertAssemblyToTypeLib(Assembly assembly, java.lang.String strTypeLibName, TypeLibExporterFlags flags, ITypeLibExporterNotifySink notifySink) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +244,35 @@ public class TypeLibConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertTypeLibToAssembly.
+     *
+     * @param typeLib the argument of type {@code NetObject}
+     * @param asmFileName the argument of type {@code java.lang.String}
+     * @param flags the argument of type {@code int}
+     * @param notifySink the argument of type {@code ITypeLibImporterNotifySink}
+     * @param publicKey the argument of type {@code byte[]}
+     * @param keyPair the argument of type {@code StrongNameKeyPair}
+     * @param unsafeInterfaces the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.TypeLibConverter.ConvertTypeLibToAssembly" target="_top">.NET documentation</a>
+     */
     public AssemblyBuilder ConvertTypeLibToAssembly(NetObject typeLib, java.lang.String asmFileName, int flags, ITypeLibImporterNotifySink notifySink, byte[] publicKey, StrongNameKeyPair keyPair, boolean unsafeInterfaces) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotImplementedException, system.FormatException, system.TypeLoadException, system.security.SecurityException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +288,35 @@ public class TypeLibConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertTypeLibToAssembly.
+     *
+     * @param dupParam0 the argument of type {@code NetObject}
+     * @param dupParam1 the argument of type {@code java.lang.String}
+     * @param dupParam2 the argument of type {@code int}
+     * @param dupParam3 the argument of type {@code ITypeLibImporterNotifySink}
+     * @param dupParam4 the argument of type {@code JCORefOut}
+     * @param dupParam5 the argument of type {@code StrongNameKeyPair}
+     * @param dupParam6 the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.TypeLibConverter.ConvertTypeLibToAssembly" target="_top">.NET documentation</a>
+     */
     public AssemblyBuilder ConvertTypeLibToAssembly(NetObject dupParam0, java.lang.String dupParam1, int dupParam2, ITypeLibImporterNotifySink dupParam3, JCORefOut dupParam4, StrongNameKeyPair dupParam5, boolean dupParam6) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotImplementedException, system.FormatException, system.TypeLoadException, system.security.SecurityException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +332,42 @@ public class TypeLibConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertTypeLibToAssembly.
+     *
+     * @param typeLib the argument of type {@code NetObject}
+     * @param asmFileName the argument of type {@code java.lang.String}
+     * @param flags the argument of type {@code TypeLibImporterFlags}
+     * @param notifySink the argument of type {@code ITypeLibImporterNotifySink}
+     * @param publicKey the argument of type {@code byte[]}
+     * @param keyPair the argument of type {@code StrongNameKeyPair}
+     * @param asmNamespace the argument of type {@code java.lang.String}
+     * @param asmVersion the argument of type {@code Version}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.TypeLibConverter.ConvertTypeLibToAssembly" target="_top">.NET documentation</a>
+     */
     public AssemblyBuilder ConvertTypeLibToAssembly(NetObject typeLib, java.lang.String asmFileName, TypeLibImporterFlags flags, ITypeLibImporterNotifySink notifySink, byte[] publicKey, StrongNameKeyPair keyPair, java.lang.String asmNamespace, Version asmVersion) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotImplementedException, system.FormatException, system.TypeLoadException, system.security.SecurityException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +383,42 @@ public class TypeLibConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertTypeLibToAssembly.
+     *
+     * @param dupParam0 the argument of type {@code NetObject}
+     * @param dupParam1 the argument of type {@code java.lang.String}
+     * @param dupParam2 the argument of type {@code TypeLibImporterFlags}
+     * @param dupParam3 the argument of type {@code ITypeLibImporterNotifySink}
+     * @param dupParam4 the argument of type {@code JCORefOut}
+     * @param dupParam5 the argument of type {@code StrongNameKeyPair}
+     * @param dupParam6 the argument of type {@code java.lang.String}
+     * @param dupParam7 the argument of type {@code Version}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.TypeLibConverter.ConvertTypeLibToAssembly" target="_top">.NET documentation</a>
+     */
     public AssemblyBuilder ConvertTypeLibToAssembly(NetObject dupParam0, java.lang.String dupParam1, TypeLibImporterFlags dupParam2, ITypeLibImporterNotifySink dupParam3, JCORefOut dupParam4, StrongNameKeyPair dupParam5, java.lang.String dupParam6, Version dupParam7) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotImplementedException, system.FormatException, system.TypeLoadException, system.security.SecurityException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

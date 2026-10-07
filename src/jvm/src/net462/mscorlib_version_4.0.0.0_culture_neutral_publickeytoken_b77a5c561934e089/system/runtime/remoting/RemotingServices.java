@@ -112,7 +112,10 @@ public class RemotingServices extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RemotingServices(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -165,6 +168,21 @@ public class RemotingServices extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Disconnect.
+     *
+     * @param obj the argument of type {@code MarshalByRefObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingServices.Disconnect" target="_top">.NET documentation</a>
+     */
     public static boolean Disconnect(MarshalByRefObject obj) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -179,6 +197,19 @@ public class RemotingServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsMethodOverloaded.
+     *
+     * @param msg the argument of type {@code IMethodMessage}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingServices.IsMethodOverloaded" target="_top">.NET documentation</a>
+     */
     public static boolean IsMethodOverloaded(IMethodMessage msg) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -193,6 +224,14 @@ public class RemotingServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsObjectOutOfAppDomain.
+     *
+     * @param tp the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingServices.IsObjectOutOfAppDomain" target="_top">.NET documentation</a>
+     */
     public static boolean IsObjectOutOfAppDomain(NetObject tp) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -207,6 +246,17 @@ public class RemotingServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsObjectOutOfContext.
+     *
+     * @param tp the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingServices.IsObjectOutOfContext" target="_top">.NET documentation</a>
+     */
     public static boolean IsObjectOutOfContext(NetObject tp) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -221,6 +271,15 @@ public class RemotingServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsOneWay.
+     *
+     * @param method the argument of type {@code MethodBase}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingServices.IsOneWay" target="_top">.NET documentation</a>
+     */
     public static boolean IsOneWay(MethodBase method) throws Throwable, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -235,6 +294,14 @@ public class RemotingServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsTransparentProxy.
+     *
+     * @param proxy the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingServices.IsTransparentProxy" target="_top">.NET documentation</a>
+     */
     public static boolean IsTransparentProxy(NetObject proxy) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -249,6 +316,28 @@ public class RemotingServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Connect.
+     *
+     * @param classToProxy the argument of type {@code NetType}
+     * @param url the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingServices.Connect" target="_top">.NET documentation</a>
+     */
     public static NetObject Connect(NetType classToProxy, java.lang.String url) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.runtime.remoting.RemotingException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException, system.NotSupportedException, system.ApplicationException, system.OutOfMemoryException, system.FormatException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -264,6 +353,29 @@ public class RemotingServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Connect.
+     *
+     * @param classToProxy the argument of type {@code NetType}
+     * @param url the argument of type {@code java.lang.String}
+     * @param data the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingServices.Connect" target="_top">.NET documentation</a>
+     */
     public static NetObject Connect(NetType classToProxy, java.lang.String url, NetObject data) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.runtime.remoting.RemotingException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException, system.NotSupportedException, system.ApplicationException, system.OutOfMemoryException, system.FormatException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -279,6 +391,27 @@ public class RemotingServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetLifetimeService.
+     *
+     * @param obj the argument of type {@code MarshalByRefObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingServices.GetLifetimeService" target="_top">.NET documentation</a>
+     */
     public static NetObject GetLifetimeService(MarshalByRefObject obj) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -294,6 +427,30 @@ public class RemotingServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Unmarshal.
+     *
+     * @param objectRef the argument of type {@code ObjRef}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingServices.Unmarshal" target="_top">.NET documentation</a>
+     */
     public static NetObject Unmarshal(ObjRef objectRef) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.IndexOutOfRangeException, system.security.SecurityException, system.InvalidCastException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -309,6 +466,31 @@ public class RemotingServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Unmarshal.
+     *
+     * @param objectRef the argument of type {@code ObjRef}
+     * @param fRefine the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingServices.Unmarshal" target="_top">.NET documentation</a>
+     */
     public static NetObject Unmarshal(ObjRef objectRef, boolean fRefine) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.IndexOutOfRangeException, system.security.SecurityException, system.InvalidCastException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -324,6 +506,26 @@ public class RemotingServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethodBaseFromMethodMessage.
+     *
+     * @param msg the argument of type {@code IMethodMessage}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingServices.GetMethodBaseFromMethodMessage" target="_top">.NET documentation</a>
+     */
     public static MethodBase GetMethodBaseFromMethodMessage(IMethodMessage msg) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -339,6 +541,17 @@ public class RemotingServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEnvoyChainForProxy.
+     *
+     * @param obj the argument of type {@code MarshalByRefObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingServices.GetEnvoyChainForProxy" target="_top">.NET documentation</a>
+     */
     public static IMessageSink GetEnvoyChainForProxy(MarshalByRefObject obj) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -354,6 +567,29 @@ public class RemotingServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExecuteMessage.
+     *
+     * @param target the argument of type {@code MarshalByRefObject}
+     * @param reqMsg the argument of type {@code IMethodCallMessage}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingServices.ExecuteMessage" target="_top">.NET documentation</a>
+     */
     public static IMethodReturnMessage ExecuteMessage(MarshalByRefObject target, IMethodCallMessage reqMsg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.runtime.remoting.RemotingException, system.security.SecurityException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidCastException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -369,6 +605,15 @@ public class RemotingServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetObjRefForProxy.
+     *
+     * @param obj the argument of type {@code MarshalByRefObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingServices.GetObjRefForProxy" target="_top">.NET documentation</a>
+     */
     public static ObjRef GetObjRefForProxy(MarshalByRefObject obj) throws Throwable, system.runtime.remoting.RemotingException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -384,6 +629,24 @@ public class RemotingServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Marshal.
+     *
+     * @param Obj the argument of type {@code MarshalByRefObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingServices.Marshal" target="_top">.NET documentation</a>
+     */
     public static ObjRef Marshal(MarshalByRefObject Obj) throws Throwable, system.runtime.remoting.RemotingException, system.ArgumentNullException, system.OutOfMemoryException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -399,6 +662,25 @@ public class RemotingServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Marshal.
+     *
+     * @param Obj the argument of type {@code MarshalByRefObject}
+     * @param URI the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingServices.Marshal" target="_top">.NET documentation</a>
+     */
     public static ObjRef Marshal(MarshalByRefObject Obj, java.lang.String URI) throws Throwable, system.runtime.remoting.RemotingException, system.ArgumentNullException, system.OutOfMemoryException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -414,6 +696,26 @@ public class RemotingServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Marshal.
+     *
+     * @param Obj the argument of type {@code MarshalByRefObject}
+     * @param ObjURI the argument of type {@code java.lang.String}
+     * @param RequestedType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingServices.Marshal" target="_top">.NET documentation</a>
+     */
     public static ObjRef Marshal(MarshalByRefObject Obj, java.lang.String ObjURI, NetType RequestedType) throws Throwable, system.runtime.remoting.RemotingException, system.ArgumentNullException, system.OutOfMemoryException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -429,6 +731,14 @@ public class RemotingServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRealProxy.
+     *
+     * @param proxy the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingServices.GetRealProxy" target="_top">.NET documentation</a>
+     */
     public static RealProxy GetRealProxy(NetObject proxy) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -444,6 +754,14 @@ public class RemotingServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetObjectUri.
+     *
+     * @param obj the argument of type {@code MarshalByRefObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingServices.GetObjectUri" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetObjectUri(MarshalByRefObject obj) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -458,6 +776,14 @@ public class RemotingServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetSessionIdForMethodMessage.
+     *
+     * @param msg the argument of type {@code IMethodMessage}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingServices.GetSessionIdForMethodMessage" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetSessionIdForMethodMessage(IMethodMessage msg) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -472,6 +798,24 @@ public class RemotingServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetServerTypeForUri.
+     *
+     * @param URI the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingServices.GetServerTypeForUri" target="_top">.NET documentation</a>
+     */
     public static NetType GetServerTypeForUri(java.lang.String URI) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -487,6 +831,28 @@ public class RemotingServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetObjectData.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @param info the argument of type {@code SerializationInfo}
+     * @param context the argument of type {@code StreamingContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingServices.GetObjectData" target="_top">.NET documentation</a>
+     */
     public static void GetObjectData(NetObject obj, SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.runtime.remoting.RemotingException, system.OutOfMemoryException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.runtime.serialization.SerializationException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -497,6 +863,13 @@ public class RemotingServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LogRemotingStage.
+     *
+     * @param stage the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingServices.LogRemotingStage" target="_top">.NET documentation</a>
+     */
     public static void LogRemotingStage(int stage) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -507,6 +880,23 @@ public class RemotingServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetObjectUriForMarshal.
+     *
+     * @param obj the argument of type {@code MarshalByRefObject}
+     * @param uri the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingServices.SetObjectUriForMarshal" target="_top">.NET documentation</a>
+     */
     public static void SetObjectUriForMarshal(MarshalByRefObject obj, java.lang.String uri) throws Throwable, system.runtime.remoting.RemotingException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

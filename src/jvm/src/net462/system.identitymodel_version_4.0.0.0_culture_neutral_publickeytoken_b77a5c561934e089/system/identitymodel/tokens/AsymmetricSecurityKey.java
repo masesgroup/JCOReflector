@@ -103,7 +103,10 @@ public class AsymmetricSecurityKey extends system.identitymodel.tokens.SecurityK
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AsymmetricSecurityKey(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,13 @@ public class AsymmetricSecurityKey extends system.identitymodel.tokens.SecurityK
     
     // Methods section
     
+    /**
+     * Invokes the .NET member HasPrivateKey.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.AsymmetricSecurityKey.HasPrivateKey" target="_top">.NET documentation</a>
+     */
     public boolean HasPrivateKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +180,15 @@ public class AsymmetricSecurityKey extends system.identitymodel.tokens.SecurityK
         }
     }
 
+    /**
+     * Invokes the .NET member GetAsymmetricAlgorithm.
+     *
+     * @param algorithm the argument of type {@code java.lang.String}
+     * @param privateKey the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm" target="_top">.NET documentation</a>
+     */
     public AsymmetricAlgorithm GetAsymmetricAlgorithm(java.lang.String algorithm, boolean privateKey) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +204,14 @@ public class AsymmetricSecurityKey extends system.identitymodel.tokens.SecurityK
         }
     }
 
+    /**
+     * Invokes the .NET member GetSignatureDeformatter.
+     *
+     * @param algorithm the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.AsymmetricSecurityKey.GetSignatureDeformatter" target="_top">.NET documentation</a>
+     */
     public AsymmetricSignatureDeformatter GetSignatureDeformatter(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +227,14 @@ public class AsymmetricSecurityKey extends system.identitymodel.tokens.SecurityK
         }
     }
 
+    /**
+     * Invokes the .NET member GetSignatureFormatter.
+     *
+     * @param algorithm the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.AsymmetricSecurityKey.GetSignatureFormatter" target="_top">.NET documentation</a>
+     */
     public AsymmetricSignatureFormatter GetSignatureFormatter(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +250,14 @@ public class AsymmetricSecurityKey extends system.identitymodel.tokens.SecurityK
         }
     }
 
+    /**
+     * Invokes the .NET member GetHashAlgorithmForSignature.
+     *
+     * @param algorithm the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.AsymmetricSecurityKey.GetHashAlgorithmForSignature" target="_top">.NET documentation</a>
+     */
     public HashAlgorithm GetHashAlgorithmForSignature(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

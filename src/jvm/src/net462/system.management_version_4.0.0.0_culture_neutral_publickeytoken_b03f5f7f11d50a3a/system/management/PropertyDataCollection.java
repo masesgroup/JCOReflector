@@ -101,7 +101,10 @@ public class PropertyDataCollection extends NetObjectEnumerable  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PropertyDataCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,26 @@ public class PropertyDataCollection extends NetObjectEnumerable  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @param propertyType the argument of type {@code CimType}
+     * @param isArray the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.management.ManagementException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.PropertyDataCollection.Add" target="_top">.NET documentation</a>
+     */
     public void Add(java.lang.String propertyName, CimType propertyType, boolean isArray) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.FormatException, system.OverflowException, system.management.ManagementException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -166,6 +189,26 @@ public class PropertyDataCollection extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @param propertyValue the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.management.ManagementException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.PropertyDataCollection.Add" target="_top">.NET documentation</a>
+     */
     public void Add(java.lang.String propertyName, NetObject propertyValue) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.NotSupportedException, system.OverflowException, system.management.ManagementException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +219,27 @@ public class PropertyDataCollection extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @param propertyValue the argument of type {@code NetObject}
+     * @param propertyType the argument of type {@code CimType}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.management.ManagementException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.PropertyDataCollection.Add" target="_top">.NET documentation</a>
+     */
     public void Add(java.lang.String propertyName, NetObject propertyValue, CimType propertyType) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.NotSupportedException, system.OverflowException, system.management.ManagementException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +250,23 @@ public class PropertyDataCollection extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code Array}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.management.ManagementException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.PropertyDataCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(Array array, int index) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.management.ManagementException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +277,21 @@ public class PropertyDataCollection extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param propertyArray the argument of type {@code PropertyData[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.management.ManagementException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.PropertyDataCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(PropertyData[] propertyArray, int index) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.management.ManagementException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +302,27 @@ public class PropertyDataCollection extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.management.ManagementException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.PropertyDataCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(java.lang.String propertyName) throws Throwable, system.ObjectDisposedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.OverflowException, system.management.ManagementException, system.threading.WaitHandleCannotBeOpenedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.MulticastNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +337,13 @@ public class PropertyDataCollection extends NetObjectEnumerable  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsSynchronized.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.PropertyDataCollection.IsSynchronized" target="_top">.NET documentation</a>
+     */
     public boolean getIsSynchronized() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +358,24 @@ public class PropertyDataCollection extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Count.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.management.ManagementException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.PropertyDataCollection.Count" target="_top">.NET documentation</a>
+     */
     public int getCount() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.OverflowException, system.management.ManagementException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +416,13 @@ public class PropertyDataCollection extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SyncRoot.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.PropertyDataCollection.SyncRoot" target="_top">.NET documentation</a>
+     */
     public NetObject getSyncRoot() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

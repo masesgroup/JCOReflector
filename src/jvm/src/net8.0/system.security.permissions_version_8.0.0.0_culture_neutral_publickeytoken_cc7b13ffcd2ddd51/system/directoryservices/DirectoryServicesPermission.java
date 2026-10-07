@@ -103,7 +103,10 @@ public class DirectoryServicesPermission extends system.security.permissions.Res
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DirectoryServicesPermission(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,12 @@ public class DirectoryServicesPermission extends system.security.permissions.Res
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.DirectoryServicesPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public DirectoryServicesPermission() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +169,14 @@ public class DirectoryServicesPermission extends system.security.permissions.Res
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param permissionAccess the argument of type {@code DirectoryServicesPermissionAccess}
+     * @param path the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.DirectoryServicesPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public DirectoryServicesPermission(DirectoryServicesPermissionAccess permissionAccess, java.lang.String path) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +187,13 @@ public class DirectoryServicesPermission extends system.security.permissions.Res
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param permissionAccessEntries the argument of type {@code DirectoryServicesPermissionEntry[]}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.DirectoryServicesPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public DirectoryServicesPermission(DirectoryServicesPermissionEntry[] permissionAccessEntries) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +204,13 @@ public class DirectoryServicesPermission extends system.security.permissions.Res
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param state the argument of type {@code PermissionState}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.DirectoryServicesPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public DirectoryServicesPermission(PermissionState state) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -198,6 +229,13 @@ public class DirectoryServicesPermission extends system.security.permissions.Res
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PermissionEntries.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.DirectoryServicesPermission.PermissionEntries" target="_top">.NET documentation</a>
+     */
     public DirectoryServicesPermissionEntryCollection getPermissionEntries() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

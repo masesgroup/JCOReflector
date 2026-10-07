@@ -100,7 +100,10 @@ public class FunctionPrototype extends microsoft.jscript.ScriptFunction  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FunctionPrototype(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,28 @@ public class FunctionPrototype extends microsoft.jscript.ScriptFunction  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member apply.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @param thisarg the argument of type {@code NetObject}
+     * @param argArray the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.FunctionPrototype.apply" target="_top">.NET documentation</a>
+     */
     public static NetObject apply(NetObject thisob, NetObject thisarg, NetObject argArray) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.MissingMethodException, microsoft.jscript.vsa.JSVsaException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -170,6 +195,25 @@ public class FunctionPrototype extends microsoft.jscript.ScriptFunction  {
         }
     }
 
+    /**
+     * Invokes the .NET member call.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @param thisarg the argument of type {@code NetObject}
+     * @param args the argument of type {@code NetObject...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.FunctionPrototype.call" target="_top">.NET documentation</a>
+     */
     public static NetObject call(NetObject thisob, NetObject thisarg, NetObject... args) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -185,6 +229,15 @@ public class FunctionPrototype extends microsoft.jscript.ScriptFunction  {
         }
     }
 
+    /**
+     * Invokes the .NET member toString.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.FunctionPrototype.toString" target="_top">.NET documentation</a>
+     */
     public static java.lang.String toString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -203,6 +256,13 @@ public class FunctionPrototype extends microsoft.jscript.ScriptFunction  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property constructor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.FunctionPrototype.getconstructor" target="_top">.NET documentation</a>
+     */
     public static FunctionConstructor getconstructor() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

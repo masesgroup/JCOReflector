@@ -108,7 +108,10 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ToolLocationHelper(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -161,6 +164,32 @@ public class ToolLocationHelper extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetPlatformExtensionSDKLocations.
+     *
+     * @param targetPlatformIdentifier the argument of type {@code java.lang.String}
+     * @param targetPlatformVersion the argument of type {@code Version}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetPlatformExtensionSDKLocations" target="_top">.NET documentation</a>
+     */
     public static IDictionary_2 GetPlatformExtensionSDKLocations(java.lang.String targetPlatformIdentifier, Version targetPlatformVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.InvalidOperationException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -176,6 +205,34 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPlatformExtensionSDKLocations.
+     *
+     * @param diskRoots the argument of type {@code java.lang.String[]}
+     * @param registryRoot the argument of type {@code java.lang.String}
+     * @param targetPlatformIdentifier the argument of type {@code java.lang.String}
+     * @param targetPlatformVersion the argument of type {@code Version}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetPlatformExtensionSDKLocations" target="_top">.NET documentation</a>
+     */
     public static IDictionary_2 GetPlatformExtensionSDKLocations(java.lang.String[] diskRoots, java.lang.String registryRoot, java.lang.String targetPlatformIdentifier, Version targetPlatformVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -191,6 +248,34 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPlatformExtensionSDKLocations.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code java.lang.String}
+     * @param dupParam2 the argument of type {@code java.lang.String}
+     * @param dupParam3 the argument of type {@code Version}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetPlatformExtensionSDKLocations" target="_top">.NET documentation</a>
+     */
     public static IDictionary_2 GetPlatformExtensionSDKLocations(JCORefOut dupParam0, java.lang.String dupParam1, java.lang.String dupParam2, Version dupParam3) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -206,6 +291,32 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetAssemblyFoldersExInfo.
+     *
+     * @param registryRoot the argument of type {@code java.lang.String}
+     * @param targetFrameworkVersion the argument of type {@code java.lang.String}
+     * @param registryKeySuffix the argument of type {@code java.lang.String}
+     * @param osVersion the argument of type {@code java.lang.String}
+     * @param platform the argument of type {@code java.lang.String}
+     * @param targetProcessorArchitecture the argument of type {@code ProcessorArchitecture}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetAssemblyFoldersExInfo" target="_top">.NET documentation</a>
+     */
     public static IList_1 GetAssemblyFoldersExInfo(java.lang.String registryRoot, java.lang.String targetFrameworkVersion, java.lang.String registryKeySuffix, java.lang.String osVersion, java.lang.String platform, ProcessorArchitecture targetProcessorArchitecture) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -221,6 +332,28 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTargetPlatformSdks.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetTargetPlatformSdks" target="_top">.NET documentation</a>
+     */
     public static IList_1 GetTargetPlatformSdks() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -236,6 +369,29 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTargetPlatformSdks.
+     *
+     * @param diskRoots the argument of type {@code java.lang.String[]}
+     * @param registryRoot the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetTargetPlatformSdks" target="_top">.NET documentation</a>
+     */
     public static IList_1 GetTargetPlatformSdks(java.lang.String[] diskRoots, java.lang.String registryRoot) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, system.io.PathTooLongException, system.NotSupportedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -251,6 +407,29 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTargetPlatformSdks.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetTargetPlatformSdks" target="_top">.NET documentation</a>
+     */
     public static IList_1 GetTargetPlatformSdks(JCORefOut dupParam0, java.lang.String dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, system.io.PathTooLongException, system.NotSupportedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -266,6 +445,26 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPathToReferenceAssemblies.
+     *
+     * @param frameworkName the argument of type {@code FrameworkName}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetPathToReferenceAssemblies" target="_top">.NET documentation</a>
+     */
     public static IList_1 GetPathToReferenceAssemblies(FrameworkName frameworkName) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.NotImplementedException, system.security.SecurityException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -281,6 +480,33 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPathToReferenceAssemblies.
+     *
+     * @param targetFrameworkRootPath the argument of type {@code java.lang.String}
+     * @param frameworkName the argument of type {@code FrameworkName}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetPathToReferenceAssemblies" target="_top">.NET documentation</a>
+     */
     public static IList_1 GetPathToReferenceAssemblies(java.lang.String targetFrameworkRootPath, FrameworkName frameworkName) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.NotImplementedException, system.ObjectDisposedException, system.security.SecurityException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -296,6 +522,31 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPathToReferenceAssemblies.
+     *
+     * @param targetFrameworkIdentifier the argument of type {@code java.lang.String}
+     * @param targetFrameworkVersion the argument of type {@code java.lang.String}
+     * @param targetFrameworkProfile the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetPathToReferenceAssemblies" target="_top">.NET documentation</a>
+     */
     public static IList_1 GetPathToReferenceAssemblies(java.lang.String targetFrameworkIdentifier, java.lang.String targetFrameworkVersion, java.lang.String targetFrameworkProfile) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OverflowException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -311,6 +562,23 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetSDKDesignTimeFolders.
+     *
+     * @param sdkRoot the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetSDKDesignTimeFolders" target="_top">.NET documentation</a>
+     */
     public static IList_1 GetSDKDesignTimeFolders(java.lang.String sdkRoot) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.io.PathTooLongException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -326,6 +594,26 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetSDKDesignTimeFolders.
+     *
+     * @param sdkRoot the argument of type {@code java.lang.String}
+     * @param targetConfiguration the argument of type {@code java.lang.String}
+     * @param targetArchitecture the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetSDKDesignTimeFolders" target="_top">.NET documentation</a>
+     */
     public static IList_1 GetSDKDesignTimeFolders(java.lang.String sdkRoot, java.lang.String targetConfiguration, java.lang.String targetArchitecture) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.io.PathTooLongException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -341,6 +629,23 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetSDKRedistFolders.
+     *
+     * @param sdkRoot the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetSDKRedistFolders" target="_top">.NET documentation</a>
+     */
     public static IList_1 GetSDKRedistFolders(java.lang.String sdkRoot) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.io.PathTooLongException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -356,6 +661,26 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetSDKRedistFolders.
+     *
+     * @param sdkRoot the argument of type {@code java.lang.String}
+     * @param targetConfiguration the argument of type {@code java.lang.String}
+     * @param targetArchitecture the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetSDKRedistFolders" target="_top">.NET documentation</a>
+     */
     public static IList_1 GetSDKRedistFolders(java.lang.String sdkRoot, java.lang.String targetConfiguration, java.lang.String targetArchitecture) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.io.PathTooLongException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -371,6 +696,28 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetSDKReferenceFolders.
+     *
+     * @param sdkRoot the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetSDKReferenceFolders" target="_top">.NET documentation</a>
+     */
     public static IList_1 GetSDKReferenceFolders(java.lang.String sdkRoot) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -386,6 +733,31 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetSDKReferenceFolders.
+     *
+     * @param sdkRoot the argument of type {@code java.lang.String}
+     * @param targetConfiguration the argument of type {@code java.lang.String}
+     * @param targetArchitecture the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetSDKReferenceFolders" target="_top">.NET documentation</a>
+     */
     public static IList_1 GetSDKReferenceFolders(java.lang.String sdkRoot, java.lang.String targetConfiguration, java.lang.String targetArchitecture) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -401,6 +773,29 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetSupportedTargetFrameworks.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetSupportedTargetFrameworks" target="_top">.NET documentation</a>
+     */
     public static IList_1 GetSupportedTargetFrameworks() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.io.PathTooLongException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NullReferenceException, system.NotImplementedException, system.FormatException, system.OverflowException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -416,6 +811,37 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member HighestVersionOfTargetFrameworkIdentifier.
+     *
+     * @param targetFrameworkRootDirectory the argument of type {@code java.lang.String}
+     * @param frameworkIdentifier the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.HighestVersionOfTargetFrameworkIdentifier" target="_top">.NET documentation</a>
+     */
     public static FrameworkName HighestVersionOfTargetFrameworkIdentifier(java.lang.String targetFrameworkRootDirectory, java.lang.String frameworkIdentifier) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -431,6 +857,29 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDisplayNameForTargetFrameworkDirectory.
+     *
+     * @param targetFrameworkDirectory the argument of type {@code java.lang.String}
+     * @param frameworkName the argument of type {@code FrameworkName}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetDisplayNameForTargetFrameworkDirectory" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetDisplayNameForTargetFrameworkDirectory(java.lang.String targetFrameworkDirectory, FrameworkName frameworkName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -445,6 +894,14 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDotNetFrameworkRootRegistryKey.
+     *
+     * @param version the argument of type {@code TargetDotNetFrameworkVersion}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetDotNetFrameworkRootRegistryKey" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetDotNetFrameworkRootRegistryKey(TargetDotNetFrameworkVersion version) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -459,6 +916,20 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDotNetFrameworkSdkInstallKeyValue.
+     *
+     * @param version the argument of type {@code TargetDotNetFrameworkVersion}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetDotNetFrameworkSdkInstallKeyValue" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetDotNetFrameworkSdkInstallKeyValue(TargetDotNetFrameworkVersion version) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -473,6 +944,22 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDotNetFrameworkSdkInstallKeyValue.
+     *
+     * @param version the argument of type {@code TargetDotNetFrameworkVersion}
+     * @param visualStudioVersion the argument of type {@code VisualStudioVersion}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetDotNetFrameworkSdkInstallKeyValue" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetDotNetFrameworkSdkInstallKeyValue(TargetDotNetFrameworkVersion version, VisualStudioVersion visualStudioVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -487,6 +974,20 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDotNetFrameworkSdkRootRegistryKey.
+     *
+     * @param version the argument of type {@code TargetDotNetFrameworkVersion}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetDotNetFrameworkSdkRootRegistryKey" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetDotNetFrameworkSdkRootRegistryKey(TargetDotNetFrameworkVersion version) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -501,6 +1002,22 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDotNetFrameworkSdkRootRegistryKey.
+     *
+     * @param version the argument of type {@code TargetDotNetFrameworkVersion}
+     * @param visualStudioVersion the argument of type {@code VisualStudioVersion}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetDotNetFrameworkSdkRootRegistryKey" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetDotNetFrameworkSdkRootRegistryKey(TargetDotNetFrameworkVersion version, VisualStudioVersion visualStudioVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -515,6 +1032,20 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDotNetFrameworkVersionFolderPrefix.
+     *
+     * @param version the argument of type {@code TargetDotNetFrameworkVersion}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetDotNetFrameworkVersionFolderPrefix" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetDotNetFrameworkVersionFolderPrefix(TargetDotNetFrameworkVersion version) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -529,6 +1060,32 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPathToDotNetFramework.
+     *
+     * @param version the argument of type {@code TargetDotNetFrameworkVersion}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFramework" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetPathToDotNetFramework(TargetDotNetFrameworkVersion version) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -543,6 +1100,30 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPathToDotNetFramework.
+     *
+     * @param version the argument of type {@code TargetDotNetFrameworkVersion}
+     * @param architecture the argument of type {@code DotNetFrameworkArchitecture}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFramework" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetPathToDotNetFramework(TargetDotNetFrameworkVersion version, DotNetFrameworkArchitecture architecture) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotSupportedException, system.NotImplementedException, system.io.PathTooLongException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -557,6 +1138,24 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPathToDotNetFrameworkFile.
+     *
+     * @param fileName the argument of type {@code java.lang.String}
+     * @param version the argument of type {@code TargetDotNetFrameworkVersion}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFrameworkFile" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetPathToDotNetFrameworkFile(java.lang.String fileName, TargetDotNetFrameworkVersion version) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.io.IOException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.PathTooLongException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -571,6 +1170,34 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPathToDotNetFrameworkFile.
+     *
+     * @param fileName the argument of type {@code java.lang.String}
+     * @param version the argument of type {@code TargetDotNetFrameworkVersion}
+     * @param architecture the argument of type {@code DotNetFrameworkArchitecture}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFrameworkFile" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetPathToDotNetFrameworkFile(java.lang.String fileName, TargetDotNetFrameworkVersion version, DotNetFrameworkArchitecture architecture) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -585,6 +1212,28 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPathToDotNetFrameworkReferenceAssemblies.
+     *
+     * @param version the argument of type {@code TargetDotNetFrameworkVersion}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFrameworkReferenceAssemblies" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetPathToDotNetFrameworkReferenceAssemblies(TargetDotNetFrameworkVersion version) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.io.PathTooLongException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -599,6 +1248,25 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPathToDotNetFrameworkSdk.
+     *
+     * @param version the argument of type {@code TargetDotNetFrameworkVersion}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFrameworkSdk" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetPathToDotNetFrameworkSdk(TargetDotNetFrameworkVersion version) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -613,6 +1281,27 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPathToDotNetFrameworkSdk.
+     *
+     * @param version the argument of type {@code TargetDotNetFrameworkVersion}
+     * @param visualStudioVersion the argument of type {@code VisualStudioVersion}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFrameworkSdk" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetPathToDotNetFrameworkSdk(TargetDotNetFrameworkVersion version, VisualStudioVersion visualStudioVersion) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.io.PathTooLongException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -627,6 +1316,27 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPathToDotNetFrameworkSdkFile.
+     *
+     * @param fileName the argument of type {@code java.lang.String}
+     * @param version the argument of type {@code TargetDotNetFrameworkVersion}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFrameworkSdkFile" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetPathToDotNetFrameworkSdkFile(java.lang.String fileName, TargetDotNetFrameworkVersion version) throws Throwable, system.ArgumentException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -641,6 +1351,28 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPathToDotNetFrameworkSdkFile.
+     *
+     * @param fileName the argument of type {@code java.lang.String}
+     * @param version the argument of type {@code TargetDotNetFrameworkVersion}
+     * @param architecture the argument of type {@code DotNetFrameworkArchitecture}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFrameworkSdkFile" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetPathToDotNetFrameworkSdkFile(java.lang.String fileName, TargetDotNetFrameworkVersion version, DotNetFrameworkArchitecture architecture) throws Throwable, system.ArgumentException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -655,6 +1387,31 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPathToDotNetFrameworkSdkFile.
+     *
+     * @param fileName the argument of type {@code java.lang.String}
+     * @param version the argument of type {@code TargetDotNetFrameworkVersion}
+     * @param visualStudioVersion the argument of type {@code VisualStudioVersion}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFrameworkSdkFile" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetPathToDotNetFrameworkSdkFile(java.lang.String fileName, TargetDotNetFrameworkVersion version, VisualStudioVersion visualStudioVersion) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -669,6 +1426,32 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPathToDotNetFrameworkSdkFile.
+     *
+     * @param fileName the argument of type {@code java.lang.String}
+     * @param version the argument of type {@code TargetDotNetFrameworkVersion}
+     * @param visualStudioVersion the argument of type {@code VisualStudioVersion}
+     * @param architecture the argument of type {@code DotNetFrameworkArchitecture}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFrameworkSdkFile" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetPathToDotNetFrameworkSdkFile(java.lang.String fileName, TargetDotNetFrameworkVersion version, VisualStudioVersion visualStudioVersion, DotNetFrameworkArchitecture architecture) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -683,6 +1466,26 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPathToStandardLibraries.
+     *
+     * @param targetFrameworkIdentifier the argument of type {@code java.lang.String}
+     * @param targetFrameworkVersion the argument of type {@code java.lang.String}
+     * @param targetFrameworkProfile the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetPathToStandardLibraries" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetPathToStandardLibraries(java.lang.String targetFrameworkIdentifier, java.lang.String targetFrameworkVersion, java.lang.String targetFrameworkProfile) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -697,6 +1500,38 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPathToStandardLibraries.
+     *
+     * @param targetFrameworkIdentifier the argument of type {@code java.lang.String}
+     * @param targetFrameworkVersion the argument of type {@code java.lang.String}
+     * @param targetFrameworkProfile the argument of type {@code java.lang.String}
+     * @param platformTarget the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetPathToStandardLibraries" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetPathToStandardLibraries(java.lang.String targetFrameworkIdentifier, java.lang.String targetFrameworkVersion, java.lang.String targetFrameworkProfile, java.lang.String platformTarget) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OverflowException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -711,6 +1546,21 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPathToSystemFile.
+     *
+     * @param fileName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetPathToSystemFile" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetPathToSystemFile(java.lang.String fileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -725,6 +1575,25 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPathToWindowsSdk.
+     *
+     * @param version the argument of type {@code TargetDotNetFrameworkVersion}
+     * @param visualStudioVersion the argument of type {@code VisualStudioVersion}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetPathToWindowsSdk" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetPathToWindowsSdk(TargetDotNetFrameworkVersion version, VisualStudioVersion visualStudioVersion) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -739,6 +1608,31 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPathToWindowsSdkFile.
+     *
+     * @param fileName the argument of type {@code java.lang.String}
+     * @param version the argument of type {@code TargetDotNetFrameworkVersion}
+     * @param visualStudioVersion the argument of type {@code VisualStudioVersion}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetPathToWindowsSdkFile" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetPathToWindowsSdkFile(java.lang.String fileName, TargetDotNetFrameworkVersion version, VisualStudioVersion visualStudioVersion) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.io.PathTooLongException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -753,6 +1647,32 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPathToWindowsSdkFile.
+     *
+     * @param fileName the argument of type {@code java.lang.String}
+     * @param version the argument of type {@code TargetDotNetFrameworkVersion}
+     * @param visualStudioVersion the argument of type {@code VisualStudioVersion}
+     * @param architecture the argument of type {@code DotNetFrameworkArchitecture}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetPathToWindowsSdkFile" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetPathToWindowsSdkFile(java.lang.String fileName, TargetDotNetFrameworkVersion version, VisualStudioVersion visualStudioVersion, DotNetFrameworkArchitecture architecture) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.io.PathTooLongException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -767,6 +1687,33 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPlatformExtensionSDKLocation.
+     *
+     * @param sdkMoniker the argument of type {@code java.lang.String}
+     * @param targetPlatformIdentifier the argument of type {@code java.lang.String}
+     * @param targetPlatformVersion the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetPlatformExtensionSDKLocation" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetPlatformExtensionSDKLocation(java.lang.String sdkMoniker, java.lang.String targetPlatformIdentifier, java.lang.String targetPlatformVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -781,6 +1728,36 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPlatformExtensionSDKLocation.
+     *
+     * @param sdkMoniker the argument of type {@code java.lang.String}
+     * @param targetPlatformIdentifier the argument of type {@code java.lang.String}
+     * @param targetPlatformVersion the argument of type {@code java.lang.String}
+     * @param diskRoots the argument of type {@code java.lang.String}
+     * @param registryRoot the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetPlatformExtensionSDKLocation" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetPlatformExtensionSDKLocation(java.lang.String sdkMoniker, java.lang.String targetPlatformIdentifier, java.lang.String targetPlatformVersion, java.lang.String diskRoots, java.lang.String registryRoot) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -795,6 +1772,32 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPlatformExtensionSDKLocation.
+     *
+     * @param sdkMoniker the argument of type {@code java.lang.String}
+     * @param targetPlatformIdentifier the argument of type {@code java.lang.String}
+     * @param targetPlatformVersion the argument of type {@code Version}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetPlatformExtensionSDKLocation" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetPlatformExtensionSDKLocation(java.lang.String sdkMoniker, java.lang.String targetPlatformIdentifier, Version targetPlatformVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.InvalidOperationException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -809,6 +1812,33 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPlatformExtensionSDKLocation.
+     *
+     * @param sdkMoniker the argument of type {@code java.lang.String}
+     * @param targetPlatformIdentifier the argument of type {@code java.lang.String}
+     * @param targetPlatformVersion the argument of type {@code Version}
+     * @param diskRoots the argument of type {@code java.lang.String[]}
+     * @param registryRoot the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetPlatformExtensionSDKLocation" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetPlatformExtensionSDKLocation(java.lang.String sdkMoniker, java.lang.String targetPlatformIdentifier, Version targetPlatformVersion, java.lang.String[] diskRoots, java.lang.String registryRoot) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -823,6 +1853,33 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPlatformExtensionSDKLocation.
+     *
+     * @param dupParam0 the argument of type {@code java.lang.String}
+     * @param dupParam1 the argument of type {@code java.lang.String}
+     * @param dupParam2 the argument of type {@code Version}
+     * @param dupParam3 the argument of type {@code JCORefOut}
+     * @param dupParam4 the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetPlatformExtensionSDKLocation" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetPlatformExtensionSDKLocation(java.lang.String dupParam0, java.lang.String dupParam1, Version dupParam2, JCORefOut dupParam3, java.lang.String dupParam4) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -837,6 +1894,32 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPlatformSDKLocation.
+     *
+     * @param targetPlatformIdentifier the argument of type {@code java.lang.String}
+     * @param targetPlatformVersion the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetPlatformSDKLocation" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetPlatformSDKLocation(java.lang.String targetPlatformIdentifier, java.lang.String targetPlatformVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -851,6 +1934,35 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPlatformSDKLocation.
+     *
+     * @param targetPlatformIdentifier the argument of type {@code java.lang.String}
+     * @param targetPlatformVersion the argument of type {@code java.lang.String}
+     * @param diskRoots the argument of type {@code java.lang.String}
+     * @param registryRoot the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetPlatformSDKLocation" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetPlatformSDKLocation(java.lang.String targetPlatformIdentifier, java.lang.String targetPlatformVersion, java.lang.String diskRoots, java.lang.String registryRoot) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -865,6 +1977,31 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPlatformSDKLocation.
+     *
+     * @param targetPlatformIdentifier the argument of type {@code java.lang.String}
+     * @param targetPlatformVersion the argument of type {@code Version}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetPlatformSDKLocation" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetPlatformSDKLocation(java.lang.String targetPlatformIdentifier, Version targetPlatformVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.InvalidOperationException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -879,6 +2016,33 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPlatformSDKLocation.
+     *
+     * @param targetPlatformIdentifier the argument of type {@code java.lang.String}
+     * @param targetPlatformVersion the argument of type {@code Version}
+     * @param diskRoots the argument of type {@code java.lang.String[]}
+     * @param registryRoot the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetPlatformSDKLocation" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetPlatformSDKLocation(java.lang.String targetPlatformIdentifier, Version targetPlatformVersion, java.lang.String[] diskRoots, java.lang.String registryRoot) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -893,6 +2057,33 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPlatformSDKLocation.
+     *
+     * @param dupParam0 the argument of type {@code java.lang.String}
+     * @param dupParam1 the argument of type {@code Version}
+     * @param dupParam2 the argument of type {@code JCORefOut}
+     * @param dupParam3 the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetPlatformSDKLocation" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetPlatformSDKLocation(java.lang.String dupParam0, Version dupParam1, JCORefOut dupParam2, java.lang.String dupParam3) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -907,6 +2098,13 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetProgramFilesReferenceAssemblyRoot.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetProgramFilesReferenceAssemblyRoot" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetProgramFilesReferenceAssemblyRoot() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -921,6 +2119,13 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ClearSDKStaticCache.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.ClearSDKStaticCache" target="_top">.NET documentation</a>
+     */
     public static void ClearSDKStaticCache() throws Throwable, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -935,6 +2140,22 @@ public class ToolLocationHelper extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PathToSystem.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.PathToSystem" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getPathToSystem() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NullReferenceException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

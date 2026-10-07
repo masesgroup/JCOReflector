@@ -98,7 +98,10 @@ public class IStateRuntimeImplementation extends NetObject implements IStateRunt
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IStateRuntimeImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,12 @@ public class IStateRuntimeImplementation extends NetObject implements IStateRunt
 
     // Methods section
     
+    /**
+     * Invokes the .NET member StopProcessing.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SessionState.IStateRuntime.StopProcessing" target="_top">.NET documentation</a>
+     */
     public void StopProcessing() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -108,7 +108,10 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IsolatedStorageFile(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -163,6 +166,32 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
     
     // Methods section
     
+    /**
+     * Invokes the .NET member DirectoryExists.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.DirectoryExists" target="_top">.NET documentation</a>
+     */
     public boolean DirectoryExists(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.ArgumentException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +206,32 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
 
+    /**
+     * Invokes the .NET member FileExists.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.FileExists" target="_top">.NET documentation</a>
+     */
     public boolean FileExists(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.ArgumentException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +246,24 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
 
+    /**
+     * Invokes the .NET member IncreaseQuotaTo.
+     *
+     * @param newQuotaSize the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.IncreaseQuotaTo" target="_top">.NET documentation</a>
+     */
     public boolean IncreaseQuotaTo(long newQuotaSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +278,32 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
 
+    /**
+     * Invokes the .NET member GetEnumerator.
+     *
+     * @param scope the argument of type {@code IsolatedStorageScope}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator" target="_top">.NET documentation</a>
+     */
     public static IEnumerator GetEnumerator(IsolatedStorageScope scope) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ApplicationException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -220,6 +319,33 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
 
+    /**
+     * Invokes the .NET member GetCreationTime.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.GetCreationTime" target="_top">.NET documentation</a>
+     */
     public DateTimeOffset GetCreationTime(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +361,33 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
 
+    /**
+     * Invokes the .NET member GetLastAccessTime.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.GetLastAccessTime" target="_top">.NET documentation</a>
+     */
     public DateTimeOffset GetLastAccessTime(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +403,33 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
 
+    /**
+     * Invokes the .NET member GetLastWriteTime.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.GetLastWriteTime" target="_top">.NET documentation</a>
+     */
     public DateTimeOffset GetLastWriteTime(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +445,33 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
 
+    /**
+     * Invokes the .NET member GetMachineStoreForApplication.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.GetMachineStoreForApplication" target="_top">.NET documentation</a>
+     */
     public static IsolatedStorageFile GetMachineStoreForApplication() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -280,6 +487,34 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
 
+    /**
+     * Invokes the .NET member GetMachineStoreForAssembly.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.GetMachineStoreForAssembly" target="_top">.NET documentation</a>
+     */
     public static IsolatedStorageFile GetMachineStoreForAssembly() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -295,6 +530,34 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
 
+    /**
+     * Invokes the .NET member GetMachineStoreForDomain.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.GetMachineStoreForDomain" target="_top">.NET documentation</a>
+     */
     public static IsolatedStorageFile GetMachineStoreForDomain() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -310,6 +573,35 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
 
+    /**
+     * Invokes the .NET member GetStore.
+     *
+     * @param scope the argument of type {@code IsolatedStorageScope}
+     * @param applicationIdentity the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.GetStore" target="_top">.NET documentation</a>
+     */
     public static IsolatedStorageFile GetStore(IsolatedStorageScope scope, NetObject applicationIdentity) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.io.isolatedstorage.IsolatedStorageException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -325,6 +617,36 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
 
+    /**
+     * Invokes the .NET member GetStore.
+     *
+     * @param scope the argument of type {@code IsolatedStorageScope}
+     * @param domainIdentity the argument of type {@code NetObject}
+     * @param assemblyIdentity the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.GetStore" target="_top">.NET documentation</a>
+     */
     public static IsolatedStorageFile GetStore(IsolatedStorageScope scope, NetObject domainIdentity, NetObject assemblyIdentity) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.io.isolatedstorage.IsolatedStorageException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -340,6 +662,39 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
 
+    /**
+     * Invokes the .NET member GetStore.
+     *
+     * @param scope the argument of type {@code IsolatedStorageScope}
+     * @param domainEvidence the argument of type {@code Evidence}
+     * @param domainEvidenceType the argument of type {@code NetType}
+     * @param assemblyEvidence the argument of type {@code Evidence}
+     * @param assemblyEvidenceType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.XmlSyntaxException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.GetStore" target="_top">.NET documentation</a>
+     */
     public static IsolatedStorageFile GetStore(IsolatedStorageScope scope, Evidence domainEvidence, NetType domainEvidenceType, Evidence assemblyEvidence, NetType assemblyEvidenceType) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.XmlSyntaxException, system.NullReferenceException, system.io.isolatedstorage.IsolatedStorageException, system.security.cryptography.CryptographicException, system.FormatException, system.security.SecurityException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -355,6 +710,34 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
 
+    /**
+     * Invokes the .NET member GetStore.
+     *
+     * @param scope the argument of type {@code IsolatedStorageScope}
+     * @param applicationEvidenceType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.GetStore" target="_top">.NET documentation</a>
+     */
     public static IsolatedStorageFile GetStore(IsolatedStorageScope scope, NetType applicationEvidenceType) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -370,6 +753,37 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
 
+    /**
+     * Invokes the .NET member GetStore.
+     *
+     * @param scope the argument of type {@code IsolatedStorageScope}
+     * @param domainEvidenceType the argument of type {@code NetType}
+     * @param assemblyEvidenceType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.GetStore" target="_top">.NET documentation</a>
+     */
     public static IsolatedStorageFile GetStore(IsolatedStorageScope scope, NetType domainEvidenceType, NetType assemblyEvidenceType) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -385,6 +799,33 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
 
+    /**
+     * Invokes the .NET member GetUserStoreForApplication.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForApplication" target="_top">.NET documentation</a>
+     */
     public static IsolatedStorageFile GetUserStoreForApplication() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -400,6 +841,34 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
 
+    /**
+     * Invokes the .NET member GetUserStoreForAssembly.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly" target="_top">.NET documentation</a>
+     */
     public static IsolatedStorageFile GetUserStoreForAssembly() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -415,6 +884,34 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
 
+    /**
+     * Invokes the .NET member GetUserStoreForDomain.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain" target="_top">.NET documentation</a>
+     */
     public static IsolatedStorageFile GetUserStoreForDomain() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -430,6 +927,14 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
 
+    /**
+     * Invokes the .NET member GetUserStoreForSite.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForSite" target="_top">.NET documentation</a>
+     */
     public static IsolatedStorageFile GetUserStoreForSite() throws Throwable, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -445,6 +950,29 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
 
+    /**
+     * Invokes the .NET member CreateFile.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.CreateFile" target="_top">.NET documentation</a>
+     */
     public IsolatedStorageFileStream CreateFile(java.lang.String path) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ApplicationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -460,6 +988,32 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
 
+    /**
+     * Invokes the .NET member OpenFile.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @param mode the argument of type {@code FileMode}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.OpenFile" target="_top">.NET documentation</a>
+     */
     public IsolatedStorageFileStream OpenFile(java.lang.String path, FileMode mode) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.IOException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -475,6 +1029,31 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
 
+    /**
+     * Invokes the .NET member OpenFile.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @param mode the argument of type {@code FileMode}
+     * @param access the argument of type {@code FileAccess}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.OpenFile" target="_top">.NET documentation</a>
+     */
     public IsolatedStorageFileStream OpenFile(java.lang.String path, FileMode mode, FileAccess access) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ApplicationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -490,6 +1069,32 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
 
+    /**
+     * Invokes the .NET member OpenFile.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @param mode the argument of type {@code FileMode}
+     * @param access the argument of type {@code FileAccess}
+     * @param share the argument of type {@code FileShare}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.OpenFile" target="_top">.NET documentation</a>
+     */
     public IsolatedStorageFileStream OpenFile(java.lang.String path, FileMode mode, FileAccess access, FileShare share) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ApplicationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -505,6 +1110,25 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
 
+    /**
+     * Invokes the .NET member GetDirectoryNames.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] GetDirectoryNames() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.isolatedstorage.IsolatedStorageException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -528,6 +1152,32 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
 
+    /**
+     * Invokes the .NET member GetDirectoryNames.
+     *
+     * @param searchPattern the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] GetDirectoryNames(java.lang.String searchPattern) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.ArgumentException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.isolatedstorage.IsolatedStorageException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -551,6 +1201,25 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
 
+    /**
+     * Invokes the .NET member GetFileNames.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] GetFileNames() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.isolatedstorage.IsolatedStorageException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -574,6 +1243,32 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
 
+    /**
+     * Invokes the .NET member GetFileNames.
+     *
+     * @param searchPattern the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] GetFileNames(java.lang.String searchPattern) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.ArgumentException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.isolatedstorage.IsolatedStorageException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -597,6 +1292,14 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
 
+    /**
+     * Invokes the .NET member Close.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.Close" target="_top">.NET documentation</a>
+     */
     public void Close() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -607,6 +1310,30 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
 
+    /**
+     * Invokes the .NET member CopyFile.
+     *
+     * @param sourceFileName the argument of type {@code java.lang.String}
+     * @param destinationFileName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.CopyFile" target="_top">.NET documentation</a>
+     */
     public void CopyFile(java.lang.String sourceFileName, java.lang.String destinationFileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.isolatedstorage.IsolatedStorageException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -617,6 +1344,34 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
 
+    /**
+     * Invokes the .NET member CopyFile.
+     *
+     * @param sourceFileName the argument of type {@code java.lang.String}
+     * @param destinationFileName the argument of type {@code java.lang.String}
+     * @param overwrite the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.CopyFile" target="_top">.NET documentation</a>
+     */
     public void CopyFile(java.lang.String sourceFileName, java.lang.String destinationFileName, boolean overwrite) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.io.isolatedstorage.IsolatedStorageException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -627,6 +1382,32 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
 
+    /**
+     * Invokes the .NET member CreateDirectory.
+     *
+     * @param dir the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory" target="_top">.NET documentation</a>
+     */
     public void CreateDirectory(java.lang.String dir) throws Throwable, system.ArgumentNullException, system.security.SecurityException, system.NotSupportedException, system.ArgumentException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.io.isolatedstorage.IsolatedStorageException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -637,6 +1418,31 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
 
+    /**
+     * Invokes the .NET member DeleteDirectory.
+     *
+     * @param dir the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.DeleteDirectory" target="_top">.NET documentation</a>
+     */
     public void DeleteDirectory(java.lang.String dir) throws Throwable, system.ArgumentNullException, system.security.SecurityException, system.NotSupportedException, system.ArgumentException, system.MissingMethodException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.isolatedstorage.IsolatedStorageException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -647,6 +1453,30 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
 
+    /**
+     * Invokes the .NET member DeleteFile.
+     *
+     * @param file the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.DeleteFile" target="_top">.NET documentation</a>
+     */
     public void DeleteFile(java.lang.String file) throws Throwable, system.ArgumentNullException, system.security.SecurityException, system.NotSupportedException, system.ArgumentException, system.MissingMethodException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.io.isolatedstorage.IsolatedStorageException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -657,6 +1487,14 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -667,6 +1505,33 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
 
+    /**
+     * Invokes the .NET member MoveDirectory.
+     *
+     * @param sourceDirectoryName the argument of type {@code java.lang.String}
+     * @param destinationDirectoryName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.MoveDirectory" target="_top">.NET documentation</a>
+     */
     public void MoveDirectory(java.lang.String sourceDirectoryName, java.lang.String destinationDirectoryName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.io.isolatedstorage.IsolatedStorageException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -677,6 +1542,33 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
 
+    /**
+     * Invokes the .NET member MoveFile.
+     *
+     * @param sourceFileName the argument of type {@code java.lang.String}
+     * @param destinationFileName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.MoveFile" target="_top">.NET documentation</a>
+     */
     public void MoveFile(java.lang.String sourceFileName, java.lang.String destinationFileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.io.isolatedstorage.IsolatedStorageException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -687,6 +1579,27 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove() throws Throwable, system.security.SecurityException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.io.IOException, system.io.isolatedstorage.IsolatedStorageException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.ApplicationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -697,6 +1610,33 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param scope the argument of type {@code IsolatedStorageScope}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.Remove" target="_top">.NET documentation</a>
+     */
     public static void Remove(IsolatedStorageScope scope) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.ApplicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -724,6 +1664,13 @@ public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStora
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFile.IsEnabled" target="_top">.NET documentation</a>
+     */
     public static boolean getIsEnabled() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

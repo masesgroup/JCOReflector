@@ -102,7 +102,10 @@ public class GiveFeedbackEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public GiveFeedbackEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,17 @@ public class GiveFeedbackEventArgs extends system.EventArgs  {
     public GiveFeedbackEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param effect the argument of type {@code DragDropEffects}
+     * @param useDefaultCursors the argument of type {@code boolean}
+     * @param dragImage the argument of type {@code Bitmap}
+     * @param cursorOffset the argument of type {@code Point}
+     * @param useDefaultDragImage the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.GiveFeedbackEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public GiveFeedbackEventArgs(DragDropEffects effect, boolean useDefaultCursors, Bitmap dragImage, Point cursorOffset, boolean useDefaultDragImage) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +176,14 @@ public class GiveFeedbackEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param effect the argument of type {@code DragDropEffects}
+     * @param useDefaultCursors the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.GiveFeedbackEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public GiveFeedbackEventArgs(DragDropEffects effect, boolean useDefaultCursors) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +203,13 @@ public class GiveFeedbackEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property UseDefaultCursors.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.GiveFeedbackEventArgs.UseDefaultCursors" target="_top">.NET documentation</a>
+     */
     public boolean getUseDefaultCursors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +224,13 @@ public class GiveFeedbackEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseDefaultCursors.
+     *
+     * @param UseDefaultCursors the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.GiveFeedbackEventArgs.UseDefaultCursors" target="_top">.NET documentation</a>
+     */
     public void setUseDefaultCursors(boolean UseDefaultCursors) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +241,13 @@ public class GiveFeedbackEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseDefaultDragImage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.GiveFeedbackEventArgs.UseDefaultDragImage" target="_top">.NET documentation</a>
+     */
     public boolean getUseDefaultDragImage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +262,13 @@ public class GiveFeedbackEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseDefaultDragImage.
+     *
+     * @param UseDefaultDragImage the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.GiveFeedbackEventArgs.UseDefaultDragImage" target="_top">.NET documentation</a>
+     */
     public void setUseDefaultDragImage(boolean UseDefaultDragImage) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +279,13 @@ public class GiveFeedbackEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DragImage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.GiveFeedbackEventArgs.DragImage" target="_top">.NET documentation</a>
+     */
     public Bitmap getDragImage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +301,13 @@ public class GiveFeedbackEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DragImage.
+     *
+     * @param DragImage the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.GiveFeedbackEventArgs.DragImage" target="_top">.NET documentation</a>
+     */
     public void setDragImage(Bitmap DragImage) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +318,13 @@ public class GiveFeedbackEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CursorOffset.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.GiveFeedbackEventArgs.CursorOffset" target="_top">.NET documentation</a>
+     */
     public Point getCursorOffset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +340,13 @@ public class GiveFeedbackEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CursorOffset.
+     *
+     * @param CursorOffset the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.GiveFeedbackEventArgs.CursorOffset" target="_top">.NET documentation</a>
+     */
     public void setCursorOffset(Point CursorOffset) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +357,13 @@ public class GiveFeedbackEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Effect.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.GiveFeedbackEventArgs.Effect" target="_top">.NET documentation</a>
+     */
     public DragDropEffects getEffect() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -102,7 +102,10 @@ public class IJSVsaItemsImplementation extends IEnumerableImplementation impleme
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IJSVsaItemsImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,16 @@ public class IJSVsaItemsImplementation extends IEnumerableImplementation impleme
 
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateItem.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param itemType the argument of type {@code JSVsaItemType}
+     * @param itemFlag the argument of type {@code JSVsaItemFlag}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaItems.CreateItem" target="_top">.NET documentation</a>
+     */
     public IJSVsaItem CreateItem(java.lang.String name, JSVsaItemType itemType, JSVsaItemFlag itemFlag) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -159,6 +172,13 @@ public class IJSVsaItemsImplementation extends IEnumerableImplementation impleme
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaItems.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +189,13 @@ public class IJSVsaItemsImplementation extends IEnumerableImplementation impleme
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaItems.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +210,13 @@ public class IJSVsaItemsImplementation extends IEnumerableImplementation impleme
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Count.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaItems.Count" target="_top">.NET documentation</a>
+     */
     public int getCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

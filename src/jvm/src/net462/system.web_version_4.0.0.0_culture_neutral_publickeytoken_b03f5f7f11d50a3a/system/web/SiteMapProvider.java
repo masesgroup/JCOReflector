@@ -105,7 +105,10 @@ public class SiteMapProvider extends system.configuration.provider.ProviderBase 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SiteMapProvider(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,29 @@ public class SiteMapProvider extends system.configuration.provider.ProviderBase 
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsAccessibleToUser.
+     *
+     * @param context the argument of type {@code HttpContext}
+     * @param node the argument of type {@code SiteMapNode}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.web.HttpRequestValidationException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SiteMapProvider.IsAccessibleToUser" target="_top">.NET documentation</a>
+     */
     public boolean IsAccessibleToUser(HttpContext context, SiteMapNode node) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.web.HttpException, system.globalization.CultureNotFoundException, system.web.HttpRequestValidationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +198,14 @@ public class SiteMapProvider extends system.configuration.provider.ProviderBase 
         }
     }
 
+    /**
+     * Invokes the .NET member FindSiteMapNode.
+     *
+     * @param rawUrl the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SiteMapProvider.FindSiteMapNode" target="_top">.NET documentation</a>
+     */
     public SiteMapNode FindSiteMapNode(java.lang.String rawUrl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +221,28 @@ public class SiteMapProvider extends system.configuration.provider.ProviderBase 
         }
     }
 
+    /**
+     * Invokes the .NET member FindSiteMapNode.
+     *
+     * @param context the argument of type {@code HttpContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SiteMapProvider.FindSiteMapNode" target="_top">.NET documentation</a>
+     */
     public SiteMapNode FindSiteMapNode(HttpContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +258,14 @@ public class SiteMapProvider extends system.configuration.provider.ProviderBase 
         }
     }
 
+    /**
+     * Invokes the .NET member FindSiteMapNodeFromKey.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SiteMapProvider.FindSiteMapNodeFromKey" target="_top">.NET documentation</a>
+     */
     public SiteMapNode FindSiteMapNodeFromKey(java.lang.String key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +281,28 @@ public class SiteMapProvider extends system.configuration.provider.ProviderBase 
         }
     }
 
+    /**
+     * Invokes the .NET member GetCurrentNodeAndHintAncestorNodes.
+     *
+     * @param upLevel the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.web.HttpRequestValidationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SiteMapProvider.GetCurrentNodeAndHintAncestorNodes" target="_top">.NET documentation</a>
+     */
     public SiteMapNode GetCurrentNodeAndHintAncestorNodes(int upLevel) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException, system.NotSupportedException, system.configuration.ConfigurationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +318,29 @@ public class SiteMapProvider extends system.configuration.provider.ProviderBase 
         }
     }
 
+    /**
+     * Invokes the .NET member GetCurrentNodeAndHintNeighborhoodNodes.
+     *
+     * @param upLevel the argument of type {@code int}
+     * @param downLevel the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.web.HttpRequestValidationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SiteMapProvider.GetCurrentNodeAndHintNeighborhoodNodes" target="_top">.NET documentation</a>
+     */
     public SiteMapNode GetCurrentNodeAndHintNeighborhoodNodes(int upLevel, int downLevel) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException, system.NotSupportedException, system.configuration.ConfigurationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +356,14 @@ public class SiteMapProvider extends system.configuration.provider.ProviderBase 
         }
     }
 
+    /**
+     * Invokes the .NET member GetParentNode.
+     *
+     * @param node the argument of type {@code SiteMapNode}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SiteMapProvider.GetParentNode" target="_top">.NET documentation</a>
+     */
     public SiteMapNode GetParentNode(SiteMapNode node) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +379,26 @@ public class SiteMapProvider extends system.configuration.provider.ProviderBase 
         }
     }
 
+    /**
+     * Invokes the .NET member GetParentNodeRelativeToCurrentNodeAndHintDownFromParent.
+     *
+     * @param walkupLevels the argument of type {@code int}
+     * @param relativeDepthFromWalkup the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.web.HttpRequestValidationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SiteMapProvider.GetParentNodeRelativeToCurrentNodeAndHintDownFromParent" target="_top">.NET documentation</a>
+     */
     public SiteMapNode GetParentNodeRelativeToCurrentNodeAndHintDownFromParent(int walkupLevels, int relativeDepthFromWalkup) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +414,18 @@ public class SiteMapProvider extends system.configuration.provider.ProviderBase 
         }
     }
 
+    /**
+     * Invokes the .NET member GetParentNodeRelativeToNodeAndHintDownFromParent.
+     *
+     * @param node the argument of type {@code SiteMapNode}
+     * @param walkupLevels the argument of type {@code int}
+     * @param relativeDepthFromWalkup the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SiteMapProvider.GetParentNodeRelativeToNodeAndHintDownFromParent" target="_top">.NET documentation</a>
+     */
     public SiteMapNode GetParentNodeRelativeToNodeAndHintDownFromParent(SiteMapNode node, int walkupLevels, int relativeDepthFromWalkup) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +441,14 @@ public class SiteMapProvider extends system.configuration.provider.ProviderBase 
         }
     }
 
+    /**
+     * Invokes the .NET member GetChildNodes.
+     *
+     * @param node the argument of type {@code SiteMapNode}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SiteMapProvider.GetChildNodes" target="_top">.NET documentation</a>
+     */
     public SiteMapNodeCollection GetChildNodes(SiteMapNode node) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -307,6 +464,16 @@ public class SiteMapProvider extends system.configuration.provider.ProviderBase 
         }
     }
 
+    /**
+     * Invokes the .NET member HintAncestorNodes.
+     *
+     * @param node the argument of type {@code SiteMapNode}
+     * @param upLevel the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SiteMapProvider.HintAncestorNodes" target="_top">.NET documentation</a>
+     */
     public void HintAncestorNodes(SiteMapNode node, int upLevel) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -317,6 +484,17 @@ public class SiteMapProvider extends system.configuration.provider.ProviderBase 
         }
     }
 
+    /**
+     * Invokes the .NET member HintNeighborhoodNodes.
+     *
+     * @param node the argument of type {@code SiteMapNode}
+     * @param upLevel the argument of type {@code int}
+     * @param downLevel the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SiteMapProvider.HintNeighborhoodNodes" target="_top">.NET documentation</a>
+     */
     public void HintNeighborhoodNodes(SiteMapNode node, int upLevel, int downLevel) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -327,6 +505,27 @@ public class SiteMapProvider extends system.configuration.provider.ProviderBase 
         }
     }
 
+    /**
+     * Invokes the .NET member Initialize.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param attributes the argument of type {@code NameValueCollection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SiteMapProvider.Initialize" target="_top">.NET documentation</a>
+     */
     public void Initialize(java.lang.String name, NameValueCollection attributes) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -341,6 +540,13 @@ public class SiteMapProvider extends system.configuration.provider.ProviderBase 
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EnableLocalization.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SiteMapProvider.EnableLocalization" target="_top">.NET documentation</a>
+     */
     public boolean getEnableLocalization() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -355,6 +561,13 @@ public class SiteMapProvider extends system.configuration.provider.ProviderBase 
         }
     }
 
+    /**
+     * Sets the value of the .NET property EnableLocalization.
+     *
+     * @param EnableLocalization the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SiteMapProvider.EnableLocalization" target="_top">.NET documentation</a>
+     */
     public void setEnableLocalization(boolean EnableLocalization) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -365,6 +578,13 @@ public class SiteMapProvider extends system.configuration.provider.ProviderBase 
         }
     }
 
+    /**
+     * Gets the value of the .NET property SecurityTrimmingEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SiteMapProvider.SecurityTrimmingEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getSecurityTrimmingEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -379,6 +599,13 @@ public class SiteMapProvider extends system.configuration.provider.ProviderBase 
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResourceKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SiteMapProvider.ResourceKey" target="_top">.NET documentation</a>
+     */
     public java.lang.String getResourceKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -393,6 +620,13 @@ public class SiteMapProvider extends system.configuration.provider.ProviderBase 
         }
     }
 
+    /**
+     * Sets the value of the .NET property ResourceKey.
+     *
+     * @param ResourceKey the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SiteMapProvider.ResourceKey" target="_top">.NET documentation</a>
+     */
     public void setResourceKey(java.lang.String ResourceKey) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -403,6 +637,28 @@ public class SiteMapProvider extends system.configuration.provider.ProviderBase 
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentNode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SiteMapProvider.CurrentNode" target="_top">.NET documentation</a>
+     */
     public SiteMapNode getCurrentNode() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -418,6 +674,21 @@ public class SiteMapProvider extends system.configuration.provider.ProviderBase 
         }
     }
 
+    /**
+     * Gets the value of the .NET property RootNode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SiteMapProvider.RootNode" target="_top">.NET documentation</a>
+     */
     public SiteMapNode getRootNode() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.web.HttpException, system.ArgumentException, system.globalization.CultureNotFoundException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -433,6 +704,13 @@ public class SiteMapProvider extends system.configuration.provider.ProviderBase 
         }
     }
 
+    /**
+     * Gets the value of the .NET property ParentProvider.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SiteMapProvider.ParentProvider" target="_top">.NET documentation</a>
+     */
     public SiteMapProvider getParentProvider() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -448,6 +726,13 @@ public class SiteMapProvider extends system.configuration.provider.ProviderBase 
         }
     }
 
+    /**
+     * Sets the value of the .NET property ParentProvider.
+     *
+     * @param ParentProvider the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SiteMapProvider.ParentProvider" target="_top">.NET documentation</a>
+     */
     public void setParentProvider(SiteMapProvider ParentProvider) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -458,6 +743,27 @@ public class SiteMapProvider extends system.configuration.provider.ProviderBase 
         }
     }
 
+    /**
+     * Gets the value of the .NET property RootProvider.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SiteMapProvider.RootProvider" target="_top">.NET documentation</a>
+     */
     public SiteMapProvider getRootProvider() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.configuration.provider.ProviderException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -478,6 +784,13 @@ public class SiteMapProvider extends system.configuration.provider.ProviderBase 
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addSiteMapResolve.
+     *
+     * @param handler the argument of type {@code SiteMapResolveEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addSiteMapResolve(SiteMapResolveEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -488,6 +801,13 @@ public class SiteMapProvider extends system.configuration.provider.ProviderBase 
         }
     }
 
+    /**
+     * Invokes the .NET member removeSiteMapResolve.
+     *
+     * @param handler the argument of type {@code SiteMapResolveEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeSiteMapResolve(SiteMapResolveEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

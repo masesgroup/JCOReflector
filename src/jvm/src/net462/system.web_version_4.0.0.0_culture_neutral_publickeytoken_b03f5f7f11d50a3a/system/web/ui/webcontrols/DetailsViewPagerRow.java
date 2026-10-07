@@ -103,7 +103,10 @@ public class DetailsViewPagerRow extends system.web.ui.webcontrols.DetailsViewRo
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DetailsViewPagerRow(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,15 @@ public class DetailsViewPagerRow extends system.web.ui.webcontrols.DetailsViewRo
     public DetailsViewPagerRow() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param rowIndex the argument of type {@code int}
+     * @param rowType the argument of type {@code DataControlRowType}
+     * @param rowState the argument of type {@code DataControlRowState}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.DetailsViewPagerRow.-ctor" target="_top">.NET documentation</a>
+     */
     public DetailsViewPagerRow(int rowIndex, DataControlRowType rowType, DataControlRowState rowState) throws Throwable {
         try {
             // add reference to assemblyName.dll file

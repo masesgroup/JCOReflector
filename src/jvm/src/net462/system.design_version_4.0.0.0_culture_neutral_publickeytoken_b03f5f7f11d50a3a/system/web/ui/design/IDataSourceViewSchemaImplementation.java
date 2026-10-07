@@ -102,7 +102,10 @@ public class IDataSourceViewSchemaImplementation extends NetObject implements ID
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDataSourceViewSchemaImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,13 @@ public class IDataSourceViewSchemaImplementation extends NetObject implements ID
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetFields.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IDataSourceViewSchema.GetFields" target="_top">.NET documentation</a>
+     */
     public IDataSourceFieldSchema[] GetFields() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -165,6 +175,13 @@ public class IDataSourceViewSchemaImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member GetChildren.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IDataSourceViewSchema.GetChildren" target="_top">.NET documentation</a>
+     */
     public IDataSourceViewSchema[] GetChildren() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +207,13 @@ public class IDataSourceViewSchemaImplementation extends NetObject implements ID
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IDataSourceViewSchema.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

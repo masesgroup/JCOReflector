@@ -104,7 +104,10 @@ public class ConstructorBuilder extends system.reflection.ConstructorInfo  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ConstructorBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,13 @@ public class ConstructorBuilder extends system.reflection.ConstructorInfo  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetILGenerator.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ConstructorBuilder.GetILGenerator" target="_top">.NET documentation</a>
+     */
     public ILGenerator GetILGenerator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +182,14 @@ public class ConstructorBuilder extends system.reflection.ConstructorInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetILGenerator.
+     *
+     * @param streamSize the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ConstructorBuilder.GetILGenerator" target="_top">.NET documentation</a>
+     */
     public ILGenerator GetILGenerator(int streamSize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +205,16 @@ public class ConstructorBuilder extends system.reflection.ConstructorInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member DefineParameter.
+     *
+     * @param iSequence the argument of type {@code int}
+     * @param attributes the argument of type {@code ParameterAttributes}
+     * @param strParamName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ConstructorBuilder.DefineParameter" target="_top">.NET documentation</a>
+     */
     public ParameterBuilder DefineParameter(int iSequence, ParameterAttributes attributes, java.lang.String strParamName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +230,23 @@ public class ConstructorBuilder extends system.reflection.ConstructorInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetCustomAttribute.
+     *
+     * @param con the argument of type {@code ConstructorInfo}
+     * @param binaryAttribute the argument of type {@code byte[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ConstructorBuilder.SetCustomAttribute" target="_top">.NET documentation</a>
+     */
     public void SetCustomAttribute(ConstructorInfo con, byte[] binaryAttribute) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +257,23 @@ public class ConstructorBuilder extends system.reflection.ConstructorInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetCustomAttribute.
+     *
+     * @param dupParam0 the argument of type {@code ConstructorInfo}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ConstructorBuilder.SetCustomAttribute" target="_top">.NET documentation</a>
+     */
     public void SetCustomAttribute(ConstructorInfo dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +284,22 @@ public class ConstructorBuilder extends system.reflection.ConstructorInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetCustomAttribute.
+     *
+     * @param customBuilder the argument of type {@code CustomAttributeBuilder}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ConstructorBuilder.SetCustomAttribute" target="_top">.NET documentation</a>
+     */
     public void SetCustomAttribute(CustomAttributeBuilder customBuilder) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +310,13 @@ public class ConstructorBuilder extends system.reflection.ConstructorInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetImplementationFlags.
+     *
+     * @param attributes the argument of type {@code MethodImplAttributes}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ConstructorBuilder.SetImplementationFlags" target="_top">.NET documentation</a>
+     */
     public void SetImplementationFlags(MethodImplAttributes attributes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +331,13 @@ public class ConstructorBuilder extends system.reflection.ConstructorInfo  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property InitLocals.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ConstructorBuilder.InitLocals" target="_top">.NET documentation</a>
+     */
     public boolean getInitLocals() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +352,13 @@ public class ConstructorBuilder extends system.reflection.ConstructorInfo  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InitLocals.
+     *
+     * @param InitLocals the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ConstructorBuilder.InitLocals" target="_top">.NET documentation</a>
+     */
     public void setInitLocals(boolean InitLocals) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

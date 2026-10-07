@@ -101,7 +101,10 @@ public class DesignerActionUIService extends NetObject implements AutoCloseable 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DesignerActionUIService(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,26 @@ public class DesignerActionUIService extends NetObject implements AutoCloseable 
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ShouldAutoShow.
+     *
+     * @param component the argument of type {@code IComponent}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerActionUIService.ShouldAutoShow" target="_top">.NET documentation</a>
+     */
     public boolean ShouldAutoShow(IComponent component) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +193,12 @@ public class DesignerActionUIService extends NetObject implements AutoCloseable 
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerActionUIService.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +209,13 @@ public class DesignerActionUIService extends NetObject implements AutoCloseable 
         }
     }
 
+    /**
+     * Invokes the .NET member HideUI.
+     *
+     * @param component the argument of type {@code IComponent}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerActionUIService.HideUI" target="_top">.NET documentation</a>
+     */
     public void HideUI(IComponent component) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +226,13 @@ public class DesignerActionUIService extends NetObject implements AutoCloseable 
         }
     }
 
+    /**
+     * Invokes the .NET member Refresh.
+     *
+     * @param component the argument of type {@code IComponent}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerActionUIService.Refresh" target="_top">.NET documentation</a>
+     */
     public void Refresh(IComponent component) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +243,13 @@ public class DesignerActionUIService extends NetObject implements AutoCloseable 
         }
     }
 
+    /**
+     * Invokes the .NET member ShowUI.
+     *
+     * @param component the argument of type {@code IComponent}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerActionUIService.ShowUI" target="_top">.NET documentation</a>
+     */
     public void ShowUI(IComponent component) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +282,13 @@ public class DesignerActionUIService extends NetObject implements AutoCloseable 
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addDesignerActionUIStateChange.
+     *
+     * @param handler the argument of type {@code DesignerActionUIStateChangeEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addDesignerActionUIStateChange(DesignerActionUIStateChangeEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +299,13 @@ public class DesignerActionUIService extends NetObject implements AutoCloseable 
         }
     }
 
+    /**
+     * Invokes the .NET member removeDesignerActionUIStateChange.
+     *
+     * @param handler the argument of type {@code DesignerActionUIStateChangeEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeDesignerActionUIStateChange(DesignerActionUIStateChangeEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

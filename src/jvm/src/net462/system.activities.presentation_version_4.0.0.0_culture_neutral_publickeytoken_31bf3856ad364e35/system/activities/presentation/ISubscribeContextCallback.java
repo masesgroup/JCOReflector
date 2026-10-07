@@ -52,5 +52,10 @@ import system.activities.presentation.ContextItem;
  * @version 2.0.0.0
  */
 public interface ISubscribeContextCallback {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param item the .NET argument of type {@code System.Activities.Presentation.ContextItem}
+     */
     public void Invoke(ContextItem item);
 }

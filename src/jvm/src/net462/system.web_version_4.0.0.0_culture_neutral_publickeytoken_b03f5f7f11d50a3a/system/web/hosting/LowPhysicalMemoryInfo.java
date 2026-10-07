@@ -98,7 +98,10 @@ public class LowPhysicalMemoryInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public LowPhysicalMemoryInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,14 @@ public class LowPhysicalMemoryInfo extends NetObject  {
     public LowPhysicalMemoryInfo() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param currentPercentUsed the argument of type {@code int}
+     * @param percentLimit the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.LowPhysicalMemoryInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public LowPhysicalMemoryInfo(int currentPercentUsed, int percentLimit) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +178,13 @@ public class LowPhysicalMemoryInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RequestGC.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.LowPhysicalMemoryInfo.RequestGC" target="_top">.NET documentation</a>
+     */
     public boolean getRequestGC() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +199,13 @@ public class LowPhysicalMemoryInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RequestGC.
+     *
+     * @param RequestGC the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.LowPhysicalMemoryInfo.RequestGC" target="_top">.NET documentation</a>
+     */
     public void setRequestGC(boolean RequestGC) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +216,13 @@ public class LowPhysicalMemoryInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentPercentUsed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.LowPhysicalMemoryInfo.CurrentPercentUsed" target="_top">.NET documentation</a>
+     */
     public int getCurrentPercentUsed() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +263,13 @@ public class LowPhysicalMemoryInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PercentLimit.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.LowPhysicalMemoryInfo.PercentLimit" target="_top">.NET documentation</a>
+     */
     public int getPercentLimit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

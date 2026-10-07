@@ -102,7 +102,10 @@ public class BaseNumberConverter extends system.componentmodel.TypeConverter  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BaseNumberConverter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,15 @@ public class BaseNumberConverter extends system.componentmodel.TypeConverter  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CanConvertFrom.
+     *
+     * @param context the argument of type {@code ITypeDescriptorContext}
+     * @param sourceType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.BaseNumberConverter.CanConvertFrom" target="_top">.NET documentation</a>
+     */
     public boolean CanConvertFrom(ITypeDescriptorContext context, NetType sourceType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +181,15 @@ public class BaseNumberConverter extends system.componentmodel.TypeConverter  {
         }
     }
 
+    /**
+     * Invokes the .NET member CanConvertTo.
+     *
+     * @param context the argument of type {@code ITypeDescriptorContext}
+     * @param destinationType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.BaseNumberConverter.CanConvertTo" target="_top">.NET documentation</a>
+     */
     public boolean CanConvertTo(ITypeDescriptorContext context, NetType destinationType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +204,30 @@ public class BaseNumberConverter extends system.componentmodel.TypeConverter  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertFrom.
+     *
+     * @param context the argument of type {@code ITypeDescriptorContext}
+     * @param culture the argument of type {@code CultureInfo}
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.BaseNumberConverter.ConvertFrom" target="_top">.NET documentation</a>
+     */
     public NetObject ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, NetObject value) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.RankException, system.ArrayTypeMismatchException, system.TypeInitializationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +243,32 @@ public class BaseNumberConverter extends system.componentmodel.TypeConverter  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertTo.
+     *
+     * @param context the argument of type {@code ITypeDescriptorContext}
+     * @param culture the argument of type {@code CultureInfo}
+     * @param value the argument of type {@code NetObject}
+     * @param destinationType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.BaseNumberConverter.ConvertTo" target="_top">.NET documentation</a>
+     */
     public NetObject ConvertTo(ITypeDescriptorContext context, CultureInfo culture, NetObject value, NetType destinationType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException, system.TypeInitializationException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

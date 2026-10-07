@@ -105,7 +105,10 @@ public class NegotiateAuthentication extends NetObject implements AutoCloseable 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public NegotiateAuthentication(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,32 @@ public class NegotiateAuthentication extends NetObject implements AutoCloseable 
     public NegotiateAuthentication() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param clientOptions the argument of type {@code NegotiateAuthenticationClientOptions}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.MethodAccessException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.NegotiateAuthentication.-ctor" target="_top">.NET documentation</a>
+     */
     public NegotiateAuthentication(NegotiateAuthenticationClientOptions clientOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.diagnostics.tracing.EventSourceException, system.security.cryptography.CryptographicException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +194,32 @@ public class NegotiateAuthentication extends NetObject implements AutoCloseable 
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param serverOptions the argument of type {@code NegotiateAuthenticationServerOptions}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.MethodAccessException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.NegotiateAuthentication.-ctor" target="_top">.NET documentation</a>
+     */
     public NegotiateAuthentication(NegotiateAuthenticationServerOptions serverOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.diagnostics.tracing.EventSourceException, system.security.cryptography.CryptographicException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +235,30 @@ public class NegotiateAuthentication extends NetObject implements AutoCloseable 
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetOutgoingBlob.
+     *
+     * @param incomingBlob the argument of type {@code java.lang.String}
+     * @param statusCode the argument of type {@code JCORefOut<NegotiateAuthenticationStatusCode>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.NegotiateAuthentication.GetOutgoingBlob" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetOutgoingBlob(java.lang.String incomingBlob, JCORefOut<NegotiateAuthenticationStatusCode> statusCode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.diagnostics.tracing.EventSourceException, system.diagnostics.UnreachableException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +273,12 @@ public class NegotiateAuthentication extends NetObject implements AutoCloseable 
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.NegotiateAuthentication.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +306,13 @@ public class NegotiateAuthentication extends NetObject implements AutoCloseable 
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsAuthenticated.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.NegotiateAuthentication.IsAuthenticated" target="_top">.NET documentation</a>
+     */
     public boolean getIsAuthenticated() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +327,13 @@ public class NegotiateAuthentication extends NetObject implements AutoCloseable 
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsEncrypted.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.NegotiateAuthentication.IsEncrypted" target="_top">.NET documentation</a>
+     */
     public boolean getIsEncrypted() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +348,13 @@ public class NegotiateAuthentication extends NetObject implements AutoCloseable 
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsMutuallyAuthenticated.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.NegotiateAuthentication.IsMutuallyAuthenticated" target="_top">.NET documentation</a>
+     */
     public boolean getIsMutuallyAuthenticated() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +369,13 @@ public class NegotiateAuthentication extends NetObject implements AutoCloseable 
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsServer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.NegotiateAuthentication.IsServer" target="_top">.NET documentation</a>
+     */
     public boolean getIsServer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +390,13 @@ public class NegotiateAuthentication extends NetObject implements AutoCloseable 
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSigned.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.NegotiateAuthentication.IsSigned" target="_top">.NET documentation</a>
+     */
     public boolean getIsSigned() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +411,13 @@ public class NegotiateAuthentication extends NetObject implements AutoCloseable 
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProtectionLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.NegotiateAuthentication.ProtectionLevel" target="_top">.NET documentation</a>
+     */
     public ProtectionLevel getProtectionLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +433,20 @@ public class NegotiateAuthentication extends NetObject implements AutoCloseable 
         }
     }
 
+    /**
+     * Gets the value of the .NET property RemoteIdentity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.NegotiateAuthentication.RemoteIdentity" target="_top">.NET documentation</a>
+     */
     public IIdentity getRemoteIdentity() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +462,13 @@ public class NegotiateAuthentication extends NetObject implements AutoCloseable 
         }
     }
 
+    /**
+     * Gets the value of the .NET property ImpersonationLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.NegotiateAuthentication.ImpersonationLevel" target="_top">.NET documentation</a>
+     */
     public TokenImpersonationLevel getImpersonationLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -336,6 +484,13 @@ public class NegotiateAuthentication extends NetObject implements AutoCloseable 
         }
     }
 
+    /**
+     * Gets the value of the .NET property Package.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.NegotiateAuthentication.Package" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPackage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -350,6 +505,13 @@ public class NegotiateAuthentication extends NetObject implements AutoCloseable 
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.NegotiateAuthentication.TargetName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTargetName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

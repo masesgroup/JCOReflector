@@ -100,7 +100,10 @@ public class _ParameterBuilderImplementation extends NetObject implements _Param
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public _ParameterBuilderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,13 @@ public class _ParameterBuilderImplementation extends NetObject implements _Param
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetTypeInfoCount.
+     *
+     * @param pcTInfo the argument of type {@code JCORefOut<UInt32>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._ParameterBuilder.GetTypeInfoCount" target="_top">.NET documentation</a>
+     */
     public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

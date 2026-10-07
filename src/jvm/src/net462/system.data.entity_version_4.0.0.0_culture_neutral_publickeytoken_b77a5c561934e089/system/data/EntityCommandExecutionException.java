@@ -103,7 +103,9 @@ public class EntityCommandExecutionException extends system.data.EntityException
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public EntityCommandExecutionException(java.lang.Object instance) {
         super(instance);

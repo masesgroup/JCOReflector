@@ -106,7 +106,10 @@ public class HttpPolicyDownloaderProtocol extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HttpPolicyDownloaderProtocol(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,14 @@ public class HttpPolicyDownloaderProtocol extends NetObject  {
     public HttpPolicyDownloaderProtocol() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param appUri the argument of type {@code Uri}
+     * @param address the argument of type {@code IPAddress}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.HttpPolicyDownloaderProtocol.-ctor" target="_top">.NET documentation</a>
+     */
     public HttpPolicyDownloaderProtocol(Uri appUri, IPAddress address) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +182,12 @@ public class HttpPolicyDownloaderProtocol extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Abort.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.HttpPolicyDownloaderProtocol.Abort" target="_top">.NET documentation</a>
+     */
     public void Abort() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +198,13 @@ public class HttpPolicyDownloaderProtocol extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BeginDownload.
+     *
+     * @param callback the argument of type {@code SecurityCriticalAction}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.HttpPolicyDownloaderProtocol.BeginDownload" target="_top">.NET documentation</a>
+     */
     public void BeginDownload(SecurityCriticalAction callback) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +215,13 @@ public class HttpPolicyDownloaderProtocol extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DownloadCallback.
+     *
+     * @param ar the argument of type {@code IAsyncResult}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.HttpPolicyDownloaderProtocol.DownloadCallback" target="_top">.NET documentation</a>
+     */
     public void DownloadCallback(IAsyncResult ar) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +232,13 @@ public class HttpPolicyDownloaderProtocol extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReadCallback.
+     *
+     * @param ar the argument of type {@code IAsyncResult}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.HttpPolicyDownloaderProtocol.ReadCallback" target="_top">.NET documentation</a>
+     */
     public void ReadCallback(IAsyncResult ar) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +249,13 @@ public class HttpPolicyDownloaderProtocol extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterUnsafeWebRequestCreator.
+     *
+     * @param creator the argument of type {@code IUnsafeWebRequestCreate}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.HttpPolicyDownloaderProtocol.RegisterUnsafeWebRequestCreator" target="_top">.NET documentation</a>
+     */
     public static void RegisterUnsafeWebRequestCreator(IUnsafeWebRequestCreate creator) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -225,6 +270,14 @@ public class HttpPolicyDownloaderProtocol extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Result.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.HttpPolicyDownloaderProtocol.Result" target="_top">.NET documentation</a>
+     */
     public SocketPolicy getResult() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

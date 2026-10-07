@@ -99,7 +99,10 @@ public class CodeConnectAccess extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodeConnectAccess(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class CodeConnectAccess extends NetObject  {
     public CodeConnectAccess() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param allowScheme the argument of type {@code java.lang.String}
+     * @param allowPort the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.CodeConnectAccess.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeConnectAccess(java.lang.String allowScheme, int allowPort) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +175,14 @@ public class CodeConnectAccess extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateAnySchemeAccess.
+     *
+     * @param allowPort the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.CodeConnectAccess.CreateAnySchemeAccess" target="_top">.NET documentation</a>
+     */
     public static CodeConnectAccess CreateAnySchemeAccess(int allowPort) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -179,6 +198,14 @@ public class CodeConnectAccess extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateOriginSchemeAccess.
+     *
+     * @param allowPort the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.CodeConnectAccess.CreateOriginSchemeAccess" target="_top">.NET documentation</a>
+     */
     public static CodeConnectAccess CreateOriginSchemeAccess(int allowPort) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -198,6 +225,13 @@ public class CodeConnectAccess extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Port.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.CodeConnectAccess.Port" target="_top">.NET documentation</a>
+     */
     public int getPort() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +272,13 @@ public class CodeConnectAccess extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Scheme.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.CodeConnectAccess.Scheme" target="_top">.NET documentation</a>
+     */
     public java.lang.String getScheme() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

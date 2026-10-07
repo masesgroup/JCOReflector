@@ -100,7 +100,10 @@ public class BaseVsaSite extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BaseVsaSite(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class BaseVsaSite extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.BaseVsaSite.-ctor" target="_top">.NET documentation</a>
+     */
     public BaseVsaSite() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,14 @@ public class BaseVsaSite extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member OnCompilerError.
+     *
+     * @param error the argument of type {@code IJSVsaError}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.BaseVsaSite.OnCompilerError" target="_top">.NET documentation</a>
+     */
     public boolean OnCompilerError(IJSVsaError error) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +192,16 @@ public class BaseVsaSite extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEventSourceInstance.
+     *
+     * @param itemName the argument of type {@code java.lang.String}
+     * @param eventSourceName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.BaseVsaSite.GetEventSourceInstance" target="_top">.NET documentation</a>
+     */
     public NetObject GetEventSourceInstance(java.lang.String itemName, java.lang.String eventSourceName) throws Throwable, microsoft.jscript.vsa.JSVsaException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +217,15 @@ public class BaseVsaSite extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetGlobalInstance.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.BaseVsaSite.GetGlobalInstance" target="_top">.NET documentation</a>
+     */
     public NetObject GetGlobalInstance(java.lang.String name) throws Throwable, microsoft.jscript.vsa.JSVsaException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +241,15 @@ public class BaseVsaSite extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCompiledState.
+     *
+     * @param pe the argument of type {@code JCORefOut}
+     * @param debugInfo the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.BaseVsaSite.GetCompiledState" target="_top">.NET documentation</a>
+     */
     public void GetCompiledState(JCORefOut pe, JCORefOut debugInfo) throws Throwable, microsoft.jscript.vsa.JSVsaException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +260,15 @@ public class BaseVsaSite extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Notify.
+     *
+     * @param notify the argument of type {@code java.lang.String}
+     * @param optional the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.BaseVsaSite.Notify" target="_top">.NET documentation</a>
+     */
     public void Notify(java.lang.String notify, NetObject optional) throws Throwable, microsoft.jscript.vsa.JSVsaException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +283,14 @@ public class BaseVsaSite extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Assembly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.BaseVsaSite.Assembly" target="_top">.NET documentation</a>
+     */
     public byte[] getAssembly() throws Throwable, microsoft.jscript.vsa.JSVsaException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +314,13 @@ public class BaseVsaSite extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DebugInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.BaseVsaSite.DebugInfo" target="_top">.NET documentation</a>
+     */
     public byte[] getDebugInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

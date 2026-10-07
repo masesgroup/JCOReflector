@@ -100,7 +100,10 @@ public class AccessKeyPressedEventArgs extends system.windows.RoutedEventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AccessKeyPressedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,20 @@ public class AccessKeyPressedEventArgs extends system.windows.RoutedEventArgs  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.AccessKeyPressedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public AccessKeyPressedEventArgs() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +174,19 @@ public class AccessKeyPressedEventArgs extends system.windows.RoutedEventArgs  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.AccessKeyPressedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public AccessKeyPressedEventArgs(java.lang.String key) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +205,13 @@ public class AccessKeyPressedEventArgs extends system.windows.RoutedEventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Scope.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.AccessKeyPressedEventArgs.Scope" target="_top">.NET documentation</a>
+     */
     public NetObject getScope() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +227,13 @@ public class AccessKeyPressedEventArgs extends system.windows.RoutedEventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Scope.
+     *
+     * @param Scope the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.AccessKeyPressedEventArgs.Scope" target="_top">.NET documentation</a>
+     */
     public void setScope(NetObject Scope) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +244,13 @@ public class AccessKeyPressedEventArgs extends system.windows.RoutedEventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Key.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.AccessKeyPressedEventArgs.Key" target="_top">.NET documentation</a>
+     */
     public java.lang.String getKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +265,13 @@ public class AccessKeyPressedEventArgs extends system.windows.RoutedEventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Target.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.AccessKeyPressedEventArgs.Target" target="_top">.NET documentation</a>
+     */
     public UIElement getTarget() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +287,13 @@ public class AccessKeyPressedEventArgs extends system.windows.RoutedEventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Target.
+     *
+     * @param Target the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.AccessKeyPressedEventArgs.Target" target="_top">.NET documentation</a>
+     */
     public void setTarget(UIElement Target) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -114,7 +114,9 @@ public class AceQualifier extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public AceQualifier(java.lang.Object instance) {
         super(instance);

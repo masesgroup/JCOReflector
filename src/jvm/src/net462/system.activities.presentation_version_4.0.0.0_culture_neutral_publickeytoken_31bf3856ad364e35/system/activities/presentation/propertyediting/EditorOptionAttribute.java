@@ -99,7 +99,10 @@ public class EditorOptionAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EditorOptionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class EditorOptionAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.EditorOptionAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public EditorOptionAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +169,17 @@ public class EditorOptionAttribute extends system.Attribute  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member TryGetOptionValue.
+     *
+     * @param attributes the argument of type {@code IEnumerable}
+     * @param optionName the argument of type {@code java.lang.String}
+     * @param optionValue the argument of type {@code JCORefOut<NetObject>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.EditorOptionAttribute.TryGetOptionValue" target="_top">.NET documentation</a>
+     */
     public static boolean TryGetOptionValue(IEnumerable attributes, java.lang.String optionName, JCORefOut<NetObject> optionValue) throws Throwable, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -178,6 +198,13 @@ public class EditorOptionAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.EditorOptionAttribute.Value" target="_top">.NET documentation</a>
+     */
     public NetObject getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +220,13 @@ public class EditorOptionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Value.
+     *
+     * @param Value the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.EditorOptionAttribute.Value" target="_top">.NET documentation</a>
+     */
     public void setValue(NetObject Value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +237,13 @@ public class EditorOptionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.EditorOptionAttribute.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +258,13 @@ public class EditorOptionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.EditorOptionAttribute.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

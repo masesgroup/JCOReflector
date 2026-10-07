@@ -103,7 +103,9 @@ public class DecoderFallbackException extends system.ArgumentException {
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public DecoderFallbackException(java.lang.Object instance) {
         super(instance);
@@ -164,6 +166,15 @@ public class DecoderFallbackException extends system.ArgumentException {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param bytesUnknown the argument of type {@code byte[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.DecoderFallbackException.-ctor" target="_top">.NET documentation</a>
+     */
     public DecoderFallbackException(java.lang.String message, byte[] bytesUnknown, int index) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +193,13 @@ public class DecoderFallbackException extends system.ArgumentException {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BytesUnknown.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.DecoderFallbackException.BytesUnknown" target="_top">.NET documentation</a>
+     */
     public byte[] getBytesUnknown() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +223,13 @@ public class DecoderFallbackException extends system.ArgumentException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Index.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.DecoderFallbackException.Index" target="_top">.NET documentation</a>
+     */
     public int getIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

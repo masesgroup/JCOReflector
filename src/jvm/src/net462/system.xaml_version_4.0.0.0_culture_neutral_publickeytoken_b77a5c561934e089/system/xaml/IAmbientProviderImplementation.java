@@ -103,7 +103,10 @@ public class IAmbientProviderImplementation extends NetObject implements IAmbien
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IAmbientProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,14 @@ public class IAmbientProviderImplementation extends NetObject implements IAmbien
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetAllAmbientValues.
+     *
+     * @param types the argument of type {@code XamlType...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.IAmbientProvider.GetAllAmbientValues" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 GetAllAmbientValues(XamlType... types) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -160,6 +171,17 @@ public class IAmbientProviderImplementation extends NetObject implements IAmbien
         }
     }
 
+    /**
+     * Invokes the .NET member GetAllAmbientValues.
+     *
+     * @param ceilingTypes the argument of type {@code IEnumerable_1}
+     * @param searchLiveStackOnly the argument of type {@code boolean}
+     * @param types the argument of type {@code IEnumerable_1}
+     * @param properties the argument of type {@code XamlMember...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.IAmbientProvider.GetAllAmbientValues" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 GetAllAmbientValues(IEnumerable_1 ceilingTypes, boolean searchLiveStackOnly, IEnumerable_1 types, XamlMember... properties) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +197,15 @@ public class IAmbientProviderImplementation extends NetObject implements IAmbien
         }
     }
 
+    /**
+     * Invokes the .NET member GetAllAmbientValues.
+     *
+     * @param ceilingTypes the argument of type {@code IEnumerable_1}
+     * @param properties the argument of type {@code XamlMember...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.IAmbientProvider.GetAllAmbientValues" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 GetAllAmbientValues(IEnumerable_1 ceilingTypes, XamlMember... properties) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +221,14 @@ public class IAmbientProviderImplementation extends NetObject implements IAmbien
         }
     }
 
+    /**
+     * Invokes the .NET member GetFirstAmbientValue.
+     *
+     * @param types the argument of type {@code XamlType...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.IAmbientProvider.GetFirstAmbientValue" target="_top">.NET documentation</a>
+     */
     public NetObject GetFirstAmbientValue(XamlType... types) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +244,15 @@ public class IAmbientProviderImplementation extends NetObject implements IAmbien
         }
     }
 
+    /**
+     * Invokes the .NET member GetFirstAmbientValue.
+     *
+     * @param ceilingTypes the argument of type {@code IEnumerable_1}
+     * @param properties the argument of type {@code XamlMember...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.IAmbientProvider.GetFirstAmbientValue" target="_top">.NET documentation</a>
+     */
     public AmbientPropertyValue GetFirstAmbientValue(IEnumerable_1 ceilingTypes, XamlMember... properties) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

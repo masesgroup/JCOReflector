@@ -103,7 +103,10 @@ public class ImmutableQueue extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ImmutableQueue(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,25 @@ public class ImmutableQueue extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Dequeue.
+     *
+     * @param <T> the type of the generic argument T
+     * @param queue the argument of type {@code IImmutableQueue_1}
+     * @param value the argument of type {@code JCORefOut<T>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableQueue.Dequeue" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> IImmutableQueue_1 Dequeue(IImmutableQueue_1 queue, JCORefOut<T> value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -171,6 +193,14 @@ public class ImmutableQueue extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param <T> the type of the generic argument T
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableQueue.Create" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> ImmutableQueue_1 Create() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -186,6 +216,15 @@ public class ImmutableQueue extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param <T> the type of the generic argument T
+     * @param item the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableQueue.Create" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> ImmutableQueue_1 Create(T item) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -201,6 +240,25 @@ public class ImmutableQueue extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param <T> the type of the generic argument T
+     * @param items the argument of type {@code T...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableQueue.Create" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> ImmutableQueue_1 Create(T... items) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -216,6 +274,25 @@ public class ImmutableQueue extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateRange.
+     *
+     * @param <T> the type of the generic argument T
+     * @param items the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableQueue.CreateRange" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> ImmutableQueue_1 CreateRange(IEnumerable_1 items) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

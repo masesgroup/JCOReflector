@@ -110,7 +110,10 @@ public class ClientBuildManager extends system.MarshalByRefObject implements Aut
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ClientBuildManager(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,25 @@ public class ClientBuildManager extends system.MarshalByRefObject implements Aut
     public ClientBuildManager() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param appVirtualDir the argument of type {@code java.lang.String}
+     * @param appPhysicalSourceDir the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManager.-ctor" target="_top">.NET documentation</a>
+     */
     public ClientBuildManager(java.lang.String appVirtualDir, java.lang.String appPhysicalSourceDir) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.web.HttpException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +192,26 @@ public class ClientBuildManager extends system.MarshalByRefObject implements Aut
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param appVirtualDir the argument of type {@code java.lang.String}
+     * @param appPhysicalSourceDir the argument of type {@code java.lang.String}
+     * @param appPhysicalTargetDir the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManager.-ctor" target="_top">.NET documentation</a>
+     */
     public ClientBuildManager(java.lang.String appVirtualDir, java.lang.String appPhysicalSourceDir, java.lang.String appPhysicalTargetDir) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.web.HttpException {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +222,30 @@ public class ClientBuildManager extends system.MarshalByRefObject implements Aut
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param appVirtualDir the argument of type {@code java.lang.String}
+     * @param appPhysicalSourceDir the argument of type {@code java.lang.String}
+     * @param appPhysicalTargetDir the argument of type {@code java.lang.String}
+     * @param parameter the argument of type {@code ClientBuildManagerParameter}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManager.-ctor" target="_top">.NET documentation</a>
+     */
     public ClientBuildManager(java.lang.String appVirtualDir, java.lang.String appPhysicalSourceDir, java.lang.String appPhysicalTargetDir, ClientBuildManagerParameter parameter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.web.HttpException {
         try {
             // add reference to assemblyName.dll file
@@ -190,6 +256,36 @@ public class ClientBuildManager extends system.MarshalByRefObject implements Aut
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param appVirtualDir the argument of type {@code java.lang.String}
+     * @param appPhysicalSourceDir the argument of type {@code java.lang.String}
+     * @param appPhysicalTargetDir the argument of type {@code java.lang.String}
+     * @param parameter the argument of type {@code ClientBuildManagerParameter}
+     * @param typeDescriptionProvider the argument of type {@code TypeDescriptionProvider}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManager.-ctor" target="_top">.NET documentation</a>
+     */
     public ClientBuildManager(java.lang.String appVirtualDir, java.lang.String appPhysicalSourceDir, java.lang.String appPhysicalTargetDir, ClientBuildManagerParameter parameter, TypeDescriptionProvider typeDescriptionProvider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.OutOfMemoryException, system.web.HttpException {
         try {
             // add reference to assemblyName.dll file
@@ -205,6 +301,35 @@ public class ClientBuildManager extends system.MarshalByRefObject implements Aut
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsCodeAssembly.
+     *
+     * @param assemblyName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.CannotUnloadAppDomainException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManager.IsCodeAssembly" target="_top">.NET documentation</a>
+     */
     public boolean IsCodeAssembly(java.lang.String assemblyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.ObjectDisposedException, system.CannotUnloadAppDomainException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +344,24 @@ public class ClientBuildManager extends system.MarshalByRefObject implements Aut
         }
     }
 
+    /**
+     * Invokes the .NET member Unload.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManager.Unload" target="_top">.NET documentation</a>
+     */
     public boolean Unload() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +376,42 @@ public class ClientBuildManager extends system.MarshalByRefObject implements Aut
         }
     }
 
+    /**
+     * Invokes the .NET member GenerateCodeCompileUnit.
+     *
+     * @param virtualPath the argument of type {@code java.lang.String}
+     * @param virtualFileString the argument of type {@code java.lang.String}
+     * @param codeDomProviderType the argument of type {@code JCORefOut<NetType>}
+     * @param compilerParameters the argument of type {@code JCORefOut<CompilerParameters>}
+     * @param linePragmasTable the argument of type {@code JCORefOut<IDictionary>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.CannotUnloadAppDomainException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.web.HttpCompileException if the .NET member raises it
+     * @throws system.web.HttpParseException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManager.GenerateCodeCompileUnit" target="_top">.NET documentation</a>
+     */
     public CodeCompileUnit GenerateCodeCompileUnit(java.lang.String virtualPath, java.lang.String virtualFileString, JCORefOut<NetType> codeDomProviderType, JCORefOut<CompilerParameters> compilerParameters, JCORefOut<IDictionary> linePragmasTable) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.ObjectDisposedException, system.CannotUnloadAppDomainException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.web.HttpCompileException, system.web.HttpParseException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +427,38 @@ public class ClientBuildManager extends system.MarshalByRefObject implements Aut
         }
     }
 
+    /**
+     * Invokes the .NET member GenerateCodeCompileUnit.
+     *
+     * @param virtualPath the argument of type {@code java.lang.String}
+     * @param codeDomProviderType the argument of type {@code JCORefOut<NetType>}
+     * @param compilerParameters the argument of type {@code JCORefOut<CompilerParameters>}
+     * @param linePragmasTable the argument of type {@code JCORefOut<IDictionary>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.CannotUnloadAppDomainException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.web.HttpCompileException if the .NET member raises it
+     * @throws system.web.HttpParseException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManager.GenerateCodeCompileUnit" target="_top">.NET documentation</a>
+     */
     public CodeCompileUnit GenerateCodeCompileUnit(java.lang.String virtualPath, JCORefOut<NetType> codeDomProviderType, JCORefOut<CompilerParameters> compilerParameters, JCORefOut<IDictionary> linePragmasTable) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.web.HttpException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.CannotUnloadAppDomainException, system.MissingMethodException, system.reflection.TargetInvocationException, system.web.HttpCompileException, system.web.HttpParseException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +474,34 @@ public class ClientBuildManager extends system.MarshalByRefObject implements Aut
         }
     }
 
+    /**
+     * Invokes the .NET member GetBrowserDefinitions.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.CannotUnloadAppDomainException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManager.GetBrowserDefinitions" target="_top">.NET documentation</a>
+     */
     public IDictionary GetBrowserDefinitions() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.ArgumentNullException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.ObjectDisposedException, system.CannotUnloadAppDomainException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +517,13 @@ public class ClientBuildManager extends system.MarshalByRefObject implements Aut
         }
     }
 
+    /**
+     * Invokes the .NET member InitializeLifetimeService.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManager.InitializeLifetimeService" target="_top">.NET documentation</a>
+     */
     public NetObject InitializeLifetimeService() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +539,40 @@ public class ClientBuildManager extends system.MarshalByRefObject implements Aut
         }
     }
 
+    /**
+     * Invokes the .NET member GenerateCode.
+     *
+     * @param virtualPath the argument of type {@code java.lang.String}
+     * @param virtualFileString the argument of type {@code java.lang.String}
+     * @param linePragmasTable the argument of type {@code JCORefOut<IDictionary>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.CannotUnloadAppDomainException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.web.HttpCompileException if the .NET member raises it
+     * @throws system.web.HttpParseException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManager.GenerateCode" target="_top">.NET documentation</a>
+     */
     public java.lang.String GenerateCode(java.lang.String virtualPath, java.lang.String virtualFileString, JCORefOut<IDictionary> linePragmasTable) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.ObjectDisposedException, system.CannotUnloadAppDomainException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.web.HttpCompileException, system.web.HttpParseException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -307,6 +587,35 @@ public class ClientBuildManager extends system.MarshalByRefObject implements Aut
         }
     }
 
+    /**
+     * Invokes the .NET member GetGeneratedFileVirtualPath.
+     *
+     * @param filePath the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.CannotUnloadAppDomainException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManager.GetGeneratedFileVirtualPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetGeneratedFileVirtualPath(java.lang.String filePath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.ObjectDisposedException, system.CannotUnloadAppDomainException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +630,39 @@ public class ClientBuildManager extends system.MarshalByRefObject implements Aut
         }
     }
 
+    /**
+     * Invokes the .NET member GetGeneratedSourceFile.
+     *
+     * @param virtualPath the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.CannotUnloadAppDomainException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.web.HttpCompileException if the .NET member raises it
+     * @throws system.web.HttpParseException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManager.GetGeneratedSourceFile" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetGeneratedSourceFile(java.lang.String virtualPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.ObjectDisposedException, system.CannotUnloadAppDomainException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.web.HttpCompileException, system.web.HttpParseException, system.OperationCanceledException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +677,13 @@ public class ClientBuildManager extends system.MarshalByRefObject implements Aut
         }
     }
 
+    /**
+     * Invokes the .NET member GetAppDomainShutdownDirectories.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManager.GetAppDomainShutdownDirectories" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] GetAppDomainShutdownDirectories() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -358,6 +707,37 @@ public class ClientBuildManager extends system.MarshalByRefObject implements Aut
         }
     }
 
+    /**
+     * Invokes the .NET member GetTopLevelAssemblyReferences.
+     *
+     * @param virtualPath the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.CannotUnloadAppDomainException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManager.GetTopLevelAssemblyReferences" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] GetTopLevelAssemblyReferences(java.lang.String virtualPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.ObjectDisposedException, system.CannotUnloadAppDomainException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.ThreadAbortException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -381,6 +761,34 @@ public class ClientBuildManager extends system.MarshalByRefObject implements Aut
         }
     }
 
+    /**
+     * Invokes the .NET member GetVirtualCodeDirectories.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.CannotUnloadAppDomainException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManager.GetVirtualCodeDirectories" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] GetVirtualCodeDirectories() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.ArgumentNullException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.ObjectDisposedException, system.CannotUnloadAppDomainException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -404,6 +812,40 @@ public class ClientBuildManager extends system.MarshalByRefObject implements Aut
         }
     }
 
+    /**
+     * Invokes the .NET member GetCompiledType.
+     *
+     * @param virtualPath the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.CannotUnloadAppDomainException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.web.HttpCompileException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManager.GetCompiledType" target="_top">.NET documentation</a>
+     */
     public NetType GetCompiledType(java.lang.String virtualPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.ObjectDisposedException, system.CannotUnloadAppDomainException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.web.HttpCompileException, system.UriFormatException, system.threading.ThreadAbortException, system.InvalidCastException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -419,6 +861,36 @@ public class ClientBuildManager extends system.MarshalByRefObject implements Aut
         }
     }
 
+    /**
+     * Invokes the .NET member CreateObject.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param failIfExists the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.CannotUnloadAppDomainException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManager.CreateObject" target="_top">.NET documentation</a>
+     */
     public IRegisteredObject CreateObject(NetType type, boolean failIfExists) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.ObjectDisposedException, system.CannotUnloadAppDomainException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -434,6 +906,36 @@ public class ClientBuildManager extends system.MarshalByRefObject implements Aut
         }
     }
 
+    /**
+     * Invokes the .NET member CompileApplicationDependencies.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.CannotUnloadAppDomainException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.web.HttpCompileException if the .NET member raises it
+     * @throws system.web.HttpParseException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManager.CompileApplicationDependencies" target="_top">.NET documentation</a>
+     */
     public void CompileApplicationDependencies() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.ArgumentNullException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.ObjectDisposedException, system.CannotUnloadAppDomainException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.web.HttpCompileException, system.web.HttpParseException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -444,6 +946,34 @@ public class ClientBuildManager extends system.MarshalByRefObject implements Aut
         }
     }
 
+    /**
+     * Invokes the .NET member CompileFile.
+     *
+     * @param virtualPath the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.CannotUnloadAppDomainException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.web.HttpCompileException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManager.CompileFile" target="_top">.NET documentation</a>
+     */
     public void CompileFile(java.lang.String virtualPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.web.HttpException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.CannotUnloadAppDomainException, system.MissingMethodException, system.reflection.TargetInvocationException, system.web.HttpCompileException, system.UriFormatException, system.runtime.remoting.RemotingException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -454,6 +984,39 @@ public class ClientBuildManager extends system.MarshalByRefObject implements Aut
         }
     }
 
+    /**
+     * Invokes the .NET member CompileFile.
+     *
+     * @param virtualPath the argument of type {@code java.lang.String}
+     * @param callback the argument of type {@code ClientBuildManagerCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.CannotUnloadAppDomainException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.web.HttpCompileException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManager.CompileFile" target="_top">.NET documentation</a>
+     */
     public void CompileFile(java.lang.String virtualPath, ClientBuildManagerCallback callback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.ObjectDisposedException, system.CannotUnloadAppDomainException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.web.HttpCompileException, system.UriFormatException, system.threading.ThreadAbortException, system.runtime.remoting.RemotingException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -464,6 +1027,40 @@ public class ClientBuildManager extends system.MarshalByRefObject implements Aut
         }
     }
 
+    /**
+     * Invokes the .NET member GetCodeDirectoryInformation.
+     *
+     * @param virtualCodeDir the argument of type {@code java.lang.String}
+     * @param codeDomProviderType the argument of type {@code JCORefOut<NetType>}
+     * @param compilerParameters the argument of type {@code JCORefOut<CompilerParameters>}
+     * @param generatedFilesDir the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.CannotUnloadAppDomainException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.web.HttpCompileException if the .NET member raises it
+     * @throws system.web.HttpParseException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManager.GetCodeDirectoryInformation" target="_top">.NET documentation</a>
+     */
     public void GetCodeDirectoryInformation(java.lang.String virtualCodeDir, JCORefOut<NetType> codeDomProviderType, JCORefOut<CompilerParameters> compilerParameters, JCORefOut generatedFilesDir) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.ObjectDisposedException, system.CannotUnloadAppDomainException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.web.HttpCompileException, system.web.HttpParseException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -474,6 +1071,39 @@ public class ClientBuildManager extends system.MarshalByRefObject implements Aut
         }
     }
 
+    /**
+     * Invokes the .NET member GetCompilerParameters.
+     *
+     * @param virtualPath the argument of type {@code java.lang.String}
+     * @param codeDomProviderType the argument of type {@code JCORefOut<NetType>}
+     * @param compilerParameters the argument of type {@code JCORefOut<CompilerParameters>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.CannotUnloadAppDomainException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.web.HttpCompileException if the .NET member raises it
+     * @throws system.web.HttpParseException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManager.GetCompilerParameters" target="_top">.NET documentation</a>
+     */
     public void GetCompilerParameters(java.lang.String virtualPath, JCORefOut<NetType> codeDomProviderType, JCORefOut<CompilerParameters> compilerParameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.ObjectDisposedException, system.CannotUnloadAppDomainException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.web.HttpCompileException, system.web.HttpParseException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -484,6 +1114,27 @@ public class ClientBuildManager extends system.MarshalByRefObject implements Aut
         }
     }
 
+    /**
+     * Invokes the .NET member PrecompileApplication.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManager.PrecompileApplication" target="_top">.NET documentation</a>
+     */
     public void PrecompileApplication() throws Throwable, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.web.HttpException, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.configuration.provider.ProviderException, system.SystemException, system.io.IOException, system.runtime.remoting.RemotingException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -494,6 +1145,39 @@ public class ClientBuildManager extends system.MarshalByRefObject implements Aut
         }
     }
 
+    /**
+     * Invokes the .NET member PrecompileApplication.
+     *
+     * @param callback the argument of type {@code ClientBuildManagerCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.CannotUnloadAppDomainException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.web.HttpParseException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManager.PrecompileApplication" target="_top">.NET documentation</a>
+     */
     public void PrecompileApplication(ClientBuildManagerCallback callback) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.MulticastNotSupportedException, system.web.HttpException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.CannotUnloadAppDomainException, system.MissingMethodException, system.reflection.TargetInvocationException, system.web.HttpParseException, system.io.IOException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.runtime.remoting.RemotingException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -504,6 +1188,44 @@ public class ClientBuildManager extends system.MarshalByRefObject implements Aut
         }
     }
 
+    /**
+     * Invokes the .NET member PrecompileApplication.
+     *
+     * @param callback the argument of type {@code ClientBuildManagerCallback}
+     * @param forceCleanBuild the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.CannotUnloadAppDomainException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.web.HttpParseException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManager.PrecompileApplication" target="_top">.NET documentation</a>
+     */
     public void PrecompileApplication(ClientBuildManagerCallback callback, boolean forceCleanBuild) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentNullException, system.NullReferenceException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.web.HttpException, system.OutOfMemoryException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.CannotUnloadAppDomainException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.web.HttpParseException, system.io.IOException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.runtime.remoting.RemotingException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -517,8 +1239,11 @@ public class ClientBuildManager extends system.MarshalByRefObject implements Aut
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDisposable method available in IDisposable to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IDisposable.Dispose" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Dispose() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
     }
@@ -540,6 +1265,13 @@ public class ClientBuildManager extends system.MarshalByRefObject implements Aut
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsHostCreated.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManager.IsHostCreated" target="_top">.NET documentation</a>
+     */
     public boolean getIsHostCreated() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -554,6 +1286,34 @@ public class ClientBuildManager extends system.MarshalByRefObject implements Aut
         }
     }
 
+    /**
+     * Gets the value of the .NET property CodeGenDir.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.CannotUnloadAppDomainException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManager.CodeGenDir" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCodeGenDir() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.ArgumentNullException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.ObjectDisposedException, system.CannotUnloadAppDomainException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -573,6 +1333,13 @@ public class ClientBuildManager extends system.MarshalByRefObject implements Aut
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addAppDomainStarted.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addAppDomainStarted(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -583,6 +1350,13 @@ public class ClientBuildManager extends system.MarshalByRefObject implements Aut
         }
     }
 
+    /**
+     * Invokes the .NET member removeAppDomainStarted.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeAppDomainStarted(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -593,6 +1367,13 @@ public class ClientBuildManager extends system.MarshalByRefObject implements Aut
         }
     }
 
+    /**
+     * Invokes the .NET member addAppDomainShutdown.
+     *
+     * @param handler the argument of type {@code BuildManagerHostUnloadEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addAppDomainShutdown(BuildManagerHostUnloadEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -603,6 +1384,13 @@ public class ClientBuildManager extends system.MarshalByRefObject implements Aut
         }
     }
 
+    /**
+     * Invokes the .NET member removeAppDomainShutdown.
+     *
+     * @param handler the argument of type {@code BuildManagerHostUnloadEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeAppDomainShutdown(BuildManagerHostUnloadEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -613,6 +1401,13 @@ public class ClientBuildManager extends system.MarshalByRefObject implements Aut
         }
     }
 
+    /**
+     * Invokes the .NET member addAppDomainUnloaded.
+     *
+     * @param handler the argument of type {@code BuildManagerHostUnloadEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addAppDomainUnloaded(BuildManagerHostUnloadEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -623,6 +1418,13 @@ public class ClientBuildManager extends system.MarshalByRefObject implements Aut
         }
     }
 
+    /**
+     * Invokes the .NET member removeAppDomainUnloaded.
+     *
+     * @param handler the argument of type {@code BuildManagerHostUnloadEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeAppDomainUnloaded(BuildManagerHostUnloadEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

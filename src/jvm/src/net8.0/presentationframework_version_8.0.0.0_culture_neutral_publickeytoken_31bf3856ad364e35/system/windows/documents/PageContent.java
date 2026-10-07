@@ -104,7 +104,10 @@ public class PageContent extends system.windows.FrameworkElement  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PageContent(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,25 @@ public class PageContent extends system.windows.FrameworkElement  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.PageContent.-ctor" target="_top">.NET documentation</a>
+     */
     public PageContent() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidCastException, system.FormatException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +187,14 @@ public class PageContent extends system.windows.FrameworkElement  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ShouldSerializeChild.
+     *
+     * @param manager the argument of type {@code XamlDesignerSerializationManager}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.PageContent.ShouldSerializeChild" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeChild(XamlDesignerSerializationManager manager) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +209,46 @@ public class PageContent extends system.windows.FrameworkElement  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPageRoot.
+     *
+     * @param forceReload the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.threading.tasks.TaskCanceledException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.net.WebException if the .NET member raises it
+     * @throws system.net.CookieException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.xaml.XamlException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.windows.markup.XamlParseException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.PageContent.GetPageRoot" target="_top">.NET documentation</a>
+     */
     public FixedPage GetPageRoot(boolean forceReload) throws Throwable, system.NotSupportedException, system.ArgumentException, system.OverflowException, system.InvalidOperationException, system.ArgumentNullException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.NullReferenceException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.InvalidCastException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.io.FileFormatException, system.diagnostics.UnreachableException, system.net.WebException, system.net.CookieException, system.FormatException, system.io.IOException, system.ApplicationException, system.xml.XmlException, system.xaml.XamlException, system.NotImplementedException, system.windows.markup.XamlParseException, system.ObjectDisposedException, system.reflection.AmbiguousMatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +264,39 @@ public class PageContent extends system.windows.FrameworkElement  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPageRootAsync.
+     *
+     * @param forceReload the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.net.WebException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.net.CookieException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.xaml.XamlException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.windows.markup.XamlParseException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.PageContent.GetPageRootAsync" target="_top">.NET documentation</a>
+     */
     public void GetPageRootAsync(boolean forceReload) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.io.FileFormatException, system.net.WebException, system.componentmodel.Win32Exception, system.net.CookieException, system.FormatException, system.io.IOException, system.ApplicationException, system.xml.XmlException, system.xaml.XamlException, system.NotImplementedException, system.windows.markup.XamlParseException, system.InvalidCastException, system.ObjectDisposedException, system.reflection.AmbiguousMatchException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +307,12 @@ public class PageContent extends system.windows.FrameworkElement  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPageRootAsyncCancel.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.PageContent.GetPageRootAsyncCancel" target="_top">.NET documentation</a>
+     */
     public void GetPageRootAsyncCancel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,8 +326,12 @@ public class PageContent extends system.windows.FrameworkElement  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIAddChild method available in IAddChild to obtain an object with an invocable method
+     *
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.IAddChild.AddChild" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void AddChild(NetObject value) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
@@ -226,8 +339,12 @@ public class PageContent extends system.windows.FrameworkElement  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIAddChild method available in IAddChild to obtain an object with an invocable method
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.IAddChild.AddText" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void AddText(java.lang.String text) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
@@ -236,6 +353,21 @@ public class PageContent extends system.windows.FrameworkElement  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Source.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.PageContent.Source" target="_top">.NET documentation</a>
+     */
     public Uri getSource() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +383,22 @@ public class PageContent extends system.windows.FrameworkElement  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Source.
+     *
+     * @param Source the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.PageContent.Source" target="_top">.NET documentation</a>
+     */
     public void setSource(Uri Source) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +409,13 @@ public class PageContent extends system.windows.FrameworkElement  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Child.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.PageContent.Child" target="_top">.NET documentation</a>
+     */
     public FixedPage getChild() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +431,22 @@ public class PageContent extends system.windows.FrameworkElement  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Child.
+     *
+     * @param Child the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.PageContent.Child" target="_top">.NET documentation</a>
+     */
     public void setChild(FixedPage Child) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +457,13 @@ public class PageContent extends system.windows.FrameworkElement  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LinkTargets.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.PageContent.LinkTargets" target="_top">.NET documentation</a>
+     */
     public LinkTargetCollection getLinkTargets() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +484,13 @@ public class PageContent extends system.windows.FrameworkElement  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addGetPageRootCompleted.
+     *
+     * @param handler the argument of type {@code GetPageRootCompletedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addGetPageRootCompleted(GetPageRootCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -316,6 +501,13 @@ public class PageContent extends system.windows.FrameworkElement  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeGetPageRootCompleted.
+     *
+     * @param handler the argument of type {@code GetPageRootCompletedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeGetPageRootCompleted(GetPageRootCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

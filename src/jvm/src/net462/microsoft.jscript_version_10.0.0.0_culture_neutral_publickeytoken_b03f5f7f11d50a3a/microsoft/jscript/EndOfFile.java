@@ -103,7 +103,9 @@ public class EndOfFile extends microsoft.jscript.ParserException {
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public EndOfFile(java.lang.Object instance) {
         super(instance);

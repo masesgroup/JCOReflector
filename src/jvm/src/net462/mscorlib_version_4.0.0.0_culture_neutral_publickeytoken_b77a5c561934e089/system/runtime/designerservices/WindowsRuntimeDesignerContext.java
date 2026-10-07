@@ -102,7 +102,10 @@ public class WindowsRuntimeDesignerContext extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WindowsRuntimeDesignerContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,18 @@ public class WindowsRuntimeDesignerContext extends NetObject  {
     public WindowsRuntimeDesignerContext() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param paths the argument of type {@code IEnumerable_1}
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DesignerServices.WindowsRuntimeDesignerContext.-ctor" target="_top">.NET documentation</a>
+     */
     public WindowsRuntimeDesignerContext(IEnumerable_1 paths, java.lang.String name) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +182,33 @@ public class WindowsRuntimeDesignerContext extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetAssembly.
+     *
+     * @param assemblyName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DesignerServices.WindowsRuntimeDesignerContext.GetAssembly" target="_top">.NET documentation</a>
+     */
     public Assembly GetAssembly(java.lang.String assemblyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +224,17 @@ public class WindowsRuntimeDesignerContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetType.
+     *
+     * @param typeName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DesignerServices.WindowsRuntimeDesignerContext.GetType" target="_top">.NET documentation</a>
+     */
     public NetType GetType(java.lang.String typeName) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +250,17 @@ public class WindowsRuntimeDesignerContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member InitializeSharedContext.
+     *
+     * @param paths the argument of type {@code IEnumerable_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DesignerServices.WindowsRuntimeDesignerContext.InitializeSharedContext" target="_top">.NET documentation</a>
+     */
     public static void InitializeSharedContext(IEnumerable_1 paths) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -207,6 +271,16 @@ public class WindowsRuntimeDesignerContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetIterationContext.
+     *
+     * @param context the argument of type {@code WindowsRuntimeDesignerContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DesignerServices.WindowsRuntimeDesignerContext.SetIterationContext" target="_top">.NET documentation</a>
+     */
     public static void SetIterationContext(WindowsRuntimeDesignerContext context) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -221,6 +295,13 @@ public class WindowsRuntimeDesignerContext extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DesignerServices.WindowsRuntimeDesignerContext.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

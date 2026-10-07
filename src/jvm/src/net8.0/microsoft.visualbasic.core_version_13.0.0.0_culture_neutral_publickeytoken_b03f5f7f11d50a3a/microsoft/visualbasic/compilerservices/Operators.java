@@ -98,7 +98,10 @@ public class Operators extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Operators(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,32 @@ public class Operators extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ConditionalCompareObjectEqual.
+     *
+     * @param Left the argument of type {@code NetObject}
+     * @param Right the argument of type {@code NetObject}
+     * @param TextCompare the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual" target="_top">.NET documentation</a>
+     */
     public static boolean ConditionalCompareObjectEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.FormatException, system.OverflowException, system.InvalidCastException, system.TypeInitializationException, system.NullReferenceException, system.MissingMemberException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -167,6 +196,32 @@ public class Operators extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConditionalCompareObjectGreater.
+     *
+     * @param Left the argument of type {@code NetObject}
+     * @param Right the argument of type {@code NetObject}
+     * @param TextCompare the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectGreater" target="_top">.NET documentation</a>
+     */
     public static boolean ConditionalCompareObjectGreater(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.FormatException, system.OverflowException, system.InvalidCastException, system.TypeInitializationException, system.NullReferenceException, system.MissingMemberException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -181,6 +236,32 @@ public class Operators extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConditionalCompareObjectGreaterEqual.
+     *
+     * @param Left the argument of type {@code NetObject}
+     * @param Right the argument of type {@code NetObject}
+     * @param TextCompare the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectGreaterEqual" target="_top">.NET documentation</a>
+     */
     public static boolean ConditionalCompareObjectGreaterEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.FormatException, system.OverflowException, system.InvalidCastException, system.TypeInitializationException, system.NullReferenceException, system.MissingMemberException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -195,6 +276,32 @@ public class Operators extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConditionalCompareObjectLess.
+     *
+     * @param Left the argument of type {@code NetObject}
+     * @param Right the argument of type {@code NetObject}
+     * @param TextCompare the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectLess" target="_top">.NET documentation</a>
+     */
     public static boolean ConditionalCompareObjectLess(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.FormatException, system.OverflowException, system.InvalidCastException, system.TypeInitializationException, system.NullReferenceException, system.MissingMemberException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -209,6 +316,32 @@ public class Operators extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConditionalCompareObjectLessEqual.
+     *
+     * @param Left the argument of type {@code NetObject}
+     * @param Right the argument of type {@code NetObject}
+     * @param TextCompare the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectLessEqual" target="_top">.NET documentation</a>
+     */
     public static boolean ConditionalCompareObjectLessEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.FormatException, system.OverflowException, system.InvalidCastException, system.TypeInitializationException, system.NullReferenceException, system.MissingMemberException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -223,6 +356,32 @@ public class Operators extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConditionalCompareObjectNotEqual.
+     *
+     * @param Left the argument of type {@code NetObject}
+     * @param Right the argument of type {@code NetObject}
+     * @param TextCompare the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectNotEqual" target="_top">.NET documentation</a>
+     */
     public static boolean ConditionalCompareObjectNotEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.FormatException, system.OverflowException, system.InvalidCastException, system.TypeInitializationException, system.NullReferenceException, system.MissingMemberException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -237,6 +396,25 @@ public class Operators extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CompareString.
+     *
+     * @param Left the argument of type {@code java.lang.String}
+     * @param Right the argument of type {@code java.lang.String}
+     * @param TextCompare the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Operators.CompareString" target="_top">.NET documentation</a>
+     */
     public static int CompareString(java.lang.String Left, java.lang.String Right, boolean TextCompare) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -277,6 +455,32 @@ public class Operators extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddObject.
+     *
+     * @param Left the argument of type {@code NetObject}
+     * @param Right the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Operators.AddObject" target="_top">.NET documentation</a>
+     */
     public static NetObject AddObject(NetObject Left, NetObject Right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.MissingMemberException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -292,6 +496,31 @@ public class Operators extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AndObject.
+     *
+     * @param Left the argument of type {@code NetObject}
+     * @param Right the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Operators.AndObject" target="_top">.NET documentation</a>
+     */
     public static NetObject AndObject(NetObject Left, NetObject Right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.MissingMemberException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -307,6 +536,32 @@ public class Operators extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CompareObjectEqual.
+     *
+     * @param Left the argument of type {@code NetObject}
+     * @param Right the argument of type {@code NetObject}
+     * @param TextCompare the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectEqual" target="_top">.NET documentation</a>
+     */
     public static NetObject CompareObjectEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.FormatException, system.OverflowException, system.InvalidCastException, system.TypeInitializationException, system.NullReferenceException, system.MissingMemberException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -322,6 +577,32 @@ public class Operators extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CompareObjectGreater.
+     *
+     * @param Left the argument of type {@code NetObject}
+     * @param Right the argument of type {@code NetObject}
+     * @param TextCompare the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectGreater" target="_top">.NET documentation</a>
+     */
     public static NetObject CompareObjectGreater(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.FormatException, system.OverflowException, system.InvalidCastException, system.TypeInitializationException, system.NullReferenceException, system.MissingMemberException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -337,6 +618,32 @@ public class Operators extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CompareObjectGreaterEqual.
+     *
+     * @param Left the argument of type {@code NetObject}
+     * @param Right the argument of type {@code NetObject}
+     * @param TextCompare the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectGreaterEqual" target="_top">.NET documentation</a>
+     */
     public static NetObject CompareObjectGreaterEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.FormatException, system.OverflowException, system.InvalidCastException, system.TypeInitializationException, system.NullReferenceException, system.MissingMemberException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -352,6 +659,32 @@ public class Operators extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CompareObjectLess.
+     *
+     * @param Left the argument of type {@code NetObject}
+     * @param Right the argument of type {@code NetObject}
+     * @param TextCompare the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectLess" target="_top">.NET documentation</a>
+     */
     public static NetObject CompareObjectLess(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.FormatException, system.OverflowException, system.InvalidCastException, system.TypeInitializationException, system.NullReferenceException, system.MissingMemberException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -367,6 +700,32 @@ public class Operators extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CompareObjectLessEqual.
+     *
+     * @param Left the argument of type {@code NetObject}
+     * @param Right the argument of type {@code NetObject}
+     * @param TextCompare the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectLessEqual" target="_top">.NET documentation</a>
+     */
     public static NetObject CompareObjectLessEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.FormatException, system.OverflowException, system.InvalidCastException, system.TypeInitializationException, system.NullReferenceException, system.MissingMemberException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -382,6 +741,32 @@ public class Operators extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CompareObjectNotEqual.
+     *
+     * @param Left the argument of type {@code NetObject}
+     * @param Right the argument of type {@code NetObject}
+     * @param TextCompare the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectNotEqual" target="_top">.NET documentation</a>
+     */
     public static NetObject CompareObjectNotEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.FormatException, system.OverflowException, system.InvalidCastException, system.TypeInitializationException, system.NullReferenceException, system.MissingMemberException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -397,6 +782,29 @@ public class Operators extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConcatenateObject.
+     *
+     * @param Left the argument of type {@code NetObject}
+     * @param Right the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject" target="_top">.NET documentation</a>
+     */
     public static NetObject ConcatenateObject(NetObject Left, NetObject Right) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.InvalidCastException, system.NullReferenceException, system.MissingMemberException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -412,6 +820,32 @@ public class Operators extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DivideObject.
+     *
+     * @param Left the argument of type {@code NetObject}
+     * @param Right the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.DivideByZeroException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Operators.DivideObject" target="_top">.NET documentation</a>
+     */
     public static NetObject DivideObject(NetObject Left, NetObject Right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.DivideByZeroException, system.OverflowException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.InvalidCastException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.NullReferenceException, system.MissingMemberException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -427,6 +861,31 @@ public class Operators extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExponentObject.
+     *
+     * @param Left the argument of type {@code NetObject}
+     * @param Right the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Operators.ExponentObject" target="_top">.NET documentation</a>
+     */
     public static NetObject ExponentObject(NetObject Left, NetObject Right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.NullReferenceException, system.MissingMemberException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -442,6 +901,28 @@ public class Operators extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FallbackInvokeUserDefinedOperator.
+     *
+     * @param vbOp the argument of type {@code NetObject}
+     * @param arguments the argument of type {@code NetObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Operators.FallbackInvokeUserDefinedOperator" target="_top">.NET documentation</a>
+     */
     public static NetObject FallbackInvokeUserDefinedOperator(NetObject vbOp, NetObject[] arguments) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.OverflowException, system.InvalidCastException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.NullReferenceException, system.MissingMemberException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -457,6 +938,31 @@ public class Operators extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IntDivideObject.
+     *
+     * @param Left the argument of type {@code NetObject}
+     * @param Right the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Operators.IntDivideObject" target="_top">.NET documentation</a>
+     */
     public static NetObject IntDivideObject(NetObject Left, NetObject Right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.MissingMemberException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -472,6 +978,29 @@ public class Operators extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LeftShiftObject.
+     *
+     * @param Operand the argument of type {@code NetObject}
+     * @param Amount the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Operators.LeftShiftObject" target="_top">.NET documentation</a>
+     */
     public static NetObject LeftShiftObject(NetObject Operand, NetObject Amount) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.InvalidCastException, system.NullReferenceException, system.MissingMemberException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -487,6 +1016,32 @@ public class Operators extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ModObject.
+     *
+     * @param Left the argument of type {@code NetObject}
+     * @param Right the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.DivideByZeroException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Operators.ModObject" target="_top">.NET documentation</a>
+     */
     public static NetObject ModObject(NetObject Left, NetObject Right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.DivideByZeroException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.ObjectDisposedException, system.InvalidCastException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.NullReferenceException, system.MissingMemberException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -502,6 +1057,31 @@ public class Operators extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MultiplyObject.
+     *
+     * @param Left the argument of type {@code NetObject}
+     * @param Right the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Operators.MultiplyObject" target="_top">.NET documentation</a>
+     */
     public static NetObject MultiplyObject(NetObject Left, NetObject Right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.NullReferenceException, system.MissingMemberException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -517,6 +1097,29 @@ public class Operators extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member NegateObject.
+     *
+     * @param Operand the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Operators.NegateObject" target="_top">.NET documentation</a>
+     */
     public static NetObject NegateObject(NetObject Operand) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.MissingMemberException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -532,6 +1135,30 @@ public class Operators extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member NotObject.
+     *
+     * @param Operand the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Operators.NotObject" target="_top">.NET documentation</a>
+     */
     public static NetObject NotObject(NetObject Operand) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.MissingMemberException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -547,6 +1174,31 @@ public class Operators extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OrObject.
+     *
+     * @param Left the argument of type {@code NetObject}
+     * @param Right the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Operators.OrObject" target="_top">.NET documentation</a>
+     */
     public static NetObject OrObject(NetObject Left, NetObject Right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.MissingMemberException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -562,6 +1214,30 @@ public class Operators extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PlusObject.
+     *
+     * @param Operand the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Operators.PlusObject" target="_top">.NET documentation</a>
+     */
     public static NetObject PlusObject(NetObject Operand) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.NullReferenceException, system.MissingMemberException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -577,6 +1253,29 @@ public class Operators extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RightShiftObject.
+     *
+     * @param Operand the argument of type {@code NetObject}
+     * @param Amount the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Operators.RightShiftObject" target="_top">.NET documentation</a>
+     */
     public static NetObject RightShiftObject(NetObject Operand, NetObject Amount) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.InvalidCastException, system.NullReferenceException, system.MissingMemberException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -592,6 +1291,31 @@ public class Operators extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SubtractObject.
+     *
+     * @param Left the argument of type {@code NetObject}
+     * @param Right the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Operators.SubtractObject" target="_top">.NET documentation</a>
+     */
     public static NetObject SubtractObject(NetObject Left, NetObject Right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.ObjectDisposedException, system.InvalidCastException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.NullReferenceException, system.MissingMemberException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -607,6 +1331,31 @@ public class Operators extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member XorObject.
+     *
+     * @param Left the argument of type {@code NetObject}
+     * @param Right the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Operators.XorObject" target="_top">.NET documentation</a>
+     */
     public static NetObject XorObject(NetObject Left, NetObject Right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.MissingMemberException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

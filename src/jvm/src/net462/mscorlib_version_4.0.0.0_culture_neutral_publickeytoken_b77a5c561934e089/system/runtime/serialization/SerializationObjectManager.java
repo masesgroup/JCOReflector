@@ -99,7 +99,10 @@ public class SerializationObjectManager extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SerializationObjectManager(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,20 @@ public class SerializationObjectManager extends NetObject  {
     public SerializationObjectManager() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param context the argument of type {@code StreamingContext}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.SerializationObjectManager.-ctor" target="_top">.NET documentation</a>
+     */
     public SerializationObjectManager(StreamingContext context) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +181,12 @@ public class SerializationObjectManager extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member RaiseOnSerializedEvent.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.SerializationObjectManager.RaiseOnSerializedEvent" target="_top">.NET documentation</a>
+     */
     public void RaiseOnSerializedEvent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +197,23 @@ public class SerializationObjectManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterObject.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.SerializationObjectManager.RegisterObject" target="_top">.NET documentation</a>
+     */
     public void RegisterObject(NetObject obj) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException, system.RankException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class StopRoutingHandler extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public StopRoutingHandler(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class StopRoutingHandler extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Routing.StopRoutingHandler.-ctor" target="_top">.NET documentation</a>
+     */
     public StopRoutingHandler() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,8 +174,13 @@ public class StopRoutingHandler extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIRouteHandler method available in IRouteHandler to obtain an object with an invocable method
+     *
+     * @param requestContext the argument of type {@code RequestContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Routing.IRouteHandler.GetHttpHandler" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public IHttpHandler GetHttpHandler(RequestContext requestContext) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRouteHandler to obtain the full interface.");
     }

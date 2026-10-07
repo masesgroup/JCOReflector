@@ -103,7 +103,10 @@ public class PaxGlobalExtendedAttributesTarEntry extends system.formats.tar.Posi
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PaxGlobalExtendedAttributesTarEntry(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,25 @@ public class PaxGlobalExtendedAttributesTarEntry extends system.formats.tar.Posi
     public PaxGlobalExtendedAttributesTarEntry() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param globalExtendedAttributes the argument of type {@code IEnumerable_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.io.InvalidDataException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Tar.PaxGlobalExtendedAttributesTarEntry.-ctor" target="_top">.NET documentation</a>
+     */
     public PaxGlobalExtendedAttributesTarEntry(IEnumerable_1 globalExtendedAttributes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.io.InvalidDataException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +194,19 @@ public class PaxGlobalExtendedAttributesTarEntry extends system.formats.tar.Posi
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property GlobalExtendedAttributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Tar.PaxGlobalExtendedAttributesTarEntry.GlobalExtendedAttributes" target="_top">.NET documentation</a>
+     */
     public IReadOnlyDictionary_2 getGlobalExtendedAttributes() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

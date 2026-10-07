@@ -102,7 +102,10 @@ public class ActivityBuilder_1<TResult extends IJCOBridgeReflected> extends NetO
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ActivityBuilder_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class ActivityBuilder_1<TResult extends IJCOBridgeReflected> extends NetO
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityBuilder-1.-ctor" target="_top">.NET documentation</a>
+     */
     public ActivityBuilder_1() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,8 +177,12 @@ public class ActivityBuilder_1<TResult extends IJCOBridgeReflected> extends NetO
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDebuggableWorkflowTree method available in IDebuggableWorkflowTree to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Debugger.IDebuggableWorkflowTree.GetWorkflowRoot" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public Activity GetWorkflowRoot() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDebuggableWorkflowTree to obtain the full interface.");
     }
@@ -178,6 +191,13 @@ public class ActivityBuilder_1<TResult extends IJCOBridgeReflected> extends NetO
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Implementation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityBuilder-1.Implementation" target="_top">.NET documentation</a>
+     */
     public Activity getImplementation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +213,13 @@ public class ActivityBuilder_1<TResult extends IJCOBridgeReflected> extends NetO
         }
     }
 
+    /**
+     * Sets the value of the .NET property Implementation.
+     *
+     * @param Implementation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityBuilder-1.Implementation" target="_top">.NET documentation</a>
+     */
     public void setImplementation(Activity Implementation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +230,13 @@ public class ActivityBuilder_1<TResult extends IJCOBridgeReflected> extends NetO
         }
     }
 
+    /**
+     * Gets the value of the .NET property Constraints.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityBuilder-1.Constraints" target="_top">.NET documentation</a>
+     */
     public Collection_1 getConstraints() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +252,13 @@ public class ActivityBuilder_1<TResult extends IJCOBridgeReflected> extends NetO
         }
     }
 
+    /**
+     * Gets the value of the .NET property Attributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityBuilder-1.Attributes" target="_top">.NET documentation</a>
+     */
     public Collection_1 getAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +274,14 @@ public class ActivityBuilder_1<TResult extends IJCOBridgeReflected> extends NetO
         }
     }
 
+    /**
+     * Gets the value of the .NET property Properties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityBuilder-1.Properties" target="_top">.NET documentation</a>
+     */
     public KeyedCollection_2 getProperties() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +297,13 @@ public class ActivityBuilder_1<TResult extends IJCOBridgeReflected> extends NetO
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityBuilder-1.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +318,13 @@ public class ActivityBuilder_1<TResult extends IJCOBridgeReflected> extends NetO
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityBuilder-1.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +335,13 @@ public class ActivityBuilder_1<TResult extends IJCOBridgeReflected> extends NetO
         }
     }
 
+    /**
+     * Gets the value of the .NET property ImplementationVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityBuilder-1.ImplementationVersion" target="_top">.NET documentation</a>
+     */
     public Version getImplementationVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -287,6 +357,13 @@ public class ActivityBuilder_1<TResult extends IJCOBridgeReflected> extends NetO
         }
     }
 
+    /**
+     * Sets the value of the .NET property ImplementationVersion.
+     *
+     * @param ImplementationVersion the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityBuilder-1.ImplementationVersion" target="_top">.NET documentation</a>
+     */
     public void setImplementationVersion(Version ImplementationVersion) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

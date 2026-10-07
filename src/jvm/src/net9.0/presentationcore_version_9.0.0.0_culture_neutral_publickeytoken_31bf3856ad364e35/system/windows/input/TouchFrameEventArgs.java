@@ -103,7 +103,10 @@ public class TouchFrameEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TouchFrameEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,17 @@ public class TouchFrameEventArgs extends system.EventArgs  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetPrimaryTouchPoint.
+     *
+     * @param relativeTo the argument of type {@code IInputElement}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TouchFrameEventArgs.GetPrimaryTouchPoint" target="_top">.NET documentation</a>
+     */
     public TouchPoint GetPrimaryTouchPoint(IInputElement relativeTo) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +187,17 @@ public class TouchFrameEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTouchPoints.
+     *
+     * @param relativeTo the argument of type {@code IInputElement}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TouchFrameEventArgs.GetTouchPoints" target="_top">.NET documentation</a>
+     */
     public TouchPointCollection GetTouchPoints(IInputElement relativeTo) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +213,12 @@ public class TouchFrameEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Invokes the .NET member SuspendMousePromotionUntilTouchUp.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TouchFrameEventArgs.SuspendMousePromotionUntilTouchUp" target="_top">.NET documentation</a>
+     */
     public void SuspendMousePromotionUntilTouchUp() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +233,13 @@ public class TouchFrameEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Timestamp.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TouchFrameEventArgs.Timestamp" target="_top">.NET documentation</a>
+     */
     public int getTimestamp() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +280,13 @@ public class TouchFrameEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Timestamp.
+     *
+     * @param Timestamp the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TouchFrameEventArgs.Timestamp" target="_top">.NET documentation</a>
+     */
     public void setTimestamp(int Timestamp) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

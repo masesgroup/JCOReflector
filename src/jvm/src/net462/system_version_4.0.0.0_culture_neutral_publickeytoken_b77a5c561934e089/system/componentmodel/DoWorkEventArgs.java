@@ -99,7 +99,10 @@ public class DoWorkEventArgs extends system.componentmodel.CancelEventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DoWorkEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,13 @@ public class DoWorkEventArgs extends system.componentmodel.CancelEventArgs  {
     public DoWorkEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param argument the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DoWorkEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public DoWorkEventArgs(NetObject argument) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +178,13 @@ public class DoWorkEventArgs extends system.componentmodel.CancelEventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Argument.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DoWorkEventArgs.Argument" target="_top">.NET documentation</a>
+     */
     public NetObject getArgument() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +200,13 @@ public class DoWorkEventArgs extends system.componentmodel.CancelEventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Result.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DoWorkEventArgs.Result" target="_top">.NET documentation</a>
+     */
     public NetObject getResult() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +222,13 @@ public class DoWorkEventArgs extends system.componentmodel.CancelEventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Result.
+     *
+     * @param Result the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DoWorkEventArgs.Result" target="_top">.NET documentation</a>
+     */
     public void setResult(NetObject Result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

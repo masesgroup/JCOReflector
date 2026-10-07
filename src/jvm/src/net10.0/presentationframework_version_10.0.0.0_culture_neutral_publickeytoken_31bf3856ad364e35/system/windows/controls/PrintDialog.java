@@ -106,7 +106,10 @@ public class PrintDialog extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PrintDialog(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,12 @@ public class PrintDialog extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.PrintDialog.-ctor" target="_top">.NET documentation</a>
+     */
     public PrintDialog() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +176,35 @@ public class PrintDialog extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ShowDialog.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.printing.PrintingNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.PrintDialog.ShowDialog" target="_top">.NET documentation</a>
+     */
     public Nullable_1 ShowDialog() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.AccessViolationException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.MissingMethodException, system.NotSupportedException, system.reflection.TargetInvocationException, system.ArgumentNullException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +220,28 @@ public class PrintDialog extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PrintDocument.
+     *
+     * @param documentPaginator the argument of type {@code DocumentPaginator}
+     * @param description the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.printing.PrintingNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.PrintDialog.PrintDocument" target="_top">.NET documentation</a>
+     */
     public void PrintDocument(DocumentPaginator documentPaginator, java.lang.String description) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.componentmodel.Win32Exception, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +252,28 @@ public class PrintDialog extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PrintVisual.
+     *
+     * @param visual the argument of type {@code Visual}
+     * @param description the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.printing.PrintingNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.PrintDialog.PrintVisual" target="_top">.NET documentation</a>
+     */
     public void PrintVisual(Visual visual, java.lang.String description) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.componentmodel.Win32Exception, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +288,13 @@ public class PrintDialog extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CurrentPageEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.PrintDialog.CurrentPageEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getCurrentPageEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +309,13 @@ public class PrintDialog extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CurrentPageEnabled.
+     *
+     * @param CurrentPageEnabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.PrintDialog.CurrentPageEnabled" target="_top">.NET documentation</a>
+     */
     public void setCurrentPageEnabled(boolean CurrentPageEnabled) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +326,13 @@ public class PrintDialog extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SelectedPagesEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.PrintDialog.SelectedPagesEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getSelectedPagesEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +347,13 @@ public class PrintDialog extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SelectedPagesEnabled.
+     *
+     * @param SelectedPagesEnabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.PrintDialog.SelectedPagesEnabled" target="_top">.NET documentation</a>
+     */
     public void setSelectedPagesEnabled(boolean SelectedPagesEnabled) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +364,13 @@ public class PrintDialog extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UserPageRangeEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.PrintDialog.UserPageRangeEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getUserPageRangeEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +385,13 @@ public class PrintDialog extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UserPageRangeEnabled.
+     *
+     * @param UserPageRangeEnabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.PrintDialog.UserPageRangeEnabled" target="_top">.NET documentation</a>
+     */
     public void setUserPageRangeEnabled(boolean UserPageRangeEnabled) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +402,27 @@ public class PrintDialog extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PrintableAreaHeight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.printing.PrintingNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.PrintDialog.PrintableAreaHeight" target="_top">.NET documentation</a>
+     */
     public double getPrintableAreaHeight() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArgumentNullException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.NotSupportedException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +463,27 @@ public class PrintDialog extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PrintableAreaWidth.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.printing.PrintingNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.PrintDialog.PrintableAreaWidth" target="_top">.NET documentation</a>
+     */
     public double getPrintableAreaWidth() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArgumentNullException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.NotSupportedException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -358,6 +524,22 @@ public class PrintDialog extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PrintQueue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.PrintDialog.PrintQueue" target="_top">.NET documentation</a>
+     */
     public PrintQueue getPrintQueue() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -373,6 +555,13 @@ public class PrintDialog extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PrintQueue.
+     *
+     * @param PrintQueue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.PrintDialog.PrintQueue" target="_top">.NET documentation</a>
+     */
     public void setPrintQueue(PrintQueue PrintQueue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -383,6 +572,26 @@ public class PrintDialog extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PrintTicket.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.printing.PrintingNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.PrintDialog.PrintTicket" target="_top">.NET documentation</a>
+     */
     public PrintTicket getPrintTicket() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.AccessViolationException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -398,6 +607,13 @@ public class PrintDialog extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PrintTicket.
+     *
+     * @param PrintTicket the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.PrintDialog.PrintTicket" target="_top">.NET documentation</a>
+     */
     public void setPrintTicket(PrintTicket PrintTicket) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -408,6 +624,13 @@ public class PrintDialog extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PageRange.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.PrintDialog.PageRange" target="_top">.NET documentation</a>
+     */
     public PageRange getPageRange() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -423,6 +646,21 @@ public class PrintDialog extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PageRange.
+     *
+     * @param PageRange the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.PrintDialog.PageRange" target="_top">.NET documentation</a>
+     */
     public void setPageRange(PageRange PageRange) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -433,6 +671,13 @@ public class PrintDialog extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PageRangeSelection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.PrintDialog.PageRangeSelection" target="_top">.NET documentation</a>
+     */
     public PageRangeSelection getPageRangeSelection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -448,6 +693,13 @@ public class PrintDialog extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PageRangeSelection.
+     *
+     * @param PageRangeSelection the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.PrintDialog.PageRangeSelection" target="_top">.NET documentation</a>
+     */
     public void setPageRangeSelection(PageRangeSelection PageRangeSelection) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -458,6 +710,13 @@ public class PrintDialog extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxPage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.PrintDialog.MaxPage" target="_top">.NET documentation</a>
+     */
     public UInt32 getMaxPage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -473,6 +732,21 @@ public class PrintDialog extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxPage.
+     *
+     * @param MaxPage the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.PrintDialog.MaxPage" target="_top">.NET documentation</a>
+     */
     public void setMaxPage(UInt32 MaxPage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -483,6 +757,13 @@ public class PrintDialog extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinPage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.PrintDialog.MinPage" target="_top">.NET documentation</a>
+     */
     public UInt32 getMinPage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -498,6 +779,21 @@ public class PrintDialog extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MinPage.
+     *
+     * @param MinPage the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.PrintDialog.MinPage" target="_top">.NET documentation</a>
+     */
     public void setMinPage(UInt32 MinPage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

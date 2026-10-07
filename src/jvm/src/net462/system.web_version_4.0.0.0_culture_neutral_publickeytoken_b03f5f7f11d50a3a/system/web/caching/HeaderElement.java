@@ -98,7 +98,10 @@ public class HeaderElement extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HeaderElement(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,15 @@ public class HeaderElement extends NetObject  {
     public HeaderElement() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.HeaderElement.-ctor" target="_top">.NET documentation</a>
+     */
     public HeaderElement(java.lang.String name, java.lang.String value) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +179,13 @@ public class HeaderElement extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.HeaderElement.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +200,13 @@ public class HeaderElement extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.HeaderElement.Value" target="_top">.NET documentation</a>
+     */
     public java.lang.String getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

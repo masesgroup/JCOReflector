@@ -105,7 +105,10 @@ public class XmlAttribute extends system.xml.XmlNode  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,26 @@ public class XmlAttribute extends system.xml.XmlNode  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AppendChild.
+     *
+     * @param newChild the argument of type {@code XmlNode}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlAttribute.AppendChild" target="_top">.NET documentation</a>
+     */
     public XmlNode AppendChild(XmlNode newChild) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +198,25 @@ public class XmlAttribute extends system.xml.XmlNode  {
         }
     }
 
+    /**
+     * Invokes the .NET member CloneNode.
+     *
+     * @param deep the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlAttribute.CloneNode" target="_top">.NET documentation</a>
+     */
     public XmlNode CloneNode(boolean deep) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +232,27 @@ public class XmlAttribute extends system.xml.XmlNode  {
         }
     }
 
+    /**
+     * Invokes the .NET member InsertAfter.
+     *
+     * @param newChild the argument of type {@code XmlNode}
+     * @param refChild the argument of type {@code XmlNode}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlAttribute.InsertAfter" target="_top">.NET documentation</a>
+     */
     public XmlNode InsertAfter(XmlNode newChild, XmlNode refChild) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +268,27 @@ public class XmlAttribute extends system.xml.XmlNode  {
         }
     }
 
+    /**
+     * Invokes the .NET member InsertBefore.
+     *
+     * @param newChild the argument of type {@code XmlNode}
+     * @param refChild the argument of type {@code XmlNode}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlAttribute.InsertBefore" target="_top">.NET documentation</a>
+     */
     public XmlNode InsertBefore(XmlNode newChild, XmlNode refChild) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +304,26 @@ public class XmlAttribute extends system.xml.XmlNode  {
         }
     }
 
+    /**
+     * Invokes the .NET member PrependChild.
+     *
+     * @param newChild the argument of type {@code XmlNode}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlAttribute.PrependChild" target="_top">.NET documentation</a>
+     */
     public XmlNode PrependChild(XmlNode newChild) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +339,26 @@ public class XmlAttribute extends system.xml.XmlNode  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveChild.
+     *
+     * @param oldChild the argument of type {@code XmlNode}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlAttribute.RemoveChild" target="_top">.NET documentation</a>
+     */
     public XmlNode RemoveChild(XmlNode oldChild) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +374,27 @@ public class XmlAttribute extends system.xml.XmlNode  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReplaceChild.
+     *
+     * @param newChild the argument of type {@code XmlNode}
+     * @param oldChild the argument of type {@code XmlNode}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlAttribute.ReplaceChild" target="_top">.NET documentation</a>
+     */
     public XmlNode ReplaceChild(XmlNode newChild, XmlNode oldChild) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +410,13 @@ public class XmlAttribute extends system.xml.XmlNode  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteContentTo.
+     *
+     * @param w the argument of type {@code XmlWriter}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlAttribute.WriteContentTo" target="_top">.NET documentation</a>
+     */
     public void WriteContentTo(XmlWriter w) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +427,13 @@ public class XmlAttribute extends system.xml.XmlNode  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteTo.
+     *
+     * @param w the argument of type {@code XmlWriter}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlAttribute.WriteTo" target="_top">.NET documentation</a>
+     */
     public void WriteTo(XmlWriter w) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +448,13 @@ public class XmlAttribute extends system.xml.XmlNode  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Specified.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlAttribute.Specified" target="_top">.NET documentation</a>
+     */
     public boolean getSpecified() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +469,13 @@ public class XmlAttribute extends system.xml.XmlNode  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OwnerElement.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlAttribute.OwnerElement" target="_top">.NET documentation</a>
+     */
     public XmlElement getOwnerElement() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

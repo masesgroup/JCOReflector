@@ -100,7 +100,10 @@ public class DbSpatialDataReader extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DbSpatialDataReader(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,14 @@ public class DbSpatialDataReader extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetGeography.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbSpatialDataReader.GetGeography" target="_top">.NET documentation</a>
+     */
     public DbGeography GetGeography(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +179,14 @@ public class DbSpatialDataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetGeometry.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbSpatialDataReader.GetGeometry" target="_top">.NET documentation</a>
+     */
     public DbGeometry GetGeometry(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

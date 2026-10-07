@@ -102,7 +102,10 @@ public class ProcessInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ProcessInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class ProcessInfo extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ProcessInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public ProcessInfo() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +168,19 @@ public class ProcessInfo extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param startTime the argument of type {@code DateTime}
+     * @param age the argument of type {@code TimeSpan}
+     * @param processID the argument of type {@code int}
+     * @param requestCount the argument of type {@code int}
+     * @param status the argument of type {@code ProcessStatus}
+     * @param shutdownReason the argument of type {@code ProcessShutdownReason}
+     * @param peakMemoryUsed the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ProcessInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public ProcessInfo(DateTime startTime, TimeSpan age, int processID, int requestCount, ProcessStatus status, ProcessShutdownReason shutdownReason, int peakMemoryUsed) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -173,6 +195,19 @@ public class ProcessInfo extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member SetAll.
+     *
+     * @param startTime the argument of type {@code DateTime}
+     * @param age the argument of type {@code TimeSpan}
+     * @param processID the argument of type {@code int}
+     * @param requestCount the argument of type {@code int}
+     * @param status the argument of type {@code ProcessStatus}
+     * @param shutdownReason the argument of type {@code ProcessShutdownReason}
+     * @param peakMemoryUsed the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ProcessInfo.SetAll" target="_top">.NET documentation</a>
+     */
     public void SetAll(DateTime startTime, TimeSpan age, int processID, int requestCount, ProcessStatus status, ProcessShutdownReason shutdownReason, int peakMemoryUsed) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +222,13 @@ public class ProcessInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PeakMemoryUsed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ProcessInfo.PeakMemoryUsed" target="_top">.NET documentation</a>
+     */
     public int getPeakMemoryUsed() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +269,13 @@ public class ProcessInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProcessID.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ProcessInfo.ProcessID" target="_top">.NET documentation</a>
+     */
     public int getProcessID() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +316,13 @@ public class ProcessInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequestCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ProcessInfo.RequestCount" target="_top">.NET documentation</a>
+     */
     public int getRequestCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -307,6 +363,13 @@ public class ProcessInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StartTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ProcessInfo.StartTime" target="_top">.NET documentation</a>
+     */
     public DateTime getStartTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -322,6 +385,13 @@ public class ProcessInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Age.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ProcessInfo.Age" target="_top">.NET documentation</a>
+     */
     public TimeSpan getAge() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -337,6 +407,13 @@ public class ProcessInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShutdownReason.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ProcessInfo.ShutdownReason" target="_top">.NET documentation</a>
+     */
     public ProcessShutdownReason getShutdownReason() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -352,6 +429,13 @@ public class ProcessInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Status.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ProcessInfo.Status" target="_top">.NET documentation</a>
+     */
     public ProcessStatus getStatus() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -103,7 +103,10 @@ public class PopupEventArgs extends system.componentmodel.CancelEventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PopupEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,16 @@ public class PopupEventArgs extends system.componentmodel.CancelEventArgs  {
     public PopupEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param associatedWindow the argument of type {@code IWin32Window}
+     * @param associatedControl the argument of type {@code Control}
+     * @param isBalloon the argument of type {@code boolean}
+     * @param size the argument of type {@code Size}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PopupEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public PopupEventArgs(IWin32Window associatedWindow, Control associatedControl, boolean isBalloon, Size size) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +185,13 @@ public class PopupEventArgs extends system.componentmodel.CancelEventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsBalloon.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PopupEventArgs.IsBalloon" target="_top">.NET documentation</a>
+     */
     public boolean getIsBalloon() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +206,13 @@ public class PopupEventArgs extends system.componentmodel.CancelEventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ToolTipSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PopupEventArgs.ToolTipSize" target="_top">.NET documentation</a>
+     */
     public Size getToolTipSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +228,13 @@ public class PopupEventArgs extends system.componentmodel.CancelEventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ToolTipSize.
+     *
+     * @param ToolTipSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PopupEventArgs.ToolTipSize" target="_top">.NET documentation</a>
+     */
     public void setToolTipSize(Size ToolTipSize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +245,13 @@ public class PopupEventArgs extends system.componentmodel.CancelEventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AssociatedControl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PopupEventArgs.AssociatedControl" target="_top">.NET documentation</a>
+     */
     public Control getAssociatedControl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +267,13 @@ public class PopupEventArgs extends system.componentmodel.CancelEventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AssociatedWindow.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PopupEventArgs.AssociatedWindow" target="_top">.NET documentation</a>
+     */
     public IWin32Window getAssociatedWindow() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

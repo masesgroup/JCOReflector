@@ -99,7 +99,10 @@ public class CodeVariableReferenceExpression extends system.codedom.CodeExpressi
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodeVariableReferenceExpression(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class CodeVariableReferenceExpression extends system.codedom.CodeExpressi
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeVariableReferenceExpression.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeVariableReferenceExpression() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,13 @@ public class CodeVariableReferenceExpression extends system.codedom.CodeExpressi
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param variableName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeVariableReferenceExpression.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeVariableReferenceExpression(java.lang.String variableName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +190,13 @@ public class CodeVariableReferenceExpression extends system.codedom.CodeExpressi
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property VariableName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeVariableReferenceExpression.VariableName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getVariableName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +211,13 @@ public class CodeVariableReferenceExpression extends system.codedom.CodeExpressi
         }
     }
 
+    /**
+     * Sets the value of the .NET property VariableName.
+     *
+     * @param VariableName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeVariableReferenceExpression.VariableName" target="_top">.NET documentation</a>
+     */
     public void setVariableName(java.lang.String VariableName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

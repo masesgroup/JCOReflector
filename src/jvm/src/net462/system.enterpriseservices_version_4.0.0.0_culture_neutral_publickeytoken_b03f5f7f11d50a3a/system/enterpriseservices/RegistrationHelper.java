@@ -101,7 +101,10 @@ public class RegistrationHelper extends system.MarshalByRefObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RegistrationHelper(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class RegistrationHelper extends system.MarshalByRefObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.RegistrationHelper.-ctor" target="_top">.NET documentation</a>
+     */
     public RegistrationHelper() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +171,43 @@ public class RegistrationHelper extends system.MarshalByRefObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member InstallAssembly.
+     *
+     * @param assembly the argument of type {@code java.lang.String}
+     * @param application the argument of type {@code JCORefOut}
+     * @param tlb the argument of type {@code JCORefOut}
+     * @param installFlags the argument of type {@code InstallationFlags}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.transactions.TransactionException if the .NET member raises it
+     * @throws system.transactions.TransactionInDoubtException if the .NET member raises it
+     * @throws system.transactions.TransactionManagerCommunicationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.enterpriseservices.RegistrationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.RegistrationHelper.InstallAssembly" target="_top">.NET documentation</a>
+     */
     public void InstallAssembly(java.lang.String assembly, JCORefOut application, JCORefOut tlb, InstallationFlags installFlags) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.InvalidOperationException, system.NullReferenceException, system.OverflowException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.NotSupportedException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException, system.OutOfMemoryException, system.enterpriseservices.RegistrationException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.UnauthorizedAccessException, system.io.IOException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +218,41 @@ public class RegistrationHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member InstallAssembly.
+     *
+     * @param assembly the argument of type {@code java.lang.String}
+     * @param application the argument of type {@code JCORefOut}
+     * @param partition the argument of type {@code java.lang.String}
+     * @param tlb the argument of type {@code JCORefOut}
+     * @param installFlags the argument of type {@code InstallationFlags}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.transactions.TransactionException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.transactions.TransactionInDoubtException if the .NET member raises it
+     * @throws system.transactions.TransactionManagerCommunicationException if the .NET member raises it
+     * @throws system.enterpriseservices.RegistrationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.RegistrationHelper.InstallAssembly" target="_top">.NET documentation</a>
+     */
     public void InstallAssembly(java.lang.String assembly, JCORefOut application, java.lang.String partition, JCORefOut tlb, InstallationFlags installFlags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.OverflowException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.transactions.TransactionException, system.OutOfMemoryException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException, system.enterpriseservices.RegistrationException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +263,39 @@ public class RegistrationHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member InstallAssemblyFromConfig.
+     *
+     * @param regConfig the argument of type {@code JCORefOut<RegistrationConfig>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.transactions.TransactionException if the .NET member raises it
+     * @throws system.transactions.TransactionInDoubtException if the .NET member raises it
+     * @throws system.transactions.TransactionManagerCommunicationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.enterpriseservices.RegistrationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.RegistrationHelper.InstallAssemblyFromConfig" target="_top">.NET documentation</a>
+     */
     public void InstallAssemblyFromConfig(JCORefOut<RegistrationConfig> regConfig) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.NotSupportedException, system.NullReferenceException, system.OverflowException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException, system.OutOfMemoryException, system.enterpriseservices.RegistrationException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +306,40 @@ public class RegistrationHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UninstallAssembly.
+     *
+     * @param assembly the argument of type {@code java.lang.String}
+     * @param application the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.transactions.TransactionException if the .NET member raises it
+     * @throws system.transactions.TransactionInDoubtException if the .NET member raises it
+     * @throws system.transactions.TransactionManagerCommunicationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.enterpriseservices.RegistrationException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.RegistrationHelper.UninstallAssembly" target="_top">.NET documentation</a>
+     */
     public void UninstallAssembly(java.lang.String assembly, java.lang.String application) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.InvalidOperationException, system.NullReferenceException, system.OverflowException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.NotSupportedException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.enterpriseservices.RegistrationException, system.io.PathTooLongException, system.UnauthorizedAccessException, system.io.IOException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +350,43 @@ public class RegistrationHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UninstallAssembly.
+     *
+     * @param assembly the argument of type {@code java.lang.String}
+     * @param application the argument of type {@code java.lang.String}
+     * @param partition the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.transactions.TransactionException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.transactions.TransactionInDoubtException if the .NET member raises it
+     * @throws system.transactions.TransactionManagerCommunicationException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.enterpriseservices.RegistrationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.RegistrationHelper.UninstallAssembly" target="_top">.NET documentation</a>
+     */
     public void UninstallAssembly(java.lang.String assembly, java.lang.String application, java.lang.String partition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.OverflowException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.transactions.TransactionException, system.OutOfMemoryException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.enterpriseservices.RegistrationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +397,39 @@ public class RegistrationHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UninstallAssemblyFromConfig.
+     *
+     * @param regConfig the argument of type {@code JCORefOut<RegistrationConfig>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.transactions.TransactionException if the .NET member raises it
+     * @throws system.transactions.TransactionInDoubtException if the .NET member raises it
+     * @throws system.transactions.TransactionManagerCommunicationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.enterpriseservices.RegistrationException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.RegistrationHelper.UninstallAssemblyFromConfig" target="_top">.NET documentation</a>
+     */
     public void UninstallAssemblyFromConfig(JCORefOut<RegistrationConfig> regConfig) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.NotSupportedException, system.NullReferenceException, system.OverflowException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.enterpriseservices.RegistrationException, system.io.PathTooLongException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

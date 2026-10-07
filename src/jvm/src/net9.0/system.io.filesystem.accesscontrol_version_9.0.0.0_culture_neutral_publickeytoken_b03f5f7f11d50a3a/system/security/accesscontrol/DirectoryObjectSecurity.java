@@ -108,7 +108,10 @@ public class DirectoryObjectSecurity extends system.security.accesscontrol.Objec
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DirectoryObjectSecurity(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -161,6 +164,31 @@ public class DirectoryObjectSecurity extends system.security.accesscontrol.Objec
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AccessRuleFactory.
+     *
+     * @param identityReference the argument of type {@code IdentityReference}
+     * @param accessMask the argument of type {@code int}
+     * @param isInherited the argument of type {@code boolean}
+     * @param inheritanceFlags the argument of type {@code InheritanceFlags}
+     * @param propagationFlags the argument of type {@code PropagationFlags}
+     * @param type the argument of type {@code AccessControlType}
+     * @param objectType the argument of type {@code Guid}
+     * @param inheritedObjectType the argument of type {@code Guid}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.DirectoryObjectSecurity.AccessRuleFactory" target="_top">.NET documentation</a>
+     */
     public AccessRule AccessRuleFactory(IdentityReference identityReference, int accessMask, boolean isInherited, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags, AccessControlType type, Guid objectType, Guid inheritedObjectType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +204,31 @@ public class DirectoryObjectSecurity extends system.security.accesscontrol.Objec
         }
     }
 
+    /**
+     * Invokes the .NET member AuditRuleFactory.
+     *
+     * @param identityReference the argument of type {@code IdentityReference}
+     * @param accessMask the argument of type {@code int}
+     * @param isInherited the argument of type {@code boolean}
+     * @param inheritanceFlags the argument of type {@code InheritanceFlags}
+     * @param propagationFlags the argument of type {@code PropagationFlags}
+     * @param flags the argument of type {@code AuditFlags}
+     * @param objectType the argument of type {@code Guid}
+     * @param inheritedObjectType the argument of type {@code Guid}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.DirectoryObjectSecurity.AuditRuleFactory" target="_top">.NET documentation</a>
+     */
     public AuditRule AuditRuleFactory(IdentityReference identityReference, int accessMask, boolean isInherited, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags, AuditFlags flags, Guid objectType, Guid inheritedObjectType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +244,37 @@ public class DirectoryObjectSecurity extends system.security.accesscontrol.Objec
         }
     }
 
+    /**
+     * Invokes the .NET member GetAccessRules.
+     *
+     * @param includeExplicit the argument of type {@code boolean}
+     * @param includeInherited the argument of type {@code boolean}
+     * @param targetType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.security.principal.IdentityNotMappedException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.DirectoryObjectSecurity.GetAccessRules" target="_top">.NET documentation</a>
+     */
     public AuthorizationRuleCollection GetAccessRules(boolean includeExplicit, boolean includeInherited, NetType targetType) throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.LockRecursionException, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.MissingMethodException, system.reflection.TargetInvocationException, system.AccessViolationException, system.security.principal.IdentityNotMappedException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +290,37 @@ public class DirectoryObjectSecurity extends system.security.accesscontrol.Objec
         }
     }
 
+    /**
+     * Invokes the .NET member GetAuditRules.
+     *
+     * @param includeExplicit the argument of type {@code boolean}
+     * @param includeInherited the argument of type {@code boolean}
+     * @param targetType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.security.principal.IdentityNotMappedException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.DirectoryObjectSecurity.GetAuditRules" target="_top">.NET documentation</a>
+     */
     public AuthorizationRuleCollection GetAuditRules(boolean includeExplicit, boolean includeInherited, NetType targetType) throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.LockRecursionException, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.MissingMethodException, system.reflection.TargetInvocationException, system.AccessViolationException, system.security.principal.IdentityNotMappedException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

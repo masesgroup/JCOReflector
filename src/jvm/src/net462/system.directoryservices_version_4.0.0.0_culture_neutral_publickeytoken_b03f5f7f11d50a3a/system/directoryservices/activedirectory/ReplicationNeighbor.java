@@ -101,7 +101,10 @@ public class ReplicationNeighbor extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ReplicationNeighbor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class ReplicationNeighbor extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ConsecutiveFailureCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.ReplicationNeighbor.ConsecutiveFailureCount" target="_top">.NET documentation</a>
+     */
     public int getConsecutiveFailureCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +210,13 @@ public class ReplicationNeighbor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LastSyncResult.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.ReplicationNeighbor.LastSyncResult" target="_top">.NET documentation</a>
+     */
     public int getLastSyncResult() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +257,13 @@ public class ReplicationNeighbor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UsnAttributeFilter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.ReplicationNeighbor.UsnAttributeFilter" target="_top">.NET documentation</a>
+     */
     public long getUsnAttributeFilter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +304,13 @@ public class ReplicationNeighbor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UsnLastObjectChangeSynced.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.ReplicationNeighbor.UsnLastObjectChangeSynced" target="_top">.NET documentation</a>
+     */
     public long getUsnLastObjectChangeSynced() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +351,13 @@ public class ReplicationNeighbor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LastAttemptedSync.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.ReplicationNeighbor.LastAttemptedSync" target="_top">.NET documentation</a>
+     */
     public DateTime getLastAttemptedSync() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +373,13 @@ public class ReplicationNeighbor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LastSuccessfulSync.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.ReplicationNeighbor.LastSuccessfulSync" target="_top">.NET documentation</a>
+     */
     public DateTime getLastSuccessfulSync() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -350,6 +395,13 @@ public class ReplicationNeighbor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TransportType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.ReplicationNeighbor.TransportType" target="_top">.NET documentation</a>
+     */
     public ActiveDirectoryTransportType getTransportType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -365,6 +417,13 @@ public class ReplicationNeighbor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SourceInvocationId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.ReplicationNeighbor.SourceInvocationId" target="_top">.NET documentation</a>
+     */
     public Guid getSourceInvocationId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -380,6 +439,23 @@ public class ReplicationNeighbor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LastSyncMessage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.ReplicationNeighbor.LastSyncMessage" target="_top">.NET documentation</a>
+     */
     public java.lang.String getLastSyncMessage() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -394,6 +470,13 @@ public class ReplicationNeighbor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PartitionName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.ReplicationNeighbor.PartitionName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPartitionName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -408,6 +491,27 @@ public class ReplicationNeighbor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SourceServer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.directoryservices.activedirectory.ActiveDirectoryOperationException if the .NET member raises it
+     * @throws system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.ReplicationNeighbor.SourceServer" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSourceServer() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentOutOfRangeException, system.AccessViolationException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

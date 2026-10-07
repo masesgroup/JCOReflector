@@ -103,7 +103,10 @@ public class VisualTransition extends system.windows.DependencyObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public VisualTransition(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,26 @@ public class VisualTransition extends system.windows.DependencyObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.VisualTransition.-ctor" target="_top">.NET documentation</a>
+     */
     public VisualTransition() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +191,13 @@ public class VisualTransition extends system.windows.DependencyObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property From.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.VisualTransition.From" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFrom() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +212,13 @@ public class VisualTransition extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property From.
+     *
+     * @param From the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.VisualTransition.From" target="_top">.NET documentation</a>
+     */
     public void setFrom(java.lang.String From) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +229,13 @@ public class VisualTransition extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property To.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.VisualTransition.To" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +250,13 @@ public class VisualTransition extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property To.
+     *
+     * @param To the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.VisualTransition.To" target="_top">.NET documentation</a>
+     */
     public void setTo(java.lang.String To) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +267,13 @@ public class VisualTransition extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GeneratedDuration.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.VisualTransition.GeneratedDuration" target="_top">.NET documentation</a>
+     */
     public Duration getGeneratedDuration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +289,13 @@ public class VisualTransition extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property GeneratedDuration.
+     *
+     * @param GeneratedDuration the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.VisualTransition.GeneratedDuration" target="_top">.NET documentation</a>
+     */
     public void setGeneratedDuration(Duration GeneratedDuration) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +306,13 @@ public class VisualTransition extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GeneratedEasingFunction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.VisualTransition.GeneratedEasingFunction" target="_top">.NET documentation</a>
+     */
     public IEasingFunction getGeneratedEasingFunction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +328,13 @@ public class VisualTransition extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property GeneratedEasingFunction.
+     *
+     * @param GeneratedEasingFunction the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.VisualTransition.GeneratedEasingFunction" target="_top">.NET documentation</a>
+     */
     public void setGeneratedEasingFunction(IEasingFunction GeneratedEasingFunction) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +345,13 @@ public class VisualTransition extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Storyboard.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.VisualTransition.Storyboard" target="_top">.NET documentation</a>
+     */
     public Storyboard getStoryboard() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +367,13 @@ public class VisualTransition extends system.windows.DependencyObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Storyboard.
+     *
+     * @param Storyboard the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.VisualTransition.Storyboard" target="_top">.NET documentation</a>
+     */
     public void setStoryboard(Storyboard Storyboard) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

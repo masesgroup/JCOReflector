@@ -121,7 +121,10 @@ public class Assembly extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Assembly(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -174,6 +177,16 @@ public class Assembly extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsDefined.
+     *
+     * @param attributeType the argument of type {@code NetType}
+     * @param inherit the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.IsDefined" target="_top">.NET documentation</a>
+     */
     public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +201,14 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCustomAttributesData.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.GetCustomAttributesData" target="_top">.NET documentation</a>
+     */
     public IList_1 GetCustomAttributesData() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +224,15 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFile.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.GetFile" target="_top">.NET documentation</a>
+     */
     public FileStream GetFile(java.lang.String name) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +248,14 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFiles.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.GetFiles" target="_top">.NET documentation</a>
+     */
     public FileStream[] GetFiles() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +277,15 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFiles.
+     *
+     * @param getResourceModules the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.GetFiles" target="_top">.NET documentation</a>
+     */
     public FileStream[] GetFiles(boolean getResourceModules) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +307,15 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetManifestResourceStream.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.GetManifestResourceStream" target="_top">.NET documentation</a>
+     */
     public Stream GetManifestResourceStream(java.lang.String name) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +331,16 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetManifestResourceStream.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.GetManifestResourceStream" target="_top">.NET documentation</a>
+     */
     public Stream GetManifestResourceStream(NetType type, java.lang.String name) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +356,24 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstance.
+     *
+     * @param typeName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.CreateInstance" target="_top">.NET documentation</a>
+     */
     public NetObject CreateInstance(java.lang.String typeName) throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +389,25 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstance.
+     *
+     * @param typeName the argument of type {@code java.lang.String}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.CreateInstance" target="_top">.NET documentation</a>
+     */
     public NetObject CreateInstance(java.lang.String typeName, boolean ignoreCase) throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +423,28 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstance.
+     *
+     * @param typeName the argument of type {@code java.lang.String}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param args the argument of type {@code NetObject[]}
+     * @param culture the argument of type {@code CultureInfo}
+     * @param activationAttributes the argument of type {@code NetObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.CreateInstance" target="_top">.NET documentation</a>
+     */
     public NetObject CreateInstance(java.lang.String typeName, boolean ignoreCase, BindingFlags bindingAttr, Binder binder, NetObject[] args, CultureInfo culture, NetObject[] activationAttributes) throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.MissingMethodException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +460,15 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCustomAttributes.
+     *
+     * @param inherit the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.GetCustomAttributes" target="_top">.NET documentation</a>
+     */
     public NetObject[] GetCustomAttributes(boolean inherit) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -356,6 +490,16 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCustomAttributes.
+     *
+     * @param attributeType the argument of type {@code NetType}
+     * @param inherit the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.GetCustomAttributes" target="_top">.NET documentation</a>
+     */
     public NetObject[] GetCustomAttributes(NetType attributeType, boolean inherit) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -377,6 +521,16 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetAssembly.
+     *
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.GetAssembly" target="_top">.NET documentation</a>
+     */
     public static Assembly GetAssembly(NetType type) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -392,6 +546,14 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCallingAssembly.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.GetCallingAssembly" target="_top">.NET documentation</a>
+     */
     public static Assembly GetCallingAssembly() throws Throwable, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -407,6 +569,28 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEntryAssembly.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.GetEntryAssembly" target="_top">.NET documentation</a>
+     */
     public static Assembly GetEntryAssembly() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -422,6 +606,14 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetExecutingAssembly.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.GetExecutingAssembly" target="_top">.NET documentation</a>
+     */
     public static Assembly GetExecutingAssembly() throws Throwable, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -437,6 +629,15 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetSatelliteAssembly.
+     *
+     * @param culture the argument of type {@code CultureInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.GetSatelliteAssembly" target="_top">.NET documentation</a>
+     */
     public Assembly GetSatelliteAssembly(CultureInfo culture) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -452,6 +653,16 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetSatelliteAssembly.
+     *
+     * @param culture the argument of type {@code CultureInfo}
+     * @param version the argument of type {@code Version}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.GetSatelliteAssembly" target="_top">.NET documentation</a>
+     */
     public Assembly GetSatelliteAssembly(CultureInfo culture, Version version) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -467,6 +678,24 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param rawAssembly the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.Load" target="_top">.NET documentation</a>
+     */
     public static Assembly Load(byte[] rawAssembly) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -482,6 +711,24 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.Load" target="_top">.NET documentation</a>
+     */
     public static Assembly Load(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -497,6 +744,25 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param rawAssembly the argument of type {@code byte[]}
+     * @param rawSymbolStore the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.Load" target="_top">.NET documentation</a>
+     */
     public static Assembly Load(byte[] rawAssembly, byte[] rawSymbolStore) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -512,6 +778,25 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.Load" target="_top">.NET documentation</a>
+     */
     public static Assembly Load(JCORefOut dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -527,6 +812,26 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param rawAssembly the argument of type {@code byte[]}
+     * @param rawSymbolStore the argument of type {@code byte[]}
+     * @param securityEvidence the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.Load" target="_top">.NET documentation</a>
+     */
     public static Assembly Load(byte[] rawAssembly, byte[] rawSymbolStore, Evidence securityEvidence) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -542,6 +847,26 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @param dupParam2 the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.Load" target="_top">.NET documentation</a>
+     */
     public static Assembly Load(JCORefOut dupParam0, JCORefOut dupParam1, Evidence dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -557,6 +882,26 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param rawAssembly the argument of type {@code byte[]}
+     * @param rawSymbolStore the argument of type {@code byte[]}
+     * @param securityContextSource the argument of type {@code SecurityContextSource}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.Load" target="_top">.NET documentation</a>
+     */
     public static Assembly Load(byte[] rawAssembly, byte[] rawSymbolStore, SecurityContextSource securityContextSource) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -572,6 +917,26 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @param dupParam2 the argument of type {@code SecurityContextSource}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.Load" target="_top">.NET documentation</a>
+     */
     public static Assembly Load(JCORefOut dupParam0, JCORefOut dupParam1, SecurityContextSource dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -587,6 +952,33 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param assemblyRef the argument of type {@code AssemblyName}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.Load" target="_top">.NET documentation</a>
+     */
     public static Assembly Load(AssemblyName assemblyRef) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -602,6 +994,34 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param assemblyRef the argument of type {@code AssemblyName}
+     * @param assemblySecurity the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.Load" target="_top">.NET documentation</a>
+     */
     public static Assembly Load(AssemblyName assemblyRef, Evidence assemblySecurity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -617,6 +1037,28 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param assemblyString the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.Load" target="_top">.NET documentation</a>
+     */
     public static Assembly Load(java.lang.String assemblyString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -632,6 +1074,29 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param assemblyString the argument of type {@code java.lang.String}
+     * @param assemblySecurity the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.Load" target="_top">.NET documentation</a>
+     */
     public static Assembly Load(java.lang.String assemblyString, Evidence assemblySecurity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -647,6 +1112,26 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LoadFile.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.LoadFile" target="_top">.NET documentation</a>
+     */
     public static Assembly LoadFile(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException, system.IndexOutOfRangeException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -662,6 +1147,27 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LoadFile.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @param securityEvidence the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.LoadFile" target="_top">.NET documentation</a>
+     */
     public static Assembly LoadFile(java.lang.String path, Evidence securityEvidence) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException, system.IndexOutOfRangeException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -677,6 +1183,28 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LoadFrom.
+     *
+     * @param assemblyFile the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.LoadFrom" target="_top">.NET documentation</a>
+     */
     public static Assembly LoadFrom(java.lang.String assemblyFile) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -692,6 +1220,30 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LoadFrom.
+     *
+     * @param assemblyFile the argument of type {@code java.lang.String}
+     * @param hashValue the argument of type {@code byte[]}
+     * @param hashAlgorithm the argument of type {@code AssemblyHashAlgorithm}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.LoadFrom" target="_top">.NET documentation</a>
+     */
     public static Assembly LoadFrom(java.lang.String assemblyFile, byte[] hashValue, AssemblyHashAlgorithm hashAlgorithm) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -707,6 +1259,30 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LoadFrom.
+     *
+     * @param dupParam0 the argument of type {@code java.lang.String}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @param dupParam2 the argument of type {@code AssemblyHashAlgorithm}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.LoadFrom" target="_top">.NET documentation</a>
+     */
     public static Assembly LoadFrom(java.lang.String dupParam0, JCORefOut dupParam1, AssemblyHashAlgorithm dupParam2) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -722,6 +1298,29 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LoadFrom.
+     *
+     * @param assemblyFile the argument of type {@code java.lang.String}
+     * @param securityEvidence the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.LoadFrom" target="_top">.NET documentation</a>
+     */
     public static Assembly LoadFrom(java.lang.String assemblyFile, Evidence securityEvidence) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -737,6 +1336,31 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LoadFrom.
+     *
+     * @param assemblyFile the argument of type {@code java.lang.String}
+     * @param securityEvidence the argument of type {@code Evidence}
+     * @param hashValue the argument of type {@code byte[]}
+     * @param hashAlgorithm the argument of type {@code AssemblyHashAlgorithm}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.LoadFrom" target="_top">.NET documentation</a>
+     */
     public static Assembly LoadFrom(java.lang.String assemblyFile, Evidence securityEvidence, byte[] hashValue, AssemblyHashAlgorithm hashAlgorithm) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -752,6 +1376,31 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LoadFrom.
+     *
+     * @param dupParam0 the argument of type {@code java.lang.String}
+     * @param dupParam1 the argument of type {@code Evidence}
+     * @param dupParam2 the argument of type {@code JCORefOut}
+     * @param dupParam3 the argument of type {@code AssemblyHashAlgorithm}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.LoadFrom" target="_top">.NET documentation</a>
+     */
     public static Assembly LoadFrom(java.lang.String dupParam0, Evidence dupParam1, JCORefOut dupParam2, AssemblyHashAlgorithm dupParam3) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -767,6 +1416,28 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LoadWithPartialName.
+     *
+     * @param partialName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.LoadWithPartialName" target="_top">.NET documentation</a>
+     */
     public static Assembly LoadWithPartialName(java.lang.String partialName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -782,6 +1453,29 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LoadWithPartialName.
+     *
+     * @param partialName the argument of type {@code java.lang.String}
+     * @param securityEvidence the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.LoadWithPartialName" target="_top">.NET documentation</a>
+     */
     public static Assembly LoadWithPartialName(java.lang.String partialName, Evidence securityEvidence) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -797,6 +1491,24 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReflectionOnlyLoad.
+     *
+     * @param rawAssembly the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.ReflectionOnlyLoad" target="_top">.NET documentation</a>
+     */
     public static Assembly ReflectionOnlyLoad(byte[] rawAssembly) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -812,6 +1524,24 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReflectionOnlyLoad.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.ReflectionOnlyLoad" target="_top">.NET documentation</a>
+     */
     public static Assembly ReflectionOnlyLoad(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -827,6 +1557,28 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReflectionOnlyLoad.
+     *
+     * @param assemblyString the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.ReflectionOnlyLoad" target="_top">.NET documentation</a>
+     */
     public static Assembly ReflectionOnlyLoad(java.lang.String assemblyString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -842,6 +1594,28 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReflectionOnlyLoadFrom.
+     *
+     * @param assemblyFile the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.ReflectionOnlyLoadFrom" target="_top">.NET documentation</a>
+     */
     public static Assembly ReflectionOnlyLoadFrom(java.lang.String assemblyFile) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -857,6 +1631,28 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UnsafeLoadFrom.
+     *
+     * @param assemblyFile the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.UnsafeLoadFrom" target="_top">.NET documentation</a>
+     */
     public static Assembly UnsafeLoadFrom(java.lang.String assemblyFile) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -872,6 +1668,14 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetName.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.GetName" target="_top">.NET documentation</a>
+     */
     public AssemblyName GetName() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -887,6 +1691,15 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetName.
+     *
+     * @param copiedName the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.GetName" target="_top">.NET documentation</a>
+     */
     public AssemblyName GetName(boolean copiedName) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -902,6 +1715,14 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetReferencedAssemblies.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.GetReferencedAssemblies" target="_top">.NET documentation</a>
+     */
     public AssemblyName[] GetReferencedAssemblies() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -923,6 +1744,15 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetManifestResourceInfo.
+     *
+     * @param resourceName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.GetManifestResourceInfo" target="_top">.NET documentation</a>
+     */
     public ManifestResourceInfo GetManifestResourceInfo(java.lang.String resourceName) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -938,6 +1768,15 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetModule.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.GetModule" target="_top">.NET documentation</a>
+     */
     public Module GetModule(java.lang.String name) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -953,6 +1792,16 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LoadModule.
+     *
+     * @param moduleName the argument of type {@code java.lang.String}
+     * @param rawModule the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.LoadModule" target="_top">.NET documentation</a>
+     */
     public Module LoadModule(java.lang.String moduleName, byte[] rawModule) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -968,6 +1817,16 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LoadModule.
+     *
+     * @param dupParam0 the argument of type {@code java.lang.String}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.LoadModule" target="_top">.NET documentation</a>
+     */
     public Module LoadModule(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -983,6 +1842,17 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LoadModule.
+     *
+     * @param moduleName the argument of type {@code java.lang.String}
+     * @param rawModule the argument of type {@code byte[]}
+     * @param rawSymbolStore the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.LoadModule" target="_top">.NET documentation</a>
+     */
     public Module LoadModule(java.lang.String moduleName, byte[] rawModule, byte[] rawSymbolStore) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -998,6 +1868,17 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LoadModule.
+     *
+     * @param dupParam0 the argument of type {@code java.lang.String}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @param dupParam2 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.LoadModule" target="_top">.NET documentation</a>
+     */
     public Module LoadModule(java.lang.String dupParam0, JCORefOut dupParam1, JCORefOut dupParam2) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1013,6 +1894,14 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetLoadedModules.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.GetLoadedModules" target="_top">.NET documentation</a>
+     */
     public Module[] GetLoadedModules() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1034,6 +1923,15 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetLoadedModules.
+     *
+     * @param getResourceModules the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.GetLoadedModules" target="_top">.NET documentation</a>
+     */
     public Module[] GetLoadedModules(boolean getResourceModules) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1055,6 +1953,14 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetModules.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.GetModules" target="_top">.NET documentation</a>
+     */
     public Module[] GetModules() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1076,6 +1982,15 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetModules.
+     *
+     * @param getResourceModules the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.GetModules" target="_top">.NET documentation</a>
+     */
     public Module[] GetModules(boolean getResourceModules) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1097,6 +2012,16 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateQualifiedName.
+     *
+     * @param assemblyName the argument of type {@code java.lang.String}
+     * @param typeName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.CreateQualifiedName" target="_top">.NET documentation</a>
+     */
     public static java.lang.String CreateQualifiedName(java.lang.String assemblyName, java.lang.String typeName) throws Throwable, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1111,6 +2036,14 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetManifestResourceNames.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.GetManifestResourceNames" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] GetManifestResourceNames() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1134,6 +2067,15 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetType.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.GetType" target="_top">.NET documentation</a>
+     */
     public NetType GetType(java.lang.String name) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1149,6 +2091,16 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetType.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param throwOnError the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.GetType" target="_top">.NET documentation</a>
+     */
     public NetType GetType(java.lang.String name, boolean throwOnError) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1164,6 +2116,17 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetType.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param throwOnError the argument of type {@code boolean}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.GetType" target="_top">.NET documentation</a>
+     */
     public NetType GetType(java.lang.String name, boolean throwOnError, boolean ignoreCase) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1179,6 +2142,14 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetExportedTypes.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.GetExportedTypes" target="_top">.NET documentation</a>
+     */
     public NetType[] GetExportedTypes() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1200,6 +2171,14 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypes.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.GetTypes" target="_top">.NET documentation</a>
+     */
     public NetType[] GetTypes() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1221,6 +2200,15 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetObjectData.
+     *
+     * @param info the argument of type {@code SerializationInfo}
+     * @param context the argument of type {@code StreamingContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.GetObjectData" target="_top">.NET documentation</a>
+     */
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1235,6 +2223,14 @@ public class Assembly extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property GlobalAssemblyCache.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.GlobalAssemblyCache" target="_top">.NET documentation</a>
+     */
     public boolean getGlobalAssemblyCache() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1249,6 +2245,13 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsDynamic.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.IsDynamic" target="_top">.NET documentation</a>
+     */
     public boolean getIsDynamic() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1263,6 +2266,14 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsFullyTrusted.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.IsFullyTrusted" target="_top">.NET documentation</a>
+     */
     public boolean getIsFullyTrusted() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1277,6 +2288,14 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReflectionOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.ReflectionOnly" target="_top">.NET documentation</a>
+     */
     public boolean getReflectionOnly() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1291,6 +2310,14 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HostContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.HostContext" target="_top">.NET documentation</a>
+     */
     public long getHostContext() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1331,6 +2358,14 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CustomAttributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.CustomAttributes" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 getCustomAttributes() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1346,6 +2381,14 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Modules.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.Modules" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 getModules() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1361,6 +2404,25 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefinedTypes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.DefinedTypes" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 getDefinedTypes() throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1376,6 +2438,14 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExportedTypes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.ExportedTypes" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 getExportedTypes() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1391,6 +2461,14 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EntryPoint.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.EntryPoint" target="_top">.NET documentation</a>
+     */
     public MethodInfo getEntryPoint() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1406,6 +2484,14 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ManifestModule.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.ManifestModule" target="_top">.NET documentation</a>
+     */
     public Module getManifestModule() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1421,6 +2507,14 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PermissionSet.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.PermissionSet" target="_top">.NET documentation</a>
+     */
     public PermissionSet getPermissionSet() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1436,6 +2530,14 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Evidence.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.Evidence" target="_top">.NET documentation</a>
+     */
     public Evidence getEvidence() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1451,6 +2553,14 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SecurityRuleSet.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.SecurityRuleSet" target="_top">.NET documentation</a>
+     */
     public SecurityRuleSet getSecurityRuleSet() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1466,6 +2576,14 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CodeBase.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.CodeBase" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCodeBase() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1480,6 +2598,14 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EscapedCodeBase.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.EscapedCodeBase" target="_top">.NET documentation</a>
+     */
     public java.lang.String getEscapedCodeBase() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1494,6 +2620,14 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FullName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.FullName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFullName() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1508,6 +2642,14 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ImageRuntimeVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.ImageRuntimeVersion" target="_top">.NET documentation</a>
+     */
     public java.lang.String getImageRuntimeVersion() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1522,6 +2664,14 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Location.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Assembly.Location" target="_top">.NET documentation</a>
+     */
     public java.lang.String getLocation() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1541,6 +2691,13 @@ public class Assembly extends NetObject  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addModuleResolve.
+     *
+     * @param handler the argument of type {@code ModuleResolveEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addModuleResolve(ModuleResolveEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1551,6 +2708,13 @@ public class Assembly extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeModuleResolve.
+     *
+     * @param handler the argument of type {@code ModuleResolveEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeModuleResolve(ModuleResolveEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

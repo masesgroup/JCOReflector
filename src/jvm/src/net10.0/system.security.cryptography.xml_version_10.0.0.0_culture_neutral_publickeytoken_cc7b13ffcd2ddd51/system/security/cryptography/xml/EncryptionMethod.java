@@ -99,7 +99,10 @@ public class EncryptionMethod extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EncryptionMethod(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class EncryptionMethod extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.EncryptionMethod.-ctor" target="_top">.NET documentation</a>
+     */
     public EncryptionMethod() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,13 @@ public class EncryptionMethod extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param algorithm the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.EncryptionMethod.-ctor" target="_top">.NET documentation</a>
+     */
     public EncryptionMethod(java.lang.String algorithm) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +186,21 @@ public class EncryptionMethod extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetXml.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.EncryptionMethod.GetXml" target="_top">.NET documentation</a>
+     */
     public XmlElement GetXml() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.xml.XmlException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +216,27 @@ public class EncryptionMethod extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LoadXml.
+     *
+     * @param value the argument of type {@code XmlElement}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.xml.xpath.XPathException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.EncryptionMethod.LoadXml" target="_top">.NET documentation</a>
+     */
     public void LoadXml(XmlElement value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +251,13 @@ public class EncryptionMethod extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property KeySize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.EncryptionMethod.KeySize" target="_top">.NET documentation</a>
+     */
     public int getKeySize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +298,21 @@ public class EncryptionMethod extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeySize.
+     *
+     * @param KeySize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.EncryptionMethod.KeySize" target="_top">.NET documentation</a>
+     */
     public void setKeySize(int KeySize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +323,13 @@ public class EncryptionMethod extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeyAlgorithm.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.EncryptionMethod.KeyAlgorithm" target="_top">.NET documentation</a>
+     */
     public java.lang.String getKeyAlgorithm() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +344,13 @@ public class EncryptionMethod extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeyAlgorithm.
+     *
+     * @param KeyAlgorithm the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.EncryptionMethod.KeyAlgorithm" target="_top">.NET documentation</a>
+     */
     public void setKeyAlgorithm(java.lang.String KeyAlgorithm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

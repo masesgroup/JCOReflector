@@ -107,7 +107,10 @@ public class HwndHost extends system.windows.FrameworkElement implements AutoClo
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HwndHost(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,24 @@ public class HwndHost extends system.windows.FrameworkElement implements AutoClo
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.TimeoutException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndHost.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.TimeoutException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +191,23 @@ public class HwndHost extends system.windows.FrameworkElement implements AutoClo
         }
     }
 
+    /**
+     * Invokes the .NET member UpdateWindowPos.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndHost.UpdateWindowPos" target="_top">.NET documentation</a>
+     */
     public void UpdateWindowPos() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,8 +221,12 @@ public class HwndHost extends system.windows.FrameworkElement implements AutoClo
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIKeyboardInputSink method available in IKeyboardInputSink to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IKeyboardInputSink.HasFocusWithin" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean HasFocusWithin() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIKeyboardInputSink to obtain the full interface.");
     }
@@ -192,8 +234,14 @@ public class HwndHost extends system.windows.FrameworkElement implements AutoClo
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIKeyboardInputSink method available in IKeyboardInputSink to obtain an object with an invocable method
+     *
+     * @param msg the argument of type {@code JCORefOut<MSG>}
+     * @param modifiers the argument of type {@code ModifierKeys}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IKeyboardInputSink.OnMnemonic" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean OnMnemonic(JCORefOut<MSG> msg, ModifierKeys modifiers) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIKeyboardInputSink to obtain the full interface.");
     }
@@ -201,8 +249,13 @@ public class HwndHost extends system.windows.FrameworkElement implements AutoClo
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIKeyboardInputSink method available in IKeyboardInputSink to obtain an object with an invocable method
+     *
+     * @param request the argument of type {@code TraversalRequest}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IKeyboardInputSink.TabInto" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean TabInto(TraversalRequest request) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIKeyboardInputSink to obtain the full interface.");
     }
@@ -210,8 +263,14 @@ public class HwndHost extends system.windows.FrameworkElement implements AutoClo
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIKeyboardInputSink method available in IKeyboardInputSink to obtain an object with an invocable method
+     *
+     * @param msg the argument of type {@code JCORefOut<MSG>}
+     * @param modifiers the argument of type {@code ModifierKeys}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean TranslateAccelerator(JCORefOut<MSG> msg, ModifierKeys modifiers) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIKeyboardInputSink to obtain the full interface.");
     }
@@ -219,8 +278,14 @@ public class HwndHost extends system.windows.FrameworkElement implements AutoClo
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIKeyboardInputSink method available in IKeyboardInputSink to obtain an object with an invocable method
+     *
+     * @param msg the argument of type {@code JCORefOut<MSG>}
+     * @param modifiers the argument of type {@code ModifierKeys}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IKeyboardInputSink.TranslateChar" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean TranslateChar(JCORefOut<MSG> msg, ModifierKeys modifiers) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIKeyboardInputSink to obtain the full interface.");
     }
@@ -228,8 +293,13 @@ public class HwndHost extends system.windows.FrameworkElement implements AutoClo
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIKeyboardInputSink method available in IKeyboardInputSink to obtain an object with an invocable method
+     *
+     * @param sink the argument of type {@code IKeyboardInputSink}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IKeyboardInputSink.RegisterKeyboardInputSink" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public IKeyboardInputSite RegisterKeyboardInputSink(IKeyboardInputSink sink) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIKeyboardInputSink to obtain the full interface.");
     }
@@ -256,6 +326,13 @@ public class HwndHost extends system.windows.FrameworkElement implements AutoClo
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addDpiChanged.
+     *
+     * @param handler the argument of type {@code DpiChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addDpiChanged(DpiChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +343,13 @@ public class HwndHost extends system.windows.FrameworkElement implements AutoClo
         }
     }
 
+    /**
+     * Invokes the .NET member removeDpiChanged.
+     *
+     * @param handler the argument of type {@code DpiChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeDpiChanged(DpiChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

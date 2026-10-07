@@ -100,7 +100,10 @@ public class BindingsCollection extends system.windows.forms.BaseCollection  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BindingsCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -164,6 +167,13 @@ public class BindingsCollection extends system.windows.forms.BaseCollection  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addCollectionChanged.
+     *
+     * @param handler the argument of type {@code CollectionChangeEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCollectionChanged(CollectionChangeEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +184,13 @@ public class BindingsCollection extends system.windows.forms.BaseCollection  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCollectionChanged.
+     *
+     * @param handler the argument of type {@code CollectionChangeEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCollectionChanged(CollectionChangeEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +201,13 @@ public class BindingsCollection extends system.windows.forms.BaseCollection  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCollectionChanging.
+     *
+     * @param handler the argument of type {@code CollectionChangeEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCollectionChanging(CollectionChangeEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +218,13 @@ public class BindingsCollection extends system.windows.forms.BaseCollection  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCollectionChanging.
+     *
+     * @param handler the argument of type {@code CollectionChangeEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCollectionChanging(CollectionChangeEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class ApplicationId extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ApplicationId(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,21 @@ public class ApplicationId extends NetObject  {
     public ApplicationId() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param publicKeyToken the argument of type {@code byte[]}
+     * @param name the argument of type {@code java.lang.String}
+     * @param version the argument of type {@code Version}
+     * @param processorArchitecture the argument of type {@code java.lang.String}
+     * @param culture the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ApplicationId.-ctor" target="_top">.NET documentation</a>
+     */
     public ApplicationId(byte[] publicKeyToken, java.lang.String name, Version version, java.lang.String processorArchitecture, java.lang.String culture) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +183,16 @@ public class ApplicationId extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Copy.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ApplicationId.Copy" target="_top">.NET documentation</a>
+     */
     public ApplicationId Copy() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +212,16 @@ public class ApplicationId extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PublicKeyToken.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ApplicationId.PublicKeyToken" target="_top">.NET documentation</a>
+     */
     public byte[] getPublicKeyToken() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +245,13 @@ public class ApplicationId extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Culture.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ApplicationId.Culture" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCulture() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +266,13 @@ public class ApplicationId extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ApplicationId.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +287,13 @@ public class ApplicationId extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProcessorArchitecture.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ApplicationId.ProcessorArchitecture" target="_top">.NET documentation</a>
+     */
     public java.lang.String getProcessorArchitecture() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +308,13 @@ public class ApplicationId extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Version.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ApplicationId.Version" target="_top">.NET documentation</a>
+     */
     public Version getVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

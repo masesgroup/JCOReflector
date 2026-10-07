@@ -52,5 +52,10 @@ import system.xml.XmlDictionaryReader;
  * @version 2.0.0.0
  */
 public interface IOnXmlDictionaryReaderClose {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param reader the .NET argument of type {@code System.Xml.XmlDictionaryReader}
+     */
     public void Invoke(XmlDictionaryReader reader);
 }

@@ -103,7 +103,10 @@ public class HttpRequestCachePolicy extends system.net.cache.RequestCachePolicy 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HttpRequestCachePolicy(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,21 @@ public class HttpRequestCachePolicy extends system.net.cache.RequestCachePolicy 
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Cache.HttpRequestCachePolicy.-ctor" target="_top">.NET documentation</a>
+     */
     public HttpRequestCachePolicy() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +178,26 @@ public class HttpRequestCachePolicy extends system.net.cache.RequestCachePolicy 
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param cacheSyncDate the argument of type {@code DateTime}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Cache.HttpRequestCachePolicy.-ctor" target="_top">.NET documentation</a>
+     */
     public HttpRequestCachePolicy(DateTime cacheSyncDate) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.NullReferenceException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +208,27 @@ public class HttpRequestCachePolicy extends system.net.cache.RequestCachePolicy 
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param cacheAgeControl the argument of type {@code HttpCacheAgeControl}
+     * @param maxAge the argument of type {@code TimeSpan}
+     * @param freshOrStale the argument of type {@code TimeSpan}
+     * @param cacheSyncDate the argument of type {@code DateTime}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Cache.HttpRequestCachePolicy.-ctor" target="_top">.NET documentation</a>
+     */
     public HttpRequestCachePolicy(HttpCacheAgeControl cacheAgeControl, TimeSpan maxAge, TimeSpan freshOrStale, DateTime cacheSyncDate) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.NullReferenceException {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +239,24 @@ public class HttpRequestCachePolicy extends system.net.cache.RequestCachePolicy 
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param cacheAgeControl the argument of type {@code HttpCacheAgeControl}
+     * @param maxAge the argument of type {@code TimeSpan}
+     * @param freshOrStale the argument of type {@code TimeSpan}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Cache.HttpRequestCachePolicy.-ctor" target="_top">.NET documentation</a>
+     */
     public HttpRequestCachePolicy(HttpCacheAgeControl cacheAgeControl, TimeSpan maxAge, TimeSpan freshOrStale) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
@@ -190,6 +267,23 @@ public class HttpRequestCachePolicy extends system.net.cache.RequestCachePolicy 
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param cacheAgeControl the argument of type {@code HttpCacheAgeControl}
+     * @param ageOrFreshOrStale the argument of type {@code TimeSpan}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Cache.HttpRequestCachePolicy.-ctor" target="_top">.NET documentation</a>
+     */
     public HttpRequestCachePolicy(HttpCacheAgeControl cacheAgeControl, TimeSpan ageOrFreshOrStale) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
@@ -200,6 +294,23 @@ public class HttpRequestCachePolicy extends system.net.cache.RequestCachePolicy 
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param level the argument of type {@code HttpRequestCacheLevel}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Cache.HttpRequestCachePolicy.-ctor" target="_top">.NET documentation</a>
+     */
     public HttpRequestCachePolicy(HttpRequestCacheLevel level) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -218,6 +329,24 @@ public class HttpRequestCachePolicy extends system.net.cache.RequestCachePolicy 
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CacheSyncDate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Cache.HttpRequestCachePolicy.CacheSyncDate" target="_top">.NET documentation</a>
+     */
     public DateTime getCacheSyncDate() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.security.SecurityException, system.InvalidOperationException, system.io.IOException, system.NullReferenceException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +362,13 @@ public class HttpRequestCachePolicy extends system.net.cache.RequestCachePolicy 
         }
     }
 
+    /**
+     * Gets the value of the .NET property LevelNewHttpRequestCachePolicy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Cache.HttpRequestCachePolicy.LevelNewHttpRequestCachePolicy" target="_top">.NET documentation</a>
+     */
     public HttpRequestCacheLevel getLevelNewHttpRequestCachePolicy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +384,13 @@ public class HttpRequestCachePolicy extends system.net.cache.RequestCachePolicy 
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxAge.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Cache.HttpRequestCachePolicy.MaxAge" target="_top">.NET documentation</a>
+     */
     public TimeSpan getMaxAge() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +406,13 @@ public class HttpRequestCachePolicy extends system.net.cache.RequestCachePolicy 
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxStale.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Cache.HttpRequestCachePolicy.MaxStale" target="_top">.NET documentation</a>
+     */
     public TimeSpan getMaxStale() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +428,13 @@ public class HttpRequestCachePolicy extends system.net.cache.RequestCachePolicy 
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinFresh.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Cache.HttpRequestCachePolicy.MinFresh" target="_top">.NET documentation</a>
+     */
     public TimeSpan getMinFresh() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

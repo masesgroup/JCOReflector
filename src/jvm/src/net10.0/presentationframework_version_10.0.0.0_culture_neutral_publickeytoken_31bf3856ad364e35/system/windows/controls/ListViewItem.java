@@ -99,7 +99,10 @@ public class ListViewItem extends system.windows.controls.ListBoxItem  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ListViewItem(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,15 @@ public class ListViewItem extends system.windows.controls.ListBoxItem  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ListViewItem.-ctor" target="_top">.NET documentation</a>
+     */
     public ListViewItem() throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file

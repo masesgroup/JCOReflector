@@ -51,5 +51,12 @@ import org.mases.jcobridge.netreflection.*;
  * @version 2.0.0.0
  */
 public interface IComparison_1<T extends IJCOBridgeReflected> {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param x the .NET argument of type {@code T}
+     * @param y the .NET argument of type {@code T}
+     * @return the value returned to the CLR
+     */
     public int Invoke(T x, T y);
 }

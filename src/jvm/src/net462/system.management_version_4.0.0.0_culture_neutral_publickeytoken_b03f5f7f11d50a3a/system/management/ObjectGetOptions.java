@@ -101,7 +101,10 @@ public class ObjectGetOptions extends system.management.ManagementOptions  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ObjectGetOptions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,19 @@ public class ObjectGetOptions extends system.management.ManagementOptions  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.ObjectGetOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public ObjectGetOptions() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +174,20 @@ public class ObjectGetOptions extends system.management.ManagementOptions  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param context the argument of type {@code ManagementNamedValueCollection}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.ObjectGetOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public ObjectGetOptions(ManagementNamedValueCollection context) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +198,23 @@ public class ObjectGetOptions extends system.management.ManagementOptions  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param context the argument of type {@code ManagementNamedValueCollection}
+     * @param timeout the argument of type {@code TimeSpan}
+     * @param useAmendedQualifiers the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.ObjectGetOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public ObjectGetOptions(ManagementNamedValueCollection context, TimeSpan timeout, boolean useAmendedQualifiers) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +229,23 @@ public class ObjectGetOptions extends system.management.ManagementOptions  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.ObjectGetOptions.Clone" target="_top">.NET documentation</a>
+     */
     public NetObject Clone() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +265,13 @@ public class ObjectGetOptions extends system.management.ManagementOptions  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property UseAmendedQualifiers.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.ObjectGetOptions.UseAmendedQualifiers" target="_top">.NET documentation</a>
+     */
     public boolean getUseAmendedQualifiers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +286,13 @@ public class ObjectGetOptions extends system.management.ManagementOptions  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseAmendedQualifiers.
+     *
+     * @param UseAmendedQualifiers the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.ObjectGetOptions.UseAmendedQualifiers" target="_top">.NET documentation</a>
+     */
     public void setUseAmendedQualifiers(boolean UseAmendedQualifiers) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

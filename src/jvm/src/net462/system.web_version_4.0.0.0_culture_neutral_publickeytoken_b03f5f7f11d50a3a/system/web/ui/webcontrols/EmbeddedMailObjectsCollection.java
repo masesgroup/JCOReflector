@@ -100,7 +100,10 @@ public class EmbeddedMailObjectsCollection extends system.collections.Collection
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EmbeddedMailObjectsCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class EmbeddedMailObjectsCollection extends system.collections.Collection
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.EmbeddedMailObjectsCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public EmbeddedMailObjectsCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,14 @@ public class EmbeddedMailObjectsCollection extends system.collections.Collection
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param value the argument of type {@code EmbeddedMailObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.EmbeddedMailObjectsCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(EmbeddedMailObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +192,14 @@ public class EmbeddedMailObjectsCollection extends system.collections.Collection
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param value the argument of type {@code EmbeddedMailObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.EmbeddedMailObjectsCollection.Add" target="_top">.NET documentation</a>
+     */
     public int Add(EmbeddedMailObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +240,14 @@ public class EmbeddedMailObjectsCollection extends system.collections.Collection
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param value the argument of type {@code EmbeddedMailObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.EmbeddedMailObjectsCollection.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(EmbeddedMailObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +288,14 @@ public class EmbeddedMailObjectsCollection extends system.collections.Collection
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code EmbeddedMailObject[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.EmbeddedMailObjectsCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(EmbeddedMailObject[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +306,14 @@ public class EmbeddedMailObjectsCollection extends system.collections.Collection
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param value the argument of type {@code EmbeddedMailObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.EmbeddedMailObjectsCollection.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(int index, EmbeddedMailObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +324,13 @@ public class EmbeddedMailObjectsCollection extends system.collections.Collection
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param value the argument of type {@code EmbeddedMailObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.EmbeddedMailObjectsCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(EmbeddedMailObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

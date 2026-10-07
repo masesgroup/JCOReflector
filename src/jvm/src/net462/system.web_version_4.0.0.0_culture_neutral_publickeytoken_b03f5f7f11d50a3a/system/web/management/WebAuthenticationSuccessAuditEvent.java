@@ -99,7 +99,10 @@ public class WebAuthenticationSuccessAuditEvent extends system.web.management.We
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WebAuthenticationSuccessAuditEvent(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class WebAuthenticationSuccessAuditEvent extends system.web.management.We
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property NameToAuthenticate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.WebAuthenticationSuccessAuditEvent.NameToAuthenticate" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNameToAuthenticate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

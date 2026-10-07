@@ -105,7 +105,10 @@ public class KerberosRequestorSecurityToken extends system.identitymodel.tokens.
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public KerberosRequestorSecurityToken(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,29 @@ public class KerberosRequestorSecurityToken extends system.identitymodel.tokens.
     public KerberosRequestorSecurityToken() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param servicePrincipalName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.identitymodel.tokens.SecurityTokenValidationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.KerberosRequestorSecurityToken.-ctor" target="_top">.NET documentation</a>
+     */
     public KerberosRequestorSecurityToken(java.lang.String servicePrincipalName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException, system.AccessViolationException, system.NotSupportedException, system.OverflowException, system.identitymodel.tokens.SecurityTokenValidationException {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +191,36 @@ public class KerberosRequestorSecurityToken extends system.identitymodel.tokens.
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param servicePrincipalName the argument of type {@code java.lang.String}
+     * @param tokenImpersonationLevel the argument of type {@code TokenImpersonationLevel}
+     * @param networkCredential the argument of type {@code NetworkCredential}
+     * @param id the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.identitymodel.tokens.SecurityTokenValidationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.KerberosRequestorSecurityToken.-ctor" target="_top">.NET documentation</a>
+     */
     public KerberosRequestorSecurityToken(java.lang.String servicePrincipalName, TokenImpersonationLevel tokenImpersonationLevel, NetworkCredential networkCredential, java.lang.String id) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException, system.AccessViolationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.identitymodel.tokens.SecurityTokenValidationException {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +236,14 @@ public class KerberosRequestorSecurityToken extends system.identitymodel.tokens.
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CanCreateKeyIdentifierClause.
+     *
+     * @param <T> the type of the generic argument T
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.KerberosRequestorSecurityToken.CanCreateKeyIdentifierClause" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> boolean CanCreateKeyIdentifierClause() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +258,27 @@ public class KerberosRequestorSecurityToken extends system.identitymodel.tokens.
         }
     }
 
+    /**
+     * Invokes the .NET member MatchesKeyIdentifierClause.
+     *
+     * @param keyIdentifierClause the argument of type {@code SecurityKeyIdentifierClause}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.KerberosRequestorSecurityToken.MatchesKeyIdentifierClause" target="_top">.NET documentation</a>
+     */
     public boolean MatchesKeyIdentifierClause(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ApplicationException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +293,22 @@ public class KerberosRequestorSecurityToken extends system.identitymodel.tokens.
         }
     }
 
+    /**
+     * Invokes the .NET member GetRequest.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.KerberosRequestorSecurityToken.GetRequest" target="_top">.NET documentation</a>
+     */
     public byte[] GetRequest() throws Throwable, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +336,13 @@ public class KerberosRequestorSecurityToken extends system.identitymodel.tokens.
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SecurityKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.KerberosRequestorSecurityToken.SecurityKey" target="_top">.NET documentation</a>
+     */
     public SymmetricSecurityKey getSecurityKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +358,13 @@ public class KerberosRequestorSecurityToken extends system.identitymodel.tokens.
         }
     }
 
+    /**
+     * Gets the value of the .NET property ServicePrincipalName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.KerberosRequestorSecurityToken.ServicePrincipalName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getServicePrincipalName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class ValidationErrorEventArgs extends system.windows.RoutedEventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ValidationErrorEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class ValidationErrorEventArgs extends system.windows.RoutedEventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Error.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ValidationErrorEventArgs.Error" target="_top">.NET documentation</a>
+     */
     public ValidationError getError() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +185,13 @@ public class ValidationErrorEventArgs extends system.windows.RoutedEventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Action.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ValidationErrorEventArgs.Action" target="_top">.NET documentation</a>
+     */
     public ValidationErrorEventAction getAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

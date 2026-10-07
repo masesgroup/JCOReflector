@@ -106,7 +106,9 @@ public class InstanceUpdateException extends NetException {
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public InstanceUpdateException(java.lang.Object instance) {
         super(instance);
@@ -167,6 +169,22 @@ public class InstanceUpdateException extends NetException {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param blockingActivities the argument of type {@code IList_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.InstanceUpdateException.-ctor" target="_top">.NET documentation</a>
+     */
     public InstanceUpdateException(IList_1 blockingActivities) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -177,6 +195,15 @@ public class InstanceUpdateException extends NetException {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param blockingActivities the argument of type {@code IList_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.InstanceUpdateException.-ctor" target="_top">.NET documentation</a>
+     */
     public InstanceUpdateException(java.lang.String message, IList_1 blockingActivities) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -187,6 +214,16 @@ public class InstanceUpdateException extends NetException {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param blockingActivities the argument of type {@code IList_1}
+     * @param innerException the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.InstanceUpdateException.-ctor" target="_top">.NET documentation</a>
+     */
     public InstanceUpdateException(java.lang.String message, IList_1 blockingActivities, NetException innerException) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -201,6 +238,29 @@ public class InstanceUpdateException extends NetException {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetObjectData.
+     *
+     * @param info the argument of type {@code SerializationInfo}
+     * @param context the argument of type {@code StreamingContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.InstanceUpdateException.GetObjectData" target="_top">.NET documentation</a>
+     */
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.TypeLoadException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotImplementedException, system.runtime.serialization.SerializationException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +275,14 @@ public class InstanceUpdateException extends NetException {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BlockingActivities.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.InstanceUpdateException.BlockingActivities" target="_top">.NET documentation</a>
+     */
     public IList_1 getBlockingActivities() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

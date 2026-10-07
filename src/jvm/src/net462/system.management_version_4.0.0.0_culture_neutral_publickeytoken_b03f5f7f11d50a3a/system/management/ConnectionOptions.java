@@ -104,7 +104,10 @@ public class ConnectionOptions extends system.management.ManagementOptions  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ConnectionOptions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,22 @@ public class ConnectionOptions extends system.management.ManagementOptions  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.ConnectionOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public ConnectionOptions() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +180,30 @@ public class ConnectionOptions extends system.management.ManagementOptions  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param locale the argument of type {@code java.lang.String}
+     * @param username the argument of type {@code java.lang.String}
+     * @param password the argument of type {@code SecureString}
+     * @param authority the argument of type {@code java.lang.String}
+     * @param impersonation the argument of type {@code ImpersonationLevel}
+     * @param authentication the argument of type {@code AuthenticationLevel}
+     * @param enablePrivileges the argument of type {@code boolean}
+     * @param context the argument of type {@code ManagementNamedValueCollection}
+     * @param timeout the argument of type {@code TimeSpan}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.ConnectionOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public ConnectionOptions(java.lang.String locale, java.lang.String username, SecureString password, java.lang.String authority, ImpersonationLevel impersonation, AuthenticationLevel authentication, boolean enablePrivileges, ManagementNamedValueCollection context, TimeSpan timeout) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MulticastNotSupportedException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +214,31 @@ public class ConnectionOptions extends system.management.ManagementOptions  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param locale the argument of type {@code java.lang.String}
+     * @param username the argument of type {@code java.lang.String}
+     * @param password the argument of type {@code java.lang.String}
+     * @param authority the argument of type {@code java.lang.String}
+     * @param impersonation the argument of type {@code ImpersonationLevel}
+     * @param authentication the argument of type {@code AuthenticationLevel}
+     * @param enablePrivileges the argument of type {@code boolean}
+     * @param context the argument of type {@code ManagementNamedValueCollection}
+     * @param timeout the argument of type {@code TimeSpan}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.ConnectionOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public ConnectionOptions(java.lang.String locale, java.lang.String username, java.lang.String password, java.lang.String authority, ImpersonationLevel impersonation, AuthenticationLevel authentication, boolean enablePrivileges, ManagementNamedValueCollection context, TimeSpan timeout) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
         try {
             // add reference to assemblyName.dll file
@@ -185,6 +253,24 @@ public class ConnectionOptions extends system.management.ManagementOptions  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.ConnectionOptions.Clone" target="_top">.NET documentation</a>
+     */
     public NetObject Clone() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.OutOfMemoryException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +290,13 @@ public class ConnectionOptions extends system.management.ManagementOptions  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EnablePrivileges.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.ConnectionOptions.EnablePrivileges" target="_top">.NET documentation</a>
+     */
     public boolean getEnablePrivileges() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +311,13 @@ public class ConnectionOptions extends system.management.ManagementOptions  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EnablePrivileges.
+     *
+     * @param EnablePrivileges the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.ConnectionOptions.EnablePrivileges" target="_top">.NET documentation</a>
+     */
     public void setEnablePrivileges(boolean EnablePrivileges) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +328,13 @@ public class ConnectionOptions extends system.management.ManagementOptions  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Authentication.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.ConnectionOptions.Authentication" target="_top">.NET documentation</a>
+     */
     public AuthenticationLevel getAuthentication() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +350,13 @@ public class ConnectionOptions extends system.management.ManagementOptions  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Authentication.
+     *
+     * @param Authentication the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.ConnectionOptions.Authentication" target="_top">.NET documentation</a>
+     */
     public void setAuthentication(AuthenticationLevel Authentication) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +367,13 @@ public class ConnectionOptions extends system.management.ManagementOptions  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Impersonation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.ConnectionOptions.Impersonation" target="_top">.NET documentation</a>
+     */
     public ImpersonationLevel getImpersonation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +389,13 @@ public class ConnectionOptions extends system.management.ManagementOptions  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Impersonation.
+     *
+     * @param Impersonation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.ConnectionOptions.Impersonation" target="_top">.NET documentation</a>
+     */
     public void setImpersonation(ImpersonationLevel Impersonation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +406,17 @@ public class ConnectionOptions extends system.management.ManagementOptions  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SecurePassword.
+     *
+     * @param SecurePassword the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.ConnectionOptions.SecurePassword" target="_top">.NET documentation</a>
+     */
     public void setSecurePassword(SecureString SecurePassword) throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +427,13 @@ public class ConnectionOptions extends system.management.ManagementOptions  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Authority.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.ConnectionOptions.Authority" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAuthority() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -302,6 +448,13 @@ public class ConnectionOptions extends system.management.ManagementOptions  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Authority.
+     *
+     * @param Authority the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.ConnectionOptions.Authority" target="_top">.NET documentation</a>
+     */
     public void setAuthority(java.lang.String Authority) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -312,6 +465,13 @@ public class ConnectionOptions extends system.management.ManagementOptions  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Locale.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.ConnectionOptions.Locale" target="_top">.NET documentation</a>
+     */
     public java.lang.String getLocale() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -326,6 +486,13 @@ public class ConnectionOptions extends system.management.ManagementOptions  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Locale.
+     *
+     * @param Locale the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.ConnectionOptions.Locale" target="_top">.NET documentation</a>
+     */
     public void setLocale(java.lang.String Locale) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -336,6 +503,21 @@ public class ConnectionOptions extends system.management.ManagementOptions  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Password.
+     *
+     * @param Password the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.ConnectionOptions.Password" target="_top">.NET documentation</a>
+     */
     public void setPassword(java.lang.String Password) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -346,6 +528,13 @@ public class ConnectionOptions extends system.management.ManagementOptions  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Username.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.ConnectionOptions.Username" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUsername() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -360,6 +549,13 @@ public class ConnectionOptions extends system.management.ManagementOptions  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Username.
+     *
+     * @param Username the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.ConnectionOptions.Username" target="_top">.NET documentation</a>
+     */
     public void setUsername(java.lang.String Username) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

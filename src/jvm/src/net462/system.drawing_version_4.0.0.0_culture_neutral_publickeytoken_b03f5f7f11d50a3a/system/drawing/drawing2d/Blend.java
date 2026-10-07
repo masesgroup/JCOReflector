@@ -99,7 +99,10 @@ public class Blend extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Blend(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class Blend extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Drawing2D.Blend.-ctor" target="_top">.NET documentation</a>
+     */
     public Blend() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,13 @@ public class Blend extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Drawing2D.Blend.-ctor" target="_top">.NET documentation</a>
+     */
     public Blend(int count) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +190,13 @@ public class Blend extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Factors.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Drawing2D.Blend.Factors" target="_top">.NET documentation</a>
+     */
     public final Single[] getFactors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +218,13 @@ public class Blend extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Factors.
+     *
+     * @param Factors the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Drawing2D.Blend.Factors" target="_top">.NET documentation</a>
+     */
     public void setFactors(Single[] Factors) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +235,13 @@ public class Blend extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Positions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Drawing2D.Blend.Positions" target="_top">.NET documentation</a>
+     */
     public final Single[] getPositions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +263,13 @@ public class Blend extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Positions.
+     *
+     * @param Positions the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Drawing2D.Blend.Positions" target="_top">.NET documentation</a>
+     */
     public void setPositions(Single[] Positions) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

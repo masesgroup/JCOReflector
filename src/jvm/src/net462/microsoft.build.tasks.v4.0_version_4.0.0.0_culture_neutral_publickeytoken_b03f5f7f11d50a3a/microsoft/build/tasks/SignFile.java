@@ -101,7 +101,10 @@ public class SignFile extends microsoft.build.utilities.Task  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SignFile(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,13 @@ public class SignFile extends microsoft.build.utilities.Task  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.SignFile.-ctor" target="_top">.NET documentation</a>
+     */
     public SignFile() throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +172,49 @@ public class SignFile extends microsoft.build.utilities.Task  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Execute.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.WarningException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.security.accesscontrol.PrivilegeNotHeldException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
+     * @throws system.xml.xpath.XPathException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.SignFile.Execute" target="_top">.NET documentation</a>
+     */
     public boolean Execute() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.configuration.ConfigurationException, system.UriFormatException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.FormatException, system.AccessViolationException, system.NotSupportedException, system.RankException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.componentmodel.WarningException, system.threading.ThreadAbortException, system.security.accesscontrol.PrivilegeNotHeldException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.xpath.XPathException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +233,13 @@ public class SignFile extends microsoft.build.utilities.Task  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SigningTarget.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.SignFile.SigningTarget" target="_top">.NET documentation</a>
+     */
     public ITaskItem getSigningTarget() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +255,13 @@ public class SignFile extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SigningTarget.
+     *
+     * @param SigningTarget the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.SignFile.SigningTarget" target="_top">.NET documentation</a>
+     */
     public void setSigningTarget(ITaskItem SigningTarget) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +272,13 @@ public class SignFile extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CertificateThumbprint.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.SignFile.CertificateThumbprint" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCertificateThumbprint() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +293,13 @@ public class SignFile extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CertificateThumbprint.
+     *
+     * @param CertificateThumbprint the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.SignFile.CertificateThumbprint" target="_top">.NET documentation</a>
+     */
     public void setCertificateThumbprint(java.lang.String CertificateThumbprint) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +310,13 @@ public class SignFile extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TimestampUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.SignFile.TimestampUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTimestampUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +331,13 @@ public class SignFile extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TimestampUrl.
+     *
+     * @param TimestampUrl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.SignFile.TimestampUrl" target="_top">.NET documentation</a>
+     */
     public void setTimestampUrl(java.lang.String TimestampUrl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

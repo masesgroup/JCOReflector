@@ -99,7 +99,10 @@ public class BookmarkScopeInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BookmarkScopeInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class BookmarkScopeInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsInitialized.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Hosting.BookmarkScopeInfo.IsInitialized" target="_top">.NET documentation</a>
+     */
     public boolean getIsInitialized() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +182,13 @@ public class BookmarkScopeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Id.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Hosting.BookmarkScopeInfo.Id" target="_top">.NET documentation</a>
+     */
     public Guid getId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +204,13 @@ public class BookmarkScopeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Id.
+     *
+     * @param Id the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Hosting.BookmarkScopeInfo.Id" target="_top">.NET documentation</a>
+     */
     public void setId(Guid Id) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +221,13 @@ public class BookmarkScopeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TemporaryId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Hosting.BookmarkScopeInfo.TemporaryId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTemporaryId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +242,13 @@ public class BookmarkScopeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TemporaryId.
+     *
+     * @param TemporaryId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Hosting.BookmarkScopeInfo.TemporaryId" target="_top">.NET documentation</a>
+     */
     public void setTemporaryId(java.lang.String TemporaryId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

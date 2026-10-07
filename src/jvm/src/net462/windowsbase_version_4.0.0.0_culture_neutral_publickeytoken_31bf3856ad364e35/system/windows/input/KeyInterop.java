@@ -99,7 +99,10 @@ public class KeyInterop extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public KeyInterop(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,14 @@ public class KeyInterop extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member VirtualKeyFromKey.
+     *
+     * @param key the argument of type {@code Key}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.KeyInterop.VirtualKeyFromKey" target="_top">.NET documentation</a>
+     */
     public static int VirtualKeyFromKey(Key key) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -192,6 +203,14 @@ public class KeyInterop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member KeyFromVirtualKey.
+     *
+     * @param virtualKey the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.KeyInterop.KeyFromVirtualKey" target="_top">.NET documentation</a>
+     */
     public static Key KeyFromVirtualKey(int virtualKey) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

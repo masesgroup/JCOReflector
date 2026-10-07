@@ -100,7 +100,10 @@ public class PriorityBinding extends system.windows.data.BindingBase  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PriorityBinding(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,25 @@ public class PriorityBinding extends system.windows.data.BindingBase  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.PriorityBinding.-ctor" target="_top">.NET documentation</a>
+     */
     public PriorityBinding() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.ArrayTypeMismatchException, system.io.IOException, system.UnauthorizedAccessException {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +183,13 @@ public class PriorityBinding extends system.windows.data.BindingBase  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ShouldSerializeBindings.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.PriorityBinding.ShouldSerializeBindings" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeBindings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,8 +207,12 @@ public class PriorityBinding extends system.windows.data.BindingBase  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIAddChild method available in IAddChild to obtain an object with an invocable method
+     *
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.IAddChild.AddChild" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void AddChild(NetObject value) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
@@ -187,8 +220,12 @@ public class PriorityBinding extends system.windows.data.BindingBase  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIAddChild method available in IAddChild to obtain an object with an invocable method
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.IAddChild.AddText" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void AddText(java.lang.String text) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
@@ -197,6 +234,13 @@ public class PriorityBinding extends system.windows.data.BindingBase  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Bindings.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.PriorityBinding.Bindings" target="_top">.NET documentation</a>
+     */
     public Collection_1 getBindings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

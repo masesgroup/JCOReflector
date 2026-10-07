@@ -105,7 +105,10 @@ public class XmlSchemaImporter extends system.xml.serialization.SchemaImporter  
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlSchemaImporter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,27 @@ public class XmlSchemaImporter extends system.xml.serialization.SchemaImporter  
     public XmlSchemaImporter() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param schemas the argument of type {@code XmlSchemas}
+     * @param typeIdentifiers the argument of type {@code CodeIdentifiers}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlSchemaImporter.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlSchemaImporter(XmlSchemas schemas, CodeIdentifiers typeIdentifiers) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.MulticastNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.RankException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +189,26 @@ public class XmlSchemaImporter extends system.xml.serialization.SchemaImporter  
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param schemas the argument of type {@code XmlSchemas}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlSchemaImporter.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlSchemaImporter(XmlSchemas schemas) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.MulticastNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.RankException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +224,28 @@ public class XmlSchemaImporter extends system.xml.serialization.SchemaImporter  
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ImportAnyType.
+     *
+     * @param typeName the argument of type {@code XmlQualifiedName}
+     * @param elementName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlSchemaImporter.ImportAnyType" target="_top">.NET documentation</a>
+     */
     public XmlMembersMapping ImportAnyType(XmlQualifiedName typeName, java.lang.String elementName) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.MulticastNotSupportedException, system.ArrayTypeMismatchException, system.FormatException, system.IndexOutOfRangeException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +261,28 @@ public class XmlSchemaImporter extends system.xml.serialization.SchemaImporter  
         }
     }
 
+    /**
+     * Invokes the .NET member ImportMembersMapping.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param ns the argument of type {@code java.lang.String}
+     * @param members the argument of type {@code SoapSchemaMember[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlSchemaImporter.ImportMembersMapping" target="_top">.NET documentation</a>
+     */
     public XmlMembersMapping ImportMembersMapping(java.lang.String name, java.lang.String ns, SoapSchemaMember[] members) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +298,30 @@ public class XmlSchemaImporter extends system.xml.serialization.SchemaImporter  
         }
     }
 
+    /**
+     * Invokes the .NET member ImportMembersMapping.
+     *
+     * @param name the argument of type {@code XmlQualifiedName}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlSchemaImporter.ImportMembersMapping" target="_top">.NET documentation</a>
+     */
     public XmlMembersMapping ImportMembersMapping(XmlQualifiedName name) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.MulticastNotSupportedException, system.FormatException, system.NullReferenceException, system.NotImplementedException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +337,33 @@ public class XmlSchemaImporter extends system.xml.serialization.SchemaImporter  
         }
     }
 
+    /**
+     * Invokes the .NET member ImportMembersMapping.
+     *
+     * @param names the argument of type {@code XmlQualifiedName[]}
+     * @param baseType the argument of type {@code NetType}
+     * @param baseTypeCanBeIndirect the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlSchemaImporter.ImportMembersMapping" target="_top">.NET documentation</a>
+     */
     public XmlMembersMapping ImportMembersMapping(XmlQualifiedName[] names, NetType baseType, boolean baseTypeCanBeIndirect) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.MulticastNotSupportedException, system.FormatException, system.NotImplementedException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +379,28 @@ public class XmlSchemaImporter extends system.xml.serialization.SchemaImporter  
         }
     }
 
+    /**
+     * Invokes the .NET member ImportMembersMapping.
+     *
+     * @param names the argument of type {@code XmlQualifiedName[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlSchemaImporter.ImportMembersMapping" target="_top">.NET documentation</a>
+     */
     public XmlMembersMapping ImportMembersMapping(XmlQualifiedName[] names) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NullReferenceException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.xml.schema.XmlSchemaException, system.MulticastNotSupportedException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +416,32 @@ public class XmlSchemaImporter extends system.xml.serialization.SchemaImporter  
         }
     }
 
+    /**
+     * Invokes the .NET member ImportDerivedTypeMapping.
+     *
+     * @param name the argument of type {@code XmlQualifiedName}
+     * @param baseType the argument of type {@code NetType}
+     * @param baseTypeCanBeIndirect the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlSchemaImporter.ImportDerivedTypeMapping" target="_top">.NET documentation</a>
+     */
     public XmlTypeMapping ImportDerivedTypeMapping(XmlQualifiedName name, NetType baseType, boolean baseTypeCanBeIndirect) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.MulticastNotSupportedException, system.ArrayTypeMismatchException, system.FormatException, system.NullReferenceException, system.NotImplementedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +457,25 @@ public class XmlSchemaImporter extends system.xml.serialization.SchemaImporter  
         }
     }
 
+    /**
+     * Invokes the .NET member ImportDerivedTypeMapping.
+     *
+     * @param name the argument of type {@code XmlQualifiedName}
+     * @param baseType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlSchemaImporter.ImportDerivedTypeMapping" target="_top">.NET documentation</a>
+     */
     public XmlTypeMapping ImportDerivedTypeMapping(XmlQualifiedName name, NetType baseType) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.xml.schema.XmlSchemaException, system.MulticastNotSupportedException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException, system.NotSupportedException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -285,6 +491,29 @@ public class XmlSchemaImporter extends system.xml.serialization.SchemaImporter  
         }
     }
 
+    /**
+     * Invokes the .NET member ImportSchemaType.
+     *
+     * @param typeName the argument of type {@code XmlQualifiedName}
+     * @param baseType the argument of type {@code NetType}
+     * @param baseTypeCanBeIndirect the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlSchemaImporter.ImportSchemaType" target="_top">.NET documentation</a>
+     */
     public XmlTypeMapping ImportSchemaType(XmlQualifiedName typeName, NetType baseType, boolean baseTypeCanBeIndirect) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.MulticastNotSupportedException, system.ArrayTypeMismatchException, system.FormatException, system.IndexOutOfRangeException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +529,24 @@ public class XmlSchemaImporter extends system.xml.serialization.SchemaImporter  
         }
     }
 
+    /**
+     * Invokes the .NET member ImportSchemaType.
+     *
+     * @param typeName the argument of type {@code XmlQualifiedName}
+     * @param baseType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlSchemaImporter.ImportSchemaType" target="_top">.NET documentation</a>
+     */
     public XmlTypeMapping ImportSchemaType(XmlQualifiedName typeName, NetType baseType) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.xml.schema.XmlSchemaException, system.MulticastNotSupportedException, system.FormatException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -315,6 +562,23 @@ public class XmlSchemaImporter extends system.xml.serialization.SchemaImporter  
         }
     }
 
+    /**
+     * Invokes the .NET member ImportSchemaType.
+     *
+     * @param typeName the argument of type {@code XmlQualifiedName}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlSchemaImporter.ImportSchemaType" target="_top">.NET documentation</a>
+     */
     public XmlTypeMapping ImportSchemaType(XmlQualifiedName typeName) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.xml.schema.XmlSchemaException, system.MulticastNotSupportedException, system.FormatException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -330,6 +594,23 @@ public class XmlSchemaImporter extends system.xml.serialization.SchemaImporter  
         }
     }
 
+    /**
+     * Invokes the .NET member ImportTypeMapping.
+     *
+     * @param name the argument of type {@code XmlQualifiedName}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlSchemaImporter.ImportTypeMapping" target="_top">.NET documentation</a>
+     */
     public XmlTypeMapping ImportTypeMapping(XmlQualifiedName name) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.ArgumentNullException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

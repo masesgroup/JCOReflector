@@ -101,7 +101,10 @@ public class SemaphoreAcl extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SemaphoreAcl(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,29 @@ public class SemaphoreAcl extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member TryOpenExisting.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param rights the argument of type {@code SemaphoreRights}
+     * @param result the argument of type {@code JCORefOut<Semaphore>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.MethodAccessException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.SemaphoreAcl.TryOpenExisting" target="_top">.NET documentation</a>
+     */
     public static boolean TryOpenExisting(java.lang.String name, SemaphoreRights rights, JCORefOut<Semaphore> result) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -168,6 +194,37 @@ public class SemaphoreAcl extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param initialCount the argument of type {@code int}
+     * @param maximumCount the argument of type {@code int}
+     * @param name the argument of type {@code java.lang.String}
+     * @param createdNew the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicBoolean>}
+     * @param semaphoreSecurity the argument of type {@code SemaphoreSecurity}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MethodAccessException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.SemaphoreAcl.Create" target="_top">.NET documentation</a>
+     */
     public static Semaphore Create(int initialCount, int maximumCount, java.lang.String name, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> createdNew, SemaphoreSecurity semaphoreSecurity) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.threading.WaitHandleCannotBeOpenedException, system.OutOfMemoryException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -183,6 +240,29 @@ public class SemaphoreAcl extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OpenExisting.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param rights the argument of type {@code SemaphoreRights}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.MethodAccessException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.SemaphoreAcl.OpenExisting" target="_top">.NET documentation</a>
+     */
     public static Semaphore OpenExisting(java.lang.String name, SemaphoreRights rights) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

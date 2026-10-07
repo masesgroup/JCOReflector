@@ -102,7 +102,10 @@ public class SettingsProperty extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SettingsProperty(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,19 @@ public class SettingsProperty extends NetObject  {
     public SettingsProperty() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param propertyToCopy the argument of type {@code SettingsProperty}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsProperty.-ctor" target="_top">.NET documentation</a>
+     */
     public SettingsProperty(SettingsProperty propertyToCopy) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +178,30 @@ public class SettingsProperty extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param propertyType the argument of type {@code NetType}
+     * @param provider the argument of type {@code SettingsProvider}
+     * @param isReadOnly the argument of type {@code boolean}
+     * @param defaultValue the argument of type {@code NetObject}
+     * @param serializeAs the argument of type {@code SettingsSerializeAs}
+     * @param attributes the argument of type {@code SettingsAttributeDictionary}
+     * @param throwOnErrorDeserializing the argument of type {@code boolean}
+     * @param throwOnErrorSerializing the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsProperty.-ctor" target="_top">.NET documentation</a>
+     */
     public SettingsProperty(java.lang.String name, NetType propertyType, SettingsProvider provider, boolean isReadOnly, NetObject defaultValue, SettingsSerializeAs serializeAs, SettingsAttributeDictionary attributes, boolean throwOnErrorDeserializing, boolean throwOnErrorSerializing) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +212,17 @@ public class SettingsProperty extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsProperty.-ctor" target="_top">.NET documentation</a>
+     */
     public SettingsProperty(java.lang.String name) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -191,6 +242,13 @@ public class SettingsProperty extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsReadOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsProperty.IsReadOnly" target="_top">.NET documentation</a>
+     */
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +263,13 @@ public class SettingsProperty extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsReadOnly.
+     *
+     * @param IsReadOnly the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsProperty.IsReadOnly" target="_top">.NET documentation</a>
+     */
     public void setIsReadOnly(boolean IsReadOnly) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +280,13 @@ public class SettingsProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ThrowOnErrorDeserializing.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsProperty.ThrowOnErrorDeserializing" target="_top">.NET documentation</a>
+     */
     public boolean getThrowOnErrorDeserializing() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +301,13 @@ public class SettingsProperty extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ThrowOnErrorDeserializing.
+     *
+     * @param ThrowOnErrorDeserializing the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsProperty.ThrowOnErrorDeserializing" target="_top">.NET documentation</a>
+     */
     public void setThrowOnErrorDeserializing(boolean ThrowOnErrorDeserializing) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +318,13 @@ public class SettingsProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ThrowOnErrorSerializing.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsProperty.ThrowOnErrorSerializing" target="_top">.NET documentation</a>
+     */
     public boolean getThrowOnErrorSerializing() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +339,13 @@ public class SettingsProperty extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ThrowOnErrorSerializing.
+     *
+     * @param ThrowOnErrorSerializing the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsProperty.ThrowOnErrorSerializing" target="_top">.NET documentation</a>
+     */
     public void setThrowOnErrorSerializing(boolean ThrowOnErrorSerializing) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +356,13 @@ public class SettingsProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Attributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsProperty.Attributes" target="_top">.NET documentation</a>
+     */
     public SettingsAttributeDictionary getAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +378,13 @@ public class SettingsProperty extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Attributes.
+     *
+     * @param Attributes the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsProperty.Attributes" target="_top">.NET documentation</a>
+     */
     public void setAttributes(SettingsAttributeDictionary Attributes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +395,13 @@ public class SettingsProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Provider.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsProperty.Provider" target="_top">.NET documentation</a>
+     */
     public SettingsProvider getProvider() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +417,13 @@ public class SettingsProperty extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Provider.
+     *
+     * @param Provider the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsProperty.Provider" target="_top">.NET documentation</a>
+     */
     public void setProvider(SettingsProvider Provider) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -313,6 +434,13 @@ public class SettingsProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SerializeAs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsProperty.SerializeAs" target="_top">.NET documentation</a>
+     */
     public SettingsSerializeAs getSerializeAs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -328,6 +456,13 @@ public class SettingsProperty extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SerializeAs.
+     *
+     * @param SerializeAs the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsProperty.SerializeAs" target="_top">.NET documentation</a>
+     */
     public void setSerializeAs(SettingsSerializeAs SerializeAs) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -338,6 +473,13 @@ public class SettingsProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsProperty.DefaultValue" target="_top">.NET documentation</a>
+     */
     public NetObject getDefaultValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -353,6 +495,13 @@ public class SettingsProperty extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultValue.
+     *
+     * @param DefaultValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsProperty.DefaultValue" target="_top">.NET documentation</a>
+     */
     public void setDefaultValue(NetObject DefaultValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -363,6 +512,13 @@ public class SettingsProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsProperty.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -377,6 +533,13 @@ public class SettingsProperty extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsProperty.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -387,6 +550,13 @@ public class SettingsProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsProperty.PropertyType" target="_top">.NET documentation</a>
+     */
     public NetType getPropertyType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -402,6 +572,13 @@ public class SettingsProperty extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PropertyType.
+     *
+     * @param PropertyType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsProperty.PropertyType" target="_top">.NET documentation</a>
+     */
     public void setPropertyType(NetType PropertyType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

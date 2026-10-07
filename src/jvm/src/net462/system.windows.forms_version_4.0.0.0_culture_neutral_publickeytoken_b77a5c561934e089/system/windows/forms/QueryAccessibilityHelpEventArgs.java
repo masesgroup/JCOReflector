@@ -99,7 +99,10 @@ public class QueryAccessibilityHelpEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public QueryAccessibilityHelpEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class QueryAccessibilityHelpEventArgs extends system.EventArgs  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.QueryAccessibilityHelpEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public QueryAccessibilityHelpEventArgs() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,15 @@ public class QueryAccessibilityHelpEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param helpNamespace the argument of type {@code java.lang.String}
+     * @param helpString the argument of type {@code java.lang.String}
+     * @param helpKeyword the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.QueryAccessibilityHelpEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public QueryAccessibilityHelpEventArgs(java.lang.String helpNamespace, java.lang.String helpString, java.lang.String helpKeyword) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +192,13 @@ public class QueryAccessibilityHelpEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HelpKeyword.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.QueryAccessibilityHelpEventArgs.HelpKeyword" target="_top">.NET documentation</a>
+     */
     public java.lang.String getHelpKeyword() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +213,13 @@ public class QueryAccessibilityHelpEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HelpKeyword.
+     *
+     * @param HelpKeyword the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.QueryAccessibilityHelpEventArgs.HelpKeyword" target="_top">.NET documentation</a>
+     */
     public void setHelpKeyword(java.lang.String HelpKeyword) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +230,13 @@ public class QueryAccessibilityHelpEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HelpNamespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.QueryAccessibilityHelpEventArgs.HelpNamespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getHelpNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +251,13 @@ public class QueryAccessibilityHelpEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HelpNamespace.
+     *
+     * @param HelpNamespace the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.QueryAccessibilityHelpEventArgs.HelpNamespace" target="_top">.NET documentation</a>
+     */
     public void setHelpNamespace(java.lang.String HelpNamespace) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +268,13 @@ public class QueryAccessibilityHelpEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HelpString.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.QueryAccessibilityHelpEventArgs.HelpString" target="_top">.NET documentation</a>
+     */
     public java.lang.String getHelpString() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +289,13 @@ public class QueryAccessibilityHelpEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HelpString.
+     *
+     * @param HelpString the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.QueryAccessibilityHelpEventArgs.HelpString" target="_top">.NET documentation</a>
+     */
     public void setHelpString(java.lang.String HelpString) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class XPathQueryGenerator extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XPathQueryGenerator(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,30 @@ public class XPathQueryGenerator extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateFromDataContractSerializer.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param pathToMember the argument of type {@code MemberInfo[]}
+     * @param rootElementXpath the argument of type {@code StringBuilder}
+     * @param namespaces the argument of type {@code JCORefOut<XmlNamespaceManager>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.runtime.serialization.InvalidDataContractException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.XPathQueryGenerator.CreateFromDataContractSerializer" target="_top">.NET documentation</a>
+     */
     public static java.lang.String CreateFromDataContractSerializer(NetType type, MemberInfo[] pathToMember, StringBuilder rootElementXpath, JCORefOut<XmlNamespaceManager> namespaces) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -168,6 +195,33 @@ public class XPathQueryGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateFromDataContractSerializer.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param pathToMember the argument of type {@code MemberInfo[]}
+     * @param namespaces the argument of type {@code JCORefOut<XmlNamespaceManager>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.runtime.serialization.InvalidDataContractException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.XPathQueryGenerator.CreateFromDataContractSerializer" target="_top">.NET documentation</a>
+     */
     public static java.lang.String CreateFromDataContractSerializer(NetType type, MemberInfo[] pathToMember, JCORefOut<XmlNamespaceManager> namespaces) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

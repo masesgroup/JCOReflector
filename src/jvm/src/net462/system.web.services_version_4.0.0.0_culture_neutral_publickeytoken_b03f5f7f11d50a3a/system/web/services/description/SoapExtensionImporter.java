@@ -100,7 +100,10 @@ public class SoapExtensionImporter extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SoapExtensionImporter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,13 @@ public class SoapExtensionImporter extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ImportMethod.
+     *
+     * @param metadata the argument of type {@code CodeAttributeDeclarationCollection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapExtensionImporter.ImportMethod" target="_top">.NET documentation</a>
+     */
     public void ImportMethod(CodeAttributeDeclarationCollection metadata) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -167,6 +177,13 @@ public class SoapExtensionImporter extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ImportContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapExtensionImporter.ImportContext" target="_top">.NET documentation</a>
+     */
     public SoapProtocolImporter getImportContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +199,13 @@ public class SoapExtensionImporter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ImportContext.
+     *
+     * @param ImportContext the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapExtensionImporter.ImportContext" target="_top">.NET documentation</a>
+     */
     public void setImportContext(SoapProtocolImporter ImportContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -104,7 +104,10 @@ public class EncodingExtensions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EncodingExtensions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,24 @@ public class EncodingExtensions extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetBytes.
+     *
+     * @param encoding the argument of type {@code Encoding}
+     * @param chars the argument of type {@code JCORefOut<ReadOnlySequence_1>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.EncodingExtensions.GetBytes" target="_top">.NET documentation</a>
+     */
     public static byte[] GetBytes(Encoding encoding, JCORefOut<ReadOnlySequence_1> chars) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -180,6 +201,25 @@ public class EncodingExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetBytes.
+     *
+     * @param encoding the argument of type {@code Encoding}
+     * @param chars the argument of type {@code JCORefOut<ReadOnlySequence_1>}
+     * @param writer the argument of type {@code IBufferWriter_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.EncodingExtensions.GetBytes" target="_top">.NET documentation</a>
+     */
     public static long GetBytes(Encoding encoding, JCORefOut<ReadOnlySequence_1> chars, IBufferWriter_1 writer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -220,6 +260,25 @@ public class EncodingExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetChars.
+     *
+     * @param encoding the argument of type {@code Encoding}
+     * @param bytes the argument of type {@code JCORefOut<ReadOnlySequence_1>}
+     * @param writer the argument of type {@code IBufferWriter_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.EncodingExtensions.GetChars" target="_top">.NET documentation</a>
+     */
     public static long GetChars(Encoding encoding, JCORefOut<ReadOnlySequence_1> bytes, IBufferWriter_1 writer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -260,6 +319,24 @@ public class EncodingExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetString.
+     *
+     * @param encoding the argument of type {@code Encoding}
+     * @param bytes the argument of type {@code JCORefOut<ReadOnlySequence_1>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.EncodingExtensions.GetString" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetString(Encoding encoding, JCORefOut<ReadOnlySequence_1> bytes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -274,6 +351,24 @@ public class EncodingExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Convert.
+     *
+     * @param decoder the argument of type {@code Decoder}
+     * @param bytes the argument of type {@code JCORefOut<ReadOnlySequence_1>}
+     * @param writer the argument of type {@code IBufferWriter_1}
+     * @param flush the argument of type {@code boolean}
+     * @param charsUsed the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicLong>}
+     * @param completed the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicBoolean>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.EncodingExtensions.Convert" target="_top">.NET documentation</a>
+     */
     public static void Convert(Decoder decoder, JCORefOut<ReadOnlySequence_1> bytes, IBufferWriter_1 writer, boolean flush, JCORefOut<java.util.concurrent.atomic.AtomicLong> charsUsed, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> completed) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -284,6 +379,24 @@ public class EncodingExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Convert.
+     *
+     * @param encoder the argument of type {@code Encoder}
+     * @param chars the argument of type {@code JCORefOut<ReadOnlySequence_1>}
+     * @param writer the argument of type {@code IBufferWriter_1}
+     * @param flush the argument of type {@code boolean}
+     * @param bytesUsed the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicLong>}
+     * @param completed the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicBoolean>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.EncodingExtensions.Convert" target="_top">.NET documentation</a>
+     */
     public static void Convert(Encoder encoder, JCORefOut<ReadOnlySequence_1> chars, IBufferWriter_1 writer, boolean flush, JCORefOut<java.util.concurrent.atomic.AtomicLong> bytesUsed, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> completed) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

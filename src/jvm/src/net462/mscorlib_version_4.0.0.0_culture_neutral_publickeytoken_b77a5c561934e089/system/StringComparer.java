@@ -100,7 +100,10 @@ public class StringComparer extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public StringComparer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,15 @@ public class StringComparer extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param x the argument of type {@code NetObject}
+     * @param y the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.StringComparer.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(NetObject x, NetObject y) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -167,6 +179,15 @@ public class StringComparer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param x the argument of type {@code java.lang.String}
+     * @param y the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.StringComparer.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(java.lang.String x, java.lang.String y) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +202,16 @@ public class StringComparer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Compare.
+     *
+     * @param x the argument of type {@code NetObject}
+     * @param y the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.StringComparer.Compare" target="_top">.NET documentation</a>
+     */
     public int Compare(NetObject x, NetObject y) throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +252,15 @@ public class StringComparer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Compare.
+     *
+     * @param x the argument of type {@code java.lang.String}
+     * @param y the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.StringComparer.Compare" target="_top">.NET documentation</a>
+     */
     public int Compare(java.lang.String x, java.lang.String y) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +301,15 @@ public class StringComparer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetHashCode.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.StringComparer.GetHashCode" target="_top">.NET documentation</a>
+     */
     public int GetHashCode(NetObject obj) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +350,14 @@ public class StringComparer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetHashCode.
+     *
+     * @param obj the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.StringComparer.GetHashCode" target="_top">.NET documentation</a>
+     */
     public int GetHashCode(java.lang.String obj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -341,6 +398,25 @@ public class StringComparer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param culture the argument of type {@code CultureInfo}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.StringComparer.Create" target="_top">.NET documentation</a>
+     */
     public static StringComparer Create(CultureInfo culture, boolean ignoreCase) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -360,6 +436,22 @@ public class StringComparer extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CurrentCulture.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.StringComparer.CurrentCulture" target="_top">.NET documentation</a>
+     */
     public static StringComparer getCurrentCulture() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -375,6 +467,22 @@ public class StringComparer extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentCultureIgnoreCase.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.StringComparer.CurrentCultureIgnoreCase" target="_top">.NET documentation</a>
+     */
     public static StringComparer getCurrentCultureIgnoreCase() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -390,6 +498,13 @@ public class StringComparer extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InvariantCulture.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.StringComparer.InvariantCulture" target="_top">.NET documentation</a>
+     */
     public static StringComparer getInvariantCulture() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -405,6 +520,13 @@ public class StringComparer extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InvariantCultureIgnoreCase.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.StringComparer.InvariantCultureIgnoreCase" target="_top">.NET documentation</a>
+     */
     public static StringComparer getInvariantCultureIgnoreCase() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -420,6 +542,13 @@ public class StringComparer extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Ordinal.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.StringComparer.Ordinal" target="_top">.NET documentation</a>
+     */
     public static StringComparer getOrdinal() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -435,6 +564,13 @@ public class StringComparer extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OrdinalIgnoreCase.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.StringComparer.OrdinalIgnoreCase" target="_top">.NET documentation</a>
+     */
     public static StringComparer getOrdinalIgnoreCase() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

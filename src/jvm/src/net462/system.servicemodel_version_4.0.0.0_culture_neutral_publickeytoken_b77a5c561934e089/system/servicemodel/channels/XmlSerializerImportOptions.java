@@ -101,7 +101,10 @@ public class XmlSerializerImportOptions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlSerializerImportOptions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class XmlSerializerImportOptions extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.XmlSerializerImportOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlSerializerImportOptions() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,13 @@ public class XmlSerializerImportOptions extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param codeCompileUnit the argument of type {@code CodeCompileUnit}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.XmlSerializerImportOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlSerializerImportOptions(CodeCompileUnit codeCompileUnit) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +192,13 @@ public class XmlSerializerImportOptions extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CodeCompileUnit.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.XmlSerializerImportOptions.CodeCompileUnit" target="_top">.NET documentation</a>
+     */
     public CodeCompileUnit getCodeCompileUnit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +214,22 @@ public class XmlSerializerImportOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CodeProvider.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.XmlSerializerImportOptions.CodeProvider" target="_top">.NET documentation</a>
+     */
     public CodeDomProvider getCodeProvider() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +245,13 @@ public class XmlSerializerImportOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CodeProvider.
+     *
+     * @param CodeProvider the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.XmlSerializerImportOptions.CodeProvider" target="_top">.NET documentation</a>
+     */
     public void setCodeProvider(CodeDomProvider CodeProvider) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +262,13 @@ public class XmlSerializerImportOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClrNamespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.XmlSerializerImportOptions.ClrNamespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getClrNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +283,13 @@ public class XmlSerializerImportOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ClrNamespace.
+     *
+     * @param ClrNamespace the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.XmlSerializerImportOptions.ClrNamespace" target="_top">.NET documentation</a>
+     */
     public void setClrNamespace(java.lang.String ClrNamespace) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +300,13 @@ public class XmlSerializerImportOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WebReferenceOptions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.XmlSerializerImportOptions.WebReferenceOptions" target="_top">.NET documentation</a>
+     */
     public WebReferenceOptions getWebReferenceOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +322,13 @@ public class XmlSerializerImportOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WebReferenceOptions.
+     *
+     * @param WebReferenceOptions the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.XmlSerializerImportOptions.WebReferenceOptions" target="_top">.NET documentation</a>
+     */
     public void setWebReferenceOptions(WebReferenceOptions WebReferenceOptions) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

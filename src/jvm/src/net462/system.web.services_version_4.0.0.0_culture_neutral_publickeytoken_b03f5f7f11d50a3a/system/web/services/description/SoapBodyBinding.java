@@ -100,7 +100,10 @@ public class SoapBodyBinding extends system.web.services.description.ServiceDesc
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SoapBodyBinding(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class SoapBodyBinding extends system.web.services.description.ServiceDesc
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapBodyBinding.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapBodyBinding() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class SoapBodyBinding extends system.web.services.description.ServiceDesc
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Encoding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapBodyBinding.Encoding" target="_top">.NET documentation</a>
+     */
     public java.lang.String getEncoding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +195,13 @@ public class SoapBodyBinding extends system.web.services.description.ServiceDesc
         }
     }
 
+    /**
+     * Sets the value of the .NET property Encoding.
+     *
+     * @param Encoding the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapBodyBinding.Encoding" target="_top">.NET documentation</a>
+     */
     public void setEncoding(java.lang.String Encoding) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +212,13 @@ public class SoapBodyBinding extends system.web.services.description.ServiceDesc
         }
     }
 
+    /**
+     * Gets the value of the .NET property Namespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapBodyBinding.Namespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +233,13 @@ public class SoapBodyBinding extends system.web.services.description.ServiceDesc
         }
     }
 
+    /**
+     * Sets the value of the .NET property Namespace.
+     *
+     * @param Namespace the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapBodyBinding.Namespace" target="_top">.NET documentation</a>
+     */
     public void setNamespace(java.lang.String Namespace) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +250,16 @@ public class SoapBodyBinding extends system.web.services.description.ServiceDesc
         }
     }
 
+    /**
+     * Gets the value of the .NET property PartsString.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapBodyBinding.PartsString" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPartsString() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +274,20 @@ public class SoapBodyBinding extends system.web.services.description.ServiceDesc
         }
     }
 
+    /**
+     * Sets the value of the .NET property PartsString.
+     *
+     * @param PartsString the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapBodyBinding.PartsString" target="_top">.NET documentation</a>
+     */
     public void setPartsString(java.lang.String PartsString) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +298,13 @@ public class SoapBodyBinding extends system.web.services.description.ServiceDesc
         }
     }
 
+    /**
+     * Gets the value of the .NET property Parts.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapBodyBinding.Parts" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getParts() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +328,13 @@ public class SoapBodyBinding extends system.web.services.description.ServiceDesc
         }
     }
 
+    /**
+     * Sets the value of the .NET property Parts.
+     *
+     * @param Parts the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapBodyBinding.Parts" target="_top">.NET documentation</a>
+     */
     public void setParts(java.lang.String[] Parts) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +345,13 @@ public class SoapBodyBinding extends system.web.services.description.ServiceDesc
         }
     }
 
+    /**
+     * Gets the value of the .NET property Use.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapBodyBinding.Use" target="_top">.NET documentation</a>
+     */
     public SoapBindingUse getUse() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -285,6 +367,13 @@ public class SoapBodyBinding extends system.web.services.description.ServiceDesc
         }
     }
 
+    /**
+     * Sets the value of the .NET property Use.
+     *
+     * @param Use the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapBodyBinding.Use" target="_top">.NET documentation</a>
+     */
     public void setUse(SoapBindingUse Use) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -102,7 +102,10 @@ public class WorkflowApplicationEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WorkflowApplicationEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,14 @@ public class WorkflowApplicationEventArgs extends system.EventArgs  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetInstanceExtensions.
+     *
+     * @param <T> the type of the generic argument T
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.WorkflowApplicationEventArgs.GetInstanceExtensions" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> IEnumerable_1 GetInstanceExtensions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +187,13 @@ public class WorkflowApplicationEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property InstanceId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.WorkflowApplicationEventArgs.InstanceId" target="_top">.NET documentation</a>
+     */
     public Guid getInstanceId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class XpsSerializationPrintTicketRequiredEventArgs extends system.EventAr
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XpsSerializationPrintTicketRequiredEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,14 @@ public class XpsSerializationPrintTicketRequiredEventArgs extends system.EventAr
     public XpsSerializationPrintTicketRequiredEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param printTicketLevel the argument of type {@code PrintTicketLevel}
+     * @param sequence the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.XpsSerializationPrintTicketRequiredEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public XpsSerializationPrintTicketRequiredEventArgs(PrintTicketLevel printTicketLevel, int sequence) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +181,13 @@ public class XpsSerializationPrintTicketRequiredEventArgs extends system.EventAr
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Sequence.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.XpsSerializationPrintTicketRequiredEventArgs.Sequence" target="_top">.NET documentation</a>
+     */
     public int getSequence() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +228,13 @@ public class XpsSerializationPrintTicketRequiredEventArgs extends system.EventAr
         }
     }
 
+    /**
+     * Gets the value of the .NET property PrintTicket.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.XpsSerializationPrintTicketRequiredEventArgs.PrintTicket" target="_top">.NET documentation</a>
+     */
     public PrintTicket getPrintTicket() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +250,13 @@ public class XpsSerializationPrintTicketRequiredEventArgs extends system.EventAr
         }
     }
 
+    /**
+     * Sets the value of the .NET property PrintTicket.
+     *
+     * @param PrintTicket the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.XpsSerializationPrintTicketRequiredEventArgs.PrintTicket" target="_top">.NET documentation</a>
+     */
     public void setPrintTicket(PrintTicket PrintTicket) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +267,13 @@ public class XpsSerializationPrintTicketRequiredEventArgs extends system.EventAr
         }
     }
 
+    /**
+     * Gets the value of the .NET property PrintTicketLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.XpsSerializationPrintTicketRequiredEventArgs.PrintTicketLevel" target="_top">.NET documentation</a>
+     */
     public PrintTicketLevel getPrintTicketLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

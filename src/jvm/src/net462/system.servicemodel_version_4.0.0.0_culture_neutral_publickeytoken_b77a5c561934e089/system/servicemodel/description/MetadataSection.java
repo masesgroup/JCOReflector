@@ -103,7 +103,10 @@ public class MetadataSection extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MetadataSection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,12 @@ public class MetadataSection extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MetadataSection.-ctor" target="_top">.NET documentation</a>
+     */
     public MetadataSection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +169,15 @@ public class MetadataSection extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param dialect the argument of type {@code java.lang.String}
+     * @param identifier the argument of type {@code java.lang.String}
+     * @param metadata the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MetadataSection.-ctor" target="_top">.NET documentation</a>
+     */
     public MetadataSection(java.lang.String dialect, java.lang.String identifier, NetObject metadata) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +192,26 @@ public class MetadataSection extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateFromPolicy.
+     *
+     * @param policy the argument of type {@code XmlElement}
+     * @param identifier the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MetadataSection.CreateFromPolicy" target="_top">.NET documentation</a>
+     */
     public static MetadataSection CreateFromPolicy(XmlElement policy, java.lang.String identifier) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -189,6 +227,25 @@ public class MetadataSection extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateFromSchema.
+     *
+     * @param schema the argument of type {@code XmlSchema}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MetadataSection.CreateFromSchema" target="_top">.NET documentation</a>
+     */
     public static MetadataSection CreateFromSchema(XmlSchema schema) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -204,6 +261,25 @@ public class MetadataSection extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateFromServiceDescription.
+     *
+     * @param serviceDescription the argument of type {@code ServiceDescription}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MetadataSection.CreateFromServiceDescription" target="_top">.NET documentation</a>
+     */
     public static MetadataSection CreateFromServiceDescription(ServiceDescription serviceDescription) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -223,6 +299,13 @@ public class MetadataSection extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Attributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MetadataSection.Attributes" target="_top">.NET documentation</a>
+     */
     public Collection_1 getAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +321,13 @@ public class MetadataSection extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Metadata.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MetadataSection.Metadata" target="_top">.NET documentation</a>
+     */
     public NetObject getMetadata() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +343,13 @@ public class MetadataSection extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Metadata.
+     *
+     * @param Metadata the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MetadataSection.Metadata" target="_top">.NET documentation</a>
+     */
     public void setMetadata(NetObject Metadata) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +360,13 @@ public class MetadataSection extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Dialect.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MetadataSection.Dialect" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDialect() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +381,13 @@ public class MetadataSection extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Dialect.
+     *
+     * @param Dialect the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MetadataSection.Dialect" target="_top">.NET documentation</a>
+     */
     public void setDialect(java.lang.String Dialect) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -287,6 +398,13 @@ public class MetadataSection extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Identifier.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MetadataSection.Identifier" target="_top">.NET documentation</a>
+     */
     public java.lang.String getIdentifier() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +419,13 @@ public class MetadataSection extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Identifier.
+     *
+     * @param Identifier the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MetadataSection.Identifier" target="_top">.NET documentation</a>
+     */
     public void setIdentifier(java.lang.String Identifier) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -311,6 +436,13 @@ public class MetadataSection extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MetadataExchangeDialect.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MetadataSection.MetadataExchangeDialect" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getMetadataExchangeDialect() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -325,6 +457,13 @@ public class MetadataSection extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PolicyDialect.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MetadataSection.PolicyDialect" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getPolicyDialect() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -339,6 +478,13 @@ public class MetadataSection extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ServiceDescriptionDialect.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MetadataSection.ServiceDescriptionDialect" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getServiceDescriptionDialect() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -353,6 +499,13 @@ public class MetadataSection extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlSchemaDialect.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MetadataSection.XmlSchemaDialect" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getXmlSchemaDialect() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

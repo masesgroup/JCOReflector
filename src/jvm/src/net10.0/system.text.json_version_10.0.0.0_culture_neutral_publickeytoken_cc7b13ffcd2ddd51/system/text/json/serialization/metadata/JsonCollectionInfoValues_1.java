@@ -102,7 +102,10 @@ public class JsonCollectionInfoValues_1<TCollection extends IJCOBridgeReflected>
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public JsonCollectionInfoValues_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class JsonCollectionInfoValues_1<TCollection extends IJCOBridgeReflected>
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonCollectionInfoValues-1.-ctor" target="_top">.NET documentation</a>
+     */
     public JsonCollectionInfoValues_1() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +178,13 @@ public class JsonCollectionInfoValues_1<TCollection extends IJCOBridgeReflected>
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SerializeHandler.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonCollectionInfoValues-1.SerializeHandler" target="_top">.NET documentation</a>
+     */
     public Action_2 getSerializeHandler() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +199,13 @@ public class JsonCollectionInfoValues_1<TCollection extends IJCOBridgeReflected>
         }
     }
 
+    /**
+     * Sets the value of the .NET property SerializeHandler.
+     *
+     * @param SerializeHandler the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonCollectionInfoValues-1.SerializeHandler" target="_top">.NET documentation</a>
+     */
     public void setSerializeHandler(Action_2 SerializeHandler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +216,13 @@ public class JsonCollectionInfoValues_1<TCollection extends IJCOBridgeReflected>
         }
     }
 
+    /**
+     * Gets the value of the .NET property ObjectCreator.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonCollectionInfoValues-1.ObjectCreator" target="_top">.NET documentation</a>
+     */
     public Func_1 getObjectCreator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +237,13 @@ public class JsonCollectionInfoValues_1<TCollection extends IJCOBridgeReflected>
         }
     }
 
+    /**
+     * Sets the value of the .NET property ObjectCreator.
+     *
+     * @param ObjectCreator the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonCollectionInfoValues-1.ObjectCreator" target="_top">.NET documentation</a>
+     */
     public void setObjectCreator(Func_1 ObjectCreator) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +254,13 @@ public class JsonCollectionInfoValues_1<TCollection extends IJCOBridgeReflected>
         }
     }
 
+    /**
+     * Gets the value of the .NET property NumberHandling.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonCollectionInfoValues-1.NumberHandling" target="_top">.NET documentation</a>
+     */
     public JsonNumberHandling getNumberHandling() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +276,13 @@ public class JsonCollectionInfoValues_1<TCollection extends IJCOBridgeReflected>
         }
     }
 
+    /**
+     * Sets the value of the .NET property NumberHandling.
+     *
+     * @param NumberHandling the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonCollectionInfoValues-1.NumberHandling" target="_top">.NET documentation</a>
+     */
     public void setNumberHandling(JsonNumberHandling NumberHandling) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +293,13 @@ public class JsonCollectionInfoValues_1<TCollection extends IJCOBridgeReflected>
         }
     }
 
+    /**
+     * Gets the value of the .NET property ElementInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonCollectionInfoValues-1.ElementInfo" target="_top">.NET documentation</a>
+     */
     public JsonTypeInfo getElementInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +315,13 @@ public class JsonCollectionInfoValues_1<TCollection extends IJCOBridgeReflected>
         }
     }
 
+    /**
+     * Sets the value of the .NET property ElementInfo.
+     *
+     * @param ElementInfo the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonCollectionInfoValues-1.ElementInfo" target="_top">.NET documentation</a>
+     */
     public void setElementInfo(JsonTypeInfo ElementInfo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +332,13 @@ public class JsonCollectionInfoValues_1<TCollection extends IJCOBridgeReflected>
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeyInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonCollectionInfoValues-1.KeyInfo" target="_top">.NET documentation</a>
+     */
     public JsonTypeInfo getKeyInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +354,13 @@ public class JsonCollectionInfoValues_1<TCollection extends IJCOBridgeReflected>
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeyInfo.
+     *
+     * @param KeyInfo the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonCollectionInfoValues-1.KeyInfo" target="_top">.NET documentation</a>
+     */
     public void setKeyInfo(JsonTypeInfo KeyInfo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

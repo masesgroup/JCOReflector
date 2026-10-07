@@ -104,7 +104,10 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CommandLineToolSwitch(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,12 @@ public class CommandLineToolSwitch extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.-ctor" target="_top">.NET documentation</a>
+     */
     public CommandLineToolSwitch() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param toolType the argument of type {@code CommandLineToolSwitchType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.-ctor" target="_top">.NET documentation</a>
+     */
     public CommandLineToolSwitch(CommandLineToolSwitchType toolType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +195,13 @@ public class CommandLineToolSwitch extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowMultipleValues.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.AllowMultipleValues" target="_top">.NET documentation</a>
+     */
     public boolean getAllowMultipleValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +216,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowMultipleValues.
+     *
+     * @param AllowMultipleValues the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.AllowMultipleValues" target="_top">.NET documentation</a>
+     */
     public void setAllowMultipleValues(boolean AllowMultipleValues) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +233,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ArgumentRequired.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.ArgumentRequired" target="_top">.NET documentation</a>
+     */
     public boolean getArgumentRequired() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +254,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ArgumentRequired.
+     *
+     * @param ArgumentRequired the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.ArgumentRequired" target="_top">.NET documentation</a>
+     */
     public void setArgumentRequired(boolean ArgumentRequired) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +271,21 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BooleanValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.BooleanValue" target="_top">.NET documentation</a>
+     */
     public boolean getBooleanValue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +300,21 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BooleanValue.
+     *
+     * @param BooleanValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.BooleanValue" target="_top">.NET documentation</a>
+     */
     public void setBooleanValue(boolean BooleanValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +325,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IncludeInCommandLine.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.IncludeInCommandLine" target="_top">.NET documentation</a>
+     */
     public boolean getIncludeInCommandLine() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +346,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IncludeInCommandLine.
+     *
+     * @param IncludeInCommandLine the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.IncludeInCommandLine" target="_top">.NET documentation</a>
+     */
     public void setIncludeInCommandLine(boolean IncludeInCommandLine) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +363,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsValid.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.IsValid" target="_top">.NET documentation</a>
+     */
     public boolean getIsValid() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +384,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsValid.
+     *
+     * @param IsValid the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.IsValid" target="_top">.NET documentation</a>
+     */
     public void setIsValid(boolean IsValid) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -299,6 +401,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Required.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.Required" target="_top">.NET documentation</a>
+     */
     public boolean getRequired() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -313,6 +422,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Required.
+     *
+     * @param Required the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.Required" target="_top">.NET documentation</a>
+     */
     public void setRequired(boolean Required) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -323,6 +439,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Reversible.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.Reversible" target="_top">.NET documentation</a>
+     */
     public boolean getReversible() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -337,6 +460,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Reversible.
+     *
+     * @param Reversible the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.Reversible" target="_top">.NET documentation</a>
+     */
     public void setReversible(boolean Reversible) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -347,6 +477,21 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Number.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.Number" target="_top">.NET documentation</a>
+     */
     public int getNumber() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -387,6 +532,21 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Number.
+     *
+     * @param Number the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.Number" target="_top">.NET documentation</a>
+     */
     public void setNumber(int Number) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -397,6 +557,21 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TaskItemArray.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.TaskItemArray" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getTaskItemArray() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -418,6 +593,21 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TaskItemArray.
+     *
+     * @param TaskItemArray the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.TaskItemArray" target="_top">.NET documentation</a>
+     */
     public void setTaskItemArray(ITaskItem[] TaskItemArray) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -428,6 +618,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Type.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.Type" target="_top">.NET documentation</a>
+     */
     public CommandLineToolSwitchType getType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -443,6 +640,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Type.
+     *
+     * @param Type the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.Type" target="_top">.NET documentation</a>
+     */
     public void setType(CommandLineToolSwitchType Type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -453,6 +657,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Arguments.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.Arguments" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getArguments() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -468,6 +679,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Arguments.
+     *
+     * @param Arguments the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.Arguments" target="_top">.NET documentation</a>
+     */
     public void setArguments(ICollection_1 Arguments) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -478,6 +696,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Overrides.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.Overrides" target="_top">.NET documentation</a>
+     */
     public LinkedList_1 getOverrides() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -493,6 +718,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Parents.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.Parents" target="_top">.NET documentation</a>
+     */
     public LinkedList_1 getParents() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -508,6 +740,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Description.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.Description" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -522,6 +761,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Description.
+     *
+     * @param Description the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.Description" target="_top">.NET documentation</a>
+     */
     public void setDescription(java.lang.String Description) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -532,6 +778,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DisplayName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.DisplayName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDisplayName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -546,6 +799,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DisplayName.
+     *
+     * @param DisplayName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.DisplayName" target="_top">.NET documentation</a>
+     */
     public void setDisplayName(java.lang.String DisplayName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -556,6 +816,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FallbackArgumentParameter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.FallbackArgumentParameter" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFallbackArgumentParameter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -570,6 +837,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FallbackArgumentParameter.
+     *
+     * @param FallbackArgumentParameter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.FallbackArgumentParameter" target="_top">.NET documentation</a>
+     */
     public void setFallbackArgumentParameter(java.lang.String FallbackArgumentParameter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -580,6 +854,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FalseSuffix.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.FalseSuffix" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFalseSuffix() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -594,6 +875,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FalseSuffix.
+     *
+     * @param FalseSuffix the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.FalseSuffix" target="_top">.NET documentation</a>
+     */
     public void setFalseSuffix(java.lang.String FalseSuffix) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -604,6 +892,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -618,6 +913,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -628,6 +930,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReverseSwitchValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.ReverseSwitchValue" target="_top">.NET documentation</a>
+     */
     public java.lang.String getReverseSwitchValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -642,6 +951,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReverseSwitchValue.
+     *
+     * @param ReverseSwitchValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.ReverseSwitchValue" target="_top">.NET documentation</a>
+     */
     public void setReverseSwitchValue(java.lang.String ReverseSwitchValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -652,6 +968,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Separator.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.Separator" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSeparator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -666,6 +989,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Separator.
+     *
+     * @param Separator the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.Separator" target="_top">.NET documentation</a>
+     */
     public void setSeparator(java.lang.String Separator) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -676,6 +1006,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SwitchValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.SwitchValue" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSwitchValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -690,6 +1027,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SwitchValue.
+     *
+     * @param SwitchValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.SwitchValue" target="_top">.NET documentation</a>
+     */
     public void setSwitchValue(java.lang.String SwitchValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -700,6 +1044,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TrueSuffix.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.TrueSuffix" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTrueSuffix() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -714,6 +1065,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TrueSuffix.
+     *
+     * @param TrueSuffix the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.TrueSuffix" target="_top">.NET documentation</a>
+     */
     public void setTrueSuffix(java.lang.String TrueSuffix) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -724,6 +1082,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.Value" target="_top">.NET documentation</a>
+     */
     public java.lang.String getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -738,6 +1103,13 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Value.
+     *
+     * @param Value the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.Value" target="_top">.NET documentation</a>
+     */
     public void setValue(java.lang.String Value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -748,6 +1120,21 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StringList.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.StringList" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getStringList() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -771,6 +1158,21 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StringList.
+     *
+     * @param StringList the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch.StringList" target="_top">.NET documentation</a>
+     */
     public void setStringList(java.lang.String[] StringList) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

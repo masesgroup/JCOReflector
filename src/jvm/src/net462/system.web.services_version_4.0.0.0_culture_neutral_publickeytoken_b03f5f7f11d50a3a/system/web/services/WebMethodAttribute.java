@@ -100,7 +100,10 @@ public class WebMethodAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WebMethodAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class WebMethodAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.WebMethodAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public WebMethodAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +166,13 @@ public class WebMethodAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param enableSession the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.WebMethodAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public WebMethodAttribute(boolean enableSession) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +183,14 @@ public class WebMethodAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param enableSession the argument of type {@code boolean}
+     * @param transactionOption the argument of type {@code TransactionOption}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.WebMethodAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public WebMethodAttribute(boolean enableSession, TransactionOption transactionOption) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -177,6 +201,15 @@ public class WebMethodAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param enableSession the argument of type {@code boolean}
+     * @param transactionOption the argument of type {@code TransactionOption}
+     * @param cacheDuration the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.WebMethodAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public WebMethodAttribute(boolean enableSession, TransactionOption transactionOption, int cacheDuration) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -187,6 +220,16 @@ public class WebMethodAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param enableSession the argument of type {@code boolean}
+     * @param transactionOption the argument of type {@code TransactionOption}
+     * @param cacheDuration the argument of type {@code int}
+     * @param bufferResponse the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.WebMethodAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public WebMethodAttribute(boolean enableSession, TransactionOption transactionOption, int cacheDuration, boolean bufferResponse) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -205,6 +248,13 @@ public class WebMethodAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BufferResponse.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.WebMethodAttribute.BufferResponse" target="_top">.NET documentation</a>
+     */
     public boolean getBufferResponse() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +269,13 @@ public class WebMethodAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BufferResponse.
+     *
+     * @param BufferResponse the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.WebMethodAttribute.BufferResponse" target="_top">.NET documentation</a>
+     */
     public void setBufferResponse(boolean BufferResponse) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +286,13 @@ public class WebMethodAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EnableSession.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.WebMethodAttribute.EnableSession" target="_top">.NET documentation</a>
+     */
     public boolean getEnableSession() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +307,13 @@ public class WebMethodAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EnableSession.
+     *
+     * @param EnableSession the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.WebMethodAttribute.EnableSession" target="_top">.NET documentation</a>
+     */
     public void setEnableSession(boolean EnableSession) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +324,13 @@ public class WebMethodAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CacheDuration.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.WebMethodAttribute.CacheDuration" target="_top">.NET documentation</a>
+     */
     public int getCacheDuration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +371,13 @@ public class WebMethodAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CacheDuration.
+     *
+     * @param CacheDuration the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.WebMethodAttribute.CacheDuration" target="_top">.NET documentation</a>
+     */
     public void setCacheDuration(int CacheDuration) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +388,13 @@ public class WebMethodAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TransactionOption.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.WebMethodAttribute.TransactionOption" target="_top">.NET documentation</a>
+     */
     public TransactionOption getTransactionOption() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +410,13 @@ public class WebMethodAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TransactionOption.
+     *
+     * @param TransactionOption the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.WebMethodAttribute.TransactionOption" target="_top">.NET documentation</a>
+     */
     public void setTransactionOption(TransactionOption TransactionOption) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -328,6 +427,13 @@ public class WebMethodAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Description.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.WebMethodAttribute.Description" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -342,6 +448,13 @@ public class WebMethodAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Description.
+     *
+     * @param Description the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.WebMethodAttribute.Description" target="_top">.NET documentation</a>
+     */
     public void setDescription(java.lang.String Description) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -352,6 +465,13 @@ public class WebMethodAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MessageName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.WebMethodAttribute.MessageName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMessageName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -366,6 +486,13 @@ public class WebMethodAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MessageName.
+     *
+     * @param MessageName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.WebMethodAttribute.MessageName" target="_top">.NET documentation</a>
+     */
     public void setMessageName(java.lang.String MessageName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

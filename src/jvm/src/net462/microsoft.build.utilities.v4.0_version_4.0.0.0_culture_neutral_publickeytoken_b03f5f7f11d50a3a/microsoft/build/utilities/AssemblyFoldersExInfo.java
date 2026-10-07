@@ -101,7 +101,10 @@ public class AssemblyFoldersExInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AssemblyFoldersExInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,23 @@ public class AssemblyFoldersExInfo extends NetObject  {
     public AssemblyFoldersExInfo() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param hive the argument of type {@code RegistryHive}
+     * @param view the argument of type {@code RegistryView}
+     * @param registryKey the argument of type {@code java.lang.String}
+     * @param directoryPath the argument of type {@code java.lang.String}
+     * @param targetFrameworkVersion the argument of type {@code Version}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.AssemblyFoldersExInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public AssemblyFoldersExInfo(RegistryHive hive, RegistryView view, java.lang.String registryKey, java.lang.String directoryPath, Version targetFrameworkVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +190,13 @@ public class AssemblyFoldersExInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Hive.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.AssemblyFoldersExInfo.Hive" target="_top">.NET documentation</a>
+     */
     public RegistryHive getHive() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +212,13 @@ public class AssemblyFoldersExInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Hive.
+     *
+     * @param Hive the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.AssemblyFoldersExInfo.Hive" target="_top">.NET documentation</a>
+     */
     public void setHive(RegistryHive Hive) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +229,13 @@ public class AssemblyFoldersExInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property View.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.AssemblyFoldersExInfo.View" target="_top">.NET documentation</a>
+     */
     public RegistryView getView() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +251,13 @@ public class AssemblyFoldersExInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property View.
+     *
+     * @param View the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.AssemblyFoldersExInfo.View" target="_top">.NET documentation</a>
+     */
     public void setView(RegistryView View) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +268,13 @@ public class AssemblyFoldersExInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DirectoryPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.AssemblyFoldersExInfo.DirectoryPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDirectoryPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +289,13 @@ public class AssemblyFoldersExInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DirectoryPath.
+     *
+     * @param DirectoryPath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.AssemblyFoldersExInfo.DirectoryPath" target="_top">.NET documentation</a>
+     */
     public void setDirectoryPath(java.lang.String DirectoryPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +306,13 @@ public class AssemblyFoldersExInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Key.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.AssemblyFoldersExInfo.Key" target="_top">.NET documentation</a>
+     */
     public java.lang.String getKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +327,13 @@ public class AssemblyFoldersExInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Key.
+     *
+     * @param Key the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.AssemblyFoldersExInfo.Key" target="_top">.NET documentation</a>
+     */
     public void setKey(java.lang.String Key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +344,13 @@ public class AssemblyFoldersExInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetFrameworkVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.AssemblyFoldersExInfo.TargetFrameworkVersion" target="_top">.NET documentation</a>
+     */
     public Version getTargetFrameworkVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +366,13 @@ public class AssemblyFoldersExInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TargetFrameworkVersion.
+     *
+     * @param TargetFrameworkVersion the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.AssemblyFoldersExInfo.TargetFrameworkVersion" target="_top">.NET documentation</a>
+     */
     public void setTargetFrameworkVersion(Version TargetFrameworkVersion) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

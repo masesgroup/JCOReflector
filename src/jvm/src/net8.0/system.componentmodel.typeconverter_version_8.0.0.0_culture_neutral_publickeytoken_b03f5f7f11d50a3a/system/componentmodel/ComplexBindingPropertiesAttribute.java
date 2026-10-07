@@ -99,7 +99,10 @@ public class ComplexBindingPropertiesAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ComplexBindingPropertiesAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class ComplexBindingPropertiesAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ComplexBindingPropertiesAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ComplexBindingPropertiesAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,14 @@ public class ComplexBindingPropertiesAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param dataSource the argument of type {@code java.lang.String}
+     * @param dataMember the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ComplexBindingPropertiesAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ComplexBindingPropertiesAttribute(java.lang.String dataSource, java.lang.String dataMember) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +183,13 @@ public class ComplexBindingPropertiesAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param dataSource the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ComplexBindingPropertiesAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ComplexBindingPropertiesAttribute(java.lang.String dataSource) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -184,6 +208,13 @@ public class ComplexBindingPropertiesAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DataMember.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ComplexBindingPropertiesAttribute.DataMember" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDataMember() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +229,13 @@ public class ComplexBindingPropertiesAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataSource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ComplexBindingPropertiesAttribute.DataSource" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDataSource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

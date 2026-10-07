@@ -100,7 +100,10 @@ public class ErrorObject extends microsoft.jscript.JSObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ErrorObject(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,14 @@ public class ErrorObject extends microsoft.jscript.JSObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ToException.
+     *
+     * @param err the argument of type {@code ErrorObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.ErrorObject.ToException" target="_top">.NET documentation</a>
+     */
     public static NetException ToException(ErrorObject err) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

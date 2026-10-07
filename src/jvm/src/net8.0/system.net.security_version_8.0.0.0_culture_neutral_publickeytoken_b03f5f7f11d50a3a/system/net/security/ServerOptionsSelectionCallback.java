@@ -170,7 +170,10 @@ public class ServerOptionsSelectionCallback extends JCDelegate implements IJCEve
         callerInstance = instance;
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ServerOptionsSelectionCallback(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
@@ -192,6 +195,17 @@ public class ServerOptionsSelectionCallback extends JCDelegate implements IJCEve
         return JCOBridgeInstance.translateException(ne);
     }
 
+    /**
+     * Invokes the .NET member DynamicInvoke.
+     *
+     * @param stream the argument of type {@code SslStream}
+     * @param clientHelloInfo the argument of type {@code SslClientHelloInfo}
+     * @param state the argument of type {@code NetObject}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Delegate.DynamicInvoke" target="_top">.NET documentation</a>
+     */
     public ValueTask_1 DynamicInvoke(SslStream stream, SslClientHelloInfo clientHelloInfo, NetObject state, CancellationToken cancellationToken) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,7 +222,13 @@ public class ServerOptionsSelectionCallback extends JCDelegate implements IJCEve
     }
 
     /**
-     * Methods invoked in JVM when an event is raised in CLR 
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param stream the .NET argument of type {@code System.Net.Security.SslStream}
+     * @param clientHelloInfo the .NET argument of type {@code System.Net.Security.SslClientHelloInfo}
+     * @param state the .NET argument of type {@code System.Object}
+     * @param cancellationToken the .NET argument of type {@code System.Threading.CancellationToken}
+     * @return the value returned to the CLR; this default implementation returns {@code null}
      */
     public ValueTask_1 Invoke(SslStream stream, SslClientHelloInfo clientHelloInfo, NetObject state, CancellationToken cancellationToken) {
         return null;

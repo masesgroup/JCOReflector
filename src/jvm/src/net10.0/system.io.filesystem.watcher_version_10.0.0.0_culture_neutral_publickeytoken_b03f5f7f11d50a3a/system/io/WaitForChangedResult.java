@@ -100,7 +100,10 @@ public class WaitForChangedResult extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WaitForChangedResult(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class WaitForChangedResult extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property TimedOut.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.WaitForChangedResult.TimedOut" target="_top">.NET documentation</a>
+     */
     public boolean getTimedOut() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +183,13 @@ public class WaitForChangedResult extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TimedOut.
+     *
+     * @param TimedOut the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.WaitForChangedResult.TimedOut" target="_top">.NET documentation</a>
+     */
     public void setTimedOut(boolean TimedOut) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +200,13 @@ public class WaitForChangedResult extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ChangeType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.WaitForChangedResult.ChangeType" target="_top">.NET documentation</a>
+     */
     public WatcherChangeTypes getChangeType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +222,13 @@ public class WaitForChangedResult extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ChangeType.
+     *
+     * @param ChangeType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.WaitForChangedResult.ChangeType" target="_top">.NET documentation</a>
+     */
     public void setChangeType(WatcherChangeTypes ChangeType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +239,13 @@ public class WaitForChangedResult extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.WaitForChangedResult.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +260,13 @@ public class WaitForChangedResult extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.WaitForChangedResult.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +277,13 @@ public class WaitForChangedResult extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OldName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.WaitForChangedResult.OldName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getOldName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +298,13 @@ public class WaitForChangedResult extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OldName.
+     *
+     * @param OldName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.WaitForChangedResult.OldName" target="_top">.NET documentation</a>
+     */
     public void setOldName(java.lang.String OldName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

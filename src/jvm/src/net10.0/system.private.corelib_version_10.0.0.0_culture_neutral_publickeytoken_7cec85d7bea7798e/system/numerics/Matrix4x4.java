@@ -106,7 +106,10 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Matrix4x4(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,30 @@ public class Matrix4x4 extends system.ValueType  {
     public Matrix4x4() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param m11 the argument of type {@code Single}
+     * @param m12 the argument of type {@code Single}
+     * @param m13 the argument of type {@code Single}
+     * @param m14 the argument of type {@code Single}
+     * @param m21 the argument of type {@code Single}
+     * @param m22 the argument of type {@code Single}
+     * @param m23 the argument of type {@code Single}
+     * @param m24 the argument of type {@code Single}
+     * @param m31 the argument of type {@code Single}
+     * @param m32 the argument of type {@code Single}
+     * @param m33 the argument of type {@code Single}
+     * @param m34 the argument of type {@code Single}
+     * @param m41 the argument of type {@code Single}
+     * @param m42 the argument of type {@code Single}
+     * @param m43 the argument of type {@code Single}
+     * @param m44 the argument of type {@code Single}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.-ctor" target="_top">.NET documentation</a>
+     */
     public Matrix4x4(Single m11, Single m12, Single m13, Single m14, Single m21, Single m22, Single m23, Single m24, Single m31, Single m32, Single m33, Single m34, Single m41, Single m42, Single m43, Single m44) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +193,17 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code Matrix3x2}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.-ctor" target="_top">.NET documentation</a>
+     */
     public Matrix4x4(Matrix3x2 value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +219,26 @@ public class Matrix4x4 extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Decompose.
+     *
+     * @param matrix the argument of type {@code Matrix4x4}
+     * @param scale the argument of type {@code JCORefOut<Vector3>}
+     * @param rotation the argument of type {@code JCORefOut<Quaternion>}
+     * @param translation the argument of type {@code JCORefOut<Vector3>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.Decompose" target="_top">.NET documentation</a>
+     */
     public static boolean Decompose(Matrix4x4 matrix, JCORefOut<Vector3> scale, JCORefOut<Quaternion> rotation, JCORefOut<Vector3> translation) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -195,6 +253,23 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code Matrix4x4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(Matrix4x4 other) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +284,25 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Invert.
+     *
+     * @param matrix the argument of type {@code Matrix4x4}
+     * @param result the argument of type {@code JCORefOut<Matrix4x4>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.Invert" target="_top">.NET documentation</a>
+     */
     public static boolean Invert(Matrix4x4 matrix, JCORefOut<Matrix4x4> result) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -223,6 +317,22 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDeterminant.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.GetDeterminant" target="_top">.NET documentation</a>
+     */
     public Single GetDeterminant() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +348,20 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetElement.
+     *
+     * @param row the argument of type {@code int}
+     * @param column the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.GetElement" target="_top">.NET documentation</a>
+     */
     public Single GetElement(int row, int column) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +377,24 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param value1 the argument of type {@code Matrix4x4}
+     * @param value2 the argument of type {@code Matrix4x4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.Add" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 Add(Matrix4x4 value1, Matrix4x4 value2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -268,6 +410,32 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param m11 the argument of type {@code Single}
+     * @param m12 the argument of type {@code Single}
+     * @param m13 the argument of type {@code Single}
+     * @param m14 the argument of type {@code Single}
+     * @param m21 the argument of type {@code Single}
+     * @param m22 the argument of type {@code Single}
+     * @param m23 the argument of type {@code Single}
+     * @param m24 the argument of type {@code Single}
+     * @param m31 the argument of type {@code Single}
+     * @param m32 the argument of type {@code Single}
+     * @param m33 the argument of type {@code Single}
+     * @param m34 the argument of type {@code Single}
+     * @param m41 the argument of type {@code Single}
+     * @param m42 the argument of type {@code Single}
+     * @param m43 the argument of type {@code Single}
+     * @param m44 the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.Create" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 Create(Single m11, Single m12, Single m13, Single m14, Single m21, Single m22, Single m23, Single m24, Single m31, Single m32, Single m33, Single m34, Single m41, Single m42, Single m43, Single m44) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -283,6 +451,16 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param value the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.Create" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 Create(Single value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -298,6 +476,19 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param value the argument of type {@code Matrix3x2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.Create" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 Create(Matrix3x2 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -313,6 +504,27 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param x the argument of type {@code Vector4}
+     * @param y the argument of type {@code Vector4}
+     * @param z the argument of type {@code Vector4}
+     * @param w the argument of type {@code Vector4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.Create" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 Create(Vector4 x, Vector4 y, Vector4 z, Vector4 w) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -328,6 +540,23 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param value the argument of type {@code Vector4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.Create" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 Create(Vector4 value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -343,6 +572,21 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateBillboard.
+     *
+     * @param objectPosition the argument of type {@code Vector3}
+     * @param cameraPosition the argument of type {@code Vector3}
+     * @param cameraUpVector the argument of type {@code Vector3}
+     * @param cameraForwardVector the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreateBillboard" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreateBillboard(Vector3 objectPosition, Vector3 cameraPosition, Vector3 cameraUpVector, Vector3 cameraForwardVector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -358,6 +602,21 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateBillboardLeftHanded.
+     *
+     * @param objectPosition the argument of type {@code Vector3}
+     * @param cameraPosition the argument of type {@code Vector3}
+     * @param cameraUpVector the argument of type {@code Vector3}
+     * @param cameraForwardVector the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreateBillboardLeftHanded" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreateBillboardLeftHanded(Vector3 objectPosition, Vector3 cameraPosition, Vector3 cameraUpVector, Vector3 cameraForwardVector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -373,6 +632,22 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateConstrainedBillboard.
+     *
+     * @param objectPosition the argument of type {@code Vector3}
+     * @param cameraPosition the argument of type {@code Vector3}
+     * @param rotateAxis the argument of type {@code Vector3}
+     * @param cameraForwardVector the argument of type {@code Vector3}
+     * @param objectForwardVector the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreateConstrainedBillboard" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreateConstrainedBillboard(Vector3 objectPosition, Vector3 cameraPosition, Vector3 rotateAxis, Vector3 cameraForwardVector, Vector3 objectForwardVector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -388,6 +663,22 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateConstrainedBillboardLeftHanded.
+     *
+     * @param objectPosition the argument of type {@code Vector3}
+     * @param cameraPosition the argument of type {@code Vector3}
+     * @param rotateAxis the argument of type {@code Vector3}
+     * @param cameraForwardVector the argument of type {@code Vector3}
+     * @param objectForwardVector the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreateConstrainedBillboardLeftHanded" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreateConstrainedBillboardLeftHanded(Vector3 objectPosition, Vector3 cameraPosition, Vector3 rotateAxis, Vector3 cameraForwardVector, Vector3 objectForwardVector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -403,6 +694,18 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateFromAxisAngle.
+     *
+     * @param axis the argument of type {@code Vector3}
+     * @param angle the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreateFromAxisAngle" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreateFromAxisAngle(Vector3 axis, Single angle) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -418,6 +721,16 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateFromQuaternion.
+     *
+     * @param quaternion the argument of type {@code Quaternion}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreateFromQuaternion" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreateFromQuaternion(Quaternion quaternion) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -433,6 +746,19 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateFromYawPitchRoll.
+     *
+     * @param yaw the argument of type {@code Single}
+     * @param pitch the argument of type {@code Single}
+     * @param roll the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreateFromYawPitchRoll" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreateFromYawPitchRoll(Single yaw, Single pitch, Single roll) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -448,6 +774,21 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateLookAt.
+     *
+     * @param cameraPosition the argument of type {@code Vector3}
+     * @param cameraTarget the argument of type {@code Vector3}
+     * @param cameraUpVector the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreateLookAt" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreateLookAt(Vector3 cameraPosition, Vector3 cameraTarget, Vector3 cameraUpVector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -463,6 +804,21 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateLookAtLeftHanded.
+     *
+     * @param cameraPosition the argument of type {@code Vector3}
+     * @param cameraTarget the argument of type {@code Vector3}
+     * @param cameraUpVector the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreateLookAtLeftHanded" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreateLookAtLeftHanded(Vector3 cameraPosition, Vector3 cameraTarget, Vector3 cameraUpVector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -478,6 +834,19 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateLookTo.
+     *
+     * @param cameraPosition the argument of type {@code Vector3}
+     * @param cameraDirection the argument of type {@code Vector3}
+     * @param cameraUpVector the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreateLookTo" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreateLookTo(Vector3 cameraPosition, Vector3 cameraDirection, Vector3 cameraUpVector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -493,6 +862,18 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateLookToLeftHanded.
+     *
+     * @param cameraPosition the argument of type {@code Vector3}
+     * @param cameraDirection the argument of type {@code Vector3}
+     * @param cameraUpVector the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreateLookToLeftHanded" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreateLookToLeftHanded(Vector3 cameraPosition, Vector3 cameraDirection, Vector3 cameraUpVector) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -508,6 +889,19 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateOrthographic.
+     *
+     * @param width the argument of type {@code Single}
+     * @param height the argument of type {@code Single}
+     * @param zNearPlane the argument of type {@code Single}
+     * @param zFarPlane the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreateOrthographic" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreateOrthographic(Single width, Single height, Single zNearPlane, Single zFarPlane) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -523,6 +917,19 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateOrthographicLeftHanded.
+     *
+     * @param width the argument of type {@code Single}
+     * @param height the argument of type {@code Single}
+     * @param zNearPlane the argument of type {@code Single}
+     * @param zFarPlane the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreateOrthographicLeftHanded" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreateOrthographicLeftHanded(Single width, Single height, Single zNearPlane, Single zFarPlane) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -538,6 +945,21 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateOrthographicOffCenter.
+     *
+     * @param left the argument of type {@code Single}
+     * @param right the argument of type {@code Single}
+     * @param bottom the argument of type {@code Single}
+     * @param top the argument of type {@code Single}
+     * @param zNearPlane the argument of type {@code Single}
+     * @param zFarPlane the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreateOrthographicOffCenter" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreateOrthographicOffCenter(Single left, Single right, Single bottom, Single top, Single zNearPlane, Single zFarPlane) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -553,6 +975,21 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateOrthographicOffCenterLeftHanded.
+     *
+     * @param left the argument of type {@code Single}
+     * @param right the argument of type {@code Single}
+     * @param bottom the argument of type {@code Single}
+     * @param top the argument of type {@code Single}
+     * @param zNearPlane the argument of type {@code Single}
+     * @param zFarPlane the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreateOrthographicOffCenterLeftHanded" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreateOrthographicOffCenterLeftHanded(Single left, Single right, Single bottom, Single top, Single zNearPlane, Single zFarPlane) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -568,6 +1005,28 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreatePerspective.
+     *
+     * @param width the argument of type {@code Single}
+     * @param height the argument of type {@code Single}
+     * @param nearPlaneDistance the argument of type {@code Single}
+     * @param farPlaneDistance the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreatePerspective" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreatePerspective(Single width, Single height, Single nearPlaneDistance, Single farPlaneDistance) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -583,6 +1042,28 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreatePerspectiveFieldOfView.
+     *
+     * @param fieldOfView the argument of type {@code Single}
+     * @param aspectRatio the argument of type {@code Single}
+     * @param nearPlaneDistance the argument of type {@code Single}
+     * @param farPlaneDistance the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreatePerspectiveFieldOfView" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreatePerspectiveFieldOfView(Single fieldOfView, Single aspectRatio, Single nearPlaneDistance, Single farPlaneDistance) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -598,6 +1079,28 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreatePerspectiveFieldOfViewLeftHanded.
+     *
+     * @param fieldOfView the argument of type {@code Single}
+     * @param aspectRatio the argument of type {@code Single}
+     * @param nearPlaneDistance the argument of type {@code Single}
+     * @param farPlaneDistance the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreatePerspectiveFieldOfViewLeftHanded" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreatePerspectiveFieldOfViewLeftHanded(Single fieldOfView, Single aspectRatio, Single nearPlaneDistance, Single farPlaneDistance) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -613,6 +1116,28 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreatePerspectiveLeftHanded.
+     *
+     * @param width the argument of type {@code Single}
+     * @param height the argument of type {@code Single}
+     * @param nearPlaneDistance the argument of type {@code Single}
+     * @param farPlaneDistance the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreatePerspectiveLeftHanded" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreatePerspectiveLeftHanded(Single width, Single height, Single nearPlaneDistance, Single farPlaneDistance) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -628,6 +1153,30 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreatePerspectiveOffCenter.
+     *
+     * @param left the argument of type {@code Single}
+     * @param right the argument of type {@code Single}
+     * @param bottom the argument of type {@code Single}
+     * @param top the argument of type {@code Single}
+     * @param nearPlaneDistance the argument of type {@code Single}
+     * @param farPlaneDistance the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreatePerspectiveOffCenter" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreatePerspectiveOffCenter(Single left, Single right, Single bottom, Single top, Single nearPlaneDistance, Single farPlaneDistance) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -643,6 +1192,30 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreatePerspectiveOffCenterLeftHanded.
+     *
+     * @param left the argument of type {@code Single}
+     * @param right the argument of type {@code Single}
+     * @param bottom the argument of type {@code Single}
+     * @param top the argument of type {@code Single}
+     * @param nearPlaneDistance the argument of type {@code Single}
+     * @param farPlaneDistance the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreatePerspectiveOffCenterLeftHanded" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreatePerspectiveOffCenterLeftHanded(Single left, Single right, Single bottom, Single top, Single nearPlaneDistance, Single farPlaneDistance) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -658,6 +1231,17 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateReflection.
+     *
+     * @param value the argument of type {@code Plane}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreateReflection" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreateReflection(Plane value) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -673,6 +1257,17 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateRotationX.
+     *
+     * @param radians the argument of type {@code Single}
+     * @param centerPoint the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreateRotationX" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreateRotationX(Single radians, Vector3 centerPoint) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -688,6 +1283,16 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateRotationX.
+     *
+     * @param radians the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreateRotationX" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreateRotationX(Single radians) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -703,6 +1308,17 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateRotationY.
+     *
+     * @param radians the argument of type {@code Single}
+     * @param centerPoint the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreateRotationY" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreateRotationY(Single radians, Vector3 centerPoint) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -718,6 +1334,16 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateRotationY.
+     *
+     * @param radians the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreateRotationY" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreateRotationY(Single radians) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -733,6 +1359,17 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateRotationZ.
+     *
+     * @param radians the argument of type {@code Single}
+     * @param centerPoint the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreateRotationZ" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreateRotationZ(Single radians, Vector3 centerPoint) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -748,6 +1385,16 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateRotationZ.
+     *
+     * @param radians the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreateRotationZ" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreateRotationZ(Single radians) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -763,6 +1410,20 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScale.
+     *
+     * @param xScale the argument of type {@code Single}
+     * @param yScale the argument of type {@code Single}
+     * @param zScale the argument of type {@code Single}
+     * @param centerPoint the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreateScale" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreateScale(Single xScale, Single yScale, Single zScale, Vector3 centerPoint) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -778,6 +1439,18 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScale.
+     *
+     * @param xScale the argument of type {@code Single}
+     * @param yScale the argument of type {@code Single}
+     * @param zScale the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreateScale" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreateScale(Single xScale, Single yScale, Single zScale) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -793,6 +1466,18 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScale.
+     *
+     * @param scale the argument of type {@code Single}
+     * @param centerPoint the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreateScale" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreateScale(Single scale, Vector3 centerPoint) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -808,6 +1493,16 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScale.
+     *
+     * @param scale the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreateScale" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreateScale(Single scale) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -823,6 +1518,18 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScale.
+     *
+     * @param scales the argument of type {@code Vector3}
+     * @param centerPoint the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreateScale" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreateScale(Vector3 scales, Vector3 centerPoint) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -838,6 +1545,16 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScale.
+     *
+     * @param scales the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreateScale" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreateScale(Vector3 scales) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -853,6 +1570,18 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateShadow.
+     *
+     * @param lightDirection the argument of type {@code Vector3}
+     * @param plane the argument of type {@code Plane}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreateShadow" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreateShadow(Vector3 lightDirection, Plane plane) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -868,6 +1597,18 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateTranslation.
+     *
+     * @param xPosition the argument of type {@code Single}
+     * @param yPosition the argument of type {@code Single}
+     * @param zPosition the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreateTranslation" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreateTranslation(Single xPosition, Single yPosition, Single zPosition) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -883,6 +1624,17 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateTranslation.
+     *
+     * @param position the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreateTranslation" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreateTranslation(Vector3 position) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -898,6 +1650,21 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateViewport.
+     *
+     * @param x the argument of type {@code Single}
+     * @param y the argument of type {@code Single}
+     * @param width the argument of type {@code Single}
+     * @param height the argument of type {@code Single}
+     * @param minDepth the argument of type {@code Single}
+     * @param maxDepth the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreateViewport" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreateViewport(Single x, Single y, Single width, Single height, Single minDepth, Single maxDepth) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -913,6 +1680,21 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateViewportLeftHanded.
+     *
+     * @param x the argument of type {@code Single}
+     * @param y the argument of type {@code Single}
+     * @param width the argument of type {@code Single}
+     * @param height the argument of type {@code Single}
+     * @param minDepth the argument of type {@code Single}
+     * @param maxDepth the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreateViewportLeftHanded" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreateViewportLeftHanded(Single x, Single y, Single width, Single height, Single minDepth, Single maxDepth) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -928,6 +1710,20 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateWorld.
+     *
+     * @param position the argument of type {@code Vector3}
+     * @param forward the argument of type {@code Vector3}
+     * @param up the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.CreateWorld" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 CreateWorld(Vector3 position, Vector3 forward, Vector3 up) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -943,6 +1739,25 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Lerp.
+     *
+     * @param matrix1 the argument of type {@code Matrix4x4}
+     * @param matrix2 the argument of type {@code Matrix4x4}
+     * @param amount the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.Lerp" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 Lerp(Matrix4x4 matrix1, Matrix4x4 matrix2, Single amount) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -958,6 +1773,24 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Multiply.
+     *
+     * @param value1 the argument of type {@code Matrix4x4}
+     * @param value2 the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.Multiply" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 Multiply(Matrix4x4 value1, Single value2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -973,6 +1806,18 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Multiply.
+     *
+     * @param value1 the argument of type {@code Matrix4x4}
+     * @param value2 the argument of type {@code Matrix4x4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.Multiply" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 Multiply(Matrix4x4 value1, Matrix4x4 value2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -988,6 +1833,23 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Negate.
+     *
+     * @param value the argument of type {@code Matrix4x4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.Negate" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 Negate(Matrix4x4 value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1003,6 +1865,24 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Subtract.
+     *
+     * @param value1 the argument of type {@code Matrix4x4}
+     * @param value2 the argument of type {@code Matrix4x4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.Subtract" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 Subtract(Matrix4x4 value1, Matrix4x4 value2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1018,6 +1898,24 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Transform.
+     *
+     * @param value the argument of type {@code Matrix4x4}
+     * @param rotation the argument of type {@code Quaternion}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.Transform" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 Transform(Matrix4x4 value, Quaternion rotation) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1033,6 +1931,23 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Transpose.
+     *
+     * @param matrix the argument of type {@code Matrix4x4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.Transpose" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 Transpose(Matrix4x4 matrix) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1048,6 +1963,21 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member WithElement.
+     *
+     * @param row the argument of type {@code int}
+     * @param column the argument of type {@code int}
+     * @param value the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.WithElement" target="_top">.NET documentation</a>
+     */
     public Matrix4x4 WithElement(int row, int column, Single value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1063,6 +1993,20 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member WithRow.
+     *
+     * @param index the argument of type {@code int}
+     * @param value the argument of type {@code Vector4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.WithRow" target="_top">.NET documentation</a>
+     */
     public Matrix4x4 WithRow(int index, Vector4 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1078,6 +2022,19 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRow.
+     *
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.GetRow" target="_top">.NET documentation</a>
+     */
     public Vector4 GetRow(int index) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1097,6 +2054,18 @@ public class Matrix4x4 extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsIdentity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.IsIdentity" target="_top">.NET documentation</a>
+     */
     public boolean getIsIdentity() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1111,6 +2080,15 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Identity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.Identity" target="_top">.NET documentation</a>
+     */
     public static Matrix4x4 getIdentity() throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1126,6 +2104,18 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Translation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.Translation" target="_top">.NET documentation</a>
+     */
     public Vector3 getTranslation() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1141,6 +2131,18 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Translation.
+     *
+     * @param Translation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.Translation" target="_top">.NET documentation</a>
+     */
     public void setTranslation(Vector3 Translation) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1151,6 +2153,22 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property W.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.W" target="_top">.NET documentation</a>
+     */
     public Vector4 getW() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1166,6 +2184,22 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property W.
+     *
+     * @param W the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.W" target="_top">.NET documentation</a>
+     */
     public void setW(Vector4 W) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1176,6 +2210,22 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property X.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.X" target="_top">.NET documentation</a>
+     */
     public Vector4 getX() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1191,6 +2241,22 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property X.
+     *
+     * @param X the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.X" target="_top">.NET documentation</a>
+     */
     public void setX(Vector4 X) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1201,6 +2267,22 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Y.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.Y" target="_top">.NET documentation</a>
+     */
     public Vector4 getY() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1216,6 +2298,22 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Y.
+     *
+     * @param Y the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.Y" target="_top">.NET documentation</a>
+     */
     public void setY(Vector4 Y) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1226,6 +2324,22 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Z.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.Z" target="_top">.NET documentation</a>
+     */
     public Vector4 getZ() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1241,6 +2355,22 @@ public class Matrix4x4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Z.
+     *
+     * @param Z the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix4x4.Z" target="_top">.NET documentation</a>
+     */
     public void setZ(Vector4 Z) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

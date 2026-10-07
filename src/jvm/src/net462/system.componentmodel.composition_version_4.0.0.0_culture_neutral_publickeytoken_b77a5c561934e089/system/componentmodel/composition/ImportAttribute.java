@@ -101,7 +101,10 @@ public class ImportAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ImportAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class ImportAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ImportAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ImportAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,13 @@ public class ImportAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param contractName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ImportAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ImportAttribute(java.lang.String contractName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +184,14 @@ public class ImportAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param contractName the argument of type {@code java.lang.String}
+     * @param contractType the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ImportAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ImportAttribute(java.lang.String contractName, NetType contractType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +202,13 @@ public class ImportAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param contractType the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ImportAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ImportAttribute(NetType contractType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -196,6 +227,13 @@ public class ImportAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowDefault.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ImportAttribute.AllowDefault" target="_top">.NET documentation</a>
+     */
     public boolean getAllowDefault() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +248,13 @@ public class ImportAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowDefault.
+     *
+     * @param AllowDefault the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ImportAttribute.AllowDefault" target="_top">.NET documentation</a>
+     */
     public void setAllowDefault(boolean AllowDefault) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +265,13 @@ public class ImportAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowRecomposition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ImportAttribute.AllowRecomposition" target="_top">.NET documentation</a>
+     */
     public boolean getAllowRecomposition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +286,13 @@ public class ImportAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowRecomposition.
+     *
+     * @param AllowRecomposition the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ImportAttribute.AllowRecomposition" target="_top">.NET documentation</a>
+     */
     public void setAllowRecomposition(boolean AllowRecomposition) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +303,13 @@ public class ImportAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequiredCreationPolicy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ImportAttribute.RequiredCreationPolicy" target="_top">.NET documentation</a>
+     */
     public CreationPolicy getRequiredCreationPolicy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +325,13 @@ public class ImportAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RequiredCreationPolicy.
+     *
+     * @param RequiredCreationPolicy the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ImportAttribute.RequiredCreationPolicy" target="_top">.NET documentation</a>
+     */
     public void setRequiredCreationPolicy(CreationPolicy RequiredCreationPolicy) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +342,13 @@ public class ImportAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Source.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ImportAttribute.Source" target="_top">.NET documentation</a>
+     */
     public ImportSource getSource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -284,6 +364,13 @@ public class ImportAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Source.
+     *
+     * @param Source the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ImportAttribute.Source" target="_top">.NET documentation</a>
+     */
     public void setSource(ImportSource Source) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +381,13 @@ public class ImportAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContractName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ImportAttribute.ContractName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getContractName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +402,13 @@ public class ImportAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ContractName.
+     *
+     * @param ContractName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ImportAttribute.ContractName" target="_top">.NET documentation</a>
+     */
     public void setContractName(java.lang.String ContractName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +419,13 @@ public class ImportAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContractType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ImportAttribute.ContractType" target="_top">.NET documentation</a>
+     */
     public NetType getContractType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -333,6 +441,13 @@ public class ImportAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ContractType.
+     *
+     * @param ContractType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ImportAttribute.ContractType" target="_top">.NET documentation</a>
+     */
     public void setContractType(NetType ContractType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class ServiceHealthSectionCollection extends system.collections.objectmod
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ServiceHealthSectionCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class ServiceHealthSectionCollection extends system.collections.objectmod
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceHealthSectionCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public ServiceHealthSectionCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,16 @@ public class ServiceHealthSectionCollection extends system.collections.objectmod
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateSection.
+     *
+     * @param title the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceHealthSectionCollection.CreateSection" target="_top">.NET documentation</a>
+     */
     public ServiceHealthSection CreateSection(java.lang.String title) throws Throwable, system.ArgumentNullException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +195,17 @@ public class ServiceHealthSectionCollection extends system.collections.objectmod
         }
     }
 
+    /**
+     * Invokes the .NET member CreateSection.
+     *
+     * @param title the argument of type {@code java.lang.String}
+     * @param backgroundColor the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceHealthSectionCollection.CreateSection" target="_top">.NET documentation</a>
+     */
     public ServiceHealthSection CreateSection(java.lang.String title, java.lang.String backgroundColor) throws Throwable, system.ArgumentNullException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +221,18 @@ public class ServiceHealthSectionCollection extends system.collections.objectmod
         }
     }
 
+    /**
+     * Invokes the .NET member CreateSection.
+     *
+     * @param title the argument of type {@code java.lang.String}
+     * @param backgroundColor the argument of type {@code java.lang.String}
+     * @param foregroundColor the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceHealthSectionCollection.CreateSection" target="_top">.NET documentation</a>
+     */
     public ServiceHealthSection CreateSection(java.lang.String title, java.lang.String backgroundColor, java.lang.String foregroundColor) throws Throwable, system.ArgumentNullException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

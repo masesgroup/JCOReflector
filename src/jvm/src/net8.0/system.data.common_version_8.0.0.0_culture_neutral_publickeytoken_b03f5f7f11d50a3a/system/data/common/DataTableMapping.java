@@ -106,7 +106,10 @@ public class DataTableMapping extends system.MarshalByRefObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataTableMapping(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,12 @@ public class DataTableMapping extends system.MarshalByRefObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DataTableMapping.-ctor" target="_top">.NET documentation</a>
+     */
     public DataTableMapping() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,26 @@ public class DataTableMapping extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param sourceTable the argument of type {@code java.lang.String}
+     * @param dataSetTable the argument of type {@code java.lang.String}
+     * @param columnMappings the argument of type {@code DataColumnMapping[]}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DataTableMapping.-ctor" target="_top">.NET documentation</a>
+     */
     public DataTableMapping(java.lang.String sourceTable, java.lang.String dataSetTable, DataColumnMapping[] columnMappings) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
@@ -173,6 +202,21 @@ public class DataTableMapping extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param sourceTable the argument of type {@code java.lang.String}
+     * @param dataSetTable the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DataTableMapping.-ctor" target="_top">.NET documentation</a>
+     */
     public DataTableMapping(java.lang.String sourceTable, java.lang.String dataSetTable) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -187,6 +231,23 @@ public class DataTableMapping extends system.MarshalByRefObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetColumnMappingBySchemaAction.
+     *
+     * @param sourceColumn the argument of type {@code java.lang.String}
+     * @param mappingAction the argument of type {@code MissingMappingAction}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DataTableMapping.GetColumnMappingBySchemaAction" target="_top">.NET documentation</a>
+     */
     public DataColumnMapping GetColumnMappingBySchemaAction(java.lang.String sourceColumn, MissingMappingAction mappingAction) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +263,26 @@ public class DataTableMapping extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDataColumn.
+     *
+     * @param sourceColumn the argument of type {@code java.lang.String}
+     * @param dataType the argument of type {@code NetType}
+     * @param dataTable the argument of type {@code DataTable}
+     * @param mappingAction the argument of type {@code MissingMappingAction}
+     * @param schemaAction the argument of type {@code MissingSchemaAction}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DataTableMapping.GetDataColumn" target="_top">.NET documentation</a>
+     */
     public DataColumn GetDataColumn(java.lang.String sourceColumn, NetType dataType, DataTable dataTable, MissingMappingAction mappingAction, MissingSchemaAction schemaAction) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +298,27 @@ public class DataTableMapping extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDataTableBySchemaAction.
+     *
+     * @param dataSet the argument of type {@code DataSet}
+     * @param schemaAction the argument of type {@code MissingSchemaAction}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DataTableMapping.GetDataTableBySchemaAction" target="_top">.NET documentation</a>
+     */
     public DataTable GetDataTableBySchemaAction(DataSet dataSet, MissingSchemaAction schemaAction) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,8 +337,12 @@ public class DataTableMapping extends system.MarshalByRefObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICloneable method available in ICloneable to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ICloneable.Clone" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public NetObject Clone() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICloneable to obtain the full interface.");
     }
@@ -245,6 +351,13 @@ public class DataTableMapping extends system.MarshalByRefObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ColumnMappings.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DataTableMapping.ColumnMappings" target="_top">.NET documentation</a>
+     */
     public DataColumnMappingCollection getColumnMappings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +373,13 @@ public class DataTableMapping extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataSetTable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DataTableMapping.DataSetTable" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDataSetTable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +394,13 @@ public class DataTableMapping extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataSetTable.
+     *
+     * @param DataSetTable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DataTableMapping.DataSetTable" target="_top">.NET documentation</a>
+     */
     public void setDataSetTable(java.lang.String DataSetTable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -284,6 +411,13 @@ public class DataTableMapping extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SourceTable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DataTableMapping.SourceTable" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSourceTable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +432,21 @@ public class DataTableMapping extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SourceTable.
+     *
+     * @param SourceTable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DataTableMapping.SourceTable" target="_top">.NET documentation</a>
+     */
     public void setSourceTable(java.lang.String SourceTable) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

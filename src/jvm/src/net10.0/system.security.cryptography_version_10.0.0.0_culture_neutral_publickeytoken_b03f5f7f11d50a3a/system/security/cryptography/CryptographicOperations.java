@@ -104,7 +104,10 @@ public class CryptographicOperations extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CryptographicOperations(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,28 @@ public class CryptographicOperations extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member HashData.
+     *
+     * @param hashAlgorithm the argument of type {@code HashAlgorithmName}
+     * @param source the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CryptographicOperations.HashData" target="_top">.NET documentation</a>
+     */
     public static byte[] HashData(HashAlgorithmName hashAlgorithm, byte[] source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -180,6 +205,28 @@ public class CryptographicOperations extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member HashData.
+     *
+     * @param dupParam0 the argument of type {@code HashAlgorithmName}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CryptographicOperations.HashData" target="_top">.NET documentation</a>
+     */
     public static byte[] HashData(HashAlgorithmName dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -203,6 +250,28 @@ public class CryptographicOperations extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member HashData.
+     *
+     * @param hashAlgorithm the argument of type {@code HashAlgorithmName}
+     * @param source the argument of type {@code Stream}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CryptographicOperations.HashData" target="_top">.NET documentation</a>
+     */
     public static byte[] HashData(HashAlgorithmName hashAlgorithm, Stream source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.RankException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -226,6 +295,29 @@ public class CryptographicOperations extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member HmacData.
+     *
+     * @param hashAlgorithm the argument of type {@code HashAlgorithmName}
+     * @param key the argument of type {@code byte[]}
+     * @param source the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CryptographicOperations.HmacData" target="_top">.NET documentation</a>
+     */
     public static byte[] HmacData(HashAlgorithmName hashAlgorithm, byte[] key, byte[] source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -249,6 +341,29 @@ public class CryptographicOperations extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member HmacData.
+     *
+     * @param dupParam0 the argument of type {@code HashAlgorithmName}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @param dupParam2 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CryptographicOperations.HmacData" target="_top">.NET documentation</a>
+     */
     public static byte[] HmacData(HashAlgorithmName dupParam0, JCORefOut dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -272,6 +387,30 @@ public class CryptographicOperations extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member HmacData.
+     *
+     * @param hashAlgorithm the argument of type {@code HashAlgorithmName}
+     * @param key the argument of type {@code byte[]}
+     * @param source the argument of type {@code Stream}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CryptographicOperations.HmacData" target="_top">.NET documentation</a>
+     */
     public static byte[] HmacData(HashAlgorithmName hashAlgorithm, byte[] key, Stream source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -295,6 +434,30 @@ public class CryptographicOperations extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member HmacData.
+     *
+     * @param dupParam0 the argument of type {@code HashAlgorithmName}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @param dupParam2 the argument of type {@code Stream}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CryptographicOperations.HmacData" target="_top">.NET documentation</a>
+     */
     public static byte[] HmacData(HashAlgorithmName dupParam0, JCORefOut dupParam1, Stream dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -318,6 +481,28 @@ public class CryptographicOperations extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member HashDataAsync.
+     *
+     * @param hashAlgorithm the argument of type {@code HashAlgorithmName}
+     * @param source the argument of type {@code Stream}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CryptographicOperations.HashDataAsync" target="_top">.NET documentation</a>
+     */
     public static ValueTask_1 HashDataAsync(HashAlgorithmName hashAlgorithm, Stream source, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.RankException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -333,6 +518,30 @@ public class CryptographicOperations extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member HmacDataAsync.
+     *
+     * @param hashAlgorithm the argument of type {@code HashAlgorithmName}
+     * @param key the argument of type {@code byte[]}
+     * @param source the argument of type {@code Stream}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CryptographicOperations.HmacDataAsync" target="_top">.NET documentation</a>
+     */
     public static ValueTask_1 HmacDataAsync(HashAlgorithmName hashAlgorithm, byte[] key, Stream source, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -348,6 +557,30 @@ public class CryptographicOperations extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member HmacDataAsync.
+     *
+     * @param dupParam0 the argument of type {@code HashAlgorithmName}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @param dupParam2 the argument of type {@code Stream}
+     * @param dupParam3 the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CryptographicOperations.HmacDataAsync" target="_top">.NET documentation</a>
+     */
     public static ValueTask_1 HmacDataAsync(HashAlgorithmName dupParam0, JCORefOut dupParam1, Stream dupParam2, CancellationToken dupParam3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -363,6 +596,29 @@ public class CryptographicOperations extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member HmacDataAsync.
+     *
+     * @param hashAlgorithm the argument of type {@code HashAlgorithmName}
+     * @param key the argument of type {@code ReadOnlyMemory_1}
+     * @param source the argument of type {@code Stream}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CryptographicOperations.HmacDataAsync" target="_top">.NET documentation</a>
+     */
     public static ValueTask_1 HmacDataAsync(HashAlgorithmName hashAlgorithm, ReadOnlyMemory_1 key, Stream source, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.RankException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -378,6 +634,29 @@ public class CryptographicOperations extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member HashDataAsync.
+     *
+     * @param hashAlgorithm the argument of type {@code HashAlgorithmName}
+     * @param source the argument of type {@code Stream}
+     * @param destination the argument of type {@code Memory_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CryptographicOperations.HashDataAsync" target="_top">.NET documentation</a>
+     */
     public static ValueTask_1 HashDataAsync(HashAlgorithmName hashAlgorithm, Stream source, Memory_1 destination, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.RankException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -393,6 +672,30 @@ public class CryptographicOperations extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member HmacDataAsync.
+     *
+     * @param hashAlgorithm the argument of type {@code HashAlgorithmName}
+     * @param key the argument of type {@code ReadOnlyMemory_1}
+     * @param source the argument of type {@code Stream}
+     * @param destination the argument of type {@code Memory_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CryptographicOperations.HmacDataAsync" target="_top">.NET documentation</a>
+     */
     public static ValueTask_1 HmacDataAsync(HashAlgorithmName hashAlgorithm, ReadOnlyMemory_1 key, Stream source, Memory_1 destination, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.RankException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

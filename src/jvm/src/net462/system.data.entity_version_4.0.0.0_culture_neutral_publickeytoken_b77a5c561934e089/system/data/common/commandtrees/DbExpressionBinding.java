@@ -101,7 +101,10 @@ public class DbExpressionBinding extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DbExpressionBinding(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class DbExpressionBinding extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Expression.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionBinding.Expression" target="_top">.NET documentation</a>
+     */
     public DbExpression getExpression() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +185,13 @@ public class DbExpressionBinding extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Variable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionBinding.Variable" target="_top">.NET documentation</a>
+     */
     public DbVariableReferenceExpression getVariable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +207,13 @@ public class DbExpressionBinding extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VariableType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionBinding.VariableType" target="_top">.NET documentation</a>
+     */
     public TypeUsage getVariableType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +229,13 @@ public class DbExpressionBinding extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VariableName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionBinding.VariableName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getVariableName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

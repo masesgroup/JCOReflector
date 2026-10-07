@@ -99,7 +99,10 @@ public class FilterEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FilterEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class FilterEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Accepted.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.FilterEventArgs.Accepted" target="_top">.NET documentation</a>
+     */
     public boolean getAccepted() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +182,13 @@ public class FilterEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Accepted.
+     *
+     * @param Accepted the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.FilterEventArgs.Accepted" target="_top">.NET documentation</a>
+     */
     public void setAccepted(boolean Accepted) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +199,13 @@ public class FilterEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Item.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.FilterEventArgs.Item" target="_top">.NET documentation</a>
+     */
     public NetObject getItem() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

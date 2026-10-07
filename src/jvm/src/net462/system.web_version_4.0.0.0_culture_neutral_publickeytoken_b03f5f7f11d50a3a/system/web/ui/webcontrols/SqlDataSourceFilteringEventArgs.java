@@ -101,7 +101,10 @@ public class SqlDataSourceFilteringEventArgs extends system.componentmodel.Cance
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SqlDataSourceFilteringEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,13 @@ public class SqlDataSourceFilteringEventArgs extends system.componentmodel.Cance
     public SqlDataSourceFilteringEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param parameterValues the argument of type {@code IOrderedDictionary}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.SqlDataSourceFilteringEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlDataSourceFilteringEventArgs(IOrderedDictionary parameterValues) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +180,13 @@ public class SqlDataSourceFilteringEventArgs extends system.componentmodel.Cance
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ParameterValues.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.SqlDataSourceFilteringEventArgs.ParameterValues" target="_top">.NET documentation</a>
+     */
     public IOrderedDictionary getParameterValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

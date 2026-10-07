@@ -169,7 +169,10 @@ public class SyncUpdateCallback extends JCDelegate implements IJCEventEmit, IJCO
         callerInstance = instance;
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SyncUpdateCallback(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
@@ -191,6 +194,17 @@ public class SyncUpdateCallback extends JCDelegate implements IJCEventEmit, IJCO
         return JCOBridgeInstance.translateException(ne);
     }
 
+    /**
+     * Invokes the .NET member DynamicInvoke.
+     *
+     * @param eventType the argument of type {@code SyncFromAllServersEvent}
+     * @param targetServer the argument of type {@code java.lang.String}
+     * @param sourceServer the argument of type {@code java.lang.String}
+     * @param exception the argument of type {@code SyncFromAllServersOperationException}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Delegate.DynamicInvoke" target="_top">.NET documentation</a>
+     */
     public boolean DynamicInvoke(SyncFromAllServersEvent eventType, java.lang.String targetServer, java.lang.String sourceServer, SyncFromAllServersOperationException exception) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,7 +220,13 @@ public class SyncUpdateCallback extends JCDelegate implements IJCEventEmit, IJCO
     }
 
     /**
-     * Methods invoked in JVM when an event is raised in CLR 
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param eventType the .NET argument of type {@code System.DirectoryServices.ActiveDirectory.SyncFromAllServersEvent}
+     * @param targetServer the .NET argument of type {@code System.String}
+     * @param sourceServer the .NET argument of type {@code System.String}
+     * @param exception the .NET argument of type {@code System.DirectoryServices.ActiveDirectory.SyncFromAllServersOperationException}
+     * @return the value returned to the CLR; this default implementation returns {@code null}
      */
     public boolean Invoke(SyncFromAllServersEvent eventType, java.lang.String targetServer, java.lang.String sourceServer, SyncFromAllServersOperationException exception) {
         return false;

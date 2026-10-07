@@ -100,7 +100,10 @@ public class SoapHeaderMapping extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SoapHeaderMapping(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class SoapHeaderMapping extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Custom.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapHeaderMapping.Custom" target="_top">.NET documentation</a>
+     */
     public boolean getCustom() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +183,13 @@ public class SoapHeaderMapping extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Repeats.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapHeaderMapping.Repeats" target="_top">.NET documentation</a>
+     */
     public boolean getRepeats() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +204,13 @@ public class SoapHeaderMapping extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MemberInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapHeaderMapping.MemberInfo" target="_top">.NET documentation</a>
+     */
     public MemberInfo getMemberInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +226,13 @@ public class SoapHeaderMapping extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HeaderType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapHeaderMapping.HeaderType" target="_top">.NET documentation</a>
+     */
     public NetType getHeaderType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +248,13 @@ public class SoapHeaderMapping extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Direction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapHeaderMapping.Direction" target="_top">.NET documentation</a>
+     */
     public SoapHeaderDirection getDirection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

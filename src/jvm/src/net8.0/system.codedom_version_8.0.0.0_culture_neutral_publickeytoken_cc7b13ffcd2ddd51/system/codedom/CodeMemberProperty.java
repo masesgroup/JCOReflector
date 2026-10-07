@@ -103,7 +103,10 @@ public class CodeMemberProperty extends system.codedom.CodeTypeMember  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodeMemberProperty(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,12 @@ public class CodeMemberProperty extends system.codedom.CodeTypeMember  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMemberProperty.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeMemberProperty() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +177,13 @@ public class CodeMemberProperty extends system.codedom.CodeTypeMember  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HasGet.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMemberProperty.HasGet" target="_top">.NET documentation</a>
+     */
     public boolean getHasGet() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +198,18 @@ public class CodeMemberProperty extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HasGet.
+     *
+     * @param HasGet the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMemberProperty.HasGet" target="_top">.NET documentation</a>
+     */
     public void setHasGet(boolean HasGet) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +220,13 @@ public class CodeMemberProperty extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HasSet.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMemberProperty.HasSet" target="_top">.NET documentation</a>
+     */
     public boolean getHasSet() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +241,18 @@ public class CodeMemberProperty extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HasSet.
+     *
+     * @param HasSet the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMemberProperty.HasSet" target="_top">.NET documentation</a>
+     */
     public void setHasSet(boolean HasSet) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +263,13 @@ public class CodeMemberProperty extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Parameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMemberProperty.Parameters" target="_top">.NET documentation</a>
+     */
     public CodeParameterDeclarationExpressionCollection getParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +285,13 @@ public class CodeMemberProperty extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GetStatements.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMemberProperty.GetStatements" target="_top">.NET documentation</a>
+     */
     public CodeStatementCollection getGetStatements() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +307,13 @@ public class CodeMemberProperty extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SetStatements.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMemberProperty.SetStatements" target="_top">.NET documentation</a>
+     */
     public CodeStatementCollection getSetStatements() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +329,13 @@ public class CodeMemberProperty extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PrivateImplementationType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMemberProperty.PrivateImplementationType" target="_top">.NET documentation</a>
+     */
     public CodeTypeReference getPrivateImplementationType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +351,13 @@ public class CodeMemberProperty extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PrivateImplementationType.
+     *
+     * @param PrivateImplementationType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMemberProperty.PrivateImplementationType" target="_top">.NET documentation</a>
+     */
     public void setPrivateImplementationType(CodeTypeReference PrivateImplementationType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +368,21 @@ public class CodeMemberProperty extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Type.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMemberProperty.Type" target="_top">.NET documentation</a>
+     */
     public CodeTypeReference getType() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +398,13 @@ public class CodeMemberProperty extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Type.
+     *
+     * @param Type the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMemberProperty.Type" target="_top">.NET documentation</a>
+     */
     public void setType(CodeTypeReference Type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -311,6 +415,13 @@ public class CodeMemberProperty extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ImplementationTypes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMemberProperty.ImplementationTypes" target="_top">.NET documentation</a>
+     */
     public CodeTypeReferenceCollection getImplementationTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

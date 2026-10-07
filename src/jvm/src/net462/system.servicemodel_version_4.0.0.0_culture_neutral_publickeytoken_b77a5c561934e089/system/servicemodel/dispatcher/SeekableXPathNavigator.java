@@ -101,7 +101,10 @@ public class SeekableXPathNavigator extends system.xml.xpath.XPathNavigator  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SeekableXPathNavigator(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,14 @@ public class SeekableXPathNavigator extends system.xml.xpath.XPathNavigator  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetLocalName.
+     *
+     * @param nodePosition the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.SeekableXPathNavigator.GetLocalName" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetLocalName(long nodePosition) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +179,14 @@ public class SeekableXPathNavigator extends system.xml.xpath.XPathNavigator  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetName.
+     *
+     * @param nodePosition the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.SeekableXPathNavigator.GetName" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetName(long nodePosition) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +201,14 @@ public class SeekableXPathNavigator extends system.xml.xpath.XPathNavigator  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetNamespace.
+     *
+     * @param nodePosition the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.SeekableXPathNavigator.GetNamespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetNamespace(long nodePosition) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +223,14 @@ public class SeekableXPathNavigator extends system.xml.xpath.XPathNavigator  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetValue.
+     *
+     * @param nodePosition the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.SeekableXPathNavigator.GetValue" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetValue(long nodePosition) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +245,15 @@ public class SeekableXPathNavigator extends system.xml.xpath.XPathNavigator  {
         }
     }
 
+    /**
+     * Invokes the .NET member ComparePosition.
+     *
+     * @param firstPosition the argument of type {@code long}
+     * @param secondPosition the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.SeekableXPathNavigator.ComparePosition" target="_top">.NET documentation</a>
+     */
     public XmlNodeOrder ComparePosition(long firstPosition, long secondPosition) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +269,14 @@ public class SeekableXPathNavigator extends system.xml.xpath.XPathNavigator  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetNodeType.
+     *
+     * @param nodePosition the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.SeekableXPathNavigator.GetNodeType" target="_top">.NET documentation</a>
+     */
     public XPathNodeType GetNodeType(long nodePosition) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +296,13 @@ public class SeekableXPathNavigator extends system.xml.xpath.XPathNavigator  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CurrentPosition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition" target="_top">.NET documentation</a>
+     */
     public long getCurrentPosition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -284,6 +343,13 @@ public class SeekableXPathNavigator extends system.xml.xpath.XPathNavigator  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CurrentPosition.
+     *
+     * @param CurrentPosition the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition" target="_top">.NET documentation</a>
+     */
     public void setCurrentPosition(long CurrentPosition) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

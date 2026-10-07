@@ -98,7 +98,10 @@ public class IValueProviderImplementation extends NetObject implements IValuePro
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IValueProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,13 @@ public class IValueProviderImplementation extends NetObject implements IValuePro
 
     // Methods section
     
+    /**
+     * Invokes the .NET member SetValue.
+     *
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IValueProvider.SetValue" target="_top">.NET documentation</a>
+     */
     public void SetValue(java.lang.String value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -154,6 +164,13 @@ public class IValueProviderImplementation extends NetObject implements IValuePro
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsReadOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IValueProvider.IsReadOnly" target="_top">.NET documentation</a>
+     */
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +185,13 @@ public class IValueProviderImplementation extends NetObject implements IValuePro
         }
     }
 
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IValueProvider.Value" target="_top">.NET documentation</a>
+     */
     public java.lang.String getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

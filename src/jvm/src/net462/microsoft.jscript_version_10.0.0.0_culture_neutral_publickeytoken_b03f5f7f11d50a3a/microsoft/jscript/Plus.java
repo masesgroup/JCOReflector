@@ -99,7 +99,10 @@ public class Plus extends microsoft.jscript.BinaryOp  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Plus(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class Plus extends microsoft.jscript.BinaryOp  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Plus.-ctor" target="_top">.NET documentation</a>
+     */
     public Plus() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +169,30 @@ public class Plus extends microsoft.jscript.BinaryOp  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member DoOp.
+     *
+     * @param v1 the argument of type {@code NetObject}
+     * @param v2 the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws microsoft.jscript.EndOfFile if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Plus.DoOp" target="_top">.NET documentation</a>
+     */
     public static NetObject DoOp(NetObject v1, NetObject v2) throws Throwable, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, microsoft.jscript.JScriptException, system.NullReferenceException, microsoft.jscript.EndOfFile, system.MissingMethodException, system.OverflowException, system.globalization.CultureNotFoundException, system.FormatException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -175,6 +208,29 @@ public class Plus extends microsoft.jscript.BinaryOp  {
         }
     }
 
+    /**
+     * Invokes the .NET member EvaluatePlus.
+     *
+     * @param v1 the argument of type {@code NetObject}
+     * @param v2 the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Plus.EvaluatePlus" target="_top">.NET documentation</a>
+     */
     public NetObject EvaluatePlus(NetObject v1, NetObject v2) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, microsoft.jscript.JScriptException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.ArithmeticException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

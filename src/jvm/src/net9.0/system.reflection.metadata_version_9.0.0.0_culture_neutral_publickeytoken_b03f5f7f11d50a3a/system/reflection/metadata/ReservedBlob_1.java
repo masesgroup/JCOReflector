@@ -101,7 +101,10 @@ public class ReservedBlob_1<THandle extends IJCOBridgeReflected> extends system.
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ReservedBlob_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,13 @@ public class ReservedBlob_1<THandle extends IJCOBridgeReflected> extends system.
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateWriter.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.ReservedBlob-1.CreateWriter" target="_top">.NET documentation</a>
+     */
     public BlobWriter CreateWriter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +185,13 @@ public class ReservedBlob_1<THandle extends IJCOBridgeReflected> extends system.
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Content.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.ReservedBlob-1.Content" target="_top">.NET documentation</a>
+     */
     public Blob getContent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +207,13 @@ public class ReservedBlob_1<THandle extends IJCOBridgeReflected> extends system.
         }
     }
 
+    /**
+     * Gets the value of the .NET property Handle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.ReservedBlob-1.Handle" target="_top">.NET documentation</a>
+     */
     public THandle getHandle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

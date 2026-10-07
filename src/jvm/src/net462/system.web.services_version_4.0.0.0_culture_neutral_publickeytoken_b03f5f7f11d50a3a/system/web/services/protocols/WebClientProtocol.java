@@ -102,7 +102,10 @@ public class WebClientProtocol extends system.componentmodel.Component  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WebClientProtocol(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,21 @@ public class WebClientProtocol extends system.componentmodel.Component  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Abort.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.WebClientProtocol.Abort" target="_top">.NET documentation</a>
+     */
     public void Abort() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +187,13 @@ public class WebClientProtocol extends system.componentmodel.Component  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PreAuthenticate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.WebClientProtocol.PreAuthenticate" target="_top">.NET documentation</a>
+     */
     public boolean getPreAuthenticate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +208,13 @@ public class WebClientProtocol extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PreAuthenticate.
+     *
+     * @param PreAuthenticate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.WebClientProtocol.PreAuthenticate" target="_top">.NET documentation</a>
+     */
     public void setPreAuthenticate(boolean PreAuthenticate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +225,20 @@ public class WebClientProtocol extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseDefaultCredentials.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.WebClientProtocol.UseDefaultCredentials" target="_top">.NET documentation</a>
+     */
     public boolean getUseDefaultCredentials() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +253,20 @@ public class WebClientProtocol extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseDefaultCredentials.
+     *
+     * @param UseDefaultCredentials the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.WebClientProtocol.UseDefaultCredentials" target="_top">.NET documentation</a>
+     */
     public void setUseDefaultCredentials(boolean UseDefaultCredentials) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +277,13 @@ public class WebClientProtocol extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Timeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.WebClientProtocol.Timeout" target="_top">.NET documentation</a>
+     */
     public int getTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +324,13 @@ public class WebClientProtocol extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Timeout.
+     *
+     * @param Timeout the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.WebClientProtocol.Timeout" target="_top">.NET documentation</a>
+     */
     public void setTimeout(int Timeout) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +341,13 @@ public class WebClientProtocol extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Credentials.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.WebClientProtocol.Credentials" target="_top">.NET documentation</a>
+     */
     public ICredentials getCredentials() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +363,13 @@ public class WebClientProtocol extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Credentials.
+     *
+     * @param Credentials the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.WebClientProtocol.Credentials" target="_top">.NET documentation</a>
+     */
     public void setCredentials(ICredentials Credentials) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +380,13 @@ public class WebClientProtocol extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConnectionGroupName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.WebClientProtocol.ConnectionGroupName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getConnectionGroupName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +401,13 @@ public class WebClientProtocol extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConnectionGroupName.
+     *
+     * @param ConnectionGroupName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.WebClientProtocol.ConnectionGroupName" target="_top">.NET documentation</a>
+     */
     public void setConnectionGroupName(java.lang.String ConnectionGroupName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -316,6 +418,13 @@ public class WebClientProtocol extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Url.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.WebClientProtocol.Url" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -330,6 +439,28 @@ public class WebClientProtocol extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Url.
+     *
+     * @param Url the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.WebClientProtocol.Url" target="_top">.NET documentation</a>
+     */
     public void setUrl(java.lang.String Url) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.configuration.ConfigurationException, system.UriFormatException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -340,6 +471,13 @@ public class WebClientProtocol extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequestEncoding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.WebClientProtocol.RequestEncoding" target="_top">.NET documentation</a>
+     */
     public Encoding getRequestEncoding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -355,6 +493,13 @@ public class WebClientProtocol extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RequestEncoding.
+     *
+     * @param RequestEncoding the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.WebClientProtocol.RequestEncoding" target="_top">.NET documentation</a>
+     */
     public void setRequestEncoding(Encoding RequestEncoding) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

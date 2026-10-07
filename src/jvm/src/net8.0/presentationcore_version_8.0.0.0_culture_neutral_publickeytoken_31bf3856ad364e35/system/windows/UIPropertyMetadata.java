@@ -101,7 +101,10 @@ public class UIPropertyMetadata extends system.windows.PropertyMetadata  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UIPropertyMetadata(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class UIPropertyMetadata extends system.windows.PropertyMetadata  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.UIPropertyMetadata.-ctor" target="_top">.NET documentation</a>
+     */
     public UIPropertyMetadata() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,22 @@ public class UIPropertyMetadata extends system.windows.PropertyMetadata  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param defaultValue the argument of type {@code NetObject}
+     * @param propertyChangedCallback the argument of type {@code PropertyChangedCallback}
+     * @param coerceValueCallback the argument of type {@code CoerceValueCallback}
+     * @param isAnimationProhibited the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.UIPropertyMetadata.-ctor" target="_top">.NET documentation</a>
+     */
     public UIPropertyMetadata(NetObject defaultValue, PropertyChangedCallback propertyChangedCallback, CoerceValueCallback coerceValueCallback, boolean isAnimationProhibited) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +193,21 @@ public class UIPropertyMetadata extends system.windows.PropertyMetadata  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param defaultValue the argument of type {@code NetObject}
+     * @param propertyChangedCallback the argument of type {@code PropertyChangedCallback}
+     * @param coerceValueCallback the argument of type {@code CoerceValueCallback}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.UIPropertyMetadata.-ctor" target="_top">.NET documentation</a>
+     */
     public UIPropertyMetadata(NetObject defaultValue, PropertyChangedCallback propertyChangedCallback, CoerceValueCallback coerceValueCallback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +218,20 @@ public class UIPropertyMetadata extends system.windows.PropertyMetadata  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param defaultValue the argument of type {@code NetObject}
+     * @param propertyChangedCallback the argument of type {@code PropertyChangedCallback}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.UIPropertyMetadata.-ctor" target="_top">.NET documentation</a>
+     */
     public UIPropertyMetadata(NetObject defaultValue, PropertyChangedCallback propertyChangedCallback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -188,6 +242,19 @@ public class UIPropertyMetadata extends system.windows.PropertyMetadata  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param defaultValue the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.UIPropertyMetadata.-ctor" target="_top">.NET documentation</a>
+     */
     public UIPropertyMetadata(NetObject defaultValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -198,6 +265,19 @@ public class UIPropertyMetadata extends system.windows.PropertyMetadata  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param propertyChangedCallback the argument of type {@code PropertyChangedCallback}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.UIPropertyMetadata.-ctor" target="_top">.NET documentation</a>
+     */
     public UIPropertyMetadata(PropertyChangedCallback propertyChangedCallback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -216,6 +296,13 @@ public class UIPropertyMetadata extends system.windows.PropertyMetadata  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsAnimationProhibited.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.UIPropertyMetadata.IsAnimationProhibited" target="_top">.NET documentation</a>
+     */
     public boolean getIsAnimationProhibited() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +317,20 @@ public class UIPropertyMetadata extends system.windows.PropertyMetadata  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsAnimationProhibited.
+     *
+     * @param IsAnimationProhibited the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.UIPropertyMetadata.IsAnimationProhibited" target="_top">.NET documentation</a>
+     */
     public void setIsAnimationProhibited(boolean IsAnimationProhibited) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

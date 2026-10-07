@@ -114,7 +114,10 @@ public class XDocument extends system.xml.linq.XContainer  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XDocument(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -161,6 +164,12 @@ public class XDocument extends system.xml.linq.XContainer  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDocument.-ctor" target="_top">.NET documentation</a>
+     */
     public XDocument() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +180,24 @@ public class XDocument extends system.xml.linq.XContainer  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param content the argument of type {@code NetObject...}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDocument.-ctor" target="_top">.NET documentation</a>
+     */
     public XDocument(NetObject... content) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentOutOfRangeException, system.OverflowException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +208,24 @@ public class XDocument extends system.xml.linq.XContainer  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param declaration the argument of type {@code XDeclaration}
+     * @param content the argument of type {@code NetObject...}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDocument.-ctor" target="_top">.NET documentation</a>
+     */
     public XDocument(XDeclaration declaration, NetObject... content) throws Throwable, system.ArgumentNullException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -191,6 +236,18 @@ public class XDocument extends system.xml.linq.XContainer  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param other the argument of type {@code XDocument}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDocument.-ctor" target="_top">.NET documentation</a>
+     */
     public XDocument(XDocument other) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -205,6 +262,21 @@ public class XDocument extends system.xml.linq.XContainer  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member SaveAsync.
+     *
+     * @param stream the argument of type {@code Stream}
+     * @param options the argument of type {@code SaveOptions}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDocument.SaveAsync" target="_top">.NET documentation</a>
+     */
     public Task SaveAsync(Stream stream, SaveOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +292,21 @@ public class XDocument extends system.xml.linq.XContainer  {
         }
     }
 
+    /**
+     * Invokes the .NET member SaveAsync.
+     *
+     * @param textWriter the argument of type {@code TextWriter}
+     * @param options the argument of type {@code SaveOptions}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDocument.SaveAsync" target="_top">.NET documentation</a>
+     */
     public Task SaveAsync(TextWriter textWriter, SaveOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +322,15 @@ public class XDocument extends system.xml.linq.XContainer  {
         }
     }
 
+    /**
+     * Invokes the .NET member SaveAsync.
+     *
+     * @param writer the argument of type {@code XmlWriter}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDocument.SaveAsync" target="_top">.NET documentation</a>
+     */
     public Task SaveAsync(XmlWriter writer, CancellationToken cancellationToken) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +346,24 @@ public class XDocument extends system.xml.linq.XContainer  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteToAsync.
+     *
+     * @param writer the argument of type {@code XmlWriter}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDocument.WriteToAsync" target="_top">.NET documentation</a>
+     */
     public Task WriteToAsync(XmlWriter writer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +379,21 @@ public class XDocument extends system.xml.linq.XContainer  {
         }
     }
 
+    /**
+     * Invokes the .NET member LoadAsync.
+     *
+     * @param stream the argument of type {@code Stream}
+     * @param options the argument of type {@code LoadOptions}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDocument.LoadAsync" target="_top">.NET documentation</a>
+     */
     public static Task_1 LoadAsync(Stream stream, LoadOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -280,6 +409,21 @@ public class XDocument extends system.xml.linq.XContainer  {
         }
     }
 
+    /**
+     * Invokes the .NET member LoadAsync.
+     *
+     * @param textReader the argument of type {@code TextReader}
+     * @param options the argument of type {@code LoadOptions}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDocument.LoadAsync" target="_top">.NET documentation</a>
+     */
     public static Task_1 LoadAsync(TextReader textReader, LoadOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -295,6 +439,25 @@ public class XDocument extends system.xml.linq.XContainer  {
         }
     }
 
+    /**
+     * Invokes the .NET member LoadAsync.
+     *
+     * @param reader the argument of type {@code XmlReader}
+     * @param options the argument of type {@code LoadOptions}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDocument.LoadAsync" target="_top">.NET documentation</a>
+     */
     public static Task_1 LoadAsync(XmlReader reader, LoadOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -310,6 +473,27 @@ public class XDocument extends system.xml.linq.XContainer  {
         }
     }
 
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param stream the argument of type {@code Stream}
+     * @param options the argument of type {@code LoadOptions}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDocument.Load" target="_top">.NET documentation</a>
+     */
     public static XDocument Load(Stream stream, LoadOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.io.IOException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -325,6 +509,23 @@ public class XDocument extends system.xml.linq.XContainer  {
         }
     }
 
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param stream the argument of type {@code Stream}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDocument.Load" target="_top">.NET documentation</a>
+     */
     public static XDocument Load(Stream stream) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -340,6 +541,25 @@ public class XDocument extends system.xml.linq.XContainer  {
         }
     }
 
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param textReader the argument of type {@code TextReader}
+     * @param options the argument of type {@code LoadOptions}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDocument.Load" target="_top">.NET documentation</a>
+     */
     public static XDocument Load(TextReader textReader, LoadOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -355,6 +575,22 @@ public class XDocument extends system.xml.linq.XContainer  {
         }
     }
 
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param textReader the argument of type {@code TextReader}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDocument.Load" target="_top">.NET documentation</a>
+     */
     public static XDocument Load(TextReader textReader) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -370,6 +606,31 @@ public class XDocument extends system.xml.linq.XContainer  {
         }
     }
 
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param uri the argument of type {@code java.lang.String}
+     * @param options the argument of type {@code LoadOptions}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.threading.tasks.TaskCanceledException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDocument.Load" target="_top">.NET documentation</a>
+     */
     public static XDocument Load(java.lang.String uri, LoadOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.ArrayTypeMismatchException, system.io.IOException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -385,6 +646,24 @@ public class XDocument extends system.xml.linq.XContainer  {
         }
     }
 
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param uri the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDocument.Load" target="_top">.NET documentation</a>
+     */
     public static XDocument Load(java.lang.String uri) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -400,6 +679,27 @@ public class XDocument extends system.xml.linq.XContainer  {
         }
     }
 
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param reader the argument of type {@code XmlReader}
+     * @param options the argument of type {@code LoadOptions}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDocument.Load" target="_top">.NET documentation</a>
+     */
     public static XDocument Load(XmlReader reader, LoadOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OverflowException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -415,6 +715,24 @@ public class XDocument extends system.xml.linq.XContainer  {
         }
     }
 
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param reader the argument of type {@code XmlReader}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDocument.Load" target="_top">.NET documentation</a>
+     */
     public static XDocument Load(XmlReader reader) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OverflowException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -430,6 +748,28 @@ public class XDocument extends system.xml.linq.XContainer  {
         }
     }
 
+    /**
+     * Invokes the .NET member Parse.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @param options the argument of type {@code LoadOptions}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDocument.Parse" target="_top">.NET documentation</a>
+     */
     public static XDocument Parse(java.lang.String text, LoadOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.xml.XmlException, system.OverflowException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -445,6 +785,23 @@ public class XDocument extends system.xml.linq.XContainer  {
         }
     }
 
+    /**
+     * Invokes the .NET member Parse.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDocument.Parse" target="_top">.NET documentation</a>
+     */
     public static XDocument Parse(java.lang.String text) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.xml.XmlException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -460,6 +817,28 @@ public class XDocument extends system.xml.linq.XContainer  {
         }
     }
 
+    /**
+     * Invokes the .NET member Save.
+     *
+     * @param stream the argument of type {@code Stream}
+     * @param options the argument of type {@code SaveOptions}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDocument.Save" target="_top">.NET documentation</a>
+     */
     public void Save(Stream stream, SaveOptions options) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.diagnostics.UnreachableException, system.ArrayTypeMismatchException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -470,6 +849,24 @@ public class XDocument extends system.xml.linq.XContainer  {
         }
     }
 
+    /**
+     * Invokes the .NET member Save.
+     *
+     * @param stream the argument of type {@code Stream}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDocument.Save" target="_top">.NET documentation</a>
+     */
     public void Save(Stream stream) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -480,6 +877,26 @@ public class XDocument extends system.xml.linq.XContainer  {
         }
     }
 
+    /**
+     * Invokes the .NET member Save.
+     *
+     * @param textWriter the argument of type {@code TextWriter}
+     * @param options the argument of type {@code SaveOptions}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDocument.Save" target="_top">.NET documentation</a>
+     */
     public void Save(TextWriter textWriter, SaveOptions options) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.diagnostics.UnreachableException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -490,6 +907,21 @@ public class XDocument extends system.xml.linq.XContainer  {
         }
     }
 
+    /**
+     * Invokes the .NET member Save.
+     *
+     * @param textWriter the argument of type {@code TextWriter}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDocument.Save" target="_top">.NET documentation</a>
+     */
     public void Save(TextWriter textWriter) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.xml.XmlException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -500,6 +932,27 @@ public class XDocument extends system.xml.linq.XContainer  {
         }
     }
 
+    /**
+     * Invokes the .NET member Save.
+     *
+     * @param fileName the argument of type {@code java.lang.String}
+     * @param options the argument of type {@code SaveOptions}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDocument.Save" target="_top">.NET documentation</a>
+     */
     public void Save(java.lang.String fileName, SaveOptions options) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.NullReferenceException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -510,6 +963,24 @@ public class XDocument extends system.xml.linq.XContainer  {
         }
     }
 
+    /**
+     * Invokes the .NET member Save.
+     *
+     * @param fileName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDocument.Save" target="_top">.NET documentation</a>
+     */
     public void Save(java.lang.String fileName) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -520,6 +991,13 @@ public class XDocument extends system.xml.linq.XContainer  {
         }
     }
 
+    /**
+     * Invokes the .NET member Save.
+     *
+     * @param writer the argument of type {@code XmlWriter}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDocument.Save" target="_top">.NET documentation</a>
+     */
     public void Save(XmlWriter writer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -530,6 +1008,22 @@ public class XDocument extends system.xml.linq.XContainer  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteTo.
+     *
+     * @param writer the argument of type {@code XmlWriter}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDocument.WriteTo" target="_top">.NET documentation</a>
+     */
     public void WriteTo(XmlWriter writer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -544,6 +1038,13 @@ public class XDocument extends system.xml.linq.XContainer  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Declaration.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDocument.Declaration" target="_top">.NET documentation</a>
+     */
     public XDeclaration getDeclaration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -559,6 +1060,13 @@ public class XDocument extends system.xml.linq.XContainer  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Declaration.
+     *
+     * @param Declaration the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDocument.Declaration" target="_top">.NET documentation</a>
+     */
     public void setDeclaration(XDeclaration Declaration) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -569,6 +1077,13 @@ public class XDocument extends system.xml.linq.XContainer  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DocumentType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDocument.DocumentType" target="_top">.NET documentation</a>
+     */
     public XDocumentType getDocumentType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -584,6 +1099,13 @@ public class XDocument extends system.xml.linq.XContainer  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Root.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDocument.Root" target="_top">.NET documentation</a>
+     */
     public XElement getRoot() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -103,7 +103,10 @@ public class Convert extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Convert(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,12 @@ public class Convert extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Convert.-ctor" target="_top">.NET documentation</a>
+     */
     public Convert() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,32 @@ public class Convert extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsBadIndex.
+     *
+     * @param ast the argument of type {@code AST}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @throws microsoft.jscript.EndOfFile if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Convert.IsBadIndex" target="_top">.NET documentation</a>
+     */
     public static boolean IsBadIndex(AST ast) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.FormatException, system.OverflowException, system.IndexOutOfRangeException, system.security.SecurityException, system.reflection.TargetInvocationException, microsoft.jscript.vsa.JSVsaException, microsoft.jscript.EndOfFile {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -178,6 +213,14 @@ public class Convert extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToBoolean.
+     *
+     * @param d the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Convert.ToBoolean" target="_top">.NET documentation</a>
+     */
     public static boolean ToBoolean(double d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -192,6 +235,16 @@ public class Convert extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToBoolean.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Convert.ToBoolean" target="_top">.NET documentation</a>
+     */
     public static boolean ToBoolean(NetObject value) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -206,6 +259,17 @@ public class Convert extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToBoolean.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @param explicitConversion the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Convert.ToBoolean" target="_top">.NET documentation</a>
+     */
     public static boolean ToBoolean(NetObject value, boolean explicitConversion) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -220,6 +284,15 @@ public class Convert extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CheckIfDoubleIsInteger.
+     *
+     * @param d the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Convert.CheckIfDoubleIsInteger" target="_top">.NET documentation</a>
+     */
     public static double CheckIfDoubleIsInteger(double d) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -260,6 +333,26 @@ public class Convert extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToNumber.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws microsoft.jscript.EndOfFile if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Convert.ToNumber" target="_top">.NET documentation</a>
+     */
     public static double ToNumber(NetObject value) throws Throwable, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, microsoft.jscript.JScriptException, microsoft.jscript.EndOfFile, system.ArgumentNullException, system.MissingMethodException, system.OverflowException, system.FormatException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -300,6 +393,26 @@ public class Convert extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToNumber.
+     *
+     * @param str the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Convert.ToNumber" target="_top">.NET documentation</a>
+     */
     public static double ToNumber(java.lang.String str) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException, microsoft.jscript.JScriptException, system.IndexOutOfRangeException, system.NotImplementedException, system.MissingMethodException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -340,6 +453,26 @@ public class Convert extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToInt32.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws microsoft.jscript.EndOfFile if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Convert.ToInt32" target="_top">.NET documentation</a>
+     */
     public static int ToInt32(NetObject value) throws Throwable, system.ArithmeticException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, microsoft.jscript.JScriptException, microsoft.jscript.EndOfFile, system.ArgumentNullException, system.MissingMethodException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -380,6 +513,15 @@ public class Convert extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CheckIfSingleIsInteger.
+     *
+     * @param s the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Convert.CheckIfSingleIsInteger" target="_top">.NET documentation</a>
+     */
     public static Single CheckIfSingleIsInteger(Single s) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -395,6 +537,27 @@ public class Convert extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Coerce.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @param type the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @throws microsoft.jscript.EndOfFile if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Convert.Coerce" target="_top">.NET documentation</a>
+     */
     public static NetObject Coerce(NetObject value, NetObject type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.NotImplementedException, system.NullReferenceException, system.InvalidOperationException, microsoft.jscript.vsa.JSVsaException, microsoft.jscript.EndOfFile, system.ArgumentOutOfRangeException, microsoft.jscript.JScriptException, system.NotSupportedException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -410,6 +573,31 @@ public class Convert extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Coerce2.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @param target the argument of type {@code TypeCode}
+     * @param truncationPermitted the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Convert.Coerce2" target="_top">.NET documentation</a>
+     */
     public static NetObject Coerce2(NetObject value, TypeCode target, boolean truncationPermitted) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, microsoft.jscript.JScriptException, system.IndexOutOfRangeException, system.MissingMethodException, system.ArgumentException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException, system.globalization.CultureNotFoundException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -425,6 +613,36 @@ public class Convert extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CoerceT.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @param t the argument of type {@code NetType}
+     * @param explicitOK the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Convert.CoerceT" target="_top">.NET documentation</a>
+     */
     public static NetObject CoerceT(NetObject value, NetType t, boolean explicitOK) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidCastException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.ArithmeticException, system.OverflowException, system.OutOfMemoryException, system.TypeInitializationException, system.security.SecurityException, system.reflection.TargetInvocationException, microsoft.jscript.vsa.JSVsaException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -440,6 +658,17 @@ public class Convert extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToForInObject.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @param engine the argument of type {@code VsaEngine}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Convert.ToForInObject" target="_top">.NET documentation</a>
+     */
     public static NetObject ToForInObject(NetObject value, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -455,6 +684,31 @@ public class Convert extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToNativeArray.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @param handle the argument of type {@code RuntimeTypeHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @throws microsoft.jscript.EndOfFile if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Convert.ToNativeArray" target="_top">.NET documentation</a>
+     */
     public static NetObject ToNativeArray(NetObject value, RuntimeTypeHandle handle) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.InvalidCastException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotImplementedException, system.MissingMethodException, system.FormatException, system.OverflowException, system.reflection.TargetInvocationException, microsoft.jscript.vsa.JSVsaException, microsoft.jscript.EndOfFile {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -470,6 +724,18 @@ public class Convert extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToObject.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @param engine the argument of type {@code VsaEngine}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Convert.ToObject" target="_top">.NET documentation</a>
+     */
     public static NetObject ToObject(NetObject value, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.NotImplementedException, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -485,6 +751,18 @@ public class Convert extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToObject2.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @param engine the argument of type {@code VsaEngine}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Convert.ToObject2" target="_top">.NET documentation</a>
+     */
     public static NetObject ToObject2(NetObject value, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.NotImplementedException, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -500,6 +778,14 @@ public class Convert extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToString.
+     *
+     * @param b the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Convert.ToString" target="_top">.NET documentation</a>
+     */
     public static java.lang.String ToString(boolean b) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -514,6 +800,24 @@ public class Convert extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToString.
+     *
+     * @param d the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Convert.ToString" target="_top">.NET documentation</a>
+     */
     public static java.lang.String ToString(double d) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -528,6 +832,29 @@ public class Convert extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToString.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @param explicitOK the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Convert.ToString" target="_top">.NET documentation</a>
+     */
     public static java.lang.String ToString(NetObject value, boolean explicitOK) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.NotImplementedException, microsoft.jscript.JScriptException, system.MissingMethodException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -542,6 +869,15 @@ public class Convert extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ThrowTypeMismatch.
+     *
+     * @param val the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Convert.ThrowTypeMismatch" target="_top">.NET documentation</a>
+     */
     public static void ThrowTypeMismatch(NetObject val) throws Throwable, microsoft.jscript.vsa.JSVsaException, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

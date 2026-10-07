@@ -102,7 +102,10 @@ public class IReadOnlyList_1Implementation<T extends IJCOBridgeReflected> extend
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IReadOnlyList_1Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,13 @@ public class IReadOnlyList_1Implementation<T extends IJCOBridgeReflected> extend
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Count.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.IReadOnlyList-1.Count" target="_top">.NET documentation</a>
+     */
     public int getCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

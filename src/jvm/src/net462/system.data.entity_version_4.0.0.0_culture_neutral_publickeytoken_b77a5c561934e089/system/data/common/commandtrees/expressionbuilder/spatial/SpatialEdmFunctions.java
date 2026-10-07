@@ -100,7 +100,10 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SpatialEdmFunctions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,23 @@ public class SpatialEdmFunctions extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Area.
+     *
+     * @param spatialValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.Area" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression Area(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -168,6 +188,23 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsBinary.
+     *
+     * @param spatialValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.AsBinary" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression AsBinary(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -183,6 +220,23 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsGml.
+     *
+     * @param spatialValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.AsGml" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression AsGml(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -198,6 +252,23 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsText.
+     *
+     * @param spatialValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.AsText" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression AsText(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -213,6 +284,23 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Centroid.
+     *
+     * @param geometryValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.Centroid" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression Centroid(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -228,6 +316,23 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CoordinateSystemId.
+     *
+     * @param spatialValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.CoordinateSystemId" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression CoordinateSystemId(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -243,6 +348,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Distance.
+     *
+     * @param spatialValue1 the argument of type {@code DbExpression}
+     * @param spatialValue2 the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.Distance" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression Distance(DbExpression spatialValue1, DbExpression spatialValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -258,6 +381,23 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Elevation.
+     *
+     * @param spatialValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.Elevation" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression Elevation(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -273,6 +413,23 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EndPoint.
+     *
+     * @param spatialValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.EndPoint" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression EndPoint(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -288,6 +445,23 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExteriorRing.
+     *
+     * @param geometryValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.ExteriorRing" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression ExteriorRing(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -303,6 +477,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeographyCollectionFromBinary.
+     *
+     * @param geographyCollectionWellKnownBinaryValue the argument of type {@code DbExpression}
+     * @param coordinateSystemId the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeographyCollectionFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeographyCollectionFromBinary(DbExpression geographyCollectionWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -318,6 +510,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeographyCollectionFromText.
+     *
+     * @param geographyCollectionWellKnownText the argument of type {@code DbExpression}
+     * @param coordinateSystemId the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeographyCollectionFromText" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeographyCollectionFromText(DbExpression geographyCollectionWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -333,6 +543,23 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeographyFromBinary.
+     *
+     * @param wellKnownBinaryValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeographyFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeographyFromBinary(DbExpression wellKnownBinaryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -348,6 +575,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeographyFromBinary.
+     *
+     * @param wellKnownBinaryValue the argument of type {@code DbExpression}
+     * @param coordinateSystemId the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeographyFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeographyFromBinary(DbExpression wellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -363,6 +608,23 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeographyFromGml.
+     *
+     * @param geographyMarkup the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeographyFromGml" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeographyFromGml(DbExpression geographyMarkup) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -378,6 +640,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeographyFromGml.
+     *
+     * @param geographyMarkup the argument of type {@code DbExpression}
+     * @param coordinateSystemId the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeographyFromGml" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeographyFromGml(DbExpression geographyMarkup, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -393,6 +673,23 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeographyFromText.
+     *
+     * @param wellKnownText the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeographyFromText" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeographyFromText(DbExpression wellKnownText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -408,6 +705,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeographyFromText.
+     *
+     * @param wellKnownText the argument of type {@code DbExpression}
+     * @param coordinateSystemId the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeographyFromText" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeographyFromText(DbExpression wellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -423,6 +738,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeographyLineFromBinary.
+     *
+     * @param lineWellKnownBinaryValue the argument of type {@code DbExpression}
+     * @param coordinateSystemId the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeographyLineFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeographyLineFromBinary(DbExpression lineWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -438,6 +771,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeographyLineFromText.
+     *
+     * @param lineWellKnownText the argument of type {@code DbExpression}
+     * @param coordinateSystemId the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeographyLineFromText" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeographyLineFromText(DbExpression lineWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -453,6 +804,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeographyMultiLineFromBinary.
+     *
+     * @param multiLineWellKnownBinaryValue the argument of type {@code DbExpression}
+     * @param coordinateSystemId the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeographyMultiLineFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeographyMultiLineFromBinary(DbExpression multiLineWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -468,6 +837,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeographyMultiLineFromText.
+     *
+     * @param multiLineWellKnownText the argument of type {@code DbExpression}
+     * @param coordinateSystemId the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeographyMultiLineFromText" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeographyMultiLineFromText(DbExpression multiLineWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -483,6 +870,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeographyMultiPointFromBinary.
+     *
+     * @param multiPointWellKnownBinaryValue the argument of type {@code DbExpression}
+     * @param coordinateSystemId the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeographyMultiPointFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeographyMultiPointFromBinary(DbExpression multiPointWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -498,6 +903,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeographyMultiPointFromText.
+     *
+     * @param multiPointWellKnownText the argument of type {@code DbExpression}
+     * @param coordinateSystemId the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeographyMultiPointFromText" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeographyMultiPointFromText(DbExpression multiPointWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -513,6 +936,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeographyMultiPolygonFromBinary.
+     *
+     * @param multiPolygonWellKnownBinaryValue the argument of type {@code DbExpression}
+     * @param coordinateSystemId the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeographyMultiPolygonFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeographyMultiPolygonFromBinary(DbExpression multiPolygonWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -528,6 +969,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeographyMultiPolygonFromText.
+     *
+     * @param multiPolygonWellKnownText the argument of type {@code DbExpression}
+     * @param coordinateSystemId the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeographyMultiPolygonFromText" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeographyMultiPolygonFromText(DbExpression multiPolygonWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -543,6 +1002,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeographyPointFromBinary.
+     *
+     * @param pointWellKnownBinaryValue the argument of type {@code DbExpression}
+     * @param coordinateSystemId the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeographyPointFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeographyPointFromBinary(DbExpression pointWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -558,6 +1035,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeographyPointFromText.
+     *
+     * @param pointWellKnownText the argument of type {@code DbExpression}
+     * @param coordinateSystemId the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeographyPointFromText" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeographyPointFromText(DbExpression pointWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -573,6 +1068,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeographyPolygonFromBinary.
+     *
+     * @param polygonWellKnownBinaryValue the argument of type {@code DbExpression}
+     * @param coordinateSystemId the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeographyPolygonFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeographyPolygonFromBinary(DbExpression polygonWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -588,6 +1101,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeographyPolygonFromText.
+     *
+     * @param polygonWellKnownText the argument of type {@code DbExpression}
+     * @param coordinateSystemId the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeographyPolygonFromText" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeographyPolygonFromText(DbExpression polygonWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -603,6 +1134,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeometryCollectionFromBinary.
+     *
+     * @param geometryCollectionWellKnownBinaryValue the argument of type {@code DbExpression}
+     * @param coordinateSystemId the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeometryCollectionFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeometryCollectionFromBinary(DbExpression geometryCollectionWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -618,6 +1167,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeometryCollectionFromText.
+     *
+     * @param geometryCollectionWellKnownText the argument of type {@code DbExpression}
+     * @param coordinateSystemId the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeometryCollectionFromText" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeometryCollectionFromText(DbExpression geometryCollectionWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -633,6 +1200,23 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeometryFromBinary.
+     *
+     * @param wellKnownBinaryValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeometryFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeometryFromBinary(DbExpression wellKnownBinaryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -648,6 +1232,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeometryFromBinary.
+     *
+     * @param wellKnownBinaryValue the argument of type {@code DbExpression}
+     * @param coordinateSystemId the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeometryFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeometryFromBinary(DbExpression wellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -663,6 +1265,23 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeometryFromGml.
+     *
+     * @param geometryMarkup the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeometryFromGml" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeometryFromGml(DbExpression geometryMarkup) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -678,6 +1297,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeometryFromGml.
+     *
+     * @param geometryMarkup the argument of type {@code DbExpression}
+     * @param coordinateSystemId the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeometryFromGml" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeometryFromGml(DbExpression geometryMarkup, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -693,6 +1330,23 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeometryFromText.
+     *
+     * @param wellKnownText the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeometryFromText" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeometryFromText(DbExpression wellKnownText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -708,6 +1362,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeometryFromText.
+     *
+     * @param wellKnownText the argument of type {@code DbExpression}
+     * @param coordinateSystemId the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeometryFromText" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeometryFromText(DbExpression wellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -723,6 +1395,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeometryLineFromBinary.
+     *
+     * @param lineWellKnownBinaryValue the argument of type {@code DbExpression}
+     * @param coordinateSystemId the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeometryLineFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeometryLineFromBinary(DbExpression lineWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -738,6 +1428,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeometryLineFromText.
+     *
+     * @param lineWellKnownText the argument of type {@code DbExpression}
+     * @param coordinateSystemId the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeometryLineFromText" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeometryLineFromText(DbExpression lineWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -753,6 +1461,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeometryMultiLineFromBinary.
+     *
+     * @param multiLineWellKnownBinaryValue the argument of type {@code DbExpression}
+     * @param coordinateSystemId the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeometryMultiLineFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeometryMultiLineFromBinary(DbExpression multiLineWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -768,6 +1494,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeometryMultiLineFromText.
+     *
+     * @param multiLineWellKnownText the argument of type {@code DbExpression}
+     * @param coordinateSystemId the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeometryMultiLineFromText" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeometryMultiLineFromText(DbExpression multiLineWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -783,6 +1527,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeometryMultiPointFromBinary.
+     *
+     * @param multiPointWellKnownBinaryValue the argument of type {@code DbExpression}
+     * @param coordinateSystemId the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeometryMultiPointFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeometryMultiPointFromBinary(DbExpression multiPointWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -798,6 +1560,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeometryMultiPointFromText.
+     *
+     * @param multiPointWellKnownText the argument of type {@code DbExpression}
+     * @param coordinateSystemId the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeometryMultiPointFromText" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeometryMultiPointFromText(DbExpression multiPointWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -813,6 +1593,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeometryMultiPolygonFromBinary.
+     *
+     * @param multiPolygonWellKnownBinaryValue the argument of type {@code DbExpression}
+     * @param coordinateSystemId the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeometryMultiPolygonFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeometryMultiPolygonFromBinary(DbExpression multiPolygonWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -828,6 +1626,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeometryMultiPolygonFromText.
+     *
+     * @param multiPolygonWellKnownText the argument of type {@code DbExpression}
+     * @param coordinateSystemId the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeometryMultiPolygonFromText" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeometryMultiPolygonFromText(DbExpression multiPolygonWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -843,6 +1659,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeometryPointFromBinary.
+     *
+     * @param pointWellKnownBinaryValue the argument of type {@code DbExpression}
+     * @param coordinateSystemId the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeometryPointFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeometryPointFromBinary(DbExpression pointWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -858,6 +1692,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeometryPointFromText.
+     *
+     * @param pointWellKnownText the argument of type {@code DbExpression}
+     * @param coordinateSystemId the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeometryPointFromText" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeometryPointFromText(DbExpression pointWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -873,6 +1725,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeometryPolygonFromBinary.
+     *
+     * @param polygonWellKnownBinaryValue the argument of type {@code DbExpression}
+     * @param coordinateSystemId the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeometryPolygonFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeometryPolygonFromBinary(DbExpression polygonWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -888,6 +1758,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeometryPolygonFromText.
+     *
+     * @param polygonWellKnownText the argument of type {@code DbExpression}
+     * @param coordinateSystemId the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.GeometryPolygonFromText" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GeometryPolygonFromText(DbExpression polygonWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -903,6 +1791,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member InteriorRingAt.
+     *
+     * @param geometryValue the argument of type {@code DbExpression}
+     * @param indexValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.InteriorRingAt" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression InteriorRingAt(DbExpression geometryValue, DbExpression indexValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -918,6 +1824,23 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member InteriorRingCount.
+     *
+     * @param geometryValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.InteriorRingCount" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression InteriorRingCount(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -933,6 +1856,23 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsClosedSpatial.
+     *
+     * @param spatialValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.IsClosedSpatial" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression IsClosedSpatial(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -948,6 +1888,23 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsEmptySpatial.
+     *
+     * @param spatialValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.IsEmptySpatial" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression IsEmptySpatial(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -963,6 +1920,23 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsRing.
+     *
+     * @param geometryValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.IsRing" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression IsRing(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -978,6 +1952,23 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsSimpleGeometry.
+     *
+     * @param geometryValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.IsSimpleGeometry" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression IsSimpleGeometry(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -993,6 +1984,23 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsValidGeometry.
+     *
+     * @param geometryValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.IsValidGeometry" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression IsValidGeometry(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1008,6 +2016,23 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Latitude.
+     *
+     * @param geographyValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.Latitude" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression Latitude(DbExpression geographyValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1023,6 +2048,23 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Longitude.
+     *
+     * @param geographyValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.Longitude" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression Longitude(DbExpression geographyValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1038,6 +2080,23 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Measure.
+     *
+     * @param spatialValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.Measure" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression Measure(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1053,6 +2112,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PointAt.
+     *
+     * @param spatialValue the argument of type {@code DbExpression}
+     * @param indexValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.PointAt" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression PointAt(DbExpression spatialValue, DbExpression indexValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1068,6 +2145,23 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PointCount.
+     *
+     * @param spatialValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.PointCount" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression PointCount(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1083,6 +2177,23 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PointOnSurface.
+     *
+     * @param geometryValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.PointOnSurface" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression PointOnSurface(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1098,6 +2209,23 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SpatialBoundary.
+     *
+     * @param geometryValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialBoundary" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression SpatialBoundary(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1113,6 +2241,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SpatialBuffer.
+     *
+     * @param spatialValue the argument of type {@code DbExpression}
+     * @param distance the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialBuffer" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression SpatialBuffer(DbExpression spatialValue, DbExpression distance) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1128,6 +2274,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SpatialContains.
+     *
+     * @param geometryValue1 the argument of type {@code DbExpression}
+     * @param geometryValue2 the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialContains" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression SpatialContains(DbExpression geometryValue1, DbExpression geometryValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1143,6 +2307,23 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SpatialConvexHull.
+     *
+     * @param geometryValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialConvexHull" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression SpatialConvexHull(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1158,6 +2339,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SpatialCrosses.
+     *
+     * @param geometryValue1 the argument of type {@code DbExpression}
+     * @param geometryValue2 the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialCrosses" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression SpatialCrosses(DbExpression geometryValue1, DbExpression geometryValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1173,6 +2372,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SpatialDifference.
+     *
+     * @param spatialValue1 the argument of type {@code DbExpression}
+     * @param spatialValue2 the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialDifference" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression SpatialDifference(DbExpression spatialValue1, DbExpression spatialValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1188,6 +2405,23 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SpatialDimension.
+     *
+     * @param spatialValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialDimension" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression SpatialDimension(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1203,6 +2437,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SpatialDisjoint.
+     *
+     * @param spatialValue1 the argument of type {@code DbExpression}
+     * @param spatialValue2 the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialDisjoint" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression SpatialDisjoint(DbExpression spatialValue1, DbExpression spatialValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1218,6 +2470,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SpatialElementAt.
+     *
+     * @param spatialValue the argument of type {@code DbExpression}
+     * @param indexValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialElementAt" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression SpatialElementAt(DbExpression spatialValue, DbExpression indexValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1233,6 +2503,23 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SpatialElementCount.
+     *
+     * @param spatialValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialElementCount" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression SpatialElementCount(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1248,6 +2535,23 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SpatialEnvelope.
+     *
+     * @param geometryValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialEnvelope" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression SpatialEnvelope(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1263,6 +2567,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SpatialEquals.
+     *
+     * @param spatialValue1 the argument of type {@code DbExpression}
+     * @param spatialValue2 the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialEquals" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression SpatialEquals(DbExpression spatialValue1, DbExpression spatialValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1278,6 +2600,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SpatialIntersection.
+     *
+     * @param spatialValue1 the argument of type {@code DbExpression}
+     * @param spatialValue2 the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialIntersection" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression SpatialIntersection(DbExpression spatialValue1, DbExpression spatialValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1293,6 +2633,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SpatialIntersects.
+     *
+     * @param spatialValue1 the argument of type {@code DbExpression}
+     * @param spatialValue2 the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialIntersects" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression SpatialIntersects(DbExpression spatialValue1, DbExpression spatialValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1308,6 +2666,23 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SpatialLength.
+     *
+     * @param spatialValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialLength" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression SpatialLength(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1323,6 +2698,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SpatialOverlaps.
+     *
+     * @param geometryValue1 the argument of type {@code DbExpression}
+     * @param geometryValue2 the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialOverlaps" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression SpatialOverlaps(DbExpression geometryValue1, DbExpression geometryValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1338,6 +2731,25 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SpatialRelate.
+     *
+     * @param geometryValue1 the argument of type {@code DbExpression}
+     * @param geometryValue2 the argument of type {@code DbExpression}
+     * @param intersectionPatternMatrix the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialRelate" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression SpatialRelate(DbExpression geometryValue1, DbExpression geometryValue2, DbExpression intersectionPatternMatrix) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1353,6 +2765,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SpatialSymmetricDifference.
+     *
+     * @param spatialValue1 the argument of type {@code DbExpression}
+     * @param spatialValue2 the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialSymmetricDifference" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression SpatialSymmetricDifference(DbExpression spatialValue1, DbExpression spatialValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1368,6 +2798,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SpatialTouches.
+     *
+     * @param geometryValue1 the argument of type {@code DbExpression}
+     * @param geometryValue2 the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialTouches" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression SpatialTouches(DbExpression geometryValue1, DbExpression geometryValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1383,6 +2831,23 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SpatialTypeName.
+     *
+     * @param spatialValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialTypeName" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression SpatialTypeName(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1398,6 +2863,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SpatialUnion.
+     *
+     * @param spatialValue1 the argument of type {@code DbExpression}
+     * @param spatialValue2 the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialUnion" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression SpatialUnion(DbExpression spatialValue1, DbExpression spatialValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1413,6 +2896,24 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SpatialWithin.
+     *
+     * @param geometryValue1 the argument of type {@code DbExpression}
+     * @param geometryValue2 the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialWithin" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression SpatialWithin(DbExpression geometryValue1, DbExpression geometryValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1428,6 +2929,23 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member StartPoint.
+     *
+     * @param spatialValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.StartPoint" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression StartPoint(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1443,6 +2961,23 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member XCoordinate.
+     *
+     * @param geometryValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.XCoordinate" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression XCoordinate(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1458,6 +2993,23 @@ public class SpatialEdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member YCoordinate.
+     *
+     * @param geometryValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.YCoordinate" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression YCoordinate(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

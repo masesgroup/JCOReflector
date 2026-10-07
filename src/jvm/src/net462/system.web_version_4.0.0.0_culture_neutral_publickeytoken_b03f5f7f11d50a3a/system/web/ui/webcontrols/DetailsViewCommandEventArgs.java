@@ -99,7 +99,10 @@ public class DetailsViewCommandEventArgs extends system.web.ui.webcontrols.Comma
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DetailsViewCommandEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class DetailsViewCommandEventArgs extends system.web.ui.webcontrols.Comma
     public DetailsViewCommandEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param commandSource the argument of type {@code NetObject}
+     * @param originalArgs the argument of type {@code CommandEventArgs}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.DetailsViewCommandEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public DetailsViewCommandEventArgs(NetObject commandSource, CommandEventArgs originalArgs) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +179,13 @@ public class DetailsViewCommandEventArgs extends system.web.ui.webcontrols.Comma
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Handled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.DetailsViewCommandEventArgs.Handled" target="_top">.NET documentation</a>
+     */
     public boolean getHandled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +200,13 @@ public class DetailsViewCommandEventArgs extends system.web.ui.webcontrols.Comma
         }
     }
 
+    /**
+     * Sets the value of the .NET property Handled.
+     *
+     * @param Handled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.DetailsViewCommandEventArgs.Handled" target="_top">.NET documentation</a>
+     */
     public void setHandled(boolean Handled) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +217,13 @@ public class DetailsViewCommandEventArgs extends system.web.ui.webcontrols.Comma
         }
     }
 
+    /**
+     * Gets the value of the .NET property CommandSource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.DetailsViewCommandEventArgs.CommandSource" target="_top">.NET documentation</a>
+     */
     public NetObject getCommandSource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

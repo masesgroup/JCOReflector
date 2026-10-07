@@ -99,7 +99,10 @@ public class IUriContextImplementation extends NetObject implements IUriContext 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IUriContextImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,13 @@ public class IUriContextImplementation extends NetObject implements IUriContext 
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BaseUri.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.IUriContext.BaseUri" target="_top">.NET documentation</a>
+     */
     public Uri getBaseUri() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -160,6 +170,13 @@ public class IUriContextImplementation extends NetObject implements IUriContext 
         }
     }
 
+    /**
+     * Sets the value of the .NET property BaseUri.
+     *
+     * @param BaseUri the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.IUriContext.BaseUri" target="_top">.NET documentation</a>
+     */
     public void setBaseUri(Uri BaseUri) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -104,7 +104,10 @@ public class TouchPoint extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TouchPoint(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,25 @@ public class TouchPoint extends NetObject  {
     public TouchPoint() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param device the argument of type {@code TouchDevice}
+     * @param position the argument of type {@code Point}
+     * @param bounds the argument of type {@code Rect}
+     * @param action the argument of type {@code TouchAction}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TouchPoint.-ctor" target="_top">.NET documentation</a>
+     */
     public TouchPoint(TouchDevice device, Point position, Rect bounds, TouchAction action) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -172,8 +194,13 @@ public class TouchPoint extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIEquatable_1 method available in IEquatable_1 to obtain an object with an invocable method
+     *
+     * @param other the argument of type {@code TouchPoint}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IEquatable-1.Equals" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean Equals(TouchPoint other) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEquatable_1 to obtain the full interface.");
     }
@@ -182,6 +209,13 @@ public class TouchPoint extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Action.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TouchPoint.Action" target="_top">.NET documentation</a>
+     */
     public TouchAction getAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +231,13 @@ public class TouchPoint extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Action.
+     *
+     * @param Action the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TouchPoint.Action" target="_top">.NET documentation</a>
+     */
     public void setAction(TouchAction Action) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +248,13 @@ public class TouchPoint extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TouchDevice.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TouchPoint.TouchDevice" target="_top">.NET documentation</a>
+     */
     public TouchDevice getTouchDevice() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +270,13 @@ public class TouchPoint extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TouchDevice.
+     *
+     * @param TouchDevice the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TouchPoint.TouchDevice" target="_top">.NET documentation</a>
+     */
     public void setTouchDevice(TouchDevice TouchDevice) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +287,13 @@ public class TouchPoint extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Position.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TouchPoint.Position" target="_top">.NET documentation</a>
+     */
     public Point getPosition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +309,13 @@ public class TouchPoint extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Position.
+     *
+     * @param Position the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TouchPoint.Position" target="_top">.NET documentation</a>
+     */
     public void setPosition(Point Position) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +326,13 @@ public class TouchPoint extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Bounds.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TouchPoint.Bounds" target="_top">.NET documentation</a>
+     */
     public Rect getBounds() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +348,13 @@ public class TouchPoint extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Bounds.
+     *
+     * @param Bounds the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TouchPoint.Bounds" target="_top">.NET documentation</a>
+     */
     public void setBounds(Rect Bounds) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +365,18 @@ public class TouchPoint extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Size.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TouchPoint.Size" target="_top">.NET documentation</a>
+     */
     public Size getSize() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

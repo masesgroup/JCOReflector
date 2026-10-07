@@ -104,7 +104,10 @@ public class SoapAttributes extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SoapAttributes(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,12 @@ public class SoapAttributes extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.SoapAttributes.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapAttributes() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,13 @@ public class SoapAttributes extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param provider the argument of type {@code ICustomAttributeProvider}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.SoapAttributes.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapAttributes(ICustomAttributeProvider provider) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +195,13 @@ public class SoapAttributes extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SoapIgnore.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.SoapAttributes.SoapIgnore" target="_top">.NET documentation</a>
+     */
     public boolean getSoapIgnore() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +216,13 @@ public class SoapAttributes extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SoapIgnore.
+     *
+     * @param SoapIgnore the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.SoapAttributes.SoapIgnore" target="_top">.NET documentation</a>
+     */
     public void setSoapIgnore(boolean SoapIgnore) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +233,13 @@ public class SoapAttributes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SoapDefaultValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.SoapAttributes.SoapDefaultValue" target="_top">.NET documentation</a>
+     */
     public NetObject getSoapDefaultValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +255,13 @@ public class SoapAttributes extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SoapDefaultValue.
+     *
+     * @param SoapDefaultValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.SoapAttributes.SoapDefaultValue" target="_top">.NET documentation</a>
+     */
     public void setSoapDefaultValue(NetObject SoapDefaultValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +272,13 @@ public class SoapAttributes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SoapAttribute.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.SoapAttributes.SoapAttribute" target="_top">.NET documentation</a>
+     */
     public SoapAttributeAttribute getSoapAttribute() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +294,13 @@ public class SoapAttributes extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SoapAttribute.
+     *
+     * @param SoapAttribute the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.SoapAttributes.SoapAttribute" target="_top">.NET documentation</a>
+     */
     public void setSoapAttribute(SoapAttributeAttribute SoapAttribute) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +311,13 @@ public class SoapAttributes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SoapElement.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.SoapAttributes.SoapElement" target="_top">.NET documentation</a>
+     */
     public SoapElementAttribute getSoapElement() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +333,13 @@ public class SoapAttributes extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SoapElement.
+     *
+     * @param SoapElement the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.SoapAttributes.SoapElement" target="_top">.NET documentation</a>
+     */
     public void setSoapElement(SoapElementAttribute SoapElement) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +350,13 @@ public class SoapAttributes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SoapEnum.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.SoapAttributes.SoapEnum" target="_top">.NET documentation</a>
+     */
     public SoapEnumAttribute getSoapEnum() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +372,13 @@ public class SoapAttributes extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SoapEnum.
+     *
+     * @param SoapEnum the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.SoapAttributes.SoapEnum" target="_top">.NET documentation</a>
+     */
     public void setSoapEnum(SoapEnumAttribute SoapEnum) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +389,13 @@ public class SoapAttributes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SoapType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.SoapAttributes.SoapType" target="_top">.NET documentation</a>
+     */
     public SoapTypeAttribute getSoapType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +411,13 @@ public class SoapAttributes extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SoapType.
+     *
+     * @param SoapType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.SoapAttributes.SoapType" target="_top">.NET documentation</a>
+     */
     public void setSoapType(SoapTypeAttribute SoapType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

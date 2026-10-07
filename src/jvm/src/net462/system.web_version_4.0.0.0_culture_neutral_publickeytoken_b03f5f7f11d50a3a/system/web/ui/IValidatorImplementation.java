@@ -98,7 +98,10 @@ public class IValidatorImplementation extends NetObject implements IValidator {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IValidatorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,12 @@ public class IValidatorImplementation extends NetObject implements IValidator {
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Validate.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IValidator.Validate" target="_top">.NET documentation</a>
+     */
     public void Validate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -154,6 +163,13 @@ public class IValidatorImplementation extends NetObject implements IValidator {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsValid.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IValidator.IsValid" target="_top">.NET documentation</a>
+     */
     public boolean getIsValid() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +184,13 @@ public class IValidatorImplementation extends NetObject implements IValidator {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsValid.
+     *
+     * @param IsValid the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IValidator.IsValid" target="_top">.NET documentation</a>
+     */
     public void setIsValid(boolean IsValid) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +201,13 @@ public class IValidatorImplementation extends NetObject implements IValidator {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ErrorMessage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IValidator.ErrorMessage" target="_top">.NET documentation</a>
+     */
     public java.lang.String getErrorMessage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +222,13 @@ public class IValidatorImplementation extends NetObject implements IValidator {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ErrorMessage.
+     *
+     * @param ErrorMessage the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IValidator.ErrorMessage" target="_top">.NET documentation</a>
+     */
     public void setErrorMessage(java.lang.String ErrorMessage) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

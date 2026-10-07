@@ -106,7 +106,10 @@ public class WebSocketContext extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WebSocketContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -163,6 +166,13 @@ public class WebSocketContext extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsAuthenticated.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketContext.IsAuthenticated" target="_top">.NET documentation</a>
+     */
     public boolean getIsAuthenticated() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +187,13 @@ public class WebSocketContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsLocal.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketContext.IsLocal" target="_top">.NET documentation</a>
+     */
     public boolean getIsLocal() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +208,13 @@ public class WebSocketContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSecureConnection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketContext.IsSecureConnection" target="_top">.NET documentation</a>
+     */
     public boolean getIsSecureConnection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +229,13 @@ public class WebSocketContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SecWebSocketProtocols.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketContext.SecWebSocketProtocols" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 getSecWebSocketProtocols() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +251,13 @@ public class WebSocketContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Headers.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketContext.Headers" target="_top">.NET documentation</a>
+     */
     public NameValueCollection getHeaders() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +273,13 @@ public class WebSocketContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CookieCollection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketContext.CookieCollection" target="_top">.NET documentation</a>
+     */
     public CookieCollection getCookieCollection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +295,13 @@ public class WebSocketContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WebSocket.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketContext.WebSocket" target="_top">.NET documentation</a>
+     */
     public WebSocket getWebSocket() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +317,13 @@ public class WebSocketContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property User.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketContext.User" target="_top">.NET documentation</a>
+     */
     public IPrincipal getUser() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +339,13 @@ public class WebSocketContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Origin.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketContext.Origin" target="_top">.NET documentation</a>
+     */
     public java.lang.String getOrigin() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +360,13 @@ public class WebSocketContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SecWebSocketKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketContext.SecWebSocketKey" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSecWebSocketKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +381,13 @@ public class WebSocketContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SecWebSocketVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketContext.SecWebSocketVersion" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSecWebSocketVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -322,6 +402,13 @@ public class WebSocketContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequestUri.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketContext.RequestUri" target="_top">.NET documentation</a>
+     */
     public Uri getRequestUri() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

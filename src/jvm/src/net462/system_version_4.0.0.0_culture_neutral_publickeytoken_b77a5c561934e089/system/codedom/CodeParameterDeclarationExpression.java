@@ -102,7 +102,10 @@ public class CodeParameterDeclarationExpression extends system.codedom.CodeExpre
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodeParameterDeclarationExpression(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class CodeParameterDeclarationExpression extends system.codedom.CodeExpre
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeParameterDeclarationExpression.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeParameterDeclarationExpression() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +168,14 @@ public class CodeParameterDeclarationExpression extends system.codedom.CodeExpre
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param type the argument of type {@code CodeTypeReference}
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeParameterDeclarationExpression.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeParameterDeclarationExpression(CodeTypeReference type, java.lang.String name) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +186,18 @@ public class CodeParameterDeclarationExpression extends system.codedom.CodeExpre
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param type the argument of type {@code java.lang.String}
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeParameterDeclarationExpression.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeParameterDeclarationExpression(java.lang.String type, java.lang.String name) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +208,17 @@ public class CodeParameterDeclarationExpression extends system.codedom.CodeExpre
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeParameterDeclarationExpression.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeParameterDeclarationExpression(NetType type, java.lang.String name) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -197,6 +237,13 @@ public class CodeParameterDeclarationExpression extends system.codedom.CodeExpre
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CustomAttributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeParameterDeclarationExpression.CustomAttributes" target="_top">.NET documentation</a>
+     */
     public CodeAttributeDeclarationCollection getCustomAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +259,13 @@ public class CodeParameterDeclarationExpression extends system.codedom.CodeExpre
         }
     }
 
+    /**
+     * Sets the value of the .NET property CustomAttributes.
+     *
+     * @param CustomAttributes the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeParameterDeclarationExpression.CustomAttributes" target="_top">.NET documentation</a>
+     */
     public void setCustomAttributes(CodeAttributeDeclarationCollection CustomAttributes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +276,17 @@ public class CodeParameterDeclarationExpression extends system.codedom.CodeExpre
         }
     }
 
+    /**
+     * Gets the value of the .NET property Type.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeParameterDeclarationExpression.Type" target="_top">.NET documentation</a>
+     */
     public CodeTypeReference getType() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +302,13 @@ public class CodeParameterDeclarationExpression extends system.codedom.CodeExpre
         }
     }
 
+    /**
+     * Sets the value of the .NET property Type.
+     *
+     * @param Type the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeParameterDeclarationExpression.Type" target="_top">.NET documentation</a>
+     */
     public void setType(CodeTypeReference Type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +319,13 @@ public class CodeParameterDeclarationExpression extends system.codedom.CodeExpre
         }
     }
 
+    /**
+     * Gets the value of the .NET property Direction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeParameterDeclarationExpression.Direction" target="_top">.NET documentation</a>
+     */
     public FieldDirection getDirection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +341,13 @@ public class CodeParameterDeclarationExpression extends system.codedom.CodeExpre
         }
     }
 
+    /**
+     * Sets the value of the .NET property Direction.
+     *
+     * @param Direction the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeParameterDeclarationExpression.Direction" target="_top">.NET documentation</a>
+     */
     public void setDirection(FieldDirection Direction) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +358,13 @@ public class CodeParameterDeclarationExpression extends system.codedom.CodeExpre
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeParameterDeclarationExpression.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +379,13 @@ public class CodeParameterDeclarationExpression extends system.codedom.CodeExpre
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeParameterDeclarationExpression.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

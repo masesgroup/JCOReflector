@@ -104,7 +104,10 @@ public class OraclePermission extends system.security.CodeAccessPermission  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public OraclePermission(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,13 @@ public class OraclePermission extends system.security.CodeAccessPermission  {
     public OraclePermission() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param state the argument of type {@code PermissionState}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OraclePermission.-ctor" target="_top">.NET documentation</a>
+     */
     public OraclePermission(PermissionState state) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +179,14 @@ public class OraclePermission extends system.security.CodeAccessPermission  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsSubsetOf.
+     *
+     * @param target the argument of type {@code IPermission}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OraclePermission.IsSubsetOf" target="_top">.NET documentation</a>
+     */
     public boolean IsSubsetOf(IPermission target) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +201,13 @@ public class OraclePermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsUnrestricted.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OraclePermission.IsUnrestricted" target="_top">.NET documentation</a>
+     */
     public boolean IsUnrestricted() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +222,13 @@ public class OraclePermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member Copy.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OraclePermission.Copy" target="_top">.NET documentation</a>
+     */
     public IPermission Copy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +244,14 @@ public class OraclePermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member Intersect.
+     *
+     * @param target the argument of type {@code IPermission}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OraclePermission.Intersect" target="_top">.NET documentation</a>
+     */
     public IPermission Intersect(IPermission target) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +267,14 @@ public class OraclePermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member Union.
+     *
+     * @param target the argument of type {@code IPermission}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OraclePermission.Union" target="_top">.NET documentation</a>
+     */
     public IPermission Union(IPermission target) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +290,13 @@ public class OraclePermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToXml.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OraclePermission.ToXml" target="_top">.NET documentation</a>
+     */
     public SecurityElement ToXml() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +312,15 @@ public class OraclePermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param connectionString the argument of type {@code java.lang.String}
+     * @param restrictions the argument of type {@code java.lang.String}
+     * @param behavior the argument of type {@code KeyRestrictionBehavior}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OraclePermission.Add" target="_top">.NET documentation</a>
+     */
     public void Add(java.lang.String connectionString, java.lang.String restrictions, KeyRestrictionBehavior behavior) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +331,13 @@ public class OraclePermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member FromXml.
+     *
+     * @param securityElement the argument of type {@code SecurityElement}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OraclePermission.FromXml" target="_top">.NET documentation</a>
+     */
     public void FromXml(SecurityElement securityElement) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +352,13 @@ public class OraclePermission extends system.security.CodeAccessPermission  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowBlankPassword.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OraclePermission.AllowBlankPassword" target="_top">.NET documentation</a>
+     */
     public boolean getAllowBlankPassword() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +373,13 @@ public class OraclePermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowBlankPassword.
+     *
+     * @param AllowBlankPassword the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OraclePermission.AllowBlankPassword" target="_top">.NET documentation</a>
+     */
     public void setAllowBlankPassword(boolean AllowBlankPassword) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

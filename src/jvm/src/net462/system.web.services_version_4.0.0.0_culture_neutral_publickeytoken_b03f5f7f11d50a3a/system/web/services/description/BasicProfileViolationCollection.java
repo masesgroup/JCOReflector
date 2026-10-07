@@ -100,7 +100,10 @@ public class BasicProfileViolationCollection extends system.collections.Collecti
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BasicProfileViolationCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,19 @@ public class BasicProfileViolationCollection extends system.collections.Collecti
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.BasicProfileViolationCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public BasicProfileViolationCollection() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +177,14 @@ public class BasicProfileViolationCollection extends system.collections.Collecti
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param violation the argument of type {@code BasicProfileViolation}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.BasicProfileViolationCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(BasicProfileViolation violation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +199,14 @@ public class BasicProfileViolationCollection extends system.collections.Collecti
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param violation the argument of type {@code BasicProfileViolation}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.BasicProfileViolationCollection.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(BasicProfileViolation violation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +247,14 @@ public class BasicProfileViolationCollection extends system.collections.Collecti
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code BasicProfileViolation[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.BasicProfileViolationCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(BasicProfileViolation[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +265,14 @@ public class BasicProfileViolationCollection extends system.collections.Collecti
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param violation the argument of type {@code BasicProfileViolation}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.BasicProfileViolationCollection.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(int index, BasicProfileViolation violation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +283,13 @@ public class BasicProfileViolationCollection extends system.collections.Collecti
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param violation the argument of type {@code BasicProfileViolation}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.BasicProfileViolationCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(BasicProfileViolation violation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

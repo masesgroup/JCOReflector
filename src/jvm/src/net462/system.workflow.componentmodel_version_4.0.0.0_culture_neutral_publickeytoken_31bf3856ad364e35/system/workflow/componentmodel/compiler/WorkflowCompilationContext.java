@@ -105,7 +105,10 @@ public class WorkflowCompilationContext extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WorkflowCompilationContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,18 @@ public class WorkflowCompilationContext extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetAuthorizedTypes.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.WorkflowCompilationContext.GetAuthorizedTypes" target="_top">.NET documentation</a>
+     */
     public IList_1 GetAuthorizedTypes() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +190,15 @@ public class WorkflowCompilationContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScope.
+     *
+     * @param serviceProvider the argument of type {@code IServiceProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.WorkflowCompilationContext.CreateScope" target="_top">.NET documentation</a>
+     */
     public static IDisposable CreateScope(IServiceProvider serviceProvider) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -194,6 +218,13 @@ public class WorkflowCompilationContext extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CheckTypes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.WorkflowCompilationContext.CheckTypes" target="_top">.NET documentation</a>
+     */
     public boolean getCheckTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +239,13 @@ public class WorkflowCompilationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Language.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.WorkflowCompilationContext.Language" target="_top">.NET documentation</a>
+     */
     public java.lang.String getLanguage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +260,13 @@ public class WorkflowCompilationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RootNamespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.WorkflowCompilationContext.RootNamespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRootNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +281,13 @@ public class WorkflowCompilationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Current.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.WorkflowCompilationContext.Current" target="_top">.NET documentation</a>
+     */
     public static WorkflowCompilationContext getCurrent() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -251,6 +303,13 @@ public class WorkflowCompilationContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Current.
+     *
+     * @param Current the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.WorkflowCompilationContext.Current" target="_top">.NET documentation</a>
+     */
     public static void setCurrent(WorkflowCompilationContext Current) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

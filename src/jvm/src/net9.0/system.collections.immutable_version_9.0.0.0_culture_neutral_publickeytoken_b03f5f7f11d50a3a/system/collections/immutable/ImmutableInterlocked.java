@@ -104,7 +104,10 @@ public class ImmutableInterlocked extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ImmutableInterlocked(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,25 @@ public class ImmutableInterlocked extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member InterlockedInitialize.
+     *
+     * @param <T> the type of the generic argument T
+     * @param location the argument of type {@code JCORefOut<ImmutableArray_1>}
+     * @param value the argument of type {@code ImmutableArray_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableInterlocked.InterlockedInitialize" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean InterlockedInitialize(JCORefOut<ImmutableArray_1> location, ImmutableArray_1 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -171,6 +193,28 @@ public class ImmutableInterlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryAdd.
+     *
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TValue> the type of the generic argument TValue
+     * @param location the argument of type {@code JCORefOut<ImmutableDictionary_2>}
+     * @param key the argument of type {@code TKey}
+     * @param value the argument of type {@code TValue}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableInterlocked.TryAdd" target="_top">.NET documentation</a>
+     */
     public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> boolean TryAdd(JCORefOut<ImmutableDictionary_2> location, TKey key, TValue value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -185,6 +229,26 @@ public class ImmutableInterlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryDequeue.
+     *
+     * @param <T> the type of the generic argument T
+     * @param location the argument of type {@code JCORefOut<ImmutableQueue_1>}
+     * @param value the argument of type {@code JCORefOut<T>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableInterlocked.TryDequeue" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean TryDequeue(JCORefOut<ImmutableQueue_1> location, JCORefOut<T> value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -199,6 +263,26 @@ public class ImmutableInterlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryPop.
+     *
+     * @param <T> the type of the generic argument T
+     * @param location the argument of type {@code JCORefOut<ImmutableStack_1>}
+     * @param value the argument of type {@code JCORefOut<T>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableInterlocked.TryPop" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean TryPop(JCORefOut<ImmutableStack_1> location, JCORefOut<T> value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -213,6 +297,28 @@ public class ImmutableInterlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryRemove.
+     *
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TValue> the type of the generic argument TValue
+     * @param location the argument of type {@code JCORefOut<ImmutableDictionary_2>}
+     * @param key the argument of type {@code TKey}
+     * @param value the argument of type {@code JCORefOut<TValue>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableInterlocked.TryRemove" target="_top">.NET documentation</a>
+     */
     public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> boolean TryRemove(JCORefOut<ImmutableDictionary_2> location, TKey key, JCORefOut<TValue> value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -227,6 +333,29 @@ public class ImmutableInterlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryUpdate.
+     *
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TValue> the type of the generic argument TValue
+     * @param location the argument of type {@code JCORefOut<ImmutableDictionary_2>}
+     * @param key the argument of type {@code TKey}
+     * @param newValue the argument of type {@code TValue}
+     * @param comparisonValue the argument of type {@code TValue}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableInterlocked.TryUpdate" target="_top">.NET documentation</a>
+     */
     public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> boolean TryUpdate(JCORefOut<ImmutableDictionary_2> location, TKey key, TValue newValue, TValue comparisonValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -241,6 +370,28 @@ public class ImmutableInterlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Update.
+     *
+     * @param <T> the type of the generic argument T
+     * @param <TArg> the type of the generic argument TArg
+     * @param location the argument of type {@code JCORefOut<ImmutableArray_1>}
+     * @param transformer the argument of type {@code Func_3}
+     * @param transformerArgument the argument of type {@code TArg}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableInterlocked.Update" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected, TArg extends IJCOBridgeReflected> boolean Update(JCORefOut<ImmutableArray_1> location, Func_3 transformer, TArg transformerArgument) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -255,6 +406,26 @@ public class ImmutableInterlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Update.
+     *
+     * @param <T> the type of the generic argument T
+     * @param location the argument of type {@code JCORefOut<ImmutableArray_1>}
+     * @param transformer the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableInterlocked.Update" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean Update(JCORefOut<ImmutableArray_1> location, Func_2 transformer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -269,6 +440,28 @@ public class ImmutableInterlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member InterlockedCompareExchange.
+     *
+     * @param <T> the type of the generic argument T
+     * @param location the argument of type {@code JCORefOut<ImmutableArray_1>}
+     * @param value the argument of type {@code ImmutableArray_1}
+     * @param comparand the argument of type {@code ImmutableArray_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableInterlocked.InterlockedCompareExchange" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> ImmutableArray_1 InterlockedCompareExchange(JCORefOut<ImmutableArray_1> location, ImmutableArray_1 value, ImmutableArray_1 comparand) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -284,6 +477,27 @@ public class ImmutableInterlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member InterlockedExchange.
+     *
+     * @param <T> the type of the generic argument T
+     * @param location the argument of type {@code JCORefOut<ImmutableArray_1>}
+     * @param value the argument of type {@code ImmutableArray_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableInterlocked.InterlockedExchange" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> ImmutableArray_1 InterlockedExchange(JCORefOut<ImmutableArray_1> location, ImmutableArray_1 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -299,6 +513,25 @@ public class ImmutableInterlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Enqueue.
+     *
+     * @param <T> the type of the generic argument T
+     * @param location the argument of type {@code JCORefOut<ImmutableQueue_1>}
+     * @param value the argument of type {@code T}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableInterlocked.Enqueue" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> void Enqueue(JCORefOut<ImmutableQueue_1> location, T value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -309,6 +542,25 @@ public class ImmutableInterlocked extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Push.
+     *
+     * @param <T> the type of the generic argument T
+     * @param location the argument of type {@code JCORefOut<ImmutableStack_1>}
+     * @param value the argument of type {@code T}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableInterlocked.Push" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> void Push(JCORefOut<ImmutableStack_1> location, T value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

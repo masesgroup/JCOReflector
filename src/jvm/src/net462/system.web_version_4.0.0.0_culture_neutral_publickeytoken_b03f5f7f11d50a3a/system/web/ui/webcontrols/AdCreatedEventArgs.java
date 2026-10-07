@@ -101,7 +101,10 @@ public class AdCreatedEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AdCreatedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,24 @@ public class AdCreatedEventArgs extends system.EventArgs  {
     public AdCreatedEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param adProperties the argument of type {@code IDictionary}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.AdCreatedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public AdCreatedEventArgs(IDictionary adProperties) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +191,13 @@ public class AdCreatedEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AdProperties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.AdCreatedEventArgs.AdProperties" target="_top">.NET documentation</a>
+     */
     public IDictionary getAdProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +213,13 @@ public class AdCreatedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AlternateText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.AdCreatedEventArgs.AlternateText" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAlternateText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +234,13 @@ public class AdCreatedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AlternateText.
+     *
+     * @param AlternateText the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.AdCreatedEventArgs.AlternateText" target="_top">.NET documentation</a>
+     */
     public void setAlternateText(java.lang.String AlternateText) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +251,13 @@ public class AdCreatedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ImageUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.AdCreatedEventArgs.ImageUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getImageUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +272,13 @@ public class AdCreatedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ImageUrl.
+     *
+     * @param ImageUrl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.AdCreatedEventArgs.ImageUrl" target="_top">.NET documentation</a>
+     */
     public void setImageUrl(java.lang.String ImageUrl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +289,13 @@ public class AdCreatedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NavigateUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.AdCreatedEventArgs.NavigateUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNavigateUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +310,13 @@ public class AdCreatedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NavigateUrl.
+     *
+     * @param NavigateUrl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.AdCreatedEventArgs.NavigateUrl" target="_top">.NET documentation</a>
+     */
     public void setNavigateUrl(java.lang.String NavigateUrl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

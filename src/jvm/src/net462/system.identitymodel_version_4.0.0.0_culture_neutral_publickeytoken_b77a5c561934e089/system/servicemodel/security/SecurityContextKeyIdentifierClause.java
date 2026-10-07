@@ -100,7 +100,10 @@ public class SecurityContextKeyIdentifierClause extends system.identitymodel.tok
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SecurityContextKeyIdentifierClause(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,19 @@ public class SecurityContextKeyIdentifierClause extends system.identitymodel.tok
     public SecurityContextKeyIdentifierClause() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param contextId the argument of type {@code UniqueId}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityContextKeyIdentifierClause.-ctor" target="_top">.NET documentation</a>
+     */
     public SecurityContextKeyIdentifierClause(UniqueId contextId) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +176,26 @@ public class SecurityContextKeyIdentifierClause extends system.identitymodel.tok
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param contextId the argument of type {@code UniqueId}
+     * @param generation the argument of type {@code UniqueId}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityContextKeyIdentifierClause.-ctor" target="_top">.NET documentation</a>
+     */
     public SecurityContextKeyIdentifierClause(UniqueId contextId, UniqueId generation) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +206,27 @@ public class SecurityContextKeyIdentifierClause extends system.identitymodel.tok
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param contextId the argument of type {@code UniqueId}
+     * @param generation the argument of type {@code UniqueId}
+     * @param derivationNonce the argument of type {@code byte[]}
+     * @param derivationLength the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityContextKeyIdentifierClause.-ctor" target="_top">.NET documentation</a>
+     */
     public SecurityContextKeyIdentifierClause(UniqueId contextId, UniqueId generation, byte[] derivationNonce, int derivationLength) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -185,6 +242,14 @@ public class SecurityContextKeyIdentifierClause extends system.identitymodel.tok
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Matches.
+     *
+     * @param keyIdentifierClause the argument of type {@code SecurityKeyIdentifierClause}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityContextKeyIdentifierClause.Matches" target="_top">.NET documentation</a>
+     */
     public boolean Matches(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +264,15 @@ public class SecurityContextKeyIdentifierClause extends system.identitymodel.tok
         }
     }
 
+    /**
+     * Invokes the .NET member Matches.
+     *
+     * @param contextId the argument of type {@code UniqueId}
+     * @param generation the argument of type {@code UniqueId}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityContextKeyIdentifierClause.Matches" target="_top">.NET documentation</a>
+     */
     public boolean Matches(UniqueId contextId, UniqueId generation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +291,13 @@ public class SecurityContextKeyIdentifierClause extends system.identitymodel.tok
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ContextId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityContextKeyIdentifierClause.ContextId" target="_top">.NET documentation</a>
+     */
     public UniqueId getContextId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +313,13 @@ public class SecurityContextKeyIdentifierClause extends system.identitymodel.tok
         }
     }
 
+    /**
+     * Gets the value of the .NET property Generation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityContextKeyIdentifierClause.Generation" target="_top">.NET documentation</a>
+     */
     public UniqueId getGeneration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

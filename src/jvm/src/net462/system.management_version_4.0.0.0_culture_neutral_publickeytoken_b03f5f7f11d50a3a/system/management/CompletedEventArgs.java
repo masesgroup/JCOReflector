@@ -101,7 +101,10 @@ public class CompletedEventArgs extends system.management.ManagementEventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CompletedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class CompletedEventArgs extends system.management.ManagementEventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property StatusObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.CompletedEventArgs.StatusObject" target="_top">.NET documentation</a>
+     */
     public ManagementBaseObject getStatusObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +185,13 @@ public class CompletedEventArgs extends system.management.ManagementEventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Status.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.CompletedEventArgs.Status" target="_top">.NET documentation</a>
+     */
     public ManagementStatus getStatus() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

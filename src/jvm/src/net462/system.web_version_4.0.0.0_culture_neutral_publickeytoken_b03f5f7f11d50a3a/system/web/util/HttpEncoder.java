@@ -99,7 +99,10 @@ public class HttpEncoder extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HttpEncoder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class HttpEncoder extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Util.HttpEncoder.-ctor" target="_top">.NET documentation</a>
+     */
     public HttpEncoder() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,20 @@ public class HttpEncoder extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Current.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Util.HttpEncoder.Current" target="_top">.NET documentation</a>
+     */
     public static HttpEncoder getCurrent() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -179,6 +202,14 @@ public class HttpEncoder extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Current.
+     *
+     * @param Current the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Util.HttpEncoder.Current" target="_top">.NET documentation</a>
+     */
     public static void setCurrent(HttpEncoder Current) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -189,6 +220,13 @@ public class HttpEncoder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Default.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Util.HttpEncoder.Default" target="_top">.NET documentation</a>
+     */
     public static HttpEncoder getDefault() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

@@ -101,7 +101,10 @@ public class TemplateDefinition extends system.web.ui.design.DesignerObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TemplateDefinition(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,17 @@ public class TemplateDefinition extends system.web.ui.design.DesignerObject  {
     public TemplateDefinition() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param designer the argument of type {@code ControlDesigner}
+     * @param name the argument of type {@code java.lang.String}
+     * @param templatedObject the argument of type {@code NetObject}
+     * @param templatePropertyName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplateDefinition.-ctor" target="_top">.NET documentation</a>
+     */
     public TemplateDefinition(ControlDesigner designer, java.lang.String name, NetObject templatedObject, java.lang.String templatePropertyName) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +175,18 @@ public class TemplateDefinition extends system.web.ui.design.DesignerObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param designer the argument of type {@code ControlDesigner}
+     * @param name the argument of type {@code java.lang.String}
+     * @param templatedObject the argument of type {@code NetObject}
+     * @param templatePropertyName the argument of type {@code java.lang.String}
+     * @param serverControlsOnly the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplateDefinition.-ctor" target="_top">.NET documentation</a>
+     */
     public TemplateDefinition(ControlDesigner designer, java.lang.String name, NetObject templatedObject, java.lang.String templatePropertyName, boolean serverControlsOnly) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +197,18 @@ public class TemplateDefinition extends system.web.ui.design.DesignerObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param designer the argument of type {@code ControlDesigner}
+     * @param name the argument of type {@code java.lang.String}
+     * @param templatedObject the argument of type {@code NetObject}
+     * @param templatePropertyName the argument of type {@code java.lang.String}
+     * @param style the argument of type {@code Style}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplateDefinition.-ctor" target="_top">.NET documentation</a>
+     */
     public TemplateDefinition(ControlDesigner designer, java.lang.String name, NetObject templatedObject, java.lang.String templatePropertyName, Style style) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +219,19 @@ public class TemplateDefinition extends system.web.ui.design.DesignerObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param designer the argument of type {@code ControlDesigner}
+     * @param name the argument of type {@code java.lang.String}
+     * @param templatedObject the argument of type {@code NetObject}
+     * @param templatePropertyName the argument of type {@code java.lang.String}
+     * @param style the argument of type {@code Style}
+     * @param serverControlsOnly the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplateDefinition.-ctor" target="_top">.NET documentation</a>
+     */
     public TemplateDefinition(ControlDesigner designer, java.lang.String name, NetObject templatedObject, java.lang.String templatePropertyName, Style style, boolean serverControlsOnly) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -200,6 +251,13 @@ public class TemplateDefinition extends system.web.ui.design.DesignerObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowEditing.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplateDefinition.AllowEditing" target="_top">.NET documentation</a>
+     */
     public boolean getAllowEditing() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +272,13 @@ public class TemplateDefinition extends system.web.ui.design.DesignerObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ServerControlsOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplateDefinition.ServerControlsOnly" target="_top">.NET documentation</a>
+     */
     public boolean getServerControlsOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +293,13 @@ public class TemplateDefinition extends system.web.ui.design.DesignerObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsDataBinding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplateDefinition.SupportsDataBinding" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsDataBinding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +314,13 @@ public class TemplateDefinition extends system.web.ui.design.DesignerObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SupportsDataBinding.
+     *
+     * @param SupportsDataBinding the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplateDefinition.SupportsDataBinding" target="_top">.NET documentation</a>
+     */
     public void setSupportsDataBinding(boolean SupportsDataBinding) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +331,13 @@ public class TemplateDefinition extends system.web.ui.design.DesignerObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TemplatedObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplateDefinition.TemplatedObject" target="_top">.NET documentation</a>
+     */
     public NetObject getTemplatedObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +353,24 @@ public class TemplateDefinition extends system.web.ui.design.DesignerObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Content.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplateDefinition.Content" target="_top">.NET documentation</a>
+     */
     public java.lang.String getContent() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +385,28 @@ public class TemplateDefinition extends system.web.ui.design.DesignerObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Content.
+     *
+     * @param Content the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.web.HttpParseException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplateDefinition.Content" target="_top">.NET documentation</a>
+     */
     public void setContent(java.lang.String Content) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.web.HttpException, system.NotSupportedException, system.web.HttpParseException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +417,13 @@ public class TemplateDefinition extends system.web.ui.design.DesignerObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TemplatePropertyName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplateDefinition.TemplatePropertyName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTemplatePropertyName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +438,13 @@ public class TemplateDefinition extends system.web.ui.design.DesignerObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Style.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplateDefinition.Style" target="_top">.NET documentation</a>
+     */
     public Style getStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

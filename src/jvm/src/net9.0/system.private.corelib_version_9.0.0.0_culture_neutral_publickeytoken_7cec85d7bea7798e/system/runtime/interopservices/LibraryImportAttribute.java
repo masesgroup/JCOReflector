@@ -100,7 +100,10 @@ public class LibraryImportAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public LibraryImportAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class LibraryImportAttribute extends system.Attribute  {
     public LibraryImportAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param libraryName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.LibraryImportAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public LibraryImportAttribute(java.lang.String libraryName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +179,13 @@ public class LibraryImportAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SetLastError.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.LibraryImportAttribute.SetLastError" target="_top">.NET documentation</a>
+     */
     public boolean getSetLastError() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +200,13 @@ public class LibraryImportAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SetLastError.
+     *
+     * @param SetLastError the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.LibraryImportAttribute.SetLastError" target="_top">.NET documentation</a>
+     */
     public void setSetLastError(boolean SetLastError) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +217,13 @@ public class LibraryImportAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StringMarshalling.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.LibraryImportAttribute.StringMarshalling" target="_top">.NET documentation</a>
+     */
     public StringMarshalling getStringMarshalling() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +239,13 @@ public class LibraryImportAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StringMarshalling.
+     *
+     * @param StringMarshalling the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.LibraryImportAttribute.StringMarshalling" target="_top">.NET documentation</a>
+     */
     public void setStringMarshalling(StringMarshalling StringMarshalling) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +256,13 @@ public class LibraryImportAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EntryPoint.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.LibraryImportAttribute.EntryPoint" target="_top">.NET documentation</a>
+     */
     public java.lang.String getEntryPoint() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +277,13 @@ public class LibraryImportAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EntryPoint.
+     *
+     * @param EntryPoint the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.LibraryImportAttribute.EntryPoint" target="_top">.NET documentation</a>
+     */
     public void setEntryPoint(java.lang.String EntryPoint) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +294,13 @@ public class LibraryImportAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LibraryName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.LibraryImportAttribute.LibraryName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getLibraryName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +315,13 @@ public class LibraryImportAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StringMarshallingCustomType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.LibraryImportAttribute.StringMarshallingCustomType" target="_top">.NET documentation</a>
+     */
     public NetType getStringMarshallingCustomType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +337,13 @@ public class LibraryImportAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StringMarshallingCustomType.
+     *
+     * @param StringMarshallingCustomType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.LibraryImportAttribute.StringMarshallingCustomType" target="_top">.NET documentation</a>
+     */
     public void setStringMarshallingCustomType(NetType StringMarshallingCustomType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

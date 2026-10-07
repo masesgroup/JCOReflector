@@ -101,7 +101,10 @@ public class HttpRemotingHandlerFactory extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HttpRemotingHandlerFactory(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class HttpRemotingHandlerFactory extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.Http.HttpRemotingHandlerFactory.-ctor" target="_top">.NET documentation</a>
+     */
     public HttpRemotingHandlerFactory() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +171,44 @@ public class HttpRemotingHandlerFactory extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetHandler.
+     *
+     * @param context the argument of type {@code HttpContext}
+     * @param verb the argument of type {@code java.lang.String}
+     * @param url the argument of type {@code java.lang.String}
+     * @param filePath the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.web.HttpParseException if the .NET member raises it
+     * @throws system.web.HttpCompileException if the .NET member raises it
+     * @throws system.net.sockets.SocketException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.Http.HttpRemotingHandlerFactory.GetHandler" target="_top">.NET documentation</a>
+     */
     public IHttpHandler GetHandler(HttpContext context, java.lang.String verb, java.lang.String url, java.lang.String filePath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.runtime.remoting.RemotingException, system.FormatException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.NullReferenceException, system.threading.ThreadAbortException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.web.HttpParseException, system.web.HttpCompileException, system.net.sockets.SocketException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +224,13 @@ public class HttpRemotingHandlerFactory extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReleaseHandler.
+     *
+     * @param handler the argument of type {@code IHttpHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.Http.HttpRemotingHandlerFactory.ReleaseHandler" target="_top">.NET documentation</a>
+     */
     public void ReleaseHandler(IHttpHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

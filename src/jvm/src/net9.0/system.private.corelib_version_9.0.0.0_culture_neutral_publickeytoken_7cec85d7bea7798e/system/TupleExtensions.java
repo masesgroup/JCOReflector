@@ -114,7 +114,10 @@ public class TupleExtensions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TupleExtensions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -167,6 +170,15 @@ public class TupleExtensions extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ToTuple.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param value the argument of type {@code ValueTuple_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TupleExtensions.ToTuple" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected> Tuple_1 ToTuple(ValueTuple_1 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -182,6 +194,16 @@ public class TupleExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToTuple.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param value the argument of type {@code ValueTuple_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TupleExtensions.ToTuple" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected> Tuple_2 ToTuple(ValueTuple_2 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -197,6 +219,17 @@ public class TupleExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToTuple.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param value the argument of type {@code ValueTuple_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TupleExtensions.ToTuple" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected> Tuple_3 ToTuple(ValueTuple_3 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -212,6 +245,18 @@ public class TupleExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToTuple.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param value the argument of type {@code ValueTuple_4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TupleExtensions.ToTuple" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected> Tuple_4 ToTuple(ValueTuple_4 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -227,6 +272,19 @@ public class TupleExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToTuple.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param value the argument of type {@code ValueTuple_5}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TupleExtensions.ToTuple" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected> Tuple_5 ToTuple(ValueTuple_5 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -242,6 +300,20 @@ public class TupleExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToTuple.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param value the argument of type {@code ValueTuple_6}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TupleExtensions.ToTuple" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected> Tuple_6 ToTuple(ValueTuple_6 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -257,6 +329,21 @@ public class TupleExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToTuple.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param value the argument of type {@code ValueTuple_7}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TupleExtensions.ToTuple" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected> Tuple_7 ToTuple(ValueTuple_7 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -272,6 +359,32 @@ public class TupleExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToTuple.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param <T8> the type of the generic argument T8
+     * @param value the argument of type {@code ValueTuple_8}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TupleExtensions.ToTuple" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected> Tuple_8 ToTuple(ValueTuple_8 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -287,6 +400,15 @@ public class TupleExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToValueTuple.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param value the argument of type {@code Tuple_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TupleExtensions.ToValueTuple" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected> ValueTuple_1 ToValueTuple(Tuple_1 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -302,6 +424,16 @@ public class TupleExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToValueTuple.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param value the argument of type {@code Tuple_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TupleExtensions.ToValueTuple" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected> ValueTuple_2 ToValueTuple(Tuple_2 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -317,6 +449,17 @@ public class TupleExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToValueTuple.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param value the argument of type {@code Tuple_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TupleExtensions.ToValueTuple" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected> ValueTuple_3 ToValueTuple(Tuple_3 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -332,6 +475,18 @@ public class TupleExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToValueTuple.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param value the argument of type {@code Tuple_4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TupleExtensions.ToValueTuple" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected> ValueTuple_4 ToValueTuple(Tuple_4 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -347,6 +502,19 @@ public class TupleExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToValueTuple.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param value the argument of type {@code Tuple_5}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TupleExtensions.ToValueTuple" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected> ValueTuple_5 ToValueTuple(Tuple_5 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -362,6 +530,20 @@ public class TupleExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToValueTuple.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param value the argument of type {@code Tuple_6}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TupleExtensions.ToValueTuple" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected> ValueTuple_6 ToValueTuple(Tuple_6 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -377,6 +559,21 @@ public class TupleExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToValueTuple.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param value the argument of type {@code Tuple_7}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TupleExtensions.ToValueTuple" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected> ValueTuple_7 ToValueTuple(Tuple_7 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -392,6 +589,32 @@ public class TupleExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToValueTuple.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param <T8> the type of the generic argument T8
+     * @param value the argument of type {@code Tuple_8}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TupleExtensions.ToValueTuple" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected> ValueTuple_8 ToValueTuple(Tuple_8 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -407,6 +630,55 @@ public class TupleExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Deconstruct.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param <T8> the type of the generic argument T8
+     * @param <T9> the type of the generic argument T9
+     * @param <T10> the type of the generic argument T10
+     * @param <T11> the type of the generic argument T11
+     * @param <T12> the type of the generic argument T12
+     * @param <T13> the type of the generic argument T13
+     * @param <T14> the type of the generic argument T14
+     * @param <T15> the type of the generic argument T15
+     * @param <T16> the type of the generic argument T16
+     * @param <T17> the type of the generic argument T17
+     * @param <T18> the type of the generic argument T18
+     * @param <T19> the type of the generic argument T19
+     * @param <T20> the type of the generic argument T20
+     * @param <T21> the type of the generic argument T21
+     * @param value the argument of type {@code Tuple_8}
+     * @param item1 the argument of type {@code JCORefOut<T1>}
+     * @param item2 the argument of type {@code JCORefOut<T2>}
+     * @param item3 the argument of type {@code JCORefOut<T3>}
+     * @param item4 the argument of type {@code JCORefOut<T4>}
+     * @param item5 the argument of type {@code JCORefOut<T5>}
+     * @param item6 the argument of type {@code JCORefOut<T6>}
+     * @param item7 the argument of type {@code JCORefOut<T7>}
+     * @param item8 the argument of type {@code JCORefOut<T8>}
+     * @param item9 the argument of type {@code JCORefOut<T9>}
+     * @param item10 the argument of type {@code JCORefOut<T10>}
+     * @param item11 the argument of type {@code JCORefOut<T11>}
+     * @param item12 the argument of type {@code JCORefOut<T12>}
+     * @param item13 the argument of type {@code JCORefOut<T13>}
+     * @param item14 the argument of type {@code JCORefOut<T14>}
+     * @param item15 the argument of type {@code JCORefOut<T15>}
+     * @param item16 the argument of type {@code JCORefOut<T16>}
+     * @param item17 the argument of type {@code JCORefOut<T17>}
+     * @param item18 the argument of type {@code JCORefOut<T18>}
+     * @param item19 the argument of type {@code JCORefOut<T19>}
+     * @param item20 the argument of type {@code JCORefOut<T20>}
+     * @param item21 the argument of type {@code JCORefOut<T21>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TupleExtensions.Deconstruct" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected, T13 extends IJCOBridgeReflected, T14 extends IJCOBridgeReflected, T15 extends IJCOBridgeReflected, T16 extends IJCOBridgeReflected, T17 extends IJCOBridgeReflected, T18 extends IJCOBridgeReflected, T19 extends IJCOBridgeReflected, T20 extends IJCOBridgeReflected, T21 extends IJCOBridgeReflected> void Deconstruct(Tuple_8 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3, JCORefOut<T4> item4, JCORefOut<T5> item5, JCORefOut<T6> item6, JCORefOut<T7> item7, JCORefOut<T8> item8, JCORefOut<T9> item9, JCORefOut<T10> item10, JCORefOut<T11> item11, JCORefOut<T12> item12, JCORefOut<T13> item13, JCORefOut<T14> item14, JCORefOut<T15> item15, JCORefOut<T16> item16, JCORefOut<T17> item17, JCORefOut<T18> item18, JCORefOut<T19> item19, JCORefOut<T20> item20, JCORefOut<T21> item21) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -417,6 +689,53 @@ public class TupleExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Deconstruct.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param <T8> the type of the generic argument T8
+     * @param <T9> the type of the generic argument T9
+     * @param <T10> the type of the generic argument T10
+     * @param <T11> the type of the generic argument T11
+     * @param <T12> the type of the generic argument T12
+     * @param <T13> the type of the generic argument T13
+     * @param <T14> the type of the generic argument T14
+     * @param <T15> the type of the generic argument T15
+     * @param <T16> the type of the generic argument T16
+     * @param <T17> the type of the generic argument T17
+     * @param <T18> the type of the generic argument T18
+     * @param <T19> the type of the generic argument T19
+     * @param <T20> the type of the generic argument T20
+     * @param value the argument of type {@code Tuple_8}
+     * @param item1 the argument of type {@code JCORefOut<T1>}
+     * @param item2 the argument of type {@code JCORefOut<T2>}
+     * @param item3 the argument of type {@code JCORefOut<T3>}
+     * @param item4 the argument of type {@code JCORefOut<T4>}
+     * @param item5 the argument of type {@code JCORefOut<T5>}
+     * @param item6 the argument of type {@code JCORefOut<T6>}
+     * @param item7 the argument of type {@code JCORefOut<T7>}
+     * @param item8 the argument of type {@code JCORefOut<T8>}
+     * @param item9 the argument of type {@code JCORefOut<T9>}
+     * @param item10 the argument of type {@code JCORefOut<T10>}
+     * @param item11 the argument of type {@code JCORefOut<T11>}
+     * @param item12 the argument of type {@code JCORefOut<T12>}
+     * @param item13 the argument of type {@code JCORefOut<T13>}
+     * @param item14 the argument of type {@code JCORefOut<T14>}
+     * @param item15 the argument of type {@code JCORefOut<T15>}
+     * @param item16 the argument of type {@code JCORefOut<T16>}
+     * @param item17 the argument of type {@code JCORefOut<T17>}
+     * @param item18 the argument of type {@code JCORefOut<T18>}
+     * @param item19 the argument of type {@code JCORefOut<T19>}
+     * @param item20 the argument of type {@code JCORefOut<T20>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TupleExtensions.Deconstruct" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected, T13 extends IJCOBridgeReflected, T14 extends IJCOBridgeReflected, T15 extends IJCOBridgeReflected, T16 extends IJCOBridgeReflected, T17 extends IJCOBridgeReflected, T18 extends IJCOBridgeReflected, T19 extends IJCOBridgeReflected, T20 extends IJCOBridgeReflected> void Deconstruct(Tuple_8 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3, JCORefOut<T4> item4, JCORefOut<T5> item5, JCORefOut<T6> item6, JCORefOut<T7> item7, JCORefOut<T8> item8, JCORefOut<T9> item9, JCORefOut<T10> item10, JCORefOut<T11> item11, JCORefOut<T12> item12, JCORefOut<T13> item13, JCORefOut<T14> item14, JCORefOut<T15> item15, JCORefOut<T16> item16, JCORefOut<T17> item17, JCORefOut<T18> item18, JCORefOut<T19> item19, JCORefOut<T20> item20) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -427,6 +746,51 @@ public class TupleExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Deconstruct.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param <T8> the type of the generic argument T8
+     * @param <T9> the type of the generic argument T9
+     * @param <T10> the type of the generic argument T10
+     * @param <T11> the type of the generic argument T11
+     * @param <T12> the type of the generic argument T12
+     * @param <T13> the type of the generic argument T13
+     * @param <T14> the type of the generic argument T14
+     * @param <T15> the type of the generic argument T15
+     * @param <T16> the type of the generic argument T16
+     * @param <T17> the type of the generic argument T17
+     * @param <T18> the type of the generic argument T18
+     * @param <T19> the type of the generic argument T19
+     * @param value the argument of type {@code Tuple_8}
+     * @param item1 the argument of type {@code JCORefOut<T1>}
+     * @param item2 the argument of type {@code JCORefOut<T2>}
+     * @param item3 the argument of type {@code JCORefOut<T3>}
+     * @param item4 the argument of type {@code JCORefOut<T4>}
+     * @param item5 the argument of type {@code JCORefOut<T5>}
+     * @param item6 the argument of type {@code JCORefOut<T6>}
+     * @param item7 the argument of type {@code JCORefOut<T7>}
+     * @param item8 the argument of type {@code JCORefOut<T8>}
+     * @param item9 the argument of type {@code JCORefOut<T9>}
+     * @param item10 the argument of type {@code JCORefOut<T10>}
+     * @param item11 the argument of type {@code JCORefOut<T11>}
+     * @param item12 the argument of type {@code JCORefOut<T12>}
+     * @param item13 the argument of type {@code JCORefOut<T13>}
+     * @param item14 the argument of type {@code JCORefOut<T14>}
+     * @param item15 the argument of type {@code JCORefOut<T15>}
+     * @param item16 the argument of type {@code JCORefOut<T16>}
+     * @param item17 the argument of type {@code JCORefOut<T17>}
+     * @param item18 the argument of type {@code JCORefOut<T18>}
+     * @param item19 the argument of type {@code JCORefOut<T19>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TupleExtensions.Deconstruct" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected, T13 extends IJCOBridgeReflected, T14 extends IJCOBridgeReflected, T15 extends IJCOBridgeReflected, T16 extends IJCOBridgeReflected, T17 extends IJCOBridgeReflected, T18 extends IJCOBridgeReflected, T19 extends IJCOBridgeReflected> void Deconstruct(Tuple_8 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3, JCORefOut<T4> item4, JCORefOut<T5> item5, JCORefOut<T6> item6, JCORefOut<T7> item7, JCORefOut<T8> item8, JCORefOut<T9> item9, JCORefOut<T10> item10, JCORefOut<T11> item11, JCORefOut<T12> item12, JCORefOut<T13> item13, JCORefOut<T14> item14, JCORefOut<T15> item15, JCORefOut<T16> item16, JCORefOut<T17> item17, JCORefOut<T18> item18, JCORefOut<T19> item19) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -437,6 +801,49 @@ public class TupleExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Deconstruct.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param <T8> the type of the generic argument T8
+     * @param <T9> the type of the generic argument T9
+     * @param <T10> the type of the generic argument T10
+     * @param <T11> the type of the generic argument T11
+     * @param <T12> the type of the generic argument T12
+     * @param <T13> the type of the generic argument T13
+     * @param <T14> the type of the generic argument T14
+     * @param <T15> the type of the generic argument T15
+     * @param <T16> the type of the generic argument T16
+     * @param <T17> the type of the generic argument T17
+     * @param <T18> the type of the generic argument T18
+     * @param value the argument of type {@code Tuple_8}
+     * @param item1 the argument of type {@code JCORefOut<T1>}
+     * @param item2 the argument of type {@code JCORefOut<T2>}
+     * @param item3 the argument of type {@code JCORefOut<T3>}
+     * @param item4 the argument of type {@code JCORefOut<T4>}
+     * @param item5 the argument of type {@code JCORefOut<T5>}
+     * @param item6 the argument of type {@code JCORefOut<T6>}
+     * @param item7 the argument of type {@code JCORefOut<T7>}
+     * @param item8 the argument of type {@code JCORefOut<T8>}
+     * @param item9 the argument of type {@code JCORefOut<T9>}
+     * @param item10 the argument of type {@code JCORefOut<T10>}
+     * @param item11 the argument of type {@code JCORefOut<T11>}
+     * @param item12 the argument of type {@code JCORefOut<T12>}
+     * @param item13 the argument of type {@code JCORefOut<T13>}
+     * @param item14 the argument of type {@code JCORefOut<T14>}
+     * @param item15 the argument of type {@code JCORefOut<T15>}
+     * @param item16 the argument of type {@code JCORefOut<T16>}
+     * @param item17 the argument of type {@code JCORefOut<T17>}
+     * @param item18 the argument of type {@code JCORefOut<T18>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TupleExtensions.Deconstruct" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected, T13 extends IJCOBridgeReflected, T14 extends IJCOBridgeReflected, T15 extends IJCOBridgeReflected, T16 extends IJCOBridgeReflected, T17 extends IJCOBridgeReflected, T18 extends IJCOBridgeReflected> void Deconstruct(Tuple_8 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3, JCORefOut<T4> item4, JCORefOut<T5> item5, JCORefOut<T6> item6, JCORefOut<T7> item7, JCORefOut<T8> item8, JCORefOut<T9> item9, JCORefOut<T10> item10, JCORefOut<T11> item11, JCORefOut<T12> item12, JCORefOut<T13> item13, JCORefOut<T14> item14, JCORefOut<T15> item15, JCORefOut<T16> item16, JCORefOut<T17> item17, JCORefOut<T18> item18) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -447,6 +854,47 @@ public class TupleExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Deconstruct.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param <T8> the type of the generic argument T8
+     * @param <T9> the type of the generic argument T9
+     * @param <T10> the type of the generic argument T10
+     * @param <T11> the type of the generic argument T11
+     * @param <T12> the type of the generic argument T12
+     * @param <T13> the type of the generic argument T13
+     * @param <T14> the type of the generic argument T14
+     * @param <T15> the type of the generic argument T15
+     * @param <T16> the type of the generic argument T16
+     * @param <T17> the type of the generic argument T17
+     * @param value the argument of type {@code Tuple_8}
+     * @param item1 the argument of type {@code JCORefOut<T1>}
+     * @param item2 the argument of type {@code JCORefOut<T2>}
+     * @param item3 the argument of type {@code JCORefOut<T3>}
+     * @param item4 the argument of type {@code JCORefOut<T4>}
+     * @param item5 the argument of type {@code JCORefOut<T5>}
+     * @param item6 the argument of type {@code JCORefOut<T6>}
+     * @param item7 the argument of type {@code JCORefOut<T7>}
+     * @param item8 the argument of type {@code JCORefOut<T8>}
+     * @param item9 the argument of type {@code JCORefOut<T9>}
+     * @param item10 the argument of type {@code JCORefOut<T10>}
+     * @param item11 the argument of type {@code JCORefOut<T11>}
+     * @param item12 the argument of type {@code JCORefOut<T12>}
+     * @param item13 the argument of type {@code JCORefOut<T13>}
+     * @param item14 the argument of type {@code JCORefOut<T14>}
+     * @param item15 the argument of type {@code JCORefOut<T15>}
+     * @param item16 the argument of type {@code JCORefOut<T16>}
+     * @param item17 the argument of type {@code JCORefOut<T17>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TupleExtensions.Deconstruct" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected, T13 extends IJCOBridgeReflected, T14 extends IJCOBridgeReflected, T15 extends IJCOBridgeReflected, T16 extends IJCOBridgeReflected, T17 extends IJCOBridgeReflected> void Deconstruct(Tuple_8 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3, JCORefOut<T4> item4, JCORefOut<T5> item5, JCORefOut<T6> item6, JCORefOut<T7> item7, JCORefOut<T8> item8, JCORefOut<T9> item9, JCORefOut<T10> item10, JCORefOut<T11> item11, JCORefOut<T12> item12, JCORefOut<T13> item13, JCORefOut<T14> item14, JCORefOut<T15> item15, JCORefOut<T16> item16, JCORefOut<T17> item17) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -457,6 +905,45 @@ public class TupleExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Deconstruct.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param <T8> the type of the generic argument T8
+     * @param <T9> the type of the generic argument T9
+     * @param <T10> the type of the generic argument T10
+     * @param <T11> the type of the generic argument T11
+     * @param <T12> the type of the generic argument T12
+     * @param <T13> the type of the generic argument T13
+     * @param <T14> the type of the generic argument T14
+     * @param <T15> the type of the generic argument T15
+     * @param <T16> the type of the generic argument T16
+     * @param value the argument of type {@code Tuple_8}
+     * @param item1 the argument of type {@code JCORefOut<T1>}
+     * @param item2 the argument of type {@code JCORefOut<T2>}
+     * @param item3 the argument of type {@code JCORefOut<T3>}
+     * @param item4 the argument of type {@code JCORefOut<T4>}
+     * @param item5 the argument of type {@code JCORefOut<T5>}
+     * @param item6 the argument of type {@code JCORefOut<T6>}
+     * @param item7 the argument of type {@code JCORefOut<T7>}
+     * @param item8 the argument of type {@code JCORefOut<T8>}
+     * @param item9 the argument of type {@code JCORefOut<T9>}
+     * @param item10 the argument of type {@code JCORefOut<T10>}
+     * @param item11 the argument of type {@code JCORefOut<T11>}
+     * @param item12 the argument of type {@code JCORefOut<T12>}
+     * @param item13 the argument of type {@code JCORefOut<T13>}
+     * @param item14 the argument of type {@code JCORefOut<T14>}
+     * @param item15 the argument of type {@code JCORefOut<T15>}
+     * @param item16 the argument of type {@code JCORefOut<T16>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TupleExtensions.Deconstruct" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected, T13 extends IJCOBridgeReflected, T14 extends IJCOBridgeReflected, T15 extends IJCOBridgeReflected, T16 extends IJCOBridgeReflected> void Deconstruct(Tuple_8 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3, JCORefOut<T4> item4, JCORefOut<T5> item5, JCORefOut<T6> item6, JCORefOut<T7> item7, JCORefOut<T8> item8, JCORefOut<T9> item9, JCORefOut<T10> item10, JCORefOut<T11> item11, JCORefOut<T12> item12, JCORefOut<T13> item13, JCORefOut<T14> item14, JCORefOut<T15> item15, JCORefOut<T16> item16) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -467,6 +954,43 @@ public class TupleExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Deconstruct.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param <T8> the type of the generic argument T8
+     * @param <T9> the type of the generic argument T9
+     * @param <T10> the type of the generic argument T10
+     * @param <T11> the type of the generic argument T11
+     * @param <T12> the type of the generic argument T12
+     * @param <T13> the type of the generic argument T13
+     * @param <T14> the type of the generic argument T14
+     * @param <T15> the type of the generic argument T15
+     * @param value the argument of type {@code Tuple_8}
+     * @param item1 the argument of type {@code JCORefOut<T1>}
+     * @param item2 the argument of type {@code JCORefOut<T2>}
+     * @param item3 the argument of type {@code JCORefOut<T3>}
+     * @param item4 the argument of type {@code JCORefOut<T4>}
+     * @param item5 the argument of type {@code JCORefOut<T5>}
+     * @param item6 the argument of type {@code JCORefOut<T6>}
+     * @param item7 the argument of type {@code JCORefOut<T7>}
+     * @param item8 the argument of type {@code JCORefOut<T8>}
+     * @param item9 the argument of type {@code JCORefOut<T9>}
+     * @param item10 the argument of type {@code JCORefOut<T10>}
+     * @param item11 the argument of type {@code JCORefOut<T11>}
+     * @param item12 the argument of type {@code JCORefOut<T12>}
+     * @param item13 the argument of type {@code JCORefOut<T13>}
+     * @param item14 the argument of type {@code JCORefOut<T14>}
+     * @param item15 the argument of type {@code JCORefOut<T15>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TupleExtensions.Deconstruct" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected, T13 extends IJCOBridgeReflected, T14 extends IJCOBridgeReflected, T15 extends IJCOBridgeReflected> void Deconstruct(Tuple_8 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3, JCORefOut<T4> item4, JCORefOut<T5> item5, JCORefOut<T6> item6, JCORefOut<T7> item7, JCORefOut<T8> item8, JCORefOut<T9> item9, JCORefOut<T10> item10, JCORefOut<T11> item11, JCORefOut<T12> item12, JCORefOut<T13> item13, JCORefOut<T14> item14, JCORefOut<T15> item15) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -477,6 +1001,41 @@ public class TupleExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Deconstruct.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param <T8> the type of the generic argument T8
+     * @param <T9> the type of the generic argument T9
+     * @param <T10> the type of the generic argument T10
+     * @param <T11> the type of the generic argument T11
+     * @param <T12> the type of the generic argument T12
+     * @param <T13> the type of the generic argument T13
+     * @param <T14> the type of the generic argument T14
+     * @param value the argument of type {@code Tuple_8}
+     * @param item1 the argument of type {@code JCORefOut<T1>}
+     * @param item2 the argument of type {@code JCORefOut<T2>}
+     * @param item3 the argument of type {@code JCORefOut<T3>}
+     * @param item4 the argument of type {@code JCORefOut<T4>}
+     * @param item5 the argument of type {@code JCORefOut<T5>}
+     * @param item6 the argument of type {@code JCORefOut<T6>}
+     * @param item7 the argument of type {@code JCORefOut<T7>}
+     * @param item8 the argument of type {@code JCORefOut<T8>}
+     * @param item9 the argument of type {@code JCORefOut<T9>}
+     * @param item10 the argument of type {@code JCORefOut<T10>}
+     * @param item11 the argument of type {@code JCORefOut<T11>}
+     * @param item12 the argument of type {@code JCORefOut<T12>}
+     * @param item13 the argument of type {@code JCORefOut<T13>}
+     * @param item14 the argument of type {@code JCORefOut<T14>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TupleExtensions.Deconstruct" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected, T13 extends IJCOBridgeReflected, T14 extends IJCOBridgeReflected> void Deconstruct(Tuple_8 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3, JCORefOut<T4> item4, JCORefOut<T5> item5, JCORefOut<T6> item6, JCORefOut<T7> item7, JCORefOut<T8> item8, JCORefOut<T9> item9, JCORefOut<T10> item10, JCORefOut<T11> item11, JCORefOut<T12> item12, JCORefOut<T13> item13, JCORefOut<T14> item14) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -487,6 +1046,39 @@ public class TupleExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Deconstruct.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param <T8> the type of the generic argument T8
+     * @param <T9> the type of the generic argument T9
+     * @param <T10> the type of the generic argument T10
+     * @param <T11> the type of the generic argument T11
+     * @param <T12> the type of the generic argument T12
+     * @param <T13> the type of the generic argument T13
+     * @param value the argument of type {@code Tuple_8}
+     * @param item1 the argument of type {@code JCORefOut<T1>}
+     * @param item2 the argument of type {@code JCORefOut<T2>}
+     * @param item3 the argument of type {@code JCORefOut<T3>}
+     * @param item4 the argument of type {@code JCORefOut<T4>}
+     * @param item5 the argument of type {@code JCORefOut<T5>}
+     * @param item6 the argument of type {@code JCORefOut<T6>}
+     * @param item7 the argument of type {@code JCORefOut<T7>}
+     * @param item8 the argument of type {@code JCORefOut<T8>}
+     * @param item9 the argument of type {@code JCORefOut<T9>}
+     * @param item10 the argument of type {@code JCORefOut<T10>}
+     * @param item11 the argument of type {@code JCORefOut<T11>}
+     * @param item12 the argument of type {@code JCORefOut<T12>}
+     * @param item13 the argument of type {@code JCORefOut<T13>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TupleExtensions.Deconstruct" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected, T13 extends IJCOBridgeReflected> void Deconstruct(Tuple_8 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3, JCORefOut<T4> item4, JCORefOut<T5> item5, JCORefOut<T6> item6, JCORefOut<T7> item7, JCORefOut<T8> item8, JCORefOut<T9> item9, JCORefOut<T10> item10, JCORefOut<T11> item11, JCORefOut<T12> item12, JCORefOut<T13> item13) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -497,6 +1089,37 @@ public class TupleExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Deconstruct.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param <T8> the type of the generic argument T8
+     * @param <T9> the type of the generic argument T9
+     * @param <T10> the type of the generic argument T10
+     * @param <T11> the type of the generic argument T11
+     * @param <T12> the type of the generic argument T12
+     * @param value the argument of type {@code Tuple_8}
+     * @param item1 the argument of type {@code JCORefOut<T1>}
+     * @param item2 the argument of type {@code JCORefOut<T2>}
+     * @param item3 the argument of type {@code JCORefOut<T3>}
+     * @param item4 the argument of type {@code JCORefOut<T4>}
+     * @param item5 the argument of type {@code JCORefOut<T5>}
+     * @param item6 the argument of type {@code JCORefOut<T6>}
+     * @param item7 the argument of type {@code JCORefOut<T7>}
+     * @param item8 the argument of type {@code JCORefOut<T8>}
+     * @param item9 the argument of type {@code JCORefOut<T9>}
+     * @param item10 the argument of type {@code JCORefOut<T10>}
+     * @param item11 the argument of type {@code JCORefOut<T11>}
+     * @param item12 the argument of type {@code JCORefOut<T12>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TupleExtensions.Deconstruct" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected> void Deconstruct(Tuple_8 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3, JCORefOut<T4> item4, JCORefOut<T5> item5, JCORefOut<T6> item6, JCORefOut<T7> item7, JCORefOut<T8> item8, JCORefOut<T9> item9, JCORefOut<T10> item10, JCORefOut<T11> item11, JCORefOut<T12> item12) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -507,6 +1130,35 @@ public class TupleExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Deconstruct.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param <T8> the type of the generic argument T8
+     * @param <T9> the type of the generic argument T9
+     * @param <T10> the type of the generic argument T10
+     * @param <T11> the type of the generic argument T11
+     * @param value the argument of type {@code Tuple_8}
+     * @param item1 the argument of type {@code JCORefOut<T1>}
+     * @param item2 the argument of type {@code JCORefOut<T2>}
+     * @param item3 the argument of type {@code JCORefOut<T3>}
+     * @param item4 the argument of type {@code JCORefOut<T4>}
+     * @param item5 the argument of type {@code JCORefOut<T5>}
+     * @param item6 the argument of type {@code JCORefOut<T6>}
+     * @param item7 the argument of type {@code JCORefOut<T7>}
+     * @param item8 the argument of type {@code JCORefOut<T8>}
+     * @param item9 the argument of type {@code JCORefOut<T9>}
+     * @param item10 the argument of type {@code JCORefOut<T10>}
+     * @param item11 the argument of type {@code JCORefOut<T11>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TupleExtensions.Deconstruct" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected> void Deconstruct(Tuple_8 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3, JCORefOut<T4> item4, JCORefOut<T5> item5, JCORefOut<T6> item6, JCORefOut<T7> item7, JCORefOut<T8> item8, JCORefOut<T9> item9, JCORefOut<T10> item10, JCORefOut<T11> item11) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -517,6 +1169,33 @@ public class TupleExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Deconstruct.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param <T8> the type of the generic argument T8
+     * @param <T9> the type of the generic argument T9
+     * @param <T10> the type of the generic argument T10
+     * @param value the argument of type {@code Tuple_8}
+     * @param item1 the argument of type {@code JCORefOut<T1>}
+     * @param item2 the argument of type {@code JCORefOut<T2>}
+     * @param item3 the argument of type {@code JCORefOut<T3>}
+     * @param item4 the argument of type {@code JCORefOut<T4>}
+     * @param item5 the argument of type {@code JCORefOut<T5>}
+     * @param item6 the argument of type {@code JCORefOut<T6>}
+     * @param item7 the argument of type {@code JCORefOut<T7>}
+     * @param item8 the argument of type {@code JCORefOut<T8>}
+     * @param item9 the argument of type {@code JCORefOut<T9>}
+     * @param item10 the argument of type {@code JCORefOut<T10>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TupleExtensions.Deconstruct" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected> void Deconstruct(Tuple_8 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3, JCORefOut<T4> item4, JCORefOut<T5> item5, JCORefOut<T6> item6, JCORefOut<T7> item7, JCORefOut<T8> item8, JCORefOut<T9> item9, JCORefOut<T10> item10) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -527,6 +1206,31 @@ public class TupleExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Deconstruct.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param <T8> the type of the generic argument T8
+     * @param <T9> the type of the generic argument T9
+     * @param value the argument of type {@code Tuple_8}
+     * @param item1 the argument of type {@code JCORefOut<T1>}
+     * @param item2 the argument of type {@code JCORefOut<T2>}
+     * @param item3 the argument of type {@code JCORefOut<T3>}
+     * @param item4 the argument of type {@code JCORefOut<T4>}
+     * @param item5 the argument of type {@code JCORefOut<T5>}
+     * @param item6 the argument of type {@code JCORefOut<T6>}
+     * @param item7 the argument of type {@code JCORefOut<T7>}
+     * @param item8 the argument of type {@code JCORefOut<T8>}
+     * @param item9 the argument of type {@code JCORefOut<T9>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TupleExtensions.Deconstruct" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected> void Deconstruct(Tuple_8 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3, JCORefOut<T4> item4, JCORefOut<T5> item5, JCORefOut<T6> item6, JCORefOut<T7> item7, JCORefOut<T8> item8, JCORefOut<T9> item9) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -537,6 +1241,29 @@ public class TupleExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Deconstruct.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param <T8> the type of the generic argument T8
+     * @param value the argument of type {@code Tuple_8}
+     * @param item1 the argument of type {@code JCORefOut<T1>}
+     * @param item2 the argument of type {@code JCORefOut<T2>}
+     * @param item3 the argument of type {@code JCORefOut<T3>}
+     * @param item4 the argument of type {@code JCORefOut<T4>}
+     * @param item5 the argument of type {@code JCORefOut<T5>}
+     * @param item6 the argument of type {@code JCORefOut<T6>}
+     * @param item7 the argument of type {@code JCORefOut<T7>}
+     * @param item8 the argument of type {@code JCORefOut<T8>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TupleExtensions.Deconstruct" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected> void Deconstruct(Tuple_8 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3, JCORefOut<T4> item4, JCORefOut<T5> item5, JCORefOut<T6> item6, JCORefOut<T7> item7, JCORefOut<T8> item8) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -547,6 +1274,27 @@ public class TupleExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Deconstruct.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param value the argument of type {@code Tuple_7}
+     * @param item1 the argument of type {@code JCORefOut<T1>}
+     * @param item2 the argument of type {@code JCORefOut<T2>}
+     * @param item3 the argument of type {@code JCORefOut<T3>}
+     * @param item4 the argument of type {@code JCORefOut<T4>}
+     * @param item5 the argument of type {@code JCORefOut<T5>}
+     * @param item6 the argument of type {@code JCORefOut<T6>}
+     * @param item7 the argument of type {@code JCORefOut<T7>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TupleExtensions.Deconstruct" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected> void Deconstruct(Tuple_7 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3, JCORefOut<T4> item4, JCORefOut<T5> item5, JCORefOut<T6> item6, JCORefOut<T7> item7) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -557,6 +1305,25 @@ public class TupleExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Deconstruct.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param value the argument of type {@code Tuple_6}
+     * @param item1 the argument of type {@code JCORefOut<T1>}
+     * @param item2 the argument of type {@code JCORefOut<T2>}
+     * @param item3 the argument of type {@code JCORefOut<T3>}
+     * @param item4 the argument of type {@code JCORefOut<T4>}
+     * @param item5 the argument of type {@code JCORefOut<T5>}
+     * @param item6 the argument of type {@code JCORefOut<T6>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TupleExtensions.Deconstruct" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected> void Deconstruct(Tuple_6 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3, JCORefOut<T4> item4, JCORefOut<T5> item5, JCORefOut<T6> item6) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -567,6 +1334,23 @@ public class TupleExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Deconstruct.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param value the argument of type {@code Tuple_5}
+     * @param item1 the argument of type {@code JCORefOut<T1>}
+     * @param item2 the argument of type {@code JCORefOut<T2>}
+     * @param item3 the argument of type {@code JCORefOut<T3>}
+     * @param item4 the argument of type {@code JCORefOut<T4>}
+     * @param item5 the argument of type {@code JCORefOut<T5>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TupleExtensions.Deconstruct" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected> void Deconstruct(Tuple_5 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3, JCORefOut<T4> item4, JCORefOut<T5> item5) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -577,6 +1361,21 @@ public class TupleExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Deconstruct.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param value the argument of type {@code Tuple_4}
+     * @param item1 the argument of type {@code JCORefOut<T1>}
+     * @param item2 the argument of type {@code JCORefOut<T2>}
+     * @param item3 the argument of type {@code JCORefOut<T3>}
+     * @param item4 the argument of type {@code JCORefOut<T4>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TupleExtensions.Deconstruct" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected> void Deconstruct(Tuple_4 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3, JCORefOut<T4> item4) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -587,6 +1386,19 @@ public class TupleExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Deconstruct.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param value the argument of type {@code Tuple_3}
+     * @param item1 the argument of type {@code JCORefOut<T1>}
+     * @param item2 the argument of type {@code JCORefOut<T2>}
+     * @param item3 the argument of type {@code JCORefOut<T3>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TupleExtensions.Deconstruct" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected> void Deconstruct(Tuple_3 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -597,6 +1409,17 @@ public class TupleExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Deconstruct.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param value the argument of type {@code Tuple_2}
+     * @param item1 the argument of type {@code JCORefOut<T1>}
+     * @param item2 the argument of type {@code JCORefOut<T2>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TupleExtensions.Deconstruct" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected> void Deconstruct(Tuple_2 value, JCORefOut<T1> item1, JCORefOut<T2> item2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -607,6 +1430,15 @@ public class TupleExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Deconstruct.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param value the argument of type {@code Tuple_1}
+     * @param item1 the argument of type {@code JCORefOut<T1>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TupleExtensions.Deconstruct" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected> void Deconstruct(Tuple_1 value, JCORefOut<T1> item1) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

@@ -52,5 +52,10 @@ import system.runtime.serialization.StreamingContext;
  * @version 2.0.0.0
  */
 public interface ISerializationEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param context the .NET argument of type {@code System.Runtime.Serialization.StreamingContext}
+     */
     public void Invoke(StreamingContext context);
 }

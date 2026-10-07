@@ -100,7 +100,10 @@ public class InstrumentAdvice_1<T extends IJCOBridgeReflected> extends NetObject
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public InstrumentAdvice_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,20 @@ public class InstrumentAdvice_1<T extends IJCOBridgeReflected> extends NetObject
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.InstrumentAdvice-1.-ctor" target="_top">.NET documentation</a>
+     */
     public InstrumentAdvice_1() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +184,13 @@ public class InstrumentAdvice_1<T extends IJCOBridgeReflected> extends NetObject
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HistogramBucketBoundaries.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.InstrumentAdvice-1.HistogramBucketBoundaries" target="_top">.NET documentation</a>
+     */
     public IReadOnlyList_1 getHistogramBucketBoundaries() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +206,22 @@ public class InstrumentAdvice_1<T extends IJCOBridgeReflected> extends NetObject
         }
     }
 
+    /**
+     * Sets the value of the .NET property HistogramBucketBoundaries.
+     *
+     * @param HistogramBucketBoundaries the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.InstrumentAdvice-1.HistogramBucketBoundaries" target="_top">.NET documentation</a>
+     */
     public void setHistogramBucketBoundaries(IReadOnlyList_1 HistogramBucketBoundaries) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

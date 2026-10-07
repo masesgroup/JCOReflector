@@ -106,7 +106,10 @@ public class ISymbolScopeImplementation extends NetObject implements ISymbolScop
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ISymbolScopeImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,13 @@ public class ISymbolScopeImplementation extends NetObject implements ISymbolScop
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetNamespaces.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolScope.GetNamespaces" target="_top">.NET documentation</a>
+     */
     public ISymbolNamespace[] GetNamespaces() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +179,13 @@ public class ISymbolScopeImplementation extends NetObject implements ISymbolScop
         }
     }
 
+    /**
+     * Invokes the .NET member GetChildren.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolScope.GetChildren" target="_top">.NET documentation</a>
+     */
     public ISymbolScope[] GetChildren() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +207,13 @@ public class ISymbolScopeImplementation extends NetObject implements ISymbolScop
         }
     }
 
+    /**
+     * Invokes the .NET member GetLocals.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolScope.GetLocals" target="_top">.NET documentation</a>
+     */
     public ISymbolVariable[] GetLocals() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +239,13 @@ public class ISymbolScopeImplementation extends NetObject implements ISymbolScop
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EndOffset.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolScope.EndOffset" target="_top">.NET documentation</a>
+     */
     public int getEndOffset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +286,13 @@ public class ISymbolScopeImplementation extends NetObject implements ISymbolScop
         }
     }
 
+    /**
+     * Gets the value of the .NET property StartOffset.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolScope.StartOffset" target="_top">.NET documentation</a>
+     */
     public int getStartOffset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +333,13 @@ public class ISymbolScopeImplementation extends NetObject implements ISymbolScop
         }
     }
 
+    /**
+     * Gets the value of the .NET property Method.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolScope.Method" target="_top">.NET documentation</a>
+     */
     public ISymbolMethod getMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +355,13 @@ public class ISymbolScopeImplementation extends NetObject implements ISymbolScop
         }
     }
 
+    /**
+     * Gets the value of the .NET property Parent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolScope.Parent" target="_top">.NET documentation</a>
+     */
     public ISymbolScope getParent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

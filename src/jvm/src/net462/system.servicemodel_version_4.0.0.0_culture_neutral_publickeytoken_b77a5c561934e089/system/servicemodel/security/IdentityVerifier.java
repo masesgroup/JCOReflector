@@ -102,7 +102,10 @@ public class IdentityVerifier extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IdentityVerifier(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,15 @@ public class IdentityVerifier extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CheckAccess.
+     *
+     * @param identity the argument of type {@code EndpointIdentity}
+     * @param authContext the argument of type {@code AuthorizationContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IdentityVerifier.CheckAccess" target="_top">.NET documentation</a>
+     */
     public boolean CheckAccess(EndpointIdentity identity, AuthorizationContext authContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +181,15 @@ public class IdentityVerifier extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetIdentity.
+     *
+     * @param reference the argument of type {@code EndpointAddress}
+     * @param identity the argument of type {@code JCORefOut<EndpointIdentity>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IdentityVerifier.TryGetIdentity" target="_top">.NET documentation</a>
+     */
     public boolean TryGetIdentity(EndpointAddress reference, JCORefOut<EndpointIdentity> identity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +204,13 @@ public class IdentityVerifier extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateDefault.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IdentityVerifier.CreateDefault" target="_top">.NET documentation</a>
+     */
     public static IdentityVerifier CreateDefault() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

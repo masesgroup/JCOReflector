@@ -102,7 +102,10 @@ public class TypedReference extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TypedReference(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,14 @@ public class TypedReference extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ToObject.
+     *
+     * @param value the argument of type {@code TypedReference}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TypedReference.ToObject" target="_top">.NET documentation</a>
+     */
     public static NetObject ToObject(TypedReference value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -172,6 +183,15 @@ public class TypedReference extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member TargetTypeToken.
+     *
+     * @param value the argument of type {@code TypedReference}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TypedReference.TargetTypeToken" target="_top">.NET documentation</a>
+     */
     public static RuntimeTypeHandle TargetTypeToken(TypedReference value) throws Throwable, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -187,6 +207,14 @@ public class TypedReference extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTargetType.
+     *
+     * @param value the argument of type {@code TypedReference}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TypedReference.GetTargetType" target="_top">.NET documentation</a>
+     */
     public static NetType GetTargetType(TypedReference value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -202,6 +230,18 @@ public class TypedReference extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member MakeTypedReference.
+     *
+     * @param target the argument of type {@code NetObject}
+     * @param flds the argument of type {@code FieldInfo[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TypedReference.MakeTypedReference" target="_top">.NET documentation</a>
+     */
     public static TypedReference MakeTypedReference(NetObject target, FieldInfo[] flds) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMemberException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -217,6 +257,14 @@ public class TypedReference extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetTypedReference.
+     *
+     * @param target the argument of type {@code TypedReference}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.TypedReference.SetTypedReference" target="_top">.NET documentation</a>
+     */
     public static void SetTypedReference(TypedReference target, NetObject value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

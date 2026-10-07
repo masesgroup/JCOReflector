@@ -99,7 +99,10 @@ public class ActivityBlockingUpdate extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ActivityBlockingUpdate(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,18 @@ public class ActivityBlockingUpdate extends NetObject  {
     public ActivityBlockingUpdate() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param activity the argument of type {@code Activity}
+     * @param originalActivityId the argument of type {@code java.lang.String}
+     * @param reason the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.ActivityBlockingUpdate.-ctor" target="_top">.NET documentation</a>
+     */
     public ActivityBlockingUpdate(Activity activity, java.lang.String originalActivityId, java.lang.String reason) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +174,21 @@ public class ActivityBlockingUpdate extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param activity the argument of type {@code Activity}
+     * @param originalActivityId the argument of type {@code java.lang.String}
+     * @param reason the argument of type {@code java.lang.String}
+     * @param activityInstanceId the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.ActivityBlockingUpdate.-ctor" target="_top">.NET documentation</a>
+     */
     public ActivityBlockingUpdate(Activity activity, java.lang.String originalActivityId, java.lang.String reason, java.lang.String activityInstanceId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +199,15 @@ public class ActivityBlockingUpdate extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param updatedActivityId the argument of type {@code java.lang.String}
+     * @param originalActivityId the argument of type {@code java.lang.String}
+     * @param reason the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.ActivityBlockingUpdate.-ctor" target="_top">.NET documentation</a>
+     */
     public ActivityBlockingUpdate(java.lang.String updatedActivityId, java.lang.String originalActivityId, java.lang.String reason) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +218,16 @@ public class ActivityBlockingUpdate extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param updatedActivityId the argument of type {@code java.lang.String}
+     * @param originalActivityId the argument of type {@code java.lang.String}
+     * @param reason the argument of type {@code java.lang.String}
+     * @param activityInstanceId the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.ActivityBlockingUpdate.-ctor" target="_top">.NET documentation</a>
+     */
     public ActivityBlockingUpdate(java.lang.String updatedActivityId, java.lang.String originalActivityId, java.lang.String reason, java.lang.String activityInstanceId) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -198,6 +247,13 @@ public class ActivityBlockingUpdate extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Activity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.ActivityBlockingUpdate.Activity" target="_top">.NET documentation</a>
+     */
     public Activity getActivity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +269,13 @@ public class ActivityBlockingUpdate extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ActivityInstanceId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.ActivityBlockingUpdate.ActivityInstanceId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getActivityInstanceId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +290,13 @@ public class ActivityBlockingUpdate extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ActivityInstanceId.
+     *
+     * @param ActivityInstanceId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.ActivityBlockingUpdate.ActivityInstanceId" target="_top">.NET documentation</a>
+     */
     public void setActivityInstanceId(java.lang.String ActivityInstanceId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +307,13 @@ public class ActivityBlockingUpdate extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OriginalActivityId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.ActivityBlockingUpdate.OriginalActivityId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getOriginalActivityId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +328,13 @@ public class ActivityBlockingUpdate extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OriginalActivityId.
+     *
+     * @param OriginalActivityId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.ActivityBlockingUpdate.OriginalActivityId" target="_top">.NET documentation</a>
+     */
     public void setOriginalActivityId(java.lang.String OriginalActivityId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +345,13 @@ public class ActivityBlockingUpdate extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Reason.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.ActivityBlockingUpdate.Reason" target="_top">.NET documentation</a>
+     */
     public java.lang.String getReason() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +366,13 @@ public class ActivityBlockingUpdate extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Reason.
+     *
+     * @param Reason the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.ActivityBlockingUpdate.Reason" target="_top">.NET documentation</a>
+     */
     public void setReason(java.lang.String Reason) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -285,6 +383,13 @@ public class ActivityBlockingUpdate extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UpdatedActivityId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.ActivityBlockingUpdate.UpdatedActivityId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUpdatedActivityId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -299,6 +404,13 @@ public class ActivityBlockingUpdate extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UpdatedActivityId.
+     *
+     * @param UpdatedActivityId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.ActivityBlockingUpdate.UpdatedActivityId" target="_top">.NET documentation</a>
+     */
     public void setUpdatedActivityId(java.lang.String UpdatedActivityId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

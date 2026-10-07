@@ -104,7 +104,9 @@ public class MultipleFilterMatchesException extends system.SystemException {
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public MultipleFilterMatchesException(java.lang.Object instance) {
         super(instance);
@@ -165,6 +167,14 @@ public class MultipleFilterMatchesException extends system.SystemException {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param filters the argument of type {@code Collection_1}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.MultipleFilterMatchesException.-ctor" target="_top">.NET documentation</a>
+     */
     public MultipleFilterMatchesException(java.lang.String message, Collection_1 filters) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +185,15 @@ public class MultipleFilterMatchesException extends system.SystemException {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param innerException the argument of type {@code NetException}
+     * @param filters the argument of type {@code Collection_1}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.MultipleFilterMatchesException.-ctor" target="_top">.NET documentation</a>
+     */
     public MultipleFilterMatchesException(java.lang.String message, NetException innerException, Collection_1 filters) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -193,6 +212,13 @@ public class MultipleFilterMatchesException extends system.SystemException {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Filters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.MultipleFilterMatchesException.Filters" target="_top">.NET documentation</a>
+     */
     public Collection_1 getFilters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

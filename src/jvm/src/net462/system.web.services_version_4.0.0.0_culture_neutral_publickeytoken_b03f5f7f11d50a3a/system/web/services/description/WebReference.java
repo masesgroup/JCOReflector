@@ -102,7 +102,10 @@ public class WebReference extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WebReference(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,15 @@ public class WebReference extends NetObject  {
     public WebReference() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param documents the argument of type {@code DiscoveryClientDocumentCollection}
+     * @param proxyCode the argument of type {@code CodeNamespace}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.WebReference.-ctor" target="_top">.NET documentation</a>
+     */
     public WebReference(DiscoveryClientDocumentCollection documents, CodeNamespace proxyCode) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +174,17 @@ public class WebReference extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param documents the argument of type {@code DiscoveryClientDocumentCollection}
+     * @param proxyCode the argument of type {@code CodeNamespace}
+     * @param appSettingUrlKey the argument of type {@code java.lang.String}
+     * @param appSettingBaseUrl the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.WebReference.-ctor" target="_top">.NET documentation</a>
+     */
     public WebReference(DiscoveryClientDocumentCollection documents, CodeNamespace proxyCode, java.lang.String appSettingUrlKey, java.lang.String appSettingBaseUrl) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +195,18 @@ public class WebReference extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param documents the argument of type {@code DiscoveryClientDocumentCollection}
+     * @param proxyCode the argument of type {@code CodeNamespace}
+     * @param protocolName the argument of type {@code java.lang.String}
+     * @param appSettingUrlKey the argument of type {@code java.lang.String}
+     * @param appSettingBaseUrl the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.WebReference.-ctor" target="_top">.NET documentation</a>
+     */
     public WebReference(DiscoveryClientDocumentCollection documents, CodeNamespace proxyCode, java.lang.String protocolName, java.lang.String appSettingUrlKey, java.lang.String appSettingBaseUrl) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -191,6 +226,13 @@ public class WebReference extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ProxyCode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.WebReference.ProxyCode" target="_top">.NET documentation</a>
+     */
     public CodeNamespace getProxyCode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +248,13 @@ public class WebReference extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValidationWarnings.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.WebReference.ValidationWarnings" target="_top">.NET documentation</a>
+     */
     public StringCollection getValidationWarnings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +270,13 @@ public class WebReference extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AppSettingBaseUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.WebReference.AppSettingBaseUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAppSettingBaseUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +291,13 @@ public class WebReference extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AppSettingUrlKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.WebReference.AppSettingUrlKey" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAppSettingUrlKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +312,13 @@ public class WebReference extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProtocolName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.WebReference.ProtocolName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getProtocolName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +333,13 @@ public class WebReference extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProtocolName.
+     *
+     * @param ProtocolName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.WebReference.ProtocolName" target="_top">.NET documentation</a>
+     */
     public void setProtocolName(java.lang.String ProtocolName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +350,13 @@ public class WebReference extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Warnings.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.WebReference.Warnings" target="_top">.NET documentation</a>
+     */
     public ServiceDescriptionImportWarnings getWarnings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +372,13 @@ public class WebReference extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Warnings.
+     *
+     * @param Warnings the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.WebReference.Warnings" target="_top">.NET documentation</a>
+     */
     public void setWarnings(ServiceDescriptionImportWarnings Warnings) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +389,13 @@ public class WebReference extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Documents.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.WebReference.Documents" target="_top">.NET documentation</a>
+     */
     public DiscoveryClientDocumentCollection getDocuments() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

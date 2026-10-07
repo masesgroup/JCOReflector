@@ -55,5 +55,14 @@ import system.threading.CancellationToken;
  * @version 2.0.0.0
  */
 public interface IServerOptionsSelectionCallback {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param stream the .NET argument of type {@code System.Net.Security.SslStream}
+     * @param clientHelloInfo the .NET argument of type {@code System.Net.Security.SslClientHelloInfo}
+     * @param state the .NET argument of type {@code System.Object}
+     * @param cancellationToken the .NET argument of type {@code System.Threading.CancellationToken}
+     * @return the value returned to the CLR
+     */
     public ValueTask_1 Invoke(SslStream stream, SslClientHelloInfo clientHelloInfo, NetObject state, CancellationToken cancellationToken);
 }

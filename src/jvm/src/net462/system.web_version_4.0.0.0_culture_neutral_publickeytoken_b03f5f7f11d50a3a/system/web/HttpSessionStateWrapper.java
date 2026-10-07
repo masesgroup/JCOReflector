@@ -104,7 +104,10 @@ public class HttpSessionStateWrapper extends system.web.HttpSessionStateBase  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HttpSessionStateWrapper(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,14 @@ public class HttpSessionStateWrapper extends system.web.HttpSessionStateBase  {
     public HttpSessionStateWrapper() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param httpSessionState the argument of type {@code HttpSessionState}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpSessionStateWrapper.-ctor" target="_top">.NET documentation</a>
+     */
     public HttpSessionStateWrapper(HttpSessionState httpSessionState) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +180,12 @@ public class HttpSessionStateWrapper extends system.web.HttpSessionStateBase  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Abandon.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpSessionStateWrapper.Abandon" target="_top">.NET documentation</a>
+     */
     public void Abandon() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +196,14 @@ public class HttpSessionStateWrapper extends system.web.HttpSessionStateBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpSessionStateWrapper.Add" target="_top">.NET documentation</a>
+     */
     public void Add(java.lang.String name, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +214,12 @@ public class HttpSessionStateWrapper extends system.web.HttpSessionStateBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member Clear.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpSessionStateWrapper.Clear" target="_top">.NET documentation</a>
+     */
     public void Clear() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +230,14 @@ public class HttpSessionStateWrapper extends system.web.HttpSessionStateBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code Array}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpSessionStateWrapper.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(Array array, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +248,13 @@ public class HttpSessionStateWrapper extends system.web.HttpSessionStateBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpSessionStateWrapper.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +265,12 @@ public class HttpSessionStateWrapper extends system.web.HttpSessionStateBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAll.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpSessionStateWrapper.RemoveAll" target="_top">.NET documentation</a>
+     */
     public void RemoveAll() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +281,13 @@ public class HttpSessionStateWrapper extends system.web.HttpSessionStateBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAt.
+     *
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpSessionStateWrapper.RemoveAt" target="_top">.NET documentation</a>
+     */
     public void RemoveAt(int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -108,7 +108,10 @@ public class ConstructionCall extends system.runtime.remoting.messaging.MethodCa
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ConstructionCall(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,22 @@ public class ConstructionCall extends system.runtime.remoting.messaging.MethodCa
     public ConstructionCall() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param headers the argument of type {@code Header[]}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.ConstructionCall.-ctor" target="_top">.NET documentation</a>
+     */
     public ConstructionCall(Header[] headers) throws Throwable, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +187,23 @@ public class ConstructionCall extends system.runtime.remoting.messaging.MethodCa
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param m the argument of type {@code IMessage}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.ConstructionCall.-ctor" target="_top">.NET documentation</a>
+     */
     public ConstructionCall(IMessage m) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.TypeLoadException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -187,6 +223,13 @@ public class ConstructionCall extends system.runtime.remoting.messaging.MethodCa
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ContextProperties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.ConstructionCall.ContextProperties" target="_top">.NET documentation</a>
+     */
     public IList getContextProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +245,13 @@ public class ConstructionCall extends system.runtime.remoting.messaging.MethodCa
         }
     }
 
+    /**
+     * Gets the value of the .NET property CallSiteActivationAttributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.ConstructionCall.CallSiteActivationAttributes" target="_top">.NET documentation</a>
+     */
     public final NetObject[] getCallSiteActivationAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +273,13 @@ public class ConstructionCall extends system.runtime.remoting.messaging.MethodCa
         }
     }
 
+    /**
+     * Gets the value of the .NET property Activator.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.ConstructionCall.Activator" target="_top">.NET documentation</a>
+     */
     public IActivator getActivator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +295,13 @@ public class ConstructionCall extends system.runtime.remoting.messaging.MethodCa
         }
     }
 
+    /**
+     * Sets the value of the .NET property Activator.
+     *
+     * @param Activator the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.ConstructionCall.Activator" target="_top">.NET documentation</a>
+     */
     public void setActivator(IActivator Activator) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +312,13 @@ public class ConstructionCall extends system.runtime.remoting.messaging.MethodCa
         }
     }
 
+    /**
+     * Gets the value of the .NET property ActivationTypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.ConstructionCall.ActivationTypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getActivationTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +333,22 @@ public class ConstructionCall extends system.runtime.remoting.messaging.MethodCa
         }
     }
 
+    /**
+     * Gets the value of the .NET property ActivationType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.ConstructionCall.ActivationType" target="_top">.NET documentation</a>
+     */
     public NetType getActivationType() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

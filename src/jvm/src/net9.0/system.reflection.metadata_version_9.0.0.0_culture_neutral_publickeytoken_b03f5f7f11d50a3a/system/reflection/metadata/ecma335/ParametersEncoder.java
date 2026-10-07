@@ -102,7 +102,10 @@ public class ParametersEncoder extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ParametersEncoder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,14 @@ public class ParametersEncoder extends system.ValueType  {
     public ParametersEncoder() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param builder the argument of type {@code BlobBuilder}
+     * @param hasVarArgs the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.ParametersEncoder.-ctor" target="_top">.NET documentation</a>
+     */
     public ParametersEncoder(BlobBuilder builder, boolean hasVarArgs) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +178,21 @@ public class ParametersEncoder extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member StartVarArgs.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.ParametersEncoder.StartVarArgs" target="_top">.NET documentation</a>
+     */
     public ParametersEncoder StartVarArgs() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +208,13 @@ public class ParametersEncoder extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddParameter.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.ParametersEncoder.AddParameter" target="_top">.NET documentation</a>
+     */
     public ParameterTypeEncoder AddParameter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +234,13 @@ public class ParametersEncoder extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HasVarArgs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.ParametersEncoder.HasVarArgs" target="_top">.NET documentation</a>
+     */
     public boolean getHasVarArgs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +255,13 @@ public class ParametersEncoder extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Builder.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.ParametersEncoder.Builder" target="_top">.NET documentation</a>
+     */
     public BlobBuilder getBuilder() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

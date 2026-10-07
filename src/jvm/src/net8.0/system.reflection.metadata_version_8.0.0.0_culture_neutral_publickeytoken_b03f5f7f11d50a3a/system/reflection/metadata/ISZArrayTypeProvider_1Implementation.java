@@ -98,7 +98,10 @@ public class ISZArrayTypeProvider_1Implementation<TType extends IJCOBridgeReflec
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ISZArrayTypeProvider_1Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,14 @@ public class ISZArrayTypeProvider_1Implementation<TType extends IJCOBridgeReflec
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetSZArrayType.
+     *
+     * @param elementType the argument of type {@code TType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.ISZArrayTypeProvider-1.GetSZArrayType" target="_top">.NET documentation</a>
+     */
     public TType GetSZArrayType(TType elementType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

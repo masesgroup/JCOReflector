@@ -109,7 +109,10 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ObjectDataSource(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,12 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.-ctor" target="_top">.NET documentation</a>
+     */
     public ObjectDataSource() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +175,16 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param typeName the argument of type {@code java.lang.String}
+     * @param selectMethod the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.-ctor" target="_top">.NET documentation</a>
+     */
     public ObjectDataSource(java.lang.String typeName, java.lang.String selectMethod) throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +199,16 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Delete.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.Delete" target="_top">.NET documentation</a>
+     */
     public int Delete() throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +249,16 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.Insert" target="_top">.NET documentation</a>
+     */
     public int Insert() throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +299,16 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member Update.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.Update" target="_top">.NET documentation</a>
+     */
     public int Update() throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +349,15 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member Select.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.Select" target="_top">.NET documentation</a>
+     */
     public IEnumerable Select() throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -319,6 +377,15 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ConvertNullToDBNull.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.ConvertNullToDBNull" target="_top">.NET documentation</a>
+     */
     public boolean getConvertNullToDBNull() throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -333,6 +400,15 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConvertNullToDBNull.
+     *
+     * @param ConvertNullToDBNull the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.ConvertNullToDBNull" target="_top">.NET documentation</a>
+     */
     public void setConvertNullToDBNull(boolean ConvertNullToDBNull) throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -343,6 +419,21 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EnableCaching.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.EnableCaching" target="_top">.NET documentation</a>
+     */
     public boolean getEnableCaching() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -357,6 +448,21 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EnableCaching.
+     *
+     * @param EnableCaching the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.EnableCaching" target="_top">.NET documentation</a>
+     */
     public void setEnableCaching(boolean EnableCaching) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -367,6 +473,15 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EnablePaging.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.EnablePaging" target="_top">.NET documentation</a>
+     */
     public boolean getEnablePaging() throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -381,6 +496,15 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EnablePaging.
+     *
+     * @param EnablePaging the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.EnablePaging" target="_top">.NET documentation</a>
+     */
     public void setEnablePaging(boolean EnablePaging) throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -391,6 +515,21 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CacheDuration.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.CacheDuration" target="_top">.NET documentation</a>
+     */
     public int getCacheDuration() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -431,6 +570,24 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CacheDuration.
+     *
+     * @param CacheDuration the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.CacheDuration" target="_top">.NET documentation</a>
+     */
     public void setCacheDuration(int CacheDuration) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -441,6 +598,21 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CacheKeyDependency.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.CacheKeyDependency" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCacheKeyDependency() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -455,6 +627,21 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CacheKeyDependency.
+     *
+     * @param CacheKeyDependency the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.CacheKeyDependency" target="_top">.NET documentation</a>
+     */
     public void setCacheKeyDependency(java.lang.String CacheKeyDependency) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -465,6 +652,15 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataObjectTypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.DataObjectTypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDataObjectTypeName() throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -479,6 +675,15 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataObjectTypeName.
+     *
+     * @param DataObjectTypeName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.DataObjectTypeName" target="_top">.NET documentation</a>
+     */
     public void setDataObjectTypeName(java.lang.String DataObjectTypeName) throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -489,6 +694,15 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DeleteMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.DeleteMethod" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDeleteMethod() throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -503,6 +717,15 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DeleteMethod.
+     *
+     * @param DeleteMethod the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.DeleteMethod" target="_top">.NET documentation</a>
+     */
     public void setDeleteMethod(java.lang.String DeleteMethod) throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -513,6 +736,15 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FilterExpression.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.FilterExpression" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFilterExpression() throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -527,6 +759,15 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FilterExpression.
+     *
+     * @param FilterExpression the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.FilterExpression" target="_top">.NET documentation</a>
+     */
     public void setFilterExpression(java.lang.String FilterExpression) throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -537,6 +778,15 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InsertMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.InsertMethod" target="_top">.NET documentation</a>
+     */
     public java.lang.String getInsertMethod() throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -551,6 +801,15 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InsertMethod.
+     *
+     * @param InsertMethod the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.InsertMethod" target="_top">.NET documentation</a>
+     */
     public void setInsertMethod(java.lang.String InsertMethod) throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -561,6 +820,15 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaximumRowsParameterName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.MaximumRowsParameterName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMaximumRowsParameterName() throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -575,6 +843,15 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaximumRowsParameterName.
+     *
+     * @param MaximumRowsParameterName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.MaximumRowsParameterName" target="_top">.NET documentation</a>
+     */
     public void setMaximumRowsParameterName(java.lang.String MaximumRowsParameterName) throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -585,6 +862,15 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OldValuesParameterFormatString.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.OldValuesParameterFormatString" target="_top">.NET documentation</a>
+     */
     public java.lang.String getOldValuesParameterFormatString() throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -599,6 +885,15 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OldValuesParameterFormatString.
+     *
+     * @param OldValuesParameterFormatString the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.OldValuesParameterFormatString" target="_top">.NET documentation</a>
+     */
     public void setOldValuesParameterFormatString(java.lang.String OldValuesParameterFormatString) throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -609,6 +904,15 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SelectCountMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.SelectCountMethod" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSelectCountMethod() throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -623,6 +927,15 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SelectCountMethod.
+     *
+     * @param SelectCountMethod the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.SelectCountMethod" target="_top">.NET documentation</a>
+     */
     public void setSelectCountMethod(java.lang.String SelectCountMethod) throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -633,6 +946,15 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SelectMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.SelectMethod" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSelectMethod() throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -647,6 +969,15 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SelectMethod.
+     *
+     * @param SelectMethod the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.SelectMethod" target="_top">.NET documentation</a>
+     */
     public void setSelectMethod(java.lang.String SelectMethod) throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -657,6 +988,15 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SortParameterName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.SortParameterName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSortParameterName() throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -671,6 +1011,15 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SortParameterName.
+     *
+     * @param SortParameterName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.SortParameterName" target="_top">.NET documentation</a>
+     */
     public void setSortParameterName(java.lang.String SortParameterName) throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -681,6 +1030,21 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SqlCacheDependency.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.SqlCacheDependency" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSqlCacheDependency() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -695,6 +1059,21 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SqlCacheDependency.
+     *
+     * @param SqlCacheDependency the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.SqlCacheDependency" target="_top">.NET documentation</a>
+     */
     public void setSqlCacheDependency(java.lang.String SqlCacheDependency) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -705,6 +1084,15 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StartRowIndexParameterName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.StartRowIndexParameterName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getStartRowIndexParameterName() throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -719,6 +1107,15 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StartRowIndexParameterName.
+     *
+     * @param StartRowIndexParameterName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.StartRowIndexParameterName" target="_top">.NET documentation</a>
+     */
     public void setStartRowIndexParameterName(java.lang.String StartRowIndexParameterName) throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -729,6 +1126,15 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.TypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTypeName() throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -743,6 +1149,15 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TypeName.
+     *
+     * @param TypeName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.TypeName" target="_top">.NET documentation</a>
+     */
     public void setTypeName(java.lang.String TypeName) throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -753,6 +1168,15 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UpdateMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.UpdateMethod" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUpdateMethod() throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -767,6 +1191,15 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UpdateMethod.
+     *
+     * @param UpdateMethod the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.UpdateMethod" target="_top">.NET documentation</a>
+     */
     public void setUpdateMethod(java.lang.String UpdateMethod) throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -777,6 +1210,15 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConflictDetection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.ConflictDetection" target="_top">.NET documentation</a>
+     */
     public ConflictOptions getConflictDetection() throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -792,6 +1234,16 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConflictDetection.
+     *
+     * @param ConflictDetection the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.ConflictDetection" target="_top">.NET documentation</a>
+     */
     public void setConflictDetection(ConflictOptions ConflictDetection) throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -802,6 +1254,21 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CacheExpirationPolicy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.CacheExpirationPolicy" target="_top">.NET documentation</a>
+     */
     public DataSourceCacheExpiry getCacheExpirationPolicy() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -817,6 +1284,24 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CacheExpirationPolicy.
+     *
+     * @param CacheExpirationPolicy the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.CacheExpirationPolicy" target="_top">.NET documentation</a>
+     */
     public void setCacheExpirationPolicy(DataSourceCacheExpiry CacheExpirationPolicy) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -827,6 +1312,15 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DeleteParameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.DeleteParameters" target="_top">.NET documentation</a>
+     */
     public ParameterCollection getDeleteParameters() throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -842,6 +1336,15 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FilterParameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.FilterParameters" target="_top">.NET documentation</a>
+     */
     public ParameterCollection getFilterParameters() throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -857,6 +1360,15 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InsertParameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.InsertParameters" target="_top">.NET documentation</a>
+     */
     public ParameterCollection getInsertParameters() throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -872,6 +1384,15 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SelectParameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.SelectParameters" target="_top">.NET documentation</a>
+     */
     public ParameterCollection getSelectParameters() throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -887,6 +1408,15 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UpdateParameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.UpdateParameters" target="_top">.NET documentation</a>
+     */
     public ParameterCollection getUpdateParameters() throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -902,6 +1432,15 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ParsingCulture.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.ParsingCulture" target="_top">.NET documentation</a>
+     */
     public ParsingCulture getParsingCulture() throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -917,6 +1456,15 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ParsingCulture.
+     *
+     * @param ParsingCulture the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSource.ParsingCulture" target="_top">.NET documentation</a>
+     */
     public void setParsingCulture(ParsingCulture ParsingCulture) throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -932,6 +1480,13 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addObjectDisposing.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceDisposingEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addObjectDisposing(ObjectDataSourceDisposingEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -942,6 +1497,13 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeObjectDisposing.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceDisposingEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeObjectDisposing(ObjectDataSourceDisposingEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -952,6 +1514,13 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member addFiltering.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceFilteringEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addFiltering(ObjectDataSourceFilteringEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -962,6 +1531,13 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeFiltering.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceFilteringEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeFiltering(ObjectDataSourceFilteringEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -972,6 +1548,13 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member addDeleting.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceMethodEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addDeleting(ObjectDataSourceMethodEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -982,6 +1565,13 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeDeleting.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceMethodEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeDeleting(ObjectDataSourceMethodEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -992,6 +1582,13 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member addInserting.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceMethodEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addInserting(ObjectDataSourceMethodEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1002,6 +1599,13 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeInserting.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceMethodEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeInserting(ObjectDataSourceMethodEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1012,6 +1616,13 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member addUpdating.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceMethodEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addUpdating(ObjectDataSourceMethodEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1022,6 +1633,13 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeUpdating.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceMethodEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeUpdating(ObjectDataSourceMethodEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1032,6 +1650,13 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member addObjectCreated.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceObjectEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addObjectCreated(ObjectDataSourceObjectEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1042,6 +1667,13 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeObjectCreated.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceObjectEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeObjectCreated(ObjectDataSourceObjectEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1052,6 +1684,13 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member addObjectCreating.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceObjectEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addObjectCreating(ObjectDataSourceObjectEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1062,6 +1701,13 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeObjectCreating.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceObjectEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeObjectCreating(ObjectDataSourceObjectEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1072,6 +1718,13 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member addSelecting.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceSelectingEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addSelecting(ObjectDataSourceSelectingEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1082,6 +1735,13 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeSelecting.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceSelectingEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeSelecting(ObjectDataSourceSelectingEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1092,6 +1752,13 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member addDeleted.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceStatusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addDeleted(ObjectDataSourceStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1102,6 +1769,13 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeDeleted.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceStatusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeDeleted(ObjectDataSourceStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1112,6 +1786,13 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member addInserted.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceStatusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addInserted(ObjectDataSourceStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1122,6 +1803,13 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeInserted.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceStatusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeInserted(ObjectDataSourceStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1132,6 +1820,13 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member addSelected.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceStatusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addSelected(ObjectDataSourceStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1142,6 +1837,13 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeSelected.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceStatusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeSelected(ObjectDataSourceStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1152,6 +1854,13 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member addUpdated.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceStatusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addUpdated(ObjectDataSourceStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1162,6 +1871,13 @@ public class ObjectDataSource extends system.web.ui.DataSourceControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeUpdated.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceStatusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeUpdated(ObjectDataSourceStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -109,7 +109,10 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public List_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,12 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.-ctor" target="_top">.NET documentation</a>
+     */
     public List_1() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +177,14 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param capacity the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.-ctor" target="_top">.NET documentation</a>
+     */
     public List_1(int capacity) throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +197,15 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param collection the argument of type {@code IEnumerable_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.-ctor" target="_top">.NET documentation</a>
+     */
     public List_1(IEnumerable_1 collection) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -196,6 +222,14 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param item the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(T item) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +244,16 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
         }
     }
 
+    /**
+     * Invokes the .NET member Exists.
+     *
+     * @param match the argument of type {@code Predicate_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.Exists" target="_top">.NET documentation</a>
+     */
     public boolean Exists(Predicate_1 match) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +268,16 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param item the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.Remove" target="_top">.NET documentation</a>
+     */
     public boolean Remove(T item) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +292,15 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
         }
     }
 
+    /**
+     * Invokes the .NET member TrueForAll.
+     *
+     * @param match the argument of type {@code Predicate_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.TrueForAll" target="_top">.NET documentation</a>
+     */
     public boolean TrueForAll(Predicate_1 match) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +315,22 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
         }
     }
 
+    /**
+     * Invokes the .NET member BinarySearch.
+     *
+     * @param index the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @param item the argument of type {@code T}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.BinarySearch" target="_top">.NET documentation</a>
+     */
     public int BinarySearch(int index, int count, T item, IComparer_1 comparer) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +371,19 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
         }
     }
 
+    /**
+     * Invokes the .NET member BinarySearch.
+     *
+     * @param item the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.BinarySearch" target="_top">.NET documentation</a>
+     */
     public int BinarySearch(T item) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -332,6 +424,20 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
         }
     }
 
+    /**
+     * Invokes the .NET member BinarySearch.
+     *
+     * @param item the argument of type {@code T}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.BinarySearch" target="_top">.NET documentation</a>
+     */
     public int BinarySearch(T item, IComparer_1 comparer) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -372,6 +478,18 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
         }
     }
 
+    /**
+     * Invokes the .NET member FindIndex.
+     *
+     * @param startIndex the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @param match the argument of type {@code Predicate_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.FindIndex" target="_top">.NET documentation</a>
+     */
     public int FindIndex(int startIndex, int count, Predicate_1 match) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -412,6 +530,17 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
         }
     }
 
+    /**
+     * Invokes the .NET member FindIndex.
+     *
+     * @param startIndex the argument of type {@code int}
+     * @param match the argument of type {@code Predicate_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.FindIndex" target="_top">.NET documentation</a>
+     */
     public int FindIndex(int startIndex, Predicate_1 match) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -452,6 +581,16 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
         }
     }
 
+    /**
+     * Invokes the .NET member FindIndex.
+     *
+     * @param match the argument of type {@code Predicate_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.FindIndex" target="_top">.NET documentation</a>
+     */
     public int FindIndex(Predicate_1 match) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -492,6 +631,18 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
         }
     }
 
+    /**
+     * Invokes the .NET member FindLastIndex.
+     *
+     * @param startIndex the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @param match the argument of type {@code Predicate_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.FindLastIndex" target="_top">.NET documentation</a>
+     */
     public int FindLastIndex(int startIndex, int count, Predicate_1 match) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -532,6 +683,17 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
         }
     }
 
+    /**
+     * Invokes the .NET member FindLastIndex.
+     *
+     * @param startIndex the argument of type {@code int}
+     * @param match the argument of type {@code Predicate_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.FindLastIndex" target="_top">.NET documentation</a>
+     */
     public int FindLastIndex(int startIndex, Predicate_1 match) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -572,6 +734,16 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
         }
     }
 
+    /**
+     * Invokes the .NET member FindLastIndex.
+     *
+     * @param match the argument of type {@code Predicate_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.FindLastIndex" target="_top">.NET documentation</a>
+     */
     public int FindLastIndex(Predicate_1 match) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -612,6 +784,16 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param item the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(T item) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -652,6 +834,17 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param item the argument of type {@code T}
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(T item, int index) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -692,6 +885,18 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param item the argument of type {@code T}
+     * @param index the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(T item, int index, int count) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -732,6 +937,16 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
         }
     }
 
+    /**
+     * Invokes the .NET member LastIndexOf.
+     *
+     * @param item the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.LastIndexOf" target="_top">.NET documentation</a>
+     */
     public int LastIndexOf(T item) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -772,6 +987,17 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
         }
     }
 
+    /**
+     * Invokes the .NET member LastIndexOf.
+     *
+     * @param item the argument of type {@code T}
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.LastIndexOf" target="_top">.NET documentation</a>
+     */
     public int LastIndexOf(T item, int index) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -812,6 +1038,18 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
         }
     }
 
+    /**
+     * Invokes the .NET member LastIndexOf.
+     *
+     * @param item the argument of type {@code T}
+     * @param index the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.LastIndexOf" target="_top">.NET documentation</a>
+     */
     public int LastIndexOf(T item, int index, int count) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -852,6 +1090,15 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAll.
+     *
+     * @param match the argument of type {@code Predicate_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.RemoveAll" target="_top">.NET documentation</a>
+     */
     public int RemoveAll(Predicate_1 match) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -892,6 +1139,16 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
         }
     }
 
+    /**
+     * Invokes the .NET member FindAll.
+     *
+     * @param match the argument of type {@code Predicate_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.FindAll" target="_top">.NET documentation</a>
+     */
     public List_1 FindAll(Predicate_1 match) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -907,6 +1164,17 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
         }
     }
 
+    /**
+     * Invokes the .NET member GetRange.
+     *
+     * @param index the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.GetRange" target="_top">.NET documentation</a>
+     */
     public List_1 GetRange(int index, int count) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -922,6 +1190,17 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertAll.
+     *
+     * @param <TOutput> the type of the generic argument TOutput
+     * @param converter the argument of type {@code Converter_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.ConvertAll" target="_top">.NET documentation</a>
+     */
     public <TOutput extends IJCOBridgeReflected> List_1 ConvertAll(Converter_2 converter) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -937,6 +1216,14 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
         }
     }
 
+    /**
+     * Invokes the .NET member AsReadOnly.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.AsReadOnly" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 AsReadOnly() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -952,6 +1239,15 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
         }
     }
 
+    /**
+     * Invokes the .NET member Find.
+     *
+     * @param match the argument of type {@code Predicate_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.Find" target="_top">.NET documentation</a>
+     */
     public T Find(Predicate_1 match) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -966,6 +1262,15 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
         }
     }
 
+    /**
+     * Invokes the .NET member FindLast.
+     *
+     * @param match the argument of type {@code Predicate_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.FindLast" target="_top">.NET documentation</a>
+     */
     public T FindLast(Predicate_1 match) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -980,6 +1285,13 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
         }
     }
 
+/**
+ * Invokes the .NET member ToArray.
+ *
+ * @return the value returned by the .NET member
+ * @throws Throwable if the call fails in the bridge or in the CLR
+ * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.ToArray" target="_top">.NET documentation</a>
+ */
 public T[] ToArray() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1003,6 +1315,14 @@ public T[] ToArray() throws Throwable {
             throw translateException(jcne);
         }
     }
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param item the argument of type {@code T}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.Add" target="_top">.NET documentation</a>
+     */
     public void Add(T item) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1013,6 +1333,16 @@ public T[] ToArray() throws Throwable {
         }
     }
 
+    /**
+     * Invokes the .NET member AddRange.
+     *
+     * @param collection the argument of type {@code IEnumerable_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.AddRange" target="_top">.NET documentation</a>
+     */
     public void AddRange(IEnumerable_1 collection) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1023,6 +1353,12 @@ public T[] ToArray() throws Throwable {
         }
     }
 
+    /**
+     * Invokes the .NET member Clear.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.Clear" target="_top">.NET documentation</a>
+     */
     public void Clear() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1033,6 +1369,17 @@ public T[] ToArray() throws Throwable {
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param index the argument of type {@code int}
+     * @param array the argument of type {@code T[]}
+     * @param arrayIndex the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(int index, T[] array, int arrayIndex, int count) throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1043,6 +1390,13 @@ public T[] ToArray() throws Throwable {
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code T[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(T[] array) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1053,6 +1407,14 @@ public T[] ToArray() throws Throwable {
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code T[]}
+     * @param arrayIndex the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(T[] array, int arrayIndex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1063,6 +1425,15 @@ public T[] ToArray() throws Throwable {
         }
     }
 
+    /**
+     * Invokes the .NET member ForEach.
+     *
+     * @param action the argument of type {@code Action_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.ForEach" target="_top">.NET documentation</a>
+     */
     public void ForEach(Action_1 action) throws Throwable, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1073,6 +1444,15 @@ public T[] ToArray() throws Throwable {
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param item the argument of type {@code T}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(int index, T item) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1083,6 +1463,17 @@ public T[] ToArray() throws Throwable {
         }
     }
 
+    /**
+     * Invokes the .NET member InsertRange.
+     *
+     * @param index the argument of type {@code int}
+     * @param collection the argument of type {@code IEnumerable_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.InsertRange" target="_top">.NET documentation</a>
+     */
     public void InsertRange(int index, IEnumerable_1 collection) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1093,6 +1484,14 @@ public T[] ToArray() throws Throwable {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAt.
+     *
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.RemoveAt" target="_top">.NET documentation</a>
+     */
     public void RemoveAt(int index) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1103,6 +1502,16 @@ public T[] ToArray() throws Throwable {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveRange.
+     *
+     * @param index the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.RemoveRange" target="_top">.NET documentation</a>
+     */
     public void RemoveRange(int index, int count) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1113,6 +1522,16 @@ public T[] ToArray() throws Throwable {
         }
     }
 
+    /**
+     * Invokes the .NET member Reverse.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.Reverse" target="_top">.NET documentation</a>
+     */
     public void Reverse() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1123,6 +1542,18 @@ public T[] ToArray() throws Throwable {
         }
     }
 
+    /**
+     * Invokes the .NET member Reverse.
+     *
+     * @param index the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.Reverse" target="_top">.NET documentation</a>
+     */
     public void Reverse(int index, int count) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1133,6 +1564,17 @@ public T[] ToArray() throws Throwable {
         }
     }
 
+    /**
+     * Invokes the .NET member Sort.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.Sort" target="_top">.NET documentation</a>
+     */
     public void Sort() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1143,6 +1585,20 @@ public T[] ToArray() throws Throwable {
         }
     }
 
+    /**
+     * Invokes the .NET member Sort.
+     *
+     * @param index the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.Sort" target="_top">.NET documentation</a>
+     */
     public void Sort(int index, int count, IComparer_1 comparer) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1153,6 +1609,18 @@ public T[] ToArray() throws Throwable {
         }
     }
 
+    /**
+     * Invokes the .NET member Sort.
+     *
+     * @param comparer the argument of type {@code IComparer_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.Sort" target="_top">.NET documentation</a>
+     */
     public void Sort(IComparer_1 comparer) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1163,6 +1631,18 @@ public T[] ToArray() throws Throwable {
         }
     }
 
+    /**
+     * Invokes the .NET member Sort.
+     *
+     * @param comparison the argument of type {@code Comparison_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.Sort" target="_top">.NET documentation</a>
+     */
     public void Sort(Comparison_1 comparison) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1173,6 +1653,13 @@ public T[] ToArray() throws Throwable {
         }
     }
 
+    /**
+     * Invokes the .NET member TrimExcess.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.TrimExcess" target="_top">.NET documentation</a>
+     */
     public void TrimExcess() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1186,8 +1673,13 @@ public T[] ToArray() throws Throwable {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IList.Contains" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean Contains(NetObject value) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
@@ -1195,8 +1687,13 @@ public T[] ToArray() throws Throwable {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IList.Add" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int Add(NetObject value) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
@@ -1204,8 +1701,13 @@ public T[] ToArray() throws Throwable {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IList.IndexOf" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int IndexOf(NetObject value) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
@@ -1213,8 +1715,13 @@ public T[] ToArray() throws Throwable {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     *
+     * @param index the argument of type {@code int}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IList.Insert" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Insert(int index, NetObject value) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
@@ -1222,8 +1729,12 @@ public T[] ToArray() throws Throwable {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     *
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IList.Remove" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Remove(NetObject value) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
@@ -1231,8 +1742,13 @@ public T[] ToArray() throws Throwable {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICollection method available in ICollection to obtain an object with an invocable method
+     *
+     * @param array the argument of type {@code Array}
+     * @param index the argument of type {@code int}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.ICollection.CopyTo" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void CopyTo(Array array, int index) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection to obtain the full interface.");
     }
@@ -1241,6 +1757,13 @@ public T[] ToArray() throws Throwable {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Capacity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.Capacity" target="_top">.NET documentation</a>
+     */
     public int getCapacity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1281,6 +1804,14 @@ public T[] ToArray() throws Throwable {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Capacity.
+     *
+     * @param Capacity the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.Capacity" target="_top">.NET documentation</a>
+     */
     public void setCapacity(int Capacity) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1291,6 +1822,13 @@ public T[] ToArray() throws Throwable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Count.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.Count" target="_top">.NET documentation</a>
+     */
     public int getCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

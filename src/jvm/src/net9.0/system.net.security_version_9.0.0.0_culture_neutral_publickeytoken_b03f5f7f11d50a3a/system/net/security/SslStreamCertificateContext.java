@@ -103,7 +103,10 @@ public class SslStreamCertificateContext extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SslStreamCertificateContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,30 @@ public class SslStreamCertificateContext extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param target the argument of type {@code X509Certificate2}
+     * @param additionalCertificates the argument of type {@code X509Certificate2Collection}
+     * @param offline the argument of type {@code boolean}
+     * @param trust the argument of type {@code SslCertificateTrust}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.SslStreamCertificateContext.Create" target="_top">.NET documentation</a>
+     */
     public static SslStreamCertificateContext Create(X509Certificate2 target, X509Certificate2Collection additionalCertificates, boolean offline, SslCertificateTrust trust) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException, system.NotSupportedException, system.OverflowException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -173,6 +200,27 @@ public class SslStreamCertificateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param target the argument of type {@code X509Certificate2}
+     * @param additionalCertificates the argument of type {@code X509Certificate2Collection}
+     * @param offline the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.SslStreamCertificateContext.Create" target="_top">.NET documentation</a>
+     */
     public static SslStreamCertificateContext Create(X509Certificate2 target, X509Certificate2Collection additionalCertificates, boolean offline) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException, system.NotSupportedException, system.OverflowException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -192,6 +240,13 @@ public class SslStreamCertificateContext extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IntermediateCertificates.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.SslStreamCertificateContext.IntermediateCertificates" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getIntermediateCertificates() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +262,13 @@ public class SslStreamCertificateContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetCertificate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.SslStreamCertificateContext.TargetCertificate" target="_top">.NET documentation</a>
+     */
     public X509Certificate2 getTargetCertificate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

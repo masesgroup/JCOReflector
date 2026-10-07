@@ -102,7 +102,10 @@ public class SequentialWorkflowRootDesigner extends system.workflow.componentmod
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SequentialWorkflowRootDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class SequentialWorkflowRootDesigner extends system.workflow.componentmod
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.-ctor" target="_top">.NET documentation</a>
+     */
     public SequentialWorkflowRootDesigner() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,14 @@ public class SequentialWorkflowRootDesigner extends system.workflow.componentmod
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CanBeParentedTo.
+     *
+     * @param parentActivityDesigner the argument of type {@code CompositeActivityDesigner}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.CanBeParentedTo" target="_top">.NET documentation</a>
+     */
     public boolean CanBeParentedTo(CompositeActivityDesigner parentActivityDesigner) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

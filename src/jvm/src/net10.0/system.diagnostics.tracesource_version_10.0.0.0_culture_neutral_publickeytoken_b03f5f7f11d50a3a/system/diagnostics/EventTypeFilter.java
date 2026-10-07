@@ -102,7 +102,10 @@ public class EventTypeFilter extends system.diagnostics.TraceFilter  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EventTypeFilter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,13 @@ public class EventTypeFilter extends system.diagnostics.TraceFilter  {
     public EventTypeFilter() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param level the argument of type {@code SourceLevels}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.EventTypeFilter.-ctor" target="_top">.NET documentation</a>
+     */
     public EventTypeFilter(SourceLevels level) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +177,21 @@ public class EventTypeFilter extends system.diagnostics.TraceFilter  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ShouldTrace.
+     *
+     * @param cache the argument of type {@code TraceEventCache}
+     * @param source the argument of type {@code java.lang.String}
+     * @param eventType the argument of type {@code TraceEventType}
+     * @param id the argument of type {@code int}
+     * @param formatOrMessage the argument of type {@code java.lang.String}
+     * @param args the argument of type {@code NetObject[]}
+     * @param data1 the argument of type {@code NetObject}
+     * @param data the argument of type {@code NetObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.EventTypeFilter.ShouldTrace" target="_top">.NET documentation</a>
+     */
     public boolean ShouldTrace(TraceEventCache cache, java.lang.String source, TraceEventType eventType, int id, java.lang.String formatOrMessage, NetObject[] args, NetObject data1, NetObject[] data) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +210,13 @@ public class EventTypeFilter extends system.diagnostics.TraceFilter  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EventType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.EventTypeFilter.EventType" target="_top">.NET documentation</a>
+     */
     public SourceLevels getEventType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +232,13 @@ public class EventTypeFilter extends system.diagnostics.TraceFilter  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EventType.
+     *
+     * @param EventType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.EventTypeFilter.EventType" target="_top">.NET documentation</a>
+     */
     public void setEventType(SourceLevels EventType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

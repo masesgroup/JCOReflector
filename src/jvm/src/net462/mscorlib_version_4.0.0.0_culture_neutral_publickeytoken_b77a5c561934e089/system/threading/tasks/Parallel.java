@@ -111,7 +111,10 @@ public class Parallel extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Parallel(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -164,6 +167,31 @@ public class Parallel extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member For.
+     *
+     * @param fromInclusive the argument of type {@code int}
+     * @param toExclusive the argument of type {@code int}
+     * @param body the argument of type {@code Action_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Parallel.For" target="_top">.NET documentation</a>
+     */
     public static ParallelLoopResult For(int fromInclusive, int toExclusive, Action_1 body) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -179,6 +207,31 @@ public class Parallel extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member For.
+     *
+     * @param fromInclusive the argument of type {@code int}
+     * @param toExclusive the argument of type {@code int}
+     * @param body the argument of type {@code Action_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Parallel.For" target="_top">.NET documentation</a>
+     */
     public static ParallelLoopResult For(int fromInclusive, int toExclusive, Action_2 body) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -194,6 +247,32 @@ public class Parallel extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member For.
+     *
+     * @param fromInclusive the argument of type {@code int}
+     * @param toExclusive the argument of type {@code int}
+     * @param parallelOptions the argument of type {@code ParallelOptions}
+     * @param body the argument of type {@code Action_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Parallel.For" target="_top">.NET documentation</a>
+     */
     public static ParallelLoopResult For(int fromInclusive, int toExclusive, ParallelOptions parallelOptions, Action_1 body) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -209,6 +288,32 @@ public class Parallel extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member For.
+     *
+     * @param fromInclusive the argument of type {@code int}
+     * @param toExclusive the argument of type {@code int}
+     * @param parallelOptions the argument of type {@code ParallelOptions}
+     * @param body the argument of type {@code Action_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Parallel.For" target="_top">.NET documentation</a>
+     */
     public static ParallelLoopResult For(int fromInclusive, int toExclusive, ParallelOptions parallelOptions, Action_2 body) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -224,6 +329,31 @@ public class Parallel extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member For.
+     *
+     * @param fromInclusive the argument of type {@code long}
+     * @param toExclusive the argument of type {@code long}
+     * @param body the argument of type {@code Action_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Parallel.For" target="_top">.NET documentation</a>
+     */
     public static ParallelLoopResult For(long fromInclusive, long toExclusive, Action_1 body) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -239,6 +369,31 @@ public class Parallel extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member For.
+     *
+     * @param fromInclusive the argument of type {@code long}
+     * @param toExclusive the argument of type {@code long}
+     * @param body the argument of type {@code Action_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Parallel.For" target="_top">.NET documentation</a>
+     */
     public static ParallelLoopResult For(long fromInclusive, long toExclusive, Action_2 body) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -254,6 +409,32 @@ public class Parallel extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member For.
+     *
+     * @param fromInclusive the argument of type {@code long}
+     * @param toExclusive the argument of type {@code long}
+     * @param parallelOptions the argument of type {@code ParallelOptions}
+     * @param body the argument of type {@code Action_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Parallel.For" target="_top">.NET documentation</a>
+     */
     public static ParallelLoopResult For(long fromInclusive, long toExclusive, ParallelOptions parallelOptions, Action_1 body) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -269,6 +450,32 @@ public class Parallel extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member For.
+     *
+     * @param fromInclusive the argument of type {@code long}
+     * @param toExclusive the argument of type {@code long}
+     * @param parallelOptions the argument of type {@code ParallelOptions}
+     * @param body the argument of type {@code Action_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Parallel.For" target="_top">.NET documentation</a>
+     */
     public static ParallelLoopResult For(long fromInclusive, long toExclusive, ParallelOptions parallelOptions, Action_2 body) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -284,6 +491,34 @@ public class Parallel extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member For.
+     *
+     * @param <TLocal> the type of the generic argument TLocal
+     * @param fromInclusive the argument of type {@code int}
+     * @param toExclusive the argument of type {@code int}
+     * @param localInit the argument of type {@code Func_1}
+     * @param body the argument of type {@code Func_4}
+     * @param localFinally the argument of type {@code Action_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Parallel.For" target="_top">.NET documentation</a>
+     */
     public static <TLocal extends IJCOBridgeReflected> ParallelLoopResult For(int fromInclusive, int toExclusive, Func_1 localInit, Func_4 body, Action_1 localFinally) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -299,6 +534,35 @@ public class Parallel extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member For.
+     *
+     * @param <TLocal> the type of the generic argument TLocal
+     * @param fromInclusive the argument of type {@code int}
+     * @param toExclusive the argument of type {@code int}
+     * @param parallelOptions the argument of type {@code ParallelOptions}
+     * @param localInit the argument of type {@code Func_1}
+     * @param body the argument of type {@code Func_4}
+     * @param localFinally the argument of type {@code Action_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Parallel.For" target="_top">.NET documentation</a>
+     */
     public static <TLocal extends IJCOBridgeReflected> ParallelLoopResult For(int fromInclusive, int toExclusive, ParallelOptions parallelOptions, Func_1 localInit, Func_4 body, Action_1 localFinally) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -314,6 +578,34 @@ public class Parallel extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member For.
+     *
+     * @param <TLocal> the type of the generic argument TLocal
+     * @param fromInclusive the argument of type {@code long}
+     * @param toExclusive the argument of type {@code long}
+     * @param localInit the argument of type {@code Func_1}
+     * @param body the argument of type {@code Func_4}
+     * @param localFinally the argument of type {@code Action_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Parallel.For" target="_top">.NET documentation</a>
+     */
     public static <TLocal extends IJCOBridgeReflected> ParallelLoopResult For(long fromInclusive, long toExclusive, Func_1 localInit, Func_4 body, Action_1 localFinally) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -329,6 +621,35 @@ public class Parallel extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member For.
+     *
+     * @param <TLocal> the type of the generic argument TLocal
+     * @param fromInclusive the argument of type {@code long}
+     * @param toExclusive the argument of type {@code long}
+     * @param parallelOptions the argument of type {@code ParallelOptions}
+     * @param localInit the argument of type {@code Func_1}
+     * @param body the argument of type {@code Func_4}
+     * @param localFinally the argument of type {@code Action_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Parallel.For" target="_top">.NET documentation</a>
+     */
     public static <TLocal extends IJCOBridgeReflected> ParallelLoopResult For(long fromInclusive, long toExclusive, ParallelOptions parallelOptions, Func_1 localInit, Func_4 body, Action_1 localFinally) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -344,6 +665,36 @@ public class Parallel extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ForEach.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TLocal> the type of the generic argument TLocal
+     * @param source the argument of type {@code OrderablePartitioner_1}
+     * @param localInit the argument of type {@code Func_1}
+     * @param body the argument of type {@code Func_5}
+     * @param localFinally the argument of type {@code Action_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Parallel.ForEach" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TLocal extends IJCOBridgeReflected> ParallelLoopResult ForEach(OrderablePartitioner_1 source, Func_1 localInit, Func_5 body, Action_1 localFinally) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -359,6 +710,37 @@ public class Parallel extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ForEach.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TLocal> the type of the generic argument TLocal
+     * @param source the argument of type {@code OrderablePartitioner_1}
+     * @param parallelOptions the argument of type {@code ParallelOptions}
+     * @param localInit the argument of type {@code Func_1}
+     * @param body the argument of type {@code Func_5}
+     * @param localFinally the argument of type {@code Action_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Parallel.ForEach" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TLocal extends IJCOBridgeReflected> ParallelLoopResult ForEach(OrderablePartitioner_1 source, ParallelOptions parallelOptions, Func_1 localInit, Func_5 body, Action_1 localFinally) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -374,6 +756,36 @@ public class Parallel extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ForEach.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TLocal> the type of the generic argument TLocal
+     * @param source the argument of type {@code Partitioner_1}
+     * @param localInit the argument of type {@code Func_1}
+     * @param body the argument of type {@code Func_4}
+     * @param localFinally the argument of type {@code Action_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Parallel.ForEach" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TLocal extends IJCOBridgeReflected> ParallelLoopResult ForEach(Partitioner_1 source, Func_1 localInit, Func_4 body, Action_1 localFinally) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -389,6 +801,37 @@ public class Parallel extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ForEach.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TLocal> the type of the generic argument TLocal
+     * @param source the argument of type {@code Partitioner_1}
+     * @param parallelOptions the argument of type {@code ParallelOptions}
+     * @param localInit the argument of type {@code Func_1}
+     * @param body the argument of type {@code Func_4}
+     * @param localFinally the argument of type {@code Action_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Parallel.ForEach" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TLocal extends IJCOBridgeReflected> ParallelLoopResult ForEach(Partitioner_1 source, ParallelOptions parallelOptions, Func_1 localInit, Func_4 body, Action_1 localFinally) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -404,6 +847,30 @@ public class Parallel extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ForEach.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TLocal> the type of the generic argument TLocal
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param localInit the argument of type {@code Func_1}
+     * @param body the argument of type {@code Func_4}
+     * @param localFinally the argument of type {@code Action_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Parallel.ForEach" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TLocal extends IJCOBridgeReflected> ParallelLoopResult ForEach(IEnumerable_1 source, Func_1 localInit, Func_4 body, Action_1 localFinally) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.NullReferenceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ArgumentException, system.threading.ThreadAbortException, system.AggregateException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -419,6 +886,30 @@ public class Parallel extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ForEach.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TLocal> the type of the generic argument TLocal
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param localInit the argument of type {@code Func_1}
+     * @param body the argument of type {@code Func_5}
+     * @param localFinally the argument of type {@code Action_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Parallel.ForEach" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TLocal extends IJCOBridgeReflected> ParallelLoopResult ForEach(IEnumerable_1 source, Func_1 localInit, Func_5 body, Action_1 localFinally) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.NullReferenceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ArgumentException, system.threading.ThreadAbortException, system.AggregateException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -434,6 +925,31 @@ public class Parallel extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ForEach.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TLocal> the type of the generic argument TLocal
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param parallelOptions the argument of type {@code ParallelOptions}
+     * @param localInit the argument of type {@code Func_1}
+     * @param body the argument of type {@code Func_4}
+     * @param localFinally the argument of type {@code Action_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Parallel.ForEach" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TLocal extends IJCOBridgeReflected> ParallelLoopResult ForEach(IEnumerable_1 source, ParallelOptions parallelOptions, Func_1 localInit, Func_4 body, Action_1 localFinally) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.NullReferenceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ArgumentException, system.threading.ThreadAbortException, system.AggregateException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -449,6 +965,31 @@ public class Parallel extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ForEach.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TLocal> the type of the generic argument TLocal
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param parallelOptions the argument of type {@code ParallelOptions}
+     * @param localInit the argument of type {@code Func_1}
+     * @param body the argument of type {@code Func_5}
+     * @param localFinally the argument of type {@code Action_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Parallel.ForEach" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TLocal extends IJCOBridgeReflected> ParallelLoopResult ForEach(IEnumerable_1 source, ParallelOptions parallelOptions, Func_1 localInit, Func_5 body, Action_1 localFinally) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.NullReferenceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ArgumentException, system.threading.ThreadAbortException, system.AggregateException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -464,6 +1005,33 @@ public class Parallel extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ForEach.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code OrderablePartitioner_1}
+     * @param body the argument of type {@code Action_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Parallel.ForEach" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelLoopResult ForEach(OrderablePartitioner_1 source, Action_3 body) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -479,6 +1047,34 @@ public class Parallel extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ForEach.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code OrderablePartitioner_1}
+     * @param parallelOptions the argument of type {@code ParallelOptions}
+     * @param body the argument of type {@code Action_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Parallel.ForEach" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelLoopResult ForEach(OrderablePartitioner_1 source, ParallelOptions parallelOptions, Action_3 body) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -494,6 +1090,33 @@ public class Parallel extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ForEach.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code Partitioner_1}
+     * @param body the argument of type {@code Action_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Parallel.ForEach" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelLoopResult ForEach(Partitioner_1 source, Action_1 body) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -509,6 +1132,33 @@ public class Parallel extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ForEach.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code Partitioner_1}
+     * @param body the argument of type {@code Action_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Parallel.ForEach" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelLoopResult ForEach(Partitioner_1 source, Action_2 body) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -524,6 +1174,34 @@ public class Parallel extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ForEach.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code Partitioner_1}
+     * @param parallelOptions the argument of type {@code ParallelOptions}
+     * @param body the argument of type {@code Action_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Parallel.ForEach" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelLoopResult ForEach(Partitioner_1 source, ParallelOptions parallelOptions, Action_1 body) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -539,6 +1217,34 @@ public class Parallel extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ForEach.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code Partitioner_1}
+     * @param parallelOptions the argument of type {@code ParallelOptions}
+     * @param body the argument of type {@code Action_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Parallel.ForEach" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelLoopResult ForEach(Partitioner_1 source, ParallelOptions parallelOptions, Action_2 body) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -554,6 +1260,27 @@ public class Parallel extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ForEach.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param body the argument of type {@code Action_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Parallel.ForEach" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelLoopResult ForEach(IEnumerable_1 source, Action_1 body) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.NullReferenceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ArgumentException, system.threading.ThreadAbortException, system.AggregateException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -569,6 +1296,27 @@ public class Parallel extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ForEach.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param body the argument of type {@code Action_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Parallel.ForEach" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelLoopResult ForEach(IEnumerable_1 source, Action_2 body) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.NullReferenceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ArgumentException, system.threading.ThreadAbortException, system.AggregateException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -584,6 +1332,27 @@ public class Parallel extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ForEach.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param body the argument of type {@code Action_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Parallel.ForEach" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelLoopResult ForEach(IEnumerable_1 source, Action_3 body) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.NullReferenceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ArgumentException, system.threading.ThreadAbortException, system.AggregateException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -599,6 +1368,28 @@ public class Parallel extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ForEach.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param parallelOptions the argument of type {@code ParallelOptions}
+     * @param body the argument of type {@code Action_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Parallel.ForEach" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelLoopResult ForEach(IEnumerable_1 source, ParallelOptions parallelOptions, Action_1 body) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.NullReferenceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ArgumentException, system.threading.ThreadAbortException, system.AggregateException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -614,6 +1405,28 @@ public class Parallel extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ForEach.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param parallelOptions the argument of type {@code ParallelOptions}
+     * @param body the argument of type {@code Action_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Parallel.ForEach" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelLoopResult ForEach(IEnumerable_1 source, ParallelOptions parallelOptions, Action_2 body) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.NullReferenceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ArgumentException, system.threading.ThreadAbortException, system.AggregateException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -629,6 +1442,28 @@ public class Parallel extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ForEach.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param parallelOptions the argument of type {@code ParallelOptions}
+     * @param body the argument of type {@code Action_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Parallel.ForEach" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelLoopResult ForEach(IEnumerable_1 source, ParallelOptions parallelOptions, Action_3 body) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.NullReferenceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ArgumentException, system.threading.ThreadAbortException, system.AggregateException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -644,6 +1479,26 @@ public class Parallel extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Invoke.
+     *
+     * @param actions the argument of type {@code Action...}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Parallel.Invoke" target="_top">.NET documentation</a>
+     */
     public static void Invoke(Action... actions) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.AbandonedMutexException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -654,6 +1509,29 @@ public class Parallel extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Invoke.
+     *
+     * @param parallelOptions the argument of type {@code ParallelOptions}
+     * @param actions the argument of type {@code Action...}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Parallel.Invoke" target="_top">.NET documentation</a>
+     */
     public static void Invoke(ParallelOptions parallelOptions, Action... actions) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.AbandonedMutexException, system.FormatException, system.MulticastNotSupportedException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

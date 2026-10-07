@@ -105,7 +105,10 @@ public class ThreadPool extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ThreadPool(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,15 @@ public class ThreadPool extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member BindHandle.
+     *
+     * @param osHandle the argument of type {@code SafeHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ThreadPool.BindHandle" target="_top">.NET documentation</a>
+     */
     public static boolean BindHandle(SafeHandle osHandle) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -172,6 +184,24 @@ public class ThreadPool extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member QueueUserWorkItem.
+     *
+     * @param callBack the argument of type {@code WaitCallback}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ThreadPool.QueueUserWorkItem" target="_top">.NET documentation</a>
+     */
     public static boolean QueueUserWorkItem(WaitCallback callBack) throws Throwable, system.security.SecurityException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NullReferenceException, system.diagnostics.tracing.EventSourceException, system.threading.LockRecursionException, system.ObjectDisposedException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -186,6 +216,25 @@ public class ThreadPool extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member QueueUserWorkItem.
+     *
+     * @param callBack the argument of type {@code WaitCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ThreadPool.QueueUserWorkItem" target="_top">.NET documentation</a>
+     */
     public static boolean QueueUserWorkItem(WaitCallback callBack, NetObject state) throws Throwable, system.security.SecurityException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NullReferenceException, system.diagnostics.tracing.EventSourceException, system.threading.LockRecursionException, system.ObjectDisposedException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -200,6 +249,15 @@ public class ThreadPool extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetMaxThreads.
+     *
+     * @param workerThreads the argument of type {@code int}
+     * @param completionPortThreads the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ThreadPool.SetMaxThreads" target="_top">.NET documentation</a>
+     */
     public static boolean SetMaxThreads(int workerThreads, int completionPortThreads) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -214,6 +272,15 @@ public class ThreadPool extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetMinThreads.
+     *
+     * @param workerThreads the argument of type {@code int}
+     * @param completionPortThreads the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ThreadPool.SetMinThreads" target="_top">.NET documentation</a>
+     */
     public static boolean SetMinThreads(int workerThreads, int completionPortThreads) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -228,6 +295,25 @@ public class ThreadPool extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UnsafeQueueUserWorkItem.
+     *
+     * @param callBack the argument of type {@code WaitCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ThreadPool.UnsafeQueueUserWorkItem" target="_top">.NET documentation</a>
+     */
     public static boolean UnsafeQueueUserWorkItem(WaitCallback callBack, NetObject state) throws Throwable, system.security.SecurityException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NullReferenceException, system.diagnostics.tracing.EventSourceException, system.threading.LockRecursionException, system.ObjectDisposedException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -242,6 +328,24 @@ public class ThreadPool extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterWaitForSingleObject.
+     *
+     * @param waitObject the argument of type {@code WaitHandle}
+     * @param callBack the argument of type {@code WaitOrTimerCallback}
+     * @param state the argument of type {@code NetObject}
+     * @param millisecondsTimeOutInterval the argument of type {@code int}
+     * @param executeOnlyOnce the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ThreadPool.RegisterWaitForSingleObject" target="_top">.NET documentation</a>
+     */
     public static RegisteredWaitHandle RegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, int millisecondsTimeOutInterval, boolean executeOnlyOnce) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.ArgumentException, system.ArgumentNullException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -257,6 +361,24 @@ public class ThreadPool extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterWaitForSingleObject.
+     *
+     * @param waitObject the argument of type {@code WaitHandle}
+     * @param callBack the argument of type {@code WaitOrTimerCallback}
+     * @param state the argument of type {@code NetObject}
+     * @param millisecondsTimeOutInterval the argument of type {@code long}
+     * @param executeOnlyOnce the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ThreadPool.RegisterWaitForSingleObject" target="_top">.NET documentation</a>
+     */
     public static RegisteredWaitHandle RegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, long millisecondsTimeOutInterval, boolean executeOnlyOnce) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.ArgumentException, system.ArgumentNullException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -272,6 +394,24 @@ public class ThreadPool extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterWaitForSingleObject.
+     *
+     * @param waitObject the argument of type {@code WaitHandle}
+     * @param callBack the argument of type {@code WaitOrTimerCallback}
+     * @param state the argument of type {@code NetObject}
+     * @param timeout the argument of type {@code TimeSpan}
+     * @param executeOnlyOnce the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ThreadPool.RegisterWaitForSingleObject" target="_top">.NET documentation</a>
+     */
     public static RegisteredWaitHandle RegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, TimeSpan timeout, boolean executeOnlyOnce) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.ArgumentException, system.ArgumentNullException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -287,6 +427,24 @@ public class ThreadPool extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterWaitForSingleObject.
+     *
+     * @param waitObject the argument of type {@code WaitHandle}
+     * @param callBack the argument of type {@code WaitOrTimerCallback}
+     * @param state the argument of type {@code NetObject}
+     * @param millisecondsTimeOutInterval the argument of type {@code UInt32}
+     * @param executeOnlyOnce the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ThreadPool.RegisterWaitForSingleObject" target="_top">.NET documentation</a>
+     */
     public static RegisteredWaitHandle RegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, UInt32 millisecondsTimeOutInterval, boolean executeOnlyOnce) throws Throwable, system.InvalidOperationException, system.security.SecurityException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -302,6 +460,24 @@ public class ThreadPool extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UnsafeRegisterWaitForSingleObject.
+     *
+     * @param waitObject the argument of type {@code WaitHandle}
+     * @param callBack the argument of type {@code WaitOrTimerCallback}
+     * @param state the argument of type {@code NetObject}
+     * @param millisecondsTimeOutInterval the argument of type {@code int}
+     * @param executeOnlyOnce the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject" target="_top">.NET documentation</a>
+     */
     public static RegisteredWaitHandle UnsafeRegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, int millisecondsTimeOutInterval, boolean executeOnlyOnce) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.ArgumentException, system.ArgumentNullException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -317,6 +493,24 @@ public class ThreadPool extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UnsafeRegisterWaitForSingleObject.
+     *
+     * @param waitObject the argument of type {@code WaitHandle}
+     * @param callBack the argument of type {@code WaitOrTimerCallback}
+     * @param state the argument of type {@code NetObject}
+     * @param millisecondsTimeOutInterval the argument of type {@code long}
+     * @param executeOnlyOnce the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject" target="_top">.NET documentation</a>
+     */
     public static RegisteredWaitHandle UnsafeRegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, long millisecondsTimeOutInterval, boolean executeOnlyOnce) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.ArgumentException, system.ArgumentNullException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -332,6 +526,24 @@ public class ThreadPool extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UnsafeRegisterWaitForSingleObject.
+     *
+     * @param waitObject the argument of type {@code WaitHandle}
+     * @param callBack the argument of type {@code WaitOrTimerCallback}
+     * @param state the argument of type {@code NetObject}
+     * @param timeout the argument of type {@code TimeSpan}
+     * @param executeOnlyOnce the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject" target="_top">.NET documentation</a>
+     */
     public static RegisteredWaitHandle UnsafeRegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, TimeSpan timeout, boolean executeOnlyOnce) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.ArgumentException, system.ArgumentNullException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -347,6 +559,24 @@ public class ThreadPool extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UnsafeRegisterWaitForSingleObject.
+     *
+     * @param waitObject the argument of type {@code WaitHandle}
+     * @param callBack the argument of type {@code WaitOrTimerCallback}
+     * @param state the argument of type {@code NetObject}
+     * @param millisecondsTimeOutInterval the argument of type {@code UInt32}
+     * @param executeOnlyOnce the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject" target="_top">.NET documentation</a>
+     */
     public static RegisteredWaitHandle UnsafeRegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, UInt32 millisecondsTimeOutInterval, boolean executeOnlyOnce) throws Throwable, system.InvalidOperationException, system.security.SecurityException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -362,6 +592,14 @@ public class ThreadPool extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetAvailableThreads.
+     *
+     * @param workerThreads the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param completionPortThreads the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ThreadPool.GetAvailableThreads" target="_top">.NET documentation</a>
+     */
     public static void GetAvailableThreads(JCORefOut<java.util.concurrent.atomic.AtomicInteger> workerThreads, JCORefOut<java.util.concurrent.atomic.AtomicInteger> completionPortThreads) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -372,6 +610,14 @@ public class ThreadPool extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMaxThreads.
+     *
+     * @param workerThreads the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param completionPortThreads the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ThreadPool.GetMaxThreads" target="_top">.NET documentation</a>
+     */
     public static void GetMaxThreads(JCORefOut<java.util.concurrent.atomic.AtomicInteger> workerThreads, JCORefOut<java.util.concurrent.atomic.AtomicInteger> completionPortThreads) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -382,6 +628,14 @@ public class ThreadPool extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMinThreads.
+     *
+     * @param workerThreads the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param completionPortThreads the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ThreadPool.GetMinThreads" target="_top">.NET documentation</a>
+     */
     public static void GetMinThreads(JCORefOut<java.util.concurrent.atomic.AtomicInteger> workerThreads, JCORefOut<java.util.concurrent.atomic.AtomicInteger> completionPortThreads) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

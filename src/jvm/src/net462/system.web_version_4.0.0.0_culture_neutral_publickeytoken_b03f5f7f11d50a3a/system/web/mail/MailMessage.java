@@ -105,7 +105,10 @@ public class MailMessage extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MailMessage(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,22 @@ public class MailMessage extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Mail.MailMessage.-ctor" target="_top">.NET documentation</a>
+     */
     public MailMessage() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +189,13 @@ public class MailMessage extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Fields.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Mail.MailMessage.Fields" target="_top">.NET documentation</a>
+     */
     public IDictionary getFields() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +211,13 @@ public class MailMessage extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Headers.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Mail.MailMessage.Headers" target="_top">.NET documentation</a>
+     */
     public IDictionary getHeaders() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +233,13 @@ public class MailMessage extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Attachments.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Mail.MailMessage.Attachments" target="_top">.NET documentation</a>
+     */
     public IList getAttachments() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +255,13 @@ public class MailMessage extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Bcc.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Mail.MailMessage.Bcc" target="_top">.NET documentation</a>
+     */
     public java.lang.String getBcc() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +276,13 @@ public class MailMessage extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Bcc.
+     *
+     * @param Bcc the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Mail.MailMessage.Bcc" target="_top">.NET documentation</a>
+     */
     public void setBcc(java.lang.String Bcc) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +293,13 @@ public class MailMessage extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Body.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Mail.MailMessage.Body" target="_top">.NET documentation</a>
+     */
     public java.lang.String getBody() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +314,13 @@ public class MailMessage extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Body.
+     *
+     * @param Body the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Mail.MailMessage.Body" target="_top">.NET documentation</a>
+     */
     public void setBody(java.lang.String Body) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +331,13 @@ public class MailMessage extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Cc.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Mail.MailMessage.Cc" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCc() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +352,13 @@ public class MailMessage extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Cc.
+     *
+     * @param Cc the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Mail.MailMessage.Cc" target="_top">.NET documentation</a>
+     */
     public void setCc(java.lang.String Cc) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -287,6 +369,13 @@ public class MailMessage extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property From.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Mail.MailMessage.From" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFrom() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +390,13 @@ public class MailMessage extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property From.
+     *
+     * @param From the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Mail.MailMessage.From" target="_top">.NET documentation</a>
+     */
     public void setFrom(java.lang.String From) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -311,6 +407,13 @@ public class MailMessage extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Subject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Mail.MailMessage.Subject" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSubject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -325,6 +428,13 @@ public class MailMessage extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Subject.
+     *
+     * @param Subject the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Mail.MailMessage.Subject" target="_top">.NET documentation</a>
+     */
     public void setSubject(java.lang.String Subject) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +445,13 @@ public class MailMessage extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property To.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Mail.MailMessage.To" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -349,6 +466,13 @@ public class MailMessage extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property To.
+     *
+     * @param To the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Mail.MailMessage.To" target="_top">.NET documentation</a>
+     */
     public void setTo(java.lang.String To) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -359,6 +483,13 @@ public class MailMessage extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UrlContentBase.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Mail.MailMessage.UrlContentBase" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUrlContentBase() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -373,6 +504,13 @@ public class MailMessage extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UrlContentBase.
+     *
+     * @param UrlContentBase the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Mail.MailMessage.UrlContentBase" target="_top">.NET documentation</a>
+     */
     public void setUrlContentBase(java.lang.String UrlContentBase) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -383,6 +521,13 @@ public class MailMessage extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UrlContentLocation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Mail.MailMessage.UrlContentLocation" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUrlContentLocation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -397,6 +542,13 @@ public class MailMessage extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UrlContentLocation.
+     *
+     * @param UrlContentLocation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Mail.MailMessage.UrlContentLocation" target="_top">.NET documentation</a>
+     */
     public void setUrlContentLocation(java.lang.String UrlContentLocation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -407,6 +559,13 @@ public class MailMessage extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BodyEncoding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Mail.MailMessage.BodyEncoding" target="_top">.NET documentation</a>
+     */
     public Encoding getBodyEncoding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -422,6 +581,13 @@ public class MailMessage extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BodyEncoding.
+     *
+     * @param BodyEncoding the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Mail.MailMessage.BodyEncoding" target="_top">.NET documentation</a>
+     */
     public void setBodyEncoding(Encoding BodyEncoding) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -432,6 +598,13 @@ public class MailMessage extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BodyFormat.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Mail.MailMessage.BodyFormat" target="_top">.NET documentation</a>
+     */
     public MailFormat getBodyFormat() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -447,6 +620,13 @@ public class MailMessage extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BodyFormat.
+     *
+     * @param BodyFormat the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Mail.MailMessage.BodyFormat" target="_top">.NET documentation</a>
+     */
     public void setBodyFormat(MailFormat BodyFormat) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -457,6 +637,13 @@ public class MailMessage extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Priority.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Mail.MailMessage.Priority" target="_top">.NET documentation</a>
+     */
     public MailPriority getPriority() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -472,6 +659,13 @@ public class MailMessage extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Priority.
+     *
+     * @param Priority the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Mail.MailMessage.Priority" target="_top">.NET documentation</a>
+     */
     public void setPriority(MailPriority Priority) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

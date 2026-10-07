@@ -100,7 +100,10 @@ public class RSASignaturePadding extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RSASignaturePadding(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,14 @@ public class RSASignaturePadding extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code RSASignaturePadding}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSASignaturePadding.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(RSASignaturePadding other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +184,13 @@ public class RSASignaturePadding extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Pkcs1.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSASignaturePadding.Pkcs1" target="_top">.NET documentation</a>
+     */
     public static RSASignaturePadding getPkcs1() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -188,6 +206,13 @@ public class RSASignaturePadding extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Pss.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSASignaturePadding.Pss" target="_top">.NET documentation</a>
+     */
     public static RSASignaturePadding getPss() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -203,6 +228,13 @@ public class RSASignaturePadding extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Mode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSASignaturePadding.Mode" target="_top">.NET documentation</a>
+     */
     public RSASignaturePaddingMode getMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

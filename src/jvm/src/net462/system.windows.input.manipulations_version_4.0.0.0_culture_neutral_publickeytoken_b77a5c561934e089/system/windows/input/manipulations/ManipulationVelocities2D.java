@@ -99,7 +99,10 @@ public class ManipulationVelocities2D extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ManipulationVelocities2D(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class ManipulationVelocities2D extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AngularVelocity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.Manipulations.ManipulationVelocities2D.AngularVelocity" target="_top">.NET documentation</a>
+     */
     public Single getAngularVelocity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +183,13 @@ public class ManipulationVelocities2D extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExpansionVelocityX.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.Manipulations.ManipulationVelocities2D.ExpansionVelocityX" target="_top">.NET documentation</a>
+     */
     public Single getExpansionVelocityX() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +205,13 @@ public class ManipulationVelocities2D extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExpansionVelocityY.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.Manipulations.ManipulationVelocities2D.ExpansionVelocityY" target="_top">.NET documentation</a>
+     */
     public Single getExpansionVelocityY() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +227,13 @@ public class ManipulationVelocities2D extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LinearVelocityX.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.Manipulations.ManipulationVelocities2D.LinearVelocityX" target="_top">.NET documentation</a>
+     */
     public Single getLinearVelocityX() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +249,13 @@ public class ManipulationVelocities2D extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LinearVelocityY.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.Manipulations.ManipulationVelocities2D.LinearVelocityY" target="_top">.NET documentation</a>
+     */
     public Single getLinearVelocityY() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

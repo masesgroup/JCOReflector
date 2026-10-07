@@ -106,7 +106,10 @@ public class CodeMemberMethod extends system.codedom.CodeTypeMember  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodeMemberMethod(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,12 @@ public class CodeMemberMethod extends system.codedom.CodeTypeMember  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMemberMethod.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeMemberMethod() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +180,13 @@ public class CodeMemberMethod extends system.codedom.CodeTypeMember  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ReturnTypeCustomAttributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMemberMethod.ReturnTypeCustomAttributes" target="_top">.NET documentation</a>
+     */
     public CodeAttributeDeclarationCollection getReturnTypeCustomAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +202,13 @@ public class CodeMemberMethod extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Parameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMemberMethod.Parameters" target="_top">.NET documentation</a>
+     */
     public CodeParameterDeclarationExpressionCollection getParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +224,13 @@ public class CodeMemberMethod extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Statements.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMemberMethod.Statements" target="_top">.NET documentation</a>
+     */
     public CodeStatementCollection getStatements() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +246,13 @@ public class CodeMemberMethod extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeParameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMemberMethod.TypeParameters" target="_top">.NET documentation</a>
+     */
     public CodeTypeParameterCollection getTypeParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +268,13 @@ public class CodeMemberMethod extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PrivateImplementationType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMemberMethod.PrivateImplementationType" target="_top">.NET documentation</a>
+     */
     public CodeTypeReference getPrivateImplementationType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +290,13 @@ public class CodeMemberMethod extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PrivateImplementationType.
+     *
+     * @param PrivateImplementationType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMemberMethod.PrivateImplementationType" target="_top">.NET documentation</a>
+     */
     public void setPrivateImplementationType(CodeTypeReference PrivateImplementationType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +307,21 @@ public class CodeMemberMethod extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReturnType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMemberMethod.ReturnType" target="_top">.NET documentation</a>
+     */
     public CodeTypeReference getReturnType() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +337,13 @@ public class CodeMemberMethod extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReturnType.
+     *
+     * @param ReturnType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMemberMethod.ReturnType" target="_top">.NET documentation</a>
+     */
     public void setReturnType(CodeTypeReference ReturnType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +354,13 @@ public class CodeMemberMethod extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ImplementationTypes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMemberMethod.ImplementationTypes" target="_top">.NET documentation</a>
+     */
     public CodeTypeReferenceCollection getImplementationTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +381,13 @@ public class CodeMemberMethod extends system.codedom.CodeTypeMember  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addPopulateImplementationTypes.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPopulateImplementationTypes(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -311,6 +398,13 @@ public class CodeMemberMethod extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePopulateImplementationTypes.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePopulateImplementationTypes(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +415,13 @@ public class CodeMemberMethod extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Invokes the .NET member addPopulateParameters.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPopulateParameters(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -331,6 +432,13 @@ public class CodeMemberMethod extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePopulateParameters.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePopulateParameters(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -341,6 +449,13 @@ public class CodeMemberMethod extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Invokes the .NET member addPopulateStatements.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPopulateStatements(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -351,6 +466,13 @@ public class CodeMemberMethod extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePopulateStatements.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePopulateStatements(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

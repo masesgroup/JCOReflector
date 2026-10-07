@@ -114,7 +114,10 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Task_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -164,6 +167,21 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
     public Task_1() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param function the argument of type {@code Func_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @param creationOptions the argument of type {@code TaskCreationOptions}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.-ctor" target="_top">.NET documentation</a>
+     */
     public Task_1(Func_1 function, CancellationToken cancellationToken, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +194,20 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param function the argument of type {@code Func_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.-ctor" target="_top">.NET documentation</a>
+     */
     public Task_1(Func_1 function, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -188,6 +220,20 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param function the argument of type {@code Func_1}
+     * @param creationOptions the argument of type {@code TaskCreationOptions}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.-ctor" target="_top">.NET documentation</a>
+     */
     public Task_1(Func_1 function, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -200,6 +246,19 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param function the argument of type {@code Func_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.-ctor" target="_top">.NET documentation</a>
+     */
     public Task_1(Func_1 function) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -212,6 +271,22 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param function the argument of type {@code Func_2}
+     * @param state the argument of type {@code NetObject}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @param creationOptions the argument of type {@code TaskCreationOptions}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.-ctor" target="_top">.NET documentation</a>
+     */
     public Task_1(Func_2 function, NetObject state, CancellationToken cancellationToken, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -224,6 +299,21 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param function the argument of type {@code Func_2}
+     * @param state the argument of type {@code NetObject}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.-ctor" target="_top">.NET documentation</a>
+     */
     public Task_1(Func_2 function, NetObject state, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -236,6 +326,21 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param function the argument of type {@code Func_2}
+     * @param state the argument of type {@code NetObject}
+     * @param creationOptions the argument of type {@code TaskCreationOptions}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.-ctor" target="_top">.NET documentation</a>
+     */
     public Task_1(Func_2 function, NetObject state, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -248,6 +353,20 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param function the argument of type {@code Func_2}
+     * @param state the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.-ctor" target="_top">.NET documentation</a>
+     */
     public Task_1(Func_2 function, NetObject state) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -265,6 +384,14 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ConfigureAwaitNewTask_1.
+     *
+     * @param continueOnCapturedContext the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.ConfigureAwaitNewTask_1" target="_top">.NET documentation</a>
+     */
     public ConfiguredTaskAwaitable_1 ConfigureAwaitNewTask_1(boolean continueOnCapturedContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +407,23 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
         }
     }
 
+    /**
+     * Invokes the .NET member ConfigureAwaitNewTask_1.
+     *
+     * @param options the argument of type {@code ConfigureAwaitOptions}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.ConfigureAwaitNewTask_1" target="_top">.NET documentation</a>
+     */
     public ConfiguredTaskAwaitable_1 ConfigureAwaitNewTask_1(ConfigureAwaitOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +439,13 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
         }
     }
 
+    /**
+     * Invokes the .NET member GetAwaiterNewTask_1.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.GetAwaiterNewTask_1" target="_top">.NET documentation</a>
+     */
     public TaskAwaiter_1 GetAwaiterNewTask_1() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +461,30 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
         }
     }
 
+    /**
+     * Invokes the .NET member ContinueWith.
+     *
+     * @param continuationAction the argument of type {@code Action_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @param continuationOptions the argument of type {@code TaskContinuationOptions}
+     * @param scheduler the argument of type {@code TaskScheduler}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.ContinueWith" target="_top">.NET documentation</a>
+     */
     public Task ContinueWith(Action_1 continuationAction, CancellationToken cancellationToken, TaskContinuationOptions continuationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.FormatException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -325,6 +500,28 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
         }
     }
 
+    /**
+     * Invokes the .NET member ContinueWith.
+     *
+     * @param continuationAction the argument of type {@code Action_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.ContinueWith" target="_top">.NET documentation</a>
+     */
     public Task ContinueWith(Action_1 continuationAction, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.FormatException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -340,6 +537,28 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
         }
     }
 
+    /**
+     * Invokes the .NET member ContinueWith.
+     *
+     * @param continuationAction the argument of type {@code Action_1}
+     * @param continuationOptions the argument of type {@code TaskContinuationOptions}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.ContinueWith" target="_top">.NET documentation</a>
+     */
     public Task ContinueWith(Action_1 continuationAction, TaskContinuationOptions continuationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.FormatException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -355,6 +574,28 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
         }
     }
 
+    /**
+     * Invokes the .NET member ContinueWith.
+     *
+     * @param continuationAction the argument of type {@code Action_1}
+     * @param scheduler the argument of type {@code TaskScheduler}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.ContinueWith" target="_top">.NET documentation</a>
+     */
     public Task ContinueWith(Action_1 continuationAction, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.FormatException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -370,6 +611,27 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
         }
     }
 
+    /**
+     * Invokes the .NET member ContinueWith.
+     *
+     * @param continuationAction the argument of type {@code Action_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.ContinueWith" target="_top">.NET documentation</a>
+     */
     public Task ContinueWith(Action_1 continuationAction) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.FormatException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -385,6 +647,31 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
         }
     }
 
+    /**
+     * Invokes the .NET member ContinueWith.
+     *
+     * @param continuationAction the argument of type {@code Action_2}
+     * @param state the argument of type {@code NetObject}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @param continuationOptions the argument of type {@code TaskContinuationOptions}
+     * @param scheduler the argument of type {@code TaskScheduler}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.ContinueWith" target="_top">.NET documentation</a>
+     */
     public Task ContinueWith(Action_2 continuationAction, NetObject state, CancellationToken cancellationToken, TaskContinuationOptions continuationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.FormatException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -400,6 +687,29 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
         }
     }
 
+    /**
+     * Invokes the .NET member ContinueWith.
+     *
+     * @param continuationAction the argument of type {@code Action_2}
+     * @param state the argument of type {@code NetObject}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.ContinueWith" target="_top">.NET documentation</a>
+     */
     public Task ContinueWith(Action_2 continuationAction, NetObject state, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.FormatException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -415,6 +725,29 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
         }
     }
 
+    /**
+     * Invokes the .NET member ContinueWith.
+     *
+     * @param continuationAction the argument of type {@code Action_2}
+     * @param state the argument of type {@code NetObject}
+     * @param continuationOptions the argument of type {@code TaskContinuationOptions}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.ContinueWith" target="_top">.NET documentation</a>
+     */
     public Task ContinueWith(Action_2 continuationAction, NetObject state, TaskContinuationOptions continuationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.FormatException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -430,6 +763,29 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
         }
     }
 
+    /**
+     * Invokes the .NET member ContinueWith.
+     *
+     * @param continuationAction the argument of type {@code Action_2}
+     * @param state the argument of type {@code NetObject}
+     * @param scheduler the argument of type {@code TaskScheduler}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.ContinueWith" target="_top">.NET documentation</a>
+     */
     public Task ContinueWith(Action_2 continuationAction, NetObject state, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.FormatException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -445,6 +801,28 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
         }
     }
 
+    /**
+     * Invokes the .NET member ContinueWith.
+     *
+     * @param continuationAction the argument of type {@code Action_2}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.ContinueWith" target="_top">.NET documentation</a>
+     */
     public Task ContinueWith(Action_2 continuationAction, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.FormatException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -460,6 +838,29 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
         }
     }
 
+    /**
+     * Invokes the .NET member ContinueWith.
+     *
+     * @param <TNewResult> the type of the generic argument TNewResult
+     * @param continuationFunction the argument of type {@code Func_2}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @param continuationOptions the argument of type {@code TaskContinuationOptions}
+     * @param scheduler the argument of type {@code TaskScheduler}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.ContinueWith" target="_top">.NET documentation</a>
+     */
     public <TNewResult extends IJCOBridgeReflected> Task_1 ContinueWith(Func_2 continuationFunction, CancellationToken cancellationToken, TaskContinuationOptions continuationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -475,6 +876,27 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
         }
     }
 
+    /**
+     * Invokes the .NET member ContinueWith.
+     *
+     * @param <TNewResult> the type of the generic argument TNewResult
+     * @param continuationFunction the argument of type {@code Func_2}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.ContinueWith" target="_top">.NET documentation</a>
+     */
     public <TNewResult extends IJCOBridgeReflected> Task_1 ContinueWith(Func_2 continuationFunction, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -490,6 +912,27 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
         }
     }
 
+    /**
+     * Invokes the .NET member ContinueWith.
+     *
+     * @param <TNewResult> the type of the generic argument TNewResult
+     * @param continuationFunction the argument of type {@code Func_2}
+     * @param continuationOptions the argument of type {@code TaskContinuationOptions}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.ContinueWith" target="_top">.NET documentation</a>
+     */
     public <TNewResult extends IJCOBridgeReflected> Task_1 ContinueWith(Func_2 continuationFunction, TaskContinuationOptions continuationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -505,6 +948,27 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
         }
     }
 
+    /**
+     * Invokes the .NET member ContinueWith.
+     *
+     * @param <TNewResult> the type of the generic argument TNewResult
+     * @param continuationFunction the argument of type {@code Func_2}
+     * @param scheduler the argument of type {@code TaskScheduler}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.ContinueWith" target="_top">.NET documentation</a>
+     */
     public <TNewResult extends IJCOBridgeReflected> Task_1 ContinueWith(Func_2 continuationFunction, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -520,6 +984,26 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
         }
     }
 
+    /**
+     * Invokes the .NET member ContinueWith.
+     *
+     * @param <TNewResult> the type of the generic argument TNewResult
+     * @param continuationFunction the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.ContinueWith" target="_top">.NET documentation</a>
+     */
     public <TNewResult extends IJCOBridgeReflected> Task_1 ContinueWith(Func_2 continuationFunction) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -535,6 +1019,30 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
         }
     }
 
+    /**
+     * Invokes the .NET member ContinueWith.
+     *
+     * @param <TNewResult> the type of the generic argument TNewResult
+     * @param continuationFunction the argument of type {@code Func_3}
+     * @param state the argument of type {@code NetObject}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @param continuationOptions the argument of type {@code TaskContinuationOptions}
+     * @param scheduler the argument of type {@code TaskScheduler}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.ContinueWith" target="_top">.NET documentation</a>
+     */
     public <TNewResult extends IJCOBridgeReflected> Task_1 ContinueWith(Func_3 continuationFunction, NetObject state, CancellationToken cancellationToken, TaskContinuationOptions continuationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -550,6 +1058,28 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
         }
     }
 
+    /**
+     * Invokes the .NET member ContinueWith.
+     *
+     * @param <TNewResult> the type of the generic argument TNewResult
+     * @param continuationFunction the argument of type {@code Func_3}
+     * @param state the argument of type {@code NetObject}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.ContinueWith" target="_top">.NET documentation</a>
+     */
     public <TNewResult extends IJCOBridgeReflected> Task_1 ContinueWith(Func_3 continuationFunction, NetObject state, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -565,6 +1095,28 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
         }
     }
 
+    /**
+     * Invokes the .NET member ContinueWith.
+     *
+     * @param <TNewResult> the type of the generic argument TNewResult
+     * @param continuationFunction the argument of type {@code Func_3}
+     * @param state the argument of type {@code NetObject}
+     * @param continuationOptions the argument of type {@code TaskContinuationOptions}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.ContinueWith" target="_top">.NET documentation</a>
+     */
     public <TNewResult extends IJCOBridgeReflected> Task_1 ContinueWith(Func_3 continuationFunction, NetObject state, TaskContinuationOptions continuationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -580,6 +1132,28 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
         }
     }
 
+    /**
+     * Invokes the .NET member ContinueWith.
+     *
+     * @param <TNewResult> the type of the generic argument TNewResult
+     * @param continuationFunction the argument of type {@code Func_3}
+     * @param state the argument of type {@code NetObject}
+     * @param scheduler the argument of type {@code TaskScheduler}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.ContinueWith" target="_top">.NET documentation</a>
+     */
     public <TNewResult extends IJCOBridgeReflected> Task_1 ContinueWith(Func_3 continuationFunction, NetObject state, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -595,6 +1169,27 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
         }
     }
 
+    /**
+     * Invokes the .NET member ContinueWith.
+     *
+     * @param <TNewResult> the type of the generic argument TNewResult
+     * @param continuationFunction the argument of type {@code Func_3}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.ContinueWith" target="_top">.NET documentation</a>
+     */
     public <TNewResult extends IJCOBridgeReflected> Task_1 ContinueWith(Func_3 continuationFunction, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -610,6 +1205,23 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
         }
     }
 
+    /**
+     * Invokes the .NET member WaitAsyncNewTask_1.
+     *
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.WaitAsyncNewTask_1" target="_top">.NET documentation</a>
+     */
     public Task_1 WaitAsyncNewTask_1(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -625,6 +1237,24 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
         }
     }
 
+    /**
+     * Invokes the .NET member WaitAsyncNewTask_1.
+     *
+     * @param timeout the argument of type {@code TimeSpan}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.WaitAsyncNewTask_1" target="_top">.NET documentation</a>
+     */
     public Task_1 WaitAsyncNewTask_1(TimeSpan timeout, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -640,6 +1270,28 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
         }
     }
 
+    /**
+     * Invokes the .NET member WaitAsyncNewTask_1.
+     *
+     * @param timeout the argument of type {@code TimeSpan}
+     * @param timeProvider the argument of type {@code TimeProvider}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.WaitAsyncNewTask_1" target="_top">.NET documentation</a>
+     */
     public Task_1 WaitAsyncNewTask_1(TimeSpan timeout, TimeProvider timeProvider, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -655,6 +1307,27 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
         }
     }
 
+    /**
+     * Invokes the .NET member WaitAsyncNewTask_1.
+     *
+     * @param timeout the argument of type {@code TimeSpan}
+     * @param timeProvider the argument of type {@code TimeProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.WaitAsyncNewTask_1" target="_top">.NET documentation</a>
+     */
     public Task_1 WaitAsyncNewTask_1(TimeSpan timeout, TimeProvider timeProvider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -670,6 +1343,23 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
         }
     }
 
+    /**
+     * Invokes the .NET member WaitAsyncNewTask_1.
+     *
+     * @param timeout the argument of type {@code TimeSpan}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.WaitAsyncNewTask_1" target="_top">.NET documentation</a>
+     */
     public Task_1 WaitAsyncNewTask_1(TimeSpan timeout) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -689,6 +1379,25 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Result.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.Result" target="_top">.NET documentation</a>
+     */
     public TResult getResult() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ArgumentOutOfRangeException, system.ArgumentException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.ArgumentNullException, system.ObjectDisposedException, system.OperationCanceledException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

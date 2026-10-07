@@ -98,7 +98,10 @@ public class IProvideValueTargetImplementation extends NetObject implements IPro
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IProvideValueTargetImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,13 @@ public class IProvideValueTargetImplementation extends NetObject implements IPro
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property TargetObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.IProvideValueTarget.TargetObject" target="_top">.NET documentation</a>
+     */
     public NetObject getTargetObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -159,6 +169,13 @@ public class IProvideValueTargetImplementation extends NetObject implements IPro
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetProperty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.IProvideValueTarget.TargetProperty" target="_top">.NET documentation</a>
+     */
     public NetObject getTargetProperty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

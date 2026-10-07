@@ -105,7 +105,10 @@ public class ITargetBlock_1Implementation<TInput extends IJCOBridgeReflected> ex
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ITargetBlock_1Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,17 @@ public class ITargetBlock_1Implementation<TInput extends IJCOBridgeReflected> ex
 
     // Methods section
     
+    /**
+     * Invokes the .NET member OfferMessage.
+     *
+     * @param messageHeader the argument of type {@code DataflowMessageHeader}
+     * @param messageValue the argument of type {@code TInput}
+     * @param source the argument of type {@code ISourceBlock_1}
+     * @param consumeToAccept the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.ITargetBlock-1.OfferMessage" target="_top">.NET documentation</a>
+     */
     public DataflowMessageStatus OfferMessage(DataflowMessageHeader messageHeader, TInput messageValue, ISourceBlock_1 source, boolean consumeToAccept) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -162,6 +176,12 @@ public class ITargetBlock_1Implementation<TInput extends IJCOBridgeReflected> ex
         }
     }
 
+    /**
+     * Invokes the .NET member Complete.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.ITargetBlock-1.Complete" target="_top">.NET documentation</a>
+     */
     public void Complete() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +192,13 @@ public class ITargetBlock_1Implementation<TInput extends IJCOBridgeReflected> ex
         }
     }
 
+    /**
+     * Invokes the .NET member Fault.
+     *
+     * @param exception the argument of type {@code NetException}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.ITargetBlock-1.Fault" target="_top">.NET documentation</a>
+     */
     public void Fault(NetException exception) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +213,13 @@ public class ITargetBlock_1Implementation<TInput extends IJCOBridgeReflected> ex
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Completion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.ITargetBlock-1.Completion" target="_top">.NET documentation</a>
+     */
     public Task getCompletion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

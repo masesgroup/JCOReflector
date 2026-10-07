@@ -106,7 +106,10 @@ public class SecurityContextSecurityToken extends system.identitymodel.tokens.Se
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SecurityContextSecurityToken(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,25 @@ public class SecurityContextSecurityToken extends system.identitymodel.tokens.Se
     public SecurityContextSecurityToken() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param contextId the argument of type {@code UniqueId}
+     * @param key the argument of type {@code byte[]}
+     * @param validFrom the argument of type {@code DateTime}
+     * @param validTo the argument of type {@code DateTime}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecurityContextSecurityToken.-ctor" target="_top">.NET documentation</a>
+     */
     public SecurityContextSecurityToken(UniqueId contextId, byte[] key, DateTime validFrom, DateTime validTo) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.OverflowException, system.NotImplementedException {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +188,25 @@ public class SecurityContextSecurityToken extends system.identitymodel.tokens.Se
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param contextId the argument of type {@code UniqueId}
+     * @param id the argument of type {@code java.lang.String}
+     * @param key the argument of type {@code byte[]}
+     * @param validFrom the argument of type {@code DateTime}
+     * @param validTo the argument of type {@code DateTime}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecurityContextSecurityToken.-ctor" target="_top">.NET documentation</a>
+     */
     public SecurityContextSecurityToken(UniqueId contextId, java.lang.String id, byte[] key, DateTime validFrom, DateTime validTo) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.OverflowException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +217,32 @@ public class SecurityContextSecurityToken extends system.identitymodel.tokens.Se
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param contextId the argument of type {@code UniqueId}
+     * @param id the argument of type {@code java.lang.String}
+     * @param key the argument of type {@code byte[]}
+     * @param validFrom the argument of type {@code DateTime}
+     * @param validTo the argument of type {@code DateTime}
+     * @param authorizationPolicies the argument of type {@code ReadOnlyCollection_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecurityContextSecurityToken.-ctor" target="_top">.NET documentation</a>
+     */
     public SecurityContextSecurityToken(UniqueId contextId, java.lang.String id, byte[] key, DateTime validFrom, DateTime validTo, ReadOnlyCollection_1 authorizationPolicies) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -186,6 +253,35 @@ public class SecurityContextSecurityToken extends system.identitymodel.tokens.Se
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param contextId the argument of type {@code UniqueId}
+     * @param id the argument of type {@code java.lang.String}
+     * @param key the argument of type {@code byte[]}
+     * @param validFrom the argument of type {@code DateTime}
+     * @param validTo the argument of type {@code DateTime}
+     * @param keyGeneration the argument of type {@code UniqueId}
+     * @param keyEffectiveTime the argument of type {@code DateTime}
+     * @param keyExpirationTime the argument of type {@code DateTime}
+     * @param authorizationPolicies the argument of type {@code ReadOnlyCollection_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecurityContextSecurityToken.-ctor" target="_top">.NET documentation</a>
+     */
     public SecurityContextSecurityToken(UniqueId contextId, java.lang.String id, byte[] key, DateTime validFrom, DateTime validTo, UniqueId keyGeneration, DateTime keyEffectiveTime, DateTime keyExpirationTime, ReadOnlyCollection_1 authorizationPolicies) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -201,6 +297,14 @@ public class SecurityContextSecurityToken extends system.identitymodel.tokens.Se
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CanCreateKeyIdentifierClause.
+     *
+     * @param <T> the type of the generic argument T
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecurityContextSecurityToken.CanCreateKeyIdentifierClause" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> boolean CanCreateKeyIdentifierClause() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +319,14 @@ public class SecurityContextSecurityToken extends system.identitymodel.tokens.Se
         }
     }
 
+    /**
+     * Invokes the .NET member MatchesKeyIdentifierClause.
+     *
+     * @param keyIdentifierClause the argument of type {@code SecurityKeyIdentifierClause}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecurityContextSecurityToken.MatchesKeyIdentifierClause" target="_top">.NET documentation</a>
+     */
     public boolean MatchesKeyIdentifierClause(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +341,38 @@ public class SecurityContextSecurityToken extends system.identitymodel.tokens.Se
         }
     }
 
+    /**
+     * Invokes the .NET member CreateCookieSecurityContextToken.
+     *
+     * @param contextId the argument of type {@code UniqueId}
+     * @param id the argument of type {@code java.lang.String}
+     * @param key the argument of type {@code byte[]}
+     * @param validFrom the argument of type {@code DateTime}
+     * @param validTo the argument of type {@code DateTime}
+     * @param authorizationPolicies the argument of type {@code ReadOnlyCollection_1}
+     * @param securityStateEncoder the argument of type {@code SecurityStateEncoder}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecurityContextSecurityToken.CreateCookieSecurityContextToken" target="_top">.NET documentation</a>
+     */
     public static SecurityContextSecurityToken CreateCookieSecurityContextToken(UniqueId contextId, java.lang.String id, byte[] key, DateTime validFrom, DateTime validTo, ReadOnlyCollection_1 authorizationPolicies, SecurityStateEncoder securityStateEncoder) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.OverflowException, system.collections.generic.KeyNotFoundException, system.security.SecurityException, system.AccessViolationException, system.PlatformNotSupportedException, system.SystemException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.NotImplementedException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -244,6 +388,38 @@ public class SecurityContextSecurityToken extends system.identitymodel.tokens.Se
         }
     }
 
+    /**
+     * Invokes the .NET member CreateCookieSecurityContextToken.
+     *
+     * @param dupParam0 the argument of type {@code UniqueId}
+     * @param dupParam1 the argument of type {@code java.lang.String}
+     * @param dupParam2 the argument of type {@code JCORefOut}
+     * @param dupParam3 the argument of type {@code DateTime}
+     * @param dupParam4 the argument of type {@code DateTime}
+     * @param dupParam5 the argument of type {@code ReadOnlyCollection_1}
+     * @param dupParam6 the argument of type {@code SecurityStateEncoder}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecurityContextSecurityToken.CreateCookieSecurityContextToken" target="_top">.NET documentation</a>
+     */
     public static SecurityContextSecurityToken CreateCookieSecurityContextToken(UniqueId dupParam0, java.lang.String dupParam1, JCORefOut dupParam2, DateTime dupParam3, DateTime dupParam4, ReadOnlyCollection_1 dupParam5, SecurityStateEncoder dupParam6) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.OverflowException, system.collections.generic.KeyNotFoundException, system.security.SecurityException, system.AccessViolationException, system.PlatformNotSupportedException, system.SystemException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.NotImplementedException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -259,6 +435,44 @@ public class SecurityContextSecurityToken extends system.identitymodel.tokens.Se
         }
     }
 
+    /**
+     * Invokes the .NET member CreateCookieSecurityContextToken.
+     *
+     * @param contextId the argument of type {@code UniqueId}
+     * @param id the argument of type {@code java.lang.String}
+     * @param key the argument of type {@code byte[]}
+     * @param validFrom the argument of type {@code DateTime}
+     * @param validTo the argument of type {@code DateTime}
+     * @param keyGeneration the argument of type {@code UniqueId}
+     * @param keyEffectiveTime the argument of type {@code DateTime}
+     * @param keyExpirationTime the argument of type {@code DateTime}
+     * @param authorizationPolicies the argument of type {@code ReadOnlyCollection_1}
+     * @param securityStateEncoder the argument of type {@code SecurityStateEncoder}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecurityContextSecurityToken.CreateCookieSecurityContextToken" target="_top">.NET documentation</a>
+     */
     public static SecurityContextSecurityToken CreateCookieSecurityContextToken(UniqueId contextId, java.lang.String id, byte[] key, DateTime validFrom, DateTime validTo, UniqueId keyGeneration, DateTime keyEffectiveTime, DateTime keyExpirationTime, ReadOnlyCollection_1 authorizationPolicies, SecurityStateEncoder securityStateEncoder) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.PlatformNotSupportedException, system.SystemException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.NotImplementedException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -274,6 +488,44 @@ public class SecurityContextSecurityToken extends system.identitymodel.tokens.Se
         }
     }
 
+    /**
+     * Invokes the .NET member CreateCookieSecurityContextToken.
+     *
+     * @param dupParam0 the argument of type {@code UniqueId}
+     * @param dupParam1 the argument of type {@code java.lang.String}
+     * @param dupParam2 the argument of type {@code JCORefOut}
+     * @param dupParam3 the argument of type {@code DateTime}
+     * @param dupParam4 the argument of type {@code DateTime}
+     * @param dupParam5 the argument of type {@code UniqueId}
+     * @param dupParam6 the argument of type {@code DateTime}
+     * @param dupParam7 the argument of type {@code DateTime}
+     * @param dupParam8 the argument of type {@code ReadOnlyCollection_1}
+     * @param dupParam9 the argument of type {@code SecurityStateEncoder}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecurityContextSecurityToken.CreateCookieSecurityContextToken" target="_top">.NET documentation</a>
+     */
     public static SecurityContextSecurityToken CreateCookieSecurityContextToken(UniqueId dupParam0, java.lang.String dupParam1, JCORefOut dupParam2, DateTime dupParam3, DateTime dupParam4, UniqueId dupParam5, DateTime dupParam6, DateTime dupParam7, ReadOnlyCollection_1 dupParam8, SecurityStateEncoder dupParam9) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.PlatformNotSupportedException, system.SystemException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.NotImplementedException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -289,6 +541,12 @@ public class SecurityContextSecurityToken extends system.identitymodel.tokens.Se
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecurityContextSecurityToken.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -316,6 +574,13 @@ public class SecurityContextSecurityToken extends system.identitymodel.tokens.Se
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsCookieMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecurityContextSecurityToken.IsCookieMode" target="_top">.NET documentation</a>
+     */
     public boolean getIsCookieMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -330,6 +595,27 @@ public class SecurityContextSecurityToken extends system.identitymodel.tokens.Se
         }
     }
 
+    /**
+     * Gets the value of the .NET property AuthorizationPolicies.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecurityContextSecurityToken.AuthorizationPolicies" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getAuthorizationPolicies() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -345,6 +631,13 @@ public class SecurityContextSecurityToken extends system.identitymodel.tokens.Se
         }
     }
 
+    /**
+     * Sets the value of the .NET property AuthorizationPolicies.
+     *
+     * @param AuthorizationPolicies the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecurityContextSecurityToken.AuthorizationPolicies" target="_top">.NET documentation</a>
+     */
     public void setAuthorizationPolicies(ReadOnlyCollection_1 AuthorizationPolicies) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -355,6 +648,13 @@ public class SecurityContextSecurityToken extends system.identitymodel.tokens.Se
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeyEffectiveTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecurityContextSecurityToken.KeyEffectiveTime" target="_top">.NET documentation</a>
+     */
     public DateTime getKeyEffectiveTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -370,6 +670,13 @@ public class SecurityContextSecurityToken extends system.identitymodel.tokens.Se
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeyExpirationTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecurityContextSecurityToken.KeyExpirationTime" target="_top">.NET documentation</a>
+     */
     public DateTime getKeyExpirationTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -385,6 +692,13 @@ public class SecurityContextSecurityToken extends system.identitymodel.tokens.Se
         }
     }
 
+    /**
+     * Gets the value of the .NET property BootstrapMessageProperty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecurityContextSecurityToken.BootstrapMessageProperty" target="_top">.NET documentation</a>
+     */
     public SecurityMessageProperty getBootstrapMessageProperty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -400,6 +714,13 @@ public class SecurityContextSecurityToken extends system.identitymodel.tokens.Se
         }
     }
 
+    /**
+     * Sets the value of the .NET property BootstrapMessageProperty.
+     *
+     * @param BootstrapMessageProperty the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecurityContextSecurityToken.BootstrapMessageProperty" target="_top">.NET documentation</a>
+     */
     public void setBootstrapMessageProperty(SecurityMessageProperty BootstrapMessageProperty) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -410,6 +731,13 @@ public class SecurityContextSecurityToken extends system.identitymodel.tokens.Se
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContextId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecurityContextSecurityToken.ContextId" target="_top">.NET documentation</a>
+     */
     public UniqueId getContextId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -425,6 +753,13 @@ public class SecurityContextSecurityToken extends system.identitymodel.tokens.Se
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeyGeneration.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecurityContextSecurityToken.KeyGeneration" target="_top">.NET documentation</a>
+     */
     public UniqueId getKeyGeneration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

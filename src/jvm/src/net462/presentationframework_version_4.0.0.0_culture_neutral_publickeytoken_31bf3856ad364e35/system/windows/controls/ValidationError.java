@@ -99,7 +99,10 @@ public class ValidationError extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ValidationError(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,15 @@ public class ValidationError extends NetObject  {
     public ValidationError() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param ruleInError the argument of type {@code ValidationRule}
+     * @param bindingInError the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ValidationError.-ctor" target="_top">.NET documentation</a>
+     */
     public ValidationError(ValidationRule ruleInError, NetObject bindingInError) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +171,17 @@ public class ValidationError extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param ruleInError the argument of type {@code ValidationRule}
+     * @param bindingInError the argument of type {@code NetObject}
+     * @param errorContent the argument of type {@code NetObject}
+     * @param exception the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ValidationError.-ctor" target="_top">.NET documentation</a>
+     */
     public ValidationError(ValidationRule ruleInError, NetObject bindingInError, NetObject errorContent, NetException exception) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +201,13 @@ public class ValidationError extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Exception.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ValidationError.Exception" target="_top">.NET documentation</a>
+     */
     public NetException getException() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +223,13 @@ public class ValidationError extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Exception.
+     *
+     * @param Exception the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ValidationError.Exception" target="_top">.NET documentation</a>
+     */
     public void setException(NetException Exception) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +240,13 @@ public class ValidationError extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BindingInError.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ValidationError.BindingInError" target="_top">.NET documentation</a>
+     */
     public NetObject getBindingInError() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +262,13 @@ public class ValidationError extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ErrorContent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ValidationError.ErrorContent" target="_top">.NET documentation</a>
+     */
     public NetObject getErrorContent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +284,13 @@ public class ValidationError extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ErrorContent.
+     *
+     * @param ErrorContent the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ValidationError.ErrorContent" target="_top">.NET documentation</a>
+     */
     public void setErrorContent(NetObject ErrorContent) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +301,13 @@ public class ValidationError extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RuleInError.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ValidationError.RuleInError" target="_top">.NET documentation</a>
+     */
     public ValidationRule getRuleInError() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +323,13 @@ public class ValidationError extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RuleInError.
+     *
+     * @param RuleInError the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ValidationError.RuleInError" target="_top">.NET documentation</a>
+     */
     public void setRuleInError(ValidationRule RuleInError) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

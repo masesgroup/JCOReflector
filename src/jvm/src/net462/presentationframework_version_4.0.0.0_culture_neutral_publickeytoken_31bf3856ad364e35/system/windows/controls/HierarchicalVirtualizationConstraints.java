@@ -103,7 +103,10 @@ public class HierarchicalVirtualizationConstraints extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HierarchicalVirtualizationConstraints(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,15 @@ public class HierarchicalVirtualizationConstraints extends system.ValueType  {
     public HierarchicalVirtualizationConstraints() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param cacheLength the argument of type {@code VirtualizationCacheLength}
+     * @param cacheLengthUnit the argument of type {@code VirtualizationCacheLengthUnit}
+     * @param viewport the argument of type {@code Rect}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.HierarchicalVirtualizationConstraints.-ctor" target="_top">.NET documentation</a>
+     */
     public HierarchicalVirtualizationConstraints(VirtualizationCacheLength cacheLength, VirtualizationCacheLengthUnit cacheLengthUnit, Rect viewport) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +180,14 @@ public class HierarchicalVirtualizationConstraints extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param comparisonConstraints the argument of type {@code HierarchicalVirtualizationConstraints}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.HierarchicalVirtualizationConstraints.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(HierarchicalVirtualizationConstraints comparisonConstraints) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +206,13 @@ public class HierarchicalVirtualizationConstraints extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CacheLength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.HierarchicalVirtualizationConstraints.CacheLength" target="_top">.NET documentation</a>
+     */
     public VirtualizationCacheLength getCacheLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +228,13 @@ public class HierarchicalVirtualizationConstraints extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CacheLengthUnit.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.HierarchicalVirtualizationConstraints.CacheLengthUnit" target="_top">.NET documentation</a>
+     */
     public VirtualizationCacheLengthUnit getCacheLengthUnit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +250,13 @@ public class HierarchicalVirtualizationConstraints extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Viewport.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.HierarchicalVirtualizationConstraints.Viewport" target="_top">.NET documentation</a>
+     */
     public Rect getViewport() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

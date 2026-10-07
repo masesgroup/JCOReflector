@@ -141,7 +141,10 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ModuleBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -196,6 +199,16 @@ public class ModuleBuilder extends system.reflection.Module  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsDefined.
+     *
+     * @param attributeType the argument of type {@code NetType}
+     * @param inherit the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.IsDefined" target="_top">.NET documentation</a>
+     */
     public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +223,14 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsResource.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.IsResource" target="_top">.NET documentation</a>
+     */
     public boolean IsResource() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +245,13 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsTransient.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.IsTransient" target="_top">.NET documentation</a>
+     */
     public boolean IsTransient() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +266,15 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResolveSignature.
+     *
+     * @param metadataToken the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.ResolveSignature" target="_top">.NET documentation</a>
+     */
     public byte[] ResolveSignature(int metadataToken) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +298,14 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCustomAttributesData.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.GetCustomAttributesData" target="_top">.NET documentation</a>
+     */
     public IList_1 GetCustomAttributesData() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +321,20 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member DefineDocument.
+     *
+     * @param url the argument of type {@code java.lang.String}
+     * @param language the argument of type {@code Guid}
+     * @param languageVendor the argument of type {@code Guid}
+     * @param documentType the argument of type {@code Guid}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.DefineDocument" target="_top">.NET documentation</a>
+     */
     public ISymbolDocumentWriter DefineDocument(java.lang.String url, Guid language, Guid languageVendor, Guid documentType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +350,13 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetSymWriter.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.GetSymWriter" target="_top">.NET documentation</a>
+     */
     public ISymbolWriter GetSymWriter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +372,15 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCustomAttributes.
+     *
+     * @param inherit the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.GetCustomAttributes" target="_top">.NET documentation</a>
+     */
     public NetObject[] GetCustomAttributes(boolean inherit) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -327,6 +402,16 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCustomAttributes.
+     *
+     * @param attributeType the argument of type {@code NetType}
+     * @param inherit the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.GetCustomAttributes" target="_top">.NET documentation</a>
+     */
     public NetObject[] GetCustomAttributes(NetType attributeType, boolean inherit) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +433,24 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member DefineEnum.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param visibility the argument of type {@code TypeAttributes}
+     * @param underlyingType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.DefineEnum" target="_top">.NET documentation</a>
+     */
     public EnumBuilder DefineEnum(java.lang.String name, TypeAttributes visibility, NetType underlyingType) throws Throwable, system.NotImplementedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -363,6 +466,25 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member DefineInitializedData.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param data the argument of type {@code byte[]}
+     * @param attributes the argument of type {@code FieldAttributes}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.DefineInitializedData" target="_top">.NET documentation</a>
+     */
     public FieldBuilder DefineInitializedData(java.lang.String name, byte[] data, FieldAttributes attributes) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -378,6 +500,25 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member DefineInitializedData.
+     *
+     * @param dupParam0 the argument of type {@code java.lang.String}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @param dupParam2 the argument of type {@code FieldAttributes}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.DefineInitializedData" target="_top">.NET documentation</a>
+     */
     public FieldBuilder DefineInitializedData(java.lang.String dupParam0, JCORefOut dupParam1, FieldAttributes dupParam2) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -393,6 +534,25 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member DefineUninitializedData.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param size the argument of type {@code int}
+     * @param attributes the argument of type {@code FieldAttributes}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.DefineUninitializedData" target="_top">.NET documentation</a>
+     */
     public FieldBuilder DefineUninitializedData(java.lang.String name, int size, FieldAttributes attributes) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -408,6 +568,22 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFieldToken.
+     *
+     * @param field the argument of type {@code FieldInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.GetFieldToken" target="_top">.NET documentation</a>
+     */
     public FieldToken GetFieldToken(FieldInfo field) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -423,6 +599,25 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member DefineGlobalMethod.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param attributes the argument of type {@code MethodAttributes}
+     * @param callingConvention the argument of type {@code CallingConventions}
+     * @param returnType the argument of type {@code NetType}
+     * @param parameterTypes the argument of type {@code NetType[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.DefineGlobalMethod" target="_top">.NET documentation</a>
+     */
     public MethodBuilder DefineGlobalMethod(java.lang.String name, MethodAttributes attributes, CallingConventions callingConvention, NetType returnType, NetType[] parameterTypes) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.NotImplementedException, system.FormatException, system.NullReferenceException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -438,6 +633,24 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member DefineGlobalMethod.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param attributes the argument of type {@code MethodAttributes}
+     * @param returnType the argument of type {@code NetType}
+     * @param parameterTypes the argument of type {@code NetType[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.DefineGlobalMethod" target="_top">.NET documentation</a>
+     */
     public MethodBuilder DefineGlobalMethod(java.lang.String name, MethodAttributes attributes, NetType returnType, NetType[] parameterTypes) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.NotImplementedException, system.FormatException, system.NullReferenceException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -453,6 +666,28 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member DefinePInvokeMethod.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param dllName the argument of type {@code java.lang.String}
+     * @param attributes the argument of type {@code MethodAttributes}
+     * @param callingConvention the argument of type {@code CallingConventions}
+     * @param returnType the argument of type {@code NetType}
+     * @param parameterTypes the argument of type {@code NetType[]}
+     * @param nativeCallConv the argument of type {@code CallingConvention}
+     * @param nativeCharSet the argument of type {@code CharSet}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.DefinePInvokeMethod" target="_top">.NET documentation</a>
+     */
     public MethodBuilder DefinePInvokeMethod(java.lang.String name, java.lang.String dllName, MethodAttributes attributes, CallingConventions callingConvention, NetType returnType, NetType[] parameterTypes, CallingConvention nativeCallConv, CharSet nativeCharSet) throws Throwable, system.ArgumentException, system.NotImplementedException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -468,6 +703,29 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member DefinePInvokeMethod.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param dllName the argument of type {@code java.lang.String}
+     * @param entryName the argument of type {@code java.lang.String}
+     * @param attributes the argument of type {@code MethodAttributes}
+     * @param callingConvention the argument of type {@code CallingConventions}
+     * @param returnType the argument of type {@code NetType}
+     * @param parameterTypes the argument of type {@code NetType[]}
+     * @param nativeCallConv the argument of type {@code CallingConvention}
+     * @param nativeCharSet the argument of type {@code CharSet}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.DefinePInvokeMethod" target="_top">.NET documentation</a>
+     */
     public MethodBuilder DefinePInvokeMethod(java.lang.String name, java.lang.String dllName, java.lang.String entryName, MethodAttributes attributes, CallingConventions callingConvention, NetType returnType, NetType[] parameterTypes, CallingConvention nativeCallConv, CharSet nativeCharSet) throws Throwable, system.ArgumentException, system.NotImplementedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -483,6 +741,25 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetArrayMethodToken.
+     *
+     * @param arrayClass the argument of type {@code NetType}
+     * @param methodName the argument of type {@code java.lang.String}
+     * @param callingConvention the argument of type {@code CallingConventions}
+     * @param returnType the argument of type {@code NetType}
+     * @param parameterTypes the argument of type {@code NetType[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.GetArrayMethodToken" target="_top">.NET documentation</a>
+     */
     public MethodToken GetArrayMethodToken(NetType arrayClass, java.lang.String methodName, CallingConventions callingConvention, NetType returnType, NetType[] parameterTypes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -498,6 +775,25 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetConstructorToken.
+     *
+     * @param con the argument of type {@code ConstructorInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.GetConstructorToken" target="_top">.NET documentation</a>
+     */
     public MethodToken GetConstructorToken(ConstructorInfo con) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.FormatException, system.IndexOutOfRangeException, system.MissingMethodException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -513,6 +809,21 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetConstructorToken.
+     *
+     * @param constructor the argument of type {@code ConstructorInfo}
+     * @param optionalParameterTypes the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.GetConstructorToken" target="_top">.NET documentation</a>
+     */
     public MethodToken GetConstructorToken(ConstructorInfo constructor, IEnumerable_1 optionalParameterTypes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -528,6 +839,25 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethodToken.
+     *
+     * @param method the argument of type {@code MethodInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.GetMethodToken" target="_top">.NET documentation</a>
+     */
     public MethodToken GetMethodToken(MethodInfo method) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.FormatException, system.IndexOutOfRangeException, system.MissingMethodException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -543,6 +873,21 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethodToken.
+     *
+     * @param method the argument of type {@code MethodInfo}
+     * @param optionalParameterTypes the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.GetMethodToken" target="_top">.NET documentation</a>
+     */
     public MethodToken GetMethodToken(MethodInfo method, IEnumerable_1 optionalParameterTypes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -558,6 +903,16 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetSignatureToken.
+     *
+     * @param sigBytes the argument of type {@code byte[]}
+     * @param sigLength the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.GetSignatureToken" target="_top">.NET documentation</a>
+     */
     public SignatureToken GetSignatureToken(byte[] sigBytes, int sigLength) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -573,6 +928,16 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetSignatureToken.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.GetSignatureToken" target="_top">.NET documentation</a>
+     */
     public SignatureToken GetSignatureToken(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -588,6 +953,16 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetSignatureToken.
+     *
+     * @param sigHelper the argument of type {@code SignatureHelper}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.GetSignatureToken" target="_top">.NET documentation</a>
+     */
     public SignatureToken GetSignatureToken(SignatureHelper sigHelper) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -603,6 +978,15 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetStringConstant.
+     *
+     * @param str the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.GetStringConstant" target="_top">.NET documentation</a>
+     */
     public StringToken GetStringConstant(java.lang.String str) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -618,6 +1002,19 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member DefineType.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.DefineType" target="_top">.NET documentation</a>
+     */
     public TypeBuilder DefineType(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -633,6 +1030,20 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member DefineType.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param attr the argument of type {@code TypeAttributes}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.DefineType" target="_top">.NET documentation</a>
+     */
     public TypeBuilder DefineType(java.lang.String name, TypeAttributes attr) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -648,6 +1059,24 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member DefineType.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param attr the argument of type {@code TypeAttributes}
+     * @param parent the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.DefineType" target="_top">.NET documentation</a>
+     */
     public TypeBuilder DefineType(java.lang.String name, TypeAttributes attr, NetType parent) throws Throwable, system.ArgumentException, system.NotImplementedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -663,6 +1092,22 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member DefineType.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param attr the argument of type {@code TypeAttributes}
+     * @param parent the argument of type {@code NetType}
+     * @param typesize the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.DefineType" target="_top">.NET documentation</a>
+     */
     public TypeBuilder DefineType(java.lang.String name, TypeAttributes attr, NetType parent, int typesize) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -678,6 +1123,22 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member DefineType.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param attr the argument of type {@code TypeAttributes}
+     * @param parent the argument of type {@code NetType}
+     * @param packsize the argument of type {@code PackingSize}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.DefineType" target="_top">.NET documentation</a>
+     */
     public TypeBuilder DefineType(java.lang.String name, TypeAttributes attr, NetType parent, PackingSize packsize) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -693,6 +1154,23 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member DefineType.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param attr the argument of type {@code TypeAttributes}
+     * @param parent the argument of type {@code NetType}
+     * @param packingSize the argument of type {@code PackingSize}
+     * @param typesize the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.DefineType" target="_top">.NET documentation</a>
+     */
     public TypeBuilder DefineType(java.lang.String name, TypeAttributes attr, NetType parent, PackingSize packingSize, int typesize) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -708,6 +1186,22 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member DefineType.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param attr the argument of type {@code TypeAttributes}
+     * @param parent the argument of type {@code NetType}
+     * @param interfaces the argument of type {@code NetType[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.DefineType" target="_top">.NET documentation</a>
+     */
     public TypeBuilder DefineType(java.lang.String name, TypeAttributes attr, NetType parent, NetType[] interfaces) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -723,6 +1217,21 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeToken.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.GetTypeToken" target="_top">.NET documentation</a>
+     */
     public TypeToken GetTypeToken(java.lang.String name) throws Throwable, system.NotImplementedException, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -738,6 +1247,22 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeToken.
+     *
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.GetTypeToken" target="_top">.NET documentation</a>
+     */
     public TypeToken GetTypeToken(NetType type) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.MissingMethodException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -753,6 +1278,16 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetField.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.GetField" target="_top">.NET documentation</a>
+     */
     public FieldInfo GetField(java.lang.String name, BindingFlags bindingAttr) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -768,6 +1303,17 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResolveField.
+     *
+     * @param metadataToken the argument of type {@code int}
+     * @param genericTypeArguments the argument of type {@code NetType[]}
+     * @param genericMethodArguments the argument of type {@code NetType[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.ResolveField" target="_top">.NET documentation</a>
+     */
     public FieldInfo ResolveField(int metadataToken, NetType[] genericTypeArguments, NetType[] genericMethodArguments) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -783,6 +1329,15 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFields.
+     *
+     * @param bindingFlags the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.GetFields" target="_top">.NET documentation</a>
+     */
     public FieldInfo[] GetFields(BindingFlags bindingFlags) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -804,6 +1359,17 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResolveMember.
+     *
+     * @param metadataToken the argument of type {@code int}
+     * @param genericTypeArguments the argument of type {@code NetType[]}
+     * @param genericMethodArguments the argument of type {@code NetType[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.ResolveMember" target="_top">.NET documentation</a>
+     */
     public MemberInfo ResolveMember(int metadataToken, NetType[] genericTypeArguments, NetType[] genericMethodArguments) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -819,6 +1385,17 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResolveMethod.
+     *
+     * @param metadataToken the argument of type {@code int}
+     * @param genericTypeArguments the argument of type {@code NetType[]}
+     * @param genericMethodArguments the argument of type {@code NetType[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.ResolveMethod" target="_top">.NET documentation</a>
+     */
     public MethodBase ResolveMethod(int metadataToken, NetType[] genericTypeArguments, NetType[] genericMethodArguments) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -834,6 +1411,27 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetArrayMethod.
+     *
+     * @param arrayClass the argument of type {@code NetType}
+     * @param methodName the argument of type {@code java.lang.String}
+     * @param callingConvention the argument of type {@code CallingConventions}
+     * @param returnType the argument of type {@code NetType}
+     * @param parameterTypes the argument of type {@code NetType[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.GetArrayMethod" target="_top">.NET documentation</a>
+     */
     public MethodInfo GetArrayMethod(NetType arrayClass, java.lang.String methodName, CallingConventions callingConvention, NetType returnType, NetType[] parameterTypes) throws Throwable, system.NotImplementedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -849,6 +1447,15 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethods.
+     *
+     * @param bindingFlags the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.GetMethods" target="_top">.NET documentation</a>
+     */
     public MethodInfo[] GetMethods(BindingFlags bindingFlags) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -870,6 +1477,20 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member DefineResource.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param description the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.DefineResource" target="_top">.NET documentation</a>
+     */
     public IResourceWriter DefineResource(java.lang.String name, java.lang.String description) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -885,6 +1506,21 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member DefineResource.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param description the argument of type {@code java.lang.String}
+     * @param attribute the argument of type {@code ResourceAttributes}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.DefineResource" target="_top">.NET documentation</a>
+     */
     public IResourceWriter DefineResource(java.lang.String name, java.lang.String description, ResourceAttributes attribute) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -900,6 +1536,14 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetSignerCertificate.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.GetSignerCertificate" target="_top">.NET documentation</a>
+     */
     public X509Certificate GetSignerCertificate() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -915,6 +1559,15 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResolveString.
+     *
+     * @param metadataToken the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.ResolveString" target="_top">.NET documentation</a>
+     */
     public java.lang.String ResolveString(int metadataToken) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -929,6 +1582,15 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetType.
+     *
+     * @param className the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.GetType" target="_top">.NET documentation</a>
+     */
     public NetType GetType(java.lang.String className) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -944,6 +1606,16 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetType.
+     *
+     * @param className the argument of type {@code java.lang.String}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.GetType" target="_top">.NET documentation</a>
+     */
     public NetType GetType(java.lang.String className, boolean ignoreCase) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -959,6 +1631,26 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetType.
+     *
+     * @param className the argument of type {@code java.lang.String}
+     * @param throwOnError the argument of type {@code boolean}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.GetType" target="_top">.NET documentation</a>
+     */
     public NetType GetType(java.lang.String className, boolean throwOnError, boolean ignoreCase) throws Throwable, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -974,6 +1666,17 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResolveType.
+     *
+     * @param metadataToken the argument of type {@code int}
+     * @param genericTypeArguments the argument of type {@code NetType[]}
+     * @param genericMethodArguments the argument of type {@code NetType[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.ResolveType" target="_top">.NET documentation</a>
+     */
     public NetType ResolveType(int metadataToken, NetType[] genericTypeArguments, NetType[] genericMethodArguments) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -989,6 +1692,16 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypes.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.GetTypes" target="_top">.NET documentation</a>
+     */
     public NetType[] GetTypes() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1010,6 +1723,18 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateGlobalFunctions.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.CreateGlobalFunctions" target="_top">.NET documentation</a>
+     */
     public void CreateGlobalFunctions() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1020,6 +1745,20 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member DefineManifestResource.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param stream the argument of type {@code Stream}
+     * @param attribute the argument of type {@code ResourceAttributes}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.DefineManifestResource" target="_top">.NET documentation</a>
+     */
     public void DefineManifestResource(java.lang.String name, Stream stream, ResourceAttributes attribute) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1030,6 +1769,15 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member DefineUnmanagedResource.
+     *
+     * @param resource the argument of type {@code byte[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.DefineUnmanagedResource" target="_top">.NET documentation</a>
+     */
     public void DefineUnmanagedResource(byte[] resource) throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1040,6 +1788,15 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member DefineUnmanagedResource.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.DefineUnmanagedResource" target="_top">.NET documentation</a>
+     */
     public void DefineUnmanagedResource(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1050,6 +1807,23 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member DefineUnmanagedResource.
+     *
+     * @param resourceFileName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.DefineUnmanagedResource" target="_top">.NET documentation</a>
+     */
     public void DefineUnmanagedResource(java.lang.String resourceFileName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.security.SecurityException, system.InvalidOperationException, system.io.FileNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1060,6 +1834,15 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPEKind.
+     *
+     * @param peKind the argument of type {@code JCORefOut<PortableExecutableKinds>}
+     * @param machine the argument of type {@code JCORefOut<ImageFileMachine>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.GetPEKind" target="_top">.NET documentation</a>
+     */
     public void GetPEKind(JCORefOut<PortableExecutableKinds> peKind, JCORefOut<ImageFileMachine> machine) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1070,6 +1853,23 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetCustomAttribute.
+     *
+     * @param con the argument of type {@code ConstructorInfo}
+     * @param binaryAttribute the argument of type {@code byte[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.SetCustomAttribute" target="_top">.NET documentation</a>
+     */
     public void SetCustomAttribute(ConstructorInfo con, byte[] binaryAttribute) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.MissingMethodException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1080,6 +1880,23 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetCustomAttribute.
+     *
+     * @param dupParam0 the argument of type {@code ConstructorInfo}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.SetCustomAttribute" target="_top">.NET documentation</a>
+     */
     public void SetCustomAttribute(ConstructorInfo dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.MissingMethodException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1090,6 +1907,21 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetCustomAttribute.
+     *
+     * @param customBuilder the argument of type {@code CustomAttributeBuilder}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.SetCustomAttribute" target="_top">.NET documentation</a>
+     */
     public void SetCustomAttribute(CustomAttributeBuilder customBuilder) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.MissingMethodException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1100,6 +1932,16 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetSymCustomAttribute.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param data the argument of type {@code byte[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.SetSymCustomAttribute" target="_top">.NET documentation</a>
+     */
     public void SetSymCustomAttribute(java.lang.String name, byte[] data) throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1110,6 +1952,16 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetSymCustomAttribute.
+     *
+     * @param dupParam0 the argument of type {@code java.lang.String}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.SetSymCustomAttribute" target="_top">.NET documentation</a>
+     */
     public void SetSymCustomAttribute(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1120,6 +1972,21 @@ public class ModuleBuilder extends system.reflection.Module  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetUserEntryPoint.
+     *
+     * @param entryPoint the argument of type {@code MethodInfo}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.SetUserEntryPoint" target="_top">.NET documentation</a>
+     */
     public void SetUserEntryPoint(MethodInfo entryPoint) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.MissingMethodException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1133,8 +2000,12 @@ public class ModuleBuilder extends system.reflection.Module  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static To_ModuleBuilder method available in _ModuleBuilder to obtain an object with an invocable method
+     *
+     * @param pcTInfo the argument of type {@code JCORefOut<UInt32>}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._ModuleBuilder.GetTypeInfoCount" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ModuleBuilder to obtain the full interface.");
     }

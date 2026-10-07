@@ -101,7 +101,10 @@ public class DirectoryServicesPermissionEntryCollection extends system.collectio
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DirectoryServicesPermissionEntryCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,14 @@ public class DirectoryServicesPermissionEntryCollection extends system.collectio
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param value the argument of type {@code DirectoryServicesPermissionEntry}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.DirectoryServicesPermissionEntryCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(DirectoryServicesPermissionEntry value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +181,14 @@ public class DirectoryServicesPermissionEntryCollection extends system.collectio
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param value the argument of type {@code DirectoryServicesPermissionEntry}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.DirectoryServicesPermissionEntryCollection.Add" target="_top">.NET documentation</a>
+     */
     public int Add(DirectoryServicesPermissionEntry value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +229,14 @@ public class DirectoryServicesPermissionEntryCollection extends system.collectio
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param value the argument of type {@code DirectoryServicesPermissionEntry}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.DirectoryServicesPermissionEntryCollection.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(DirectoryServicesPermissionEntry value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +277,13 @@ public class DirectoryServicesPermissionEntryCollection extends system.collectio
         }
     }
 
+    /**
+     * Invokes the .NET member AddRange.
+     *
+     * @param value the argument of type {@code DirectoryServicesPermissionEntry[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.DirectoryServicesPermissionEntryCollection.AddRange" target="_top">.NET documentation</a>
+     */
     public void AddRange(DirectoryServicesPermissionEntry[] value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +294,13 @@ public class DirectoryServicesPermissionEntryCollection extends system.collectio
         }
     }
 
+    /**
+     * Invokes the .NET member AddRange.
+     *
+     * @param value the argument of type {@code DirectoryServicesPermissionEntryCollection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.DirectoryServicesPermissionEntryCollection.AddRange" target="_top">.NET documentation</a>
+     */
     public void AddRange(DirectoryServicesPermissionEntryCollection value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +311,14 @@ public class DirectoryServicesPermissionEntryCollection extends system.collectio
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code DirectoryServicesPermissionEntry[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.DirectoryServicesPermissionEntryCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(DirectoryServicesPermissionEntry[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +329,14 @@ public class DirectoryServicesPermissionEntryCollection extends system.collectio
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param value the argument of type {@code DirectoryServicesPermissionEntry}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.DirectoryServicesPermissionEntryCollection.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(int index, DirectoryServicesPermissionEntry value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +347,13 @@ public class DirectoryServicesPermissionEntryCollection extends system.collectio
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param value the argument of type {@code DirectoryServicesPermissionEntry}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.DirectoryServicesPermissionEntryCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(DirectoryServicesPermissionEntry value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

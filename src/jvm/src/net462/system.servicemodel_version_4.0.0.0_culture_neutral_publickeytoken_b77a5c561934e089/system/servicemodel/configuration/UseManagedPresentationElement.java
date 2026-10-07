@@ -99,7 +99,10 @@ public class UseManagedPresentationElement extends system.servicemodel.configura
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UseManagedPresentationElement(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,14 @@ public class UseManagedPresentationElement extends system.servicemodel.configura
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Configuration.UseManagedPresentationElement.-ctor" target="_top">.NET documentation</a>
+     */
     public UseManagedPresentationElement() throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         try {
             // add reference to assemblyName.dll file

@@ -101,7 +101,10 @@ public class SoapFault extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SoapFault(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class SoapFault extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.SoapFault.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapFault() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,16 @@ public class SoapFault extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param faultCode the argument of type {@code java.lang.String}
+     * @param faultString the argument of type {@code java.lang.String}
+     * @param faultActor the argument of type {@code java.lang.String}
+     * @param serverFault the argument of type {@code ServerFault}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.SoapFault.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapFault(java.lang.String faultCode, java.lang.String faultString, java.lang.String faultActor, ServerFault serverFault) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +191,18 @@ public class SoapFault extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetObjectData.
+     *
+     * @param info the argument of type {@code SerializationInfo}
+     * @param context the argument of type {@code StreamingContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.SoapFault.GetObjectData" target="_top">.NET documentation</a>
+     */
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.runtime.serialization.SerializationException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +217,13 @@ public class SoapFault extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Detail.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.SoapFault.Detail" target="_top">.NET documentation</a>
+     */
     public NetObject getDetail() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +239,13 @@ public class SoapFault extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Detail.
+     *
+     * @param Detail the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.SoapFault.Detail" target="_top">.NET documentation</a>
+     */
     public void setDetail(NetObject Detail) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +256,13 @@ public class SoapFault extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FaultActor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.SoapFault.FaultActor" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFaultActor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +277,13 @@ public class SoapFault extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FaultActor.
+     *
+     * @param FaultActor the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.SoapFault.FaultActor" target="_top">.NET documentation</a>
+     */
     public void setFaultActor(java.lang.String FaultActor) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +294,13 @@ public class SoapFault extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FaultCode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.SoapFault.FaultCode" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFaultCode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +315,13 @@ public class SoapFault extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FaultCode.
+     *
+     * @param FaultCode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.SoapFault.FaultCode" target="_top">.NET documentation</a>
+     */
     public void setFaultCode(java.lang.String FaultCode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +332,13 @@ public class SoapFault extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FaultString.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.SoapFault.FaultString" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFaultString() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +353,13 @@ public class SoapFault extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FaultString.
+     *
+     * @param FaultString the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.SoapFault.FaultString" target="_top">.NET documentation</a>
+     */
     public void setFaultString(java.lang.String FaultString) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -103,7 +103,10 @@ public class UnionCodeGroup extends system.security.policy.CodeGroup  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UnionCodeGroup(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,16 @@ public class UnionCodeGroup extends system.security.policy.CodeGroup  {
     public UnionCodeGroup() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param membershipCondition the argument of type {@code IMembershipCondition}
+     * @param policy the argument of type {@code PolicyStatement}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.UnionCodeGroup.-ctor" target="_top">.NET documentation</a>
+     */
     public UnionCodeGroup(IMembershipCondition membershipCondition, PolicyStatement policy) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +181,22 @@ public class UnionCodeGroup extends system.security.policy.CodeGroup  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Copy.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.UnionCodeGroup.Copy" target="_top">.NET documentation</a>
+     */
     public CodeGroup Copy() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.InvalidOperationException, system.InvalidCastException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +212,21 @@ public class UnionCodeGroup extends system.security.policy.CodeGroup  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResolveMatchingCodeGroups.
+     *
+     * @param evidence the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.UnionCodeGroup.ResolveMatchingCodeGroups" target="_top">.NET documentation</a>
+     */
     public CodeGroup ResolveMatchingCodeGroups(Evidence evidence) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +242,24 @@ public class UnionCodeGroup extends system.security.policy.CodeGroup  {
         }
     }
 
+    /**
+     * Invokes the .NET member Resolve.
+     *
+     * @param evidence the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.policy.PolicyException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.UnionCodeGroup.Resolve" target="_top">.NET documentation</a>
+     */
     public PolicyStatement Resolve(Evidence evidence) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.InvalidOperationException, system.InvalidCastException, system.NotSupportedException, system.security.policy.PolicyException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

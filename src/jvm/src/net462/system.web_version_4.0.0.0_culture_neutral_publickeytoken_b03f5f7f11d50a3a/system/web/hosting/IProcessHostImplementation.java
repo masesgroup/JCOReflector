@@ -100,7 +100,10 @@ public class IProcessHostImplementation extends NetObject implements IProcessHos
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IProcessHostImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,13 @@ public class IProcessHostImplementation extends NetObject implements IProcessHos
 
     // Methods section
     
+    /**
+     * Invokes the .NET member EnumerateAppDomains.
+     *
+     * @param appDomainInfoEnum the argument of type {@code JCORefOut<IAppDomainInfoEnum>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.IProcessHost.EnumerateAppDomains" target="_top">.NET documentation</a>
+     */
     public void EnumerateAppDomains(JCORefOut<IAppDomainInfoEnum> appDomainInfoEnum) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -152,6 +162,12 @@ public class IProcessHostImplementation extends NetObject implements IProcessHos
         }
     }
 
+    /**
+     * Invokes the .NET member Shutdown.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.IProcessHost.Shutdown" target="_top">.NET documentation</a>
+     */
     public void Shutdown() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -162,6 +178,13 @@ public class IProcessHostImplementation extends NetObject implements IProcessHos
         }
     }
 
+    /**
+     * Invokes the .NET member ShutdownApplication.
+     *
+     * @param appId the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.IProcessHost.ShutdownApplication" target="_top">.NET documentation</a>
+     */
     public void ShutdownApplication(java.lang.String appId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +195,15 @@ public class IProcessHostImplementation extends NetObject implements IProcessHos
         }
     }
 
+    /**
+     * Invokes the .NET member StartApplication.
+     *
+     * @param appId the argument of type {@code java.lang.String}
+     * @param appPath the argument of type {@code java.lang.String}
+     * @param runtimeInterface the argument of type {@code JCORefOut<NetObject>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.IProcessHost.StartApplication" target="_top">.NET documentation</a>
+     */
     public void StartApplication(java.lang.String appId, java.lang.String appPath, JCORefOut<NetObject> runtimeInterface) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

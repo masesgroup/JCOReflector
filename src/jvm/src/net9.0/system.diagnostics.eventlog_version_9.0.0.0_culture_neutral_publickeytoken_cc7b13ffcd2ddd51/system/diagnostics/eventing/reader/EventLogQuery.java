@@ -100,7 +100,10 @@ public class EventLogQuery extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EventLogQuery(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,24 @@ public class EventLogQuery extends NetObject  {
     public EventLogQuery() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @param pathType the argument of type {@code PathType}
+     * @param query the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Eventing.Reader.EventLogQuery.-ctor" target="_top">.NET documentation</a>
+     */
     public EventLogQuery(java.lang.String path, PathType pathType, java.lang.String query) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +181,24 @@ public class EventLogQuery extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @param pathType the argument of type {@code PathType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Eventing.Reader.EventLogQuery.-ctor" target="_top">.NET documentation</a>
+     */
     public EventLogQuery(java.lang.String path, PathType pathType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +218,13 @@ public class EventLogQuery extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ReverseDirection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Eventing.Reader.EventLogQuery.ReverseDirection" target="_top">.NET documentation</a>
+     */
     public boolean getReverseDirection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +239,13 @@ public class EventLogQuery extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReverseDirection.
+     *
+     * @param ReverseDirection the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Eventing.Reader.EventLogQuery.ReverseDirection" target="_top">.NET documentation</a>
+     */
     public void setReverseDirection(boolean ReverseDirection) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +256,13 @@ public class EventLogQuery extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TolerateQueryErrors.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Eventing.Reader.EventLogQuery.TolerateQueryErrors" target="_top">.NET documentation</a>
+     */
     public boolean getTolerateQueryErrors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +277,13 @@ public class EventLogQuery extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TolerateQueryErrors.
+     *
+     * @param TolerateQueryErrors the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Eventing.Reader.EventLogQuery.TolerateQueryErrors" target="_top">.NET documentation</a>
+     */
     public void setTolerateQueryErrors(boolean TolerateQueryErrors) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +294,13 @@ public class EventLogQuery extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Session.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Eventing.Reader.EventLogQuery.Session" target="_top">.NET documentation</a>
+     */
     public EventLogSession getSession() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +316,13 @@ public class EventLogQuery extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Session.
+     *
+     * @param Session the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Eventing.Reader.EventLogQuery.Session" target="_top">.NET documentation</a>
+     */
     public void setSession(EventLogSession Session) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

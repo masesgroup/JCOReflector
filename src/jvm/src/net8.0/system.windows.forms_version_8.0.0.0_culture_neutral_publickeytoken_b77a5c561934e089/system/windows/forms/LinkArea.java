@@ -100,7 +100,10 @@ public class LinkArea extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public LinkArea(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class LinkArea extends system.ValueType  {
     public LinkArea() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param start the argument of type {@code int}
+     * @param length the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.LinkArea.-ctor" target="_top">.NET documentation</a>
+     */
     public LinkArea(int start, int length) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +176,14 @@ public class LinkArea extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code LinkArea}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.LinkArea.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(LinkArea other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +202,13 @@ public class LinkArea extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsEmpty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.LinkArea.IsEmpty" target="_top">.NET documentation</a>
+     */
     public boolean getIsEmpty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +223,13 @@ public class LinkArea extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Length.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.LinkArea.Length" target="_top">.NET documentation</a>
+     */
     public int getLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +270,13 @@ public class LinkArea extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Length.
+     *
+     * @param Length the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.LinkArea.Length" target="_top">.NET documentation</a>
+     */
     public void setLength(int Length) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +287,13 @@ public class LinkArea extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Start.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.LinkArea.Start" target="_top">.NET documentation</a>
+     */
     public int getStart() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -287,6 +334,13 @@ public class LinkArea extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Start.
+     *
+     * @param Start the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.LinkArea.Start" target="_top">.NET documentation</a>
+     */
     public void setStart(int Start) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

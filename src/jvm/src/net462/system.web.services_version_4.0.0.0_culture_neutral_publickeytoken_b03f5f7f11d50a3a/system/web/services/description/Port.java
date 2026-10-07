@@ -102,7 +102,10 @@ public class Port extends system.web.services.description.NamedItem  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Port(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class Port extends system.web.services.description.NamedItem  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.Port.-ctor" target="_top">.NET documentation</a>
+     */
     public Port() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +176,13 @@ public class Port extends system.web.services.description.NamedItem  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Service.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.Port.Service" target="_top">.NET documentation</a>
+     */
     public Service getService() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +198,13 @@ public class Port extends system.web.services.description.NamedItem  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Binding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.Port.Binding" target="_top">.NET documentation</a>
+     */
     public XmlQualifiedName getBinding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +220,13 @@ public class Port extends system.web.services.description.NamedItem  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Binding.
+     *
+     * @param Binding the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.Port.Binding" target="_top">.NET documentation</a>
+     */
     public void setBinding(XmlQualifiedName Binding) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

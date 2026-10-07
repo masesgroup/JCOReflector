@@ -53,5 +53,12 @@ import system.activities.Bookmark;
  * @version 2.0.0.0
  */
 public interface IBookmarkCallback {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param context the .NET argument of type {@code System.Activities.NativeActivityContext}
+     * @param bookmark the .NET argument of type {@code System.Activities.Bookmark}
+     * @param value the .NET argument of type {@code System.Object}
+     */
     public void Invoke(NativeActivityContext context, Bookmark bookmark, NetObject value);
 }

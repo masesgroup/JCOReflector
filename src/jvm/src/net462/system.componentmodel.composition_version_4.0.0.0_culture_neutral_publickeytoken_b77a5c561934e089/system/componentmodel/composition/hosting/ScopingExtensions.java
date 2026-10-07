@@ -103,7 +103,10 @@ public class ScopingExtensions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ScopingExtensions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,18 @@ public class ScopingExtensions extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ContainsPartMetadata.
+     *
+     * @param <T> the type of the generic argument T
+     * @param part the argument of type {@code ComposablePartDefinition}
+     * @param key the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.ScopingExtensions.ContainsPartMetadata" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean ContainsPartMetadata(ComposablePartDefinition part, java.lang.String key, T value) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -170,6 +185,16 @@ public class ScopingExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ContainsPartMetadataWithKey.
+     *
+     * @param part the argument of type {@code ComposablePartDefinition}
+     * @param key the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.ScopingExtensions.ContainsPartMetadataWithKey" target="_top">.NET documentation</a>
+     */
     public static boolean ContainsPartMetadataWithKey(ComposablePartDefinition part, java.lang.String key) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -184,6 +209,18 @@ public class ScopingExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Exports.
+     *
+     * @param part the argument of type {@code ComposablePartDefinition}
+     * @param contractName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.ScopingExtensions.Exports" target="_top">.NET documentation</a>
+     */
     public static boolean Exports(ComposablePartDefinition part, java.lang.String contractName) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -198,6 +235,16 @@ public class ScopingExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Imports.
+     *
+     * @param part the argument of type {@code ComposablePartDefinition}
+     * @param contractName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.ScopingExtensions.Imports" target="_top">.NET documentation</a>
+     */
     public static boolean Imports(ComposablePartDefinition part, java.lang.String contractName) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -212,6 +259,17 @@ public class ScopingExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Imports.
+     *
+     * @param part the argument of type {@code ComposablePartDefinition}
+     * @param contractName the argument of type {@code java.lang.String}
+     * @param importCardinality the argument of type {@code ImportCardinality}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.ScopingExtensions.Imports" target="_top">.NET documentation</a>
+     */
     public static boolean Imports(ComposablePartDefinition part, java.lang.String contractName, ImportCardinality importCardinality) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -226,6 +284,16 @@ public class ScopingExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Filter.
+     *
+     * @param catalog the argument of type {@code ComposablePartCatalog}
+     * @param filter the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.ScopingExtensions.Filter" target="_top">.NET documentation</a>
+     */
     public static FilteredCatalog Filter(ComposablePartCatalog catalog, Func_2 filter) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

@@ -113,7 +113,10 @@ public class DragDropHelper extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DragDropHelper(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -166,6 +169,25 @@ public class DragDropHelper extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AllowDrop.
+     *
+     * @param draggedDataObject the argument of type {@code IDataObject}
+     * @param context the argument of type {@code EditingContext}
+     * @param allowedItemTypes the argument of type {@code NetType...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DragDropHelper.AllowDrop" target="_top">.NET documentation</a>
+     */
     public static boolean AllowDrop(IDataObject draggedDataObject, EditingContext context, NetType... allowedItemTypes) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.TypeLoadException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -180,6 +202,14 @@ public class DragDropHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCompositeView.
+     *
+     * @param e the argument of type {@code DragEventArgs}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DragDropHelper.GetCompositeView" target="_top">.NET documentation</a>
+     */
     public static ICompositeView GetCompositeView(DragEventArgs e) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -195,6 +225,20 @@ public class DragDropHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDraggedModelItem.
+     *
+     * @param e the argument of type {@code DragEventArgs}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DragDropHelper.GetDraggedModelItem" target="_top">.NET documentation</a>
+     */
     public static ModelItem GetDraggedModelItem(DragEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -210,6 +254,14 @@ public class DragDropHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDraggedModelItems.
+     *
+     * @param e the argument of type {@code DragEventArgs}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DragDropHelper.GetDraggedModelItems" target="_top">.NET documentation</a>
+     */
     public static IEnumerable_1 GetDraggedModelItems(DragEventArgs e) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -225,6 +277,38 @@ public class DragDropHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDroppedObjects.
+     *
+     * @param dropTarget the argument of type {@code DependencyObject}
+     * @param e the argument of type {@code DragEventArgs}
+     * @param context the argument of type {@code EditingContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.windows.markup.XamlParseException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DragDropHelper.GetDroppedObjects" target="_top">.NET documentation</a>
+     */
     public static IEnumerable_1 GetDroppedObjects(DependencyObject dropTarget, DragEventArgs e, EditingContext context) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.NullReferenceException, system.OverflowException, system.NotImplementedException, system.ObjectDisposedException, system.io.IOException, system.reflection.AmbiguousMatchException, system.windows.markup.XamlParseException, system.MulticastNotSupportedException, system.RankException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -240,6 +324,35 @@ public class DragDropHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDroppedObject.
+     *
+     * @param dropTarget the argument of type {@code DependencyObject}
+     * @param e the argument of type {@code DragEventArgs}
+     * @param context the argument of type {@code EditingContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DragDropHelper.GetDroppedObject" target="_top">.NET documentation</a>
+     */
     public static NetObject GetDroppedObject(DependencyObject dropTarget, DragEventArgs e, EditingContext context) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NullReferenceException, system.OverflowException, system.io.IOException, system.security.SecurityException, system.NotImplementedException, system.RankException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.FormatException, system.OutOfMemoryException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -255,6 +368,30 @@ public class DragDropHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DoDragMove.
+     *
+     * @param draggedViewElement the argument of type {@code WorkflowViewElement}
+     * @param referencePoint the argument of type {@code Point}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DragDropHelper.DoDragMove" target="_top">.NET documentation</a>
+     */
     public static DragDropEffects DoDragMove(WorkflowViewElement draggedViewElement, Point referencePoint) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.NotImplementedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.RankException, system.OutOfMemoryException, system.threading.ThreadStateException, system.SystemException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -270,6 +407,21 @@ public class DragDropHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDragDropCompletedEffects.
+     *
+     * @param data the argument of type {@code DataObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DragDropHelper.GetDragDropCompletedEffects" target="_top">.NET documentation</a>
+     */
     public static DragDropEffects GetDragDropCompletedEffects(DataObject data) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -285,6 +437,14 @@ public class DragDropHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDragDropAnchorPoint.
+     *
+     * @param e the argument of type {@code DragEventArgs}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DragDropHelper.GetDragDropAnchorPoint" target="_top">.NET documentation</a>
+     */
     public static Point GetDragDropAnchorPoint(DragEventArgs e) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -300,6 +460,22 @@ public class DragDropHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCompositeView.
+     *
+     * @param workflowViewElement the argument of type {@code WorkflowViewElement}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DragDropHelper.GetCompositeView" target="_top">.NET documentation</a>
+     */
     public static UIElement GetCompositeView(WorkflowViewElement workflowViewElement) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -315,6 +491,22 @@ public class DragDropHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetCompositeView.
+     *
+     * @param workflowViewElement the argument of type {@code WorkflowViewElement}
+     * @param dragSource the argument of type {@code UIElement}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DragDropHelper.SetCompositeView" target="_top">.NET documentation</a>
+     */
     public static void SetCompositeView(WorkflowViewElement workflowViewElement, UIElement dragSource) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -325,6 +517,20 @@ public class DragDropHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetDragDropCompletedEffects.
+     *
+     * @param e the argument of type {@code DragEventArgs}
+     * @param completedEffects the argument of type {@code DragDropEffects}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DragDropHelper.SetDragDropCompletedEffects" target="_top">.NET documentation</a>
+     */
     public static void SetDragDropCompletedEffects(DragEventArgs e, DragDropEffects completedEffects) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

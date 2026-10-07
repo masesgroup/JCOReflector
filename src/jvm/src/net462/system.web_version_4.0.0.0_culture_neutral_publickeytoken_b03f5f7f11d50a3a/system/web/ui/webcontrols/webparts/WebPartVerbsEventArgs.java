@@ -100,7 +100,10 @@ public class WebPartVerbsEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WebPartVerbsEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class WebPartVerbsEventArgs extends system.EventArgs  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartVerbsEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public WebPartVerbsEventArgs() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +166,13 @@ public class WebPartVerbsEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param verbs the argument of type {@code WebPartVerbCollection}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartVerbsEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public WebPartVerbsEventArgs(WebPartVerbCollection verbs) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +191,13 @@ public class WebPartVerbsEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Verbs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartVerbsEventArgs.Verbs" target="_top">.NET documentation</a>
+     */
     public WebPartVerbCollection getVerbs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +213,13 @@ public class WebPartVerbsEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Verbs.
+     *
+     * @param Verbs the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartVerbsEventArgs.Verbs" target="_top">.NET documentation</a>
+     */
     public void setVerbs(WebPartVerbCollection Verbs) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

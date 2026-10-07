@@ -115,7 +115,10 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public JsonSerializerOptions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -162,6 +165,18 @@ public class JsonSerializerOptions extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public JsonSerializerOptions() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +187,19 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param defaults the argument of type {@code JsonSerializerDefaults}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public JsonSerializerOptions(JsonSerializerDefaults defaults) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +210,23 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public JsonSerializerOptions(JsonSerializerOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -196,6 +241,28 @@ public class JsonSerializerOptions extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member TryGetTypeInfo.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param typeInfo the argument of type {@code JCORefOut<JsonTypeInfo>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.TryGetTypeInfo" target="_top">.NET documentation</a>
+     */
     public boolean TryGetTypeInfo(NetType type, JCORefOut<JsonTypeInfo> typeInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +277,29 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetConverter.
+     *
+     * @param typeToConvert the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.GetConverter" target="_top">.NET documentation</a>
+     */
     public JsonConverter GetConverter(NetType typeToConvert) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +315,27 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeInfo.
+     *
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.GetTypeInfo" target="_top">.NET documentation</a>
+     */
     public JsonTypeInfo GetTypeInfo(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +351,26 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddContext.
+     *
+     * @param <TContext> the type of the generic argument TContext
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.AddContext" target="_top">.NET documentation</a>
+     */
     public <TContext extends IJCOBridgeReflected> void AddContext() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NullReferenceException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +381,20 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MakeReadOnly.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.MakeReadOnly" target="_top">.NET documentation</a>
+     */
     public void MakeReadOnly() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +405,22 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MakeReadOnly.
+     *
+     * @param populateMissingResolver the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.MakeReadOnly" target="_top">.NET documentation</a>
+     */
     public void MakeReadOnly(boolean populateMissingResolver) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentNullException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +435,13 @@ public class JsonSerializerOptions extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowOutOfOrderMetadataProperties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.AllowOutOfOrderMetadataProperties" target="_top">.NET documentation</a>
+     */
     public boolean getAllowOutOfOrderMetadataProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +456,19 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowOutOfOrderMetadataProperties.
+     *
+     * @param AllowOutOfOrderMetadataProperties the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.AllowOutOfOrderMetadataProperties" target="_top">.NET documentation</a>
+     */
     public void setAllowOutOfOrderMetadataProperties(boolean AllowOutOfOrderMetadataProperties) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +479,13 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowTrailingCommas.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.AllowTrailingCommas" target="_top">.NET documentation</a>
+     */
     public boolean getAllowTrailingCommas() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -312,6 +500,19 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowTrailingCommas.
+     *
+     * @param AllowTrailingCommas the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.AllowTrailingCommas" target="_top">.NET documentation</a>
+     */
     public void setAllowTrailingCommas(boolean AllowTrailingCommas) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -322,6 +523,13 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IgnoreNullValues.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.IgnoreNullValues" target="_top">.NET documentation</a>
+     */
     public boolean getIgnoreNullValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -336,6 +544,19 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IgnoreNullValues.
+     *
+     * @param IgnoreNullValues the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.IgnoreNullValues" target="_top">.NET documentation</a>
+     */
     public void setIgnoreNullValues(boolean IgnoreNullValues) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -346,6 +567,13 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IgnoreReadOnlyFields.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.IgnoreReadOnlyFields" target="_top">.NET documentation</a>
+     */
     public boolean getIgnoreReadOnlyFields() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -360,6 +588,19 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IgnoreReadOnlyFields.
+     *
+     * @param IgnoreReadOnlyFields the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.IgnoreReadOnlyFields" target="_top">.NET documentation</a>
+     */
     public void setIgnoreReadOnlyFields(boolean IgnoreReadOnlyFields) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -370,6 +611,13 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IgnoreReadOnlyProperties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.IgnoreReadOnlyProperties" target="_top">.NET documentation</a>
+     */
     public boolean getIgnoreReadOnlyProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -384,6 +632,19 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IgnoreReadOnlyProperties.
+     *
+     * @param IgnoreReadOnlyProperties the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.IgnoreReadOnlyProperties" target="_top">.NET documentation</a>
+     */
     public void setIgnoreReadOnlyProperties(boolean IgnoreReadOnlyProperties) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -394,6 +655,13 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IncludeFields.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.IncludeFields" target="_top">.NET documentation</a>
+     */
     public boolean getIncludeFields() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -408,6 +676,19 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IncludeFields.
+     *
+     * @param IncludeFields the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.IncludeFields" target="_top">.NET documentation</a>
+     */
     public void setIncludeFields(boolean IncludeFields) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -418,6 +699,13 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsReadOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.IsReadOnly" target="_top">.NET documentation</a>
+     */
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -432,6 +720,13 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyNameCaseInsensitive.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.PropertyNameCaseInsensitive" target="_top">.NET documentation</a>
+     */
     public boolean getPropertyNameCaseInsensitive() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -446,6 +741,19 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PropertyNameCaseInsensitive.
+     *
+     * @param PropertyNameCaseInsensitive the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.PropertyNameCaseInsensitive" target="_top">.NET documentation</a>
+     */
     public void setPropertyNameCaseInsensitive(boolean PropertyNameCaseInsensitive) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -456,6 +764,13 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RespectNullableAnnotations.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.RespectNullableAnnotations" target="_top">.NET documentation</a>
+     */
     public boolean getRespectNullableAnnotations() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -470,6 +785,19 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RespectNullableAnnotations.
+     *
+     * @param RespectNullableAnnotations the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.RespectNullableAnnotations" target="_top">.NET documentation</a>
+     */
     public void setRespectNullableAnnotations(boolean RespectNullableAnnotations) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -480,6 +808,13 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RespectRequiredConstructorParameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.RespectRequiredConstructorParameters" target="_top">.NET documentation</a>
+     */
     public boolean getRespectRequiredConstructorParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -494,6 +829,19 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RespectRequiredConstructorParameters.
+     *
+     * @param RespectRequiredConstructorParameters the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.RespectRequiredConstructorParameters" target="_top">.NET documentation</a>
+     */
     public void setRespectRequiredConstructorParameters(boolean RespectRequiredConstructorParameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -504,6 +852,13 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WriteIndented.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.WriteIndented" target="_top">.NET documentation</a>
+     */
     public boolean getWriteIndented() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -518,6 +873,19 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WriteIndented.
+     *
+     * @param WriteIndented the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.WriteIndented" target="_top">.NET documentation</a>
+     */
     public void setWriteIndented(boolean WriteIndented) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -528,6 +896,13 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IndentCharacter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.IndentCharacter" target="_top">.NET documentation</a>
+     */
     public char getIndentCharacter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -542,6 +917,19 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IndentCharacter.
+     *
+     * @param IndentCharacter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.IndentCharacter" target="_top">.NET documentation</a>
+     */
     public void setIndentCharacter(char IndentCharacter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -552,6 +940,13 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultBufferSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.DefaultBufferSize" target="_top">.NET documentation</a>
+     */
     public int getDefaultBufferSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -592,6 +987,19 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultBufferSize.
+     *
+     * @param DefaultBufferSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.DefaultBufferSize" target="_top">.NET documentation</a>
+     */
     public void setDefaultBufferSize(int DefaultBufferSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -602,6 +1010,13 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IndentSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.IndentSize" target="_top">.NET documentation</a>
+     */
     public int getIndentSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -642,6 +1057,19 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IndentSize.
+     *
+     * @param IndentSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.IndentSize" target="_top">.NET documentation</a>
+     */
     public void setIndentSize(int IndentSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -652,6 +1080,13 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxDepth.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.MaxDepth" target="_top">.NET documentation</a>
+     */
     public int getMaxDepth() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -692,6 +1127,19 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxDepth.
+     *
+     * @param MaxDepth the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.MaxDepth" target="_top">.NET documentation</a>
+     */
     public void setMaxDepth(int MaxDepth) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -702,6 +1150,20 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Converters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.Converters" target="_top">.NET documentation</a>
+     */
     public IList_1 getConverters() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -717,6 +1179,15 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeInfoResolverChain.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.TypeInfoResolverChain" target="_top">.NET documentation</a>
+     */
     public IList_1 getTypeInfoResolverChain() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -732,6 +1203,13 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NewLine.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.NewLine" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNewLine() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -746,6 +1224,22 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NewLine.
+     *
+     * @param NewLine the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.NewLine" target="_top">.NET documentation</a>
+     */
     public void setNewLine(java.lang.String NewLine) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -756,6 +1250,13 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Encoder.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.Encoder" target="_top">.NET documentation</a>
+     */
     public JavaScriptEncoder getEncoder() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -771,6 +1272,19 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Encoder.
+     *
+     * @param Encoder the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.Encoder" target="_top">.NET documentation</a>
+     */
     public void setEncoder(JavaScriptEncoder Encoder) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -781,6 +1295,13 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReadCommentHandling.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.ReadCommentHandling" target="_top">.NET documentation</a>
+     */
     public JsonCommentHandling getReadCommentHandling() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -796,6 +1317,19 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReadCommentHandling.
+     *
+     * @param ReadCommentHandling the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.ReadCommentHandling" target="_top">.NET documentation</a>
+     */
     public void setReadCommentHandling(JsonCommentHandling ReadCommentHandling) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -806,6 +1340,13 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DictionaryKeyPolicy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.DictionaryKeyPolicy" target="_top">.NET documentation</a>
+     */
     public JsonNamingPolicy getDictionaryKeyPolicy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -821,6 +1362,19 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DictionaryKeyPolicy.
+     *
+     * @param DictionaryKeyPolicy the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.DictionaryKeyPolicy" target="_top">.NET documentation</a>
+     */
     public void setDictionaryKeyPolicy(JsonNamingPolicy DictionaryKeyPolicy) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -831,6 +1385,13 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyNamingPolicy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy" target="_top">.NET documentation</a>
+     */
     public JsonNamingPolicy getPropertyNamingPolicy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -846,6 +1407,19 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PropertyNamingPolicy.
+     *
+     * @param PropertyNamingPolicy the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy" target="_top">.NET documentation</a>
+     */
     public void setPropertyNamingPolicy(JsonNamingPolicy PropertyNamingPolicy) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -856,6 +1430,23 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Default.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.Default" target="_top">.NET documentation</a>
+     */
     public static JsonSerializerOptions getDefault() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -871,6 +1462,23 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Web.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.Web" target="_top">.NET documentation</a>
+     */
     public static JsonSerializerOptions getWeb() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -886,6 +1494,13 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultIgnoreCondition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.DefaultIgnoreCondition" target="_top">.NET documentation</a>
+     */
     public JsonIgnoreCondition getDefaultIgnoreCondition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -901,6 +1516,19 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultIgnoreCondition.
+     *
+     * @param DefaultIgnoreCondition the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.DefaultIgnoreCondition" target="_top">.NET documentation</a>
+     */
     public void setDefaultIgnoreCondition(JsonIgnoreCondition DefaultIgnoreCondition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -911,6 +1539,13 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NumberHandling.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.NumberHandling" target="_top">.NET documentation</a>
+     */
     public JsonNumberHandling getNumberHandling() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -926,6 +1561,19 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NumberHandling.
+     *
+     * @param NumberHandling the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.NumberHandling" target="_top">.NET documentation</a>
+     */
     public void setNumberHandling(JsonNumberHandling NumberHandling) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -936,6 +1584,13 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PreferredObjectCreationHandling.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.PreferredObjectCreationHandling" target="_top">.NET documentation</a>
+     */
     public JsonObjectCreationHandling getPreferredObjectCreationHandling() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -951,6 +1606,19 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PreferredObjectCreationHandling.
+     *
+     * @param PreferredObjectCreationHandling the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.PreferredObjectCreationHandling" target="_top">.NET documentation</a>
+     */
     public void setPreferredObjectCreationHandling(JsonObjectCreationHandling PreferredObjectCreationHandling) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -961,6 +1629,13 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnknownTypeHandling.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.UnknownTypeHandling" target="_top">.NET documentation</a>
+     */
     public JsonUnknownTypeHandling getUnknownTypeHandling() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -976,6 +1651,19 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UnknownTypeHandling.
+     *
+     * @param UnknownTypeHandling the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.UnknownTypeHandling" target="_top">.NET documentation</a>
+     */
     public void setUnknownTypeHandling(JsonUnknownTypeHandling UnknownTypeHandling) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -986,6 +1674,13 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnmappedMemberHandling.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.UnmappedMemberHandling" target="_top">.NET documentation</a>
+     */
     public JsonUnmappedMemberHandling getUnmappedMemberHandling() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1001,6 +1696,19 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UnmappedMemberHandling.
+     *
+     * @param UnmappedMemberHandling the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.UnmappedMemberHandling" target="_top">.NET documentation</a>
+     */
     public void setUnmappedMemberHandling(JsonUnmappedMemberHandling UnmappedMemberHandling) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1011,6 +1719,13 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeInfoResolver.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.TypeInfoResolver" target="_top">.NET documentation</a>
+     */
     public IJsonTypeInfoResolver getTypeInfoResolver() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1026,6 +1741,23 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TypeInfoResolver.
+     *
+     * @param TypeInfoResolver the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.TypeInfoResolver" target="_top">.NET documentation</a>
+     */
     public void setTypeInfoResolver(IJsonTypeInfoResolver TypeInfoResolver) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1036,6 +1768,13 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReferenceHandler.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.ReferenceHandler" target="_top">.NET documentation</a>
+     */
     public ReferenceHandler getReferenceHandler() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1051,6 +1790,19 @@ public class JsonSerializerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReferenceHandler.
+     *
+     * @param ReferenceHandler the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.ReferenceHandler" target="_top">.NET documentation</a>
+     */
     public void setReferenceHandler(ReferenceHandler ReferenceHandler) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

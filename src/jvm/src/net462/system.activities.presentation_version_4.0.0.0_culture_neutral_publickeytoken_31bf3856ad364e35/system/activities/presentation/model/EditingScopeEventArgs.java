@@ -100,7 +100,10 @@ public class EditingScopeEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EditingScopeEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class EditingScopeEventArgs extends system.EventArgs  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.EditingScopeEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public EditingScopeEventArgs() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class EditingScopeEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EditingScope.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.EditingScopeEventArgs.EditingScope" target="_top">.NET documentation</a>
+     */
     public EditingScope getEditingScope() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +196,13 @@ public class EditingScopeEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EditingScope.
+     *
+     * @param EditingScope the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.EditingScopeEventArgs.EditingScope" target="_top">.NET documentation</a>
+     */
     public void setEditingScope(EditingScope EditingScope) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

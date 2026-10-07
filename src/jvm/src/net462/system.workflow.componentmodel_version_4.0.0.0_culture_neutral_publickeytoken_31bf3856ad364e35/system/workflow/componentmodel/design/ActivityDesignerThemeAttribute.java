@@ -99,7 +99,10 @@ public class ActivityDesignerThemeAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ActivityDesignerThemeAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,13 @@ public class ActivityDesignerThemeAttribute extends system.Attribute  {
     public ActivityDesignerThemeAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param designerThemeType the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.ActivityDesignerThemeAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ActivityDesignerThemeAttribute(NetType designerThemeType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +178,13 @@ public class ActivityDesignerThemeAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Xml.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.ActivityDesignerThemeAttribute.Xml" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXml() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +199,13 @@ public class ActivityDesignerThemeAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Xml.
+     *
+     * @param Xml the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.ActivityDesignerThemeAttribute.Xml" target="_top">.NET documentation</a>
+     */
     public void setXml(java.lang.String Xml) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +216,13 @@ public class ActivityDesignerThemeAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DesignerThemeType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.ActivityDesignerThemeAttribute.DesignerThemeType" target="_top">.NET documentation</a>
+     */
     public NetType getDesignerThemeType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

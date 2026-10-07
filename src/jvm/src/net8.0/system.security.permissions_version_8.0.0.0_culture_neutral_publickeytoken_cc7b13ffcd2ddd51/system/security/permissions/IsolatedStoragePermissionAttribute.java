@@ -100,7 +100,10 @@ public class IsolatedStoragePermissionAttribute extends system.security.permissi
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IsolatedStoragePermissionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,13 @@ public class IsolatedStoragePermissionAttribute extends system.security.permissi
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property UserQuota.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.IsolatedStoragePermissionAttribute.UserQuota" target="_top">.NET documentation</a>
+     */
     public long getUserQuota() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +207,13 @@ public class IsolatedStoragePermissionAttribute extends system.security.permissi
         }
     }
 
+    /**
+     * Sets the value of the .NET property UserQuota.
+     *
+     * @param UserQuota the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.IsolatedStoragePermissionAttribute.UserQuota" target="_top">.NET documentation</a>
+     */
     public void setUserQuota(long UserQuota) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +224,13 @@ public class IsolatedStoragePermissionAttribute extends system.security.permissi
         }
     }
 
+    /**
+     * Gets the value of the .NET property UsageAllowed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.IsolatedStoragePermissionAttribute.UsageAllowed" target="_top">.NET documentation</a>
+     */
     public IsolatedStorageContainment getUsageAllowed() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +246,13 @@ public class IsolatedStoragePermissionAttribute extends system.security.permissi
         }
     }
 
+    /**
+     * Sets the value of the .NET property UsageAllowed.
+     *
+     * @param UsageAllowed the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.IsolatedStoragePermissionAttribute.UsageAllowed" target="_top">.NET documentation</a>
+     */
     public void setUsageAllowed(IsolatedStorageContainment UsageAllowed) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

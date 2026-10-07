@@ -104,7 +104,10 @@ public class GenericAce extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public GenericAce(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,18 @@ public class GenericAce extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Copy.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.GenericAce.Copy" target="_top">.NET documentation</a>
+     */
     public GenericAce Copy() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.SystemException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +187,20 @@ public class GenericAce extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateFromBinaryForm.
+     *
+     * @param binaryForm the argument of type {@code byte[]}
+     * @param offset the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.GenericAce.CreateFromBinaryForm" target="_top">.NET documentation</a>
+     */
     public static GenericAce CreateFromBinaryForm(byte[] binaryForm, int offset) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.SystemException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -187,6 +216,20 @@ public class GenericAce extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateFromBinaryForm.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.GenericAce.CreateFromBinaryForm" target="_top">.NET documentation</a>
+     */
     public static GenericAce CreateFromBinaryForm(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.SystemException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -202,6 +245,14 @@ public class GenericAce extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetBinaryForm.
+     *
+     * @param binaryForm the argument of type {@code byte[]}
+     * @param offset the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.GenericAce.GetBinaryForm" target="_top">.NET documentation</a>
+     */
     public void GetBinaryForm(byte[] binaryForm, int offset) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +263,14 @@ public class GenericAce extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetBinaryForm.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.GenericAce.GetBinaryForm" target="_top">.NET documentation</a>
+     */
     public void GetBinaryForm(JCORefOut dupParam0, int dupParam1) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +285,13 @@ public class GenericAce extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsInherited.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.GenericAce.IsInherited" target="_top">.NET documentation</a>
+     */
     public boolean getIsInherited() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +306,13 @@ public class GenericAce extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BinaryLength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.GenericAce.BinaryLength" target="_top">.NET documentation</a>
+     */
     public int getBinaryLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +353,13 @@ public class GenericAce extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AceFlags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.GenericAce.AceFlags" target="_top">.NET documentation</a>
+     */
     public AceFlags getAceFlags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +375,13 @@ public class GenericAce extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AceFlags.
+     *
+     * @param AceFlags the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.GenericAce.AceFlags" target="_top">.NET documentation</a>
+     */
     public void setAceFlags(AceFlags AceFlags) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +392,13 @@ public class GenericAce extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AceType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.GenericAce.AceType" target="_top">.NET documentation</a>
+     */
     public AceType getAceType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +414,13 @@ public class GenericAce extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AuditFlags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.GenericAce.AuditFlags" target="_top">.NET documentation</a>
+     */
     public AuditFlags getAuditFlags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +436,13 @@ public class GenericAce extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InheritanceFlags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.GenericAce.InheritanceFlags" target="_top">.NET documentation</a>
+     */
     public InheritanceFlags getInheritanceFlags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -350,6 +458,13 @@ public class GenericAce extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropagationFlags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.GenericAce.PropagationFlags" target="_top">.NET documentation</a>
+     */
     public PropagationFlags getPropagationFlags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

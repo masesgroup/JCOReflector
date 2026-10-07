@@ -100,7 +100,10 @@ public class IWebFormsBuilderUIServiceImplementation extends NetObject implement
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IWebFormsBuilderUIServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,15 @@ public class IWebFormsBuilderUIServiceImplementation extends NetObject implement
 
     // Methods section
     
+    /**
+     * Invokes the .NET member BuildColor.
+     *
+     * @param owner the argument of type {@code Control}
+     * @param initialColor the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IWebFormsBuilderUIService.BuildColor" target="_top">.NET documentation</a>
+     */
     public java.lang.String BuildColor(Control owner, java.lang.String initialColor) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -156,6 +168,19 @@ public class IWebFormsBuilderUIServiceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member BuildUrl.
+     *
+     * @param owner the argument of type {@code Control}
+     * @param initialUrl the argument of type {@code java.lang.String}
+     * @param baseUrl the argument of type {@code java.lang.String}
+     * @param caption the argument of type {@code java.lang.String}
+     * @param filter the argument of type {@code java.lang.String}
+     * @param options the argument of type {@code UrlBuilderOptions}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IWebFormsBuilderUIService.BuildUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String BuildUrl(Control owner, java.lang.String initialUrl, java.lang.String baseUrl, java.lang.String caption, java.lang.String filter, UrlBuilderOptions options) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

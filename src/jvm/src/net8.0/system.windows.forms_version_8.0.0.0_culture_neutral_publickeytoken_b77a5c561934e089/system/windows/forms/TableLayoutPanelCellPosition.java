@@ -100,7 +100,10 @@ public class TableLayoutPanelCellPosition extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TableLayoutPanelCellPosition(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,21 @@ public class TableLayoutPanelCellPosition extends system.ValueType  {
     public TableLayoutPanelCellPosition() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param column the argument of type {@code int}
+     * @param row the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TableLayoutPanelCellPosition.-ctor" target="_top">.NET documentation</a>
+     */
     public TableLayoutPanelCellPosition(int column, int row) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +183,14 @@ public class TableLayoutPanelCellPosition extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code TableLayoutPanelCellPosition}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TableLayoutPanelCellPosition.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(TableLayoutPanelCellPosition other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +209,13 @@ public class TableLayoutPanelCellPosition extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Column.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TableLayoutPanelCellPosition.Column" target="_top">.NET documentation</a>
+     */
     public int getColumn() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +256,13 @@ public class TableLayoutPanelCellPosition extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Column.
+     *
+     * @param Column the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TableLayoutPanelCellPosition.Column" target="_top">.NET documentation</a>
+     */
     public void setColumn(int Column) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +273,13 @@ public class TableLayoutPanelCellPosition extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Row.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TableLayoutPanelCellPosition.Row" target="_top">.NET documentation</a>
+     */
     public int getRow() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +320,13 @@ public class TableLayoutPanelCellPosition extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Row.
+     *
+     * @param Row the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TableLayoutPanelCellPosition.Row" target="_top">.NET documentation</a>
+     */
     public void setRow(int Row) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

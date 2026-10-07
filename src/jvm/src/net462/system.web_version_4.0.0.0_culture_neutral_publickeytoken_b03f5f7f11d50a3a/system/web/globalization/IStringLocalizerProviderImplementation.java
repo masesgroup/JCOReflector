@@ -99,7 +99,10 @@ public class IStringLocalizerProviderImplementation extends NetObject implements
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IStringLocalizerProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,16 @@ public class IStringLocalizerProviderImplementation extends NetObject implements
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetLocalizedString.
+     *
+     * @param culture the argument of type {@code CultureInfo}
+     * @param name the argument of type {@code java.lang.String}
+     * @param arguments the argument of type {@code NetObject...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Globalization.IStringLocalizerProvider.GetLocalizedString" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetLocalizedString(CultureInfo culture, java.lang.String name, NetObject... arguments) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

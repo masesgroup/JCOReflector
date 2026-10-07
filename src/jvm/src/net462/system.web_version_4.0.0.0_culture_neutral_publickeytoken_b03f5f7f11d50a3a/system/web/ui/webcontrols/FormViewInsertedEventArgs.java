@@ -101,7 +101,10 @@ public class FormViewInsertedEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FormViewInsertedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,14 @@ public class FormViewInsertedEventArgs extends system.EventArgs  {
     public FormViewInsertedEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param affectedRows the argument of type {@code int}
+     * @param e the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.FormViewInsertedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public FormViewInsertedEventArgs(int affectedRows, NetException e) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +181,13 @@ public class FormViewInsertedEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ExceptionHandled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.FormViewInsertedEventArgs.ExceptionHandled" target="_top">.NET documentation</a>
+     */
     public boolean getExceptionHandled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +202,13 @@ public class FormViewInsertedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ExceptionHandled.
+     *
+     * @param ExceptionHandled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.FormViewInsertedEventArgs.ExceptionHandled" target="_top">.NET documentation</a>
+     */
     public void setExceptionHandled(boolean ExceptionHandled) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +219,13 @@ public class FormViewInsertedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeepInInsertMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.FormViewInsertedEventArgs.KeepInInsertMode" target="_top">.NET documentation</a>
+     */
     public boolean getKeepInInsertMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +240,13 @@ public class FormViewInsertedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeepInInsertMode.
+     *
+     * @param KeepInInsertMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.FormViewInsertedEventArgs.KeepInInsertMode" target="_top">.NET documentation</a>
+     */
     public void setKeepInInsertMode(boolean KeepInInsertMode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +257,13 @@ public class FormViewInsertedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AffectedRows.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.FormViewInsertedEventArgs.AffectedRows" target="_top">.NET documentation</a>
+     */
     public int getAffectedRows() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +304,13 @@ public class FormViewInsertedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Values.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.FormViewInsertedEventArgs.Values" target="_top">.NET documentation</a>
+     */
     public IOrderedDictionary getValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +326,13 @@ public class FormViewInsertedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Exception.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.FormViewInsertedEventArgs.Exception" target="_top">.NET documentation</a>
+     */
     public NetException getException() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

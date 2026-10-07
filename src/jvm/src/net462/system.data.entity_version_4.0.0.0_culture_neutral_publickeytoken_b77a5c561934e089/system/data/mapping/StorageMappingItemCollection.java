@@ -103,7 +103,10 @@ public class StorageMappingItemCollection extends system.data.mapping.MappingIte
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public StorageMappingItemCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,36 @@ public class StorageMappingItemCollection extends system.data.mapping.MappingIte
     public StorageMappingItemCollection() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param edmCollection the argument of type {@code EdmItemCollection}
+     * @param storeCollection the argument of type {@code StoreItemCollection}
+     * @param xmlReaders the argument of type {@code IEnumerable_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.data.MappingException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Mapping.StorageMappingItemCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public StorageMappingItemCollection(EdmItemCollection edmCollection, StoreItemCollection storeCollection, IEnumerable_1 xmlReaders) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotSupportedException, system.threading.SynchronizationLockException, system.data.MappingException, system.data.MetadataException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.OutOfMemoryException, system.UriFormatException, system.xml.XmlException, system.MulticastNotSupportedException, system.data.EntitySqlException, system.configuration.ConfigurationErrorsException {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +196,39 @@ public class StorageMappingItemCollection extends system.data.mapping.MappingIte
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param edmCollection the argument of type {@code EdmItemCollection}
+     * @param storeCollection the argument of type {@code StoreItemCollection}
+     * @param filePaths the argument of type {@code java.lang.String...}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.data.MappingException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Mapping.StorageMappingItemCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public StorageMappingItemCollection(EdmItemCollection edmCollection, StoreItemCollection storeCollection, java.lang.String... filePaths) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.data.MetadataException, system.NotImplementedException, system.io.FileNotFoundException, system.NullReferenceException, system.MemberAccessException, system.NotSupportedException, system.threading.SynchronizationLockException, system.data.MappingException, system.MissingMethodException, system.reflection.TargetInvocationException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.OutOfMemoryException, system.UriFormatException, system.xml.XmlException, system.MulticastNotSupportedException, system.data.EntitySqlException, system.configuration.ConfigurationErrorsException {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +248,13 @@ public class StorageMappingItemCollection extends system.data.mapping.MappingIte
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MappingVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Mapping.StorageMappingItemCollection.MappingVersion" target="_top">.NET documentation</a>
+     */
     public double getMappingVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

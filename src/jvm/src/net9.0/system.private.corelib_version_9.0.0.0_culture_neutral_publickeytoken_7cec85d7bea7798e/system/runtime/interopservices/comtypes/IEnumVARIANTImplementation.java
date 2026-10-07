@@ -100,7 +100,10 @@ public class IEnumVARIANTImplementation extends NetObject implements IEnumVARIAN
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IEnumVARIANTImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,13 @@ public class IEnumVARIANTImplementation extends NetObject implements IEnumVARIAN
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Reset.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IEnumVARIANT.Reset" target="_top">.NET documentation</a>
+     */
     public int Reset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +192,14 @@ public class IEnumVARIANTImplementation extends NetObject implements IEnumVARIAN
         }
     }
 
+    /**
+     * Invokes the .NET member Skip.
+     *
+     * @param celt the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IEnumVARIANT.Skip" target="_top">.NET documentation</a>
+     */
     public int Skip(int celt) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +240,13 @@ public class IEnumVARIANTImplementation extends NetObject implements IEnumVARIAN
         }
     }
 
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IEnumVARIANT.Clone" target="_top">.NET documentation</a>
+     */
     public IEnumVARIANT Clone() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class DispatcherUnhandledExceptionEventArgs extends system.windows.thread
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DispatcherUnhandledExceptionEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class DispatcherUnhandledExceptionEventArgs extends system.windows.thread
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Handled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Handled" target="_top">.NET documentation</a>
+     */
     public boolean getHandled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +182,13 @@ public class DispatcherUnhandledExceptionEventArgs extends system.windows.thread
         }
     }
 
+    /**
+     * Sets the value of the .NET property Handled.
+     *
+     * @param Handled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Handled" target="_top">.NET documentation</a>
+     */
     public void setHandled(boolean Handled) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +199,13 @@ public class DispatcherUnhandledExceptionEventArgs extends system.windows.thread
         }
     }
 
+    /**
+     * Gets the value of the .NET property Exception.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Exception" target="_top">.NET documentation</a>
+     */
     public NetException getException() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -98,7 +98,10 @@ public class ActivitySymbol extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ActivitySymbol(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,13 @@ public class ActivitySymbol extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EndColumn.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Debugger.Symbol.ActivitySymbol.EndColumn" target="_top">.NET documentation</a>
+     */
     public int getEndColumn() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +207,13 @@ public class ActivitySymbol extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EndColumn.
+     *
+     * @param EndColumn the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Debugger.Symbol.ActivitySymbol.EndColumn" target="_top">.NET documentation</a>
+     */
     public void setEndColumn(int EndColumn) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +224,13 @@ public class ActivitySymbol extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EndLine.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Debugger.Symbol.ActivitySymbol.EndLine" target="_top">.NET documentation</a>
+     */
     public int getEndLine() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +271,13 @@ public class ActivitySymbol extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EndLine.
+     *
+     * @param EndLine the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Debugger.Symbol.ActivitySymbol.EndLine" target="_top">.NET documentation</a>
+     */
     public void setEndLine(int EndLine) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +288,13 @@ public class ActivitySymbol extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StartColumn.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Debugger.Symbol.ActivitySymbol.StartColumn" target="_top">.NET documentation</a>
+     */
     public int getStartColumn() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -297,6 +335,13 @@ public class ActivitySymbol extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StartColumn.
+     *
+     * @param StartColumn the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Debugger.Symbol.ActivitySymbol.StartColumn" target="_top">.NET documentation</a>
+     */
     public void setStartColumn(int StartColumn) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -307,6 +352,13 @@ public class ActivitySymbol extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StartLine.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Debugger.Symbol.ActivitySymbol.StartLine" target="_top">.NET documentation</a>
+     */
     public int getStartLine() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -347,6 +399,13 @@ public class ActivitySymbol extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StartLine.
+     *
+     * @param StartLine the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Debugger.Symbol.ActivitySymbol.StartLine" target="_top">.NET documentation</a>
+     */
     public void setStartLine(int StartLine) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -357,6 +416,13 @@ public class ActivitySymbol extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Id.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Debugger.Symbol.ActivitySymbol.Id" target="_top">.NET documentation</a>
+     */
     public java.lang.String getId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

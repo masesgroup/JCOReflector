@@ -104,7 +104,10 @@ public class EventBuilder extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EventBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class EventBuilder extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetEventToken.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.EventBuilder.GetEventToken" target="_top">.NET documentation</a>
+     */
     public EventToken GetEventToken() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +184,19 @@ public class EventBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddOtherMethod.
+     *
+     * @param mdBuilder the argument of type {@code MethodBuilder}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.EventBuilder.AddOtherMethod" target="_top">.NET documentation</a>
+     */
     public void AddOtherMethod(MethodBuilder mdBuilder) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +207,19 @@ public class EventBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetAddOnMethod.
+     *
+     * @param mdBuilder the argument of type {@code MethodBuilder}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.EventBuilder.SetAddOnMethod" target="_top">.NET documentation</a>
+     */
     public void SetAddOnMethod(MethodBuilder mdBuilder) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +230,23 @@ public class EventBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetCustomAttribute.
+     *
+     * @param con the argument of type {@code ConstructorInfo}
+     * @param binaryAttribute the argument of type {@code byte[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.EventBuilder.SetCustomAttribute" target="_top">.NET documentation</a>
+     */
     public void SetCustomAttribute(ConstructorInfo con, byte[] binaryAttribute) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotImplementedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.MissingMethodException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +257,23 @@ public class EventBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetCustomAttribute.
+     *
+     * @param dupParam0 the argument of type {@code ConstructorInfo}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.EventBuilder.SetCustomAttribute" target="_top">.NET documentation</a>
+     */
     public void SetCustomAttribute(ConstructorInfo dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotImplementedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.MissingMethodException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +284,21 @@ public class EventBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetCustomAttribute.
+     *
+     * @param customBuilder the argument of type {@code CustomAttributeBuilder}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.EventBuilder.SetCustomAttribute" target="_top">.NET documentation</a>
+     */
     public void SetCustomAttribute(CustomAttributeBuilder customBuilder) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotImplementedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.MissingMethodException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +309,19 @@ public class EventBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetRaiseMethod.
+     *
+     * @param mdBuilder the argument of type {@code MethodBuilder}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.EventBuilder.SetRaiseMethod" target="_top">.NET documentation</a>
+     */
     public void SetRaiseMethod(MethodBuilder mdBuilder) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +332,19 @@ public class EventBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetRemoveOnMethod.
+     *
+     * @param mdBuilder the argument of type {@code MethodBuilder}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.EventBuilder.SetRemoveOnMethod" target="_top">.NET documentation</a>
+     */
     public void SetRemoveOnMethod(MethodBuilder mdBuilder) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,8 +358,12 @@ public class EventBuilder extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static To_EventBuilder method available in _EventBuilder to obtain an object with an invocable method
+     *
+     * @param pcTInfo the argument of type {@code JCORefOut<UInt32>}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._EventBuilder.GetTypeInfoCount" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_EventBuilder to obtain the full interface.");
     }

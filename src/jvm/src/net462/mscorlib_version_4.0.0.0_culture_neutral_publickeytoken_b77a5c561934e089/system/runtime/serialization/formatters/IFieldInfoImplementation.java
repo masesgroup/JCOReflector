@@ -98,7 +98,10 @@ public class IFieldInfoImplementation extends NetObject implements IFieldInfo {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IFieldInfoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,13 @@ public class IFieldInfoImplementation extends NetObject implements IFieldInfo {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property FieldNames.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.IFieldInfo.FieldNames" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getFieldNames() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -167,6 +177,13 @@ public class IFieldInfoImplementation extends NetObject implements IFieldInfo {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FieldNames.
+     *
+     * @param FieldNames the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.IFieldInfo.FieldNames" target="_top">.NET documentation</a>
+     */
     public void setFieldNames(java.lang.String[] FieldNames) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +194,13 @@ public class IFieldInfoImplementation extends NetObject implements IFieldInfo {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FieldTypes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.IFieldInfo.FieldTypes" target="_top">.NET documentation</a>
+     */
     public final NetType[] getFieldTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +222,13 @@ public class IFieldInfoImplementation extends NetObject implements IFieldInfo {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FieldTypes.
+     *
+     * @param FieldTypes the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.IFieldInfo.FieldTypes" target="_top">.NET documentation</a>
+     */
     public void setFieldTypes(NetType[] FieldTypes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

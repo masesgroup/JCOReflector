@@ -106,7 +106,10 @@ public class ComponentDesigner extends NetObject implements AutoCloseable {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ComponentDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,12 @@ public class ComponentDesigner extends NetObject implements AutoCloseable {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ComponentDesigner.-ctor" target="_top">.NET documentation</a>
+     */
     public ComponentDesigner() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +176,16 @@ public class ComponentDesigner extends NetObject implements AutoCloseable {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ComponentDesigner.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +196,21 @@ public class ComponentDesigner extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member DoDefaultAction.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ComponentDesigner.DoDefaultAction" target="_top">.NET documentation</a>
+     */
     public void DoDefaultAction() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +221,20 @@ public class ComponentDesigner extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Initialize.
+     *
+     * @param component the argument of type {@code IComponent}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ComponentDesigner.Initialize" target="_top">.NET documentation</a>
+     */
     public void Initialize(IComponent component) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +245,21 @@ public class ComponentDesigner extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member InitializeExistingComponent.
+     *
+     * @param defaultValues the argument of type {@code IDictionary}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ComponentDesigner.InitializeExistingComponent" target="_top">.NET documentation</a>
+     */
     public void InitializeExistingComponent(IDictionary defaultValues) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +270,13 @@ public class ComponentDesigner extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member InitializeNewComponent.
+     *
+     * @param defaultValues the argument of type {@code IDictionary}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ComponentDesigner.InitializeNewComponent" target="_top">.NET documentation</a>
+     */
     public void InitializeNewComponent(IDictionary defaultValues) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +287,12 @@ public class ComponentDesigner extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member InitializeNonDefault.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ComponentDesigner.InitializeNonDefault" target="_top">.NET documentation</a>
+     */
     public void InitializeNonDefault() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +303,16 @@ public class ComponentDesigner extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member OnSetComponentDefaults.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ComponentDesigner.OnSetComponentDefaults" target="_top">.NET documentation</a>
+     */
     public void OnSetComponentDefaults() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,8 +326,12 @@ public class ComponentDesigner extends NetObject implements AutoCloseable {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDesignerFilter method available in IDesignerFilter to obtain an object with an invocable method
+     *
+     * @param attributes the argument of type {@code IDictionary}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerFilter.PostFilterAttributes" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void PostFilterAttributes(IDictionary attributes) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
     }
@@ -249,8 +339,12 @@ public class ComponentDesigner extends NetObject implements AutoCloseable {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDesignerFilter method available in IDesignerFilter to obtain an object with an invocable method
+     *
+     * @param events the argument of type {@code IDictionary}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerFilter.PostFilterEvents" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void PostFilterEvents(IDictionary events) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
     }
@@ -258,8 +352,12 @@ public class ComponentDesigner extends NetObject implements AutoCloseable {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDesignerFilter method available in IDesignerFilter to obtain an object with an invocable method
+     *
+     * @param properties the argument of type {@code IDictionary}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerFilter.PostFilterProperties" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void PostFilterProperties(IDictionary properties) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
     }
@@ -267,8 +365,12 @@ public class ComponentDesigner extends NetObject implements AutoCloseable {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDesignerFilter method available in IDesignerFilter to obtain an object with an invocable method
+     *
+     * @param attributes the argument of type {@code IDictionary}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerFilter.PreFilterAttributes" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void PreFilterAttributes(IDictionary attributes) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
     }
@@ -276,8 +378,12 @@ public class ComponentDesigner extends NetObject implements AutoCloseable {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDesignerFilter method available in IDesignerFilter to obtain an object with an invocable method
+     *
+     * @param events the argument of type {@code IDictionary}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerFilter.PreFilterEvents" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void PreFilterEvents(IDictionary events) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
     }
@@ -285,8 +391,12 @@ public class ComponentDesigner extends NetObject implements AutoCloseable {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDesignerFilter method available in IDesignerFilter to obtain an object with an invocable method
+     *
+     * @param properties the argument of type {@code IDictionary}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerFilter.PreFilterProperties" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void PreFilterProperties(IDictionary properties) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
     }
@@ -308,6 +418,13 @@ public class ComponentDesigner extends NetObject implements AutoCloseable {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AssociatedComponents.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ComponentDesigner.AssociatedComponents" target="_top">.NET documentation</a>
+     */
     public ICollection getAssociatedComponents() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -323,6 +440,13 @@ public class ComponentDesigner extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ActionLists.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ComponentDesigner.ActionLists" target="_top">.NET documentation</a>
+     */
     public DesignerActionListCollection getActionLists() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -338,6 +462,13 @@ public class ComponentDesigner extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Verbs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ComponentDesigner.Verbs" target="_top">.NET documentation</a>
+     */
     public DesignerVerbCollection getVerbs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -353,6 +484,13 @@ public class ComponentDesigner extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Component.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ComponentDesigner.Component" target="_top">.NET documentation</a>
+     */
     public IComponent getComponent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -368,6 +506,13 @@ public class ComponentDesigner extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Component.
+     *
+     * @param Component the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ComponentDesigner.Component" target="_top">.NET documentation</a>
+     */
     public void setComponent(IComponent Component) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -110,7 +110,10 @@ public class DataContractSet extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataContractSet(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,27 @@ public class DataContractSet extends NetObject  {
     public DataContractSet() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param dataContractSet the argument of type {@code DataContractSet}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.serialization.InvalidDataContractException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContractSet.-ctor" target="_top">.NET documentation</a>
+     */
     public DataContractSet(DataContractSet dataContractSet) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.runtime.serialization.InvalidDataContractException, system.runtime.serialization.SerializationException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +194,24 @@ public class DataContractSet extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param dataContractSurrogate the argument of type {@code ISerializationSurrogateProvider}
+     * @param referencedTypes the argument of type {@code IEnumerable_1}
+     * @param referencedCollectionTypes the argument of type {@code IEnumerable_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContractSet.-ctor" target="_top">.NET documentation</a>
+     */
     public DataContractSet(ISerializationSurrogateProvider dataContractSurrogate, IEnumerable_1 referencedTypes, IEnumerable_1 referencedCollectionTypes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -185,6 +227,33 @@ public class DataContractSet extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ImportSchemaSet.
+     *
+     * @param schemaSet the argument of type {@code XmlSchemaSet}
+     * @param elements the argument of type {@code IEnumerable_1}
+     * @param importXmlDataType the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.runtime.serialization.InvalidDataContractException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContractSet.ImportSchemaSet" target="_top">.NET documentation</a>
+     */
     public List_1 ImportSchemaSet(XmlSchemaSet schemaSet, IEnumerable_1 elements, boolean importXmlDataType) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.xml.schema.XmlSchemaException, system.UriFormatException, system.InvalidOperationException, system.xml.XmlException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.runtime.serialization.InvalidDataContractException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +269,26 @@ public class DataContractSet extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDataContract.
+     *
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.runtime.serialization.InvalidDataContractException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContractSet.GetDataContract" target="_top">.NET documentation</a>
+     */
     public DataContract GetDataContract(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.runtime.serialization.SerializationException, system.runtime.serialization.InvalidDataContractException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +304,22 @@ public class DataContractSet extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDataContract.
+     *
+     * @param key the argument of type {@code XmlQualifiedName}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.runtime.serialization.InvalidDataContractException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContractSet.GetDataContract" target="_top">.NET documentation</a>
+     */
     public DataContract GetDataContract(XmlQualifiedName key) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.runtime.serialization.InvalidDataContractException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +335,30 @@ public class DataContractSet extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetReferencedType.
+     *
+     * @param xmlName the argument of type {@code XmlQualifiedName}
+     * @param dataContract the argument of type {@code DataContract}
+     * @param referencedContract the argument of type {@code JCORefOut<DataContract>}
+     * @param genericParameters the argument of type {@code JCORefOut<NetObject[]>}
+     * @param supportGenericTypes the argument of type {@code Nullable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.runtime.serialization.InvalidDataContractException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContractSet.GetReferencedType" target="_top">.NET documentation</a>
+     */
     public NetType GetReferencedType(XmlQualifiedName xmlName, DataContract dataContract, JCORefOut<DataContract> referencedContract, JCORefOut<NetObject[]> genericParameters, Nullable_1 supportGenericTypes) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.runtime.serialization.SerializationException, system.NullReferenceException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +378,19 @@ public class DataContractSet extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ProcessedContracts.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContractSet.ProcessedContracts" target="_top">.NET documentation</a>
+     */
     public Dictionary_2 getProcessedContracts() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +406,19 @@ public class DataContractSet extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Contracts.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContractSet.Contracts" target="_top">.NET documentation</a>
+     */
     public Dictionary_2 getContracts() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +434,13 @@ public class DataContractSet extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KnownTypesForObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContractSet.KnownTypesForObject" target="_top">.NET documentation</a>
+     */
     public Dictionary_2 getKnownTypesForObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +456,13 @@ public class DataContractSet extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property KnownTypesForObject.
+     *
+     * @param KnownTypesForObject the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContractSet.KnownTypesForObject" target="_top">.NET documentation</a>
+     */
     public void setKnownTypesForObject(Dictionary_2 KnownTypesForObject) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +473,20 @@ public class DataContractSet extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SurrogateData.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContractSet.SurrogateData" target="_top">.NET documentation</a>
+     */
     public Hashtable getSurrogateData() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

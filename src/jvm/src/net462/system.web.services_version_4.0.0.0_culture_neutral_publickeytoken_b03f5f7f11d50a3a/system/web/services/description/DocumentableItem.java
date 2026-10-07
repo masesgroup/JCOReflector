@@ -102,7 +102,10 @@ public class DocumentableItem extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DocumentableItem(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,20 @@ public class DocumentableItem extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Documentation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.DocumentableItem.Documentation" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDocumentation() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +190,29 @@ public class DocumentableItem extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Documentation.
+     *
+     * @param Documentation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.DocumentableItem.Documentation" target="_top">.NET documentation</a>
+     */
     public void setDocumentation(java.lang.String Documentation) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +223,13 @@ public class DocumentableItem extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Extensions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.DocumentableItem.Extensions" target="_top">.NET documentation</a>
+     */
     public ServiceDescriptionFormatExtensionCollection getExtensions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +245,13 @@ public class DocumentableItem extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Namespaces.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.DocumentableItem.Namespaces" target="_top">.NET documentation</a>
+     */
     public XmlSerializerNamespaces getNamespaces() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +267,13 @@ public class DocumentableItem extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Namespaces.
+     *
+     * @param Namespaces the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.DocumentableItem.Namespaces" target="_top">.NET documentation</a>
+     */
     public void setNamespaces(XmlSerializerNamespaces Namespaces) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +284,13 @@ public class DocumentableItem extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExtensibleAttributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.DocumentableItem.ExtensibleAttributes" target="_top">.NET documentation</a>
+     */
     public final XmlAttribute[] getExtensibleAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +312,13 @@ public class DocumentableItem extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ExtensibleAttributes.
+     *
+     * @param ExtensibleAttributes the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.DocumentableItem.ExtensibleAttributes" target="_top">.NET documentation</a>
+     */
     public void setExtensibleAttributes(XmlAttribute[] ExtensibleAttributes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +329,13 @@ public class DocumentableItem extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DocumentationElement.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.DocumentableItem.DocumentationElement" target="_top">.NET documentation</a>
+     */
     public XmlElement getDocumentationElement() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +351,13 @@ public class DocumentableItem extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DocumentationElement.
+     *
+     * @param DocumentationElement the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.DocumentableItem.DocumentationElement" target="_top">.NET documentation</a>
+     */
     public void setDocumentationElement(XmlElement DocumentationElement) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

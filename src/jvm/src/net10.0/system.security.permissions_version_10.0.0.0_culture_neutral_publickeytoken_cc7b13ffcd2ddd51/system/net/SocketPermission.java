@@ -105,7 +105,10 @@ public class SocketPermission extends system.security.CodeAccessPermission  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SocketPermission(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,16 @@ public class SocketPermission extends system.security.CodeAccessPermission  {
     public SocketPermission() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param access the argument of type {@code NetworkAccess}
+     * @param transport the argument of type {@code TransportType}
+     * @param hostName the argument of type {@code java.lang.String}
+     * @param portNumber the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.SocketPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public SocketPermission(NetworkAccess access, TransportType transport, java.lang.String hostName, int portNumber) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +178,13 @@ public class SocketPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param state the argument of type {@code PermissionState}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.SocketPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public SocketPermission(PermissionState state) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +200,14 @@ public class SocketPermission extends system.security.CodeAccessPermission  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsSubsetOf.
+     *
+     * @param target the argument of type {@code IPermission}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.SocketPermission.IsSubsetOf" target="_top">.NET documentation</a>
+     */
     public boolean IsSubsetOf(IPermission target) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +222,13 @@ public class SocketPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsUnrestricted.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.SocketPermission.IsUnrestricted" target="_top">.NET documentation</a>
+     */
     public boolean IsUnrestricted() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +243,13 @@ public class SocketPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member Copy.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.SocketPermission.Copy" target="_top">.NET documentation</a>
+     */
     public IPermission Copy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +265,14 @@ public class SocketPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member Intersect.
+     *
+     * @param target the argument of type {@code IPermission}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.SocketPermission.Intersect" target="_top">.NET documentation</a>
+     */
     public IPermission Intersect(IPermission target) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +288,14 @@ public class SocketPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member Union.
+     *
+     * @param target the argument of type {@code IPermission}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.SocketPermission.Union" target="_top">.NET documentation</a>
+     */
     public IPermission Union(IPermission target) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +311,13 @@ public class SocketPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToXml.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.SocketPermission.ToXml" target="_top">.NET documentation</a>
+     */
     public SecurityElement ToXml() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +333,16 @@ public class SocketPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddPermission.
+     *
+     * @param access the argument of type {@code NetworkAccess}
+     * @param transport the argument of type {@code TransportType}
+     * @param hostName the argument of type {@code java.lang.String}
+     * @param portNumber the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.SocketPermission.AddPermission" target="_top">.NET documentation</a>
+     */
     public void AddPermission(NetworkAccess access, TransportType transport, java.lang.String hostName, int portNumber) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +353,13 @@ public class SocketPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member FromXml.
+     *
+     * @param securityElement the argument of type {@code SecurityElement}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.SocketPermission.FromXml" target="_top">.NET documentation</a>
+     */
     public void FromXml(SecurityElement securityElement) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +374,13 @@ public class SocketPermission extends system.security.CodeAccessPermission  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AcceptList.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.SocketPermission.AcceptList" target="_top">.NET documentation</a>
+     */
     public IEnumerator getAcceptList() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -307,6 +396,13 @@ public class SocketPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConnectList.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.SocketPermission.ConnectList" target="_top">.NET documentation</a>
+     */
     public IEnumerator getConnectList() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

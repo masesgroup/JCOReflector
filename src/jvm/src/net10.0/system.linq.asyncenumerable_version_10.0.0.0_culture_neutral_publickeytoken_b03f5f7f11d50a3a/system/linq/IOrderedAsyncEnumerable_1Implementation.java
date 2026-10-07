@@ -109,7 +109,10 @@ public class IOrderedAsyncEnumerable_1Implementation<TElement extends IJCOBridge
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IOrderedAsyncEnumerable_1Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,14 @@ public class IOrderedAsyncEnumerable_1Implementation<TElement extends IJCOBridge
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetAsyncEnumerator.
+     *
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.IOrderedAsyncEnumerable-1.GetAsyncEnumerator" target="_top">.NET documentation</a>
+     */
     public IAsyncEnumerator_1 GetAsyncEnumerator(CancellationToken cancellationToken) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -166,6 +177,17 @@ public class IOrderedAsyncEnumerable_1Implementation<TElement extends IJCOBridge
         }
     }
 
+    /**
+     * Invokes the .NET member CreateOrderedAsyncEnumerable.
+     *
+     * @param <TKey> the type of the generic argument TKey
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @param descending the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.IOrderedAsyncEnumerable-1.CreateOrderedAsyncEnumerable" target="_top">.NET documentation</a>
+     */
     public <TKey extends IJCOBridgeReflected> IOrderedAsyncEnumerable_1 CreateOrderedAsyncEnumerable(Func_2 keySelector, IComparer_1 comparer, boolean descending) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +203,17 @@ public class IOrderedAsyncEnumerable_1Implementation<TElement extends IJCOBridge
         }
     }
 
+    /**
+     * Invokes the .NET member CreateOrderedAsyncEnumerable.
+     *
+     * @param <TKey> the type of the generic argument TKey
+     * @param keySelector the argument of type {@code Func_3}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @param descending the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.IOrderedAsyncEnumerable-1.CreateOrderedAsyncEnumerable" target="_top">.NET documentation</a>
+     */
     public <TKey extends IJCOBridgeReflected> IOrderedAsyncEnumerable_1 CreateOrderedAsyncEnumerable(Func_3 keySelector, IComparer_1 comparer, boolean descending) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

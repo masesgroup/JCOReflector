@@ -108,7 +108,10 @@ public class DataViewManager extends system.componentmodel.MarshalByValueCompone
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataViewManager(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,20 @@ public class DataViewManager extends system.componentmodel.MarshalByValueCompone
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.DataViewManager.-ctor" target="_top">.NET documentation</a>
+     */
     public DataViewManager() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +182,21 @@ public class DataViewManager extends system.componentmodel.MarshalByValueCompone
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param dataSet the argument of type {@code DataSet}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.DataViewManager.-ctor" target="_top">.NET documentation</a>
+     */
     public DataViewManager(DataSet dataSet) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +211,27 @@ public class DataViewManager extends system.componentmodel.MarshalByValueCompone
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateDataView.
+     *
+     * @param table the argument of type {@code DataTable}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.DataViewManager.CreateDataView" target="_top">.NET documentation</a>
+     */
     public DataView CreateDataView(DataTable table) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,8 +250,14 @@ public class DataViewManager extends system.componentmodel.MarshalByValueCompone
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIBindingList method available in IBindingList to obtain an object with an invocable method
+     *
+     * @param property the argument of type {@code PropertyDescriptor}
+     * @param key the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingList.Find" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int Find(PropertyDescriptor property, NetObject key) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
     }
@@ -206,8 +265,12 @@ public class DataViewManager extends system.componentmodel.MarshalByValueCompone
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIBindingList method available in IBindingList to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingList.AddNew" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public NetObject AddNew() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
     }
@@ -215,8 +278,12 @@ public class DataViewManager extends system.componentmodel.MarshalByValueCompone
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIBindingList method available in IBindingList to obtain an object with an invocable method
+     *
+     * @param property the argument of type {@code PropertyDescriptor}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingList.AddIndex" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void AddIndex(PropertyDescriptor property) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
     }
@@ -224,8 +291,13 @@ public class DataViewManager extends system.componentmodel.MarshalByValueCompone
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIBindingList method available in IBindingList to obtain an object with an invocable method
+     *
+     * @param property the argument of type {@code PropertyDescriptor}
+     * @param direction the argument of type {@code ListSortDirection}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingList.ApplySort" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ApplySort(PropertyDescriptor property, ListSortDirection direction) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
     }
@@ -233,8 +305,12 @@ public class DataViewManager extends system.componentmodel.MarshalByValueCompone
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIBindingList method available in IBindingList to obtain an object with an invocable method
+     *
+     * @param property the argument of type {@code PropertyDescriptor}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingList.RemoveIndex" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void RemoveIndex(PropertyDescriptor property) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
     }
@@ -242,8 +318,11 @@ public class DataViewManager extends system.componentmodel.MarshalByValueCompone
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIBindingList method available in IBindingList to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingList.RemoveSort" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void RemoveSort() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
     }
@@ -251,8 +330,13 @@ public class DataViewManager extends system.componentmodel.MarshalByValueCompone
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IList.Contains" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean Contains(NetObject value) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
@@ -260,8 +344,13 @@ public class DataViewManager extends system.componentmodel.MarshalByValueCompone
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IList.Add" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int Add(NetObject value) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
@@ -269,8 +358,13 @@ public class DataViewManager extends system.componentmodel.MarshalByValueCompone
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IList.IndexOf" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int IndexOf(NetObject value) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
@@ -278,8 +372,11 @@ public class DataViewManager extends system.componentmodel.MarshalByValueCompone
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IList.Clear" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Clear() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
@@ -287,8 +384,13 @@ public class DataViewManager extends system.componentmodel.MarshalByValueCompone
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     *
+     * @param index the argument of type {@code int}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IList.Insert" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Insert(int index, NetObject value) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
@@ -296,8 +398,12 @@ public class DataViewManager extends system.componentmodel.MarshalByValueCompone
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     *
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IList.Remove" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Remove(NetObject value) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
@@ -305,8 +411,12 @@ public class DataViewManager extends system.componentmodel.MarshalByValueCompone
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     *
+     * @param index the argument of type {@code int}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IList.RemoveAt" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void RemoveAt(int index) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
@@ -314,8 +424,13 @@ public class DataViewManager extends system.componentmodel.MarshalByValueCompone
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICollection method available in ICollection to obtain an object with an invocable method
+     *
+     * @param array the argument of type {@code Array}
+     * @param index the argument of type {@code int}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.ICollection.CopyTo" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void CopyTo(Array array, int index) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection to obtain the full interface.");
     }
@@ -323,8 +438,13 @@ public class DataViewManager extends system.componentmodel.MarshalByValueCompone
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToITypedList method available in ITypedList to obtain an object with an invocable method
+     *
+     * @param listAccessors the argument of type {@code PropertyDescriptor[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ITypedList.GetItemProperties" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public PropertyDescriptorCollection GetItemProperties(PropertyDescriptor[] listAccessors) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITypedList to obtain the full interface.");
     }
@@ -332,8 +452,13 @@ public class DataViewManager extends system.componentmodel.MarshalByValueCompone
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToITypedList method available in ITypedList to obtain an object with an invocable method
+     *
+     * @param listAccessors the argument of type {@code PropertyDescriptor[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ITypedList.GetListName" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public java.lang.String GetListName(PropertyDescriptor[] listAccessors) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITypedList to obtain the full interface.");
     }
@@ -342,6 +467,13 @@ public class DataViewManager extends system.componentmodel.MarshalByValueCompone
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DataSet.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.DataViewManager.DataSet" target="_top">.NET documentation</a>
+     */
     public DataSet getDataSet() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -357,6 +489,27 @@ public class DataViewManager extends system.componentmodel.MarshalByValueCompone
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataSet.
+     *
+     * @param DataSet the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.DataViewManager.DataSet" target="_top">.NET documentation</a>
+     */
     public void setDataSet(DataSet DataSet) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -367,6 +520,13 @@ public class DataViewManager extends system.componentmodel.MarshalByValueCompone
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataViewSettings.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.DataViewManager.DataViewSettings" target="_top">.NET documentation</a>
+     */
     public DataViewSettingCollection getDataViewSettings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -382,6 +542,26 @@ public class DataViewManager extends system.componentmodel.MarshalByValueCompone
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataViewSettingCollectionString.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.DataViewManager.DataViewSettingCollectionString" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDataViewSettingCollectionString() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -396,6 +576,32 @@ public class DataViewManager extends system.componentmodel.MarshalByValueCompone
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataViewSettingCollectionString.
+     *
+     * @param DataViewSettingCollectionString the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.DataViewManager.DataViewSettingCollectionString" target="_top">.NET documentation</a>
+     */
     public void setDataViewSettingCollectionString(java.lang.String DataViewSettingCollectionString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.xml.XmlException, system.FormatException, system.OutOfMemoryException, system.NullReferenceException, system.RankException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -411,6 +617,13 @@ public class DataViewManager extends system.componentmodel.MarshalByValueCompone
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addListChanged.
+     *
+     * @param handler the argument of type {@code ListChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addListChanged(ListChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -421,6 +634,13 @@ public class DataViewManager extends system.componentmodel.MarshalByValueCompone
         }
     }
 
+    /**
+     * Invokes the .NET member removeListChanged.
+     *
+     * @param handler the argument of type {@code ListChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeListChanged(ListChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

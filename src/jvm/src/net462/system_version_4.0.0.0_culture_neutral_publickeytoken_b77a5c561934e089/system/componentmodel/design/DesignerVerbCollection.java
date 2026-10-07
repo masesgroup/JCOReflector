@@ -101,7 +101,10 @@ public class DesignerVerbCollection extends system.collections.CollectionBase  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DesignerVerbCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class DesignerVerbCollection extends system.collections.CollectionBase  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerVerbCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public DesignerVerbCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,14 @@ public class DesignerVerbCollection extends system.collections.CollectionBase  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code DesignerVerb[]}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerVerbCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public DesignerVerbCollection(DesignerVerb[] value) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +189,14 @@ public class DesignerVerbCollection extends system.collections.CollectionBase  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param value the argument of type {@code DesignerVerb}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerVerbCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(DesignerVerb value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +211,14 @@ public class DesignerVerbCollection extends system.collections.CollectionBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param value the argument of type {@code DesignerVerb}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerVerbCollection.Add" target="_top">.NET documentation</a>
+     */
     public int Add(DesignerVerb value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +259,14 @@ public class DesignerVerbCollection extends system.collections.CollectionBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param value the argument of type {@code DesignerVerb}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerVerbCollection.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(DesignerVerb value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +307,14 @@ public class DesignerVerbCollection extends system.collections.CollectionBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddRange.
+     *
+     * @param value the argument of type {@code DesignerVerb[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerVerbCollection.AddRange" target="_top">.NET documentation</a>
+     */
     public void AddRange(DesignerVerb[] value) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +325,14 @@ public class DesignerVerbCollection extends system.collections.CollectionBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddRange.
+     *
+     * @param value the argument of type {@code DesignerVerbCollection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerVerbCollection.AddRange" target="_top">.NET documentation</a>
+     */
     public void AddRange(DesignerVerbCollection value) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +343,14 @@ public class DesignerVerbCollection extends system.collections.CollectionBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code DesignerVerb[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerVerbCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(DesignerVerb[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -296,6 +361,14 @@ public class DesignerVerbCollection extends system.collections.CollectionBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param value the argument of type {@code DesignerVerb}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerVerbCollection.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(int index, DesignerVerb value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +379,13 @@ public class DesignerVerbCollection extends system.collections.CollectionBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param value the argument of type {@code DesignerVerb}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerVerbCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(DesignerVerb value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

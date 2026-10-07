@@ -52,5 +52,11 @@ import system.workflow.componentmodel.DependencyObject;
  * @version 2.0.0.0
  */
 public interface IGetValueOverride {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param d the .NET argument of type {@code System.Workflow.ComponentModel.DependencyObject}
+     * @return the value returned to the CLR
+     */
     public NetObject Invoke(DependencyObject d);
 }

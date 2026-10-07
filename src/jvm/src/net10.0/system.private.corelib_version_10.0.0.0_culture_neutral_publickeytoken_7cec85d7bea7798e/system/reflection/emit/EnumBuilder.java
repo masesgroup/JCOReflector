@@ -102,7 +102,10 @@ public class EnumBuilder extends system.reflection.TypeInfo  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EnumBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,15 @@ public class EnumBuilder extends system.reflection.TypeInfo  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member DefineLiteral.
+     *
+     * @param literalName the argument of type {@code java.lang.String}
+     * @param literalValue the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.EnumBuilder.DefineLiteral" target="_top">.NET documentation</a>
+     */
     public FieldBuilder DefineLiteral(java.lang.String literalName, NetObject literalValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +182,13 @@ public class EnumBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateTypeInfo.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.EnumBuilder.CreateTypeInfo" target="_top">.NET documentation</a>
+     */
     public TypeInfo CreateTypeInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +204,13 @@ public class EnumBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateType.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.EnumBuilder.CreateType" target="_top">.NET documentation</a>
+     */
     public NetType CreateType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +226,19 @@ public class EnumBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member MakeArrayType.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.EnumBuilder.MakeArrayType" target="_top">.NET documentation</a>
+     */
     public NetType MakeArrayType() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +254,25 @@ public class EnumBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member MakeArrayType.
+     *
+     * @param rank the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.EnumBuilder.MakeArrayType" target="_top">.NET documentation</a>
+     */
     public NetType MakeArrayType(int rank) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +288,19 @@ public class EnumBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member MakeByRefType.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.EnumBuilder.MakeByRefType" target="_top">.NET documentation</a>
+     */
     public NetType MakeByRefType() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +316,19 @@ public class EnumBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member MakePointerType.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.EnumBuilder.MakePointerType" target="_top">.NET documentation</a>
+     */
     public NetType MakePointerType() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +344,14 @@ public class EnumBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetCustomAttribute.
+     *
+     * @param con the argument of type {@code ConstructorInfo}
+     * @param binaryAttribute the argument of type {@code byte[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.EnumBuilder.SetCustomAttribute" target="_top">.NET documentation</a>
+     */
     public void SetCustomAttribute(ConstructorInfo con, byte[] binaryAttribute) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +362,14 @@ public class EnumBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetCustomAttribute.
+     *
+     * @param dupParam0 the argument of type {@code ConstructorInfo}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.EnumBuilder.SetCustomAttribute" target="_top">.NET documentation</a>
+     */
     public void SetCustomAttribute(ConstructorInfo dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +380,13 @@ public class EnumBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetCustomAttribute.
+     *
+     * @param customBuilder the argument of type {@code CustomAttributeBuilder}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.EnumBuilder.SetCustomAttribute" target="_top">.NET documentation</a>
+     */
     public void SetCustomAttribute(CustomAttributeBuilder customBuilder) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +401,13 @@ public class EnumBuilder extends system.reflection.TypeInfo  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property UnderlyingField.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.EnumBuilder.UnderlyingField" target="_top">.NET documentation</a>
+     */
     public FieldBuilder getUnderlyingField() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

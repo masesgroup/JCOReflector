@@ -98,7 +98,10 @@ public class IWebPropertyAccessorImplementation extends NetObject implements IWe
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IWebPropertyAccessorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,14 @@ public class IWebPropertyAccessorImplementation extends NetObject implements IWe
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetProperty.
+     *
+     * @param target the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Util.IWebPropertyAccessor.GetProperty" target="_top">.NET documentation</a>
+     */
     public NetObject GetProperty(NetObject target) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -155,6 +166,14 @@ public class IWebPropertyAccessorImplementation extends NetObject implements IWe
         }
     }
 
+    /**
+     * Invokes the .NET member SetProperty.
+     *
+     * @param target the argument of type {@code NetObject}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Util.IWebPropertyAccessor.SetProperty" target="_top">.NET documentation</a>
+     */
     public void SetProperty(NetObject target, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

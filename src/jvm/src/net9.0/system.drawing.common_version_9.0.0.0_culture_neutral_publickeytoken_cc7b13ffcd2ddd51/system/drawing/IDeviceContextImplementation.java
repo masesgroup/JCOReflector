@@ -100,7 +100,10 @@ public class IDeviceContextImplementation extends NetObject implements IDeviceCo
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDeviceContextImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,12 @@ public class IDeviceContextImplementation extends NetObject implements IDeviceCo
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.IDeviceContext.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -152,6 +161,12 @@ public class IDeviceContextImplementation extends NetObject implements IDeviceCo
         }
     }
 
+    /**
+     * Invokes the .NET member ReleaseHdc.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.IDeviceContext.ReleaseHdc" target="_top">.NET documentation</a>
+     */
     public void ReleaseHdc() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

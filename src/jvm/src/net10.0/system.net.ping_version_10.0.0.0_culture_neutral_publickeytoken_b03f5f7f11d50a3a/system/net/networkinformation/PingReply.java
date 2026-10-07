@@ -101,7 +101,10 @@ public class PingReply extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PingReply(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class PingReply extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Buffer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.PingReply.Buffer" target="_top">.NET documentation</a>
+     */
     public byte[] getBuffer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +193,13 @@ public class PingReply extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RoundtripTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.PingReply.RoundtripTime" target="_top">.NET documentation</a>
+     */
     public long getRoundtripTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +240,13 @@ public class PingReply extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Address.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.PingReply.Address" target="_top">.NET documentation</a>
+     */
     public IPAddress getAddress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +262,13 @@ public class PingReply extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Status.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.PingReply.Status" target="_top">.NET documentation</a>
+     */
     public IPStatus getStatus() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +284,13 @@ public class PingReply extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Options.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.PingReply.Options" target="_top">.NET documentation</a>
+     */
     public PingOptions getOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

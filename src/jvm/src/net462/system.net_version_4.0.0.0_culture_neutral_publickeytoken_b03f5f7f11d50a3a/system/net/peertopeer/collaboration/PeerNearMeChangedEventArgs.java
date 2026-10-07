@@ -101,7 +101,10 @@ public class PeerNearMeChangedEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PeerNearMeChangedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class PeerNearMeChangedEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PeerChangeType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.Collaboration.PeerNearMeChangedEventArgs.PeerChangeType" target="_top">.NET documentation</a>
+     */
     public PeerChangeType getPeerChangeType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +185,13 @@ public class PeerNearMeChangedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PeerNearMe.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.Collaboration.PeerNearMeChangedEventArgs.PeerNearMe" target="_top">.NET documentation</a>
+     */
     public PeerNearMe getPeerNearMe() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

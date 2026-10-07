@@ -103,7 +103,10 @@ public class GetParentChain extends system.activities.CodeActivity_1<IEnumerable
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public GetParentChain(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,12 @@ public class GetParentChain extends system.activities.CodeActivity_1<IEnumerable
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Validation.GetParentChain.-ctor" target="_top">.NET documentation</a>
+     */
     public GetParentChain() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +177,13 @@ public class GetParentChain extends system.activities.CodeActivity_1<IEnumerable
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ValidationContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Validation.GetParentChain.ValidationContext" target="_top">.NET documentation</a>
+     */
     public InArgument_1 getValidationContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +199,13 @@ public class GetParentChain extends system.activities.CodeActivity_1<IEnumerable
         }
     }
 
+    /**
+     * Sets the value of the .NET property ValidationContext.
+     *
+     * @param ValidationContext the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Validation.GetParentChain.ValidationContext" target="_top">.NET documentation</a>
+     */
     public void setValidationContext(InArgument_1 ValidationContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

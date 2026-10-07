@@ -100,7 +100,10 @@ public class LicenseContext extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public LicenseContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class LicenseContext extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.LicenseContext.-ctor" target="_top">.NET documentation</a>
+     */
     public LicenseContext() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,14 @@ public class LicenseContext extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetService.
+     *
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.LicenseContext.GetService" target="_top">.NET documentation</a>
+     */
     public NetObject GetService(NetType type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +193,15 @@ public class LicenseContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetSavedLicenseKey.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param resourceAssembly the argument of type {@code Assembly}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.LicenseContext.GetSavedLicenseKey" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetSavedLicenseKey(NetType type, Assembly resourceAssembly) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +216,14 @@ public class LicenseContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetSavedLicenseKey.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param key the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.LicenseContext.SetSavedLicenseKey" target="_top">.NET documentation</a>
+     */
     public void SetSavedLicenseKey(NetType type, java.lang.String key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +238,13 @@ public class LicenseContext extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property UsageMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.LicenseContext.UsageMode" target="_top">.NET documentation</a>
+     */
     public LicenseUsageMode getUsageMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

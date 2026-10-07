@@ -108,7 +108,10 @@ public class FileSystemSecurity extends system.security.accesscontrol.NativeObje
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FileSystemSecurity(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -161,6 +164,26 @@ public class FileSystemSecurity extends system.security.accesscontrol.NativeObje
     
     // Methods section
     
+    /**
+     * Invokes the .NET member RemoveAccessRule.
+     *
+     * @param rule the argument of type {@code FileSystemAccessRule}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.security.principal.IdentityNotMappedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.FileSystemSecurity.RemoveAccessRule" target="_top">.NET documentation</a>
+     */
     public boolean RemoveAccessRule(FileSystemAccessRule rule) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.SystemException, system.InvalidOperationException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.AccessViolationException, system.security.principal.IdentityNotMappedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +198,15 @@ public class FileSystemSecurity extends system.security.accesscontrol.NativeObje
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAuditRule.
+     *
+     * @param rule the argument of type {@code FileSystemAuditRule}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.FileSystemSecurity.RemoveAuditRule" target="_top">.NET documentation</a>
+     */
     public boolean RemoveAuditRule(FileSystemAuditRule rule) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +221,23 @@ public class FileSystemSecurity extends system.security.accesscontrol.NativeObje
         }
     }
 
+    /**
+     * Invokes the .NET member AccessRuleFactory.
+     *
+     * @param identityReference the argument of type {@code IdentityReference}
+     * @param accessMask the argument of type {@code int}
+     * @param isInherited the argument of type {@code boolean}
+     * @param inheritanceFlags the argument of type {@code InheritanceFlags}
+     * @param propagationFlags the argument of type {@code PropagationFlags}
+     * @param type the argument of type {@code AccessControlType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.FileSystemSecurity.AccessRuleFactory" target="_top">.NET documentation</a>
+     */
     public AccessRule AccessRuleFactory(IdentityReference identityReference, int accessMask, boolean isInherited, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags, AccessControlType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +253,23 @@ public class FileSystemSecurity extends system.security.accesscontrol.NativeObje
         }
     }
 
+    /**
+     * Invokes the .NET member AuditRuleFactory.
+     *
+     * @param identityReference the argument of type {@code IdentityReference}
+     * @param accessMask the argument of type {@code int}
+     * @param isInherited the argument of type {@code boolean}
+     * @param inheritanceFlags the argument of type {@code InheritanceFlags}
+     * @param propagationFlags the argument of type {@code PropagationFlags}
+     * @param flags the argument of type {@code AuditFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.FileSystemSecurity.AuditRuleFactory" target="_top">.NET documentation</a>
+     */
     public AuditRule AuditRuleFactory(IdentityReference identityReference, int accessMask, boolean isInherited, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags, AuditFlags flags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +285,14 @@ public class FileSystemSecurity extends system.security.accesscontrol.NativeObje
         }
     }
 
+    /**
+     * Invokes the .NET member AddAccessRule.
+     *
+     * @param rule the argument of type {@code FileSystemAccessRule}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.FileSystemSecurity.AddAccessRule" target="_top">.NET documentation</a>
+     */
     public void AddAccessRule(FileSystemAccessRule rule) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +303,14 @@ public class FileSystemSecurity extends system.security.accesscontrol.NativeObje
         }
     }
 
+    /**
+     * Invokes the .NET member AddAuditRule.
+     *
+     * @param rule the argument of type {@code FileSystemAuditRule}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.FileSystemSecurity.AddAuditRule" target="_top">.NET documentation</a>
+     */
     public void AddAuditRule(FileSystemAuditRule rule) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +321,14 @@ public class FileSystemSecurity extends system.security.accesscontrol.NativeObje
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAccessRuleAll.
+     *
+     * @param rule the argument of type {@code FileSystemAccessRule}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.FileSystemSecurity.RemoveAccessRuleAll" target="_top">.NET documentation</a>
+     */
     public void RemoveAccessRuleAll(FileSystemAccessRule rule) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +339,25 @@ public class FileSystemSecurity extends system.security.accesscontrol.NativeObje
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAccessRuleSpecific.
+     *
+     * @param rule the argument of type {@code FileSystemAccessRule}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.security.principal.IdentityNotMappedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.FileSystemSecurity.RemoveAccessRuleSpecific" target="_top">.NET documentation</a>
+     */
     public void RemoveAccessRuleSpecific(FileSystemAccessRule rule) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.SystemException, system.InvalidOperationException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.AccessViolationException, system.security.principal.IdentityNotMappedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +368,14 @@ public class FileSystemSecurity extends system.security.accesscontrol.NativeObje
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAuditRuleAll.
+     *
+     * @param rule the argument of type {@code FileSystemAuditRule}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.FileSystemSecurity.RemoveAuditRuleAll" target="_top">.NET documentation</a>
+     */
     public void RemoveAuditRuleAll(FileSystemAuditRule rule) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +386,14 @@ public class FileSystemSecurity extends system.security.accesscontrol.NativeObje
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAuditRuleSpecific.
+     *
+     * @param rule the argument of type {@code FileSystemAuditRule}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.FileSystemSecurity.RemoveAuditRuleSpecific" target="_top">.NET documentation</a>
+     */
     public void RemoveAuditRuleSpecific(FileSystemAuditRule rule) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +404,14 @@ public class FileSystemSecurity extends system.security.accesscontrol.NativeObje
         }
     }
 
+    /**
+     * Invokes the .NET member ResetAccessRule.
+     *
+     * @param rule the argument of type {@code FileSystemAccessRule}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.FileSystemSecurity.ResetAccessRule" target="_top">.NET documentation</a>
+     */
     public void ResetAccessRule(FileSystemAccessRule rule) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +422,14 @@ public class FileSystemSecurity extends system.security.accesscontrol.NativeObje
         }
     }
 
+    /**
+     * Invokes the .NET member SetAccessRule.
+     *
+     * @param rule the argument of type {@code FileSystemAccessRule}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.FileSystemSecurity.SetAccessRule" target="_top">.NET documentation</a>
+     */
     public void SetAccessRule(FileSystemAccessRule rule) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -299,6 +440,14 @@ public class FileSystemSecurity extends system.security.accesscontrol.NativeObje
         }
     }
 
+    /**
+     * Invokes the .NET member SetAuditRule.
+     *
+     * @param rule the argument of type {@code FileSystemAuditRule}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.FileSystemSecurity.SetAuditRule" target="_top">.NET documentation</a>
+     */
     public void SetAuditRule(FileSystemAuditRule rule) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

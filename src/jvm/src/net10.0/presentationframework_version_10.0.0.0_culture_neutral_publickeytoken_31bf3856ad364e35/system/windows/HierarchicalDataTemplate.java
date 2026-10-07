@@ -104,7 +104,10 @@ public class HierarchicalDataTemplate extends system.windows.DataTemplate  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HierarchicalDataTemplate(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,22 @@ public class HierarchicalDataTemplate extends system.windows.DataTemplate  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.HierarchicalDataTemplate.-ctor" target="_top">.NET documentation</a>
+     */
     public HierarchicalDataTemplate() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +180,23 @@ public class HierarchicalDataTemplate extends system.windows.DataTemplate  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param dataType the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.HierarchicalDataTemplate.-ctor" target="_top">.NET documentation</a>
+     */
     public HierarchicalDataTemplate(NetObject dataType) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +215,13 @@ public class HierarchicalDataTemplate extends system.windows.DataTemplate  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AlternationCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.HierarchicalDataTemplate.AlternationCount" target="_top">.NET documentation</a>
+     */
     public int getAlternationCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +262,21 @@ public class HierarchicalDataTemplate extends system.windows.DataTemplate  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AlternationCount.
+     *
+     * @param AlternationCount the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.HierarchicalDataTemplate.AlternationCount" target="_top">.NET documentation</a>
+     */
     public void setAlternationCount(int AlternationCount) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +287,13 @@ public class HierarchicalDataTemplate extends system.windows.DataTemplate  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ItemStringFormat.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.HierarchicalDataTemplate.ItemStringFormat" target="_top">.NET documentation</a>
+     */
     public java.lang.String getItemStringFormat() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +308,21 @@ public class HierarchicalDataTemplate extends system.windows.DataTemplate  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ItemStringFormat.
+     *
+     * @param ItemStringFormat the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.HierarchicalDataTemplate.ItemStringFormat" target="_top">.NET documentation</a>
+     */
     public void setItemStringFormat(java.lang.String ItemStringFormat) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +333,13 @@ public class HierarchicalDataTemplate extends system.windows.DataTemplate  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ItemTemplateSelector.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.HierarchicalDataTemplate.ItemTemplateSelector" target="_top">.NET documentation</a>
+     */
     public DataTemplateSelector getItemTemplateSelector() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +355,21 @@ public class HierarchicalDataTemplate extends system.windows.DataTemplate  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ItemTemplateSelector.
+     *
+     * @param ItemTemplateSelector the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.HierarchicalDataTemplate.ItemTemplateSelector" target="_top">.NET documentation</a>
+     */
     public void setItemTemplateSelector(DataTemplateSelector ItemTemplateSelector) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +380,13 @@ public class HierarchicalDataTemplate extends system.windows.DataTemplate  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ItemContainerStyleSelector.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.HierarchicalDataTemplate.ItemContainerStyleSelector" target="_top">.NET documentation</a>
+     */
     public StyleSelector getItemContainerStyleSelector() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +402,21 @@ public class HierarchicalDataTemplate extends system.windows.DataTemplate  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ItemContainerStyleSelector.
+     *
+     * @param ItemContainerStyleSelector the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.HierarchicalDataTemplate.ItemContainerStyleSelector" target="_top">.NET documentation</a>
+     */
     public void setItemContainerStyleSelector(StyleSelector ItemContainerStyleSelector) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +427,13 @@ public class HierarchicalDataTemplate extends system.windows.DataTemplate  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ItemsSource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.HierarchicalDataTemplate.ItemsSource" target="_top">.NET documentation</a>
+     */
     public BindingBase getItemsSource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +449,21 @@ public class HierarchicalDataTemplate extends system.windows.DataTemplate  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ItemsSource.
+     *
+     * @param ItemsSource the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.HierarchicalDataTemplate.ItemsSource" target="_top">.NET documentation</a>
+     */
     public void setItemsSource(BindingBase ItemsSource) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -328,6 +474,13 @@ public class HierarchicalDataTemplate extends system.windows.DataTemplate  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ItemBindingGroup.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.HierarchicalDataTemplate.ItemBindingGroup" target="_top">.NET documentation</a>
+     */
     public BindingGroup getItemBindingGroup() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -343,6 +496,21 @@ public class HierarchicalDataTemplate extends system.windows.DataTemplate  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ItemBindingGroup.
+     *
+     * @param ItemBindingGroup the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.HierarchicalDataTemplate.ItemBindingGroup" target="_top">.NET documentation</a>
+     */
     public void setItemBindingGroup(BindingGroup ItemBindingGroup) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -353,6 +521,13 @@ public class HierarchicalDataTemplate extends system.windows.DataTemplate  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ItemTemplate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.HierarchicalDataTemplate.ItemTemplate" target="_top">.NET documentation</a>
+     */
     public DataTemplate getItemTemplate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -368,6 +543,21 @@ public class HierarchicalDataTemplate extends system.windows.DataTemplate  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ItemTemplate.
+     *
+     * @param ItemTemplate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.HierarchicalDataTemplate.ItemTemplate" target="_top">.NET documentation</a>
+     */
     public void setItemTemplate(DataTemplate ItemTemplate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -378,6 +568,13 @@ public class HierarchicalDataTemplate extends system.windows.DataTemplate  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ItemContainerStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.HierarchicalDataTemplate.ItemContainerStyle" target="_top">.NET documentation</a>
+     */
     public Style getItemContainerStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -393,6 +590,21 @@ public class HierarchicalDataTemplate extends system.windows.DataTemplate  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ItemContainerStyle.
+     *
+     * @param ItemContainerStyle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.HierarchicalDataTemplate.ItemContainerStyle" target="_top">.NET documentation</a>
+     */
     public void setItemContainerStyle(Style ItemContainerStyle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

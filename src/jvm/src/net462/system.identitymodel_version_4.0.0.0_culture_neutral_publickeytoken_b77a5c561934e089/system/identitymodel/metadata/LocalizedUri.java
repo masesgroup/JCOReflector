@@ -101,7 +101,10 @@ public class LocalizedUri extends system.identitymodel.metadata.LocalizedEntry  
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public LocalizedUri(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class LocalizedUri extends system.identitymodel.metadata.LocalizedEntry  
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.LocalizedUri.-ctor" target="_top">.NET documentation</a>
+     */
     public LocalizedUri() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,14 @@ public class LocalizedUri extends system.identitymodel.metadata.LocalizedEntry  
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param uri the argument of type {@code Uri}
+     * @param language the argument of type {@code CultureInfo}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.LocalizedUri.-ctor" target="_top">.NET documentation</a>
+     */
     public LocalizedUri(Uri uri, CultureInfo language) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +193,13 @@ public class LocalizedUri extends system.identitymodel.metadata.LocalizedEntry  
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Uri.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.LocalizedUri.Uri" target="_top">.NET documentation</a>
+     */
     public Uri getUri() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +215,13 @@ public class LocalizedUri extends system.identitymodel.metadata.LocalizedEntry  
         }
     }
 
+    /**
+     * Sets the value of the .NET property Uri.
+     *
+     * @param Uri the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.LocalizedUri.Uri" target="_top">.NET documentation</a>
+     */
     public void setUri(Uri Uri) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

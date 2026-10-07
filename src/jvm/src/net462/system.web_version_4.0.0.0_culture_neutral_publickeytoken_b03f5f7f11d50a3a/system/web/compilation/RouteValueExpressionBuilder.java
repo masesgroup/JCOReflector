@@ -103,7 +103,10 @@ public class RouteValueExpressionBuilder extends system.web.compilation.Expressi
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RouteValueExpressionBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,12 @@ public class RouteValueExpressionBuilder extends system.web.compilation.Expressi
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.RouteValueExpressionBuilder.-ctor" target="_top">.NET documentation</a>
+     */
     public RouteValueExpressionBuilder() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,19 @@ public class RouteValueExpressionBuilder extends system.web.compilation.Expressi
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetCodeExpression.
+     *
+     * @param entry the argument of type {@code BoundPropertyEntry}
+     * @param parsedData the argument of type {@code NetObject}
+     * @param context the argument of type {@code ExpressionBuilderContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.RouteValueExpressionBuilder.GetCodeExpression" target="_top">.NET documentation</a>
+     */
     public CodeExpression GetCodeExpression(BoundPropertyEntry entry, NetObject parsedData, ExpressionBuilderContext context) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +201,28 @@ public class RouteValueExpressionBuilder extends system.web.compilation.Expressi
         }
     }
 
+    /**
+     * Invokes the .NET member EvaluateExpression.
+     *
+     * @param target the argument of type {@code NetObject}
+     * @param entry the argument of type {@code BoundPropertyEntry}
+     * @param parsedData the argument of type {@code NetObject}
+     * @param context the argument of type {@code ExpressionBuilderContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.RouteValueExpressionBuilder.EvaluateExpression" target="_top">.NET documentation</a>
+     */
     public NetObject EvaluateExpression(NetObject target, BoundPropertyEntry entry, NetObject parsedData, ExpressionBuilderContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +238,30 @@ public class RouteValueExpressionBuilder extends system.web.compilation.Expressi
         }
     }
 
+    /**
+     * Invokes the .NET member GetRouteValue.
+     *
+     * @param page the argument of type {@code Page}
+     * @param key the argument of type {@code java.lang.String}
+     * @param controlType the argument of type {@code NetType}
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.RouteValueExpressionBuilder.GetRouteValue" target="_top">.NET documentation</a>
+     */
     public static NetObject GetRouteValue(Page page, java.lang.String key, NetType controlType, java.lang.String propertyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.security.SecurityException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

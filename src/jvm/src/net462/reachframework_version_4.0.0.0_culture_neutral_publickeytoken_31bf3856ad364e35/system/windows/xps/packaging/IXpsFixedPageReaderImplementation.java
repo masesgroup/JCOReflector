@@ -112,7 +112,10 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IXpsFixedPageReaderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,14 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetColorContext.
+     *
+     * @param uri the argument of type {@code Uri}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageReader.GetColorContext" target="_top">.NET documentation</a>
+     */
     public XpsColorContext GetColorContext(Uri uri) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +180,14 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
         }
     }
 
+    /**
+     * Invokes the .NET member GetFont.
+     *
+     * @param uri the argument of type {@code Uri}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageReader.GetFont" target="_top">.NET documentation</a>
+     */
     public XpsFont GetFont(Uri uri) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +203,14 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
         }
     }
 
+    /**
+     * Invokes the .NET member GetImage.
+     *
+     * @param uri the argument of type {@code Uri}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageReader.GetImage" target="_top">.NET documentation</a>
+     */
     public XpsImage GetImage(Uri uri) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +226,14 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
         }
     }
 
+    /**
+     * Invokes the .NET member GetResource.
+     *
+     * @param resourceUri the argument of type {@code Uri}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageReader.GetResource" target="_top">.NET documentation</a>
+     */
     public XpsResource GetResource(Uri resourceUri) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +249,14 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
         }
     }
 
+    /**
+     * Invokes the .NET member GetResourceDictionary.
+     *
+     * @param uri the argument of type {@code Uri}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageReader.GetResourceDictionary" target="_top">.NET documentation</a>
+     */
     public XpsResourceDictionary GetResourceDictionary(Uri uri) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +272,13 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
         }
     }
 
+    /**
+     * Invokes the .NET member AddStoryFragment.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageReader.AddStoryFragment" target="_top">.NET documentation</a>
+     */
     public XpsStructure AddStoryFragment() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +298,13 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PageNumber.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageReader.PageNumber" target="_top">.NET documentation</a>
+     */
     public int getPageNumber() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +345,13 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
         }
     }
 
+    /**
+     * Gets the value of the .NET property ColorContexts.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageReader.ColorContexts" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getColorContexts() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +367,13 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
         }
     }
 
+    /**
+     * Gets the value of the .NET property Fonts.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageReader.Fonts" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getFonts() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +389,13 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
         }
     }
 
+    /**
+     * Gets the value of the .NET property Images.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageReader.Images" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getImages() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -333,6 +411,13 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResourceDictionaries.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageReader.ResourceDictionaries" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getResourceDictionaries() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +433,13 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
         }
     }
 
+    /**
+     * Gets the value of the .NET property PrintTicket.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageReader.PrintTicket" target="_top">.NET documentation</a>
+     */
     public PrintTicket getPrintTicket() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -363,6 +455,13 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
         }
     }
 
+    /**
+     * Gets the value of the .NET property Uri.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageReader.Uri" target="_top">.NET documentation</a>
+     */
     public Uri getUri() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -378,6 +477,13 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
         }
     }
 
+    /**
+     * Gets the value of the .NET property StoryFragment.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageReader.StoryFragment" target="_top">.NET documentation</a>
+     */
     public XpsStructure getStoryFragment() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -393,6 +499,13 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
         }
     }
 
+    /**
+     * Gets the value of the .NET property Thumbnail.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageReader.Thumbnail" target="_top">.NET documentation</a>
+     */
     public XpsThumbnail getThumbnail() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -408,6 +521,13 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlReader.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageReader.XmlReader" target="_top">.NET documentation</a>
+     */
     public XmlReader getXmlReader() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -114,7 +114,9 @@ public class PrecompilationFlags extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public PrecompilationFlags(java.lang.Object instance) {
         super(instance);
@@ -185,18 +187,50 @@ public class PrecompilationFlags extends NetObject  {
 
     // Flags management section
 
+    /**
+     * Invokes the .NET member add.
+     *
+     * @param val the argument of type {@code PrecompilationFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public final PrecompilationFlags add(PrecompilationFlags val) throws Throwable {
         return new PrecompilationFlags(NetEnum.add(classInstance, val.classInstance));
     }
 
+    /**
+     * Invokes the .NET member remove.
+     *
+     * @param val the argument of type {@code PrecompilationFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public final PrecompilationFlags remove(PrecompilationFlags val) throws Throwable {
         return new PrecompilationFlags(NetEnum.remove(classInstance, val.classInstance));
     }
 
+    /**
+     * Invokes the .NET member is.
+     *
+     * @param val the argument of type {@code PrecompilationFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public final boolean is(PrecompilationFlags val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
+    /**
+     * Invokes the .NET member has.
+     *
+     * @param val the argument of type {@code PrecompilationFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public final boolean has(PrecompilationFlags val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }

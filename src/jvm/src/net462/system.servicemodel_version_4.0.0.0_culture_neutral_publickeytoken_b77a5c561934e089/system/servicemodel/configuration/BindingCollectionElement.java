@@ -100,7 +100,10 @@ public class BindingCollectionElement extends system.configuration.Configuration
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BindingCollectionElement(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,14 @@ public class BindingCollectionElement extends system.configuration.Configuration
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ContainsKey.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Configuration.BindingCollectionElement.ContainsKey" target="_top">.NET documentation</a>
+     */
     public boolean ContainsKey(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +182,13 @@ public class BindingCollectionElement extends system.configuration.Configuration
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ConfiguredBindings.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Configuration.BindingCollectionElement.ConfiguredBindings" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getConfiguredBindings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +204,27 @@ public class BindingCollectionElement extends system.configuration.Configuration
         }
     }
 
+    /**
+     * Gets the value of the .NET property BindingName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Configuration.BindingCollectionElement.BindingName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getBindingName() throws Throwable, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.FormatException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.reflection.AmbiguousMatchException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +239,13 @@ public class BindingCollectionElement extends system.configuration.Configuration
         }
     }
 
+    /**
+     * Gets the value of the .NET property BindingType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Configuration.BindingCollectionElement.BindingType" target="_top">.NET documentation</a>
+     */
     public NetType getBindingType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

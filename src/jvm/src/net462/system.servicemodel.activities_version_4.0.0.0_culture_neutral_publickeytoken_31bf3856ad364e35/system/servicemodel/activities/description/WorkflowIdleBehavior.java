@@ -103,7 +103,10 @@ public class WorkflowIdleBehavior extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WorkflowIdleBehavior(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,12 @@ public class WorkflowIdleBehavior extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Description.WorkflowIdleBehavior.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowIdleBehavior() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,16 @@ public class WorkflowIdleBehavior extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AddBindingParameters.
+     *
+     * @param serviceDescription the argument of type {@code ServiceDescription}
+     * @param serviceHostBase the argument of type {@code ServiceHostBase}
+     * @param endpoints the argument of type {@code Collection_1}
+     * @param bindingParameters the argument of type {@code BindingParameterCollection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Description.WorkflowIdleBehavior.AddBindingParameters" target="_top">.NET documentation</a>
+     */
     public void AddBindingParameters(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase, Collection_1 endpoints, BindingParameterCollection bindingParameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +193,14 @@ public class WorkflowIdleBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ApplyDispatchBehavior.
+     *
+     * @param serviceDescription the argument of type {@code ServiceDescription}
+     * @param serviceHostBase the argument of type {@code ServiceHostBase}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Description.WorkflowIdleBehavior.ApplyDispatchBehavior" target="_top">.NET documentation</a>
+     */
     public void ApplyDispatchBehavior(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +211,21 @@ public class WorkflowIdleBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Validate.
+     *
+     * @param serviceDescription the argument of type {@code ServiceDescription}
+     * @param serviceHostBase the argument of type {@code ServiceHostBase}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Description.WorkflowIdleBehavior.Validate" target="_top">.NET documentation</a>
+     */
     public void Validate(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +240,13 @@ public class WorkflowIdleBehavior extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property TimeToPersist.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist" target="_top">.NET documentation</a>
+     */
     public TimeSpan getTimeToPersist() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +262,20 @@ public class WorkflowIdleBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TimeToPersist.
+     *
+     * @param TimeToPersist the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist" target="_top">.NET documentation</a>
+     */
     public void setTimeToPersist(TimeSpan TimeToPersist) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +286,13 @@ public class WorkflowIdleBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TimeToUnload.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload" target="_top">.NET documentation</a>
+     */
     public TimeSpan getTimeToUnload() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +308,20 @@ public class WorkflowIdleBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TimeToUnload.
+     *
+     * @param TimeToUnload the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload" target="_top">.NET documentation</a>
+     */
     public void setTimeToUnload(TimeSpan TimeToUnload) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

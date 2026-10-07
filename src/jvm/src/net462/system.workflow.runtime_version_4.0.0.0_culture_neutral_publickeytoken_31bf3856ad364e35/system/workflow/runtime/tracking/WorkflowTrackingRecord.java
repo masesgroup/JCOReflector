@@ -103,7 +103,10 @@ public class WorkflowTrackingRecord extends system.workflow.runtime.tracking.Tra
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WorkflowTrackingRecord(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,12 @@ public class WorkflowTrackingRecord extends system.workflow.runtime.tracking.Tra
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.WorkflowTrackingRecord.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowTrackingRecord() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +169,16 @@ public class WorkflowTrackingRecord extends system.workflow.runtime.tracking.Tra
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param trackingWorkflowEvent the argument of type {@code TrackingWorkflowEvent}
+     * @param eventDateTime the argument of type {@code DateTime}
+     * @param eventOrder the argument of type {@code int}
+     * @param eventArgs the argument of type {@code EventArgs}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.WorkflowTrackingRecord.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowTrackingRecord(TrackingWorkflowEvent trackingWorkflowEvent, DateTime eventDateTime, int eventOrder, EventArgs eventArgs) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +197,13 @@ public class WorkflowTrackingRecord extends system.workflow.runtime.tracking.Tra
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property TrackingWorkflowEvent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.WorkflowTrackingRecord.TrackingWorkflowEvent" target="_top">.NET documentation</a>
+     */
     public TrackingWorkflowEvent getTrackingWorkflowEvent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +219,13 @@ public class WorkflowTrackingRecord extends system.workflow.runtime.tracking.Tra
         }
     }
 
+    /**
+     * Sets the value of the .NET property TrackingWorkflowEvent.
+     *
+     * @param TrackingWorkflowEvent the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.WorkflowTrackingRecord.TrackingWorkflowEvent" target="_top">.NET documentation</a>
+     */
     public void setTrackingWorkflowEvent(TrackingWorkflowEvent TrackingWorkflowEvent) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

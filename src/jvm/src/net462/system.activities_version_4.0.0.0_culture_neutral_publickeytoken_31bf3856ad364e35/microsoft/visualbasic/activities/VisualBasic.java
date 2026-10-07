@@ -99,7 +99,10 @@ public class VisualBasic extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public VisualBasic(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,20 @@ public class VisualBasic extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ShouldSerializeSettings.
+     *
+     * @param target the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Activities.VisualBasic.ShouldSerializeSettings" target="_top">.NET documentation</a>
+     */
     public static boolean ShouldSerializeSettings(NetObject target) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -166,6 +183,20 @@ public class VisualBasic extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetSettings.
+     *
+     * @param target the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Activities.VisualBasic.GetSettings" target="_top">.NET documentation</a>
+     */
     public static VisualBasicSettings GetSettings(NetObject target) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -181,6 +212,24 @@ public class VisualBasic extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetSettings.
+     *
+     * @param target the argument of type {@code NetObject}
+     * @param value the argument of type {@code VisualBasicSettings}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Activities.VisualBasic.SetSettings" target="_top">.NET documentation</a>
+     */
     public static void SetSettings(NetObject target, VisualBasicSettings value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -191,6 +240,24 @@ public class VisualBasic extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetSettingsForImplementation.
+     *
+     * @param target the argument of type {@code NetObject}
+     * @param value the argument of type {@code VisualBasicSettings}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Activities.VisualBasic.SetSettingsForImplementation" target="_top">.NET documentation</a>
+     */
     public static void SetSettingsForImplementation(NetObject target, VisualBasicSettings value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

@@ -104,7 +104,10 @@ public class IssuedSecurityTokenParameters extends system.servicemodel.security.
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IssuedSecurityTokenParameters(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,12 @@ public class IssuedSecurityTokenParameters extends system.servicemodel.security.
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.-ctor" target="_top">.NET documentation</a>
+     */
     public IssuedSecurityTokenParameters() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,13 @@ public class IssuedSecurityTokenParameters extends system.servicemodel.security.
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param tokenType the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.-ctor" target="_top">.NET documentation</a>
+     */
     public IssuedSecurityTokenParameters(java.lang.String tokenType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +187,14 @@ public class IssuedSecurityTokenParameters extends system.servicemodel.security.
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param tokenType the argument of type {@code java.lang.String}
+     * @param issuerAddress the argument of type {@code EndpointAddress}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.-ctor" target="_top">.NET documentation</a>
+     */
     public IssuedSecurityTokenParameters(java.lang.String tokenType, EndpointAddress issuerAddress) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +205,15 @@ public class IssuedSecurityTokenParameters extends system.servicemodel.security.
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param tokenType the argument of type {@code java.lang.String}
+     * @param issuerAddress the argument of type {@code EndpointAddress}
+     * @param issuerBinding the argument of type {@code system.servicemodel.channels.Binding}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.-ctor" target="_top">.NET documentation</a>
+     */
     public IssuedSecurityTokenParameters(java.lang.String tokenType, EndpointAddress issuerAddress, system.servicemodel.channels.Binding issuerBinding) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -195,6 +228,33 @@ public class IssuedSecurityTokenParameters extends system.servicemodel.security.
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateRequestParameters.
+     *
+     * @param messageSecurityVersion the argument of type {@code MessageSecurityVersion}
+     * @param securityTokenSerializer the argument of type {@code SecurityTokenSerializer}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.CreateRequestParameters" target="_top">.NET documentation</a>
+     */
     public Collection_1 CreateRequestParameters(MessageSecurityVersion messageSecurityVersion, SecurityTokenSerializer securityTokenSerializer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException, system.NullReferenceException, system.xml.XmlException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +274,13 @@ public class IssuedSecurityTokenParameters extends system.servicemodel.security.
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property UseStrTransform.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.UseStrTransform" target="_top">.NET documentation</a>
+     */
     public boolean getUseStrTransform() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +295,13 @@ public class IssuedSecurityTokenParameters extends system.servicemodel.security.
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseStrTransform.
+     *
+     * @param UseStrTransform the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.UseStrTransform" target="_top">.NET documentation</a>
+     */
     public void setUseStrTransform(boolean UseStrTransform) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +312,13 @@ public class IssuedSecurityTokenParameters extends system.servicemodel.security.
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeySize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.KeySize" target="_top">.NET documentation</a>
+     */
     public int getKeySize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +359,28 @@ public class IssuedSecurityTokenParameters extends system.servicemodel.security.
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeySize.
+     *
+     * @param KeySize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.KeySize" target="_top">.NET documentation</a>
+     */
     public void setKeySize(int KeySize) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +391,13 @@ public class IssuedSecurityTokenParameters extends system.servicemodel.security.
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClaimTypeRequirements.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.ClaimTypeRequirements" target="_top">.NET documentation</a>
+     */
     public Collection_1 getClaimTypeRequirements() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +413,13 @@ public class IssuedSecurityTokenParameters extends system.servicemodel.security.
         }
     }
 
+    /**
+     * Gets the value of the .NET property AdditionalRequestParameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.AdditionalRequestParameters" target="_top">.NET documentation</a>
+     */
     public Collection_1 getAdditionalRequestParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +435,13 @@ public class IssuedSecurityTokenParameters extends system.servicemodel.security.
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeyType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.KeyType" target="_top">.NET documentation</a>
+     */
     public SecurityKeyType getKeyType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -333,6 +457,30 @@ public class IssuedSecurityTokenParameters extends system.servicemodel.security.
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeyType.
+     *
+     * @param KeyType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.KeyType" target="_top">.NET documentation</a>
+     */
     public void setKeyType(SecurityKeyType KeyType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -343,6 +491,13 @@ public class IssuedSecurityTokenParameters extends system.servicemodel.security.
         }
     }
 
+    /**
+     * Gets the value of the .NET property IssuerBinding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.IssuerBinding" target="_top">.NET documentation</a>
+     */
     public system.servicemodel.channels.Binding getIssuerBinding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -358,6 +513,13 @@ public class IssuedSecurityTokenParameters extends system.servicemodel.security.
         }
     }
 
+    /**
+     * Sets the value of the .NET property IssuerBinding.
+     *
+     * @param IssuerBinding the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.IssuerBinding" target="_top">.NET documentation</a>
+     */
     public void setIssuerBinding(system.servicemodel.channels.Binding IssuerBinding) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -368,6 +530,13 @@ public class IssuedSecurityTokenParameters extends system.servicemodel.security.
         }
     }
 
+    /**
+     * Gets the value of the .NET property IssuerAddress.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.IssuerAddress" target="_top">.NET documentation</a>
+     */
     public EndpointAddress getIssuerAddress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -383,6 +552,13 @@ public class IssuedSecurityTokenParameters extends system.servicemodel.security.
         }
     }
 
+    /**
+     * Sets the value of the .NET property IssuerAddress.
+     *
+     * @param IssuerAddress the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.IssuerAddress" target="_top">.NET documentation</a>
+     */
     public void setIssuerAddress(EndpointAddress IssuerAddress) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -393,6 +569,13 @@ public class IssuedSecurityTokenParameters extends system.servicemodel.security.
         }
     }
 
+    /**
+     * Gets the value of the .NET property IssuerMetadataAddress.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.IssuerMetadataAddress" target="_top">.NET documentation</a>
+     */
     public EndpointAddress getIssuerMetadataAddress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -408,6 +591,13 @@ public class IssuedSecurityTokenParameters extends system.servicemodel.security.
         }
     }
 
+    /**
+     * Sets the value of the .NET property IssuerMetadataAddress.
+     *
+     * @param IssuerMetadataAddress the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.IssuerMetadataAddress" target="_top">.NET documentation</a>
+     */
     public void setIssuerMetadataAddress(EndpointAddress IssuerMetadataAddress) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -418,6 +608,13 @@ public class IssuedSecurityTokenParameters extends system.servicemodel.security.
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultMessageSecurityVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.DefaultMessageSecurityVersion" target="_top">.NET documentation</a>
+     */
     public MessageSecurityVersion getDefaultMessageSecurityVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -433,6 +630,13 @@ public class IssuedSecurityTokenParameters extends system.servicemodel.security.
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultMessageSecurityVersion.
+     *
+     * @param DefaultMessageSecurityVersion the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.DefaultMessageSecurityVersion" target="_top">.NET documentation</a>
+     */
     public void setDefaultMessageSecurityVersion(MessageSecurityVersion DefaultMessageSecurityVersion) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -443,6 +647,13 @@ public class IssuedSecurityTokenParameters extends system.servicemodel.security.
         }
     }
 
+    /**
+     * Gets the value of the .NET property TokenType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.TokenType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTokenType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -457,6 +668,13 @@ public class IssuedSecurityTokenParameters extends system.servicemodel.security.
         }
     }
 
+    /**
+     * Sets the value of the .NET property TokenType.
+     *
+     * @param TokenType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.TokenType" target="_top">.NET documentation</a>
+     */
     public void setTokenType(java.lang.String TokenType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

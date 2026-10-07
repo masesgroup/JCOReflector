@@ -104,7 +104,10 @@ public class TransactionFlowAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TransactionFlowAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,29 @@ public class TransactionFlowAttribute extends system.Attribute  {
     public TransactionFlowAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param transactions the argument of type {@code TransactionFlowOption}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.TransactionFlowAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public TransactionFlowAttribute(TransactionFlowOption transactions) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -172,8 +198,13 @@ public class TransactionFlowAttribute extends system.Attribute  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIOperationBehavior method available in IOperationBehavior to obtain an object with an invocable method
+     *
+     * @param operationDescription the argument of type {@code OperationDescription}
+     * @param bindingParameters the argument of type {@code BindingParameterCollection}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IOperationBehavior.AddBindingParameters" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void AddBindingParameters(OperationDescription operationDescription, BindingParameterCollection bindingParameters) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
     }
@@ -181,8 +212,13 @@ public class TransactionFlowAttribute extends system.Attribute  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIOperationBehavior method available in IOperationBehavior to obtain an object with an invocable method
+     *
+     * @param operationDescription the argument of type {@code OperationDescription}
+     * @param clientOperation the argument of type {@code ClientOperation}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IOperationBehavior.ApplyClientBehavior" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ApplyClientBehavior(OperationDescription operationDescription, ClientOperation clientOperation) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
     }
@@ -190,8 +226,13 @@ public class TransactionFlowAttribute extends system.Attribute  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIOperationBehavior method available in IOperationBehavior to obtain an object with an invocable method
+     *
+     * @param operationDescription the argument of type {@code OperationDescription}
+     * @param dispatchOperation the argument of type {@code DispatchOperation}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IOperationBehavior.ApplyDispatchBehavior" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ApplyDispatchBehavior(OperationDescription operationDescription, DispatchOperation dispatchOperation) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
     }
@@ -199,8 +240,12 @@ public class TransactionFlowAttribute extends system.Attribute  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIOperationBehavior method available in IOperationBehavior to obtain an object with an invocable method
+     *
+     * @param operationDescription the argument of type {@code OperationDescription}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IOperationBehavior.Validate" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Validate(OperationDescription operationDescription) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
     }
@@ -209,6 +254,13 @@ public class TransactionFlowAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Transactions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.TransactionFlowAttribute.Transactions" target="_top">.NET documentation</a>
+     */
     public TransactionFlowOption getTransactions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

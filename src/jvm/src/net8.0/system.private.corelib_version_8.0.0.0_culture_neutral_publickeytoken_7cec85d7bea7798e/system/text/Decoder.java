@@ -100,7 +100,10 @@ public class Decoder extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Decoder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,17 @@ public class Decoder extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetCharCount.
+     *
+     * @param bytes the argument of type {@code byte[]}
+     * @param index the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @param flush the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Decoder.GetCharCount" target="_top">.NET documentation</a>
+     */
     public int GetCharCount(byte[] bytes, int index, int count, boolean flush) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +207,17 @@ public class Decoder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCharCount.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code int}
+     * @param dupParam3 the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Decoder.GetCharCount" target="_top">.NET documentation</a>
+     */
     public int GetCharCount(JCORefOut dupParam0, int dupParam1, int dupParam2, boolean dupParam3) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +258,16 @@ public class Decoder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCharCount.
+     *
+     * @param bytes the argument of type {@code byte[]}
+     * @param index the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Decoder.GetCharCount" target="_top">.NET documentation</a>
+     */
     public int GetCharCount(byte[] bytes, int index, int count) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +308,16 @@ public class Decoder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCharCount.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Decoder.GetCharCount" target="_top">.NET documentation</a>
+     */
     public int GetCharCount(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -313,6 +358,19 @@ public class Decoder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetChars.
+     *
+     * @param bytes the argument of type {@code byte[]}
+     * @param byteIndex the argument of type {@code int}
+     * @param byteCount the argument of type {@code int}
+     * @param chars the argument of type {@code char[]}
+     * @param charIndex the argument of type {@code int}
+     * @param flush the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Decoder.GetChars" target="_top">.NET documentation</a>
+     */
     public int GetChars(byte[] bytes, int byteIndex, int byteCount, char[] chars, int charIndex, boolean flush) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -353,6 +411,19 @@ public class Decoder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetChars.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code int}
+     * @param dupParam3 the argument of type {@code JCORefOut}
+     * @param dupParam4 the argument of type {@code int}
+     * @param dupParam5 the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Decoder.GetChars" target="_top">.NET documentation</a>
+     */
     public int GetChars(JCORefOut dupParam0, int dupParam1, int dupParam2, JCORefOut dupParam3, int dupParam4, boolean dupParam5) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -393,6 +464,18 @@ public class Decoder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetChars.
+     *
+     * @param bytes the argument of type {@code byte[]}
+     * @param byteIndex the argument of type {@code int}
+     * @param byteCount the argument of type {@code int}
+     * @param chars the argument of type {@code char[]}
+     * @param charIndex the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Decoder.GetChars" target="_top">.NET documentation</a>
+     */
     public int GetChars(byte[] bytes, int byteIndex, int byteCount, char[] chars, int charIndex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -433,6 +516,18 @@ public class Decoder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetChars.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code int}
+     * @param dupParam3 the argument of type {@code JCORefOut}
+     * @param dupParam4 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Decoder.GetChars" target="_top">.NET documentation</a>
+     */
     public int GetChars(JCORefOut dupParam0, int dupParam1, int dupParam2, JCORefOut dupParam3, int dupParam4) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -473,6 +568,31 @@ public class Decoder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Convert.
+     *
+     * @param bytes the argument of type {@code byte[]}
+     * @param byteIndex the argument of type {@code int}
+     * @param byteCount the argument of type {@code int}
+     * @param chars the argument of type {@code char[]}
+     * @param charIndex the argument of type {@code int}
+     * @param charCount the argument of type {@code int}
+     * @param flush the argument of type {@code boolean}
+     * @param bytesUsed the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param charsUsed the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param completed the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicBoolean>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Decoder.Convert" target="_top">.NET documentation</a>
+     */
     public void Convert(byte[] bytes, int byteIndex, int byteCount, char[] chars, int charIndex, int charCount, boolean flush, JCORefOut<java.util.concurrent.atomic.AtomicInteger> bytesUsed, JCORefOut<java.util.concurrent.atomic.AtomicInteger> charsUsed, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> completed) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -483,6 +603,12 @@ public class Decoder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Reset.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Decoder.Reset" target="_top">.NET documentation</a>
+     */
     public void Reset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -497,6 +623,13 @@ public class Decoder extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Fallback.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Decoder.Fallback" target="_top">.NET documentation</a>
+     */
     public DecoderFallback getFallback() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -512,6 +645,22 @@ public class Decoder extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Fallback.
+     *
+     * @param Fallback the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Decoder.Fallback" target="_top">.NET documentation</a>
+     */
     public void setFallback(DecoderFallback Fallback) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -522,6 +671,13 @@ public class Decoder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FallbackBuffer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Decoder.FallbackBuffer" target="_top">.NET documentation</a>
+     */
     public DecoderFallbackBuffer getFallbackBuffer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

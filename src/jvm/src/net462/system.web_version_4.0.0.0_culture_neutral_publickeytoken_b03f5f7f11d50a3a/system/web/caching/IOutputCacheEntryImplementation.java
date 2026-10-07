@@ -99,7 +99,10 @@ public class IOutputCacheEntryImplementation extends NetObject implements IOutpu
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IOutputCacheEntryImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,13 @@ public class IOutputCacheEntryImplementation extends NetObject implements IOutpu
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HeaderElements.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.IOutputCacheEntry.HeaderElements" target="_top">.NET documentation</a>
+     */
     public List_1 getHeaderElements() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -160,6 +170,13 @@ public class IOutputCacheEntryImplementation extends NetObject implements IOutpu
         }
     }
 
+    /**
+     * Sets the value of the .NET property HeaderElements.
+     *
+     * @param HeaderElements the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.IOutputCacheEntry.HeaderElements" target="_top">.NET documentation</a>
+     */
     public void setHeaderElements(List_1 HeaderElements) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +187,13 @@ public class IOutputCacheEntryImplementation extends NetObject implements IOutpu
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResponseElements.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.IOutputCacheEntry.ResponseElements" target="_top">.NET documentation</a>
+     */
     public List_1 getResponseElements() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +209,13 @@ public class IOutputCacheEntryImplementation extends NetObject implements IOutpu
         }
     }
 
+    /**
+     * Sets the value of the .NET property ResponseElements.
+     *
+     * @param ResponseElements the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.IOutputCacheEntry.ResponseElements" target="_top">.NET documentation</a>
+     */
     public void setResponseElements(List_1 ResponseElements) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

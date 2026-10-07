@@ -102,7 +102,10 @@ public class TextTrailingCharacterEllipsis extends system.windows.media.textform
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TextTrailingCharacterEllipsis(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,19 @@ public class TextTrailingCharacterEllipsis extends system.windows.media.textform
     public TextTrailingCharacterEllipsis() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param width the argument of type {@code double}
+     * @param textRunProperties the argument of type {@code TextRunProperties}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextTrailingCharacterEllipsis.-ctor" target="_top">.NET documentation</a>
+     */
     public TextTrailingCharacterEllipsis(double width, TextRunProperties textRunProperties) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file

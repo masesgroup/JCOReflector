@@ -105,7 +105,10 @@ public class ToolStripSplitButton extends system.windows.forms.ToolStripDropDown
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ToolStripSplitButton(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,21 @@ public class ToolStripSplitButton extends system.windows.forms.ToolStripDropDown
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripSplitButton.-ctor" target="_top">.NET documentation</a>
+     */
     public ToolStripSplitButton() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +180,21 @@ public class ToolStripSplitButton extends system.windows.forms.ToolStripDropDown
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param image the argument of type {@code Image}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripSplitButton.-ctor" target="_top">.NET documentation</a>
+     */
     public ToolStripSplitButton(Image image) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OverflowException, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +205,29 @@ public class ToolStripSplitButton extends system.windows.forms.ToolStripDropDown
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @param image the argument of type {@code Image}
+     * @param onClick the argument of type {@code EventHandler}
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripSplitButton.-ctor" target="_top">.NET documentation</a>
+     */
     public ToolStripSplitButton(java.lang.String text, Image image, EventHandler onClick, java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OverflowException, system.componentmodel.InvalidAsynchronousStateException, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +238,23 @@ public class ToolStripSplitButton extends system.windows.forms.ToolStripDropDown
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @param image the argument of type {@code Image}
+     * @param onClick the argument of type {@code EventHandler}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripSplitButton.-ctor" target="_top">.NET documentation</a>
+     */
     public ToolStripSplitButton(java.lang.String text, Image image, EventHandler onClick) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OverflowException, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -192,6 +265,23 @@ public class ToolStripSplitButton extends system.windows.forms.ToolStripDropDown
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @param image the argument of type {@code Image}
+     * @param dropDownItems the argument of type {@code ToolStripItem...}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripSplitButton.-ctor" target="_top">.NET documentation</a>
+     */
     public ToolStripSplitButton(java.lang.String text, Image image, ToolStripItem... dropDownItems) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.componentmodel.InvalidEnumArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MulticastNotSupportedException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -202,6 +292,22 @@ public class ToolStripSplitButton extends system.windows.forms.ToolStripDropDown
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @param image the argument of type {@code Image}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripSplitButton.-ctor" target="_top">.NET documentation</a>
+     */
     public ToolStripSplitButton(java.lang.String text, Image image) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OverflowException, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -212,6 +318,21 @@ public class ToolStripSplitButton extends system.windows.forms.ToolStripDropDown
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripSplitButton.-ctor" target="_top">.NET documentation</a>
+     */
     public ToolStripSplitButton(java.lang.String text) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OverflowException, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -226,6 +347,23 @@ public class ToolStripSplitButton extends system.windows.forms.ToolStripDropDown
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetPreferredSize.
+     *
+     * @param constrainingSize the argument of type {@code Size}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripSplitButton.GetPreferredSize" target="_top">.NET documentation</a>
+     */
     public Size GetPreferredSize(Size constrainingSize) throws Throwable, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.OverflowException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +379,25 @@ public class ToolStripSplitButton extends system.windows.forms.ToolStripDropDown
         }
     }
 
+    /**
+     * Invokes the .NET member OnButtonDoubleClick.
+     *
+     * @param e the argument of type {@code EventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripSplitButton.OnButtonDoubleClick" target="_top">.NET documentation</a>
+     */
     public void OnButtonDoubleClick(EventArgs e) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidAsynchronousStateException, system.OverflowException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +408,21 @@ public class ToolStripSplitButton extends system.windows.forms.ToolStripDropDown
         }
     }
 
+    /**
+     * Invokes the .NET member PerformButtonClick.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripSplitButton.PerformButtonClick" target="_top">.NET documentation</a>
+     */
     public void PerformButtonClick() throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OverflowException, system.PlatformNotSupportedException, system.ArgumentException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +433,23 @@ public class ToolStripSplitButton extends system.windows.forms.ToolStripDropDown
         }
     }
 
+    /**
+     * Invokes the .NET member ResetDropDownButtonWidth.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripSplitButton.ResetDropDownButtonWidth" target="_top">.NET documentation</a>
+     */
     public void ResetDropDownButtonWidth() throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +464,13 @@ public class ToolStripSplitButton extends system.windows.forms.ToolStripDropDown
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AutoToolTip.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripSplitButton.AutoToolTip" target="_top">.NET documentation</a>
+     */
     public boolean getAutoToolTip() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +485,13 @@ public class ToolStripSplitButton extends system.windows.forms.ToolStripDropDown
         }
     }
 
+    /**
+     * Sets the value of the .NET property AutoToolTip.
+     *
+     * @param AutoToolTip the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripSplitButton.AutoToolTip" target="_top">.NET documentation</a>
+     */
     public void setAutoToolTip(boolean AutoToolTip) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -299,6 +502,27 @@ public class ToolStripSplitButton extends system.windows.forms.ToolStripDropDown
         }
     }
 
+    /**
+     * Gets the value of the .NET property ButtonPressed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripSplitButton.ButtonPressed" target="_top">.NET documentation</a>
+     */
     public boolean getButtonPressed() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.NotSupportedException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -313,6 +537,29 @@ public class ToolStripSplitButton extends system.windows.forms.ToolStripDropDown
         }
     }
 
+    /**
+     * Gets the value of the .NET property ButtonSelected.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripSplitButton.ButtonSelected" target="_top">.NET documentation</a>
+     */
     public boolean getButtonSelected() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.NotSupportedException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -327,6 +574,19 @@ public class ToolStripSplitButton extends system.windows.forms.ToolStripDropDown
         }
     }
 
+    /**
+     * Gets the value of the .NET property DropDownButtonPressed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripSplitButton.DropDownButtonPressed" target="_top">.NET documentation</a>
+     */
     public boolean getDropDownButtonPressed() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -341,6 +601,13 @@ public class ToolStripSplitButton extends system.windows.forms.ToolStripDropDown
         }
     }
 
+    /**
+     * Gets the value of the .NET property DropDownButtonSelected.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripSplitButton.DropDownButtonSelected" target="_top">.NET documentation</a>
+     */
     public boolean getDropDownButtonSelected() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -355,6 +622,13 @@ public class ToolStripSplitButton extends system.windows.forms.ToolStripDropDown
         }
     }
 
+    /**
+     * Gets the value of the .NET property DropDownButtonWidth.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripSplitButton.DropDownButtonWidth" target="_top">.NET documentation</a>
+     */
     public int getDropDownButtonWidth() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -395,6 +669,23 @@ public class ToolStripSplitButton extends system.windows.forms.ToolStripDropDown
         }
     }
 
+    /**
+     * Sets the value of the .NET property DropDownButtonWidth.
+     *
+     * @param DropDownButtonWidth the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripSplitButton.DropDownButtonWidth" target="_top">.NET documentation</a>
+     */
     public void setDropDownButtonWidth(int DropDownButtonWidth) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.OverflowException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -405,6 +696,27 @@ public class ToolStripSplitButton extends system.windows.forms.ToolStripDropDown
         }
     }
 
+    /**
+     * Gets the value of the .NET property ButtonBounds.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripSplitButton.ButtonBounds" target="_top">.NET documentation</a>
+     */
     public Rectangle getButtonBounds() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.NotSupportedException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -420,6 +732,13 @@ public class ToolStripSplitButton extends system.windows.forms.ToolStripDropDown
         }
     }
 
+    /**
+     * Gets the value of the .NET property DropDownButtonBounds.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripSplitButton.DropDownButtonBounds" target="_top">.NET documentation</a>
+     */
     public Rectangle getDropDownButtonBounds() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -435,6 +754,13 @@ public class ToolStripSplitButton extends system.windows.forms.ToolStripDropDown
         }
     }
 
+    /**
+     * Gets the value of the .NET property SplitterBounds.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripSplitButton.SplitterBounds" target="_top">.NET documentation</a>
+     */
     public Rectangle getSplitterBounds() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -450,6 +776,13 @@ public class ToolStripSplitButton extends system.windows.forms.ToolStripDropDown
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultItem.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripSplitButton.DefaultItem" target="_top">.NET documentation</a>
+     */
     public ToolStripItem getDefaultItem() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -465,6 +798,22 @@ public class ToolStripSplitButton extends system.windows.forms.ToolStripDropDown
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultItem.
+     *
+     * @param DefaultItem the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripSplitButton.DefaultItem" target="_top">.NET documentation</a>
+     */
     public void setDefaultItem(ToolStripItem DefaultItem) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -480,6 +829,13 @@ public class ToolStripSplitButton extends system.windows.forms.ToolStripDropDown
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addButtonClick.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addButtonClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -490,6 +846,13 @@ public class ToolStripSplitButton extends system.windows.forms.ToolStripDropDown
         }
     }
 
+    /**
+     * Invokes the .NET member removeButtonClick.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeButtonClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -500,6 +863,13 @@ public class ToolStripSplitButton extends system.windows.forms.ToolStripDropDown
         }
     }
 
+    /**
+     * Invokes the .NET member addButtonDoubleClick.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addButtonDoubleClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -510,6 +880,13 @@ public class ToolStripSplitButton extends system.windows.forms.ToolStripDropDown
         }
     }
 
+    /**
+     * Invokes the .NET member removeButtonDoubleClick.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeButtonDoubleClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -520,6 +897,13 @@ public class ToolStripSplitButton extends system.windows.forms.ToolStripDropDown
         }
     }
 
+    /**
+     * Invokes the .NET member addDefaultItemChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addDefaultItemChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -530,6 +914,13 @@ public class ToolStripSplitButton extends system.windows.forms.ToolStripDropDown
         }
     }
 
+    /**
+     * Invokes the .NET member removeDefaultItemChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeDefaultItemChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class ManipulationDelta extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ManipulationDelta(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,16 @@ public class ManipulationDelta extends NetObject  {
     public ManipulationDelta() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param translation the argument of type {@code Vector}
+     * @param rotation the argument of type {@code double}
+     * @param scale the argument of type {@code Vector}
+     * @param expansion the argument of type {@code Vector}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationDelta.-ctor" target="_top">.NET documentation</a>
+     */
     public ManipulationDelta(Vector translation, double rotation, Vector scale, Vector expansion) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +181,13 @@ public class ManipulationDelta extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Rotation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationDelta.Rotation" target="_top">.NET documentation</a>
+     */
     public double getRotation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +228,13 @@ public class ManipulationDelta extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Rotation.
+     *
+     * @param Rotation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationDelta.Rotation" target="_top">.NET documentation</a>
+     */
     public void setRotation(double Rotation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +245,13 @@ public class ManipulationDelta extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Expansion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationDelta.Expansion" target="_top">.NET documentation</a>
+     */
     public Vector getExpansion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +267,13 @@ public class ManipulationDelta extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Expansion.
+     *
+     * @param Expansion the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationDelta.Expansion" target="_top">.NET documentation</a>
+     */
     public void setExpansion(Vector Expansion) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +284,13 @@ public class ManipulationDelta extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Scale.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationDelta.Scale" target="_top">.NET documentation</a>
+     */
     public Vector getScale() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +306,13 @@ public class ManipulationDelta extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Scale.
+     *
+     * @param Scale the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationDelta.Scale" target="_top">.NET documentation</a>
+     */
     public void setScale(Vector Scale) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +323,13 @@ public class ManipulationDelta extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Translation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationDelta.Translation" target="_top">.NET documentation</a>
+     */
     public Vector getTranslation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +345,13 @@ public class ManipulationDelta extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Translation.
+     *
+     * @param Translation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationDelta.Translation" target="_top">.NET documentation</a>
+     */
     public void setTranslation(Vector Translation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class Lookup_2<TKey extends IJCOBridgeReflected, TElement extends IJCOBri
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Lookup_2(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,14 @@ public class Lookup_2<TKey extends IJCOBridgeReflected, TElement extends IJCOBri
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param key the argument of type {@code TKey}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Lookup-2.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(TKey key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +181,15 @@ public class Lookup_2<TKey extends IJCOBridgeReflected, TElement extends IJCOBri
         }
     }
 
+    /**
+     * Invokes the .NET member ApplyResultSelector.
+     *
+     * @param <TResult> the type of the generic argument TResult
+     * @param resultSelector the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Lookup-2.ApplyResultSelector" target="_top">.NET documentation</a>
+     */
     public <TResult extends IJCOBridgeReflected> IEnumerable_1 ApplyResultSelector(Func_3 resultSelector) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +209,13 @@ public class Lookup_2<TKey extends IJCOBridgeReflected, TElement extends IJCOBri
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Count.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Lookup-2.Count" target="_top">.NET documentation</a>
+     */
     public int getCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

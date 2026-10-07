@@ -101,7 +101,10 @@ public class DesignerActionPropertyItem extends system.componentmodel.design.Des
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DesignerActionPropertyItem(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,23 @@ public class DesignerActionPropertyItem extends system.componentmodel.design.Des
     public DesignerActionPropertyItem() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param memberName the argument of type {@code java.lang.String}
+     * @param displayName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerActionPropertyItem.-ctor" target="_top">.NET documentation</a>
+     */
     public DesignerActionPropertyItem(java.lang.String memberName, java.lang.String displayName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +181,24 @@ public class DesignerActionPropertyItem extends system.componentmodel.design.Des
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param memberName the argument of type {@code java.lang.String}
+     * @param displayName the argument of type {@code java.lang.String}
+     * @param category the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerActionPropertyItem.-ctor" target="_top">.NET documentation</a>
+     */
     public DesignerActionPropertyItem(java.lang.String memberName, java.lang.String displayName, java.lang.String category) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +209,25 @@ public class DesignerActionPropertyItem extends system.componentmodel.design.Des
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param memberName the argument of type {@code java.lang.String}
+     * @param displayName the argument of type {@code java.lang.String}
+     * @param category the argument of type {@code java.lang.String}
+     * @param description the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerActionPropertyItem.-ctor" target="_top">.NET documentation</a>
+     */
     public DesignerActionPropertyItem(java.lang.String memberName, java.lang.String displayName, java.lang.String category, java.lang.String description) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.security.SecurityException {
         try {
             // add reference to assemblyName.dll file
@@ -190,6 +247,13 @@ public class DesignerActionPropertyItem extends system.componentmodel.design.Des
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RelatedComponent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerActionPropertyItem.RelatedComponent" target="_top">.NET documentation</a>
+     */
     public IComponent getRelatedComponent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +269,13 @@ public class DesignerActionPropertyItem extends system.componentmodel.design.Des
         }
     }
 
+    /**
+     * Sets the value of the .NET property RelatedComponent.
+     *
+     * @param RelatedComponent the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerActionPropertyItem.RelatedComponent" target="_top">.NET documentation</a>
+     */
     public void setRelatedComponent(IComponent RelatedComponent) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +286,13 @@ public class DesignerActionPropertyItem extends system.componentmodel.design.Des
         }
     }
 
+    /**
+     * Gets the value of the .NET property MemberName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerActionPropertyItem.MemberName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMemberName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

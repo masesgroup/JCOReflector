@@ -99,7 +99,10 @@ public class SoapQName extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SoapQName(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class SoapQName extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapQName() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,13 @@ public class SoapQName extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapQName(java.lang.String value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +182,14 @@ public class SoapQName extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapQName(java.lang.String key, java.lang.String name) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +200,15 @@ public class SoapQName extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @param name the argument of type {@code java.lang.String}
+     * @param namespaceValue the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapQName(java.lang.String key, java.lang.String name, java.lang.String namespaceValue) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -190,6 +223,15 @@ public class SoapQName extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Parse.
+     *
+     * @param value the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName.Parse" target="_top">.NET documentation</a>
+     */
     public static SoapQName Parse(java.lang.String value) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -205,6 +247,13 @@ public class SoapQName extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetXsdType.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName.GetXsdType" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetXsdType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +272,13 @@ public class SoapQName extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Key.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName.Key" target="_top">.NET documentation</a>
+     */
     public java.lang.String getKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +293,13 @@ public class SoapQName extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Key.
+     *
+     * @param Key the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName.Key" target="_top">.NET documentation</a>
+     */
     public void setKey(java.lang.String Key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +310,13 @@ public class SoapQName extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +331,13 @@ public class SoapQName extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +348,13 @@ public class SoapQName extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Namespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName.Namespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -285,6 +369,13 @@ public class SoapQName extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Namespace.
+     *
+     * @param Namespace the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName.Namespace" target="_top">.NET documentation</a>
+     */
     public void setNamespace(java.lang.String Namespace) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +386,13 @@ public class SoapQName extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XsdType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName.XsdType" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getXsdType() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

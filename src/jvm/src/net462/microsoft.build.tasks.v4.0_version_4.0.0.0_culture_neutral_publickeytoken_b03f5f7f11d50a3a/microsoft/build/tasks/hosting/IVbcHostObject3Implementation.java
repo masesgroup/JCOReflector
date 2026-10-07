@@ -106,7 +106,10 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IVbcHostObject3Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,13 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Compile.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.Compile" target="_top">.NET documentation</a>
+     */
     public boolean Compile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -162,6 +172,13 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member IsDesignTime.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.IsDesignTime" target="_top">.NET documentation</a>
+     */
     public boolean IsDesignTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +193,13 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member IsUpToDate.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.IsUpToDate" target="_top">.NET documentation</a>
+     */
     public boolean IsUpToDate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +214,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetAdditionalLibPaths.
+     *
+     * @param additionalLibPaths the argument of type {@code java.lang.String[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetAdditionalLibPaths" target="_top">.NET documentation</a>
+     */
     public boolean SetAdditionalLibPaths(java.lang.String[] additionalLibPaths) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +236,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetAdditionalLibPaths.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetAdditionalLibPaths" target="_top">.NET documentation</a>
+     */
     public boolean SetAdditionalLibPaths(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +258,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetAddModules.
+     *
+     * @param addModules the argument of type {@code java.lang.String[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetAddModules" target="_top">.NET documentation</a>
+     */
     public boolean SetAddModules(java.lang.String[] addModules) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +280,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetAddModules.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetAddModules" target="_top">.NET documentation</a>
+     */
     public boolean SetAddModules(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +302,15 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetBaseAddress.
+     *
+     * @param targetType the argument of type {@code java.lang.String}
+     * @param baseAddress the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetBaseAddress" target="_top">.NET documentation</a>
+     */
     public boolean SetBaseAddress(java.lang.String targetType, java.lang.String baseAddress) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +325,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetCodePage.
+     *
+     * @param codePage the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetCodePage" target="_top">.NET documentation</a>
+     */
     public boolean SetCodePage(int codePage) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +347,15 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetDebugType.
+     *
+     * @param emitDebugInformation the argument of type {@code boolean}
+     * @param debugType the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetDebugType" target="_top">.NET documentation</a>
+     */
     public boolean SetDebugType(boolean emitDebugInformation, java.lang.String debugType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +370,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetDefineConstants.
+     *
+     * @param defineConstants the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetDefineConstants" target="_top">.NET documentation</a>
+     */
     public boolean SetDefineConstants(java.lang.String defineConstants) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -302,6 +392,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetDelaySign.
+     *
+     * @param delaySign the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetDelaySign" target="_top">.NET documentation</a>
+     */
     public boolean SetDelaySign(boolean delaySign) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -316,6 +414,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetDisabledWarnings.
+     *
+     * @param disabledWarnings the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetDisabledWarnings" target="_top">.NET documentation</a>
+     */
     public boolean SetDisabledWarnings(java.lang.String disabledWarnings) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -330,6 +436,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetDocumentationFile.
+     *
+     * @param documentationFile the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetDocumentationFile" target="_top">.NET documentation</a>
+     */
     public boolean SetDocumentationFile(java.lang.String documentationFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -344,6 +458,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetErrorReport.
+     *
+     * @param errorReport the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetErrorReport" target="_top">.NET documentation</a>
+     */
     public boolean SetErrorReport(java.lang.String errorReport) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -358,6 +480,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetFileAlignment.
+     *
+     * @param fileAlignment the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetFileAlignment" target="_top">.NET documentation</a>
+     */
     public boolean SetFileAlignment(int fileAlignment) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -372,6 +502,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetGenerateDocumentation.
+     *
+     * @param generateDocumentation the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetGenerateDocumentation" target="_top">.NET documentation</a>
+     */
     public boolean SetGenerateDocumentation(boolean generateDocumentation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -386,6 +524,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetImports.
+     *
+     * @param importsList the argument of type {@code ITaskItem[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetImports" target="_top">.NET documentation</a>
+     */
     public boolean SetImports(ITaskItem[] importsList) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -400,6 +546,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetKeyContainer.
+     *
+     * @param keyContainer the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetKeyContainer" target="_top">.NET documentation</a>
+     */
     public boolean SetKeyContainer(java.lang.String keyContainer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -414,6 +568,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetKeyFile.
+     *
+     * @param keyFile the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetKeyFile" target="_top">.NET documentation</a>
+     */
     public boolean SetKeyFile(java.lang.String keyFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -428,6 +590,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetLanguageVersion.
+     *
+     * @param languageVersion the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetLanguageVersion" target="_top">.NET documentation</a>
+     */
     public boolean SetLanguageVersion(java.lang.String languageVersion) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -442,6 +612,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetLinkResources.
+     *
+     * @param linkResources the argument of type {@code ITaskItem[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetLinkResources" target="_top">.NET documentation</a>
+     */
     public boolean SetLinkResources(ITaskItem[] linkResources) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -456,6 +634,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetMainEntryPoint.
+     *
+     * @param mainEntryPoint the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetMainEntryPoint" target="_top">.NET documentation</a>
+     */
     public boolean SetMainEntryPoint(java.lang.String mainEntryPoint) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -470,6 +656,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetModuleAssemblyName.
+     *
+     * @param moduleAssemblyName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetModuleAssemblyName" target="_top">.NET documentation</a>
+     */
     public boolean SetModuleAssemblyName(java.lang.String moduleAssemblyName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -484,6 +678,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetNoConfig.
+     *
+     * @param noConfig the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetNoConfig" target="_top">.NET documentation</a>
+     */
     public boolean SetNoConfig(boolean noConfig) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -498,6 +700,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetNoStandardLib.
+     *
+     * @param noStandardLib the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetNoStandardLib" target="_top">.NET documentation</a>
+     */
     public boolean SetNoStandardLib(boolean noStandardLib) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -512,6 +722,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetNoWarnings.
+     *
+     * @param noWarnings the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetNoWarnings" target="_top">.NET documentation</a>
+     */
     public boolean SetNoWarnings(boolean noWarnings) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -526,6 +744,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetOptimize.
+     *
+     * @param optimize the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetOptimize" target="_top">.NET documentation</a>
+     */
     public boolean SetOptimize(boolean optimize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -540,6 +766,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetOptionCompare.
+     *
+     * @param optionCompare the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetOptionCompare" target="_top">.NET documentation</a>
+     */
     public boolean SetOptionCompare(java.lang.String optionCompare) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -554,6 +788,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetOptionExplicit.
+     *
+     * @param optionExplicit the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetOptionExplicit" target="_top">.NET documentation</a>
+     */
     public boolean SetOptionExplicit(boolean optionExplicit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -568,6 +810,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetOptionInfer.
+     *
+     * @param optionInfer the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetOptionInfer" target="_top">.NET documentation</a>
+     */
     public boolean SetOptionInfer(boolean optionInfer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -582,6 +832,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetOptionStrict.
+     *
+     * @param optionStrict the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetOptionStrict" target="_top">.NET documentation</a>
+     */
     public boolean SetOptionStrict(boolean optionStrict) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -596,6 +854,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetOptionStrictType.
+     *
+     * @param optionStrictType the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetOptionStrictType" target="_top">.NET documentation</a>
+     */
     public boolean SetOptionStrictType(java.lang.String optionStrictType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -610,6 +876,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetOutputAssembly.
+     *
+     * @param outputAssembly the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetOutputAssembly" target="_top">.NET documentation</a>
+     */
     public boolean SetOutputAssembly(java.lang.String outputAssembly) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -624,6 +898,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetPlatform.
+     *
+     * @param platform the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetPlatform" target="_top">.NET documentation</a>
+     */
     public boolean SetPlatform(java.lang.String platform) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -638,6 +920,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetReferences.
+     *
+     * @param references the argument of type {@code ITaskItem[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetReferences" target="_top">.NET documentation</a>
+     */
     public boolean SetReferences(ITaskItem[] references) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -652,6 +942,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetRemoveIntegerChecks.
+     *
+     * @param removeIntegerChecks the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetRemoveIntegerChecks" target="_top">.NET documentation</a>
+     */
     public boolean SetRemoveIntegerChecks(boolean removeIntegerChecks) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -666,6 +964,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetResources.
+     *
+     * @param resources the argument of type {@code ITaskItem[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetResources" target="_top">.NET documentation</a>
+     */
     public boolean SetResources(ITaskItem[] resources) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -680,6 +986,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetResponseFiles.
+     *
+     * @param responseFiles the argument of type {@code ITaskItem[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetResponseFiles" target="_top">.NET documentation</a>
+     */
     public boolean SetResponseFiles(ITaskItem[] responseFiles) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -694,6 +1008,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetRootNamespace.
+     *
+     * @param rootNamespace the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetRootNamespace" target="_top">.NET documentation</a>
+     */
     public boolean SetRootNamespace(java.lang.String rootNamespace) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -708,6 +1030,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetSdkPath.
+     *
+     * @param sdkPath the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetSdkPath" target="_top">.NET documentation</a>
+     */
     public boolean SetSdkPath(java.lang.String sdkPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -722,6 +1052,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetSources.
+     *
+     * @param sources the argument of type {@code ITaskItem[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetSources" target="_top">.NET documentation</a>
+     */
     public boolean SetSources(ITaskItem[] sources) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -736,6 +1074,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetTargetCompactFramework.
+     *
+     * @param targetCompactFramework the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetTargetCompactFramework" target="_top">.NET documentation</a>
+     */
     public boolean SetTargetCompactFramework(boolean targetCompactFramework) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -750,6 +1096,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetTargetType.
+     *
+     * @param targetType the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetTargetType" target="_top">.NET documentation</a>
+     */
     public boolean SetTargetType(java.lang.String targetType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -764,6 +1118,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetTreatWarningsAsErrors.
+     *
+     * @param treatWarningsAsErrors the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetTreatWarningsAsErrors" target="_top">.NET documentation</a>
+     */
     public boolean SetTreatWarningsAsErrors(boolean treatWarningsAsErrors) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -778,6 +1140,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetWarningsAsErrors.
+     *
+     * @param warningsAsErrors the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetWarningsAsErrors" target="_top">.NET documentation</a>
+     */
     public boolean SetWarningsAsErrors(java.lang.String warningsAsErrors) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -792,6 +1162,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetWarningsNotAsErrors.
+     *
+     * @param warningsNotAsErrors the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetWarningsNotAsErrors" target="_top">.NET documentation</a>
+     */
     public boolean SetWarningsNotAsErrors(java.lang.String warningsNotAsErrors) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -806,6 +1184,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetWin32Icon.
+     *
+     * @param win32Icon the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetWin32Icon" target="_top">.NET documentation</a>
+     */
     public boolean SetWin32Icon(java.lang.String win32Icon) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -820,6 +1206,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetWin32Manifest.
+     *
+     * @param win32Manifest the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetWin32Manifest" target="_top">.NET documentation</a>
+     */
     public boolean SetWin32Manifest(java.lang.String win32Manifest) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -834,6 +1228,14 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetWin32Resource.
+     *
+     * @param win32Resource the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetWin32Resource" target="_top">.NET documentation</a>
+     */
     public boolean SetWin32Resource(java.lang.String win32Resource) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -848,6 +1250,12 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member BeginInitialization.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.BeginInitialization" target="_top">.NET documentation</a>
+     */
     public void BeginInitialization() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -858,6 +1266,12 @@ public class IVbcHostObject3Implementation extends NetObject implements IVbcHost
         }
     }
 
+    /**
+     * Invokes the .NET member EndInitialization.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject3.EndInitialization" target="_top">.NET documentation</a>
+     */
     public void EndInitialization() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

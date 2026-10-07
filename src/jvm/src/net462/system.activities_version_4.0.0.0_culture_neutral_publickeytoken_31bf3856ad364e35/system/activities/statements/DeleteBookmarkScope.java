@@ -100,7 +100,10 @@ public class DeleteBookmarkScope extends system.activities.NativeActivity  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DeleteBookmarkScope(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class DeleteBookmarkScope extends system.activities.NativeActivity  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.DeleteBookmarkScope.-ctor" target="_top">.NET documentation</a>
+     */
     public DeleteBookmarkScope() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class DeleteBookmarkScope extends system.activities.NativeActivity  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Scope.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.DeleteBookmarkScope.Scope" target="_top">.NET documentation</a>
+     */
     public InArgument_1 getScope() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +196,13 @@ public class DeleteBookmarkScope extends system.activities.NativeActivity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Scope.
+     *
+     * @param Scope the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.DeleteBookmarkScope.Scope" target="_top">.NET documentation</a>
+     */
     public void setScope(InArgument_1 Scope) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class ComplexPropertyEntry extends system.web.ui.BuilderPropertyEntry  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ComplexPropertyEntry(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class ComplexPropertyEntry extends system.web.ui.BuilderPropertyEntry  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsCollectionItem.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ComplexPropertyEntry.IsCollectionItem" target="_top">.NET documentation</a>
+     */
     public boolean getIsCollectionItem() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +182,13 @@ public class ComplexPropertyEntry extends system.web.ui.BuilderPropertyEntry  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReadOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ComplexPropertyEntry.ReadOnly" target="_top">.NET documentation</a>
+     */
     public boolean getReadOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +203,13 @@ public class ComplexPropertyEntry extends system.web.ui.BuilderPropertyEntry  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReadOnly.
+     *
+     * @param ReadOnly the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ComplexPropertyEntry.ReadOnly" target="_top">.NET documentation</a>
+     */
     public void setReadOnly(boolean ReadOnly) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

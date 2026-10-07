@@ -104,7 +104,10 @@ public class ITaskItem2Implementation extends NetObject implements ITaskItem2 {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ITaskItem2Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,13 @@ public class ITaskItem2Implementation extends NetObject implements ITaskItem2 {
 
     // Methods section
     
+    /**
+     * Invokes the .NET member CloneCustomMetadata.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ITaskItem2.CloneCustomMetadata" target="_top">.NET documentation</a>
+     */
     public IDictionary CloneCustomMetadata() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -161,6 +171,13 @@ public class ITaskItem2Implementation extends NetObject implements ITaskItem2 {
         }
     }
 
+    /**
+     * Invokes the .NET member CloneCustomMetadataEscaped.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ITaskItem2.CloneCustomMetadataEscaped" target="_top">.NET documentation</a>
+     */
     public IDictionary CloneCustomMetadataEscaped() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +193,14 @@ public class ITaskItem2Implementation extends NetObject implements ITaskItem2 {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMetadata.
+     *
+     * @param metadataName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ITaskItem2.GetMetadata" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetMetadata(java.lang.String metadataName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +215,14 @@ public class ITaskItem2Implementation extends NetObject implements ITaskItem2 {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMetadataValueEscaped.
+     *
+     * @param metadataName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ITaskItem2.GetMetadataValueEscaped" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetMetadataValueEscaped(java.lang.String metadataName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +237,13 @@ public class ITaskItem2Implementation extends NetObject implements ITaskItem2 {
         }
     }
 
+    /**
+     * Invokes the .NET member CopyMetadataTo.
+     *
+     * @param destinationItem the argument of type {@code ITaskItem}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ITaskItem2.CopyMetadataTo" target="_top">.NET documentation</a>
+     */
     public void CopyMetadataTo(ITaskItem destinationItem) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +254,13 @@ public class ITaskItem2Implementation extends NetObject implements ITaskItem2 {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveMetadata.
+     *
+     * @param metadataName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ITaskItem2.RemoveMetadata" target="_top">.NET documentation</a>
+     */
     public void RemoveMetadata(java.lang.String metadataName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +271,14 @@ public class ITaskItem2Implementation extends NetObject implements ITaskItem2 {
         }
     }
 
+    /**
+     * Invokes the .NET member SetMetadata.
+     *
+     * @param metadataName the argument of type {@code java.lang.String}
+     * @param metadataValue the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ITaskItem2.SetMetadata" target="_top">.NET documentation</a>
+     */
     public void SetMetadata(java.lang.String metadataName, java.lang.String metadataValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +289,14 @@ public class ITaskItem2Implementation extends NetObject implements ITaskItem2 {
         }
     }
 
+    /**
+     * Invokes the .NET member SetMetadataValueLiteral.
+     *
+     * @param metadataName the argument of type {@code java.lang.String}
+     * @param metadataValue the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ITaskItem2.SetMetadataValueLiteral" target="_top">.NET documentation</a>
+     */
     public void SetMetadataValueLiteral(java.lang.String metadataName, java.lang.String metadataValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +311,13 @@ public class ITaskItem2Implementation extends NetObject implements ITaskItem2 {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MetadataCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ITaskItem2.MetadataCount" target="_top">.NET documentation</a>
+     */
     public int getMetadataCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +358,13 @@ public class ITaskItem2Implementation extends NetObject implements ITaskItem2 {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MetadataNames.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ITaskItem2.MetadataNames" target="_top">.NET documentation</a>
+     */
     public ICollection getMetadataNames() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +380,13 @@ public class ITaskItem2Implementation extends NetObject implements ITaskItem2 {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EvaluatedIncludeEscaped.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ITaskItem2.EvaluatedIncludeEscaped" target="_top">.NET documentation</a>
+     */
     public java.lang.String getEvaluatedIncludeEscaped() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -317,6 +401,13 @@ public class ITaskItem2Implementation extends NetObject implements ITaskItem2 {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EvaluatedIncludeEscaped.
+     *
+     * @param EvaluatedIncludeEscaped the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ITaskItem2.EvaluatedIncludeEscaped" target="_top">.NET documentation</a>
+     */
     public void setEvaluatedIncludeEscaped(java.lang.String EvaluatedIncludeEscaped) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -327,6 +418,13 @@ public class ITaskItem2Implementation extends NetObject implements ITaskItem2 {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ItemSpec.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ITaskItem2.ItemSpec" target="_top">.NET documentation</a>
+     */
     public java.lang.String getItemSpec() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -341,6 +439,13 @@ public class ITaskItem2Implementation extends NetObject implements ITaskItem2 {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ItemSpec.
+     *
+     * @param ItemSpec the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ITaskItem2.ItemSpec" target="_top">.NET documentation</a>
+     */
     public void setItemSpec(java.lang.String ItemSpec) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

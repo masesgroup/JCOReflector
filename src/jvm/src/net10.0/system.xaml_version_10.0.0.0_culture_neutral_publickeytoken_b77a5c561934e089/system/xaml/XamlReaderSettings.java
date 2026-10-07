@@ -101,7 +101,10 @@ public class XamlReaderSettings extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XamlReaderSettings(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class XamlReaderSettings extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlReaderSettings.-ctor" target="_top">.NET documentation</a>
+     */
     public XamlReaderSettings() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,13 @@ public class XamlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param settings the argument of type {@code XamlReaderSettings}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlReaderSettings.-ctor" target="_top">.NET documentation</a>
+     */
     public XamlReaderSettings(XamlReaderSettings settings) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +192,13 @@ public class XamlReaderSettings extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowProtectedMembersOnRoot.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlReaderSettings.AllowProtectedMembersOnRoot" target="_top">.NET documentation</a>
+     */
     public boolean getAllowProtectedMembersOnRoot() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +213,13 @@ public class XamlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowProtectedMembersOnRoot.
+     *
+     * @param AllowProtectedMembersOnRoot the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlReaderSettings.AllowProtectedMembersOnRoot" target="_top">.NET documentation</a>
+     */
     public void setAllowProtectedMembersOnRoot(boolean AllowProtectedMembersOnRoot) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +230,13 @@ public class XamlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IgnoreUidsOnPropertyElements.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlReaderSettings.IgnoreUidsOnPropertyElements" target="_top">.NET documentation</a>
+     */
     public boolean getIgnoreUidsOnPropertyElements() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +251,13 @@ public class XamlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IgnoreUidsOnPropertyElements.
+     *
+     * @param IgnoreUidsOnPropertyElements the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlReaderSettings.IgnoreUidsOnPropertyElements" target="_top">.NET documentation</a>
+     */
     public void setIgnoreUidsOnPropertyElements(boolean IgnoreUidsOnPropertyElements) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +268,13 @@ public class XamlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProvideLineInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlReaderSettings.ProvideLineInfo" target="_top">.NET documentation</a>
+     */
     public boolean getProvideLineInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +289,13 @@ public class XamlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProvideLineInfo.
+     *
+     * @param ProvideLineInfo the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlReaderSettings.ProvideLineInfo" target="_top">.NET documentation</a>
+     */
     public void setProvideLineInfo(boolean ProvideLineInfo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +306,13 @@ public class XamlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValuesMustBeString.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlReaderSettings.ValuesMustBeString" target="_top">.NET documentation</a>
+     */
     public boolean getValuesMustBeString() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +327,13 @@ public class XamlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ValuesMustBeString.
+     *
+     * @param ValuesMustBeString the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlReaderSettings.ValuesMustBeString" target="_top">.NET documentation</a>
+     */
     public void setValuesMustBeString(boolean ValuesMustBeString) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +344,13 @@ public class XamlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LocalAssembly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlReaderSettings.LocalAssembly" target="_top">.NET documentation</a>
+     */
     public Assembly getLocalAssembly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -287,6 +366,13 @@ public class XamlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LocalAssembly.
+     *
+     * @param LocalAssembly the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlReaderSettings.LocalAssembly" target="_top">.NET documentation</a>
+     */
     public void setLocalAssembly(Assembly LocalAssembly) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -297,6 +383,13 @@ public class XamlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BaseUri.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlReaderSettings.BaseUri" target="_top">.NET documentation</a>
+     */
     public Uri getBaseUri() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -312,6 +405,13 @@ public class XamlReaderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BaseUri.
+     *
+     * @param BaseUri the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlReaderSettings.BaseUri" target="_top">.NET documentation</a>
+     */
     public void setBaseUri(Uri BaseUri) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

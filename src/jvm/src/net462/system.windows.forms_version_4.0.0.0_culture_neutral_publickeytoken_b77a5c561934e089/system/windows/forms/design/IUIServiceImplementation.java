@@ -106,7 +106,10 @@ public class IUIServiceImplementation extends NetObject implements IUIService {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IUIServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,14 @@ public class IUIServiceImplementation extends NetObject implements IUIService {
 
     // Methods section
     
+    /**
+     * Invokes the .NET member CanShowComponentEditor.
+     *
+     * @param component the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.IUIService.CanShowComponentEditor" target="_top">.NET documentation</a>
+     */
     public boolean CanShowComponentEditor(NetObject component) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -162,6 +173,15 @@ public class IUIServiceImplementation extends NetObject implements IUIService {
         }
     }
 
+    /**
+     * Invokes the .NET member ShowComponentEditor.
+     *
+     * @param component the argument of type {@code NetObject}
+     * @param parent the argument of type {@code IWin32Window}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.IUIService.ShowComponentEditor" target="_top">.NET documentation</a>
+     */
     public boolean ShowComponentEditor(NetObject component, IWin32Window parent) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +196,14 @@ public class IUIServiceImplementation extends NetObject implements IUIService {
         }
     }
 
+    /**
+     * Invokes the .NET member ShowToolWindow.
+     *
+     * @param toolWindow the argument of type {@code Guid}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.IUIService.ShowToolWindow" target="_top">.NET documentation</a>
+     */
     public boolean ShowToolWindow(Guid toolWindow) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +218,14 @@ public class IUIServiceImplementation extends NetObject implements IUIService {
         }
     }
 
+    /**
+     * Invokes the .NET member ShowDialog.
+     *
+     * @param form the argument of type {@code Form}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.IUIService.ShowDialog" target="_top">.NET documentation</a>
+     */
     public DialogResult ShowDialog(Form form) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +241,16 @@ public class IUIServiceImplementation extends NetObject implements IUIService {
         }
     }
 
+    /**
+     * Invokes the .NET member ShowMessage.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param caption the argument of type {@code java.lang.String}
+     * @param buttons the argument of type {@code MessageBoxButtons}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.IUIService.ShowMessage" target="_top">.NET documentation</a>
+     */
     public DialogResult ShowMessage(java.lang.String message, java.lang.String caption, MessageBoxButtons buttons) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +266,13 @@ public class IUIServiceImplementation extends NetObject implements IUIService {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDialogOwnerWindow.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.IUIService.GetDialogOwnerWindow" target="_top">.NET documentation</a>
+     */
     public IWin32Window GetDialogOwnerWindow() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +288,12 @@ public class IUIServiceImplementation extends NetObject implements IUIService {
         }
     }
 
+    /**
+     * Invokes the .NET member SetUIDirty.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.IUIService.SetUIDirty" target="_top">.NET documentation</a>
+     */
     public void SetUIDirty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +304,13 @@ public class IUIServiceImplementation extends NetObject implements IUIService {
         }
     }
 
+    /**
+     * Invokes the .NET member ShowError.
+     *
+     * @param ex the argument of type {@code NetException}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.IUIService.ShowError" target="_top">.NET documentation</a>
+     */
     public void ShowError(NetException ex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +321,14 @@ public class IUIServiceImplementation extends NetObject implements IUIService {
         }
     }
 
+    /**
+     * Invokes the .NET member ShowError.
+     *
+     * @param ex the argument of type {@code NetException}
+     * @param message the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.IUIService.ShowError" target="_top">.NET documentation</a>
+     */
     public void ShowError(NetException ex, java.lang.String message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +339,13 @@ public class IUIServiceImplementation extends NetObject implements IUIService {
         }
     }
 
+    /**
+     * Invokes the .NET member ShowError.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.IUIService.ShowError" target="_top">.NET documentation</a>
+     */
     public void ShowError(java.lang.String message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +356,13 @@ public class IUIServiceImplementation extends NetObject implements IUIService {
         }
     }
 
+    /**
+     * Invokes the .NET member ShowMessage.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.IUIService.ShowMessage" target="_top">.NET documentation</a>
+     */
     public void ShowMessage(java.lang.String message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -285,6 +373,14 @@ public class IUIServiceImplementation extends NetObject implements IUIService {
         }
     }
 
+    /**
+     * Invokes the .NET member ShowMessage.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param caption the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.IUIService.ShowMessage" target="_top">.NET documentation</a>
+     */
     public void ShowMessage(java.lang.String message, java.lang.String caption) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -299,6 +395,13 @@ public class IUIServiceImplementation extends NetObject implements IUIService {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Styles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.IUIService.Styles" target="_top">.NET documentation</a>
+     */
     public IDictionary getStyles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

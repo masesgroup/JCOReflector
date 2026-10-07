@@ -101,7 +101,10 @@ public class BrowserCapabilitiesFactory extends system.web.configuration.Browser
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BrowserCapabilitiesFactory(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class BrowserCapabilitiesFactory extends system.web.configuration.Browser
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.BrowserCapabilitiesFactory.-ctor" target="_top">.NET documentation</a>
+     */
     public BrowserCapabilitiesFactory() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +171,27 @@ public class BrowserCapabilitiesFactory extends system.web.configuration.Browser
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ConfigureBrowserCapabilities.
+     *
+     * @param headers the argument of type {@code NameValueCollection}
+     * @param browserCaps the argument of type {@code HttpBrowserCapabilities}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.BrowserCapabilitiesFactory.ConfigureBrowserCapabilities" target="_top">.NET documentation</a>
+     */
     public void ConfigureBrowserCapabilities(NameValueCollection headers, HttpBrowserCapabilities browserCaps) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.InvalidOperationException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.text.regularexpressions.RegexMatchTimeoutException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

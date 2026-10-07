@@ -100,7 +100,10 @@ public class CharacterRange extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CharacterRange(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class CharacterRange extends system.ValueType  {
     public CharacterRange() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param First the argument of type {@code int}
+     * @param Length the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.CharacterRange.-ctor" target="_top">.NET documentation</a>
+     */
     public CharacterRange(int First, int Length) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +176,14 @@ public class CharacterRange extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code CharacterRange}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.CharacterRange.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(CharacterRange other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +202,13 @@ public class CharacterRange extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property First.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.CharacterRange.First" target="_top">.NET documentation</a>
+     */
     public int getFirst() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +249,13 @@ public class CharacterRange extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property First.
+     *
+     * @param First the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.CharacterRange.First" target="_top">.NET documentation</a>
+     */
     public void setFirst(int First) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +266,13 @@ public class CharacterRange extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Length.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.CharacterRange.Length" target="_top">.NET documentation</a>
+     */
     public int getLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +313,13 @@ public class CharacterRange extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Length.
+     *
+     * @param Length the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.CharacterRange.Length" target="_top">.NET documentation</a>
+     */
     public void setLength(int Length) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

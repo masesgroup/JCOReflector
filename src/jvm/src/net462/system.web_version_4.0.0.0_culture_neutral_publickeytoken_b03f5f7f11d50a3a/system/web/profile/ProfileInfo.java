@@ -99,7 +99,10 @@ public class ProfileInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ProfileInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,26 @@ public class ProfileInfo extends NetObject  {
     public ProfileInfo() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param username the argument of type {@code java.lang.String}
+     * @param isAnonymous the argument of type {@code boolean}
+     * @param lastActivityDate the argument of type {@code DateTime}
+     * @param lastUpdatedDate the argument of type {@code DateTime}
+     * @param size the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Profile.ProfileInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public ProfileInfo(java.lang.String username, boolean isAnonymous, DateTime lastActivityDate, DateTime lastUpdatedDate, int size) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +191,13 @@ public class ProfileInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsAnonymous.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Profile.ProfileInfo.IsAnonymous" target="_top">.NET documentation</a>
+     */
     public boolean getIsAnonymous() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +212,13 @@ public class ProfileInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Size.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Profile.ProfileInfo.Size" target="_top">.NET documentation</a>
+     */
     public int getSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +259,18 @@ public class ProfileInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LastActivityDate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Profile.ProfileInfo.LastActivityDate" target="_top">.NET documentation</a>
+     */
     public DateTime getLastActivityDate() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +286,18 @@ public class ProfileInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LastUpdatedDate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Profile.ProfileInfo.LastUpdatedDate" target="_top">.NET documentation</a>
+     */
     public DateTime getLastUpdatedDate() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +313,13 @@ public class ProfileInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UserName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Profile.ProfileInfo.UserName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUserName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

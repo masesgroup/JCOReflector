@@ -102,7 +102,10 @@ public class EtwTrackingBehavior extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EtwTrackingBehavior(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class EtwTrackingBehavior extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Description.EtwTrackingBehavior.-ctor" target="_top">.NET documentation</a>
+     */
     public EtwTrackingBehavior() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,16 @@ public class EtwTrackingBehavior extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AddBindingParameters.
+     *
+     * @param serviceDescription the argument of type {@code ServiceDescription}
+     * @param serviceHostBase the argument of type {@code ServiceHostBase}
+     * @param endpoints the argument of type {@code Collection_1}
+     * @param bindingParameters the argument of type {@code BindingParameterCollection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Description.EtwTrackingBehavior.AddBindingParameters" target="_top">.NET documentation</a>
+     */
     public void AddBindingParameters(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase, Collection_1 endpoints, BindingParameterCollection bindingParameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +192,26 @@ public class EtwTrackingBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ApplyDispatchBehavior.
+     *
+     * @param serviceDescription the argument of type {@code ServiceDescription}
+     * @param serviceHostBase the argument of type {@code ServiceHostBase}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Description.EtwTrackingBehavior.ApplyDispatchBehavior" target="_top">.NET documentation</a>
+     */
     public void ApplyDispatchBehavior(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +222,14 @@ public class EtwTrackingBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Validate.
+     *
+     * @param serviceDescription the argument of type {@code ServiceDescription}
+     * @param serviceHostBase the argument of type {@code ServiceHostBase}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Description.EtwTrackingBehavior.Validate" target="_top">.NET documentation</a>
+     */
     public void Validate(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +244,13 @@ public class EtwTrackingBehavior extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ProfileName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Description.EtwTrackingBehavior.ProfileName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getProfileName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +265,13 @@ public class EtwTrackingBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProfileName.
+     *
+     * @param ProfileName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Description.EtwTrackingBehavior.ProfileName" target="_top">.NET documentation</a>
+     */
     public void setProfileName(java.lang.String ProfileName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

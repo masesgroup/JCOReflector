@@ -102,7 +102,10 @@ public class ChannelDispatcherBase extends system.servicemodel.channels.Communic
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ChannelDispatcherBase(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,12 @@ public class ChannelDispatcherBase extends system.servicemodel.channels.Communic
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CloseInput.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ChannelDispatcherBase.CloseInput" target="_top">.NET documentation</a>
+     */
     public void CloseInput() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +178,13 @@ public class ChannelDispatcherBase extends system.servicemodel.channels.Communic
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Listener.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ChannelDispatcherBase.Listener" target="_top">.NET documentation</a>
+     */
     public IChannelListener getListener() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +200,13 @@ public class ChannelDispatcherBase extends system.servicemodel.channels.Communic
         }
     }
 
+    /**
+     * Gets the value of the .NET property Host.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ChannelDispatcherBase.Host" target="_top">.NET documentation</a>
+     */
     public ServiceHostBase getHost() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -102,7 +102,10 @@ public class EditableDesignerRegion extends system.web.ui.design.DesignerRegion 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EditableDesignerRegion(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,15 @@ public class EditableDesignerRegion extends system.web.ui.design.DesignerRegion 
     public EditableDesignerRegion() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param owner the argument of type {@code ControlDesigner}
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.EditableDesignerRegion.-ctor" target="_top">.NET documentation</a>
+     */
     public EditableDesignerRegion(ControlDesigner owner, java.lang.String name) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +174,16 @@ public class EditableDesignerRegion extends system.web.ui.design.DesignerRegion 
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param owner the argument of type {@code ControlDesigner}
+     * @param name the argument of type {@code java.lang.String}
+     * @param serverControlsOnly the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.EditableDesignerRegion.-ctor" target="_top">.NET documentation</a>
+     */
     public EditableDesignerRegion(ControlDesigner owner, java.lang.String name, boolean serverControlsOnly) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -177,6 +199,22 @@ public class EditableDesignerRegion extends system.web.ui.design.DesignerRegion 
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetChildViewRendering.
+     *
+     * @param control the argument of type {@code Control}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.EditableDesignerRegion.GetChildViewRendering" target="_top">.NET documentation</a>
+     */
     public ViewRendering GetChildViewRendering(Control control) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.web.HttpException, system.OverflowException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +234,13 @@ public class EditableDesignerRegion extends system.web.ui.design.DesignerRegion 
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ServerControlsOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.EditableDesignerRegion.ServerControlsOnly" target="_top">.NET documentation</a>
+     */
     public boolean getServerControlsOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +255,13 @@ public class EditableDesignerRegion extends system.web.ui.design.DesignerRegion 
         }
     }
 
+    /**
+     * Sets the value of the .NET property ServerControlsOnly.
+     *
+     * @param ServerControlsOnly the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.EditableDesignerRegion.ServerControlsOnly" target="_top">.NET documentation</a>
+     */
     public void setServerControlsOnly(boolean ServerControlsOnly) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +272,13 @@ public class EditableDesignerRegion extends system.web.ui.design.DesignerRegion 
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsDataBinding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.EditableDesignerRegion.SupportsDataBinding" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsDataBinding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +293,13 @@ public class EditableDesignerRegion extends system.web.ui.design.DesignerRegion 
         }
     }
 
+    /**
+     * Sets the value of the .NET property SupportsDataBinding.
+     *
+     * @param SupportsDataBinding the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.EditableDesignerRegion.SupportsDataBinding" target="_top">.NET documentation</a>
+     */
     public void setSupportsDataBinding(boolean SupportsDataBinding) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +310,13 @@ public class EditableDesignerRegion extends system.web.ui.design.DesignerRegion 
         }
     }
 
+    /**
+     * Gets the value of the .NET property Content.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.EditableDesignerRegion.Content" target="_top">.NET documentation</a>
+     */
     public java.lang.String getContent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +331,13 @@ public class EditableDesignerRegion extends system.web.ui.design.DesignerRegion 
         }
     }
 
+    /**
+     * Sets the value of the .NET property Content.
+     *
+     * @param Content the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.EditableDesignerRegion.Content" target="_top">.NET documentation</a>
+     */
     public void setContent(java.lang.String Content) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

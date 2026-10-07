@@ -99,7 +99,10 @@ public class CommandLineBuilderExtension extends microsoft.build.utilities.Comma
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CommandLineBuilderExtension(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,15 @@ public class CommandLineBuilderExtension extends microsoft.build.utilities.Comma
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.CommandLineBuilderExtension.-ctor" target="_top">.NET documentation</a>
+     */
     public CommandLineBuilderExtension() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file

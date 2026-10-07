@@ -101,7 +101,10 @@ public class SendPacketsElement extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SendPacketsElement(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,27 @@ public class SendPacketsElement extends NetObject  {
     public SendPacketsElement() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param buffer the argument of type {@code byte[]}
+     * @param offset the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @param endOfPacket the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SendPacketsElement.-ctor" target="_top">.NET documentation</a>
+     */
     public SendPacketsElement(byte[] buffer, int offset, int count, boolean endOfPacket) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +185,24 @@ public class SendPacketsElement extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param buffer the argument of type {@code byte[]}
+     * @param offset the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SendPacketsElement.-ctor" target="_top">.NET documentation</a>
+     */
     public SendPacketsElement(byte[] buffer, int offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +213,22 @@ public class SendPacketsElement extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param buffer the argument of type {@code byte[]}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SendPacketsElement.-ctor" target="_top">.NET documentation</a>
+     */
     public SendPacketsElement(byte[] buffer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +239,27 @@ public class SendPacketsElement extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param fileStream the argument of type {@code FileStream}
+     * @param offset the argument of type {@code long}
+     * @param count the argument of type {@code int}
+     * @param endOfPacket the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SendPacketsElement.-ctor" target="_top">.NET documentation</a>
+     */
     public SendPacketsElement(FileStream fileStream, long offset, int count, boolean endOfPacket) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -191,6 +270,23 @@ public class SendPacketsElement extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param fileStream the argument of type {@code FileStream}
+     * @param offset the argument of type {@code long}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SendPacketsElement.-ctor" target="_top">.NET documentation</a>
+     */
     public SendPacketsElement(FileStream fileStream, long offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -201,6 +297,21 @@ public class SendPacketsElement extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param fileStream the argument of type {@code FileStream}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SendPacketsElement.-ctor" target="_top">.NET documentation</a>
+     */
     public SendPacketsElement(FileStream fileStream) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -211,6 +322,14 @@ public class SendPacketsElement extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param buffer the argument of type {@code ReadOnlyMemory_1}
+     * @param endOfPacket the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SendPacketsElement.-ctor" target="_top">.NET documentation</a>
+     */
     public SendPacketsElement(ReadOnlyMemory_1 buffer, boolean endOfPacket) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -221,6 +340,13 @@ public class SendPacketsElement extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param buffer the argument of type {@code ReadOnlyMemory_1}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SendPacketsElement.-ctor" target="_top">.NET documentation</a>
+     */
     public SendPacketsElement(ReadOnlyMemory_1 buffer) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -231,6 +357,24 @@ public class SendPacketsElement extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param filepath the argument of type {@code java.lang.String}
+     * @param offset the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @param endOfPacket the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SendPacketsElement.-ctor" target="_top">.NET documentation</a>
+     */
     public SendPacketsElement(java.lang.String filepath, int offset, int count, boolean endOfPacket) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -241,6 +385,23 @@ public class SendPacketsElement extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param filepath the argument of type {@code java.lang.String}
+     * @param offset the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SendPacketsElement.-ctor" target="_top">.NET documentation</a>
+     */
     public SendPacketsElement(java.lang.String filepath, int offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -251,6 +412,27 @@ public class SendPacketsElement extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param filepath the argument of type {@code java.lang.String}
+     * @param offset the argument of type {@code long}
+     * @param count the argument of type {@code int}
+     * @param endOfPacket the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SendPacketsElement.-ctor" target="_top">.NET documentation</a>
+     */
     public SendPacketsElement(java.lang.String filepath, long offset, int count, boolean endOfPacket) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -261,6 +443,23 @@ public class SendPacketsElement extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param filepath the argument of type {@code java.lang.String}
+     * @param offset the argument of type {@code long}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SendPacketsElement.-ctor" target="_top">.NET documentation</a>
+     */
     public SendPacketsElement(java.lang.String filepath, long offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -271,6 +470,21 @@ public class SendPacketsElement extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param filepath the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SendPacketsElement.-ctor" target="_top">.NET documentation</a>
+     */
     public SendPacketsElement(java.lang.String filepath) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -290,6 +504,13 @@ public class SendPacketsElement extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EndOfPacket.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SendPacketsElement.EndOfPacket" target="_top">.NET documentation</a>
+     */
     public boolean getEndOfPacket() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +525,13 @@ public class SendPacketsElement extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EndOfPacket.
+     *
+     * @param EndOfPacket the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SendPacketsElement.EndOfPacket" target="_top">.NET documentation</a>
+     */
     public void setEndOfPacket(boolean EndOfPacket) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -314,6 +542,13 @@ public class SendPacketsElement extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Buffer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SendPacketsElement.Buffer" target="_top">.NET documentation</a>
+     */
     public byte[] getBuffer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -337,6 +572,13 @@ public class SendPacketsElement extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Buffer.
+     *
+     * @param Buffer the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SendPacketsElement.Buffer" target="_top">.NET documentation</a>
+     */
     public void setBuffer(byte[] Buffer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -347,6 +589,13 @@ public class SendPacketsElement extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Count.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SendPacketsElement.Count" target="_top">.NET documentation</a>
+     */
     public int getCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -387,6 +636,13 @@ public class SendPacketsElement extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Count.
+     *
+     * @param Count the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SendPacketsElement.Count" target="_top">.NET documentation</a>
+     */
     public void setCount(int Count) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -397,6 +653,13 @@ public class SendPacketsElement extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Offset.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SendPacketsElement.Offset" target="_top">.NET documentation</a>
+     */
     public int getOffset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -437,6 +700,13 @@ public class SendPacketsElement extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OffsetLong.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SendPacketsElement.OffsetLong" target="_top">.NET documentation</a>
+     */
     public long getOffsetLong() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -477,6 +747,13 @@ public class SendPacketsElement extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OffsetLong.
+     *
+     * @param OffsetLong the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SendPacketsElement.OffsetLong" target="_top">.NET documentation</a>
+     */
     public void setOffsetLong(long OffsetLong) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -487,6 +764,13 @@ public class SendPacketsElement extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FileStream.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SendPacketsElement.FileStream" target="_top">.NET documentation</a>
+     */
     public FileStream getFileStream() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -502,6 +786,13 @@ public class SendPacketsElement extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FileStream.
+     *
+     * @param FileStream the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SendPacketsElement.FileStream" target="_top">.NET documentation</a>
+     */
     public void setFileStream(FileStream FileStream) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -512,6 +803,13 @@ public class SendPacketsElement extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MemoryBuffer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SendPacketsElement.MemoryBuffer" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getMemoryBuffer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -527,6 +825,13 @@ public class SendPacketsElement extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MemoryBuffer.
+     *
+     * @param MemoryBuffer the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SendPacketsElement.MemoryBuffer" target="_top">.NET documentation</a>
+     */
     public void setMemoryBuffer(Nullable_1 MemoryBuffer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -537,6 +842,13 @@ public class SendPacketsElement extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FilePath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SendPacketsElement.FilePath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFilePath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -551,6 +863,13 @@ public class SendPacketsElement extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FilePath.
+     *
+     * @param FilePath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SendPacketsElement.FilePath" target="_top">.NET documentation</a>
+     */
     public void setFilePath(java.lang.String FilePath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

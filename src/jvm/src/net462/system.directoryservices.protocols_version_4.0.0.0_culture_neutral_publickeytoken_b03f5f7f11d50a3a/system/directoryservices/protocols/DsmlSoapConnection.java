@@ -100,7 +100,10 @@ public class DsmlSoapConnection extends system.directoryservices.protocols.Direc
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DsmlSoapConnection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,12 @@ public class DsmlSoapConnection extends system.directoryservices.protocols.Direc
     
     // Methods section
     
+    /**
+     * Invokes the .NET member BeginSession.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.DsmlSoapConnection.BeginSession" target="_top">.NET documentation</a>
+     */
     public void BeginSession() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -163,6 +172,12 @@ public class DsmlSoapConnection extends system.directoryservices.protocols.Direc
         }
     }
 
+    /**
+     * Invokes the .NET member EndSession.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.DsmlSoapConnection.EndSession" target="_top">.NET documentation</a>
+     */
     public void EndSession() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +192,13 @@ public class DsmlSoapConnection extends system.directoryservices.protocols.Direc
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SessionId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.DsmlSoapConnection.SessionId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSessionId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +213,13 @@ public class DsmlSoapConnection extends system.directoryservices.protocols.Direc
         }
     }
 
+    /**
+     * Gets the value of the .NET property SoapRequestHeader.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.DsmlSoapConnection.SoapRequestHeader" target="_top">.NET documentation</a>
+     */
     public XmlNode getSoapRequestHeader() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +235,13 @@ public class DsmlSoapConnection extends system.directoryservices.protocols.Direc
         }
     }
 
+    /**
+     * Sets the value of the .NET property SoapRequestHeader.
+     *
+     * @param SoapRequestHeader the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.DsmlSoapConnection.SoapRequestHeader" target="_top">.NET documentation</a>
+     */
     public void setSoapRequestHeader(XmlNode SoapRequestHeader) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

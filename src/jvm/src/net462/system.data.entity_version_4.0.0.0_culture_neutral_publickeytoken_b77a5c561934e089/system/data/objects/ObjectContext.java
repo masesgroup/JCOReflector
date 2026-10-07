@@ -120,7 +120,10 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ObjectContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -170,6 +173,28 @@ public class ObjectContext extends NetObject implements AutoCloseable {
     public ObjectContext() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param connection the argument of type {@code EntityConnection}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.-ctor" target="_top">.NET documentation</a>
+     */
     public ObjectContext(EntityConnection connection) throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.data.MetadataException, system.ArgumentOutOfRangeException, system.threading.SynchronizationLockException, system.threading.LockRecursionException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +205,32 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param connectionString the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.data.ProviderIncompatibleException if the .NET member raises it
+     * @throws system.data.EntityException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.-ctor" target="_top">.NET documentation</a>
+     */
     public ObjectContext(java.lang.String connectionString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.data.ProviderIncompatibleException, system.data.EntityException, system.MulticastNotSupportedException, system.data.MetadataException, system.threading.SynchronizationLockException, system.threading.LockRecursionException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -195,6 +246,26 @@ public class ObjectContext extends NetObject implements AutoCloseable {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member DatabaseExists.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.data.ProviderIncompatibleException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.DatabaseExists" target="_top">.NET documentation</a>
+     */
     public boolean DatabaseExists() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.data.MetadataException, system.ArgumentOutOfRangeException, system.threading.SynchronizationLockException, system.threading.LockRecursionException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.data.ProviderIncompatibleException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +280,32 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetObjectByKey.
+     *
+     * @param key the argument of type {@code EntityKey}
+     * @param value the argument of type {@code JCORefOut<NetObject>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.data.MappingException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.data.ProviderIncompatibleException if the .NET member raises it
+     * @throws system.data.EntityCommandExecutionException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.TryGetObjectByKey" target="_top">.NET documentation</a>
+     */
     public boolean TryGetObjectByKey(EntityKey key, JCORefOut<NetObject> value) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.data.MappingException, system.data.MetadataException, system.threading.SynchronizationLockException, system.ObjectDisposedException, system.threading.LockRecursionException, system.NotImplementedException, system.NotSupportedException, system.FormatException, system.data.ProviderIncompatibleException, system.data.EntityCommandExecutionException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +320,33 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member ExecuteFunction.
+     *
+     * @param functionName the argument of type {@code java.lang.String}
+     * @param parameters the argument of type {@code ObjectParameter...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.data.MappingException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.transactions.TransactionException if the .NET member raises it
+     * @throws system.transactions.TransactionManagerCommunicationException if the .NET member raises it
+     * @throws system.data.EntityCommandExecutionException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.ExecuteFunction" target="_top">.NET documentation</a>
+     */
     public int ExecuteFunction(java.lang.String functionName, ObjectParameter... parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.data.MappingException, system.data.MetadataException, system.threading.SynchronizationLockException, system.NotSupportedException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.PlatformNotSupportedException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException, system.data.EntityCommandExecutionException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +387,31 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member ExecuteStoreCommand.
+     *
+     * @param commandText the argument of type {@code java.lang.String}
+     * @param parameters the argument of type {@code NetObject...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.data.MappingException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.transactions.TransactionException if the .NET member raises it
+     * @throws system.transactions.TransactionManagerCommunicationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.ExecuteStoreCommand" target="_top">.NET documentation</a>
+     */
     public int ExecuteStoreCommand(java.lang.String commandText, NetObject... parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.data.MappingException, system.data.MetadataException, system.threading.SynchronizationLockException, system.io.FileNotFoundException, system.NotSupportedException, system.PlatformNotSupportedException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +452,24 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member SaveChanges.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.data.EntityException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.SaveChanges" target="_top">.NET documentation</a>
+     */
     public int SaveChanges() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.resources.MissingManifestResourceException, system.data.MetadataException, system.data.EntityException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -343,6 +510,25 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member SaveChanges.
+     *
+     * @param acceptChangesDuringSave the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.data.EntityException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.SaveChanges" target="_top">.NET documentation</a>
+     */
     public int SaveChanges(boolean acceptChangesDuringSave) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.resources.MissingManifestResourceException, system.data.MetadataException, system.data.EntityException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -383,6 +569,33 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member SaveChanges.
+     *
+     * @param options the argument of type {@code SaveOptions}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.data.EntityException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.transactions.TransactionException if the .NET member raises it
+     * @throws system.transactions.TransactionManagerCommunicationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.SaveChanges" target="_top">.NET documentation</a>
+     */
     public int SaveChanges(SaveOptions options) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.data.MetadataException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.data.EntityException, system.NotImplementedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.PlatformNotSupportedException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -423,6 +636,29 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member GetKnownProxyTypes.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.GetKnownProxyTypes" target="_top">.NET documentation</a>
+     */
     public static IEnumerable_1 GetKnownProxyTypes() throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.threading.LockRecursionException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -438,6 +674,28 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateEntityKey.
+     *
+     * @param entitySetName the argument of type {@code java.lang.String}
+     * @param entity the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.data.MappingException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.CreateEntityKey" target="_top">.NET documentation</a>
+     */
     public EntityKey CreateEntityKey(java.lang.String entitySetName, NetObject entity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.data.MappingException, system.data.MetadataException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -453,6 +711,28 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateQuery.
+     *
+     * @param <T> the type of the generic argument T
+     * @param queryString the argument of type {@code java.lang.String}
+     * @param parameters the argument of type {@code ObjectParameter...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.data.MappingException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.CreateQuery" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> ObjectQuery_1 CreateQuery(java.lang.String queryString, ObjectParameter... parameters) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.data.MappingException, system.data.MetadataException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.NotImplementedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -468,6 +748,37 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member ExecuteFunction.
+     *
+     * @param <TElement> the type of the generic argument TElement
+     * @param functionName the argument of type {@code java.lang.String}
+     * @param mergeOption the argument of type {@code MergeOption}
+     * @param parameters the argument of type {@code ObjectParameter...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.data.MappingException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @throws system.data.ProviderIncompatibleException if the .NET member raises it
+     * @throws system.data.EntityCommandExecutionException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.ExecuteFunction" target="_top">.NET documentation</a>
+     */
     public <TElement extends IJCOBridgeReflected> ObjectResult_1 ExecuteFunction(java.lang.String functionName, MergeOption mergeOption, ObjectParameter... parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.data.MappingException, system.data.MetadataException, system.threading.SynchronizationLockException, system.NotSupportedException, system.MulticastNotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.data.EntitySqlException, system.data.ProviderIncompatibleException, system.data.EntityCommandExecutionException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -483,6 +794,37 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member ExecuteStoreQuery.
+     *
+     * @param <TElement> the type of the generic argument TElement
+     * @param commandText the argument of type {@code java.lang.String}
+     * @param parameters the argument of type {@code NetObject...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.data.MappingException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.data.EntityCommandExecutionException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.data.ProviderIncompatibleException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.ExecuteStoreQuery" target="_top">.NET documentation</a>
+     */
     public <TElement extends IJCOBridgeReflected> ObjectResult_1 ExecuteStoreQuery(java.lang.String commandText, NetObject... parameters) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.data.MappingException, system.data.MetadataException, system.resources.MissingManifestResourceException, system.threading.SynchronizationLockException, system.ObjectDisposedException, system.threading.LockRecursionException, system.ArgumentException, system.NotImplementedException, system.FormatException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.data.EntityCommandExecutionException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.data.ProviderIncompatibleException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -498,6 +840,35 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Translate.
+     *
+     * @param <TElement> the type of the generic argument TElement
+     * @param reader the argument of type {@code DbDataReader}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.data.MappingException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.data.EntityCommandExecutionException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.data.ProviderIncompatibleException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.Translate" target="_top">.NET documentation</a>
+     */
     public <TElement extends IJCOBridgeReflected> ObjectResult_1 Translate(DbDataReader reader) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.data.MappingException, system.data.MetadataException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.NotImplementedException, system.NotSupportedException, system.threading.AbandonedMutexException, system.io.FileNotFoundException, system.collections.generic.KeyNotFoundException, system.data.EntityCommandExecutionException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.data.ProviderIncompatibleException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -513,6 +884,39 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member ExecuteStoreQuery.
+     *
+     * @param <TEntity> the type of the generic argument TEntity
+     * @param commandText the argument of type {@code java.lang.String}
+     * @param entitySetName the argument of type {@code java.lang.String}
+     * @param mergeOption the argument of type {@code MergeOption}
+     * @param parameters the argument of type {@code NetObject...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.data.MappingException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.data.EntityCommandExecutionException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.data.ProviderIncompatibleException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.ExecuteStoreQuery" target="_top">.NET documentation</a>
+     */
     public <TEntity extends IJCOBridgeReflected> ObjectResult_1 ExecuteStoreQuery(java.lang.String commandText, java.lang.String entitySetName, MergeOption mergeOption, NetObject... parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.data.MappingException, system.data.MetadataException, system.threading.SynchronizationLockException, system.threading.LockRecursionException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.data.EntityCommandExecutionException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.data.ProviderIncompatibleException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -528,6 +932,38 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Translate.
+     *
+     * @param <TEntity> the type of the generic argument TEntity
+     * @param reader the argument of type {@code DbDataReader}
+     * @param entitySetName the argument of type {@code java.lang.String}
+     * @param mergeOption the argument of type {@code MergeOption}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.data.MappingException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.data.EntityCommandExecutionException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.data.ProviderIncompatibleException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.Translate" target="_top">.NET documentation</a>
+     */
     public <TEntity extends IJCOBridgeReflected> ObjectResult_1 Translate(DbDataReader reader, java.lang.String entitySetName, MergeOption mergeOption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.data.MappingException, system.data.MetadataException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.NotSupportedException, system.io.FileNotFoundException, system.collections.generic.KeyNotFoundException, system.data.EntityCommandExecutionException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.data.ProviderIncompatibleException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -543,6 +979,26 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateObjectSet.
+     *
+     * @param <TEntity> the type of the generic argument TEntity
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.data.MappingException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.CreateObjectSet" target="_top">.NET documentation</a>
+     */
     public <TEntity extends IJCOBridgeReflected> ObjectSet_1 CreateObjectSet() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.data.MappingException, system.InvalidOperationException, system.data.MetadataException, system.NotSupportedException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -558,6 +1014,26 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateObjectSet.
+     *
+     * @param <TEntity> the type of the generic argument TEntity
+     * @param entitySetName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.data.MappingException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.CreateObjectSet" target="_top">.NET documentation</a>
+     */
     public <TEntity extends IJCOBridgeReflected> ObjectSet_1 CreateObjectSet(java.lang.String entitySetName) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.data.MappingException, system.data.MetadataException, system.threading.SynchronizationLockException, system.NotImplementedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -573,6 +1049,32 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member GetObjectByKey.
+     *
+     * @param key the argument of type {@code EntityKey}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.data.MappingException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.data.ProviderIncompatibleException if the .NET member raises it
+     * @throws system.data.EntityCommandExecutionException if the .NET member raises it
+     * @throws system.data.ObjectNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.GetObjectByKey" target="_top">.NET documentation</a>
+     */
     public NetObject GetObjectByKey(EntityKey key) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.data.MappingException, system.data.MetadataException, system.threading.SynchronizationLockException, system.threading.LockRecursionException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.FormatException, system.OutOfMemoryException, system.data.ProviderIncompatibleException, system.data.EntityCommandExecutionException, system.data.ObjectNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -588,6 +1090,26 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateDatabaseScript.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.data.ProviderIncompatibleException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.CreateDatabaseScript" target="_top">.NET documentation</a>
+     */
     public java.lang.String CreateDatabaseScript() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.data.MetadataException, system.ArgumentOutOfRangeException, system.threading.SynchronizationLockException, system.threading.LockRecursionException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.data.ProviderIncompatibleException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -602,6 +1124,15 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member GetObjectType.
+     *
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.GetObjectType" target="_top">.NET documentation</a>
+     */
     public static NetType GetObjectType(NetType type) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -617,6 +1148,22 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member AcceptAllChanges.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.AcceptAllChanges" target="_top">.NET documentation</a>
+     */
     public void AcceptAllChanges() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -627,6 +1174,29 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member AddObject.
+     *
+     * @param entitySetName the argument of type {@code java.lang.String}
+     * @param entity the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.data.MappingException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.AddObject" target="_top">.NET documentation</a>
+     */
     public void AddObject(java.lang.String entitySetName, NetObject entity) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.threading.LockRecursionException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException, system.OutOfMemoryException, system.TypeLoadException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -637,6 +1207,26 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member ApplyPropertyChanges.
+     *
+     * @param entitySetName the argument of type {@code java.lang.String}
+     * @param changed the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.data.MappingException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.ApplyPropertyChanges" target="_top">.NET documentation</a>
+     */
     public void ApplyPropertyChanges(java.lang.String entitySetName, NetObject changed) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.threading.SynchronizationLockException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -647,6 +1237,28 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Attach.
+     *
+     * @param entity the argument of type {@code IEntityWithKey}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.data.MappingException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.Attach" target="_top">.NET documentation</a>
+     */
     public void Attach(IEntityWithKey entity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException, system.NullReferenceException, system.threading.LockRecursionException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -657,6 +1269,29 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member AttachTo.
+     *
+     * @param entitySetName the argument of type {@code java.lang.String}
+     * @param entity the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.data.MappingException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.AttachTo" target="_top">.NET documentation</a>
+     */
     public void AttachTo(java.lang.String entitySetName, NetObject entity) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.threading.LockRecursionException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.TypeLoadException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -667,6 +1302,25 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateDatabase.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.data.ProviderIncompatibleException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.CreateDatabase" target="_top">.NET documentation</a>
+     */
     public void CreateDatabase() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.data.MetadataException, system.ArgumentOutOfRangeException, system.threading.SynchronizationLockException, system.threading.LockRecursionException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.data.ProviderIncompatibleException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -677,6 +1331,36 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateProxyTypes.
+     *
+     * @param types the argument of type {@code IEnumerable_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.MappingException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.CreateProxyTypes" target="_top">.NET documentation</a>
+     */
     public void CreateProxyTypes(IEnumerable_1 types) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.data.MappingException, system.OutOfMemoryException, system.InvalidOperationException, system.data.MetadataException, system.threading.SynchronizationLockException, system.ObjectDisposedException, system.threading.LockRecursionException, system.NotImplementedException, system.NotSupportedException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -687,6 +1371,25 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member DeleteDatabase.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.data.ProviderIncompatibleException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.DeleteDatabase" target="_top">.NET documentation</a>
+     */
     public void DeleteDatabase() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.data.MetadataException, system.ArgumentOutOfRangeException, system.threading.SynchronizationLockException, system.threading.LockRecursionException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.data.ProviderIncompatibleException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -697,6 +1400,21 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member DeleteObject.
+     *
+     * @param entity the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.DeleteObject" target="_top">.NET documentation</a>
+     */
     public void DeleteObject(NetObject entity) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -707,6 +1425,25 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Detach.
+     *
+     * @param entity the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.Detach" target="_top">.NET documentation</a>
+     */
     public void Detach(NetObject entity) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.data.MetadataException, system.threading.SynchronizationLockException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -717,6 +1454,24 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member DetectChanges.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.data.EntityException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.DetectChanges" target="_top">.NET documentation</a>
+     */
     public void DetectChanges() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.data.MetadataException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.data.EntityException, system.NotImplementedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -727,6 +1482,14 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -737,6 +1500,25 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member LoadProperty.
+     *
+     * @param entity the argument of type {@code NetObject}
+     * @param navigationProperty the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.data.MappingException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.LoadProperty" target="_top">.NET documentation</a>
+     */
     public void LoadProperty(NetObject entity, java.lang.String navigationProperty) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.IndexOutOfRangeException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -747,6 +1529,26 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member LoadProperty.
+     *
+     * @param entity the argument of type {@code NetObject}
+     * @param navigationProperty the argument of type {@code java.lang.String}
+     * @param mergeOption the argument of type {@code MergeOption}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.data.MappingException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.LoadProperty" target="_top">.NET documentation</a>
+     */
     public void LoadProperty(NetObject entity, java.lang.String navigationProperty, MergeOption mergeOption) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.IndexOutOfRangeException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -757,6 +1559,27 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member LoadProperty.
+     *
+     * @param <TEntity> the type of the generic argument TEntity
+     * @param entity the argument of type {@code TEntity}
+     * @param selector the argument of type {@code Expression_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.data.MappingException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.LoadProperty" target="_top">.NET documentation</a>
+     */
     public <TEntity extends IJCOBridgeReflected> void LoadProperty(TEntity entity, Expression_1 selector) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.threading.SynchronizationLockException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -767,6 +1590,28 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member LoadProperty.
+     *
+     * @param <TEntity> the type of the generic argument TEntity
+     * @param entity the argument of type {@code TEntity}
+     * @param selector the argument of type {@code Expression_1}
+     * @param mergeOption the argument of type {@code MergeOption}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.data.MappingException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.LoadProperty" target="_top">.NET documentation</a>
+     */
     public <TEntity extends IJCOBridgeReflected> void LoadProperty(TEntity entity, Expression_1 selector, MergeOption mergeOption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.threading.SynchronizationLockException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -777,6 +1622,31 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Refresh.
+     *
+     * @param refreshMode the argument of type {@code RefreshMode}
+     * @param collection the argument of type {@code IEnumerable}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.data.MappingException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.data.ProviderIncompatibleException if the .NET member raises it
+     * @throws system.data.EntityCommandCompilationException if the .NET member raises it
+     * @throws system.data.EntityCommandExecutionException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.Refresh" target="_top">.NET documentation</a>
+     */
     public void Refresh(RefreshMode refreshMode, IEnumerable collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.threading.SynchronizationLockException, system.data.MappingException, system.data.MetadataException, system.NullReferenceException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.data.ProviderIncompatibleException, system.data.EntityCommandCompilationException, system.data.EntityCommandExecutionException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -787,6 +1657,31 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Refresh.
+     *
+     * @param refreshMode the argument of type {@code RefreshMode}
+     * @param entity the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.data.MappingException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.data.ProviderIncompatibleException if the .NET member raises it
+     * @throws system.data.EntityCommandCompilationException if the .NET member raises it
+     * @throws system.data.EntityCommandExecutionException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.Refresh" target="_top">.NET documentation</a>
+     */
     public void Refresh(RefreshMode refreshMode, NetObject entity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.threading.SynchronizationLockException, system.data.MappingException, system.data.MetadataException, system.NullReferenceException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.data.ProviderIncompatibleException, system.data.EntityCommandCompilationException, system.data.EntityCommandExecutionException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -814,6 +1709,22 @@ public class ObjectContext extends NetObject implements AutoCloseable {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Connection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.Connection" target="_top">.NET documentation</a>
+     */
     public DbConnection getConnection() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -829,6 +1740,13 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MetadataWorkspace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.MetadataWorkspace" target="_top">.NET documentation</a>
+     */
     public MetadataWorkspace getMetadataWorkspace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -844,6 +1762,13 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContextOptions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.ContextOptions" target="_top">.NET documentation</a>
+     */
     public ObjectContextOptions getContextOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -859,6 +1784,16 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ObjectStateManager.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.ObjectStateManager" target="_top">.NET documentation</a>
+     */
     public ObjectStateManager getObjectStateManager() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -874,6 +1809,13 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CommandTimeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.CommandTimeout" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getCommandTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -889,6 +1831,22 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CommandTimeout.
+     *
+     * @param CommandTimeout the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.CommandTimeout" target="_top">.NET documentation</a>
+     */
     public void setCommandTimeout(Nullable_1 CommandTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -899,6 +1857,14 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultContainerName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.DefaultContainerName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDefaultContainerName() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -913,6 +1879,20 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultContainerName.
+     *
+     * @param DefaultContainerName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.data.MappingException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.DefaultContainerName" target="_top">.NET documentation</a>
+     */
     public void setDefaultContainerName(java.lang.String DefaultContainerName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.data.MappingException, system.InvalidOperationException, system.data.MetadataException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -928,6 +1908,13 @@ public class ObjectContext extends NetObject implements AutoCloseable {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addObjectMaterialized.
+     *
+     * @param handler the argument of type {@code ObjectMaterializedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addObjectMaterialized(ObjectMaterializedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -938,6 +1925,13 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member removeObjectMaterialized.
+     *
+     * @param handler the argument of type {@code ObjectMaterializedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeObjectMaterialized(ObjectMaterializedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -948,6 +1942,13 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member addSavingChanges.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addSavingChanges(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -958,6 +1959,13 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member removeSavingChanges.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeSavingChanges(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

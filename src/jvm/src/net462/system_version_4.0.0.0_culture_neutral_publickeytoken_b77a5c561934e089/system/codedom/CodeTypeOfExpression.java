@@ -100,7 +100,10 @@ public class CodeTypeOfExpression extends system.codedom.CodeExpression  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodeTypeOfExpression(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class CodeTypeOfExpression extends system.codedom.CodeExpression  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeOfExpression.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeTypeOfExpression() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +166,13 @@ public class CodeTypeOfExpression extends system.codedom.CodeExpression  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param type the argument of type {@code CodeTypeReference}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeOfExpression.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeTypeOfExpression(CodeTypeReference type) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +183,17 @@ public class CodeTypeOfExpression extends system.codedom.CodeExpression  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param type the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeOfExpression.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeTypeOfExpression(java.lang.String type) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -177,6 +204,16 @@ public class CodeTypeOfExpression extends system.codedom.CodeExpression  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param type the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeOfExpression.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeTypeOfExpression(NetType type) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -195,6 +232,17 @@ public class CodeTypeOfExpression extends system.codedom.CodeExpression  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Type.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeOfExpression.Type" target="_top">.NET documentation</a>
+     */
     public CodeTypeReference getType() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +258,13 @@ public class CodeTypeOfExpression extends system.codedom.CodeExpression  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Type.
+     *
+     * @param Type the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeOfExpression.Type" target="_top">.NET documentation</a>
+     */
     public void setType(CodeTypeReference Type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

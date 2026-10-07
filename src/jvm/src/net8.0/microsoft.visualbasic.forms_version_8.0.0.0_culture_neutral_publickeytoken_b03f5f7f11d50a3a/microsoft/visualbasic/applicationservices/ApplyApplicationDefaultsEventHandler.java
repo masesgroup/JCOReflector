@@ -157,7 +157,10 @@ public class ApplyApplicationDefaultsEventHandler extends JCVoidDelegate impleme
         callerInstance = instance;
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ApplyApplicationDefaultsEventHandler(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
@@ -179,6 +182,14 @@ public class ApplyApplicationDefaultsEventHandler extends JCVoidDelegate impleme
         return JCOBridgeInstance.translateException(ne);
     }
 
+    /**
+     * Invokes the .NET member DynamicInvoke.
+     *
+     * @param sender the argument of type {@code NetObject}
+     * @param e the argument of type {@code ApplyApplicationDefaultsEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Delegate.DynamicInvoke" target="_top">.NET documentation</a>
+     */
     public void DynamicInvoke(NetObject sender, ApplyApplicationDefaultsEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,7 +201,10 @@ public class ApplyApplicationDefaultsEventHandler extends JCVoidDelegate impleme
     }
 
     /**
-     * Methods invoked in JVM when an event is raised in CLR 
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code Microsoft.VisualBasic.ApplicationServices.ApplyApplicationDefaultsEventArgs}
      */
     public void Invoke(NetObject sender, ApplyApplicationDefaultsEventArgs e) {
     }

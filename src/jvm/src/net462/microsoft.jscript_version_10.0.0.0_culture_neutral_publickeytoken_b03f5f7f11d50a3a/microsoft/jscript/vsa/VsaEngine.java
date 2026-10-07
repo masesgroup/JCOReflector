@@ -120,7 +120,10 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public VsaEngine(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -167,6 +170,18 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.VsaEngine.-ctor" target="_top">.NET documentation</a>
+     */
     public VsaEngine() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -177,6 +192,21 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param fast the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.VsaEngine.-ctor" target="_top">.NET documentation</a>
+     */
     public VsaEngine(boolean fast) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -191,6 +221,15 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CompileEmpty.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.VsaEngine.CompileEmpty" target="_top">.NET documentation</a>
+     */
     public boolean CompileEmpty() throws Throwable, system.ArgumentException, microsoft.jscript.vsa.JSVsaException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +244,29 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsValidIdentifier.
+     *
+     * @param ident the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws microsoft.jscript.EndOfFile if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.VsaEngine.IsValidIdentifier" target="_top">.NET documentation</a>
+     */
     public boolean IsValidIdentifier(java.lang.String ident) throws Throwable, microsoft.jscript.vsa.JSVsaException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, microsoft.jscript.EndOfFile, system.OutOfMemoryException, system.NotSupportedException, system.NotImplementedException, system.FormatException, system.OverflowException, system.ArithmeticException, microsoft.jscript.JScriptException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +281,13 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetItemCount.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.VsaEngine.GetItemCount" target="_top">.NET documentation</a>
+     */
     public int GetItemCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +328,15 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetOriginalArrayConstructor.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.VsaEngine.GetOriginalArrayConstructor" target="_top">.NET documentation</a>
+     */
     public ArrayConstructor GetOriginalArrayConstructor() throws Throwable, system.ArgumentNullException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +352,33 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateEngineAndGetGlobalScope.
+     *
+     * @param fast the argument of type {@code boolean}
+     * @param assemblyNames the argument of type {@code java.lang.String[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.VsaEngine.CreateEngineAndGetGlobalScope" target="_top">.NET documentation</a>
+     */
     public static GlobalScope CreateEngineAndGetGlobalScope(boolean fast, java.lang.String[] assemblyNames) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -289,6 +394,33 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateEngineAndGetGlobalScope.
+     *
+     * @param dupParam0 the argument of type {@code boolean}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.VsaEngine.CreateEngineAndGetGlobalScope" target="_top">.NET documentation</a>
+     */
     public static GlobalScope CreateEngineAndGetGlobalScope(boolean dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -304,6 +436,29 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateEngineAndGetGlobalScopeWithType.
+     *
+     * @param fast the argument of type {@code boolean}
+     * @param assemblyNames the argument of type {@code java.lang.String[]}
+     * @param callingTypeHandle the argument of type {@code RuntimeTypeHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.VsaEngine.CreateEngineAndGetGlobalScopeWithType" target="_top">.NET documentation</a>
+     */
     public static GlobalScope CreateEngineAndGetGlobalScopeWithType(boolean fast, java.lang.String[] assemblyNames, RuntimeTypeHandle callingTypeHandle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.ArgumentOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.security.SecurityException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -319,6 +474,29 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateEngineAndGetGlobalScopeWithType.
+     *
+     * @param dupParam0 the argument of type {@code boolean}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @param dupParam2 the argument of type {@code RuntimeTypeHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.VsaEngine.CreateEngineAndGetGlobalScopeWithType" target="_top">.NET documentation</a>
+     */
     public static GlobalScope CreateEngineAndGetGlobalScopeWithType(boolean dupParam0, JCORefOut dupParam1, RuntimeTypeHandle dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.ArgumentOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.security.SecurityException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -334,6 +512,37 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateEngineAndGetGlobalScopeWithTypeAndRootNamespace.
+     *
+     * @param fast the argument of type {@code boolean}
+     * @param assemblyNames the argument of type {@code java.lang.String[]}
+     * @param callingTypeHandle the argument of type {@code RuntimeTypeHandle}
+     * @param rootNamespace the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.VsaEngine.CreateEngineAndGetGlobalScopeWithTypeAndRootNamespace" target="_top">.NET documentation</a>
+     */
     public static GlobalScope CreateEngineAndGetGlobalScopeWithTypeAndRootNamespace(boolean fast, java.lang.String[] assemblyNames, RuntimeTypeHandle callingTypeHandle, java.lang.String rootNamespace) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -349,6 +558,37 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateEngineAndGetGlobalScopeWithTypeAndRootNamespace.
+     *
+     * @param dupParam0 the argument of type {@code boolean}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @param dupParam2 the argument of type {@code RuntimeTypeHandle}
+     * @param dupParam3 the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.VsaEngine.CreateEngineAndGetGlobalScopeWithTypeAndRootNamespace" target="_top">.NET documentation</a>
+     */
     public static GlobalScope CreateEngineAndGetGlobalScopeWithTypeAndRootNamespace(boolean dupParam0, JCORefOut dupParam1, RuntimeTypeHandle dupParam2, java.lang.String dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -364,6 +604,21 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMainScope.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.VsaEngine.GetMainScope" target="_top">.NET documentation</a>
+     */
     public GlobalScope GetMainScope() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -379,6 +634,20 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetGlobalScope.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.VsaEngine.GetGlobalScope" target="_top">.NET documentation</a>
+     */
     public IVsaScriptScope GetGlobalScope() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -394,6 +663,15 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetOriginalObjectConstructor.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.VsaEngine.GetOriginalObjectConstructor" target="_top">.NET documentation</a>
+     */
     public ObjectConstructor GetOriginalObjectConstructor() throws Throwable, system.ArgumentNullException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -409,6 +687,15 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetOriginalRegExpConstructor.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.VsaEngine.GetOriginalRegExpConstructor" target="_top">.NET documentation</a>
+     */
     public RegExpConstructor GetOriginalRegExpConstructor() throws Throwable, system.ArgumentNullException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -424,6 +711,15 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
         }
     }
 
+    /**
+     * Invokes the .NET member PopScriptObject.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.VsaEngine.PopScriptObject" target="_top">.NET documentation</a>
+     */
     public ScriptObject PopScriptObject() throws Throwable, system.ArgumentNullException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -439,6 +735,15 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScriptObjectStackTop.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.VsaEngine.ScriptObjectStackTop" target="_top">.NET documentation</a>
+     */
     public ScriptObject ScriptObjectStackTop() throws Throwable, system.ArgumentNullException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -454,6 +759,15 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
         }
     }
 
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @param domain the argument of type {@code AppDomain}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.VsaEngine.Clone" target="_top">.NET documentation</a>
+     */
     public IJSVsaEngine Clone(AppDomain domain) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -469,6 +783,14 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetItem.
+     *
+     * @param itemName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.VsaEngine.GetItem" target="_top">.NET documentation</a>
+     */
     public IJSVsaItem GetItem(java.lang.String itemName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -484,6 +806,14 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetItemAtIndex.
+     *
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.VsaEngine.GetItemAtIndex" target="_top">.NET documentation</a>
+     */
     public IJSVsaItem GetItemAtIndex(int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -499,6 +829,19 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateEngine.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.VsaEngine.CreateEngine" target="_top">.NET documentation</a>
+     */
     public static VsaEngine CreateEngine() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -514,6 +857,35 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateEngineWithType.
+     *
+     * @param callingTypeHandle the argument of type {@code RuntimeTypeHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.VsaEngine.CreateEngineWithType" target="_top">.NET documentation</a>
+     */
     public static VsaEngine CreateEngineWithType(RuntimeTypeHandle callingTypeHandle) throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, microsoft.jscript.vsa.JSVsaException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -529,6 +901,27 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetAssembly.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.VsaEngine.GetAssembly" target="_top">.NET documentation</a>
+     */
     public Assembly GetAssembly() throws Throwable, system.ArgumentException, microsoft.jscript.vsa.JSVsaException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -544,6 +937,36 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetModule.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws microsoft.jscript.EndOfFile if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.VsaEngine.GetModule" target="_top">.NET documentation</a>
+     */
     public Module GetModule() throws Throwable, system.ArgumentException, microsoft.jscript.vsa.JSVsaException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.FormatException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, microsoft.jscript.EndOfFile, system.TypeLoadException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -559,6 +982,12 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConnectEvents.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.VsaEngine.ConnectEvents" target="_top">.NET documentation</a>
+     */
     public void ConnectEvents() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -569,6 +998,12 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
         }
     }
 
+    /**
+     * Invokes the .NET member DisconnectEvents.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.VsaEngine.DisconnectEvents" target="_top">.NET documentation</a>
+     */
     public void DisconnectEvents() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -579,6 +1014,14 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
         }
     }
 
+    /**
+     * Invokes the .NET member InitVsaEngine.
+     *
+     * @param rootMoniker the argument of type {@code java.lang.String}
+     * @param site the argument of type {@code IJSVsaSite}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.VsaEngine.InitVsaEngine" target="_top">.NET documentation</a>
+     */
     public void InitVsaEngine(java.lang.String rootMoniker, IJSVsaSite site) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -589,6 +1032,12 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
         }
     }
 
+    /**
+     * Invokes the .NET member Interrupt.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.VsaEngine.Interrupt" target="_top">.NET documentation</a>
+     */
     public void Interrupt() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -599,6 +1048,15 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
         }
     }
 
+    /**
+     * Invokes the .NET member PushScriptObject.
+     *
+     * @param obj the argument of type {@code ScriptObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.VsaEngine.PushScriptObject" target="_top">.NET documentation</a>
+     */
     public void PushScriptObject(ScriptObject obj) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -609,6 +1067,13 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterEventSource.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.VsaEngine.RegisterEventSource" target="_top">.NET documentation</a>
+     */
     public void RegisterEventSource(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -619,6 +1084,14 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
         }
     }
 
+    /**
+     * Invokes the .NET member Reset.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.VsaEngine.Reset" target="_top">.NET documentation</a>
+     */
     public void Reset() throws Throwable, system.ArgumentException, microsoft.jscript.vsa.JSVsaException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -629,6 +1102,20 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
         }
     }
 
+    /**
+     * Invokes the .NET member Restart.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.VsaEngine.Restart" target="_top">.NET documentation</a>
+     */
     public void Restart() throws Throwable, system.ArgumentException, microsoft.jscript.vsa.JSVsaException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -639,6 +1126,14 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
         }
     }
 
+    /**
+     * Invokes the .NET member Run.
+     *
+     * @param domain the argument of type {@code AppDomain}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.VsaEngine.Run" target="_top">.NET documentation</a>
+     */
     public void Run(AppDomain domain) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -649,6 +1144,14 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
         }
     }
 
+    /**
+     * Invokes the .NET member RunEmpty.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.VsaEngine.RunEmpty" target="_top">.NET documentation</a>
+     */
     public void RunEmpty() throws Throwable, system.ArgumentException, microsoft.jscript.vsa.JSVsaException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -659,6 +1162,23 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetOutputStream.
+     *
+     * @param output the argument of type {@code IMessageReceiver}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.VsaEngine.SetOutputStream" target="_top">.NET documentation</a>
+     */
     public void SetOutputStream(IMessageReceiver output) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -673,6 +1193,15 @@ public class VsaEngine extends microsoft.jscript.vsa.BaseVsaEngine  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property LenientGlobalObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.VsaEngine.LenientGlobalObject" target="_top">.NET documentation</a>
+     */
     public LenientGlobalObject getLenientGlobalObject() throws Throwable, system.ArgumentNullException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

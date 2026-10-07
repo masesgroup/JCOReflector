@@ -104,7 +104,10 @@ public class ModelItemDictionary extends system.activities.presentation.model.Mo
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ModelItemDictionary(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,14 @@ public class ModelItemDictionary extends system.activities.presentation.model.Mo
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ContainsKey.
+     *
+     * @param key the argument of type {@code ModelItem}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.ModelItemDictionary.ContainsKey" target="_top">.NET documentation</a>
+     */
     public boolean ContainsKey(ModelItem key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +182,14 @@ public class ModelItemDictionary extends system.activities.presentation.model.Mo
         }
     }
 
+    /**
+     * Invokes the .NET member ContainsKey.
+     *
+     * @param key the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.ModelItemDictionary.ContainsKey" target="_top">.NET documentation</a>
+     */
     public boolean ContainsKey(NetObject key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +204,14 @@ public class ModelItemDictionary extends system.activities.presentation.model.Mo
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param key the argument of type {@code ModelItem}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.ModelItemDictionary.Remove" target="_top">.NET documentation</a>
+     */
     public boolean Remove(ModelItem key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +226,14 @@ public class ModelItemDictionary extends system.activities.presentation.model.Mo
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param key the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.ModelItemDictionary.Remove" target="_top">.NET documentation</a>
+     */
     public boolean Remove(NetObject key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +248,15 @@ public class ModelItemDictionary extends system.activities.presentation.model.Mo
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetValue.
+     *
+     * @param key the argument of type {@code ModelItem}
+     * @param value the argument of type {@code JCORefOut<ModelItem>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.ModelItemDictionary.TryGetValue" target="_top">.NET documentation</a>
+     */
     public boolean TryGetValue(ModelItem key, JCORefOut<ModelItem> value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +271,15 @@ public class ModelItemDictionary extends system.activities.presentation.model.Mo
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetValue.
+     *
+     * @param key the argument of type {@code NetObject}
+     * @param value the argument of type {@code JCORefOut<ModelItem>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.ModelItemDictionary.TryGetValue" target="_top">.NET documentation</a>
+     */
     public boolean TryGetValue(NetObject key, JCORefOut<ModelItem> value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +294,15 @@ public class ModelItemDictionary extends system.activities.presentation.model.Mo
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param key the argument of type {@code NetObject}
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.ModelItemDictionary.Add" target="_top">.NET documentation</a>
+     */
     public ModelItem Add(NetObject key, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +318,14 @@ public class ModelItemDictionary extends system.activities.presentation.model.Mo
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param key the argument of type {@code ModelItem}
+     * @param value the argument of type {@code ModelItem}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.ModelItemDictionary.Add" target="_top">.NET documentation</a>
+     */
     public void Add(ModelItem key, ModelItem value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +336,12 @@ public class ModelItemDictionary extends system.activities.presentation.model.Mo
         }
     }
 
+    /**
+     * Invokes the .NET member Clear.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.ModelItemDictionary.Clear" target="_top">.NET documentation</a>
+     */
     public void Clear() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,8 +355,13 @@ public class ModelItemDictionary extends system.activities.presentation.model.Mo
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICollection_1 method available in ICollection_1 to obtain an object with an invocable method
+     *
+     * @param item the argument of type {@code KeyValuePair_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.ICollection-1.Contains" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean Contains(KeyValuePair_2 item) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection_1 to obtain the full interface.");
     }
@@ -288,8 +369,13 @@ public class ModelItemDictionary extends system.activities.presentation.model.Mo
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICollection_1 method available in ICollection_1 to obtain an object with an invocable method
+     *
+     * @param item the argument of type {@code KeyValuePair_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.ICollection-1.Remove" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean Remove(KeyValuePair_2 item) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection_1 to obtain the full interface.");
     }
@@ -297,8 +383,12 @@ public class ModelItemDictionary extends system.activities.presentation.model.Mo
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICollection_1 method available in ICollection_1 to obtain an object with an invocable method
+     *
+     * @param item the argument of type {@code KeyValuePair_2}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.ICollection-1.Add" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Add(KeyValuePair_2 item) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection_1 to obtain the full interface.");
     }
@@ -306,8 +396,13 @@ public class ModelItemDictionary extends system.activities.presentation.model.Mo
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICollection_1 method available in ICollection_1 to obtain an object with an invocable method
+     *
+     * @param array the argument of type {@code KeyValuePair_2[]}
+     * @param arrayIndex the argument of type {@code int}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.ICollection-1.CopyTo" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void CopyTo(KeyValuePair_2[] array, int arrayIndex) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection_1 to obtain the full interface.");
     }
@@ -315,8 +410,13 @@ public class ModelItemDictionary extends system.activities.presentation.model.Mo
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDictionary method available in IDictionary to obtain an object with an invocable method
+     *
+     * @param key the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IDictionary.Contains" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean Contains(NetObject key) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDictionary to obtain the full interface.");
     }
@@ -324,8 +424,13 @@ public class ModelItemDictionary extends system.activities.presentation.model.Mo
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICollection method available in ICollection to obtain an object with an invocable method
+     *
+     * @param array the argument of type {@code Array}
+     * @param index the argument of type {@code int}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.ICollection.CopyTo" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void CopyTo(Array array, int index) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection to obtain the full interface.");
     }
@@ -334,6 +439,13 @@ public class ModelItemDictionary extends system.activities.presentation.model.Mo
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsReadOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.ModelItemDictionary.IsReadOnly" target="_top">.NET documentation</a>
+     */
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +460,13 @@ public class ModelItemDictionary extends system.activities.presentation.model.Mo
         }
     }
 
+    /**
+     * Gets the value of the .NET property Count.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.ModelItemDictionary.Count" target="_top">.NET documentation</a>
+     */
     public int getCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -388,6 +507,13 @@ public class ModelItemDictionary extends system.activities.presentation.model.Mo
         }
     }
 
+    /**
+     * Gets the value of the .NET property Keys.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.ModelItemDictionary.Keys" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getKeys() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -403,6 +529,13 @@ public class ModelItemDictionary extends system.activities.presentation.model.Mo
         }
     }
 
+    /**
+     * Gets the value of the .NET property Values.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.ModelItemDictionary.Values" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -423,6 +556,13 @@ public class ModelItemDictionary extends system.activities.presentation.model.Mo
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addCollectionChanged.
+     *
+     * @param handler the argument of type {@code NotifyCollectionChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCollectionChanged(NotifyCollectionChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -433,6 +573,13 @@ public class ModelItemDictionary extends system.activities.presentation.model.Mo
         }
     }
 
+    /**
+     * Invokes the .NET member removeCollectionChanged.
+     *
+     * @param handler the argument of type {@code NotifyCollectionChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCollectionChanged(NotifyCollectionChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

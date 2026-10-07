@@ -101,7 +101,10 @@ public class SecureConversationSecurityTokenParameters extends system.servicemod
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SecureConversationSecurityTokenParameters(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,20 @@ public class SecureConversationSecurityTokenParameters extends system.servicemod
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.-ctor" target="_top">.NET documentation</a>
+     */
     public SecureConversationSecurityTokenParameters() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +175,21 @@ public class SecureConversationSecurityTokenParameters extends system.servicemod
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param bootstrapSecurityBindingElement the argument of type {@code SecurityBindingElement}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.-ctor" target="_top">.NET documentation</a>
+     */
     public SecureConversationSecurityTokenParameters(SecurityBindingElement bootstrapSecurityBindingElement) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +200,22 @@ public class SecureConversationSecurityTokenParameters extends system.servicemod
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param bootstrapSecurityBindingElement the argument of type {@code SecurityBindingElement}
+     * @param requireCancellation the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.-ctor" target="_top">.NET documentation</a>
+     */
     public SecureConversationSecurityTokenParameters(SecurityBindingElement bootstrapSecurityBindingElement, boolean requireCancellation) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +226,26 @@ public class SecureConversationSecurityTokenParameters extends system.servicemod
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param bootstrapSecurityBindingElement the argument of type {@code SecurityBindingElement}
+     * @param requireCancellation the argument of type {@code boolean}
+     * @param canRenewSession the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.-ctor" target="_top">.NET documentation</a>
+     */
     public SecureConversationSecurityTokenParameters(SecurityBindingElement bootstrapSecurityBindingElement, boolean requireCancellation, boolean canRenewSession) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -188,6 +256,31 @@ public class SecureConversationSecurityTokenParameters extends system.servicemod
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param bootstrapSecurityBindingElement the argument of type {@code SecurityBindingElement}
+     * @param requireCancellation the argument of type {@code boolean}
+     * @param canRenewSession the argument of type {@code boolean}
+     * @param bootstrapProtectionRequirements the argument of type {@code ChannelProtectionRequirements}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.-ctor" target="_top">.NET documentation</a>
+     */
     public SecureConversationSecurityTokenParameters(SecurityBindingElement bootstrapSecurityBindingElement, boolean requireCancellation, boolean canRenewSession, ChannelProtectionRequirements bootstrapProtectionRequirements) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -198,6 +291,26 @@ public class SecureConversationSecurityTokenParameters extends system.servicemod
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param bootstrapSecurityBindingElement the argument of type {@code SecurityBindingElement}
+     * @param requireCancellation the argument of type {@code boolean}
+     * @param bootstrapProtectionRequirements the argument of type {@code ChannelProtectionRequirements}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.-ctor" target="_top">.NET documentation</a>
+     */
     public SecureConversationSecurityTokenParameters(SecurityBindingElement bootstrapSecurityBindingElement, boolean requireCancellation, ChannelProtectionRequirements bootstrapProtectionRequirements) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -216,6 +329,13 @@ public class SecureConversationSecurityTokenParameters extends system.servicemod
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CanRenewSession.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.CanRenewSession" target="_top">.NET documentation</a>
+     */
     public boolean getCanRenewSession() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +350,13 @@ public class SecureConversationSecurityTokenParameters extends system.servicemod
         }
     }
 
+    /**
+     * Sets the value of the .NET property CanRenewSession.
+     *
+     * @param CanRenewSession the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.CanRenewSession" target="_top">.NET documentation</a>
+     */
     public void setCanRenewSession(boolean CanRenewSession) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +367,13 @@ public class SecureConversationSecurityTokenParameters extends system.servicemod
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequireCancellation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation" target="_top">.NET documentation</a>
+     */
     public boolean getRequireCancellation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +388,13 @@ public class SecureConversationSecurityTokenParameters extends system.servicemod
         }
     }
 
+    /**
+     * Sets the value of the .NET property RequireCancellation.
+     *
+     * @param RequireCancellation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation" target="_top">.NET documentation</a>
+     */
     public void setRequireCancellation(boolean RequireCancellation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +405,13 @@ public class SecureConversationSecurityTokenParameters extends system.servicemod
         }
     }
 
+    /**
+     * Gets the value of the .NET property BootstrapSecurityBindingElement.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.BootstrapSecurityBindingElement" target="_top">.NET documentation</a>
+     */
     public SecurityBindingElement getBootstrapSecurityBindingElement() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +427,13 @@ public class SecureConversationSecurityTokenParameters extends system.servicemod
         }
     }
 
+    /**
+     * Sets the value of the .NET property BootstrapSecurityBindingElement.
+     *
+     * @param BootstrapSecurityBindingElement the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.BootstrapSecurityBindingElement" target="_top">.NET documentation</a>
+     */
     public void setBootstrapSecurityBindingElement(SecurityBindingElement BootstrapSecurityBindingElement) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +444,13 @@ public class SecureConversationSecurityTokenParameters extends system.servicemod
         }
     }
 
+    /**
+     * Gets the value of the .NET property BootstrapProtectionRequirements.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.BootstrapProtectionRequirements" target="_top">.NET documentation</a>
+     */
     public ChannelProtectionRequirements getBootstrapProtectionRequirements() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

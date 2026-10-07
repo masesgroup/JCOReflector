@@ -98,7 +98,10 @@ public class EqualityComparer_1<T extends IJCOBridgeReflected> extends NetObject
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EqualityComparer_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,15 @@ public class EqualityComparer_1<T extends IJCOBridgeReflected> extends NetObject
     
     // Methods section
     
+    /**
+     * Invokes the .NET member EqualsGeneric.
+     *
+     * @param x the argument of type {@code T}
+     * @param y the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.EqualityComparer-1.EqualsGeneric" target="_top">.NET documentation</a>
+     */
     public boolean EqualsGeneric(T x, T y) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -165,6 +177,14 @@ public class EqualityComparer_1<T extends IJCOBridgeReflected> extends NetObject
         }
     }
 
+    /**
+     * Invokes the .NET member GetHashCode.
+     *
+     * @param obj the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.EqualityComparer-1.GetHashCode" target="_top">.NET documentation</a>
+     */
     public int GetHashCode(T obj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,8 +228,14 @@ public class EqualityComparer_1<T extends IJCOBridgeReflected> extends NetObject
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIEqualityComparer method available in IEqualityComparer to obtain an object with an invocable method
+     *
+     * @param x the argument of type {@code NetObject}
+     * @param y the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IEqualityComparer.Equals" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean Equals(NetObject x, NetObject y) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEqualityComparer to obtain the full interface.");
     }
@@ -217,8 +243,13 @@ public class EqualityComparer_1<T extends IJCOBridgeReflected> extends NetObject
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIEqualityComparer method available in IEqualityComparer to obtain an object with an invocable method
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IEqualityComparer.GetHashCode" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int GetHashCode(NetObject obj) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEqualityComparer to obtain the full interface.");
     }

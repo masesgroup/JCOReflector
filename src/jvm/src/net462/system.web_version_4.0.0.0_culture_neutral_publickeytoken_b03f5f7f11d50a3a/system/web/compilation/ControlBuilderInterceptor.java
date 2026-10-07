@@ -105,7 +105,10 @@ public class ControlBuilderInterceptor extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ControlBuilderInterceptor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,19 @@ public class ControlBuilderInterceptor extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member OnProcessGeneratedCode.
+     *
+     * @param controlBuilder the argument of type {@code ControlBuilder}
+     * @param codeCompileUnit the argument of type {@code CodeCompileUnit}
+     * @param baseType the argument of type {@code CodeTypeDeclaration}
+     * @param derivedType the argument of type {@code CodeTypeDeclaration}
+     * @param buildMethod the argument of type {@code CodeMemberMethod}
+     * @param dataBindingMethod the argument of type {@code CodeMemberMethod}
+     * @param additionalState the argument of type {@code IDictionary}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ControlBuilderInterceptor.OnProcessGeneratedCode" target="_top">.NET documentation</a>
+     */
     public void OnProcessGeneratedCode(ControlBuilder controlBuilder, CodeCompileUnit codeCompileUnit, CodeTypeDeclaration baseType, CodeTypeDeclaration derivedType, CodeMemberMethod buildMethod, CodeMemberMethod dataBindingMethod, IDictionary additionalState) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +184,20 @@ public class ControlBuilderInterceptor extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PreControlBuilderInit.
+     *
+     * @param controlBuilder the argument of type {@code ControlBuilder}
+     * @param parser the argument of type {@code TemplateParser}
+     * @param parentBuilder the argument of type {@code ControlBuilder}
+     * @param type the argument of type {@code NetType}
+     * @param tagName the argument of type {@code java.lang.String}
+     * @param id the argument of type {@code java.lang.String}
+     * @param attributes the argument of type {@code IDictionary}
+     * @param additionalState the argument of type {@code IDictionary}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ControlBuilderInterceptor.PreControlBuilderInit" target="_top">.NET documentation</a>
+     */
     public void PreControlBuilderInit(ControlBuilder controlBuilder, TemplateParser parser, ControlBuilder parentBuilder, NetType type, java.lang.String tagName, java.lang.String id, IDictionary attributes, IDictionary additionalState) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

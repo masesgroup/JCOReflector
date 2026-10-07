@@ -100,7 +100,10 @@ public class DayRenderEventArgs extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DayRenderEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class DayRenderEventArgs extends NetObject  {
     public DayRenderEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param cell the argument of type {@code TableCell}
+     * @param day the argument of type {@code CalendarDay}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.DayRenderEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public DayRenderEventArgs(TableCell cell, CalendarDay day) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +171,15 @@ public class DayRenderEventArgs extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param cell the argument of type {@code TableCell}
+     * @param day the argument of type {@code CalendarDay}
+     * @param selectUrl the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.DayRenderEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public DayRenderEventArgs(TableCell cell, CalendarDay day, java.lang.String selectUrl) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +199,13 @@ public class DayRenderEventArgs extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SelectUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.DayRenderEventArgs.SelectUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSelectUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +220,13 @@ public class DayRenderEventArgs extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Day.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.DayRenderEventArgs.Day" target="_top">.NET documentation</a>
+     */
     public CalendarDay getDay() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +242,13 @@ public class DayRenderEventArgs extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Cell.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.DayRenderEventArgs.Cell" target="_top">.NET documentation</a>
+     */
     public TableCell getCell() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

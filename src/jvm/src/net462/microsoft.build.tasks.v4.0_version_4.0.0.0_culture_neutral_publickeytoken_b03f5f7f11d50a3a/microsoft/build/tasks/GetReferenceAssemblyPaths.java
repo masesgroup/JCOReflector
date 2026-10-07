@@ -99,7 +99,10 @@ public class GetReferenceAssemblyPaths extends microsoft.build.tasks.TaskExtensi
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public GetReferenceAssemblyPaths(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,13 @@ public class GetReferenceAssemblyPaths extends microsoft.build.tasks.TaskExtensi
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GetReferenceAssemblyPaths.-ctor" target="_top">.NET documentation</a>
+     */
     public GetReferenceAssemblyPaths() throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +170,34 @@ public class GetReferenceAssemblyPaths extends microsoft.build.tasks.TaskExtensi
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Execute.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GetReferenceAssemblyPaths.Execute" target="_top">.NET documentation</a>
+     */
     public boolean Execute() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OverflowException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +216,13 @@ public class GetReferenceAssemblyPaths extends microsoft.build.tasks.TaskExtensi
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BypassFrameworkInstallChecks.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GetReferenceAssemblyPaths.BypassFrameworkInstallChecks" target="_top">.NET documentation</a>
+     */
     public boolean getBypassFrameworkInstallChecks() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +237,13 @@ public class GetReferenceAssemblyPaths extends microsoft.build.tasks.TaskExtensi
         }
     }
 
+    /**
+     * Sets the value of the .NET property BypassFrameworkInstallChecks.
+     *
+     * @param BypassFrameworkInstallChecks the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GetReferenceAssemblyPaths.BypassFrameworkInstallChecks" target="_top">.NET documentation</a>
+     */
     public void setBypassFrameworkInstallChecks(boolean BypassFrameworkInstallChecks) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +254,13 @@ public class GetReferenceAssemblyPaths extends microsoft.build.tasks.TaskExtensi
         }
     }
 
+    /**
+     * Gets the value of the .NET property RootPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GetReferenceAssemblyPaths.RootPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRootPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +275,13 @@ public class GetReferenceAssemblyPaths extends microsoft.build.tasks.TaskExtensi
         }
     }
 
+    /**
+     * Sets the value of the .NET property RootPath.
+     *
+     * @param RootPath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GetReferenceAssemblyPaths.RootPath" target="_top">.NET documentation</a>
+     */
     public void setRootPath(java.lang.String RootPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +292,13 @@ public class GetReferenceAssemblyPaths extends microsoft.build.tasks.TaskExtensi
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetFrameworkMoniker.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTargetFrameworkMoniker() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +313,13 @@ public class GetReferenceAssemblyPaths extends microsoft.build.tasks.TaskExtensi
         }
     }
 
+    /**
+     * Sets the value of the .NET property TargetFrameworkMoniker.
+     *
+     * @param TargetFrameworkMoniker the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker" target="_top">.NET documentation</a>
+     */
     public void setTargetFrameworkMoniker(java.lang.String TargetFrameworkMoniker) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +330,13 @@ public class GetReferenceAssemblyPaths extends microsoft.build.tasks.TaskExtensi
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetFrameworkMonikerDisplayName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMonikerDisplayName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTargetFrameworkMonikerDisplayName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +351,13 @@ public class GetReferenceAssemblyPaths extends microsoft.build.tasks.TaskExtensi
         }
     }
 
+    /**
+     * Sets the value of the .NET property TargetFrameworkMonikerDisplayName.
+     *
+     * @param TargetFrameworkMonikerDisplayName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMonikerDisplayName" target="_top">.NET documentation</a>
+     */
     public void setTargetFrameworkMonikerDisplayName(java.lang.String TargetFrameworkMonikerDisplayName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +368,13 @@ public class GetReferenceAssemblyPaths extends microsoft.build.tasks.TaskExtensi
         }
     }
 
+    /**
+     * Gets the value of the .NET property FullFrameworkReferenceAssemblyPaths.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GetReferenceAssemblyPaths.FullFrameworkReferenceAssemblyPaths" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getFullFrameworkReferenceAssemblyPaths() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -297,6 +398,13 @@ public class GetReferenceAssemblyPaths extends microsoft.build.tasks.TaskExtensi
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReferenceAssemblyPaths.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GetReferenceAssemblyPaths.ReferenceAssemblyPaths" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getReferenceAssemblyPaths() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

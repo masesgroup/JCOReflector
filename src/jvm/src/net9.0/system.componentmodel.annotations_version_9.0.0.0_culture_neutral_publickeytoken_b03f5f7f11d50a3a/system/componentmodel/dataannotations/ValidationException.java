@@ -104,7 +104,9 @@ public class ValidationException extends NetException {
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public ValidationException(java.lang.Object instance) {
         super(instance);
@@ -165,6 +167,15 @@ public class ValidationException extends NetException {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param validationResult the argument of type {@code ValidationResult}
+     * @param validatingAttribute the argument of type {@code ValidationAttribute}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.ValidationException.-ctor" target="_top">.NET documentation</a>
+     */
     public ValidationException(ValidationResult validationResult, ValidationAttribute validatingAttribute, NetObject value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +186,15 @@ public class ValidationException extends NetException {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param errorMessage the argument of type {@code java.lang.String}
+     * @param validatingAttribute the argument of type {@code ValidationAttribute}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.ValidationException.-ctor" target="_top">.NET documentation</a>
+     */
     public ValidationException(java.lang.String errorMessage, ValidationAttribute validatingAttribute, NetObject value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -193,6 +213,13 @@ public class ValidationException extends NetException {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ValidationAttribute.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.ValidationException.ValidationAttribute" target="_top">.NET documentation</a>
+     */
     public ValidationAttribute getValidationAttribute() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +235,22 @@ public class ValidationException extends NetException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValidationResult.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.ValidationException.ValidationResult" target="_top">.NET documentation</a>
+     */
     public ValidationResult getValidationResult() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +266,13 @@ public class ValidationException extends NetException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.ValidationException.Value" target="_top">.NET documentation</a>
+     */
     public NetObject getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

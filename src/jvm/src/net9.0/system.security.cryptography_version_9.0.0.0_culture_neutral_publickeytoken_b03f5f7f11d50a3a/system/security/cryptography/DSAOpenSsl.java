@@ -101,7 +101,10 @@ public class DSAOpenSsl extends system.security.cryptography.DSA  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DSAOpenSsl(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,20 @@ public class DSAOpenSsl extends system.security.cryptography.DSA  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.DSAOpenSsl.-ctor" target="_top">.NET documentation</a>
+     */
     public DSAOpenSsl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +175,21 @@ public class DSAOpenSsl extends system.security.cryptography.DSA  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param keySize the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.DSAOpenSsl.-ctor" target="_top">.NET documentation</a>
+     */
     public DSAOpenSsl(int keySize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +200,21 @@ public class DSAOpenSsl extends system.security.cryptography.DSA  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param parameters the argument of type {@code DSAParameters}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.DSAOpenSsl.-ctor" target="_top">.NET documentation</a>
+     */
     public DSAOpenSsl(DSAParameters parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +225,21 @@ public class DSAOpenSsl extends system.security.cryptography.DSA  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param pkeyHandle the argument of type {@code SafeEvpPKeyHandle}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.DSAOpenSsl.-ctor" target="_top">.NET documentation</a>
+     */
     public DSAOpenSsl(SafeEvpPKeyHandle pkeyHandle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -192,6 +254,15 @@ public class DSAOpenSsl extends system.security.cryptography.DSA  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member VerifySignature.
+     *
+     * @param rgbHash the argument of type {@code byte[]}
+     * @param rgbSignature the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.DSAOpenSsl.VerifySignature" target="_top">.NET documentation</a>
+     */
     public boolean VerifySignature(byte[] rgbHash, byte[] rgbSignature) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +277,15 @@ public class DSAOpenSsl extends system.security.cryptography.DSA  {
         }
     }
 
+    /**
+     * Invokes the .NET member VerifySignature.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.DSAOpenSsl.VerifySignature" target="_top">.NET documentation</a>
+     */
     public boolean VerifySignature(JCORefOut dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +300,14 @@ public class DSAOpenSsl extends system.security.cryptography.DSA  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateSignature.
+     *
+     * @param rgbHash the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.DSAOpenSsl.CreateSignature" target="_top">.NET documentation</a>
+     */
     public byte[] CreateSignature(byte[] rgbHash) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +331,14 @@ public class DSAOpenSsl extends system.security.cryptography.DSA  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateSignature.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.DSAOpenSsl.CreateSignature" target="_top">.NET documentation</a>
+     */
     public byte[] CreateSignature(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +362,14 @@ public class DSAOpenSsl extends system.security.cryptography.DSA  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExportParameters.
+     *
+     * @param includePrivateParameters the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.DSAOpenSsl.ExportParameters" target="_top">.NET documentation</a>
+     */
     public DSAParameters ExportParameters(boolean includePrivateParameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +385,13 @@ public class DSAOpenSsl extends system.security.cryptography.DSA  {
         }
     }
 
+    /**
+     * Invokes the .NET member DuplicateKeyHandle.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.DSAOpenSsl.DuplicateKeyHandle" target="_top">.NET documentation</a>
+     */
     public SafeEvpPKeyHandle DuplicateKeyHandle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -296,6 +407,13 @@ public class DSAOpenSsl extends system.security.cryptography.DSA  {
         }
     }
 
+    /**
+     * Invokes the .NET member ImportParameters.
+     *
+     * @param parameters the argument of type {@code DSAParameters}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.DSAOpenSsl.ImportParameters" target="_top">.NET documentation</a>
+     */
     public void ImportParameters(DSAParameters parameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

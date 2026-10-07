@@ -101,7 +101,10 @@ public class PagedDataSource extends NetObjectEnumerable  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PagedDataSource(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class PagedDataSource extends NetObjectEnumerable  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.PagedDataSource.-ctor" target="_top">.NET documentation</a>
+     */
     public PagedDataSource() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +171,14 @@ public class PagedDataSource extends NetObjectEnumerable  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetItemProperties.
+     *
+     * @param listAccessors the argument of type {@code PropertyDescriptor[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.PagedDataSource.GetItemProperties" target="_top">.NET documentation</a>
+     */
     public PropertyDescriptorCollection GetItemProperties(PropertyDescriptor[] listAccessors) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +194,14 @@ public class PagedDataSource extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetListName.
+     *
+     * @param listAccessors the argument of type {@code PropertyDescriptor[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.PagedDataSource.GetListName" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetListName(PropertyDescriptor[] listAccessors) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +216,20 @@ public class PagedDataSource extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code Array}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.PagedDataSource.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(Array array, int index) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +244,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowCustomPaging.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.PagedDataSource.AllowCustomPaging" target="_top">.NET documentation</a>
+     */
     public boolean getAllowCustomPaging() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +265,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowCustomPaging.
+     *
+     * @param AllowCustomPaging the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.PagedDataSource.AllowCustomPaging" target="_top">.NET documentation</a>
+     */
     public void setAllowCustomPaging(boolean AllowCustomPaging) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +282,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowPaging.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.PagedDataSource.AllowPaging" target="_top">.NET documentation</a>
+     */
     public boolean getAllowPaging() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +303,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowPaging.
+     *
+     * @param AllowPaging the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.PagedDataSource.AllowPaging" target="_top">.NET documentation</a>
+     */
     public void setAllowPaging(boolean AllowPaging) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +320,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowServerPaging.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.PagedDataSource.AllowServerPaging" target="_top">.NET documentation</a>
+     */
     public boolean getAllowServerPaging() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +341,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowServerPaging.
+     *
+     * @param AllowServerPaging the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.PagedDataSource.AllowServerPaging" target="_top">.NET documentation</a>
+     */
     public void setAllowServerPaging(boolean AllowServerPaging) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +358,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsCustomPagingEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.PagedDataSource.IsCustomPagingEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getIsCustomPagingEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +379,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsFirstPage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.PagedDataSource.IsFirstPage" target="_top">.NET documentation</a>
+     */
     public boolean getIsFirstPage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +400,23 @@ public class PagedDataSource extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsLastPage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.PagedDataSource.IsLastPage" target="_top">.NET documentation</a>
+     */
     public boolean getIsLastPage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -319,6 +431,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsPagingEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.PagedDataSource.IsPagingEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getIsPagingEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -333,6 +452,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsReadOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.PagedDataSource.IsReadOnly" target="_top">.NET documentation</a>
+     */
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -347,6 +473,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsServerPagingEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.PagedDataSource.IsServerPagingEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getIsServerPagingEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -361,6 +494,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSynchronized.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.PagedDataSource.IsSynchronized" target="_top">.NET documentation</a>
+     */
     public boolean getIsSynchronized() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -375,6 +515,20 @@ public class PagedDataSource extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Count.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.PagedDataSource.Count" target="_top">.NET documentation</a>
+     */
     public int getCount() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -415,6 +569,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentPageIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.PagedDataSource.CurrentPageIndex" target="_top">.NET documentation</a>
+     */
     public int getCurrentPageIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -455,6 +616,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CurrentPageIndex.
+     *
+     * @param CurrentPageIndex the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.PagedDataSource.CurrentPageIndex" target="_top">.NET documentation</a>
+     */
     public void setCurrentPageIndex(int CurrentPageIndex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -465,6 +633,25 @@ public class PagedDataSource extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataSourceCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.PagedDataSource.DataSourceCount" target="_top">.NET documentation</a>
+     */
     public int getDataSourceCount() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -505,6 +692,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FirstIndexInPage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.PagedDataSource.FirstIndexInPage" target="_top">.NET documentation</a>
+     */
     public int getFirstIndexInPage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -545,6 +739,24 @@ public class PagedDataSource extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PageCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.PagedDataSource.PageCount" target="_top">.NET documentation</a>
+     */
     public int getPageCount() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -585,6 +797,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PageSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.PagedDataSource.PageSize" target="_top">.NET documentation</a>
+     */
     public int getPageSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -625,6 +844,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PageSize.
+     *
+     * @param PageSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.PagedDataSource.PageSize" target="_top">.NET documentation</a>
+     */
     public void setPageSize(int PageSize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -635,6 +861,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VirtualCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.PagedDataSource.VirtualCount" target="_top">.NET documentation</a>
+     */
     public int getVirtualCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -675,6 +908,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property VirtualCount.
+     *
+     * @param VirtualCount the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.PagedDataSource.VirtualCount" target="_top">.NET documentation</a>
+     */
     public void setVirtualCount(int VirtualCount) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -685,6 +925,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataSource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.PagedDataSource.DataSource" target="_top">.NET documentation</a>
+     */
     public IEnumerable getDataSource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -700,6 +947,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataSource.
+     *
+     * @param DataSource the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.PagedDataSource.DataSource" target="_top">.NET documentation</a>
+     */
     public void setDataSource(IEnumerable DataSource) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -710,6 +964,13 @@ public class PagedDataSource extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SyncRoot.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.PagedDataSource.SyncRoot" target="_top">.NET documentation</a>
+     */
     public NetObject getSyncRoot() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

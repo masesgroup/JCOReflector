@@ -104,7 +104,10 @@ public class IDesignerEventServiceImplementation extends NetObject implements ID
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDesignerEventServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class IDesignerEventServiceImplementation extends NetObject implements ID
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Designers.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerEventService.Designers" target="_top">.NET documentation</a>
+     */
     public DesignerCollection getDesigners() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -165,6 +175,13 @@ public class IDesignerEventServiceImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Gets the value of the .NET property ActiveDesigner.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerEventService.ActiveDesigner" target="_top">.NET documentation</a>
+     */
     public IDesignerHost getActiveDesigner() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +202,13 @@ public class IDesignerEventServiceImplementation extends NetObject implements ID
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addActiveDesignerChanged.
+     *
+     * @param handler the argument of type {@code ActiveDesignerEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addActiveDesignerChanged(ActiveDesignerEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +219,13 @@ public class IDesignerEventServiceImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member removeActiveDesignerChanged.
+     *
+     * @param handler the argument of type {@code ActiveDesignerEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeActiveDesignerChanged(ActiveDesignerEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +236,13 @@ public class IDesignerEventServiceImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member addDesignerCreated.
+     *
+     * @param handler the argument of type {@code DesignerEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addDesignerCreated(DesignerEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +253,13 @@ public class IDesignerEventServiceImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member removeDesignerCreated.
+     *
+     * @param handler the argument of type {@code DesignerEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeDesignerCreated(DesignerEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +270,13 @@ public class IDesignerEventServiceImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member addDesignerDisposed.
+     *
+     * @param handler the argument of type {@code DesignerEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addDesignerDisposed(DesignerEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +287,13 @@ public class IDesignerEventServiceImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member removeDesignerDisposed.
+     *
+     * @param handler the argument of type {@code DesignerEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeDesignerDisposed(DesignerEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +304,13 @@ public class IDesignerEventServiceImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member addSelectionChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addSelectionChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +321,13 @@ public class IDesignerEventServiceImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member removeSelectionChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeSelectionChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

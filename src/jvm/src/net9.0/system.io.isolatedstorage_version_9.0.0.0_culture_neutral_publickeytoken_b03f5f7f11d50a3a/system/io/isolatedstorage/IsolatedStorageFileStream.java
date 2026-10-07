@@ -115,7 +115,10 @@ public class IsolatedStorageFileStream extends system.io.FileStream  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IsolatedStorageFileStream(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -165,6 +168,33 @@ public class IsolatedStorageFileStream extends system.io.FileStream  {
     public IsolatedStorageFileStream() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @param mode the argument of type {@code FileMode}
+     * @param access the argument of type {@code FileAccess}
+     * @param share the argument of type {@code FileShare}
+     * @param bufferSize the argument of type {@code int}
+     * @param isf the argument of type {@code IsolatedStorageFile}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFileStream.-ctor" target="_top">.NET documentation</a>
+     */
     public IsolatedStorageFileStream(java.lang.String path, FileMode mode, FileAccess access, FileShare share, int bufferSize, IsolatedStorageFile isf) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.io.isolatedstorage.IsolatedStorageException, system.FormatException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.ApplicationException, system.ObjectDisposedException, system.runtime.serialization.SerializationException, system.io.IOException {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +205,30 @@ public class IsolatedStorageFileStream extends system.io.FileStream  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @param mode the argument of type {@code FileMode}
+     * @param access the argument of type {@code FileAccess}
+     * @param share the argument of type {@code FileShare}
+     * @param bufferSize the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFileStream.-ctor" target="_top">.NET documentation</a>
+     */
     public IsolatedStorageFileStream(java.lang.String path, FileMode mode, FileAccess access, FileShare share, int bufferSize) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.io.isolatedstorage.IsolatedStorageException, system.FormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ApplicationException, system.OutOfMemoryException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException {
         try {
             // add reference to assemblyName.dll file
@@ -185,6 +239,30 @@ public class IsolatedStorageFileStream extends system.io.FileStream  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @param mode the argument of type {@code FileMode}
+     * @param access the argument of type {@code FileAccess}
+     * @param share the argument of type {@code FileShare}
+     * @param isf the argument of type {@code IsolatedStorageFile}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFileStream.-ctor" target="_top">.NET documentation</a>
+     */
     public IsolatedStorageFileStream(java.lang.String path, FileMode mode, FileAccess access, FileShare share, IsolatedStorageFile isf) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.io.isolatedstorage.IsolatedStorageException, system.FormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ApplicationException, system.OutOfMemoryException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException {
         try {
             // add reference to assemblyName.dll file
@@ -195,6 +273,29 @@ public class IsolatedStorageFileStream extends system.io.FileStream  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @param mode the argument of type {@code FileMode}
+     * @param access the argument of type {@code FileAccess}
+     * @param share the argument of type {@code FileShare}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFileStream.-ctor" target="_top">.NET documentation</a>
+     */
     public IsolatedStorageFileStream(java.lang.String path, FileMode mode, FileAccess access, FileShare share) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.io.isolatedstorage.IsolatedStorageException, system.FormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ApplicationException, system.OutOfMemoryException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException {
         try {
             // add reference to assemblyName.dll file
@@ -205,6 +306,29 @@ public class IsolatedStorageFileStream extends system.io.FileStream  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @param mode the argument of type {@code FileMode}
+     * @param access the argument of type {@code FileAccess}
+     * @param isf the argument of type {@code IsolatedStorageFile}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFileStream.-ctor" target="_top">.NET documentation</a>
+     */
     public IsolatedStorageFileStream(java.lang.String path, FileMode mode, FileAccess access, IsolatedStorageFile isf) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.io.isolatedstorage.IsolatedStorageException, system.FormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ApplicationException, system.OutOfMemoryException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException {
         try {
             // add reference to assemblyName.dll file
@@ -215,6 +339,28 @@ public class IsolatedStorageFileStream extends system.io.FileStream  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @param mode the argument of type {@code FileMode}
+     * @param access the argument of type {@code FileAccess}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFileStream.-ctor" target="_top">.NET documentation</a>
+     */
     public IsolatedStorageFileStream(java.lang.String path, FileMode mode, FileAccess access) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.io.isolatedstorage.IsolatedStorageException, system.FormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ApplicationException, system.OutOfMemoryException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException {
         try {
             // add reference to assemblyName.dll file
@@ -225,6 +371,25 @@ public class IsolatedStorageFileStream extends system.io.FileStream  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @param mode the argument of type {@code FileMode}
+     * @param isf the argument of type {@code IsolatedStorageFile}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFileStream.-ctor" target="_top">.NET documentation</a>
+     */
     public IsolatedStorageFileStream(java.lang.String path, FileMode mode, IsolatedStorageFile isf) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.io.isolatedstorage.IsolatedStorageException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.runtime.serialization.SerializationException {
         try {
             // add reference to assemblyName.dll file
@@ -235,6 +400,24 @@ public class IsolatedStorageFileStream extends system.io.FileStream  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @param mode the argument of type {@code FileMode}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFileStream.-ctor" target="_top">.NET documentation</a>
+     */
     public IsolatedStorageFileStream(java.lang.String path, FileMode mode) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.io.isolatedstorage.IsolatedStorageException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.runtime.serialization.SerializationException {
         try {
             // add reference to assemblyName.dll file
@@ -250,6 +433,28 @@ public class IsolatedStorageFileStream extends system.io.FileStream  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member EndRead.
+     *
+     * @param asyncResult the argument of type {@code IAsyncResult}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.threading.tasks.TaskCanceledException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @throws system.threading.SemaphoreFullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFileStream.EndRead" target="_top">.NET documentation</a>
+     */
     public int EndRead(IAsyncResult asyncResult) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.threading.SemaphoreFullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +495,16 @@ public class IsolatedStorageFileStream extends system.io.FileStream  {
         }
     }
 
+    /**
+     * Invokes the .NET member Read.
+     *
+     * @param buffer the argument of type {@code byte[]}
+     * @param offset the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFileStream.Read" target="_top">.NET documentation</a>
+     */
     public int Read(byte[] buffer, int offset, int count) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -330,6 +545,16 @@ public class IsolatedStorageFileStream extends system.io.FileStream  {
         }
     }
 
+    /**
+     * Invokes the .NET member Read.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFileStream.Read" target="_top">.NET documentation</a>
+     */
     public int Read(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -370,6 +595,13 @@ public class IsolatedStorageFileStream extends system.io.FileStream  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReadByte.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFileStream.ReadByte" target="_top">.NET documentation</a>
+     */
     public int ReadByte() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -410,6 +642,15 @@ public class IsolatedStorageFileStream extends system.io.FileStream  {
         }
     }
 
+    /**
+     * Invokes the .NET member Seek.
+     *
+     * @param offset the argument of type {@code long}
+     * @param origin the argument of type {@code SeekOrigin}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFileStream.Seek" target="_top">.NET documentation</a>
+     */
     public long Seek(long offset, SeekOrigin origin) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -450,6 +691,32 @@ public class IsolatedStorageFileStream extends system.io.FileStream  {
         }
     }
 
+    /**
+     * Invokes the .NET member BeginRead.
+     *
+     * @param array the argument of type {@code byte[]}
+     * @param offset the argument of type {@code int}
+     * @param numBytes the argument of type {@code int}
+     * @param userCallback the argument of type {@code AsyncCallback}
+     * @param stateObject the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.threading.tasks.TaskCanceledException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @throws system.threading.SemaphoreFullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFileStream.BeginRead" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginRead(byte[] array, int offset, int numBytes, AsyncCallback userCallback, NetObject stateObject) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.ObjectDisposedException, system.OperationCanceledException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.threading.SemaphoreFullException, system.IndexOutOfRangeException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -465,6 +732,32 @@ public class IsolatedStorageFileStream extends system.io.FileStream  {
         }
     }
 
+    /**
+     * Invokes the .NET member BeginRead.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code int}
+     * @param dupParam3 the argument of type {@code AsyncCallback}
+     * @param dupParam4 the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.threading.tasks.TaskCanceledException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @throws system.threading.SemaphoreFullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFileStream.BeginRead" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginRead(JCORefOut dupParam0, int dupParam1, int dupParam2, AsyncCallback dupParam3, NetObject dupParam4) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.ObjectDisposedException, system.OperationCanceledException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.threading.SemaphoreFullException, system.IndexOutOfRangeException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -480,6 +773,32 @@ public class IsolatedStorageFileStream extends system.io.FileStream  {
         }
     }
 
+    /**
+     * Invokes the .NET member BeginWrite.
+     *
+     * @param array the argument of type {@code byte[]}
+     * @param offset the argument of type {@code int}
+     * @param numBytes the argument of type {@code int}
+     * @param userCallback the argument of type {@code AsyncCallback}
+     * @param stateObject the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.threading.tasks.TaskCanceledException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @throws system.threading.SemaphoreFullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFileStream.BeginWrite" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginWrite(byte[] array, int offset, int numBytes, AsyncCallback userCallback, NetObject stateObject) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.ObjectDisposedException, system.OperationCanceledException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.threading.SemaphoreFullException, system.IndexOutOfRangeException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -495,6 +814,32 @@ public class IsolatedStorageFileStream extends system.io.FileStream  {
         }
     }
 
+    /**
+     * Invokes the .NET member BeginWrite.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code int}
+     * @param dupParam3 the argument of type {@code AsyncCallback}
+     * @param dupParam4 the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.threading.tasks.TaskCanceledException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @throws system.threading.SemaphoreFullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFileStream.BeginWrite" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginWrite(JCORefOut dupParam0, int dupParam1, int dupParam2, AsyncCallback dupParam3, NetObject dupParam4) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.ObjectDisposedException, system.OperationCanceledException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.threading.SemaphoreFullException, system.IndexOutOfRangeException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -510,6 +855,22 @@ public class IsolatedStorageFileStream extends system.io.FileStream  {
         }
     }
 
+    /**
+     * Invokes the .NET member FlushAsync.
+     *
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFileStream.FlushAsync" target="_top">.NET documentation</a>
+     */
     public Task FlushAsync(CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -525,6 +886,30 @@ public class IsolatedStorageFileStream extends system.io.FileStream  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteAsync.
+     *
+     * @param buffer the argument of type {@code byte[]}
+     * @param offset the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.threading.tasks.TaskCanceledException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @throws system.threading.SemaphoreFullException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFileStream.WriteAsync" target="_top">.NET documentation</a>
+     */
     public Task WriteAsync(byte[] buffer, int offset, int count, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.PlatformNotSupportedException, system.NullReferenceException, system.ObjectDisposedException, system.OperationCanceledException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.threading.SemaphoreFullException, system.threading.tasks.TaskSchedulerException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -540,6 +925,30 @@ public class IsolatedStorageFileStream extends system.io.FileStream  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteAsync.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code int}
+     * @param dupParam3 the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.threading.tasks.TaskCanceledException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @throws system.threading.SemaphoreFullException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFileStream.WriteAsync" target="_top">.NET documentation</a>
+     */
     public Task WriteAsync(JCORefOut dupParam0, int dupParam1, int dupParam2, CancellationToken dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.PlatformNotSupportedException, system.NullReferenceException, system.ObjectDisposedException, system.OperationCanceledException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.threading.SemaphoreFullException, system.threading.tasks.TaskSchedulerException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -555,6 +964,30 @@ public class IsolatedStorageFileStream extends system.io.FileStream  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReadAsync.
+     *
+     * @param buffer the argument of type {@code byte[]}
+     * @param offset the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.threading.tasks.TaskCanceledException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @throws system.threading.SemaphoreFullException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFileStream.ReadAsync" target="_top">.NET documentation</a>
+     */
     public Task_1 ReadAsync(byte[] buffer, int offset, int count, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.PlatformNotSupportedException, system.NullReferenceException, system.ObjectDisposedException, system.OperationCanceledException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.threading.SemaphoreFullException, system.threading.tasks.TaskSchedulerException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -570,6 +1003,30 @@ public class IsolatedStorageFileStream extends system.io.FileStream  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReadAsync.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code int}
+     * @param dupParam3 the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.threading.tasks.TaskCanceledException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @throws system.threading.SemaphoreFullException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFileStream.ReadAsync" target="_top">.NET documentation</a>
+     */
     public Task_1 ReadAsync(JCORefOut dupParam0, int dupParam1, int dupParam2, CancellationToken dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.PlatformNotSupportedException, system.NullReferenceException, system.ObjectDisposedException, system.OperationCanceledException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.threading.SemaphoreFullException, system.threading.tasks.TaskSchedulerException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -585,6 +1042,20 @@ public class IsolatedStorageFileStream extends system.io.FileStream  {
         }
     }
 
+    /**
+     * Invokes the .NET member DisposeAsync.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFileStream.DisposeAsync" target="_top">.NET documentation</a>
+     */
     public ValueTask DisposeAsync() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -600,6 +1071,27 @@ public class IsolatedStorageFileStream extends system.io.FileStream  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteAsync.
+     *
+     * @param buffer the argument of type {@code ReadOnlyMemory_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.threading.SemaphoreFullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFileStream.WriteAsync" target="_top">.NET documentation</a>
+     */
     public ValueTask WriteAsync(ReadOnlyMemory_1 buffer, CancellationToken cancellationToken) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.ObjectDisposedException, system.ArgumentException, system.OperationCanceledException, system.threading.SemaphoreFullException, system.OutOfMemoryException, system.InvalidOperationException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -615,6 +1107,26 @@ public class IsolatedStorageFileStream extends system.io.FileStream  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReadAsync.
+     *
+     * @param buffer the argument of type {@code Memory_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.threading.SemaphoreFullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFileStream.ReadAsync" target="_top">.NET documentation</a>
+     */
     public ValueTask_1 ReadAsync(Memory_1 buffer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.NullReferenceException, system.ObjectDisposedException, system.OperationCanceledException, system.threading.SemaphoreFullException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -630,6 +1142,27 @@ public class IsolatedStorageFileStream extends system.io.FileStream  {
         }
     }
 
+    /**
+     * Invokes the .NET member EndWrite.
+     *
+     * @param asyncResult the argument of type {@code IAsyncResult}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.threading.tasks.TaskCanceledException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @throws system.threading.SemaphoreFullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFileStream.EndWrite" target="_top">.NET documentation</a>
+     */
     public void EndWrite(IAsyncResult asyncResult) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.threading.SemaphoreFullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -640,6 +1173,12 @@ public class IsolatedStorageFileStream extends system.io.FileStream  {
         }
     }
 
+    /**
+     * Invokes the .NET member Flush.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFileStream.Flush" target="_top">.NET documentation</a>
+     */
     public void Flush() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -650,6 +1189,23 @@ public class IsolatedStorageFileStream extends system.io.FileStream  {
         }
     }
 
+    /**
+     * Invokes the .NET member Flush.
+     *
+     * @param flushToDisk the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFileStream.Flush" target="_top">.NET documentation</a>
+     */
     public void Flush(boolean flushToDisk) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -660,6 +1216,24 @@ public class IsolatedStorageFileStream extends system.io.FileStream  {
         }
     }
 
+    /**
+     * Invokes the .NET member Lock.
+     *
+     * @param position the argument of type {@code long}
+     * @param length the argument of type {@code long}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFileStream.Lock" target="_top">.NET documentation</a>
+     */
     public void Lock(long position, long length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -670,6 +1244,13 @@ public class IsolatedStorageFileStream extends system.io.FileStream  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetLength.
+     *
+     * @param value the argument of type {@code long}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFileStream.SetLength" target="_top">.NET documentation</a>
+     */
     public void SetLength(long value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -680,6 +1261,24 @@ public class IsolatedStorageFileStream extends system.io.FileStream  {
         }
     }
 
+    /**
+     * Invokes the .NET member Unlock.
+     *
+     * @param position the argument of type {@code long}
+     * @param length the argument of type {@code long}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFileStream.Unlock" target="_top">.NET documentation</a>
+     */
     public void Unlock(long position, long length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -690,6 +1289,15 @@ public class IsolatedStorageFileStream extends system.io.FileStream  {
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param buffer the argument of type {@code byte[]}
+     * @param offset the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFileStream.Write" target="_top">.NET documentation</a>
+     */
     public void Write(byte[] buffer, int offset, int count) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -700,6 +1308,15 @@ public class IsolatedStorageFileStream extends system.io.FileStream  {
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFileStream.Write" target="_top">.NET documentation</a>
+     */
     public void Write(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -710,6 +1327,13 @@ public class IsolatedStorageFileStream extends system.io.FileStream  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteByte.
+     *
+     * @param value the argument of type {@code byte}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageFileStream.WriteByte" target="_top">.NET documentation</a>
+     */
     public void WriteByte(byte value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

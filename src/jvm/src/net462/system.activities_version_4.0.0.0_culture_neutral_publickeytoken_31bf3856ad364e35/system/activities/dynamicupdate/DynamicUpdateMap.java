@@ -106,7 +106,10 @@ public class DynamicUpdateMap extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DynamicUpdateMap(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -161,6 +164,22 @@ public class DynamicUpdateMap extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Merge.
+     *
+     * @param maps the argument of type {@code DynamicUpdateMap...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMap.Merge" target="_top">.NET documentation</a>
+     */
     public static DynamicUpdateMap Merge(DynamicUpdateMap... maps) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -176,6 +195,22 @@ public class DynamicUpdateMap extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Merge.
+     *
+     * @param maps the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMap.Merge" target="_top">.NET documentation</a>
+     */
     public static DynamicUpdateMap Merge(IEnumerable_1 maps) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -191,6 +226,22 @@ public class DynamicUpdateMap extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Query.
+     *
+     * @param updatedWorkflowDefinition the argument of type {@code Activity}
+     * @param originalWorkflowDefinition the argument of type {@code Activity}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMap.Query" target="_top">.NET documentation</a>
+     */
     public DynamicUpdateMapQuery Query(Activity updatedWorkflowDefinition, Activity originalWorkflowDefinition) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +257,22 @@ public class DynamicUpdateMap extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CalculateImplementationMapItems.
+     *
+     * @param activityDefinitionToBeUpdated the argument of type {@code Activity}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMap.CalculateImplementationMapItems" target="_top">.NET documentation</a>
+     */
     public static IDictionary_2 CalculateImplementationMapItems(Activity activityDefinitionToBeUpdated) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -221,6 +288,23 @@ public class DynamicUpdateMap extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CalculateImplementationMapItems.
+     *
+     * @param activityDefinitionToBeUpdated the argument of type {@code Activity}
+     * @param environment the argument of type {@code LocationReferenceEnvironment}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMap.CalculateImplementationMapItems" target="_top">.NET documentation</a>
+     */
     public static IDictionary_2 CalculateImplementationMapItems(Activity activityDefinitionToBeUpdated, LocationReferenceEnvironment environment) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -236,6 +320,22 @@ public class DynamicUpdateMap extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CalculateMapItems.
+     *
+     * @param workflowDefinitionToBeUpdated the argument of type {@code Activity}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMap.CalculateMapItems" target="_top">.NET documentation</a>
+     */
     public static IDictionary_2 CalculateMapItems(Activity workflowDefinitionToBeUpdated) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -251,6 +351,23 @@ public class DynamicUpdateMap extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CalculateMapItems.
+     *
+     * @param workflowDefinitionToBeUpdated the argument of type {@code Activity}
+     * @param environment the argument of type {@code LocationReferenceEnvironment}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMap.CalculateMapItems" target="_top">.NET documentation</a>
+     */
     public static IDictionary_2 CalculateMapItems(Activity workflowDefinitionToBeUpdated, LocationReferenceEnvironment environment) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -270,6 +387,13 @@ public class DynamicUpdateMap extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property NoChanges.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMap.NoChanges" target="_top">.NET documentation</a>
+     */
     public static DynamicUpdateMap getNoChanges() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

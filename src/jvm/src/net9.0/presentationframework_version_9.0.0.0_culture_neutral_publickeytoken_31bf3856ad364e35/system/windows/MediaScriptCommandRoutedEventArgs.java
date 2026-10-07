@@ -99,7 +99,10 @@ public class MediaScriptCommandRoutedEventArgs extends system.windows.RoutedEven
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MediaScriptCommandRoutedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class MediaScriptCommandRoutedEventArgs extends system.windows.RoutedEven
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ParameterType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.MediaScriptCommandRoutedEventArgs.ParameterType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getParameterType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +182,13 @@ public class MediaScriptCommandRoutedEventArgs extends system.windows.RoutedEven
         }
     }
 
+    /**
+     * Gets the value of the .NET property ParameterValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.MediaScriptCommandRoutedEventArgs.ParameterValue" target="_top">.NET documentation</a>
+     */
     public java.lang.String getParameterValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

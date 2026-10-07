@@ -101,7 +101,10 @@ public class CounterCreationDataCollection extends system.collections.Collection
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CounterCreationDataCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class CounterCreationDataCollection extends system.collections.Collection
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CounterCreationDataCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public CounterCreationDataCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,14 @@ public class CounterCreationDataCollection extends system.collections.Collection
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code CounterCreationData[]}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CounterCreationDataCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public CounterCreationDataCollection(CounterCreationData[] value) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +185,14 @@ public class CounterCreationDataCollection extends system.collections.Collection
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code CounterCreationDataCollection}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CounterCreationDataCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public CounterCreationDataCollection(CounterCreationDataCollection value) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +207,14 @@ public class CounterCreationDataCollection extends system.collections.Collection
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param value the argument of type {@code CounterCreationData}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CounterCreationDataCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(CounterCreationData value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +229,14 @@ public class CounterCreationDataCollection extends system.collections.Collection
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param value the argument of type {@code CounterCreationData}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CounterCreationDataCollection.Add" target="_top">.NET documentation</a>
+     */
     public int Add(CounterCreationData value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +277,14 @@ public class CounterCreationDataCollection extends system.collections.Collection
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param value the argument of type {@code CounterCreationData}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CounterCreationDataCollection.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(CounterCreationData value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +325,14 @@ public class CounterCreationDataCollection extends system.collections.Collection
         }
     }
 
+    /**
+     * Invokes the .NET member AddRange.
+     *
+     * @param value the argument of type {@code CounterCreationData[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CounterCreationDataCollection.AddRange" target="_top">.NET documentation</a>
+     */
     public void AddRange(CounterCreationData[] value) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +343,14 @@ public class CounterCreationDataCollection extends system.collections.Collection
         }
     }
 
+    /**
+     * Invokes the .NET member AddRange.
+     *
+     * @param value the argument of type {@code CounterCreationDataCollection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CounterCreationDataCollection.AddRange" target="_top">.NET documentation</a>
+     */
     public void AddRange(CounterCreationDataCollection value) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -296,6 +361,14 @@ public class CounterCreationDataCollection extends system.collections.Collection
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code CounterCreationData[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CounterCreationDataCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(CounterCreationData[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +379,14 @@ public class CounterCreationDataCollection extends system.collections.Collection
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param value the argument of type {@code CounterCreationData}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CounterCreationDataCollection.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(int index, CounterCreationData value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -316,6 +397,13 @@ public class CounterCreationDataCollection extends system.collections.Collection
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param value the argument of type {@code CounterCreationData}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CounterCreationDataCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(CounterCreationData value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -106,7 +106,10 @@ public class TextRenderer extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TextRenderer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -161,6 +164,25 @@ public class TextRenderer extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member MeasureText.
+     *
+     * @param dc the argument of type {@code IDeviceContext}
+     * @param text the argument of type {@code java.lang.String}
+     * @param font the argument of type {@code Font}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TextRenderer.MeasureText" target="_top">.NET documentation</a>
+     */
     public static Size MeasureText(IDeviceContext dc, java.lang.String text, Font font) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.MulticastNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -176,6 +198,26 @@ public class TextRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MeasureText.
+     *
+     * @param dc the argument of type {@code IDeviceContext}
+     * @param text the argument of type {@code java.lang.String}
+     * @param font the argument of type {@code Font}
+     * @param proposedSize the argument of type {@code Size}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TextRenderer.MeasureText" target="_top">.NET documentation</a>
+     */
     public static Size MeasureText(IDeviceContext dc, java.lang.String text, Font font, Size proposedSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.MulticastNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -191,6 +233,28 @@ public class TextRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MeasureText.
+     *
+     * @param dc the argument of type {@code IDeviceContext}
+     * @param text the argument of type {@code java.lang.String}
+     * @param font the argument of type {@code Font}
+     * @param proposedSize the argument of type {@code Size}
+     * @param flags the argument of type {@code TextFormatFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TextRenderer.MeasureText" target="_top">.NET documentation</a>
+     */
     public static Size MeasureText(IDeviceContext dc, java.lang.String text, Font font, Size proposedSize, TextFormatFlags flags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MulticastNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -206,6 +270,22 @@ public class TextRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MeasureText.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @param font the argument of type {@code Font}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TextRenderer.MeasureText" target="_top">.NET documentation</a>
+     */
     public static Size MeasureText(java.lang.String text, Font font) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -221,6 +301,23 @@ public class TextRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MeasureText.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @param font the argument of type {@code Font}
+     * @param proposedSize the argument of type {@code Size}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TextRenderer.MeasureText" target="_top">.NET documentation</a>
+     */
     public static Size MeasureText(java.lang.String text, Font font, Size proposedSize) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -236,6 +333,24 @@ public class TextRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MeasureText.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @param font the argument of type {@code Font}
+     * @param proposedSize the argument of type {@code Size}
+     * @param flags the argument of type {@code TextFormatFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TextRenderer.MeasureText" target="_top">.NET documentation</a>
+     */
     public static Size MeasureText(java.lang.String text, Font font, Size proposedSize, TextFormatFlags flags) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -251,6 +366,27 @@ public class TextRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawText.
+     *
+     * @param dc the argument of type {@code IDeviceContext}
+     * @param text the argument of type {@code java.lang.String}
+     * @param font the argument of type {@code Font}
+     * @param pt the argument of type {@code Point}
+     * @param foreColor the argument of type {@code Color}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TextRenderer.DrawText" target="_top">.NET documentation</a>
+     */
     public static void DrawText(IDeviceContext dc, java.lang.String text, Font font, Point pt, Color foreColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -261,6 +397,28 @@ public class TextRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawText.
+     *
+     * @param dc the argument of type {@code IDeviceContext}
+     * @param text the argument of type {@code java.lang.String}
+     * @param font the argument of type {@code Font}
+     * @param pt the argument of type {@code Point}
+     * @param foreColor the argument of type {@code Color}
+     * @param backColor the argument of type {@code Color}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TextRenderer.DrawText" target="_top">.NET documentation</a>
+     */
     public static void DrawText(IDeviceContext dc, java.lang.String text, Font font, Point pt, Color foreColor, Color backColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -271,6 +429,30 @@ public class TextRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawText.
+     *
+     * @param dc the argument of type {@code IDeviceContext}
+     * @param text the argument of type {@code java.lang.String}
+     * @param font the argument of type {@code Font}
+     * @param pt the argument of type {@code Point}
+     * @param foreColor the argument of type {@code Color}
+     * @param backColor the argument of type {@code Color}
+     * @param flags the argument of type {@code TextFormatFlags}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TextRenderer.DrawText" target="_top">.NET documentation</a>
+     */
     public static void DrawText(IDeviceContext dc, java.lang.String text, Font font, Point pt, Color foreColor, Color backColor, TextFormatFlags flags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -281,6 +463,29 @@ public class TextRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawText.
+     *
+     * @param dc the argument of type {@code IDeviceContext}
+     * @param text the argument of type {@code java.lang.String}
+     * @param font the argument of type {@code Font}
+     * @param pt the argument of type {@code Point}
+     * @param foreColor the argument of type {@code Color}
+     * @param flags the argument of type {@code TextFormatFlags}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TextRenderer.DrawText" target="_top">.NET documentation</a>
+     */
     public static void DrawText(IDeviceContext dc, java.lang.String text, Font font, Point pt, Color foreColor, TextFormatFlags flags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -291,6 +496,27 @@ public class TextRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawText.
+     *
+     * @param dc the argument of type {@code IDeviceContext}
+     * @param text the argument of type {@code java.lang.String}
+     * @param font the argument of type {@code Font}
+     * @param bounds the argument of type {@code Rectangle}
+     * @param foreColor the argument of type {@code Color}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TextRenderer.DrawText" target="_top">.NET documentation</a>
+     */
     public static void DrawText(IDeviceContext dc, java.lang.String text, Font font, Rectangle bounds, Color foreColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -301,6 +527,28 @@ public class TextRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawText.
+     *
+     * @param dc the argument of type {@code IDeviceContext}
+     * @param text the argument of type {@code java.lang.String}
+     * @param font the argument of type {@code Font}
+     * @param bounds the argument of type {@code Rectangle}
+     * @param foreColor the argument of type {@code Color}
+     * @param backColor the argument of type {@code Color}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TextRenderer.DrawText" target="_top">.NET documentation</a>
+     */
     public static void DrawText(IDeviceContext dc, java.lang.String text, Font font, Rectangle bounds, Color foreColor, Color backColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -311,6 +559,30 @@ public class TextRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawText.
+     *
+     * @param dc the argument of type {@code IDeviceContext}
+     * @param text the argument of type {@code java.lang.String}
+     * @param font the argument of type {@code Font}
+     * @param bounds the argument of type {@code Rectangle}
+     * @param foreColor the argument of type {@code Color}
+     * @param backColor the argument of type {@code Color}
+     * @param flags the argument of type {@code TextFormatFlags}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TextRenderer.DrawText" target="_top">.NET documentation</a>
+     */
     public static void DrawText(IDeviceContext dc, java.lang.String text, Font font, Rectangle bounds, Color foreColor, Color backColor, TextFormatFlags flags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -321,6 +593,29 @@ public class TextRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawText.
+     *
+     * @param dc the argument of type {@code IDeviceContext}
+     * @param text the argument of type {@code java.lang.String}
+     * @param font the argument of type {@code Font}
+     * @param bounds the argument of type {@code Rectangle}
+     * @param foreColor the argument of type {@code Color}
+     * @param flags the argument of type {@code TextFormatFlags}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TextRenderer.DrawText" target="_top">.NET documentation</a>
+     */
     public static void DrawText(IDeviceContext dc, java.lang.String text, Font font, Rectangle bounds, Color foreColor, TextFormatFlags flags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

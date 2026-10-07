@@ -99,7 +99,10 @@ public class AsymmetricKeyExchangeDeformatter extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AsymmetricKeyExchangeDeformatter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,14 @@ public class AsymmetricKeyExchangeDeformatter extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member DecryptKeyExchange.
+     *
+     * @param rgb the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.AsymmetricKeyExchangeDeformatter.DecryptKeyExchange" target="_top">.NET documentation</a>
+     */
     public byte[] DecryptKeyExchange(byte[] rgb) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +186,14 @@ public class AsymmetricKeyExchangeDeformatter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DecryptKeyExchange.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.AsymmetricKeyExchangeDeformatter.DecryptKeyExchange" target="_top">.NET documentation</a>
+     */
     public byte[] DecryptKeyExchange(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +217,13 @@ public class AsymmetricKeyExchangeDeformatter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetKey.
+     *
+     * @param key the argument of type {@code AsymmetricAlgorithm}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.AsymmetricKeyExchangeDeformatter.SetKey" target="_top">.NET documentation</a>
+     */
     public void SetKey(AsymmetricAlgorithm key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +238,13 @@ public class AsymmetricKeyExchangeDeformatter extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Parameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.AsymmetricKeyExchangeDeformatter.Parameters" target="_top">.NET documentation</a>
+     */
     public java.lang.String getParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +259,13 @@ public class AsymmetricKeyExchangeDeformatter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Parameters.
+     *
+     * @param Parameters the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.AsymmetricKeyExchangeDeformatter.Parameters" target="_top">.NET documentation</a>
+     */
     public void setParameters(java.lang.String Parameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

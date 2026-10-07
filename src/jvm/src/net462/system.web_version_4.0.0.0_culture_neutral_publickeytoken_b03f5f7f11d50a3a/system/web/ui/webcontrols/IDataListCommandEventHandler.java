@@ -52,5 +52,11 @@ import system.web.ui.webcontrols.DataListCommandEventArgs;
  * @version 2.0.0.0
  */
 public interface IDataListCommandEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param source the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.Web.UI.WebControls.DataListCommandEventArgs}
+     */
     public void Invoke(NetObject source, DataListCommandEventArgs e);
 }

@@ -100,7 +100,10 @@ public class Activity_1<TResult extends IJCOBridgeReflected> extends system.acti
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Activity_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,13 @@ public class Activity_1<TResult extends IJCOBridgeReflected> extends system.acti
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ResultNewActivity_1.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Activity-1.ResultNewActivity_1" target="_top">.NET documentation</a>
+     */
     public OutArgument_1 getResultNewActivity_1() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +182,13 @@ public class Activity_1<TResult extends IJCOBridgeReflected> extends system.acti
         }
     }
 
+    /**
+     * Sets the value of the .NET property Result.
+     *
+     * @param Result the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Activity-1.Result" target="_top">.NET documentation</a>
+     */
     public void setResult(OutArgument_1 Result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

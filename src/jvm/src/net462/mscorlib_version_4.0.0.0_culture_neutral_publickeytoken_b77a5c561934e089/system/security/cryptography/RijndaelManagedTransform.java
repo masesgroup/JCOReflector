@@ -98,7 +98,10 @@ public class RijndaelManagedTransform extends NetObject implements AutoCloseable
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RijndaelManagedTransform(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,20 @@ public class RijndaelManagedTransform extends NetObject implements AutoCloseable
     
     // Methods section
     
+    /**
+     * Invokes the .NET member TransformFinalBlock.
+     *
+     * @param inputBuffer the argument of type {@code byte[]}
+     * @param inputOffset the argument of type {@code int}
+     * @param inputCount the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RijndaelManagedTransform.TransformFinalBlock" target="_top">.NET documentation</a>
+     */
     public byte[] TransformFinalBlock(byte[] inputBuffer, int inputOffset, int inputCount) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +193,20 @@ public class RijndaelManagedTransform extends NetObject implements AutoCloseable
         }
     }
 
+    /**
+     * Invokes the .NET member TransformFinalBlock.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RijndaelManagedTransform.TransformFinalBlock" target="_top">.NET documentation</a>
+     */
     public byte[] TransformFinalBlock(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +230,22 @@ public class RijndaelManagedTransform extends NetObject implements AutoCloseable
         }
     }
 
+    /**
+     * Invokes the .NET member TransformBlock.
+     *
+     * @param inputBuffer the argument of type {@code byte[]}
+     * @param inputOffset the argument of type {@code int}
+     * @param inputCount the argument of type {@code int}
+     * @param outputBuffer the argument of type {@code byte[]}
+     * @param outputOffset the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RijndaelManagedTransform.TransformBlock" target="_top">.NET documentation</a>
+     */
     public int TransformBlock(byte[] inputBuffer, int inputOffset, int inputCount, byte[] outputBuffer, int outputOffset) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +286,22 @@ public class RijndaelManagedTransform extends NetObject implements AutoCloseable
         }
     }
 
+    /**
+     * Invokes the .NET member TransformBlock.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code int}
+     * @param dupParam3 the argument of type {@code JCORefOut}
+     * @param dupParam4 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RijndaelManagedTransform.TransformBlock" target="_top">.NET documentation</a>
+     */
     public int TransformBlock(JCORefOut dupParam0, int dupParam1, int dupParam2, JCORefOut dupParam3, int dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +342,12 @@ public class RijndaelManagedTransform extends NetObject implements AutoCloseable
         }
     }
 
+    /**
+     * Invokes the .NET member Clear.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RijndaelManagedTransform.Clear" target="_top">.NET documentation</a>
+     */
     public void Clear() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +358,12 @@ public class RijndaelManagedTransform extends NetObject implements AutoCloseable
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RijndaelManagedTransform.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -299,6 +374,12 @@ public class RijndaelManagedTransform extends NetObject implements AutoCloseable
         }
     }
 
+    /**
+     * Invokes the .NET member Reset.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RijndaelManagedTransform.Reset" target="_top">.NET documentation</a>
+     */
     public void Reset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -326,6 +407,13 @@ public class RijndaelManagedTransform extends NetObject implements AutoCloseable
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CanReuseTransform.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RijndaelManagedTransform.CanReuseTransform" target="_top">.NET documentation</a>
+     */
     public boolean getCanReuseTransform() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -340,6 +428,13 @@ public class RijndaelManagedTransform extends NetObject implements AutoCloseable
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanTransformMultipleBlocks.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RijndaelManagedTransform.CanTransformMultipleBlocks" target="_top">.NET documentation</a>
+     */
     public boolean getCanTransformMultipleBlocks() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -354,6 +449,13 @@ public class RijndaelManagedTransform extends NetObject implements AutoCloseable
         }
     }
 
+    /**
+     * Gets the value of the .NET property BlockSizeValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RijndaelManagedTransform.BlockSizeValue" target="_top">.NET documentation</a>
+     */
     public int getBlockSizeValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -394,6 +496,13 @@ public class RijndaelManagedTransform extends NetObject implements AutoCloseable
         }
     }
 
+    /**
+     * Gets the value of the .NET property InputBlockSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RijndaelManagedTransform.InputBlockSize" target="_top">.NET documentation</a>
+     */
     public int getInputBlockSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -434,6 +543,13 @@ public class RijndaelManagedTransform extends NetObject implements AutoCloseable
         }
     }
 
+    /**
+     * Gets the value of the .NET property OutputBlockSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RijndaelManagedTransform.OutputBlockSize" target="_top">.NET documentation</a>
+     */
     public int getOutputBlockSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class JsonSchemaExporterContext extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public JsonSchemaExporterContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class JsonSchemaExporterContext extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PropertyInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Schema.JsonSchemaExporterContext.PropertyInfo" target="_top">.NET documentation</a>
+     */
     public JsonPropertyInfo getPropertyInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +185,13 @@ public class JsonSchemaExporterContext extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BaseTypeInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Schema.JsonSchemaExporterContext.BaseTypeInfo" target="_top">.NET documentation</a>
+     */
     public JsonTypeInfo getBaseTypeInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +207,13 @@ public class JsonSchemaExporterContext extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Schema.JsonSchemaExporterContext.TypeInfo" target="_top">.NET documentation</a>
+     */
     public JsonTypeInfo getTypeInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

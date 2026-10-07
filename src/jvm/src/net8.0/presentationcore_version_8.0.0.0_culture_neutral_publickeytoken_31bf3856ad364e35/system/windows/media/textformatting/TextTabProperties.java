@@ -99,7 +99,10 @@ public class TextTabProperties extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TextTabProperties(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,16 @@ public class TextTabProperties extends NetObject  {
     public TextTabProperties() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param alignment the argument of type {@code TextTabAlignment}
+     * @param location the argument of type {@code double}
+     * @param tabLeader the argument of type {@code int}
+     * @param aligningChar the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextTabProperties.-ctor" target="_top">.NET documentation</a>
+     */
     public TextTabProperties(TextTabAlignment alignment, double location, int tabLeader, int aligningChar) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +181,13 @@ public class TextTabProperties extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Location.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextTabProperties.Location" target="_top">.NET documentation</a>
+     */
     public double getLocation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +228,13 @@ public class TextTabProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AligningCharacter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextTabProperties.AligningCharacter" target="_top">.NET documentation</a>
+     */
     public int getAligningCharacter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +275,13 @@ public class TextTabProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TabLeader.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextTabProperties.TabLeader" target="_top">.NET documentation</a>
+     */
     public int getTabLeader() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +322,13 @@ public class TextTabProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Alignment.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextTabProperties.Alignment" target="_top">.NET documentation</a>
+     */
     public TextTabAlignment getAlignment() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

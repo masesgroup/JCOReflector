@@ -100,7 +100,10 @@ public class Thickness extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Thickness(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,16 @@ public class Thickness extends system.ValueType  {
     public Thickness() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param left the argument of type {@code double}
+     * @param top the argument of type {@code double}
+     * @param right the argument of type {@code double}
+     * @param bottom the argument of type {@code double}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Thickness.-ctor" target="_top">.NET documentation</a>
+     */
     public Thickness(double left, double top, double right, double bottom) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +173,13 @@ public class Thickness extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param uniformLength the argument of type {@code double}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Thickness.-ctor" target="_top">.NET documentation</a>
+     */
     public Thickness(double uniformLength) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +195,14 @@ public class Thickness extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param thickness the argument of type {@code Thickness}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Thickness.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(Thickness thickness) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +221,13 @@ public class Thickness extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Bottom.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Thickness.Bottom" target="_top">.NET documentation</a>
+     */
     public double getBottom() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +268,13 @@ public class Thickness extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Bottom.
+     *
+     * @param Bottom the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Thickness.Bottom" target="_top">.NET documentation</a>
+     */
     public void setBottom(double Bottom) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +285,13 @@ public class Thickness extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Left.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Thickness.Left" target="_top">.NET documentation</a>
+     */
     public double getLeft() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +332,13 @@ public class Thickness extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Left.
+     *
+     * @param Left the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Thickness.Left" target="_top">.NET documentation</a>
+     */
     public void setLeft(double Left) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +349,13 @@ public class Thickness extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Right.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Thickness.Right" target="_top">.NET documentation</a>
+     */
     public double getRight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -333,6 +396,13 @@ public class Thickness extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Right.
+     *
+     * @param Right the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Thickness.Right" target="_top">.NET documentation</a>
+     */
     public void setRight(double Right) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -343,6 +413,13 @@ public class Thickness extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Top.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Thickness.Top" target="_top">.NET documentation</a>
+     */
     public double getTop() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -383,6 +460,13 @@ public class Thickness extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Top.
+     *
+     * @param Top the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Thickness.Top" target="_top">.NET documentation</a>
+     */
     public void setTop(double Top) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

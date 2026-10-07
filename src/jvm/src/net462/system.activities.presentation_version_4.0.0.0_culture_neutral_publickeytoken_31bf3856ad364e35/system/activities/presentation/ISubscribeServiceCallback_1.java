@@ -51,5 +51,10 @@ import org.mases.jcobridge.netreflection.*;
  * @version 2.0.0.0
  */
 public interface ISubscribeServiceCallback_1<TServiceType extends IJCOBridgeReflected> {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param serviceInstance the .NET argument of type {@code TServiceType}
+     */
     public void Invoke(TServiceType serviceInstance);
 }

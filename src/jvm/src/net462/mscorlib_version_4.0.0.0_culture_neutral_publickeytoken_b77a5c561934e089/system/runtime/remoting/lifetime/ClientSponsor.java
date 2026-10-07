@@ -102,7 +102,10 @@ public class ClientSponsor extends system.MarshalByRefObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ClientSponsor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,20 @@ public class ClientSponsor extends system.MarshalByRefObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Lifetime.ClientSponsor.-ctor" target="_top">.NET documentation</a>
+     */
     public ClientSponsor() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.OverflowException {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +176,21 @@ public class ClientSponsor extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param renewalTime the argument of type {@code TimeSpan}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Lifetime.ClientSponsor.-ctor" target="_top">.NET documentation</a>
+     */
     public ClientSponsor(TimeSpan renewalTime) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.OverflowException {
         try {
             // add reference to assemblyName.dll file
@@ -173,6 +205,27 @@ public class ClientSponsor extends system.MarshalByRefObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Register.
+     *
+     * @param obj the argument of type {@code MarshalByRefObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Lifetime.ClientSponsor.Register" target="_top">.NET documentation</a>
+     */
     public boolean Register(MarshalByRefObject obj) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +240,13 @@ public class ClientSponsor extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member InitializeLifetimeService.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Lifetime.ClientSponsor.InitializeLifetimeService" target="_top">.NET documentation</a>
+     */
     public NetObject InitializeLifetimeService() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +262,14 @@ public class ClientSponsor extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Renewal.
+     *
+     * @param lease the argument of type {@code ILease}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Lifetime.ClientSponsor.Renewal" target="_top">.NET documentation</a>
+     */
     public TimeSpan Renewal(ILease lease) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +285,13 @@ public class ClientSponsor extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Close.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Lifetime.ClientSponsor.Close" target="_top">.NET documentation</a>
+     */
     public void Close() throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +302,17 @@ public class ClientSponsor extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Unregister.
+     *
+     * @param obj the argument of type {@code MarshalByRefObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Lifetime.ClientSponsor.Unregister" target="_top">.NET documentation</a>
+     */
     public void Unregister(MarshalByRefObject obj) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +327,13 @@ public class ClientSponsor extends system.MarshalByRefObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RenewalTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Lifetime.ClientSponsor.RenewalTime" target="_top">.NET documentation</a>
+     */
     public TimeSpan getRenewalTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +349,13 @@ public class ClientSponsor extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RenewalTime.
+     *
+     * @param RenewalTime the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Lifetime.ClientSponsor.RenewalTime" target="_top">.NET documentation</a>
+     */
     public void setRenewalTime(TimeSpan RenewalTime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

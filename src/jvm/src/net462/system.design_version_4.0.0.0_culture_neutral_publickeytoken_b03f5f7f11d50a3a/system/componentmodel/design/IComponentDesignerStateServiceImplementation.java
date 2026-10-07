@@ -100,7 +100,10 @@ public class IComponentDesignerStateServiceImplementation extends NetObject impl
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IComponentDesignerStateServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,15 @@ public class IComponentDesignerStateServiceImplementation extends NetObject impl
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetState.
+     *
+     * @param component the argument of type {@code IComponent}
+     * @param key the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IComponentDesignerStateService.GetState" target="_top">.NET documentation</a>
+     */
     public NetObject GetState(IComponent component, java.lang.String key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -157,6 +169,15 @@ public class IComponentDesignerStateServiceImplementation extends NetObject impl
         }
     }
 
+    /**
+     * Invokes the .NET member SetState.
+     *
+     * @param component the argument of type {@code IComponent}
+     * @param key the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IComponentDesignerStateService.SetState" target="_top">.NET documentation</a>
+     */
     public void SetState(IComponent component, java.lang.String key, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

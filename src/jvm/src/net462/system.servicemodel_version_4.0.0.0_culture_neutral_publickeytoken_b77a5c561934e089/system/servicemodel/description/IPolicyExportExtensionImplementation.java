@@ -100,7 +100,10 @@ public class IPolicyExportExtensionImplementation extends NetObject implements I
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IPolicyExportExtensionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,14 @@ public class IPolicyExportExtensionImplementation extends NetObject implements I
 
     // Methods section
     
+    /**
+     * Invokes the .NET member ExportPolicy.
+     *
+     * @param exporter the argument of type {@code MetadataExporter}
+     * @param context the argument of type {@code PolicyConversionContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy" target="_top">.NET documentation</a>
+     */
     public void ExportPolicy(MetadataExporter exporter, PolicyConversionContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

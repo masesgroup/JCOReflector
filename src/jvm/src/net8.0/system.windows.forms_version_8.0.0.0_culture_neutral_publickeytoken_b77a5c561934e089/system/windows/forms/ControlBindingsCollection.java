@@ -105,7 +105,10 @@ public class ControlBindingsCollection extends system.windows.forms.BindingsColl
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ControlBindingsCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,13 @@ public class ControlBindingsCollection extends system.windows.forms.BindingsColl
     public ControlBindingsCollection() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param control the argument of type {@code IBindableComponent}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ControlBindingsCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public ControlBindingsCollection(IBindableComponent control) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +180,38 @@ public class ControlBindingsCollection extends system.windows.forms.BindingsColl
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @param dataSource the argument of type {@code NetObject}
+     * @param dataMember the argument of type {@code java.lang.String}
+     * @param formattingEnabled the argument of type {@code boolean}
+     * @param updateMode the argument of type {@code DataSourceUpdateMode}
+     * @param nullValue the argument of type {@code NetObject}
+     * @param formatString the argument of type {@code java.lang.String}
+     * @param formatInfo the argument of type {@code IFormatProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ControlBindingsCollection.Add" target="_top">.NET documentation</a>
+     */
     public system.windows.forms.Binding Add(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember, boolean formattingEnabled, DataSourceUpdateMode updateMode, NetObject nullValue, java.lang.String formatString, IFormatProvider formatInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.TypeLoadException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +227,33 @@ public class ControlBindingsCollection extends system.windows.forms.BindingsColl
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @param dataSource the argument of type {@code NetObject}
+     * @param dataMember the argument of type {@code java.lang.String}
+     * @param formattingEnabled the argument of type {@code boolean}
+     * @param updateMode the argument of type {@code DataSourceUpdateMode}
+     * @param nullValue the argument of type {@code NetObject}
+     * @param formatString the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ControlBindingsCollection.Add" target="_top">.NET documentation</a>
+     */
     public system.windows.forms.Binding Add(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember, boolean formattingEnabled, DataSourceUpdateMode updateMode, NetObject nullValue, java.lang.String formatString) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.MissingMemberException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.TypeLoadException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +269,32 @@ public class ControlBindingsCollection extends system.windows.forms.BindingsColl
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @param dataSource the argument of type {@code NetObject}
+     * @param dataMember the argument of type {@code java.lang.String}
+     * @param formattingEnabled the argument of type {@code boolean}
+     * @param updateMode the argument of type {@code DataSourceUpdateMode}
+     * @param nullValue the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ControlBindingsCollection.Add" target="_top">.NET documentation</a>
+     */
     public system.windows.forms.Binding Add(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember, boolean formattingEnabled, DataSourceUpdateMode updateMode, NetObject nullValue) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.MissingMemberException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.TypeLoadException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +310,31 @@ public class ControlBindingsCollection extends system.windows.forms.BindingsColl
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @param dataSource the argument of type {@code NetObject}
+     * @param dataMember the argument of type {@code java.lang.String}
+     * @param formattingEnabled the argument of type {@code boolean}
+     * @param updateMode the argument of type {@code DataSourceUpdateMode}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ControlBindingsCollection.Add" target="_top">.NET documentation</a>
+     */
     public system.windows.forms.Binding Add(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember, boolean formattingEnabled, DataSourceUpdateMode updateMode) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.MissingMemberException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.TypeLoadException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +350,30 @@ public class ControlBindingsCollection extends system.windows.forms.BindingsColl
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @param dataSource the argument of type {@code NetObject}
+     * @param dataMember the argument of type {@code java.lang.String}
+     * @param formattingEnabled the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ControlBindingsCollection.Add" target="_top">.NET documentation</a>
+     */
     public system.windows.forms.Binding Add(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember, boolean formattingEnabled) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.MissingMemberException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.TypeLoadException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +389,29 @@ public class ControlBindingsCollection extends system.windows.forms.BindingsColl
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @param dataSource the argument of type {@code NetObject}
+     * @param dataMember the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ControlBindingsCollection.Add" target="_top">.NET documentation</a>
+     */
     public system.windows.forms.Binding Add(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.MissingMemberException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.TypeLoadException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +427,21 @@ public class ControlBindingsCollection extends system.windows.forms.BindingsColl
         }
     }
 
+    /**
+     * Invokes the .NET member AddNewControlBindingsCollection.
+     *
+     * @param binding the argument of type {@code system.windows.forms.Binding}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ControlBindingsCollection.AddNewControlBindingsCollection" target="_top">.NET documentation</a>
+     */
     public void AddNewControlBindingsCollection(system.windows.forms.Binding binding) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +452,18 @@ public class ControlBindingsCollection extends system.windows.forms.BindingsColl
         }
     }
 
+    /**
+     * Invokes the .NET member ClearNewControlBindingsCollection.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ControlBindingsCollection.ClearNewControlBindingsCollection" target="_top">.NET documentation</a>
+     */
     public void ClearNewControlBindingsCollection() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +474,21 @@ public class ControlBindingsCollection extends system.windows.forms.BindingsColl
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveNewControlBindingsCollection.
+     *
+     * @param binding the argument of type {@code system.windows.forms.Binding}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ControlBindingsCollection.RemoveNewControlBindingsCollection" target="_top">.NET documentation</a>
+     */
     public void RemoveNewControlBindingsCollection(system.windows.forms.Binding binding) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.RankException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +499,21 @@ public class ControlBindingsCollection extends system.windows.forms.BindingsColl
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAtNewControlBindingsCollection.
+     *
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ControlBindingsCollection.RemoveAtNewControlBindingsCollection" target="_top">.NET documentation</a>
+     */
     public void RemoveAtNewControlBindingsCollection(int index) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.RankException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +528,13 @@ public class ControlBindingsCollection extends system.windows.forms.BindingsColl
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Control.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ControlBindingsCollection.Control" target="_top">.NET documentation</a>
+     */
     public Control getControl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -319,6 +550,13 @@ public class ControlBindingsCollection extends system.windows.forms.BindingsColl
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultDataSourceUpdateMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ControlBindingsCollection.DefaultDataSourceUpdateMode" target="_top">.NET documentation</a>
+     */
     public DataSourceUpdateMode getDefaultDataSourceUpdateMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -334,6 +572,13 @@ public class ControlBindingsCollection extends system.windows.forms.BindingsColl
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultDataSourceUpdateMode.
+     *
+     * @param DefaultDataSourceUpdateMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ControlBindingsCollection.DefaultDataSourceUpdateMode" target="_top">.NET documentation</a>
+     */
     public void setDefaultDataSourceUpdateMode(DataSourceUpdateMode DefaultDataSourceUpdateMode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -344,6 +589,13 @@ public class ControlBindingsCollection extends system.windows.forms.BindingsColl
         }
     }
 
+    /**
+     * Gets the value of the .NET property BindableComponent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ControlBindingsCollection.BindableComponent" target="_top">.NET documentation</a>
+     */
     public IBindableComponent getBindableComponent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

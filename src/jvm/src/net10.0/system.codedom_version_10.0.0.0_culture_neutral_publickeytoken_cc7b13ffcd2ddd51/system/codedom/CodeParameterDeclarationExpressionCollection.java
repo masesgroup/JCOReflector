@@ -101,7 +101,10 @@ public class CodeParameterDeclarationExpressionCollection extends system.collect
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodeParameterDeclarationExpressionCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class CodeParameterDeclarationExpressionCollection extends system.collect
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeParameterDeclarationExpressionCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeParameterDeclarationExpressionCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,18 @@ public class CodeParameterDeclarationExpressionCollection extends system.collect
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code CodeParameterDeclarationExpression[]}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeParameterDeclarationExpressionCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeParameterDeclarationExpressionCollection(CodeParameterDeclarationExpression[] value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +189,18 @@ public class CodeParameterDeclarationExpressionCollection extends system.collect
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code CodeParameterDeclarationExpressionCollection}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeParameterDeclarationExpressionCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeParameterDeclarationExpressionCollection(CodeParameterDeclarationExpressionCollection value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +215,14 @@ public class CodeParameterDeclarationExpressionCollection extends system.collect
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param value the argument of type {@code CodeParameterDeclarationExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeParameterDeclarationExpressionCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(CodeParameterDeclarationExpression value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +237,14 @@ public class CodeParameterDeclarationExpressionCollection extends system.collect
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param value the argument of type {@code CodeParameterDeclarationExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeParameterDeclarationExpressionCollection.Add" target="_top">.NET documentation</a>
+     */
     public int Add(CodeParameterDeclarationExpression value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +285,14 @@ public class CodeParameterDeclarationExpressionCollection extends system.collect
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param value the argument of type {@code CodeParameterDeclarationExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeParameterDeclarationExpressionCollection.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(CodeParameterDeclarationExpression value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +333,22 @@ public class CodeParameterDeclarationExpressionCollection extends system.collect
         }
     }
 
+    /**
+     * Invokes the .NET member AddRange.
+     *
+     * @param value the argument of type {@code CodeParameterDeclarationExpression[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeParameterDeclarationExpressionCollection.AddRange" target="_top">.NET documentation</a>
+     */
     public void AddRange(CodeParameterDeclarationExpression[] value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +359,22 @@ public class CodeParameterDeclarationExpressionCollection extends system.collect
         }
     }
 
+    /**
+     * Invokes the .NET member AddRange.
+     *
+     * @param value the argument of type {@code CodeParameterDeclarationExpressionCollection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeParameterDeclarationExpressionCollection.AddRange" target="_top">.NET documentation</a>
+     */
     public void AddRange(CodeParameterDeclarationExpressionCollection value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -296,6 +385,14 @@ public class CodeParameterDeclarationExpressionCollection extends system.collect
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code CodeParameterDeclarationExpression[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeParameterDeclarationExpressionCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(CodeParameterDeclarationExpression[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +403,14 @@ public class CodeParameterDeclarationExpressionCollection extends system.collect
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param value the argument of type {@code CodeParameterDeclarationExpression}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeParameterDeclarationExpressionCollection.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(int index, CodeParameterDeclarationExpression value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -316,6 +421,13 @@ public class CodeParameterDeclarationExpressionCollection extends system.collect
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param value the argument of type {@code CodeParameterDeclarationExpression}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeParameterDeclarationExpressionCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(CodeParameterDeclarationExpression value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

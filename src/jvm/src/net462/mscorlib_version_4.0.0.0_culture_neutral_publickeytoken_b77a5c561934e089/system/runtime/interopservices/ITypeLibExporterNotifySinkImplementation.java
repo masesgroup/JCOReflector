@@ -100,7 +100,10 @@ public class ITypeLibExporterNotifySinkImplementation extends NetObject implemen
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ITypeLibExporterNotifySinkImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,14 @@ public class ITypeLibExporterNotifySinkImplementation extends NetObject implemen
 
     // Methods section
     
+    /**
+     * Invokes the .NET member ResolveRef.
+     *
+     * @param assembly the argument of type {@code Assembly}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ITypeLibExporterNotifySink.ResolveRef" target="_top">.NET documentation</a>
+     */
     public NetObject ResolveRef(Assembly assembly) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -157,6 +168,15 @@ public class ITypeLibExporterNotifySinkImplementation extends NetObject implemen
         }
     }
 
+    /**
+     * Invokes the .NET member ReportEvent.
+     *
+     * @param eventKind the argument of type {@code ExporterEventKind}
+     * @param eventCode the argument of type {@code int}
+     * @param eventMsg the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ITypeLibExporterNotifySink.ReportEvent" target="_top">.NET documentation</a>
+     */
     public void ReportEvent(ExporterEventKind eventKind, int eventCode, java.lang.String eventMsg) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

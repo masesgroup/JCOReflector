@@ -112,7 +112,10 @@ public class JsonTypeInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public JsonTypeInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -165,6 +168,26 @@ public class JsonTypeInfo extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateJsonPropertyInfo.
+     *
+     * @param propertyType the argument of type {@code NetType}
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.CreateJsonPropertyInfo" target="_top">.NET documentation</a>
+     */
     public JsonPropertyInfo CreateJsonPropertyInfo(NetType propertyType, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +203,31 @@ public class JsonTypeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateJsonTypeInfo.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MethodAccessException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.CreateJsonTypeInfo" target="_top">.NET documentation</a>
+     */
     public static JsonTypeInfo CreateJsonTypeInfo(NetType type, JsonSerializerOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -195,6 +243,31 @@ public class JsonTypeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateJsonTypeInfo.
+     *
+     * @param <T> the type of the generic argument T
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MethodAccessException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.CreateJsonTypeInfo" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> JsonTypeInfo_1 CreateJsonTypeInfo(JsonSerializerOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -210,6 +283,12 @@ public class JsonTypeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MakeReadOnly.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.MakeReadOnly" target="_top">.NET documentation</a>
+     */
     public void MakeReadOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +303,13 @@ public class JsonTypeInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsReadOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.IsReadOnly" target="_top">.NET documentation</a>
+     */
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +324,13 @@ public class JsonTypeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsReadOnly.
+     *
+     * @param IsReadOnly the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.IsReadOnly" target="_top">.NET documentation</a>
+     */
     public void setIsReadOnly(boolean IsReadOnly) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +341,13 @@ public class JsonTypeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OnDeserialized.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.OnDeserialized" target="_top">.NET documentation</a>
+     */
     public Action_1 getOnDeserialized() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +362,19 @@ public class JsonTypeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OnDeserialized.
+     *
+     * @param OnDeserialized the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.OnDeserialized" target="_top">.NET documentation</a>
+     */
     public void setOnDeserialized(Action_1 OnDeserialized) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +385,13 @@ public class JsonTypeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OnDeserializing.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.OnDeserializing" target="_top">.NET documentation</a>
+     */
     public Action_1 getOnDeserializing() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +406,19 @@ public class JsonTypeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OnDeserializing.
+     *
+     * @param OnDeserializing the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.OnDeserializing" target="_top">.NET documentation</a>
+     */
     public void setOnDeserializing(Action_1 OnDeserializing) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -296,6 +429,13 @@ public class JsonTypeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OnSerialized.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.OnSerialized" target="_top">.NET documentation</a>
+     */
     public Action_1 getOnSerialized() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +450,19 @@ public class JsonTypeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OnSerialized.
+     *
+     * @param OnSerialized the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.OnSerialized" target="_top">.NET documentation</a>
+     */
     public void setOnSerialized(Action_1 OnSerialized) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +473,13 @@ public class JsonTypeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OnSerializing.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.OnSerializing" target="_top">.NET documentation</a>
+     */
     public Action_1 getOnSerializing() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -334,6 +494,19 @@ public class JsonTypeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OnSerializing.
+     *
+     * @param OnSerializing the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.OnSerializing" target="_top">.NET documentation</a>
+     */
     public void setOnSerializing(Action_1 OnSerializing) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -344,6 +517,21 @@ public class JsonTypeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Properties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.Properties" target="_top">.NET documentation</a>
+     */
     public IList_1 getProperties() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.collections.generic.KeyNotFoundException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -359,6 +547,13 @@ public class JsonTypeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CreateObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.CreateObject" target="_top">.NET documentation</a>
+     */
     public Func_1 getCreateObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -373,6 +568,13 @@ public class JsonTypeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CreateObject.
+     *
+     * @param CreateObject the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.CreateObject" target="_top">.NET documentation</a>
+     */
     public void setCreateObject(Func_1 CreateObject) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -383,6 +585,13 @@ public class JsonTypeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NumberHandling.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.NumberHandling" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getNumberHandling() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -398,6 +607,19 @@ public class JsonTypeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NumberHandling.
+     *
+     * @param NumberHandling the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.NumberHandling" target="_top">.NET documentation</a>
+     */
     public void setNumberHandling(Nullable_1 NumberHandling) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -408,6 +630,13 @@ public class JsonTypeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PreferredPropertyObjectCreationHandling.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.PreferredPropertyObjectCreationHandling" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getPreferredPropertyObjectCreationHandling() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -423,6 +652,19 @@ public class JsonTypeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PreferredPropertyObjectCreationHandling.
+     *
+     * @param PreferredPropertyObjectCreationHandling the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.PreferredPropertyObjectCreationHandling" target="_top">.NET documentation</a>
+     */
     public void setPreferredPropertyObjectCreationHandling(Nullable_1 PreferredPropertyObjectCreationHandling) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -433,6 +675,13 @@ public class JsonTypeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnmappedMemberHandling.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.UnmappedMemberHandling" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getUnmappedMemberHandling() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -448,6 +697,19 @@ public class JsonTypeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UnmappedMemberHandling.
+     *
+     * @param UnmappedMemberHandling the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.UnmappedMemberHandling" target="_top">.NET documentation</a>
+     */
     public void setUnmappedMemberHandling(Nullable_1 UnmappedMemberHandling) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -458,6 +720,13 @@ public class JsonTypeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Options.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.Options" target="_top">.NET documentation</a>
+     */
     public JsonSerializerOptions getOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -473,6 +742,13 @@ public class JsonTypeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Converter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.Converter" target="_top">.NET documentation</a>
+     */
     public JsonConverter getConverter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -488,6 +764,13 @@ public class JsonTypeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OriginatingResolver.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.OriginatingResolver" target="_top">.NET documentation</a>
+     */
     public IJsonTypeInfoResolver getOriginatingResolver() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -503,6 +786,19 @@ public class JsonTypeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OriginatingResolver.
+     *
+     * @param OriginatingResolver the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.OriginatingResolver" target="_top">.NET documentation</a>
+     */
     public void setOriginatingResolver(IJsonTypeInfoResolver OriginatingResolver) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -513,6 +809,13 @@ public class JsonTypeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PolymorphismOptions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.PolymorphismOptions" target="_top">.NET documentation</a>
+     */
     public JsonPolymorphismOptions getPolymorphismOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -528,6 +831,19 @@ public class JsonTypeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PolymorphismOptions.
+     *
+     * @param PolymorphismOptions the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.PolymorphismOptions" target="_top">.NET documentation</a>
+     */
     public void setPolymorphismOptions(JsonPolymorphismOptions PolymorphismOptions) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -538,6 +854,13 @@ public class JsonTypeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Kind.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.Kind" target="_top">.NET documentation</a>
+     */
     public JsonTypeInfoKind getKind() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -553,6 +876,13 @@ public class JsonTypeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Kind.
+     *
+     * @param Kind the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.Kind" target="_top">.NET documentation</a>
+     */
     public void setKind(JsonTypeInfoKind Kind) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -563,6 +893,13 @@ public class JsonTypeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Type.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.Type" target="_top">.NET documentation</a>
+     */
     public NetType getType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

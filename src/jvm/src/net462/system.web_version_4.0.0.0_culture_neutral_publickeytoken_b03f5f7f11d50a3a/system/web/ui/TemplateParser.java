@@ -101,7 +101,10 @@ public class TemplateParser extends system.web.ui.BaseParser  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TemplateParser(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,31 @@ public class TemplateParser extends system.web.ui.BaseParser  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ParseTemplate.
+     *
+     * @param content the argument of type {@code java.lang.String}
+     * @param virtualPath the argument of type {@code java.lang.String}
+     * @param ignoreFilter the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.web.HttpParseException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.TemplateParser.ParseTemplate" target="_top">.NET documentation</a>
+     */
     public static ITemplate ParseTemplate(java.lang.String content, java.lang.String virtualPath, boolean ignoreFilter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.web.HttpParseException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -173,6 +201,13 @@ public class TemplateParser extends system.web.ui.BaseParser  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Text.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.TemplateParser.Text" target="_top">.NET documentation</a>
+     */
     public java.lang.String getText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +222,13 @@ public class TemplateParser extends system.web.ui.BaseParser  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Text.
+     *
+     * @param Text the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.TemplateParser.Text" target="_top">.NET documentation</a>
+     */
     public void setText(java.lang.String Text) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

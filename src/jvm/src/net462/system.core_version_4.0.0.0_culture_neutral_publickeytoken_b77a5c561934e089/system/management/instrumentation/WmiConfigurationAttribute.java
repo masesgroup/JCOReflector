@@ -100,7 +100,10 @@ public class WmiConfigurationAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WmiConfigurationAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,30 @@ public class WmiConfigurationAttribute extends system.Attribute  {
     public WmiConfigurationAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param scope the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.Instrumentation.WmiConfigurationAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public WmiConfigurationAttribute(java.lang.String scope) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NullReferenceException, system.ObjectDisposedException, system.RankException, system.security.SecurityException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +196,13 @@ public class WmiConfigurationAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IdentifyLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.Instrumentation.WmiConfigurationAttribute.IdentifyLevel" target="_top">.NET documentation</a>
+     */
     public boolean getIdentifyLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +217,13 @@ public class WmiConfigurationAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IdentifyLevel.
+     *
+     * @param IdentifyLevel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.Instrumentation.WmiConfigurationAttribute.IdentifyLevel" target="_top">.NET documentation</a>
+     */
     public void setIdentifyLevel(boolean IdentifyLevel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +234,13 @@ public class WmiConfigurationAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HostingModel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.Instrumentation.WmiConfigurationAttribute.HostingModel" target="_top">.NET documentation</a>
+     */
     public ManagementHostingModel getHostingModel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +256,13 @@ public class WmiConfigurationAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HostingModel.
+     *
+     * @param HostingModel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.Instrumentation.WmiConfigurationAttribute.HostingModel" target="_top">.NET documentation</a>
+     */
     public void setHostingModel(ManagementHostingModel HostingModel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +273,13 @@ public class WmiConfigurationAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HostingGroup.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.Instrumentation.WmiConfigurationAttribute.HostingGroup" target="_top">.NET documentation</a>
+     */
     public java.lang.String getHostingGroup() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +294,13 @@ public class WmiConfigurationAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HostingGroup.
+     *
+     * @param HostingGroup the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.Instrumentation.WmiConfigurationAttribute.HostingGroup" target="_top">.NET documentation</a>
+     */
     public void setHostingGroup(java.lang.String HostingGroup) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +311,13 @@ public class WmiConfigurationAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NamespaceSecurity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.Instrumentation.WmiConfigurationAttribute.NamespaceSecurity" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNamespaceSecurity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +332,13 @@ public class WmiConfigurationAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NamespaceSecurity.
+     *
+     * @param NamespaceSecurity the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.Instrumentation.WmiConfigurationAttribute.NamespaceSecurity" target="_top">.NET documentation</a>
+     */
     public void setNamespaceSecurity(java.lang.String NamespaceSecurity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +349,13 @@ public class WmiConfigurationAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Scope.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.Instrumentation.WmiConfigurationAttribute.Scope" target="_top">.NET documentation</a>
+     */
     public java.lang.String getScope() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +370,13 @@ public class WmiConfigurationAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SecurityRestriction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.Instrumentation.WmiConfigurationAttribute.SecurityRestriction" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSecurityRestriction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +391,13 @@ public class WmiConfigurationAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SecurityRestriction.
+     *
+     * @param SecurityRestriction the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.Instrumentation.WmiConfigurationAttribute.SecurityRestriction" target="_top">.NET documentation</a>
+     */
     public void setSecurityRestriction(java.lang.String SecurityRestriction) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

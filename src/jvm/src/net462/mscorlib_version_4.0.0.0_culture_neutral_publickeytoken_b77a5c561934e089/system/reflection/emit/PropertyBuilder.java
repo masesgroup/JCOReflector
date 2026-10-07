@@ -112,7 +112,10 @@ public class PropertyBuilder extends system.reflection.PropertyInfo  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PropertyBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -167,6 +170,16 @@ public class PropertyBuilder extends system.reflection.PropertyInfo  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsDefined.
+     *
+     * @param attributeType the argument of type {@code NetType}
+     * @param inherit the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.PropertyBuilder.IsDefined" target="_top">.NET documentation</a>
+     */
     public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +194,16 @@ public class PropertyBuilder extends system.reflection.PropertyInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetValue.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @param index the argument of type {@code NetObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.PropertyBuilder.GetValue" target="_top">.NET documentation</a>
+     */
     public NetObject GetValue(NetObject obj, NetObject[] index) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +219,19 @@ public class PropertyBuilder extends system.reflection.PropertyInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetValue.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @param invokeAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param index the argument of type {@code NetObject[]}
+     * @param culture the argument of type {@code CultureInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.PropertyBuilder.GetValue" target="_top">.NET documentation</a>
+     */
     public NetObject GetValue(NetObject obj, BindingFlags invokeAttr, Binder binder, NetObject[] index, CultureInfo culture) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +247,15 @@ public class PropertyBuilder extends system.reflection.PropertyInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCustomAttributes.
+     *
+     * @param inherit the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.PropertyBuilder.GetCustomAttributes" target="_top">.NET documentation</a>
+     */
     public NetObject[] GetCustomAttributes(boolean inherit) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +277,16 @@ public class PropertyBuilder extends system.reflection.PropertyInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCustomAttributes.
+     *
+     * @param attributeType the argument of type {@code NetType}
+     * @param inherit the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.PropertyBuilder.GetCustomAttributes" target="_top">.NET documentation</a>
+     */
     public NetObject[] GetCustomAttributes(NetType attributeType, boolean inherit) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +308,14 @@ public class PropertyBuilder extends system.reflection.PropertyInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetGetMethod.
+     *
+     * @param nonPublic the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.PropertyBuilder.GetGetMethod" target="_top">.NET documentation</a>
+     */
     public MethodInfo GetGetMethod(boolean nonPublic) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +331,14 @@ public class PropertyBuilder extends system.reflection.PropertyInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetSetMethod.
+     *
+     * @param nonPublic the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.PropertyBuilder.GetSetMethod" target="_top">.NET documentation</a>
+     */
     public MethodInfo GetSetMethod(boolean nonPublic) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +354,15 @@ public class PropertyBuilder extends system.reflection.PropertyInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetAccessors.
+     *
+     * @param nonPublic the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.PropertyBuilder.GetAccessors" target="_top">.NET documentation</a>
+     */
     public MethodInfo[] GetAccessors(boolean nonPublic) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +384,14 @@ public class PropertyBuilder extends system.reflection.PropertyInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetIndexParameters.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.PropertyBuilder.GetIndexParameters" target="_top">.NET documentation</a>
+     */
     public ParameterInfo[] GetIndexParameters() throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -325,6 +413,19 @@ public class PropertyBuilder extends system.reflection.PropertyInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddOtherMethod.
+     *
+     * @param mdBuilder the argument of type {@code MethodBuilder}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.PropertyBuilder.AddOtherMethod" target="_top">.NET documentation</a>
+     */
     public void AddOtherMethod(MethodBuilder mdBuilder) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +436,23 @@ public class PropertyBuilder extends system.reflection.PropertyInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetConstant.
+     *
+     * @param defaultValue the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.PropertyBuilder.SetConstant" target="_top">.NET documentation</a>
+     */
     public void SetConstant(NetObject defaultValue) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -345,6 +463,23 @@ public class PropertyBuilder extends system.reflection.PropertyInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetCustomAttribute.
+     *
+     * @param con the argument of type {@code ConstructorInfo}
+     * @param binaryAttribute the argument of type {@code byte[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.PropertyBuilder.SetCustomAttribute" target="_top">.NET documentation</a>
+     */
     public void SetCustomAttribute(ConstructorInfo con, byte[] binaryAttribute) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotImplementedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.MissingMethodException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -355,6 +490,23 @@ public class PropertyBuilder extends system.reflection.PropertyInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetCustomAttribute.
+     *
+     * @param dupParam0 the argument of type {@code ConstructorInfo}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.PropertyBuilder.SetCustomAttribute" target="_top">.NET documentation</a>
+     */
     public void SetCustomAttribute(ConstructorInfo dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotImplementedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.MissingMethodException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -365,6 +517,21 @@ public class PropertyBuilder extends system.reflection.PropertyInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetCustomAttribute.
+     *
+     * @param customBuilder the argument of type {@code CustomAttributeBuilder}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.PropertyBuilder.SetCustomAttribute" target="_top">.NET documentation</a>
+     */
     public void SetCustomAttribute(CustomAttributeBuilder customBuilder) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotImplementedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.MissingMethodException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -375,6 +542,19 @@ public class PropertyBuilder extends system.reflection.PropertyInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetGetMethod.
+     *
+     * @param mdBuilder the argument of type {@code MethodBuilder}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.PropertyBuilder.SetGetMethod" target="_top">.NET documentation</a>
+     */
     public void SetGetMethod(MethodBuilder mdBuilder) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -385,6 +565,19 @@ public class PropertyBuilder extends system.reflection.PropertyInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetSetMethod.
+     *
+     * @param mdBuilder the argument of type {@code MethodBuilder}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.PropertyBuilder.SetSetMethod" target="_top">.NET documentation</a>
+     */
     public void SetSetMethod(MethodBuilder mdBuilder) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -395,6 +588,16 @@ public class PropertyBuilder extends system.reflection.PropertyInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetValue.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @param value the argument of type {@code NetObject}
+     * @param index the argument of type {@code NetObject[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.PropertyBuilder.SetValue" target="_top">.NET documentation</a>
+     */
     public void SetValue(NetObject obj, NetObject value, NetObject[] index) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -405,6 +608,19 @@ public class PropertyBuilder extends system.reflection.PropertyInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetValue.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @param value the argument of type {@code NetObject}
+     * @param invokeAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param index the argument of type {@code NetObject[]}
+     * @param culture the argument of type {@code CultureInfo}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.PropertyBuilder.SetValue" target="_top">.NET documentation</a>
+     */
     public void SetValue(NetObject obj, NetObject value, BindingFlags invokeAttr, Binder binder, NetObject[] index, CultureInfo culture) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -418,8 +634,12 @@ public class PropertyBuilder extends system.reflection.PropertyInfo  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static To_PropertyBuilder method available in _PropertyBuilder to obtain an object with an invocable method
+     *
+     * @param pcTInfo the argument of type {@code JCORefOut<UInt32>}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._PropertyBuilder.GetTypeInfoCount" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_PropertyBuilder to obtain the full interface.");
     }
@@ -428,6 +648,13 @@ public class PropertyBuilder extends system.reflection.PropertyInfo  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PropertyToken.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.PropertyBuilder.PropertyToken" target="_top">.NET documentation</a>
+     */
     public PropertyToken getPropertyToken() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

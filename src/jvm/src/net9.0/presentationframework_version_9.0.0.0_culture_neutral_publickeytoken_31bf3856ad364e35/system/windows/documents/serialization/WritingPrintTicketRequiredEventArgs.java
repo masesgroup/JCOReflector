@@ -101,7 +101,10 @@ public class WritingPrintTicketRequiredEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WritingPrintTicketRequiredEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,14 @@ public class WritingPrintTicketRequiredEventArgs extends system.EventArgs  {
     public WritingPrintTicketRequiredEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param printTicketLevel the argument of type {@code PrintTicketLevel}
+     * @param sequence the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public WritingPrintTicketRequiredEventArgs(PrintTicketLevel printTicketLevel, int sequence) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +181,13 @@ public class WritingPrintTicketRequiredEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Sequence.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs.Sequence" target="_top">.NET documentation</a>
+     */
     public int getSequence() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +228,13 @@ public class WritingPrintTicketRequiredEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentPrintTicket.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs.CurrentPrintTicket" target="_top">.NET documentation</a>
+     */
     public PrintTicket getCurrentPrintTicket() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +250,13 @@ public class WritingPrintTicketRequiredEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CurrentPrintTicket.
+     *
+     * @param CurrentPrintTicket the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs.CurrentPrintTicket" target="_top">.NET documentation</a>
+     */
     public void setCurrentPrintTicket(PrintTicket CurrentPrintTicket) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +267,13 @@ public class WritingPrintTicketRequiredEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentPrintTicketLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs.CurrentPrintTicketLevel" target="_top">.NET documentation</a>
+     */
     public PrintTicketLevel getCurrentPrintTicketLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -113,7 +113,10 @@ public class DataObject extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataObject(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,18 @@ public class DataObject extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.-ctor" target="_top">.NET documentation</a>
+     */
     public DataObject() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +185,20 @@ public class DataObject extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param data the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.-ctor" target="_top">.NET documentation</a>
+     */
     public DataObject(NetObject data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +209,19 @@ public class DataObject extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param format the argument of type {@code java.lang.String}
+     * @param data the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.-ctor" target="_top">.NET documentation</a>
+     */
     public DataObject(java.lang.String format, NetObject data) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -194,6 +236,13 @@ public class DataObject extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ContainsAudio.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.ContainsAudio" target="_top">.NET documentation</a>
+     */
     public boolean ContainsAudio() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +257,13 @@ public class DataObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ContainsFileDropList.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.ContainsFileDropList" target="_top">.NET documentation</a>
+     */
     public boolean ContainsFileDropList() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +278,13 @@ public class DataObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ContainsImage.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.ContainsImage" target="_top">.NET documentation</a>
+     */
     public boolean ContainsImage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +299,19 @@ public class DataObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ContainsText.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.ContainsText" target="_top">.NET documentation</a>
+     */
     public boolean ContainsText() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +326,21 @@ public class DataObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ContainsText.
+     *
+     * @param format the argument of type {@code TextDataFormat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.ContainsText" target="_top">.NET documentation</a>
+     */
     public boolean ContainsText(TextDataFormat format) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +355,15 @@ public class DataObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDataPresent.
+     *
+     * @param format the argument of type {@code java.lang.String}
+     * @param autoConvert the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.GetDataPresent" target="_top">.NET documentation</a>
+     */
     public boolean GetDataPresent(java.lang.String format, boolean autoConvert) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +378,14 @@ public class DataObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDataPresent.
+     *
+     * @param format the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.GetDataPresent" target="_top">.NET documentation</a>
+     */
     public boolean GetDataPresent(java.lang.String format) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +400,14 @@ public class DataObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDataPresent.
+     *
+     * @param format the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.GetDataPresent" target="_top">.NET documentation</a>
+     */
     public boolean GetDataPresent(NetType format) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +422,24 @@ public class DataObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetData.
+     *
+     * @param <T> the type of the generic argument T
+     * @param format the argument of type {@code java.lang.String}
+     * @param autoConvert the argument of type {@code boolean}
+     * @param data the argument of type {@code JCORefOut<T>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.TryGetData" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> boolean TryGetData(java.lang.String format, boolean autoConvert, JCORefOut<T> data) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +454,26 @@ public class DataObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetData.
+     *
+     * @param <T> the type of the generic argument T
+     * @param format the argument of type {@code java.lang.String}
+     * @param resolver the argument of type {@code Func_2}
+     * @param autoConvert the argument of type {@code boolean}
+     * @param data the argument of type {@code JCORefOut<T>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.TryGetData" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> boolean TryGetData(java.lang.String format, Func_2 resolver, boolean autoConvert, JCORefOut<T> data) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -334,6 +488,23 @@ public class DataObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetData.
+     *
+     * @param <T> the type of the generic argument T
+     * @param format the argument of type {@code java.lang.String}
+     * @param data the argument of type {@code JCORefOut<T>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.TryGetData" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> boolean TryGetData(java.lang.String format, JCORefOut<T> data) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +519,22 @@ public class DataObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetData.
+     *
+     * @param <T> the type of the generic argument T
+     * @param data the argument of type {@code JCORefOut<T>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.TryGetData" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> boolean TryGetData(JCORefOut<T> data) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -362,6 +549,20 @@ public class DataObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFileDropList.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.GetFileDropList" target="_top">.NET documentation</a>
+     */
     public StringCollection GetFileDropList() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -377,6 +578,22 @@ public class DataObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetImage.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.GetImage" target="_top">.NET documentation</a>
+     */
     public Image GetImage() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -392,6 +609,13 @@ public class DataObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetAudioStream.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.GetAudioStream" target="_top">.NET documentation</a>
+     */
     public Stream GetAudioStream() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -407,6 +631,15 @@ public class DataObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetData.
+     *
+     * @param format the argument of type {@code java.lang.String}
+     * @param autoConvert the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.GetData" target="_top">.NET documentation</a>
+     */
     public NetObject GetData(java.lang.String format, boolean autoConvert) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -422,6 +655,14 @@ public class DataObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetData.
+     *
+     * @param format the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.GetData" target="_top">.NET documentation</a>
+     */
     public NetObject GetData(java.lang.String format) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -437,6 +678,14 @@ public class DataObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetData.
+     *
+     * @param format the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.GetData" target="_top">.NET documentation</a>
+     */
     public NetObject GetData(NetType format) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -452,6 +701,19 @@ public class DataObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetText.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.GetText" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetText() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -466,6 +728,21 @@ public class DataObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetText.
+     *
+     * @param format the argument of type {@code TextDataFormat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.GetText" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetText(TextDataFormat format) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -480,6 +757,13 @@ public class DataObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFormats.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.GetFormats" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] GetFormats() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -503,6 +787,14 @@ public class DataObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFormats.
+     *
+     * @param autoConvert the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.GetFormats" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] GetFormats(boolean autoConvert) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -526,6 +818,18 @@ public class DataObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetAudio.
+     *
+     * @param audioBytes the argument of type {@code byte[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.SetAudio" target="_top">.NET documentation</a>
+     */
     public void SetAudio(byte[] audioBytes) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -536,6 +840,18 @@ public class DataObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetAudio.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.SetAudio" target="_top">.NET documentation</a>
+     */
     public void SetAudio(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -546,6 +862,18 @@ public class DataObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetAudio.
+     *
+     * @param audioStream the argument of type {@code Stream}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.SetAudio" target="_top">.NET documentation</a>
+     */
     public void SetAudio(Stream audioStream) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -556,6 +884,13 @@ public class DataObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetData.
+     *
+     * @param data the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.SetData" target="_top">.NET documentation</a>
+     */
     public void SetData(NetObject data) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -566,6 +901,15 @@ public class DataObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetData.
+     *
+     * @param format the argument of type {@code java.lang.String}
+     * @param autoConvert the argument of type {@code boolean}
+     * @param data the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.SetData" target="_top">.NET documentation</a>
+     */
     public void SetData(java.lang.String format, boolean autoConvert, NetObject data) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -576,6 +920,14 @@ public class DataObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetData.
+     *
+     * @param format the argument of type {@code java.lang.String}
+     * @param data the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.SetData" target="_top">.NET documentation</a>
+     */
     public void SetData(java.lang.String format, NetObject data) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -586,6 +938,14 @@ public class DataObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetData.
+     *
+     * @param format the argument of type {@code NetType}
+     * @param data the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.SetData" target="_top">.NET documentation</a>
+     */
     public void SetData(NetType format, NetObject data) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -596,6 +956,23 @@ public class DataObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetDataAsJson.
+     *
+     * @param <T> the type of the generic argument T
+     * @param format the argument of type {@code java.lang.String}
+     * @param data the argument of type {@code T}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.SetDataAsJson" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> void SetDataAsJson(java.lang.String format, T data) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -606,6 +983,22 @@ public class DataObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetDataAsJson.
+     *
+     * @param <T> the type of the generic argument T
+     * @param data the argument of type {@code T}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.SetDataAsJson" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> void SetDataAsJson(T data) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -616,6 +1009,18 @@ public class DataObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetFileDropList.
+     *
+     * @param filePaths the argument of type {@code StringCollection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.SetFileDropList" target="_top">.NET documentation</a>
+     */
     public void SetFileDropList(StringCollection filePaths) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -626,6 +1031,18 @@ public class DataObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetImage.
+     *
+     * @param image the argument of type {@code Image}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.SetImage" target="_top">.NET documentation</a>
+     */
     public void SetImage(Image image) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -636,6 +1053,26 @@ public class DataObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetText.
+     *
+     * @param textData the argument of type {@code java.lang.String}
+     * @param format the argument of type {@code TextDataFormat}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.SetText" target="_top">.NET documentation</a>
+     */
     public void SetText(java.lang.String textData, TextDataFormat format) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -646,6 +1083,24 @@ public class DataObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetText.
+     *
+     * @param textData the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObject.SetText" target="_top">.NET documentation</a>
+     */
     public void SetText(java.lang.String textData) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -659,8 +1114,16 @@ public class DataObject extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDataObject method available in IDataObject to obtain an object with an invocable method
+     *
+     * @param pFormatetc the argument of type {@code JCORefOut<FORMATETC>}
+     * @param advf the argument of type {@code ADVF}
+     * @param adviseSink the argument of type {@code IAdviseSink}
+     * @param connection the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IDataObject.DAdvise" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int DAdvise(JCORefOut<FORMATETC> pFormatetc, ADVF advf, IAdviseSink adviseSink, JCORefOut<java.util.concurrent.atomic.AtomicInteger> connection) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
     }
@@ -668,8 +1131,13 @@ public class DataObject extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDataObject method available in IDataObject to obtain an object with an invocable method
+     *
+     * @param enumAdvise the argument of type {@code JCORefOut<IEnumSTATDATA>}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IDataObject.EnumDAdvise" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int EnumDAdvise(JCORefOut<IEnumSTATDATA> enumAdvise) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
     }
@@ -677,8 +1145,14 @@ public class DataObject extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDataObject method available in IDataObject to obtain an object with an invocable method
+     *
+     * @param formatIn the argument of type {@code JCORefOut<FORMATETC>}
+     * @param formatOut the argument of type {@code JCORefOut<FORMATETC>}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IDataObject.GetCanonicalFormatEtc" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int GetCanonicalFormatEtc(JCORefOut<FORMATETC> formatIn, JCORefOut<FORMATETC> formatOut) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
     }
@@ -686,8 +1160,13 @@ public class DataObject extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDataObject method available in IDataObject to obtain an object with an invocable method
+     *
+     * @param format the argument of type {@code JCORefOut<FORMATETC>}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IDataObject.QueryGetData" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int QueryGetData(JCORefOut<FORMATETC> format) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
     }
@@ -695,8 +1174,13 @@ public class DataObject extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDataObject method available in IDataObject to obtain an object with an invocable method
+     *
+     * @param direction the argument of type {@code DATADIR}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IDataObject.EnumFormatEtc" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public IEnumFORMATETC EnumFormatEtc(DATADIR direction) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
     }
@@ -704,8 +1188,12 @@ public class DataObject extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDataObject method available in IDataObject to obtain an object with an invocable method
+     *
+     * @param connection the argument of type {@code int}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IDataObject.DUnadvise" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void DUnadvise(int connection) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
     }
@@ -713,8 +1201,13 @@ public class DataObject extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDataObject method available in IDataObject to obtain an object with an invocable method
+     *
+     * @param format the argument of type {@code JCORefOut<FORMATETC>}
+     * @param medium the argument of type {@code JCORefOut<STGMEDIUM>}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IDataObject.GetData" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void GetData(JCORefOut<FORMATETC> format, JCORefOut<STGMEDIUM> medium) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
     }
@@ -722,8 +1215,13 @@ public class DataObject extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDataObject method available in IDataObject to obtain an object with an invocable method
+     *
+     * @param format the argument of type {@code JCORefOut<FORMATETC>}
+     * @param medium the argument of type {@code JCORefOut<STGMEDIUM>}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IDataObject.GetDataHere" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void GetDataHere(JCORefOut<FORMATETC> format, JCORefOut<STGMEDIUM> medium) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
     }
@@ -731,8 +1229,14 @@ public class DataObject extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDataObject method available in IDataObject to obtain an object with an invocable method
+     *
+     * @param formatIn the argument of type {@code JCORefOut<FORMATETC>}
+     * @param medium the argument of type {@code JCORefOut<STGMEDIUM>}
+     * @param release the argument of type {@code boolean}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IDataObject.SetData" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void SetData(JCORefOut<FORMATETC> formatIn, JCORefOut<STGMEDIUM> medium, boolean release) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
     }

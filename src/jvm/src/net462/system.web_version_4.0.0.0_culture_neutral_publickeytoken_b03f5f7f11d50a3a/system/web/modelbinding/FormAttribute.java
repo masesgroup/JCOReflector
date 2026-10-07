@@ -102,7 +102,10 @@ public class FormAttribute extends system.web.modelbinding.ValueProviderSourceAt
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FormAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class FormAttribute extends system.web.modelbinding.ValueProviderSourceAt
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.FormAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public FormAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +168,13 @@ public class FormAttribute extends system.web.modelbinding.ValueProviderSourceAt
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param fieldName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.FormAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public FormAttribute(java.lang.String fieldName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -173,6 +189,13 @@ public class FormAttribute extends system.web.modelbinding.ValueProviderSourceAt
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetModelName.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.FormAttribute.GetModelName" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetModelName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +210,23 @@ public class FormAttribute extends system.web.modelbinding.ValueProviderSourceAt
         }
     }
 
+    /**
+     * Invokes the .NET member GetValueProvider.
+     *
+     * @param modelBindingExecutionContext the argument of type {@code ModelBindingExecutionContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.FormAttribute.GetValueProvider" target="_top">.NET documentation</a>
+     */
     public IValueProvider GetValueProvider(ModelBindingExecutionContext modelBindingExecutionContext) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +246,13 @@ public class FormAttribute extends system.web.modelbinding.ValueProviderSourceAt
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ValidateInput.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.FormAttribute.ValidateInput" target="_top">.NET documentation</a>
+     */
     public boolean getValidateInput() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +267,13 @@ public class FormAttribute extends system.web.modelbinding.ValueProviderSourceAt
         }
     }
 
+    /**
+     * Sets the value of the .NET property ValidateInput.
+     *
+     * @param ValidateInput the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.FormAttribute.ValidateInput" target="_top">.NET documentation</a>
+     */
     public void setValidateInput(boolean ValidateInput) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +284,13 @@ public class FormAttribute extends system.web.modelbinding.ValueProviderSourceAt
         }
     }
 
+    /**
+     * Gets the value of the .NET property FieldName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.FormAttribute.FieldName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFieldName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +305,13 @@ public class FormAttribute extends system.web.modelbinding.ValueProviderSourceAt
         }
     }
 
+    /**
+     * Sets the value of the .NET property FieldName.
+     *
+     * @param FieldName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.FormAttribute.FieldName" target="_top">.NET documentation</a>
+     */
     public void setFieldName(java.lang.String FieldName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

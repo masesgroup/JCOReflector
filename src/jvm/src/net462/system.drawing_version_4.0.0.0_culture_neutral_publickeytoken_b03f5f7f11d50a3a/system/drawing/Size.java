@@ -102,7 +102,10 @@ public class Size extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Size(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,14 @@ public class Size extends system.ValueType  {
     public Size() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param width the argument of type {@code int}
+     * @param height the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Size.-ctor" target="_top">.NET documentation</a>
+     */
     public Size(int width, int height) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +173,13 @@ public class Size extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param pt the argument of type {@code Point}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Size.-ctor" target="_top">.NET documentation</a>
+     */
     public Size(Point pt) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -177,6 +195,15 @@ public class Size extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param sz1 the argument of type {@code Size}
+     * @param sz2 the argument of type {@code Size}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Size.Add" target="_top">.NET documentation</a>
+     */
     public static Size Add(Size sz1, Size sz2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -192,6 +219,14 @@ public class Size extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Ceiling.
+     *
+     * @param value the argument of type {@code SizeF}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Size.Ceiling" target="_top">.NET documentation</a>
+     */
     public static Size Ceiling(SizeF value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -207,6 +242,14 @@ public class Size extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Round.
+     *
+     * @param value the argument of type {@code SizeF}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Size.Round" target="_top">.NET documentation</a>
+     */
     public static Size Round(SizeF value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -222,6 +265,15 @@ public class Size extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Subtract.
+     *
+     * @param sz1 the argument of type {@code Size}
+     * @param sz2 the argument of type {@code Size}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Size.Subtract" target="_top">.NET documentation</a>
+     */
     public static Size Subtract(Size sz1, Size sz2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -237,6 +289,14 @@ public class Size extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Truncate.
+     *
+     * @param value the argument of type {@code SizeF}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Size.Truncate" target="_top">.NET documentation</a>
+     */
     public static Size Truncate(SizeF value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -256,6 +316,13 @@ public class Size extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsEmpty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Size.IsEmpty" target="_top">.NET documentation</a>
+     */
     public boolean getIsEmpty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +337,13 @@ public class Size extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Height.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Size.Height" target="_top">.NET documentation</a>
+     */
     public int getHeight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +384,13 @@ public class Size extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Height.
+     *
+     * @param Height the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Size.Height" target="_top">.NET documentation</a>
+     */
     public void setHeight(int Height) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +401,13 @@ public class Size extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Width.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Size.Width" target="_top">.NET documentation</a>
+     */
     public int getWidth() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -360,6 +448,13 @@ public class Size extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Width.
+     *
+     * @param Width the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Size.Width" target="_top">.NET documentation</a>
+     */
     public void setWidth(int Width) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

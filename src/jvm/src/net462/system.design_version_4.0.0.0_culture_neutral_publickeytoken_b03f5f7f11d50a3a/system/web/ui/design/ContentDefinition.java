@@ -98,7 +98,10 @@ public class ContentDefinition extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ContentDefinition(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,15 @@ public class ContentDefinition extends NetObject  {
     public ContentDefinition() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param id the argument of type {@code java.lang.String}
+     * @param content the argument of type {@code java.lang.String}
+     * @param designTimeHtml the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.ContentDefinition.-ctor" target="_top">.NET documentation</a>
+     */
     public ContentDefinition(java.lang.String id, java.lang.String content, java.lang.String designTimeHtml) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +179,13 @@ public class ContentDefinition extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ContentPlaceHolderID.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.ContentDefinition.ContentPlaceHolderID" target="_top">.NET documentation</a>
+     */
     public java.lang.String getContentPlaceHolderID() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +200,13 @@ public class ContentDefinition extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultContent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.ContentDefinition.DefaultContent" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDefaultContent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +221,13 @@ public class ContentDefinition extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultDesignTimeHtml.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.ContentDefinition.DefaultDesignTimeHtml" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDefaultDesignTimeHtml() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

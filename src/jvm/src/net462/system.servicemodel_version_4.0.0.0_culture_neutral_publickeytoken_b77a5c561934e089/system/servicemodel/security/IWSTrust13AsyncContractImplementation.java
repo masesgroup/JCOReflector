@@ -102,7 +102,10 @@ public class IWSTrust13AsyncContractImplementation extends NetObject implements 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IWSTrust13AsyncContractImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,16 @@ public class IWSTrust13AsyncContractImplementation extends NetObject implements 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member BeginTrust13Cancel.
+     *
+     * @param request the argument of type {@code Message}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrust13AsyncContract.BeginTrust13Cancel" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginTrust13Cancel(Message request, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -159,6 +172,16 @@ public class IWSTrust13AsyncContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member BeginTrust13CancelResponse.
+     *
+     * @param request the argument of type {@code Message}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrust13AsyncContract.BeginTrust13CancelResponse" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginTrust13CancelResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +197,16 @@ public class IWSTrust13AsyncContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member BeginTrust13Issue.
+     *
+     * @param request the argument of type {@code Message}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrust13AsyncContract.BeginTrust13Issue" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginTrust13Issue(Message request, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +222,16 @@ public class IWSTrust13AsyncContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member BeginTrust13IssueResponse.
+     *
+     * @param request the argument of type {@code Message}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrust13AsyncContract.BeginTrust13IssueResponse" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginTrust13IssueResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +247,16 @@ public class IWSTrust13AsyncContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member BeginTrust13Renew.
+     *
+     * @param request the argument of type {@code Message}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrust13AsyncContract.BeginTrust13Renew" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginTrust13Renew(Message request, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +272,16 @@ public class IWSTrust13AsyncContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member BeginTrust13RenewResponse.
+     *
+     * @param request the argument of type {@code Message}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrust13AsyncContract.BeginTrust13RenewResponse" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginTrust13RenewResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +297,16 @@ public class IWSTrust13AsyncContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member BeginTrust13Validate.
+     *
+     * @param request the argument of type {@code Message}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrust13AsyncContract.BeginTrust13Validate" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginTrust13Validate(Message request, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +322,16 @@ public class IWSTrust13AsyncContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member BeginTrust13ValidateResponse.
+     *
+     * @param request the argument of type {@code Message}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrust13AsyncContract.BeginTrust13ValidateResponse" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginTrust13ValidateResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +347,14 @@ public class IWSTrust13AsyncContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member EndTrust13Cancel.
+     *
+     * @param ar the argument of type {@code IAsyncResult}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrust13AsyncContract.EndTrust13Cancel" target="_top">.NET documentation</a>
+     */
     public Message EndTrust13Cancel(IAsyncResult ar) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +370,14 @@ public class IWSTrust13AsyncContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member EndTrust13CancelResponse.
+     *
+     * @param ar the argument of type {@code IAsyncResult}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrust13AsyncContract.EndTrust13CancelResponse" target="_top">.NET documentation</a>
+     */
     public Message EndTrust13CancelResponse(IAsyncResult ar) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +393,14 @@ public class IWSTrust13AsyncContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member EndTrust13Issue.
+     *
+     * @param ar the argument of type {@code IAsyncResult}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrust13AsyncContract.EndTrust13Issue" target="_top">.NET documentation</a>
+     */
     public Message EndTrust13Issue(IAsyncResult ar) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -309,6 +416,14 @@ public class IWSTrust13AsyncContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member EndTrust13IssueResponse.
+     *
+     * @param ar the argument of type {@code IAsyncResult}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrust13AsyncContract.EndTrust13IssueResponse" target="_top">.NET documentation</a>
+     */
     public Message EndTrust13IssueResponse(IAsyncResult ar) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -324,6 +439,14 @@ public class IWSTrust13AsyncContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member EndTrust13Renew.
+     *
+     * @param ar the argument of type {@code IAsyncResult}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrust13AsyncContract.EndTrust13Renew" target="_top">.NET documentation</a>
+     */
     public Message EndTrust13Renew(IAsyncResult ar) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -339,6 +462,14 @@ public class IWSTrust13AsyncContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member EndTrust13RenewResponse.
+     *
+     * @param ar the argument of type {@code IAsyncResult}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrust13AsyncContract.EndTrust13RenewResponse" target="_top">.NET documentation</a>
+     */
     public Message EndTrust13RenewResponse(IAsyncResult ar) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -354,6 +485,14 @@ public class IWSTrust13AsyncContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member EndTrust13Validate.
+     *
+     * @param ar the argument of type {@code IAsyncResult}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrust13AsyncContract.EndTrust13Validate" target="_top">.NET documentation</a>
+     */
     public Message EndTrust13Validate(IAsyncResult ar) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -369,6 +508,14 @@ public class IWSTrust13AsyncContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member EndTrust13ValidateResponse.
+     *
+     * @param ar the argument of type {@code IAsyncResult}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrust13AsyncContract.EndTrust13ValidateResponse" target="_top">.NET documentation</a>
+     */
     public Message EndTrust13ValidateResponse(IAsyncResult ar) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

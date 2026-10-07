@@ -102,7 +102,10 @@ public class PageAsyncTask extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PageAsyncTask(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,25 @@ public class PageAsyncTask extends NetObject  {
     public PageAsyncTask() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param handler the argument of type {@code Func_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PageAsyncTask.-ctor" target="_top">.NET documentation</a>
+     */
     public PageAsyncTask(Func_1 handler) throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +184,25 @@ public class PageAsyncTask extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param handler the argument of type {@code Func_2}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PageAsyncTask.-ctor" target="_top">.NET documentation</a>
+     */
     public PageAsyncTask(Func_2 handler) throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.web.HttpException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.configuration.ConfigurationException, system.InvalidCastException, system.NullReferenceException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +213,28 @@ public class PageAsyncTask extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param beginHandler the argument of type {@code BeginEventHandler}
+     * @param endHandler the argument of type {@code EndEventHandler}
+     * @param timeoutHandler the argument of type {@code EndEventHandler}
+     * @param state the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PageAsyncTask.-ctor" target="_top">.NET documentation</a>
+     */
     public PageAsyncTask(BeginEventHandler beginHandler, EndEventHandler endHandler, EndEventHandler timeoutHandler, NetObject state) throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +245,29 @@ public class PageAsyncTask extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param beginHandler the argument of type {@code BeginEventHandler}
+     * @param endHandler the argument of type {@code EndEventHandler}
+     * @param timeoutHandler the argument of type {@code EndEventHandler}
+     * @param state the argument of type {@code NetObject}
+     * @param executeInParallel the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PageAsyncTask.-ctor" target="_top">.NET documentation</a>
+     */
     public PageAsyncTask(BeginEventHandler beginHandler, EndEventHandler endHandler, EndEventHandler timeoutHandler, NetObject state, boolean executeInParallel) throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.web.HttpException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.configuration.ConfigurationException, system.InvalidCastException, system.NullReferenceException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -201,6 +287,13 @@ public class PageAsyncTask extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ExecuteInParallel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PageAsyncTask.ExecuteInParallel" target="_top">.NET documentation</a>
+     */
     public boolean getExecuteInParallel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +308,13 @@ public class PageAsyncTask extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ExecuteInParallel.
+     *
+     * @param ExecuteInParallel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PageAsyncTask.ExecuteInParallel" target="_top">.NET documentation</a>
+     */
     public void setExecuteInParallel(boolean ExecuteInParallel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +325,13 @@ public class PageAsyncTask extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property State.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PageAsyncTask.State" target="_top">.NET documentation</a>
+     */
     public NetObject getState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +347,13 @@ public class PageAsyncTask extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property State.
+     *
+     * @param State the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PageAsyncTask.State" target="_top">.NET documentation</a>
+     */
     public void setState(NetObject State) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +364,13 @@ public class PageAsyncTask extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BeginHandler.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PageAsyncTask.BeginHandler" target="_top">.NET documentation</a>
+     */
     public BeginEventHandler getBeginHandler() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +385,13 @@ public class PageAsyncTask extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BeginHandler.
+     *
+     * @param BeginHandler the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PageAsyncTask.BeginHandler" target="_top">.NET documentation</a>
+     */
     public void setBeginHandler(BeginEventHandler BeginHandler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +402,13 @@ public class PageAsyncTask extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EndHandler.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PageAsyncTask.EndHandler" target="_top">.NET documentation</a>
+     */
     public EndEventHandler getEndHandler() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +423,13 @@ public class PageAsyncTask extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EndHandler.
+     *
+     * @param EndHandler the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PageAsyncTask.EndHandler" target="_top">.NET documentation</a>
+     */
     public void setEndHandler(EndEventHandler EndHandler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +440,13 @@ public class PageAsyncTask extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TimeoutHandler.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PageAsyncTask.TimeoutHandler" target="_top">.NET documentation</a>
+     */
     public EndEventHandler getTimeoutHandler() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -312,6 +461,13 @@ public class PageAsyncTask extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TimeoutHandler.
+     *
+     * @param TimeoutHandler the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PageAsyncTask.TimeoutHandler" target="_top">.NET documentation</a>
+     */
     public void setTimeoutHandler(EndEventHandler TimeoutHandler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

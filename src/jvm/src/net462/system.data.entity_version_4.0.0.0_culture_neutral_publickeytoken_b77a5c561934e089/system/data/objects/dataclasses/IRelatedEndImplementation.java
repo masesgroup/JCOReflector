@@ -102,7 +102,10 @@ public class IRelatedEndImplementation extends NetObject implements IRelatedEnd 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IRelatedEndImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,14 @@ public class IRelatedEndImplementation extends NetObject implements IRelatedEnd 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param entity the argument of type {@code IEntityWithRelationships}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.IRelatedEnd.Remove" target="_top">.NET documentation</a>
+     */
     public boolean Remove(IEntityWithRelationships entity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -158,6 +169,14 @@ public class IRelatedEndImplementation extends NetObject implements IRelatedEnd 
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param entity the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.IRelatedEnd.Remove" target="_top">.NET documentation</a>
+     */
     public boolean Remove(NetObject entity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +191,13 @@ public class IRelatedEndImplementation extends NetObject implements IRelatedEnd 
         }
     }
 
+    /**
+     * Invokes the .NET member CreateSourceQuery.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.IRelatedEnd.CreateSourceQuery" target="_top">.NET documentation</a>
+     */
     public IEnumerable CreateSourceQuery() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +213,13 @@ public class IRelatedEndImplementation extends NetObject implements IRelatedEnd 
         }
     }
 
+    /**
+     * Invokes the .NET member GetEnumerator.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.IRelatedEnd.GetEnumerator" target="_top">.NET documentation</a>
+     */
     public IEnumerator GetEnumerator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +235,13 @@ public class IRelatedEndImplementation extends NetObject implements IRelatedEnd 
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param entity the argument of type {@code IEntityWithRelationships}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.IRelatedEnd.Add" target="_top">.NET documentation</a>
+     */
     public void Add(IEntityWithRelationships entity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +252,13 @@ public class IRelatedEndImplementation extends NetObject implements IRelatedEnd 
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param entity the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.IRelatedEnd.Add" target="_top">.NET documentation</a>
+     */
     public void Add(NetObject entity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +269,13 @@ public class IRelatedEndImplementation extends NetObject implements IRelatedEnd 
         }
     }
 
+    /**
+     * Invokes the .NET member Attach.
+     *
+     * @param entity the argument of type {@code IEntityWithRelationships}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.IRelatedEnd.Attach" target="_top">.NET documentation</a>
+     */
     public void Attach(IEntityWithRelationships entity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +286,13 @@ public class IRelatedEndImplementation extends NetObject implements IRelatedEnd 
         }
     }
 
+    /**
+     * Invokes the .NET member Attach.
+     *
+     * @param entity the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.IRelatedEnd.Attach" target="_top">.NET documentation</a>
+     */
     public void Attach(NetObject entity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +303,12 @@ public class IRelatedEndImplementation extends NetObject implements IRelatedEnd 
         }
     }
 
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.IRelatedEnd.Load" target="_top">.NET documentation</a>
+     */
     public void Load() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +319,13 @@ public class IRelatedEndImplementation extends NetObject implements IRelatedEnd 
         }
     }
 
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param mergeOption the argument of type {@code MergeOption}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.IRelatedEnd.Load" target="_top">.NET documentation</a>
+     */
     public void Load(MergeOption mergeOption) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +340,13 @@ public class IRelatedEndImplementation extends NetObject implements IRelatedEnd 
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsLoaded.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.IRelatedEnd.IsLoaded" target="_top">.NET documentation</a>
+     */
     public boolean getIsLoaded() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +361,13 @@ public class IRelatedEndImplementation extends NetObject implements IRelatedEnd 
         }
     }
 
+    /**
+     * Gets the value of the .NET property RelationshipSet.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.IRelatedEnd.RelationshipSet" target="_top">.NET documentation</a>
+     */
     public RelationshipSet getRelationshipSet() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +383,13 @@ public class IRelatedEndImplementation extends NetObject implements IRelatedEnd 
         }
     }
 
+    /**
+     * Gets the value of the .NET property RelationshipName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.IRelatedEnd.RelationshipName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRelationshipName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -309,6 +404,13 @@ public class IRelatedEndImplementation extends NetObject implements IRelatedEnd 
         }
     }
 
+    /**
+     * Gets the value of the .NET property SourceRoleName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.IRelatedEnd.SourceRoleName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSourceRoleName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -323,6 +425,13 @@ public class IRelatedEndImplementation extends NetObject implements IRelatedEnd 
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetRoleName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.IRelatedEnd.TargetRoleName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTargetRoleName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

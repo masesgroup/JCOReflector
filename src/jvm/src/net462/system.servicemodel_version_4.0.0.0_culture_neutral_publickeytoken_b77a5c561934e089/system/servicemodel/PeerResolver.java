@@ -104,7 +104,10 @@ public class PeerResolver extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PeerResolver(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,16 @@ public class PeerResolver extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Resolve.
+     *
+     * @param meshId the argument of type {@code java.lang.String}
+     * @param maxAddresses the argument of type {@code int}
+     * @param timeout the argument of type {@code TimeSpan}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolver.Resolve" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 Resolve(java.lang.String meshId, int maxAddresses, TimeSpan timeout) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +185,16 @@ public class PeerResolver extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Register.
+     *
+     * @param meshId the argument of type {@code java.lang.String}
+     * @param nodeAddress the argument of type {@code PeerNodeAddress}
+     * @param timeout the argument of type {@code TimeSpan}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolver.Register" target="_top">.NET documentation</a>
+     */
     public NetObject Register(java.lang.String meshId, PeerNodeAddress nodeAddress, TimeSpan timeout) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +210,16 @@ public class PeerResolver extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Initialize.
+     *
+     * @param address the argument of type {@code EndpointAddress}
+     * @param binding the argument of type {@code system.servicemodel.channels.Binding}
+     * @param credentials the argument of type {@code ClientCredentials}
+     * @param referralPolicy the argument of type {@code PeerReferralPolicy}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolver.Initialize" target="_top">.NET documentation</a>
+     */
     public void Initialize(EndpointAddress address, system.servicemodel.channels.Binding binding, ClientCredentials credentials, PeerReferralPolicy referralPolicy) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +230,14 @@ public class PeerResolver extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Unregister.
+     *
+     * @param registrationId the argument of type {@code NetObject}
+     * @param timeout the argument of type {@code TimeSpan}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolver.Unregister" target="_top">.NET documentation</a>
+     */
     public void Unregister(NetObject registrationId, TimeSpan timeout) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +248,15 @@ public class PeerResolver extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Update.
+     *
+     * @param registrationId the argument of type {@code NetObject}
+     * @param updatedNodeAddress the argument of type {@code PeerNodeAddress}
+     * @param timeout the argument of type {@code TimeSpan}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolver.Update" target="_top">.NET documentation</a>
+     */
     public void Update(NetObject registrationId, PeerNodeAddress updatedNodeAddress, TimeSpan timeout) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +271,13 @@ public class PeerResolver extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CanShareReferrals.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolver.CanShareReferrals" target="_top">.NET documentation</a>
+     */
     public boolean getCanShareReferrals() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

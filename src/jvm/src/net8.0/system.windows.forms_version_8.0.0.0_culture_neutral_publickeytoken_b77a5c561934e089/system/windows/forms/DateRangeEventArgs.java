@@ -100,7 +100,10 @@ public class DateRangeEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DateRangeEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class DateRangeEventArgs extends system.EventArgs  {
     public DateRangeEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param start the argument of type {@code DateTime}
+     * @param end the argument of type {@code DateTime}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DateRangeEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public DateRangeEventArgs(DateTime start, DateTime end) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +180,13 @@ public class DateRangeEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property End.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DateRangeEventArgs.End" target="_top">.NET documentation</a>
+     */
     public DateTime getEnd() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +202,13 @@ public class DateRangeEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Start.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DateRangeEventArgs.Start" target="_top">.NET documentation</a>
+     */
     public DateTime getStart() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

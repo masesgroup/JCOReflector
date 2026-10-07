@@ -102,7 +102,10 @@ public class AsyncTaskMethodBuilder_1<TResult extends IJCOBridgeReflected> exten
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AsyncTaskMethodBuilder_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,26 @@ public class AsyncTaskMethodBuilder_1<TResult extends IJCOBridgeReflected> exten
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AwaitOnCompleted.
+     *
+     * @param <TAwaiter> the type of the generic argument TAwaiter
+     * @param <TStateMachine> the type of the generic argument TStateMachine
+     * @param awaiter the argument of type {@code JCORefOut<TAwaiter>}
+     * @param stateMachine the argument of type {@code JCORefOut<TStateMachine>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.AsyncTaskMethodBuilder-1.AwaitOnCompleted" target="_top">.NET documentation</a>
+     */
     public <TAwaiter extends IJCOBridgeReflected, TStateMachine extends IJCOBridgeReflected> void AwaitOnCompleted(JCORefOut<TAwaiter> awaiter, JCORefOut<TStateMachine> stateMachine) throws Throwable, system.InvalidOperationException, system.threading.ThreadAbortException, system.security.SecurityException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.IndexOutOfRangeException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -167,6 +190,26 @@ public class AsyncTaskMethodBuilder_1<TResult extends IJCOBridgeReflected> exten
         }
     }
 
+    /**
+     * Invokes the .NET member AwaitUnsafeOnCompleted.
+     *
+     * @param <TAwaiter> the type of the generic argument TAwaiter
+     * @param <TStateMachine> the type of the generic argument TStateMachine
+     * @param awaiter the argument of type {@code JCORefOut<TAwaiter>}
+     * @param stateMachine the argument of type {@code JCORefOut<TStateMachine>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.AsyncTaskMethodBuilder-1.AwaitUnsafeOnCompleted" target="_top">.NET documentation</a>
+     */
     public <TAwaiter extends IJCOBridgeReflected, TStateMachine extends IJCOBridgeReflected> void AwaitUnsafeOnCompleted(JCORefOut<TAwaiter> awaiter, JCORefOut<TStateMachine> stateMachine) throws Throwable, system.InvalidOperationException, system.threading.ThreadAbortException, system.security.SecurityException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.IndexOutOfRangeException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +220,28 @@ public class AsyncTaskMethodBuilder_1<TResult extends IJCOBridgeReflected> exten
         }
     }
 
+    /**
+     * Invokes the .NET member SetException.
+     *
+     * @param exception the argument of type {@code NetException}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.AsyncTaskMethodBuilder-1.SetException" target="_top">.NET documentation</a>
+     */
     public void SetException(NetException exception) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +252,28 @@ public class AsyncTaskMethodBuilder_1<TResult extends IJCOBridgeReflected> exten
         }
     }
 
+    /**
+     * Invokes the .NET member SetResult.
+     *
+     * @param result the argument of type {@code TResult}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.AsyncTaskMethodBuilder-1.SetResult" target="_top">.NET documentation</a>
+     */
     public void SetResult(TResult result) throws Throwable, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +284,15 @@ public class AsyncTaskMethodBuilder_1<TResult extends IJCOBridgeReflected> exten
         }
     }
 
+    /**
+     * Invokes the .NET member SetStateMachine.
+     *
+     * @param stateMachine the argument of type {@code IAsyncStateMachine}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.AsyncTaskMethodBuilder-1.SetStateMachine" target="_top">.NET documentation</a>
+     */
     public void SetStateMachine(IAsyncStateMachine stateMachine) throws Throwable, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +303,20 @@ public class AsyncTaskMethodBuilder_1<TResult extends IJCOBridgeReflected> exten
         }
     }
 
+    /**
+     * Invokes the .NET member Start.
+     *
+     * @param <TStateMachine> the type of the generic argument TStateMachine
+     * @param stateMachine the argument of type {@code JCORefOut<TStateMachine>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.AsyncTaskMethodBuilder-1.Start" target="_top">.NET documentation</a>
+     */
     public <TStateMachine extends IJCOBridgeReflected> void Start(JCORefOut<TStateMachine> stateMachine) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +331,13 @@ public class AsyncTaskMethodBuilder_1<TResult extends IJCOBridgeReflected> exten
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Task.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.AsyncTaskMethodBuilder-1.Task" target="_top">.NET documentation</a>
+     */
     public Task_1 getTask() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

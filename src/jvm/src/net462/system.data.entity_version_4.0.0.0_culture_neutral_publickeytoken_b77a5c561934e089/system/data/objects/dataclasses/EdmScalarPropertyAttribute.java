@@ -99,7 +99,10 @@ public class EdmScalarPropertyAttribute extends system.data.objects.dataclasses.
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EdmScalarPropertyAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class EdmScalarPropertyAttribute extends system.data.objects.dataclasses.
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.EdmScalarPropertyAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public EdmScalarPropertyAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class EdmScalarPropertyAttribute extends system.data.objects.dataclasses.
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EntityKeyProperty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.EdmScalarPropertyAttribute.EntityKeyProperty" target="_top">.NET documentation</a>
+     */
     public boolean getEntityKeyProperty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +194,13 @@ public class EdmScalarPropertyAttribute extends system.data.objects.dataclasses.
         }
     }
 
+    /**
+     * Sets the value of the .NET property EntityKeyProperty.
+     *
+     * @param EntityKeyProperty the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.EdmScalarPropertyAttribute.EntityKeyProperty" target="_top">.NET documentation</a>
+     */
     public void setEntityKeyProperty(boolean EntityKeyProperty) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +211,13 @@ public class EdmScalarPropertyAttribute extends system.data.objects.dataclasses.
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsNullable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.EdmScalarPropertyAttribute.IsNullable" target="_top">.NET documentation</a>
+     */
     public boolean getIsNullable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +232,13 @@ public class EdmScalarPropertyAttribute extends system.data.objects.dataclasses.
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsNullable.
+     *
+     * @param IsNullable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.EdmScalarPropertyAttribute.IsNullable" target="_top">.NET documentation</a>
+     */
     public void setIsNullable(boolean IsNullable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

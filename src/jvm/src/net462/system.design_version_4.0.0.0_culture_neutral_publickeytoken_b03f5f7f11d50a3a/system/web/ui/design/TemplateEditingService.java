@@ -105,7 +105,10 @@ public class TemplateEditingService extends NetObject implements AutoCloseable {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TemplateEditingService(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,14 @@ public class TemplateEditingService extends NetObject implements AutoCloseable {
     public TemplateEditingService() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param designerHost the argument of type {@code IDesignerHost}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplateEditingService.-ctor" target="_top">.NET documentation</a>
+     */
     public TemplateEditingService(IDesignerHost designerHost) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +181,14 @@ public class TemplateEditingService extends NetObject implements AutoCloseable {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetContainingTemplateName.
+     *
+     * @param control the argument of type {@code Control}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplateEditingService.GetContainingTemplateName" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetContainingTemplateName(Control control) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +203,20 @@ public class TemplateEditingService extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateFrame.
+     *
+     * @param designer the argument of type {@code TemplatedControlDesigner}
+     * @param frameName the argument of type {@code java.lang.String}
+     * @param templateNames the argument of type {@code java.lang.String[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplateEditingService.CreateFrame" target="_top">.NET documentation</a>
+     */
     public ITemplateEditingFrame CreateFrame(TemplatedControlDesigner designer, java.lang.String frameName, java.lang.String[] templateNames) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +232,20 @@ public class TemplateEditingService extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateFrame.
+     *
+     * @param dupParam0 the argument of type {@code TemplatedControlDesigner}
+     * @param dupParam1 the argument of type {@code java.lang.String}
+     * @param dupParam2 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplateEditingService.CreateFrame" target="_top">.NET documentation</a>
+     */
     public ITemplateEditingFrame CreateFrame(TemplatedControlDesigner dupParam0, java.lang.String dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +261,22 @@ public class TemplateEditingService extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateFrame.
+     *
+     * @param designer the argument of type {@code TemplatedControlDesigner}
+     * @param frameName the argument of type {@code java.lang.String}
+     * @param templateNames the argument of type {@code java.lang.String[]}
+     * @param controlStyle the argument of type {@code Style}
+     * @param templateStyles the argument of type {@code Style[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplateEditingService.CreateFrame" target="_top">.NET documentation</a>
+     */
     public ITemplateEditingFrame CreateFrame(TemplatedControlDesigner designer, java.lang.String frameName, java.lang.String[] templateNames, Style controlStyle, Style[] templateStyles) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +292,22 @@ public class TemplateEditingService extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateFrame.
+     *
+     * @param dupParam0 the argument of type {@code TemplatedControlDesigner}
+     * @param dupParam1 the argument of type {@code java.lang.String}
+     * @param dupParam2 the argument of type {@code JCORefOut}
+     * @param dupParam3 the argument of type {@code Style}
+     * @param dupParam4 the argument of type {@code Style[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplateEditingService.CreateFrame" target="_top">.NET documentation</a>
+     */
     public ITemplateEditingFrame CreateFrame(TemplatedControlDesigner dupParam0, java.lang.String dupParam1, JCORefOut dupParam2, Style dupParam3, Style[] dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +323,13 @@ public class TemplateEditingService extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplateEditingService.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +357,13 @@ public class TemplateEditingService extends NetObject implements AutoCloseable {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SupportsNestedTemplateEditing.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplateEditingService.SupportsNestedTemplateEditing" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsNestedTemplateEditing() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

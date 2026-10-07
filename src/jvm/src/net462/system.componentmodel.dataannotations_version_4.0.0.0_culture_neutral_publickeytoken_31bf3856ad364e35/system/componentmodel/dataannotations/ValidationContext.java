@@ -105,7 +105,10 @@ public class ValidationContext extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ValidationContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,16 @@ public class ValidationContext extends NetObject  {
     public ValidationContext() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param instance the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.ValidationContext.-ctor" target="_top">.NET documentation</a>
+     */
     public ValidationContext(NetObject instance) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +178,17 @@ public class ValidationContext extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param instance the argument of type {@code NetObject}
+     * @param items the argument of type {@code IDictionary_2}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.ValidationContext.-ctor" target="_top">.NET documentation</a>
+     */
     public ValidationContext(NetObject instance, IDictionary_2 items) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +199,18 @@ public class ValidationContext extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param instance the argument of type {@code NetObject}
+     * @param serviceProvider the argument of type {@code IServiceProvider}
+     * @param items the argument of type {@code IDictionary_2}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.ValidationContext.-ctor" target="_top">.NET documentation</a>
+     */
     public ValidationContext(NetObject instance, IServiceProvider serviceProvider, IDictionary_2 items) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -190,6 +226,14 @@ public class ValidationContext extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetService.
+     *
+     * @param serviceType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.ValidationContext.GetService" target="_top">.NET documentation</a>
+     */
     public NetObject GetService(NetType serviceType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +249,13 @@ public class ValidationContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member InitializeServiceProvider.
+     *
+     * @param serviceProvider the argument of type {@code Func_2}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.ValidationContext.InitializeServiceProvider" target="_top">.NET documentation</a>
+     */
     public void InitializeServiceProvider(Func_2 serviceProvider) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +270,13 @@ public class ValidationContext extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Items.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.ValidationContext.Items" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 getItems() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +292,15 @@ public class ValidationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ServiceContainer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.ValidationContext.ServiceContainer" target="_top">.NET documentation</a>
+     */
     public IServiceContainer getServiceContainer() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +316,13 @@ public class ValidationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ObjectInstance.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.ValidationContext.ObjectInstance" target="_top">.NET documentation</a>
+     */
     public NetObject getObjectInstance() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +338,23 @@ public class ValidationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DisplayName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.ValidationContext.DisplayName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDisplayName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +369,14 @@ public class ValidationContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DisplayName.
+     *
+     * @param DisplayName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.ValidationContext.DisplayName" target="_top">.NET documentation</a>
+     */
     public void setDisplayName(java.lang.String DisplayName) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +387,13 @@ public class ValidationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MemberName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.ValidationContext.MemberName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMemberName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -302,6 +408,13 @@ public class ValidationContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MemberName.
+     *
+     * @param MemberName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.ValidationContext.MemberName" target="_top">.NET documentation</a>
+     */
     public void setMemberName(java.lang.String MemberName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -312,6 +425,13 @@ public class ValidationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ObjectType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.ValidationContext.ObjectType" target="_top">.NET documentation</a>
+     */
     public NetType getObjectType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

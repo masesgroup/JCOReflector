@@ -103,7 +103,10 @@ public class LocationReferenceEnvironment extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public LocationReferenceEnvironment(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,14 @@ public class LocationReferenceEnvironment extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsVisible.
+     *
+     * @param locationReference the argument of type {@code LocationReference}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.LocationReferenceEnvironment.IsVisible" target="_top">.NET documentation</a>
+     */
     public boolean IsVisible(LocationReference locationReference) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +181,15 @@ public class LocationReferenceEnvironment extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetLocationReference.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param result the argument of type {@code JCORefOut<LocationReference>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.LocationReferenceEnvironment.TryGetLocationReference" target="_top">.NET documentation</a>
+     */
     public boolean TryGetLocationReference(java.lang.String name, JCORefOut<LocationReference> result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +204,13 @@ public class LocationReferenceEnvironment extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetLocationReferences.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.LocationReferenceEnvironment.GetLocationReferences" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 GetLocationReferences() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +230,13 @@ public class LocationReferenceEnvironment extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Root.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.LocationReferenceEnvironment.Root" target="_top">.NET documentation</a>
+     */
     public Activity getRoot() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +252,13 @@ public class LocationReferenceEnvironment extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Parent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.LocationReferenceEnvironment.Parent" target="_top">.NET documentation</a>
+     */
     public LocationReferenceEnvironment getParent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +274,13 @@ public class LocationReferenceEnvironment extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Parent.
+     *
+     * @param Parent the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.LocationReferenceEnvironment.Parent" target="_top">.NET documentation</a>
+     */
     public void setParent(LocationReferenceEnvironment Parent) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

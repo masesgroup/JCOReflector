@@ -99,7 +99,10 @@ public class PaginationProgressEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PaginationProgressEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class PaginationProgressEventArgs extends system.EventArgs  {
     public PaginationProgressEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param start the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.PaginationProgressEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public PaginationProgressEventArgs(int start, int count) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +179,13 @@ public class PaginationProgressEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Count.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.PaginationProgressEventArgs.Count" target="_top">.NET documentation</a>
+     */
     public int getCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +226,13 @@ public class PaginationProgressEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Start.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.PaginationProgressEventArgs.Start" target="_top">.NET documentation</a>
+     */
     public int getStart() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

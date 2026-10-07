@@ -99,7 +99,10 @@ public class PKCS1MaskGenerationMethod extends system.security.cryptography.Mask
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PKCS1MaskGenerationMethod(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class PKCS1MaskGenerationMethod extends system.security.cryptography.Mask
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.PKCS1MaskGenerationMethod.-ctor" target="_top">.NET documentation</a>
+     */
     public PKCS1MaskGenerationMethod() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +169,28 @@ public class PKCS1MaskGenerationMethod extends system.security.cryptography.Mask
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GenerateMask.
+     *
+     * @param rgbSeed the argument of type {@code byte[]}
+     * @param cbReturn the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicUnexpectedOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.PKCS1MaskGenerationMethod.GenerateMask" target="_top">.NET documentation</a>
+     */
     public byte[] GenerateMask(byte[] rgbSeed, int cbReturn) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.TypeLoadException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +214,28 @@ public class PKCS1MaskGenerationMethod extends system.security.cryptography.Mask
         }
     }
 
+    /**
+     * Invokes the .NET member GenerateMask.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicUnexpectedOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.PKCS1MaskGenerationMethod.GenerateMask" target="_top">.NET documentation</a>
+     */
     public byte[] GenerateMask(JCORefOut dupParam0, int dupParam1) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.TypeLoadException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +263,13 @@ public class PKCS1MaskGenerationMethod extends system.security.cryptography.Mask
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HashName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.PKCS1MaskGenerationMethod.HashName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getHashName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +284,13 @@ public class PKCS1MaskGenerationMethod extends system.security.cryptography.Mask
         }
     }
 
+    /**
+     * Sets the value of the .NET property HashName.
+     *
+     * @param HashName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.PKCS1MaskGenerationMethod.HashName" target="_top">.NET documentation</a>
+     */
     public void setHashName(java.lang.String HashName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

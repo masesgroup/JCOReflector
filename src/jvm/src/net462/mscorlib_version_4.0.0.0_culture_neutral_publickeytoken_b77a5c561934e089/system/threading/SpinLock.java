@@ -100,7 +100,10 @@ public class SpinLock extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SpinLock(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class SpinLock extends system.ValueType  {
     public SpinLock() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param enableThreadOwnerTracking the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.SpinLock.-ctor" target="_top">.NET documentation</a>
+     */
     public SpinLock(boolean enableThreadOwnerTracking) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +175,24 @@ public class SpinLock extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Enter.
+     *
+     * @param lockTaken the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicBoolean>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.SpinLock.Enter" target="_top">.NET documentation</a>
+     */
     public void Enter(JCORefOut<java.util.concurrent.atomic.AtomicBoolean> lockTaken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException, system.NotSupportedException, system.threading.LockRecursionException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +203,14 @@ public class SpinLock extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Exit.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.SpinLock.Exit" target="_top">.NET documentation</a>
+     */
     public void Exit() throws Throwable, system.InvalidOperationException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +221,15 @@ public class SpinLock extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Exit.
+     *
+     * @param useMemoryBarrier the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.SpinLock.Exit" target="_top">.NET documentation</a>
+     */
     public void Exit(boolean useMemoryBarrier) throws Throwable, system.InvalidOperationException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +240,21 @@ public class SpinLock extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryEnter.
+     *
+     * @param lockTaken the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicBoolean>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.SpinLock.TryEnter" target="_top">.NET documentation</a>
+     */
     public void TryEnter(JCORefOut<java.util.concurrent.atomic.AtomicBoolean> lockTaken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.OutOfMemoryException, system.threading.LockRecursionException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +265,25 @@ public class SpinLock extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryEnter.
+     *
+     * @param millisecondsTimeout the argument of type {@code int}
+     * @param lockTaken the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicBoolean>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.SpinLock.TryEnter" target="_top">.NET documentation</a>
+     */
     public void TryEnter(int millisecondsTimeout, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> lockTaken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException, system.NotSupportedException, system.threading.LockRecursionException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +294,22 @@ public class SpinLock extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryEnter.
+     *
+     * @param timeout the argument of type {@code TimeSpan}
+     * @param lockTaken the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicBoolean>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.SpinLock.TryEnter" target="_top">.NET documentation</a>
+     */
     public void TryEnter(TimeSpan timeout, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> lockTaken) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.OutOfMemoryException, system.threading.LockRecursionException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +324,13 @@ public class SpinLock extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsHeld.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.SpinLock.IsHeld" target="_top">.NET documentation</a>
+     */
     public boolean getIsHeld() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +345,14 @@ public class SpinLock extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsHeldByCurrentThread.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.SpinLock.IsHeldByCurrentThread" target="_top">.NET documentation</a>
+     */
     public boolean getIsHeldByCurrentThread() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +367,13 @@ public class SpinLock extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsThreadOwnerTrackingEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.SpinLock.IsThreadOwnerTrackingEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getIsThreadOwnerTrackingEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

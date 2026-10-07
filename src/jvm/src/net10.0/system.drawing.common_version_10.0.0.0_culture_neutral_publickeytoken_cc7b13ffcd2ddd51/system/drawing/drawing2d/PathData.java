@@ -99,7 +99,10 @@ public class PathData extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PathData(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class PathData extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Drawing2D.PathData.-ctor" target="_top">.NET documentation</a>
+     */
     public PathData() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class PathData extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Types.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Drawing2D.PathData.Types" target="_top">.NET documentation</a>
+     */
     public byte[] getTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +203,13 @@ public class PathData extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Types.
+     *
+     * @param Types the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Drawing2D.PathData.Types" target="_top">.NET documentation</a>
+     */
     public void setTypes(byte[] Types) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +220,13 @@ public class PathData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Points.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Drawing2D.PathData.Points" target="_top">.NET documentation</a>
+     */
     public final PointF[] getPoints() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +248,13 @@ public class PathData extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Points.
+     *
+     * @param Points the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Drawing2D.PathData.Points" target="_top">.NET documentation</a>
+     */
     public void setPoints(PointF[] Points) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

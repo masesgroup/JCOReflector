@@ -102,7 +102,10 @@ public class RowToParametersTransformer extends system.web.ui.webcontrols.webpar
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RowToParametersTransformer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class RowToParametersTransformer extends system.web.ui.webcontrols.webpar
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.RowToParametersTransformer.-ctor" target="_top">.NET documentation</a>
+     */
     public RowToParametersTransformer() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,14 @@ public class RowToParametersTransformer extends system.web.ui.webcontrols.webpar
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Transform.
+     *
+     * @param providerData the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.RowToParametersTransformer.Transform" target="_top">.NET documentation</a>
+     */
     public NetObject Transform(NetObject providerData) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +195,13 @@ public class RowToParametersTransformer extends system.web.ui.webcontrols.webpar
         }
     }
 
+    /**
+     * Invokes the .NET member CreateConfigurationControl.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.RowToParametersTransformer.CreateConfigurationControl" target="_top">.NET documentation</a>
+     */
     public Control CreateConfigurationControl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,8 +220,12 @@ public class RowToParametersTransformer extends system.web.ui.webcontrols.webpar
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIWebPartParameters method available in IWebPartParameters to obtain an object with an invocable method
+     *
+     * @param callback the argument of type {@code ParametersCallback}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.IWebPartParameters.GetParametersData" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void GetParametersData(ParametersCallback callback) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWebPartParameters to obtain the full interface.");
     }
@@ -205,8 +233,12 @@ public class RowToParametersTransformer extends system.web.ui.webcontrols.webpar
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIWebPartParameters method available in IWebPartParameters to obtain an object with an invocable method
+     *
+     * @param schema the argument of type {@code PropertyDescriptorCollection}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.IWebPartParameters.SetConsumerSchema" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void SetConsumerSchema(PropertyDescriptorCollection schema) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWebPartParameters to obtain the full interface.");
     }
@@ -215,6 +247,13 @@ public class RowToParametersTransformer extends system.web.ui.webcontrols.webpar
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ConsumerFieldNames.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.RowToParametersTransformer.ConsumerFieldNames" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getConsumerFieldNames() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +277,13 @@ public class RowToParametersTransformer extends system.web.ui.webcontrols.webpar
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConsumerFieldNames.
+     *
+     * @param ConsumerFieldNames the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.RowToParametersTransformer.ConsumerFieldNames" target="_top">.NET documentation</a>
+     */
     public void setConsumerFieldNames(java.lang.String[] ConsumerFieldNames) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +294,13 @@ public class RowToParametersTransformer extends system.web.ui.webcontrols.webpar
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProviderFieldNames.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.RowToParametersTransformer.ProviderFieldNames" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getProviderFieldNames() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +324,13 @@ public class RowToParametersTransformer extends system.web.ui.webcontrols.webpar
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProviderFieldNames.
+     *
+     * @param ProviderFieldNames the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.RowToParametersTransformer.ProviderFieldNames" target="_top">.NET documentation</a>
+     */
     public void setProviderFieldNames(java.lang.String[] ProviderFieldNames) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

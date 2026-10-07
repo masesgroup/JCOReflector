@@ -101,7 +101,10 @@ public class RadioButtonAutomationPeer extends system.windows.automation.peers.T
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RadioButtonAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,17 @@ public class RadioButtonAutomationPeer extends system.windows.automation.peers.T
     public RadioButtonAutomationPeer() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param owner the argument of type {@code RadioButton}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.RadioButtonAutomationPeer.-ctor" target="_top">.NET documentation</a>
+     */
     public RadioButtonAutomationPeer(RadioButton owner) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +180,19 @@ public class RadioButtonAutomationPeer extends system.windows.automation.peers.T
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetPattern.
+     *
+     * @param patternInterface the argument of type {@code PatternInterface}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.RadioButtonAutomationPeer.GetPattern" target="_top">.NET documentation</a>
+     */
     public NetObject GetPattern(PatternInterface patternInterface) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,8 +211,11 @@ public class RadioButtonAutomationPeer extends system.windows.automation.peers.T
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToISelectionItemProvider method available in ISelectionItemProvider to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ISelectionItemProvider.AddToSelection" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void AddToSelection() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISelectionItemProvider to obtain the full interface.");
     }
@@ -193,8 +223,11 @@ public class RadioButtonAutomationPeer extends system.windows.automation.peers.T
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToISelectionItemProvider method available in ISelectionItemProvider to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void RemoveFromSelection() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISelectionItemProvider to obtain the full interface.");
     }
@@ -202,8 +235,11 @@ public class RadioButtonAutomationPeer extends system.windows.automation.peers.T
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToISelectionItemProvider method available in ISelectionItemProvider to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ISelectionItemProvider.Select" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Select() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISelectionItemProvider to obtain the full interface.");
     }

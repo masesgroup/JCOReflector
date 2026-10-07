@@ -101,7 +101,10 @@ public class ReferralCallback extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ReferralCallback(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,23 @@ public class ReferralCallback extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.ReferralCallback.-ctor" target="_top">.NET documentation</a>
+     */
     public ReferralCallback() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +186,13 @@ public class ReferralCallback extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DereferenceConnection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.ReferralCallback.DereferenceConnection" target="_top">.NET documentation</a>
+     */
     public DereferenceConnectionCallback getDereferenceConnection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +207,13 @@ public class ReferralCallback extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DereferenceConnection.
+     *
+     * @param DereferenceConnection the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.ReferralCallback.DereferenceConnection" target="_top">.NET documentation</a>
+     */
     public void setDereferenceConnection(DereferenceConnectionCallback DereferenceConnection) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +224,13 @@ public class ReferralCallback extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NotifyNewConnection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.ReferralCallback.NotifyNewConnection" target="_top">.NET documentation</a>
+     */
     public NotifyOfNewConnectionCallback getNotifyNewConnection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +245,13 @@ public class ReferralCallback extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NotifyNewConnection.
+     *
+     * @param NotifyNewConnection the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.ReferralCallback.NotifyNewConnection" target="_top">.NET documentation</a>
+     */
     public void setNotifyNewConnection(NotifyOfNewConnectionCallback NotifyNewConnection) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +262,13 @@ public class ReferralCallback extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property QueryForConnection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.ReferralCallback.QueryForConnection" target="_top">.NET documentation</a>
+     */
     public QueryForConnectionCallback getQueryForConnection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +283,13 @@ public class ReferralCallback extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property QueryForConnection.
+     *
+     * @param QueryForConnection the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.ReferralCallback.QueryForConnection" target="_top">.NET documentation</a>
+     */
     public void setQueryForConnection(QueryForConnectionCallback QueryForConnection) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

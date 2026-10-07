@@ -102,7 +102,9 @@ public class InvalidDataContractException extends NetException {
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public InvalidDataContractException(java.lang.Object instance) {
         super(instance);

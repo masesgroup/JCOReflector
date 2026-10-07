@@ -52,5 +52,13 @@ import system.Action;
  * @version 2.0.0.0
  */
 public interface ICollectionSynchronizationCallback {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param collection the .NET argument of type {@code System.Collections.IEnumerable}
+     * @param context the .NET argument of type {@code System.Object}
+     * @param accessMethod the .NET argument of type {@code System.Action}
+     * @param writeAccess the .NET argument of type {@code System.Boolean}
+     */
     public void Invoke(IEnumerable collection, NetObject context, Action accessMethod, boolean writeAccess);
 }

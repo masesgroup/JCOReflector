@@ -102,7 +102,10 @@ public class ApplicationSecurityInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ApplicationSecurityInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,14 @@ public class ApplicationSecurityInfo extends NetObject  {
     public ApplicationSecurityInfo() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param activationContext the argument of type {@code ActivationContext}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.ApplicationSecurityInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public ApplicationSecurityInfo(ActivationContext activationContext) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +182,17 @@ public class ApplicationSecurityInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ApplicationId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.ApplicationSecurityInfo.ApplicationId" target="_top">.NET documentation</a>
+     */
     public ApplicationId getApplicationId() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +208,14 @@ public class ApplicationSecurityInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ApplicationId.
+     *
+     * @param ApplicationId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.ApplicationSecurityInfo.ApplicationId" target="_top">.NET documentation</a>
+     */
     public void setApplicationId(ApplicationId ApplicationId) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +226,17 @@ public class ApplicationSecurityInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DeploymentId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.ApplicationSecurityInfo.DeploymentId" target="_top">.NET documentation</a>
+     */
     public ApplicationId getDeploymentId() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +252,14 @@ public class ApplicationSecurityInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DeploymentId.
+     *
+     * @param DeploymentId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.ApplicationSecurityInfo.DeploymentId" target="_top">.NET documentation</a>
+     */
     public void setDeploymentId(ApplicationId DeploymentId) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +270,31 @@ public class ApplicationSecurityInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultRequestSet.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.XmlSyntaxException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.reflection.TargetException if the .NET member raises it
+     * @throws system.reflection.TargetParameterCountException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.ApplicationSecurityInfo.DefaultRequestSet" target="_top">.NET documentation</a>
+     */
     public PermissionSet getDefaultRequestSet() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.security.XmlSyntaxException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.NullReferenceException, system.OverflowException, system.RankException, system.NotImplementedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.TypeLoadException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +310,14 @@ public class ApplicationSecurityInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultRequestSet.
+     *
+     * @param DefaultRequestSet the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.ApplicationSecurityInfo.DefaultRequestSet" target="_top">.NET documentation</a>
+     */
     public void setDefaultRequestSet(PermissionSet DefaultRequestSet) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +328,25 @@ public class ApplicationSecurityInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ApplicationEvidence.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.ApplicationSecurityInfo.ApplicationEvidence" target="_top">.NET documentation</a>
+     */
     public Evidence getApplicationEvidence() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.FormatException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.NullReferenceException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +362,14 @@ public class ApplicationSecurityInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ApplicationEvidence.
+     *
+     * @param ApplicationEvidence the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.ApplicationSecurityInfo.ApplicationEvidence" target="_top">.NET documentation</a>
+     */
     public void setApplicationEvidence(Evidence ApplicationEvidence) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

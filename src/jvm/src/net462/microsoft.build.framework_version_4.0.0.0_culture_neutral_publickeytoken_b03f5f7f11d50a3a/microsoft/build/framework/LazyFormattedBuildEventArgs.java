@@ -100,7 +100,10 @@ public class LazyFormattedBuildEventArgs extends microsoft.build.framework.Build
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public LazyFormattedBuildEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,21 @@ public class LazyFormattedBuildEventArgs extends microsoft.build.framework.Build
     public LazyFormattedBuildEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param helpKeyword the argument of type {@code java.lang.String}
+     * @param senderName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.LazyFormattedBuildEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public LazyFormattedBuildEventArgs(java.lang.String message, java.lang.String helpKeyword, java.lang.String senderName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidTimeZoneException, system.OverflowException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +178,26 @@ public class LazyFormattedBuildEventArgs extends microsoft.build.framework.Build
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param helpKeyword the argument of type {@code java.lang.String}
+     * @param senderName the argument of type {@code java.lang.String}
+     * @param eventTimestamp the argument of type {@code DateTime}
+     * @param messageArgs the argument of type {@code NetObject...}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.LazyFormattedBuildEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public LazyFormattedBuildEventArgs(java.lang.String message, java.lang.String helpKeyword, java.lang.String senderName, DateTime eventTimestamp, NetObject... messageArgs) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file

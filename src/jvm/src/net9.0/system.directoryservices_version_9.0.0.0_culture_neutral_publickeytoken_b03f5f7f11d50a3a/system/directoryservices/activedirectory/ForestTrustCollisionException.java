@@ -106,7 +106,9 @@ public class ForestTrustCollisionException extends system.directoryservices.acti
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public ForestTrustCollisionException(java.lang.Object instance) {
         super(instance);
@@ -167,6 +169,23 @@ public class ForestTrustCollisionException extends system.directoryservices.acti
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param inner the argument of type {@code NetException}
+     * @param collisions the argument of type {@code ForestTrustRelationshipCollisionCollection}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.ForestTrustCollisionException.-ctor" target="_top">.NET documentation</a>
+     */
     public ForestTrustCollisionException(java.lang.String message, NetException inner, ForestTrustRelationshipCollisionCollection collisions) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +200,23 @@ public class ForestTrustCollisionException extends system.directoryservices.acti
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetObjectData.
+     *
+     * @param serializationInfo the argument of type {@code SerializationInfo}
+     * @param streamingContext the argument of type {@code StreamingContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.ForestTrustCollisionException.GetObjectData" target="_top">.NET documentation</a>
+     */
     public void GetObjectData(SerializationInfo serializationInfo, StreamingContext streamingContext) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.runtime.serialization.SerializationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +231,13 @@ public class ForestTrustCollisionException extends system.directoryservices.acti
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Collisions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.ForestTrustCollisionException.Collisions" target="_top">.NET documentation</a>
+     */
     public ForestTrustRelationshipCollisionCollection getCollisions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class State extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public State(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class State extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.State.-ctor" target="_top">.NET documentation</a>
+     */
     public State() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class State extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsFinal.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.State.IsFinal" target="_top">.NET documentation</a>
+     */
     public boolean getIsFinal() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +195,13 @@ public class State extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsFinal.
+     *
+     * @param IsFinal the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.State.IsFinal" target="_top">.NET documentation</a>
+     */
     public void setIsFinal(boolean IsFinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +212,13 @@ public class State extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Entry.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.State.Entry" target="_top">.NET documentation</a>
+     */
     public Activity getEntry() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +234,13 @@ public class State extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Entry.
+     *
+     * @param Entry the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.State.Entry" target="_top">.NET documentation</a>
+     */
     public void setEntry(Activity Entry) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +251,13 @@ public class State extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Exit.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.State.Exit" target="_top">.NET documentation</a>
+     */
     public Activity getExit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +273,13 @@ public class State extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Exit.
+     *
+     * @param Exit the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.State.Exit" target="_top">.NET documentation</a>
+     */
     public void setExit(Activity Exit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +290,18 @@ public class State extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Transitions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.State.Transitions" target="_top">.NET documentation</a>
+     */
     public Collection_1 getTransitions() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +317,18 @@ public class State extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Variables.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.State.Variables" target="_top">.NET documentation</a>
+     */
     public Collection_1 getVariables() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +344,13 @@ public class State extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DisplayName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.State.DisplayName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDisplayName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +365,13 @@ public class State extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DisplayName.
+     *
+     * @param DisplayName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.State.DisplayName" target="_top">.NET documentation</a>
+     */
     public void setDisplayName(java.lang.String DisplayName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

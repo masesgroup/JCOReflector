@@ -98,7 +98,10 @@ public class SerializationBinder extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SerializationBinder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,15 @@ public class SerializationBinder extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member BindToType.
+     *
+     * @param assemblyName the argument of type {@code java.lang.String}
+     * @param typeName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.SerializationBinder.BindToType" target="_top">.NET documentation</a>
+     */
     public NetType BindToType(java.lang.String assemblyName, java.lang.String typeName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -166,6 +178,15 @@ public class SerializationBinder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BindToName.
+     *
+     * @param serializedType the argument of type {@code NetType}
+     * @param assemblyName the argument of type {@code JCORefOut}
+     * @param typeName the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.SerializationBinder.BindToName" target="_top">.NET documentation</a>
+     */
     public void BindToName(NetType serializedType, JCORefOut assemblyName, JCORefOut typeName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

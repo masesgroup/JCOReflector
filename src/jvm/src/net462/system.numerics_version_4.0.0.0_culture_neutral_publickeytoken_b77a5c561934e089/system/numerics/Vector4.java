@@ -107,7 +107,10 @@ public class Vector4 extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Vector4(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,13 @@ public class Vector4 extends system.ValueType  {
     public Vector4() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code Single}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.-ctor" target="_top">.NET documentation</a>
+     */
     public Vector4(Single value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +177,16 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param x the argument of type {@code Single}
+     * @param y the argument of type {@code Single}
+     * @param z the argument of type {@code Single}
+     * @param w the argument of type {@code Single}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.-ctor" target="_top">.NET documentation</a>
+     */
     public Vector4(Single x, Single y, Single z, Single w) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -177,6 +197,15 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code Vector2}
+     * @param z the argument of type {@code Single}
+     * @param w the argument of type {@code Single}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.-ctor" target="_top">.NET documentation</a>
+     */
     public Vector4(Vector2 value, Single z, Single w) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -187,6 +216,14 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code Vector3}
+     * @param w the argument of type {@code Single}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.-ctor" target="_top">.NET documentation</a>
+     */
     public Vector4(Vector3 value, Single w) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -202,6 +239,14 @@ public class Vector4 extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code Vector4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(Vector4 other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +261,15 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Distance.
+     *
+     * @param value1 the argument of type {@code Vector4}
+     * @param value2 the argument of type {@code Vector4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.Distance" target="_top">.NET documentation</a>
+     */
     public static Single Distance(Vector4 value1, Vector4 value2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -231,6 +285,15 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member DistanceSquared.
+     *
+     * @param value1 the argument of type {@code Vector4}
+     * @param value2 the argument of type {@code Vector4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.DistanceSquared" target="_top">.NET documentation</a>
+     */
     public static Single DistanceSquared(Vector4 value1, Vector4 value2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -246,6 +309,15 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Dot.
+     *
+     * @param vector1 the argument of type {@code Vector4}
+     * @param vector2 the argument of type {@code Vector4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.Dot" target="_top">.NET documentation</a>
+     */
     public static Single Dot(Vector4 vector1, Vector4 vector2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -261,6 +333,13 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Length.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.Length" target="_top">.NET documentation</a>
+     */
     public Single Length() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +355,13 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member LengthSquared.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.LengthSquared" target="_top">.NET documentation</a>
+     */
     public Single LengthSquared() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +377,14 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Abs.
+     *
+     * @param value the argument of type {@code Vector4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.Abs" target="_top">.NET documentation</a>
+     */
     public static Vector4 Abs(Vector4 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -306,6 +400,15 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param left the argument of type {@code Vector4}
+     * @param right the argument of type {@code Vector4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.Add" target="_top">.NET documentation</a>
+     */
     public static Vector4 Add(Vector4 left, Vector4 right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -321,6 +424,16 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Clamp.
+     *
+     * @param value1 the argument of type {@code Vector4}
+     * @param min the argument of type {@code Vector4}
+     * @param max the argument of type {@code Vector4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.Clamp" target="_top">.NET documentation</a>
+     */
     public static Vector4 Clamp(Vector4 value1, Vector4 min, Vector4 max) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -336,6 +449,15 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Divide.
+     *
+     * @param left the argument of type {@code Vector4}
+     * @param divisor the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.Divide" target="_top">.NET documentation</a>
+     */
     public static Vector4 Divide(Vector4 left, Single divisor) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -351,6 +473,15 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Divide.
+     *
+     * @param left the argument of type {@code Vector4}
+     * @param right the argument of type {@code Vector4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.Divide" target="_top">.NET documentation</a>
+     */
     public static Vector4 Divide(Vector4 left, Vector4 right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -366,6 +497,16 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Lerp.
+     *
+     * @param value1 the argument of type {@code Vector4}
+     * @param value2 the argument of type {@code Vector4}
+     * @param amount the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.Lerp" target="_top">.NET documentation</a>
+     */
     public static Vector4 Lerp(Vector4 value1, Vector4 value2, Single amount) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -381,6 +522,15 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Max.
+     *
+     * @param value1 the argument of type {@code Vector4}
+     * @param value2 the argument of type {@code Vector4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.Max" target="_top">.NET documentation</a>
+     */
     public static Vector4 Max(Vector4 value1, Vector4 value2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -396,6 +546,15 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Min.
+     *
+     * @param value1 the argument of type {@code Vector4}
+     * @param value2 the argument of type {@code Vector4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.Min" target="_top">.NET documentation</a>
+     */
     public static Vector4 Min(Vector4 value1, Vector4 value2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -411,6 +570,15 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Multiply.
+     *
+     * @param left the argument of type {@code Single}
+     * @param right the argument of type {@code Vector4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.Multiply" target="_top">.NET documentation</a>
+     */
     public static Vector4 Multiply(Single left, Vector4 right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -426,6 +594,15 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Multiply.
+     *
+     * @param left the argument of type {@code Vector4}
+     * @param right the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.Multiply" target="_top">.NET documentation</a>
+     */
     public static Vector4 Multiply(Vector4 left, Single right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -441,6 +618,15 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Multiply.
+     *
+     * @param left the argument of type {@code Vector4}
+     * @param right the argument of type {@code Vector4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.Multiply" target="_top">.NET documentation</a>
+     */
     public static Vector4 Multiply(Vector4 left, Vector4 right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -456,6 +642,14 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Negate.
+     *
+     * @param value the argument of type {@code Vector4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.Negate" target="_top">.NET documentation</a>
+     */
     public static Vector4 Negate(Vector4 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -471,6 +665,14 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Normalize.
+     *
+     * @param vector the argument of type {@code Vector4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.Normalize" target="_top">.NET documentation</a>
+     */
     public static Vector4 Normalize(Vector4 vector) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -486,6 +688,14 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member SquareRoot.
+     *
+     * @param value the argument of type {@code Vector4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.SquareRoot" target="_top">.NET documentation</a>
+     */
     public static Vector4 SquareRoot(Vector4 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -501,6 +711,15 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Subtract.
+     *
+     * @param left the argument of type {@code Vector4}
+     * @param right the argument of type {@code Vector4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.Subtract" target="_top">.NET documentation</a>
+     */
     public static Vector4 Subtract(Vector4 left, Vector4 right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -516,6 +735,15 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Transform.
+     *
+     * @param position the argument of type {@code Vector2}
+     * @param matrix the argument of type {@code Matrix4x4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.Transform" target="_top">.NET documentation</a>
+     */
     public static Vector4 Transform(Vector2 position, Matrix4x4 matrix) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -531,6 +759,15 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Transform.
+     *
+     * @param value the argument of type {@code Vector2}
+     * @param rotation the argument of type {@code Quaternion}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.Transform" target="_top">.NET documentation</a>
+     */
     public static Vector4 Transform(Vector2 value, Quaternion rotation) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -546,6 +783,15 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Transform.
+     *
+     * @param position the argument of type {@code Vector3}
+     * @param matrix the argument of type {@code Matrix4x4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.Transform" target="_top">.NET documentation</a>
+     */
     public static Vector4 Transform(Vector3 position, Matrix4x4 matrix) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -561,6 +807,15 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Transform.
+     *
+     * @param value the argument of type {@code Vector3}
+     * @param rotation the argument of type {@code Quaternion}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.Transform" target="_top">.NET documentation</a>
+     */
     public static Vector4 Transform(Vector3 value, Quaternion rotation) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -576,6 +831,15 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Transform.
+     *
+     * @param vector the argument of type {@code Vector4}
+     * @param matrix the argument of type {@code Matrix4x4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.Transform" target="_top">.NET documentation</a>
+     */
     public static Vector4 Transform(Vector4 vector, Matrix4x4 matrix) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -591,6 +855,15 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Transform.
+     *
+     * @param value the argument of type {@code Vector4}
+     * @param rotation the argument of type {@code Quaternion}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.Transform" target="_top">.NET documentation</a>
+     */
     public static Vector4 Transform(Vector4 value, Quaternion rotation) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -606,6 +879,24 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToString.
+     *
+     * @param format the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.ToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String ToString(java.lang.String format) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -620,6 +911,20 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToString.
+     *
+     * @param format the argument of type {@code java.lang.String}
+     * @param formatProvider the argument of type {@code IFormatProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.ToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String ToString(java.lang.String format, IFormatProvider formatProvider) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -634,6 +939,25 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code Single[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(Single[] array) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -644,6 +968,27 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code Single[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(Single[] array, int index) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -658,6 +1003,13 @@ public class Vector4 extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property One.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.One" target="_top">.NET documentation</a>
+     */
     public static Vector4 getOne() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -673,6 +1025,13 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnitW.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.UnitW" target="_top">.NET documentation</a>
+     */
     public static Vector4 getUnitW() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -688,6 +1047,13 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnitX.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.UnitX" target="_top">.NET documentation</a>
+     */
     public static Vector4 getUnitX() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -703,6 +1069,13 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnitY.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.UnitY" target="_top">.NET documentation</a>
+     */
     public static Vector4 getUnitY() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -718,6 +1091,13 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnitZ.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.UnitZ" target="_top">.NET documentation</a>
+     */
     public static Vector4 getUnitZ() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -733,6 +1113,13 @@ public class Vector4 extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Zero.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.Zero" target="_top">.NET documentation</a>
+     */
     public static Vector4 getZero() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

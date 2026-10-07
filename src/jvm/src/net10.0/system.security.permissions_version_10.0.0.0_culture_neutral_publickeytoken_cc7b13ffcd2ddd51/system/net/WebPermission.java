@@ -105,7 +105,10 @@ public class WebPermission extends system.security.CodeAccessPermission  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WebPermission(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,12 @@ public class WebPermission extends system.security.CodeAccessPermission  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public WebPermission() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +171,14 @@ public class WebPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param access the argument of type {@code NetworkAccess}
+     * @param uriString the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public WebPermission(NetworkAccess access, java.lang.String uriString) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +189,14 @@ public class WebPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param access the argument of type {@code NetworkAccess}
+     * @param uriRegex the argument of type {@code Regex}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public WebPermission(NetworkAccess access, Regex uriRegex) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +207,13 @@ public class WebPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param state the argument of type {@code PermissionState}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public WebPermission(PermissionState state) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -196,6 +228,14 @@ public class WebPermission extends system.security.CodeAccessPermission  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsSubsetOf.
+     *
+     * @param target the argument of type {@code IPermission}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebPermission.IsSubsetOf" target="_top">.NET documentation</a>
+     */
     public boolean IsSubsetOf(IPermission target) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +250,13 @@ public class WebPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsUnrestricted.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebPermission.IsUnrestricted" target="_top">.NET documentation</a>
+     */
     public boolean IsUnrestricted() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +271,13 @@ public class WebPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member Copy.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebPermission.Copy" target="_top">.NET documentation</a>
+     */
     public IPermission Copy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +293,14 @@ public class WebPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member Intersect.
+     *
+     * @param target the argument of type {@code IPermission}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebPermission.Intersect" target="_top">.NET documentation</a>
+     */
     public IPermission Intersect(IPermission target) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +316,14 @@ public class WebPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member Union.
+     *
+     * @param target the argument of type {@code IPermission}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebPermission.Union" target="_top">.NET documentation</a>
+     */
     public IPermission Union(IPermission target) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +339,13 @@ public class WebPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToXml.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebPermission.ToXml" target="_top">.NET documentation</a>
+     */
     public SecurityElement ToXml() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -284,6 +361,14 @@ public class WebPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddPermission.
+     *
+     * @param access the argument of type {@code NetworkAccess}
+     * @param uriString the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebPermission.AddPermission" target="_top">.NET documentation</a>
+     */
     public void AddPermission(NetworkAccess access, java.lang.String uriString) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +379,14 @@ public class WebPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddPermission.
+     *
+     * @param access the argument of type {@code NetworkAccess}
+     * @param uriRegex the argument of type {@code Regex}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebPermission.AddPermission" target="_top">.NET documentation</a>
+     */
     public void AddPermission(NetworkAccess access, Regex uriRegex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +397,13 @@ public class WebPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member FromXml.
+     *
+     * @param securityElement the argument of type {@code SecurityElement}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebPermission.FromXml" target="_top">.NET documentation</a>
+     */
     public void FromXml(SecurityElement securityElement) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +418,13 @@ public class WebPermission extends system.security.CodeAccessPermission  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AcceptList.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebPermission.AcceptList" target="_top">.NET documentation</a>
+     */
     public IEnumerator getAcceptList() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -333,6 +440,13 @@ public class WebPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConnectList.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebPermission.ConnectList" target="_top">.NET documentation</a>
+     */
     public IEnumerator getConnectList() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -102,7 +102,10 @@ public class EnumType extends system.data.metadata.edm.SimpleType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EnumType(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -161,6 +164,13 @@ public class EnumType extends system.data.metadata.edm.SimpleType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsFlags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EnumType.IsFlags" target="_top">.NET documentation</a>
+     */
     public boolean getIsFlags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +185,13 @@ public class EnumType extends system.data.metadata.edm.SimpleType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnderlyingType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EnumType.UnderlyingType" target="_top">.NET documentation</a>
+     */
     public PrimitiveType getUnderlyingType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +207,13 @@ public class EnumType extends system.data.metadata.edm.SimpleType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Members.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EnumType.Members" target="_top">.NET documentation</a>
+     */
     public ReadOnlyMetadataCollection_1 getMembers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

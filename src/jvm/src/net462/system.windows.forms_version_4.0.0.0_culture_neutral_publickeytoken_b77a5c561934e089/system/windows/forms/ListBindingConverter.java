@@ -104,7 +104,10 @@ public class ListBindingConverter extends system.componentmodel.TypeConverter  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ListBindingConverter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,12 @@ public class ListBindingConverter extends system.componentmodel.TypeConverter  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ListBindingConverter.-ctor" target="_top">.NET documentation</a>
+     */
     public ListBindingConverter() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,15 @@ public class ListBindingConverter extends system.componentmodel.TypeConverter  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CanConvertTo.
+     *
+     * @param context the argument of type {@code ITypeDescriptorContext}
+     * @param destinationType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ListBindingConverter.CanConvertTo" target="_top">.NET documentation</a>
+     */
     public boolean CanConvertTo(ITypeDescriptorContext context, NetType destinationType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +197,14 @@ public class ListBindingConverter extends system.componentmodel.TypeConverter  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCreateInstanceSupported.
+     *
+     * @param context the argument of type {@code ITypeDescriptorContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ListBindingConverter.GetCreateInstanceSupported" target="_top">.NET documentation</a>
+     */
     public boolean GetCreateInstanceSupported(ITypeDescriptorContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +219,28 @@ public class ListBindingConverter extends system.componentmodel.TypeConverter  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertTo.
+     *
+     * @param context the argument of type {@code ITypeDescriptorContext}
+     * @param culture the argument of type {@code CultureInfo}
+     * @param value the argument of type {@code NetObject}
+     * @param destinationType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ListBindingConverter.ConvertTo" target="_top">.NET documentation</a>
+     */
     public NetObject ConvertTo(ITypeDescriptorContext context, CultureInfo culture, NetObject value, NetType destinationType) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.InvalidCastException, system.ArgumentException, system.NotImplementedException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +256,30 @@ public class ListBindingConverter extends system.componentmodel.TypeConverter  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstance.
+     *
+     * @param context the argument of type {@code ITypeDescriptorContext}
+     * @param propertyValues the argument of type {@code IDictionary}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ListBindingConverter.CreateInstance" target="_top">.NET documentation</a>
+     */
     public NetObject CreateInstance(ITypeDescriptorContext context, IDictionary propertyValues) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.RankException, system.TypeLoadException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

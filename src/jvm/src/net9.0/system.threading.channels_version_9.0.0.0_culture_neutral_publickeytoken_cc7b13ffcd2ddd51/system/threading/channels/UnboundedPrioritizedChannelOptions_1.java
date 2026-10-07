@@ -101,7 +101,10 @@ public class UnboundedPrioritizedChannelOptions_1<T extends IJCOBridgeReflected>
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UnboundedPrioritizedChannelOptions_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class UnboundedPrioritizedChannelOptions_1<T extends IJCOBridgeReflected>
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Channels.UnboundedPrioritizedChannelOptions-1.-ctor" target="_top">.NET documentation</a>
+     */
     public UnboundedPrioritizedChannelOptions_1() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +177,13 @@ public class UnboundedPrioritizedChannelOptions_1<T extends IJCOBridgeReflected>
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Comparer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Channels.UnboundedPrioritizedChannelOptions-1.Comparer" target="_top">.NET documentation</a>
+     */
     public IComparer_1 getComparer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +199,13 @@ public class UnboundedPrioritizedChannelOptions_1<T extends IJCOBridgeReflected>
         }
     }
 
+    /**
+     * Sets the value of the .NET property Comparer.
+     *
+     * @param Comparer the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Channels.UnboundedPrioritizedChannelOptions-1.Comparer" target="_top">.NET documentation</a>
+     */
     public void setComparer(IComparer_1 Comparer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

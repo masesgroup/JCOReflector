@@ -101,7 +101,10 @@ public class DataGridLength extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataGridLength(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,19 @@ public class DataGridLength extends system.ValueType  {
     public DataGridLength() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code double}
+     * @param type the argument of type {@code DataGridLengthUnitType}
+     * @param desiredValue the argument of type {@code double}
+     * @param displayValue the argument of type {@code double}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridLength.-ctor" target="_top">.NET documentation</a>
+     */
     public DataGridLength(double value, DataGridLengthUnitType type, double desiredValue, double displayValue) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +177,20 @@ public class DataGridLength extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code double}
+     * @param type the argument of type {@code DataGridLengthUnitType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridLength.-ctor" target="_top">.NET documentation</a>
+     */
     public DataGridLength(double value, DataGridLengthUnitType type) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +201,21 @@ public class DataGridLength extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param pixels the argument of type {@code double}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridLength.-ctor" target="_top">.NET documentation</a>
+     */
     public DataGridLength(double pixels) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -186,6 +231,14 @@ public class DataGridLength extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code DataGridLength}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridLength.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(DataGridLength other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +257,13 @@ public class DataGridLength extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsAbsolute.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridLength.IsAbsolute" target="_top">.NET documentation</a>
+     */
     public boolean getIsAbsolute() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +278,13 @@ public class DataGridLength extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsAuto.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridLength.IsAuto" target="_top">.NET documentation</a>
+     */
     public boolean getIsAuto() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +299,13 @@ public class DataGridLength extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSizeToCells.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridLength.IsSizeToCells" target="_top">.NET documentation</a>
+     */
     public boolean getIsSizeToCells() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +320,13 @@ public class DataGridLength extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSizeToHeader.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridLength.IsSizeToHeader" target="_top">.NET documentation</a>
+     */
     public boolean getIsSizeToHeader() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +341,13 @@ public class DataGridLength extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsStar.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridLength.IsStar" target="_top">.NET documentation</a>
+     */
     public boolean getIsStar() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +362,13 @@ public class DataGridLength extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DesiredValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridLength.DesiredValue" target="_top">.NET documentation</a>
+     */
     public double getDesiredValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -314,6 +409,13 @@ public class DataGridLength extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DisplayValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridLength.DisplayValue" target="_top">.NET documentation</a>
+     */
     public double getDisplayValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -354,6 +456,13 @@ public class DataGridLength extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridLength.Value" target="_top">.NET documentation</a>
+     */
     public double getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -394,6 +503,13 @@ public class DataGridLength extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Auto.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridLength.Auto" target="_top">.NET documentation</a>
+     */
     public static DataGridLength getAuto() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -409,6 +525,13 @@ public class DataGridLength extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SizeToCells.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridLength.SizeToCells" target="_top">.NET documentation</a>
+     */
     public static DataGridLength getSizeToCells() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -424,6 +547,13 @@ public class DataGridLength extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SizeToHeader.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridLength.SizeToHeader" target="_top">.NET documentation</a>
+     */
     public static DataGridLength getSizeToHeader() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -439,6 +569,13 @@ public class DataGridLength extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnitType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridLength.UnitType" target="_top">.NET documentation</a>
+     */
     public DataGridLengthUnitType getUnitType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

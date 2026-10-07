@@ -105,7 +105,10 @@ public class OleDbDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public OleDbDataAdapter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,13 @@ public class OleDbDataAdapter extends system.data.common.DbDataAdapter  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OleDb.OleDbDataAdapter.-ctor" target="_top">.NET documentation</a>
+     */
     public OleDbDataAdapter() throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +172,14 @@ public class OleDbDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param selectCommand the argument of type {@code OleDbCommand}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OleDb.OleDbDataAdapter.-ctor" target="_top">.NET documentation</a>
+     */
     public OleDbDataAdapter(OleDbCommand selectCommand) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +190,16 @@ public class OleDbDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param selectCommandText the argument of type {@code java.lang.String}
+     * @param selectConnection the argument of type {@code OleDbConnection}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OleDb.OleDbDataAdapter.-ctor" target="_top">.NET documentation</a>
+     */
     public OleDbDataAdapter(java.lang.String selectCommandText, OleDbConnection selectConnection) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +210,16 @@ public class OleDbDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param selectCommandText the argument of type {@code java.lang.String}
+     * @param selectConnectionString the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OleDb.OleDbDataAdapter.-ctor" target="_top">.NET documentation</a>
+     */
     public OleDbDataAdapter(java.lang.String selectCommandText, java.lang.String selectConnectionString) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -196,6 +234,35 @@ public class OleDbDataAdapter extends system.data.common.DbDataAdapter  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Fill.
+     *
+     * @param dataSet the argument of type {@code DataSet}
+     * @param ADODBRecordSet the argument of type {@code NetObject}
+     * @param srcTable the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.data.sqltypes.SqlNullValueException if the .NET member raises it
+     * @throws system.runtime.interopservices.COMException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OleDb.OleDbDataAdapter.Fill" target="_top">.NET documentation</a>
+     */
     public int Fill(DataSet dataSet, NetObject ADODBRecordSet, java.lang.String srcTable) throws Throwable, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NullReferenceException, system.security.SecurityException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.AccessViolationException, system.InvalidCastException, system.data.sqltypes.SqlNullValueException, system.runtime.interopservices.COMException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +303,34 @@ public class OleDbDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Invokes the .NET member Fill.
+     *
+     * @param dataTable the argument of type {@code DataTable}
+     * @param ADODBRecordSet the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.data.sqltypes.SqlNullValueException if the .NET member raises it
+     * @throws system.runtime.interopservices.COMException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OleDb.OleDbDataAdapter.Fill" target="_top">.NET documentation</a>
+     */
     public int Fill(DataTable dataTable, NetObject ADODBRecordSet) throws Throwable, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NullReferenceException, system.security.SecurityException, system.IndexOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.AccessViolationException, system.InvalidCastException, system.data.sqltypes.SqlNullValueException, system.runtime.interopservices.COMException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +375,13 @@ public class OleDbDataAdapter extends system.data.common.DbDataAdapter  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DeleteCommandNewOleDbDataAdapter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OleDb.OleDbDataAdapter.DeleteCommandNewOleDbDataAdapter" target="_top">.NET documentation</a>
+     */
     public OleDbCommand getDeleteCommandNewOleDbDataAdapter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +397,13 @@ public class OleDbDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DeleteCommand.
+     *
+     * @param DeleteCommand the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OleDb.OleDbDataAdapter.DeleteCommand" target="_top">.NET documentation</a>
+     */
     public void setDeleteCommand(OleDbCommand DeleteCommand) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +414,13 @@ public class OleDbDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InsertCommandNewOleDbDataAdapter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OleDb.OleDbDataAdapter.InsertCommandNewOleDbDataAdapter" target="_top">.NET documentation</a>
+     */
     public OleDbCommand getInsertCommandNewOleDbDataAdapter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +436,13 @@ public class OleDbDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InsertCommand.
+     *
+     * @param InsertCommand the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OleDb.OleDbDataAdapter.InsertCommand" target="_top">.NET documentation</a>
+     */
     public void setInsertCommand(OleDbCommand InsertCommand) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -330,6 +453,13 @@ public class OleDbDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SelectCommandNewOleDbDataAdapter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OleDb.OleDbDataAdapter.SelectCommandNewOleDbDataAdapter" target="_top">.NET documentation</a>
+     */
     public OleDbCommand getSelectCommandNewOleDbDataAdapter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -345,6 +475,13 @@ public class OleDbDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SelectCommand.
+     *
+     * @param SelectCommand the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OleDb.OleDbDataAdapter.SelectCommand" target="_top">.NET documentation</a>
+     */
     public void setSelectCommand(OleDbCommand SelectCommand) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -355,6 +492,13 @@ public class OleDbDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UpdateCommandNewOleDbDataAdapter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OleDb.OleDbDataAdapter.UpdateCommandNewOleDbDataAdapter" target="_top">.NET documentation</a>
+     */
     public OleDbCommand getUpdateCommandNewOleDbDataAdapter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -370,6 +514,13 @@ public class OleDbDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UpdateCommand.
+     *
+     * @param UpdateCommand the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OleDb.OleDbDataAdapter.UpdateCommand" target="_top">.NET documentation</a>
+     */
     public void setUpdateCommand(OleDbCommand UpdateCommand) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -385,6 +536,13 @@ public class OleDbDataAdapter extends system.data.common.DbDataAdapter  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addRowUpdated.
+     *
+     * @param handler the argument of type {@code OleDbRowUpdatedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowUpdated(OleDbRowUpdatedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -395,6 +553,13 @@ public class OleDbDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowUpdated.
+     *
+     * @param handler the argument of type {@code OleDbRowUpdatedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowUpdated(OleDbRowUpdatedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -405,6 +570,13 @@ public class OleDbDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRowUpdating.
+     *
+     * @param handler the argument of type {@code OleDbRowUpdatingEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowUpdating(OleDbRowUpdatingEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -415,6 +587,13 @@ public class OleDbDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowUpdating.
+     *
+     * @param handler the argument of type {@code OleDbRowUpdatingEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowUpdating(OleDbRowUpdatingEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -107,7 +107,10 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ApplicationDeployment(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -162,6 +165,45 @@ public class ApplicationDeployment extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CheckForUpdate.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.deployment.application.DeploymentException if the .NET member raises it
+     * @throws system.deployment.application.InvalidDeploymentException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.deployment.application.DeploymentDownloadException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.deployment.application.DependentPlatformMissingException if the .NET member raises it
+     * @throws system.deployment.application.CompatibleFrameworkMissingException if the .NET member raises it
+     * @throws system.deployment.application.SupportedRuntimeMissingException if the .NET member raises it
+     * @throws system.security.XmlSyntaxException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.policy.PolicyException if the .NET member raises it
+     * @throws system.deployment.application.TrustNotGrantedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Deployment.Application.ApplicationDeployment.CheckForUpdate" target="_top">.NET documentation</a>
+     */
     public boolean CheckForUpdate() throws Throwable, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.deployment.application.DeploymentException, system.deployment.application.InvalidDeploymentException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.PlatformNotSupportedException, system.deployment.application.DeploymentDownloadException, system.FormatException, system.deployment.application.DependentPlatformMissingException, system.deployment.application.CompatibleFrameworkMissingException, system.deployment.application.SupportedRuntimeMissingException, system.security.XmlSyntaxException, system.OverflowException, system.security.policy.PolicyException, system.deployment.application.TrustNotGrantedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +218,53 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CheckForUpdate.
+     *
+     * @param persistUpdateCheckResult the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.deployment.application.DeploymentException if the .NET member raises it
+     * @throws system.deployment.application.InvalidDeploymentException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.deployment.application.DeploymentDownloadException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.deployment.application.DependentPlatformMissingException if the .NET member raises it
+     * @throws system.deployment.application.CompatibleFrameworkMissingException if the .NET member raises it
+     * @throws system.deployment.application.SupportedRuntimeMissingException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.reflection.TargetParameterCountException if the .NET member raises it
+     * @throws system.security.policy.PolicyException if the .NET member raises it
+     * @throws system.deployment.application.TrustNotGrantedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Deployment.Application.ApplicationDeployment.CheckForUpdate" target="_top">.NET documentation</a>
+     */
     public boolean CheckForUpdate(boolean persistUpdateCheckResult) throws Throwable, system.NullReferenceException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.deployment.application.DeploymentException, system.deployment.application.InvalidDeploymentException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.PlatformNotSupportedException, system.reflection.AmbiguousMatchException, system.deployment.application.DeploymentDownloadException, system.MulticastNotSupportedException, system.threading.AbandonedMutexException, system.componentmodel.Win32Exception, system.FormatException, system.deployment.application.DependentPlatformMissingException, system.deployment.application.CompatibleFrameworkMissingException, system.deployment.application.SupportedRuntimeMissingException, system.OverflowException, system.reflection.TargetParameterCountException, system.security.policy.PolicyException, system.deployment.application.TrustNotGrantedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +279,33 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsFileGroupDownloaded.
+     *
+     * @param groupName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.deployment.application.DeploymentException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.deployment.application.InvalidDeploymentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Deployment.Application.ApplicationDeployment.IsFileGroupDownloaded" target="_top">.NET documentation</a>
+     */
     public boolean IsFileGroupDownloaded(java.lang.String groupName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.io.IOException, system.ArgumentOutOfRangeException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.NotImplementedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.deployment.application.DeploymentException, system.OverflowException, system.deployment.application.InvalidDeploymentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +320,54 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Update.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.deployment.application.DeploymentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.deployment.application.InvalidDeploymentException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.deployment.application.DeploymentDownloadException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.deployment.application.DependentPlatformMissingException if the .NET member raises it
+     * @throws system.deployment.application.CompatibleFrameworkMissingException if the .NET member raises it
+     * @throws system.deployment.application.SupportedRuntimeMissingException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.reflection.TargetException if the .NET member raises it
+     * @throws system.reflection.TargetParameterCountException if the .NET member raises it
+     * @throws system.security.policy.PolicyException if the .NET member raises it
+     * @throws system.deployment.application.TrustNotGrantedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Deployment.Application.ApplicationDeployment.Update" target="_top">.NET documentation</a>
+     */
     public boolean Update() throws Throwable, system.NullReferenceException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.security.SecurityException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.deployment.application.DeploymentException, system.FormatException, system.OutOfMemoryException, system.deployment.application.InvalidDeploymentException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.PlatformNotSupportedException, system.reflection.AmbiguousMatchException, system.deployment.application.DeploymentDownloadException, system.threading.AbandonedMutexException, system.componentmodel.Win32Exception, system.deployment.application.DependentPlatformMissingException, system.deployment.application.CompatibleFrameworkMissingException, system.deployment.application.SupportedRuntimeMissingException, system.RankException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.security.policy.PolicyException, system.deployment.application.TrustNotGrantedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +382,52 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CheckForDetailedUpdate.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.deployment.application.DeploymentException if the .NET member raises it
+     * @throws system.deployment.application.InvalidDeploymentException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.deployment.application.DeploymentDownloadException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.deployment.application.DependentPlatformMissingException if the .NET member raises it
+     * @throws system.deployment.application.CompatibleFrameworkMissingException if the .NET member raises it
+     * @throws system.deployment.application.SupportedRuntimeMissingException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.reflection.TargetParameterCountException if the .NET member raises it
+     * @throws system.security.policy.PolicyException if the .NET member raises it
+     * @throws system.deployment.application.TrustNotGrantedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Deployment.Application.ApplicationDeployment.CheckForDetailedUpdate" target="_top">.NET documentation</a>
+     */
     public UpdateCheckInfo CheckForDetailedUpdate() throws Throwable, system.NullReferenceException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.deployment.application.DeploymentException, system.deployment.application.InvalidDeploymentException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.PlatformNotSupportedException, system.reflection.AmbiguousMatchException, system.deployment.application.DeploymentDownloadException, system.MulticastNotSupportedException, system.threading.AbandonedMutexException, system.componentmodel.Win32Exception, system.FormatException, system.deployment.application.DependentPlatformMissingException, system.deployment.application.CompatibleFrameworkMissingException, system.deployment.application.SupportedRuntimeMissingException, system.OverflowException, system.reflection.TargetParameterCountException, system.security.policy.PolicyException, system.deployment.application.TrustNotGrantedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +443,55 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CheckForDetailedUpdate.
+     *
+     * @param persistUpdateCheckResult the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.deployment.application.DeploymentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.deployment.application.InvalidDeploymentException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.deployment.application.DeploymentDownloadException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.deployment.application.DependentPlatformMissingException if the .NET member raises it
+     * @throws system.deployment.application.CompatibleFrameworkMissingException if the .NET member raises it
+     * @throws system.deployment.application.SupportedRuntimeMissingException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.reflection.TargetException if the .NET member raises it
+     * @throws system.reflection.TargetParameterCountException if the .NET member raises it
+     * @throws system.security.policy.PolicyException if the .NET member raises it
+     * @throws system.deployment.application.TrustNotGrantedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Deployment.Application.ApplicationDeployment.CheckForDetailedUpdate" target="_top">.NET documentation</a>
+     */
     public UpdateCheckInfo CheckForDetailedUpdate(boolean persistUpdateCheckResult) throws Throwable, system.NullReferenceException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.security.SecurityException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.deployment.application.DeploymentException, system.FormatException, system.OutOfMemoryException, system.deployment.application.InvalidDeploymentException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.PlatformNotSupportedException, system.reflection.AmbiguousMatchException, system.deployment.application.DeploymentDownloadException, system.threading.AbandonedMutexException, system.componentmodel.Win32Exception, system.deployment.application.DependentPlatformMissingException, system.deployment.application.CompatibleFrameworkMissingException, system.deployment.application.SupportedRuntimeMissingException, system.RankException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.security.policy.PolicyException, system.deployment.application.TrustNotGrantedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +507,52 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CheckForUpdateAsync.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.deployment.application.DeploymentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.deployment.application.InvalidDeploymentException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.deployment.application.DeploymentDownloadException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.deployment.application.DependentPlatformMissingException if the .NET member raises it
+     * @throws system.deployment.application.CompatibleFrameworkMissingException if the .NET member raises it
+     * @throws system.deployment.application.SupportedRuntimeMissingException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.reflection.TargetParameterCountException if the .NET member raises it
+     * @throws system.security.policy.PolicyException if the .NET member raises it
+     * @throws system.deployment.application.TrustNotGrantedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Deployment.Application.ApplicationDeployment.CheckForUpdateAsync" target="_top">.NET documentation</a>
+     */
     public void CheckForUpdateAsync() throws Throwable, system.NullReferenceException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.security.SecurityException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.deployment.application.DeploymentException, system.FormatException, system.OutOfMemoryException, system.deployment.application.InvalidDeploymentException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.PlatformNotSupportedException, system.reflection.AmbiguousMatchException, system.deployment.application.DeploymentDownloadException, system.threading.AbandonedMutexException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.deployment.application.DependentPlatformMissingException, system.deployment.application.CompatibleFrameworkMissingException, system.deployment.application.SupportedRuntimeMissingException, system.RankException, system.reflection.TargetParameterCountException, system.security.policy.PolicyException, system.deployment.application.TrustNotGrantedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +563,12 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CheckForUpdateAsyncCancel.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Deployment.Application.ApplicationDeployment.CheckForUpdateAsyncCancel" target="_top">.NET documentation</a>
+     */
     public void CheckForUpdateAsyncCancel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +579,37 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DownloadFileGroup.
+     *
+     * @param groupName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.deployment.application.DeploymentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.deployment.application.InvalidDeploymentException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.deployment.application.DeploymentDownloadException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Deployment.Application.ApplicationDeployment.DownloadFileGroup" target="_top">.NET documentation</a>
+     */
     public void DownloadFileGroup(java.lang.String groupName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.IOException, system.io.PathTooLongException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.deployment.application.DeploymentException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.deployment.application.InvalidDeploymentException, system.threading.WaitHandleCannotBeOpenedException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NotSupportedException, system.reflection.AmbiguousMatchException, system.deployment.application.DeploymentDownloadException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +620,36 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DownloadFileGroupAsync.
+     *
+     * @param groupName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.deployment.application.DeploymentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.deployment.application.InvalidDeploymentException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.deployment.application.DeploymentDownloadException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Deployment.Application.ApplicationDeployment.DownloadFileGroupAsync" target="_top">.NET documentation</a>
+     */
     public void DownloadFileGroupAsync(java.lang.String groupName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.deployment.application.DeploymentException, system.FormatException, system.OutOfMemoryException, system.deployment.application.InvalidDeploymentException, system.OverflowException, system.InvalidOperationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NotSupportedException, system.deployment.application.DeploymentDownloadException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +660,38 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DownloadFileGroupAsync.
+     *
+     * @param groupName the argument of type {@code java.lang.String}
+     * @param userState the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.deployment.application.DeploymentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.deployment.application.InvalidDeploymentException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.deployment.application.DeploymentDownloadException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Deployment.Application.ApplicationDeployment.DownloadFileGroupAsync" target="_top">.NET documentation</a>
+     */
     public void DownloadFileGroupAsync(java.lang.String groupName, NetObject userState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.IOException, system.io.PathTooLongException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.deployment.application.DeploymentException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.deployment.application.InvalidDeploymentException, system.threading.WaitHandleCannotBeOpenedException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NotSupportedException, system.reflection.AmbiguousMatchException, system.deployment.application.DeploymentDownloadException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +702,41 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DownloadFileGroupAsyncCancel.
+     *
+     * @param groupName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.deployment.application.DeploymentException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.deployment.application.InvalidDeploymentException if the .NET member raises it
+     * @throws system.deployment.application.DeploymentDownloadException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Deployment.Application.ApplicationDeployment.DownloadFileGroupAsyncCancel" target="_top">.NET documentation</a>
+     */
     public void DownloadFileGroupAsyncCancel(java.lang.String groupName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.NotImplementedException, system.deployment.application.DeploymentException, system.reflection.AmbiguousMatchException, system.OverflowException, system.deployment.application.InvalidDeploymentException, system.deployment.application.DeploymentDownloadException, system.MulticastNotSupportedException, system.threading.AbandonedMutexException, system.componentmodel.Win32Exception, system.FormatException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +747,52 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UpdateAsync.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.deployment.application.DeploymentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.deployment.application.InvalidDeploymentException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.deployment.application.DeploymentDownloadException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.deployment.application.DependentPlatformMissingException if the .NET member raises it
+     * @throws system.deployment.application.CompatibleFrameworkMissingException if the .NET member raises it
+     * @throws system.deployment.application.SupportedRuntimeMissingException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.reflection.TargetParameterCountException if the .NET member raises it
+     * @throws system.security.policy.PolicyException if the .NET member raises it
+     * @throws system.deployment.application.TrustNotGrantedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Deployment.Application.ApplicationDeployment.UpdateAsync" target="_top">.NET documentation</a>
+     */
     public void UpdateAsync() throws Throwable, system.NullReferenceException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.security.SecurityException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.deployment.application.DeploymentException, system.FormatException, system.OutOfMemoryException, system.deployment.application.InvalidDeploymentException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.PlatformNotSupportedException, system.reflection.AmbiguousMatchException, system.deployment.application.DeploymentDownloadException, system.threading.AbandonedMutexException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.deployment.application.DependentPlatformMissingException, system.deployment.application.CompatibleFrameworkMissingException, system.deployment.application.SupportedRuntimeMissingException, system.RankException, system.reflection.TargetParameterCountException, system.security.policy.PolicyException, system.deployment.application.TrustNotGrantedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +803,12 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UpdateAsyncCancel.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Deployment.Application.ApplicationDeployment.UpdateAsyncCancel" target="_top">.NET documentation</a>
+     */
     public void UpdateAsyncCancel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -332,6 +823,13 @@ public class ApplicationDeployment extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsFirstRun.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Deployment.Application.ApplicationDeployment.IsFirstRun" target="_top">.NET documentation</a>
+     */
     public boolean getIsFirstRun() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -346,6 +844,41 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsNetworkDeployed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.deployment.application.InvalidDeploymentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.deployment.application.DeploymentException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Deployment.Application.ApplicationDeployment.IsNetworkDeployed" target="_top">.NET documentation</a>
+     */
     public static boolean getIsNetworkDeployed() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.deployment.application.InvalidDeploymentException, system.FormatException, system.PlatformNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.deployment.application.DeploymentException, system.reflection.AmbiguousMatchException, system.UriFormatException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -360,6 +893,25 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TimeOfLastUpdateCheck.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.deployment.application.DeploymentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.deployment.application.InvalidDeploymentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Deployment.Application.ApplicationDeployment.TimeOfLastUpdateCheck" target="_top">.NET documentation</a>
+     */
     public DateTime getTimeOfLastUpdateCheck() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.IOException, system.io.PathTooLongException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.deployment.application.DeploymentException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.deployment.application.InvalidDeploymentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -375,6 +927,41 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentDeployment.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.deployment.application.InvalidDeploymentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.deployment.application.DeploymentException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Deployment.Application.ApplicationDeployment.CurrentDeployment" target="_top">.NET documentation</a>
+     */
     public static ApplicationDeployment getCurrentDeployment() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.deployment.application.InvalidDeploymentException, system.PlatformNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.deployment.application.DeploymentException, system.reflection.AmbiguousMatchException, system.FormatException, system.OutOfMemoryException, system.OverflowException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -390,6 +977,28 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataDirectory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Deployment.Application.ApplicationDeployment.DataDirectory" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDataDirectory() throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -404,6 +1013,25 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UpdatedApplicationFullName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.deployment.application.DeploymentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.deployment.application.InvalidDeploymentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Deployment.Application.ApplicationDeployment.UpdatedApplicationFullName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUpdatedApplicationFullName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.IOException, system.io.PathTooLongException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.deployment.application.DeploymentException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.deployment.application.InvalidDeploymentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -418,6 +1046,25 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ActivationUri.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.deployment.application.DeploymentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.deployment.application.InvalidDeploymentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Deployment.Application.ApplicationDeployment.ActivationUri" target="_top">.NET documentation</a>
+     */
     public Uri getActivationUri() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.IOException, system.io.PathTooLongException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.deployment.application.DeploymentException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.deployment.application.InvalidDeploymentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -433,6 +1080,25 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UpdateLocation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.deployment.application.DeploymentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.deployment.application.InvalidDeploymentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Deployment.Application.ApplicationDeployment.UpdateLocation" target="_top">.NET documentation</a>
+     */
     public Uri getUpdateLocation() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.IOException, system.io.PathTooLongException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.deployment.application.DeploymentException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.deployment.application.InvalidDeploymentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -448,6 +1114,13 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Deployment.Application.ApplicationDeployment.CurrentVersion" target="_top">.NET documentation</a>
+     */
     public Version getCurrentVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -463,6 +1136,25 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UpdatedVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.deployment.application.DeploymentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.deployment.application.InvalidDeploymentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Deployment.Application.ApplicationDeployment.UpdatedVersion" target="_top">.NET documentation</a>
+     */
     public Version getUpdatedVersion() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.IOException, system.io.PathTooLongException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.deployment.application.DeploymentException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.deployment.application.InvalidDeploymentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -483,6 +1175,13 @@ public class ApplicationDeployment extends NetObject  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addUpdateCompleted.
+     *
+     * @param handler the argument of type {@code AsyncCompletedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addUpdateCompleted(AsyncCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -493,6 +1192,13 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeUpdateCompleted.
+     *
+     * @param handler the argument of type {@code AsyncCompletedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeUpdateCompleted(AsyncCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -503,6 +1209,13 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCheckForUpdateCompleted.
+     *
+     * @param handler the argument of type {@code CheckForUpdateCompletedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCheckForUpdateCompleted(CheckForUpdateCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -513,6 +1226,13 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCheckForUpdateCompleted.
+     *
+     * @param handler the argument of type {@code CheckForUpdateCompletedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCheckForUpdateCompleted(CheckForUpdateCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -523,6 +1243,13 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCheckForUpdateProgressChanged.
+     *
+     * @param handler the argument of type {@code DeploymentProgressChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCheckForUpdateProgressChanged(DeploymentProgressChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -533,6 +1260,13 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCheckForUpdateProgressChanged.
+     *
+     * @param handler the argument of type {@code DeploymentProgressChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCheckForUpdateProgressChanged(DeploymentProgressChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -543,6 +1277,13 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addDownloadFileGroupProgressChanged.
+     *
+     * @param handler the argument of type {@code DeploymentProgressChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addDownloadFileGroupProgressChanged(DeploymentProgressChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -553,6 +1294,13 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeDownloadFileGroupProgressChanged.
+     *
+     * @param handler the argument of type {@code DeploymentProgressChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeDownloadFileGroupProgressChanged(DeploymentProgressChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -563,6 +1311,13 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addUpdateProgressChanged.
+     *
+     * @param handler the argument of type {@code DeploymentProgressChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addUpdateProgressChanged(DeploymentProgressChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -573,6 +1328,13 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeUpdateProgressChanged.
+     *
+     * @param handler the argument of type {@code DeploymentProgressChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeUpdateProgressChanged(DeploymentProgressChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -583,6 +1345,13 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addDownloadFileGroupCompleted.
+     *
+     * @param handler the argument of type {@code DownloadFileGroupCompletedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addDownloadFileGroupCompleted(DownloadFileGroupCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -593,6 +1362,13 @@ public class ApplicationDeployment extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeDownloadFileGroupCompleted.
+     *
+     * @param handler the argument of type {@code DownloadFileGroupCompletedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeDownloadFileGroupCompleted(DownloadFileGroupCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class DataSource extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataSource(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class DataSource extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.DataSource.-ctor" target="_top">.NET documentation</a>
+     */
     public DataSource() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +169,12 @@ public class DataSource extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member BeginInit.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.DataSource.BeginInit" target="_top">.NET documentation</a>
+     */
     public void BeginInit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +185,12 @@ public class DataSource extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EndInit.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.DataSource.EndInit" target="_top">.NET documentation</a>
+     */
     public void EndInit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +205,13 @@ public class DataSource extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HasConfigurationCondition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.DataSource.HasConfigurationCondition" target="_top">.NET documentation</a>
+     */
     public boolean getHasConfigurationCondition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +226,13 @@ public class DataSource extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HasConfigurationCondition.
+     *
+     * @param HasConfigurationCondition the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.DataSource.HasConfigurationCondition" target="_top">.NET documentation</a>
+     */
     public void setHasConfigurationCondition(boolean HasConfigurationCondition) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +243,13 @@ public class DataSource extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SourceOfDefaultValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.DataSource.SourceOfDefaultValue" target="_top">.NET documentation</a>
+     */
     public DefaultValueSourceLocation getSourceOfDefaultValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +265,13 @@ public class DataSource extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SourceOfDefaultValue.
+     *
+     * @param SourceOfDefaultValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.DataSource.SourceOfDefaultValue" target="_top">.NET documentation</a>
+     */
     public void setSourceOfDefaultValue(DefaultValueSourceLocation SourceOfDefaultValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +282,13 @@ public class DataSource extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ItemType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.DataSource.ItemType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getItemType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +303,13 @@ public class DataSource extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ItemType.
+     *
+     * @param ItemType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.DataSource.ItemType" target="_top">.NET documentation</a>
+     */
     public void setItemType(java.lang.String ItemType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +320,13 @@ public class DataSource extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Label.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.DataSource.Label" target="_top">.NET documentation</a>
+     */
     public java.lang.String getLabel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +341,13 @@ public class DataSource extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Label.
+     *
+     * @param Label the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.DataSource.Label" target="_top">.NET documentation</a>
+     */
     public void setLabel(java.lang.String Label) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +358,13 @@ public class DataSource extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MSBuildTarget.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.DataSource.MSBuildTarget" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMSBuildTarget() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +379,13 @@ public class DataSource extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MSBuildTarget.
+     *
+     * @param MSBuildTarget the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.DataSource.MSBuildTarget" target="_top">.NET documentation</a>
+     */
     public void setMSBuildTarget(java.lang.String MSBuildTarget) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +396,13 @@ public class DataSource extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PersistedName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.DataSource.PersistedName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPersistedName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -319,6 +417,13 @@ public class DataSource extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PersistedName.
+     *
+     * @param PersistedName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.DataSource.PersistedName" target="_top">.NET documentation</a>
+     */
     public void setPersistedName(java.lang.String PersistedName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -329,6 +434,13 @@ public class DataSource extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Persistence.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.DataSource.Persistence" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPersistence() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -343,6 +455,13 @@ public class DataSource extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Persistence.
+     *
+     * @param Persistence the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.DataSource.Persistence" target="_top">.NET documentation</a>
+     */
     public void setPersistence(java.lang.String Persistence) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -353,6 +472,13 @@ public class DataSource extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SourceType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.DataSource.SourceType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSourceType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -367,6 +493,13 @@ public class DataSource extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SourceType.
+     *
+     * @param SourceType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.DataSource.SourceType" target="_top">.NET documentation</a>
+     */
     public void setSourceType(java.lang.String SourceType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class IDbColumnSchemaGeneratorImplementation extends NetObject implements
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDbColumnSchemaGeneratorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,13 @@ public class IDbColumnSchemaGeneratorImplementation extends NetObject implements
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetColumnSchema.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.IDbColumnSchemaGenerator.GetColumnSchema" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 GetColumnSchema() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class PageResolution extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PageResolution(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class PageResolution extends NetObject  {
     public PageResolution() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param resolutionX the argument of type {@code int}
+     * @param resolutionY the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PageResolution.-ctor" target="_top">.NET documentation</a>
+     */
     public PageResolution(int resolutionX, int resolutionY) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +171,15 @@ public class PageResolution extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param resolutionX the argument of type {@code int}
+     * @param resolutionY the argument of type {@code int}
+     * @param qualitative the argument of type {@code PageQualitativeResolution}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PageResolution.-ctor" target="_top">.NET documentation</a>
+     */
     public PageResolution(int resolutionX, int resolutionY, PageQualitativeResolution qualitative) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +190,13 @@ public class PageResolution extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param qualitative the argument of type {@code PageQualitativeResolution}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PageResolution.-ctor" target="_top">.NET documentation</a>
+     */
     public PageResolution(PageQualitativeResolution qualitative) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -189,6 +216,13 @@ public class PageResolution extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property X.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PageResolution.X" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getX() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +238,13 @@ public class PageResolution extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Y.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PageResolution.Y" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getY() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +260,13 @@ public class PageResolution extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property QualitativeResolution.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PageResolution.QualitativeResolution" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getQualitativeResolution() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -103,7 +103,9 @@ public class HttpProtocolException extends system.net.http.HttpIOException {
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public HttpProtocolException(java.lang.Object instance) {
         super(instance);
@@ -164,6 +166,15 @@ public class HttpProtocolException extends system.net.http.HttpIOException {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param errorCode the argument of type {@code long}
+     * @param message the argument of type {@code java.lang.String}
+     * @param innerException the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpProtocolException.-ctor" target="_top">.NET documentation</a>
+     */
     public HttpProtocolException(long errorCode, java.lang.String message, NetException innerException) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +193,13 @@ public class HttpProtocolException extends system.net.http.HttpIOException {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ErrorCode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpProtocolException.ErrorCode" target="_top">.NET documentation</a>
+     */
     public long getErrorCode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

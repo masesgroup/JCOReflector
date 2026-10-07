@@ -114,7 +114,9 @@ public class X509KeyIdentifierClauseType extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public X509KeyIdentifierClauseType(java.lang.Object instance) {
         super(instance);

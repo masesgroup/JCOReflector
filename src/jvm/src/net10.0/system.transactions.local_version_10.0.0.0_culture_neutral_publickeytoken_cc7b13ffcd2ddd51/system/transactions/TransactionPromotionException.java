@@ -103,7 +103,9 @@ public class TransactionPromotionException extends system.transactions.Transacti
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public TransactionPromotionException(java.lang.Object instance) {
         super(instance);

@@ -100,7 +100,10 @@ public class XmlArrayItemAttributes extends system.collections.CollectionBase  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlArrayItemAttributes(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class XmlArrayItemAttributes extends system.collections.CollectionBase  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlArrayItemAttributes.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlArrayItemAttributes() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,14 @@ public class XmlArrayItemAttributes extends system.collections.CollectionBase  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param attribute the argument of type {@code XmlArrayItemAttribute}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlArrayItemAttributes.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(XmlArrayItemAttribute attribute) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +192,14 @@ public class XmlArrayItemAttributes extends system.collections.CollectionBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param attribute the argument of type {@code XmlArrayItemAttribute}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlArrayItemAttributes.Add" target="_top">.NET documentation</a>
+     */
     public int Add(XmlArrayItemAttribute attribute) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +240,14 @@ public class XmlArrayItemAttributes extends system.collections.CollectionBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param attribute the argument of type {@code XmlArrayItemAttribute}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlArrayItemAttributes.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(XmlArrayItemAttribute attribute) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +288,14 @@ public class XmlArrayItemAttributes extends system.collections.CollectionBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code XmlArrayItemAttribute[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlArrayItemAttributes.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(XmlArrayItemAttribute[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +306,14 @@ public class XmlArrayItemAttributes extends system.collections.CollectionBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param attribute the argument of type {@code XmlArrayItemAttribute}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlArrayItemAttributes.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(int index, XmlArrayItemAttribute attribute) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +324,13 @@ public class XmlArrayItemAttributes extends system.collections.CollectionBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param attribute the argument of type {@code XmlArrayItemAttribute}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlArrayItemAttributes.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(XmlArrayItemAttribute attribute) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

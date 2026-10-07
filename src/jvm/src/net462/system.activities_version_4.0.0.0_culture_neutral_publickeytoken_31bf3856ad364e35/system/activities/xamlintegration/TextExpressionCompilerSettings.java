@@ -100,7 +100,10 @@ public class TextExpressionCompilerSettings extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TextExpressionCompilerSettings(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class TextExpressionCompilerSettings extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerSettings.-ctor" target="_top">.NET documentation</a>
+     */
     public TextExpressionCompilerSettings() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class TextExpressionCompilerSettings extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AlwaysGenerateSource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerSettings.AlwaysGenerateSource" target="_top">.NET documentation</a>
+     */
     public boolean getAlwaysGenerateSource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +195,13 @@ public class TextExpressionCompilerSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AlwaysGenerateSource.
+     *
+     * @param AlwaysGenerateSource the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerSettings.AlwaysGenerateSource" target="_top">.NET documentation</a>
+     */
     public void setAlwaysGenerateSource(boolean AlwaysGenerateSource) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +212,13 @@ public class TextExpressionCompilerSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ForImplementation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerSettings.ForImplementation" target="_top">.NET documentation</a>
+     */
     public boolean getForImplementation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +233,13 @@ public class TextExpressionCompilerSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ForImplementation.
+     *
+     * @param ForImplementation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerSettings.ForImplementation" target="_top">.NET documentation</a>
+     */
     public void setForImplementation(boolean ForImplementation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +250,13 @@ public class TextExpressionCompilerSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GenerateAsPartialClass.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerSettings.GenerateAsPartialClass" target="_top">.NET documentation</a>
+     */
     public boolean getGenerateAsPartialClass() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +271,13 @@ public class TextExpressionCompilerSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property GenerateAsPartialClass.
+     *
+     * @param GenerateAsPartialClass the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerSettings.GenerateAsPartialClass" target="_top">.NET documentation</a>
+     */
     public void setGenerateAsPartialClass(boolean GenerateAsPartialClass) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +288,13 @@ public class TextExpressionCompilerSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LogSourceGenerationMessage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerSettings.LogSourceGenerationMessage" target="_top">.NET documentation</a>
+     */
     public Action_1 getLogSourceGenerationMessage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +309,13 @@ public class TextExpressionCompilerSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LogSourceGenerationMessage.
+     *
+     * @param LogSourceGenerationMessage the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerSettings.LogSourceGenerationMessage" target="_top">.NET documentation</a>
+     */
     public void setLogSourceGenerationMessage(Action_1 LogSourceGenerationMessage) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +326,13 @@ public class TextExpressionCompilerSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Activity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerSettings.Activity" target="_top">.NET documentation</a>
+     */
     public Activity getActivity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +348,13 @@ public class TextExpressionCompilerSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Activity.
+     *
+     * @param Activity the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerSettings.Activity" target="_top">.NET documentation</a>
+     */
     public void setActivity(Activity Activity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +365,13 @@ public class TextExpressionCompilerSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ActivityName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerSettings.ActivityName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getActivityName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +386,13 @@ public class TextExpressionCompilerSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ActivityName.
+     *
+     * @param ActivityName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerSettings.ActivityName" target="_top">.NET documentation</a>
+     */
     public void setActivityName(java.lang.String ActivityName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +403,13 @@ public class TextExpressionCompilerSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ActivityNamespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerSettings.ActivityNamespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getActivityNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -324,6 +424,13 @@ public class TextExpressionCompilerSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ActivityNamespace.
+     *
+     * @param ActivityNamespace the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerSettings.ActivityNamespace" target="_top">.NET documentation</a>
+     */
     public void setActivityNamespace(java.lang.String ActivityNamespace) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -334,6 +441,13 @@ public class TextExpressionCompilerSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Language.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerSettings.Language" target="_top">.NET documentation</a>
+     */
     public java.lang.String getLanguage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +462,13 @@ public class TextExpressionCompilerSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Language.
+     *
+     * @param Language the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerSettings.Language" target="_top">.NET documentation</a>
+     */
     public void setLanguage(java.lang.String Language) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -358,6 +479,13 @@ public class TextExpressionCompilerSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RootNamespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerSettings.RootNamespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRootNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -372,6 +500,13 @@ public class TextExpressionCompilerSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RootNamespace.
+     *
+     * @param RootNamespace the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerSettings.RootNamespace" target="_top">.NET documentation</a>
+     */
     public void setRootNamespace(java.lang.String RootNamespace) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class TaskScheduler extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TaskScheduler(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,17 @@ public class TaskScheduler extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member FromCurrentSynchronizationContext.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext" target="_top">.NET documentation</a>
+     */
     public static TaskScheduler FromCurrentSynchronizationContext() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -171,6 +185,13 @@ public class TaskScheduler extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Id.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskScheduler.Id" target="_top">.NET documentation</a>
+     */
     public int getId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +232,13 @@ public class TaskScheduler extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaximumConcurrencyLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskScheduler.MaximumConcurrencyLevel" target="_top">.NET documentation</a>
+     */
     public int getMaximumConcurrencyLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +279,13 @@ public class TaskScheduler extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Current.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskScheduler.Current" target="_top">.NET documentation</a>
+     */
     public static TaskScheduler getCurrent() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -266,6 +301,13 @@ public class TaskScheduler extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Default.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskScheduler.Default" target="_top">.NET documentation</a>
+     */
     public static TaskScheduler getDefault() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

@@ -101,7 +101,10 @@ public class ReceiveParametersContent extends system.servicemodel.activities.Rec
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ReceiveParametersContent(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class ReceiveParametersContent extends system.servicemodel.activities.Rec
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.ReceiveParametersContent.-ctor" target="_top">.NET documentation</a>
+     */
     public ReceiveParametersContent() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,21 @@ public class ReceiveParametersContent extends system.servicemodel.activities.Rec
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param parameters the argument of type {@code IDictionary_2}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.ReceiveParametersContent.-ctor" target="_top">.NET documentation</a>
+     */
     public ReceiveParametersContent(IDictionary_2 parameters) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +200,13 @@ public class ReceiveParametersContent extends system.servicemodel.activities.Rec
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Parameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.ReceiveParametersContent.Parameters" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 getParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +222,13 @@ public class ReceiveParametersContent extends system.servicemodel.activities.Rec
         }
     }
 
+    /**
+     * Sets the value of the .NET property Parameters.
+     *
+     * @param Parameters the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.ReceiveParametersContent.Parameters" target="_top">.NET documentation</a>
+     */
     public void setParameters(IDictionary_2 Parameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

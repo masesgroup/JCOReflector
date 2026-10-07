@@ -103,7 +103,10 @@ public class Cloud extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Cloud(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,14 @@ public class Cloud extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code Cloud}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.Cloud.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(Cloud other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +183,30 @@ public class Cloud extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCloudByName.
+     *
+     * @param cloudName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.net.peertopeer.PeerToPeerException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.Cloud.GetCloudByName" target="_top">.NET documentation</a>
+     */
     public static Cloud GetCloudByName(java.lang.String cloudName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.FormatException, system.net.peertopeer.PeerToPeerException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -187,6 +222,22 @@ public class Cloud extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetAvailableClouds.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.net.peertopeer.PeerToPeerException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.Cloud.GetAvailableClouds" target="_top">.NET documentation</a>
+     */
     public static CloudCollection GetAvailableClouds() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.net.peertopeer.PeerToPeerException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -205,8 +256,13 @@ public class Cloud extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToISerializable method available in ISerializable to obtain an object with an invocable method
+     *
+     * @param info the argument of type {@code SerializationInfo}
+     * @param context the argument of type {@code StreamingContext}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ISerializable.GetObjectData" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
@@ -215,6 +271,13 @@ public class Cloud extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ScopeId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.Cloud.ScopeId" target="_top">.NET documentation</a>
+     */
     public int getScopeId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +318,22 @@ public class Cloud extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Global.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.net.peertopeer.PeerToPeerException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.Cloud.Global" target="_top">.NET documentation</a>
+     */
     public static Cloud getGlobal() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.net.peertopeer.PeerToPeerException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -270,6 +349,13 @@ public class Cloud extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Scope.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.Cloud.Scope" target="_top">.NET documentation</a>
+     */
     public PnrpScope getScope() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -285,6 +371,13 @@ public class Cloud extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.Cloud.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

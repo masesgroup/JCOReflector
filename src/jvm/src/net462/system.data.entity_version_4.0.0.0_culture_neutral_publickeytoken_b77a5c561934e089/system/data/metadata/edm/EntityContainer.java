@@ -103,7 +103,10 @@ public class EntityContainer extends system.data.metadata.edm.GlobalItem  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EntityContainer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,24 @@ public class EntityContainer extends system.data.metadata.edm.GlobalItem  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member TryGetEntitySetByName.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @param entitySet the argument of type {@code JCORefOut<EntitySet>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EntityContainer.TryGetEntitySetByName" target="_top">.NET documentation</a>
+     */
     public boolean TryGetEntitySetByName(java.lang.String name, boolean ignoreCase, JCORefOut<EntitySet> entitySet) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +193,24 @@ public class EntityContainer extends system.data.metadata.edm.GlobalItem  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetRelationshipSetByName.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @param relationshipSet the argument of type {@code JCORefOut<RelationshipSet>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EntityContainer.TryGetRelationshipSetByName" target="_top">.NET documentation</a>
+     */
     public boolean TryGetRelationshipSetByName(java.lang.String name, boolean ignoreCase, JCORefOut<RelationshipSet> relationshipSet) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +225,23 @@ public class EntityContainer extends system.data.metadata.edm.GlobalItem  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEntitySetByName.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EntityContainer.GetEntitySetByName" target="_top">.NET documentation</a>
+     */
     public EntitySet GetEntitySetByName(java.lang.String name, boolean ignoreCase) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +257,22 @@ public class EntityContainer extends system.data.metadata.edm.GlobalItem  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRelationshipSetByName.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EntityContainer.GetRelationshipSetByName" target="_top">.NET documentation</a>
+     */
     public RelationshipSet GetRelationshipSetByName(java.lang.String name, boolean ignoreCase) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +292,13 @@ public class EntityContainer extends system.data.metadata.edm.GlobalItem  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property FunctionImports.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EntityContainer.FunctionImports" target="_top">.NET documentation</a>
+     */
     public ReadOnlyMetadataCollection_1 getFunctionImports() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +314,13 @@ public class EntityContainer extends system.data.metadata.edm.GlobalItem  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BaseEntitySets.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EntityContainer.BaseEntitySets" target="_top">.NET documentation</a>
+     */
     public ReadOnlyMetadataCollection_1 getBaseEntitySets() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +336,13 @@ public class EntityContainer extends system.data.metadata.edm.GlobalItem  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EntityContainer.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

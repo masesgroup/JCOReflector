@@ -101,7 +101,10 @@ public class DesignerActionList extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DesignerActionList(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,13 @@ public class DesignerActionList extends NetObject  {
     public DesignerActionList() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param component the argument of type {@code IComponent}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerActionList.-ctor" target="_top">.NET documentation</a>
+     */
     public DesignerActionList(IComponent component) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +176,23 @@ public class DesignerActionList extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetSortedActionItems.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerActionList.GetSortedActionItems" target="_top">.NET documentation</a>
+     */
     public DesignerActionItemCollection GetSortedActionItems() throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.NotSupportedException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +208,14 @@ public class DesignerActionList extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetService.
+     *
+     * @param serviceType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerActionList.GetService" target="_top">.NET documentation</a>
+     */
     public NetObject GetService(NetType serviceType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +235,13 @@ public class DesignerActionList extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AutoShow.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerActionList.AutoShow" target="_top">.NET documentation</a>
+     */
     public boolean getAutoShow() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +256,13 @@ public class DesignerActionList extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AutoShow.
+     *
+     * @param AutoShow the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerActionList.AutoShow" target="_top">.NET documentation</a>
+     */
     public void setAutoShow(boolean AutoShow) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +273,13 @@ public class DesignerActionList extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Component.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerActionList.Component" target="_top">.NET documentation</a>
+     */
     public IComponent getComponent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

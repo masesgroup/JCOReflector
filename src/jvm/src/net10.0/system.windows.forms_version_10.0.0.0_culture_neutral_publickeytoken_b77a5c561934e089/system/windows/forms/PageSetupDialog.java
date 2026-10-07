@@ -103,7 +103,10 @@ public class PageSetupDialog extends system.windows.forms.CommonDialog  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PageSetupDialog(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class PageSetupDialog extends system.windows.forms.CommonDialog  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PageSetupDialog.-ctor" target="_top">.NET documentation</a>
+     */
     public PageSetupDialog() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +175,20 @@ public class PageSetupDialog extends system.windows.forms.CommonDialog  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Reset.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PageSetupDialog.Reset" target="_top">.NET documentation</a>
+     */
     public void Reset() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +203,13 @@ public class PageSetupDialog extends system.windows.forms.CommonDialog  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowMargins.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PageSetupDialog.AllowMargins" target="_top">.NET documentation</a>
+     */
     public boolean getAllowMargins() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +224,13 @@ public class PageSetupDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowMargins.
+     *
+     * @param AllowMargins the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PageSetupDialog.AllowMargins" target="_top">.NET documentation</a>
+     */
     public void setAllowMargins(boolean AllowMargins) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +241,13 @@ public class PageSetupDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowOrientation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PageSetupDialog.AllowOrientation" target="_top">.NET documentation</a>
+     */
     public boolean getAllowOrientation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +262,13 @@ public class PageSetupDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowOrientation.
+     *
+     * @param AllowOrientation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PageSetupDialog.AllowOrientation" target="_top">.NET documentation</a>
+     */
     public void setAllowOrientation(boolean AllowOrientation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +279,13 @@ public class PageSetupDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowPaper.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PageSetupDialog.AllowPaper" target="_top">.NET documentation</a>
+     */
     public boolean getAllowPaper() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +300,13 @@ public class PageSetupDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowPaper.
+     *
+     * @param AllowPaper the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PageSetupDialog.AllowPaper" target="_top">.NET documentation</a>
+     */
     public void setAllowPaper(boolean AllowPaper) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +317,13 @@ public class PageSetupDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowPrinter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PageSetupDialog.AllowPrinter" target="_top">.NET documentation</a>
+     */
     public boolean getAllowPrinter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +338,13 @@ public class PageSetupDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowPrinter.
+     *
+     * @param AllowPrinter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PageSetupDialog.AllowPrinter" target="_top">.NET documentation</a>
+     */
     public void setAllowPrinter(boolean AllowPrinter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +355,13 @@ public class PageSetupDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EnableMetric.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PageSetupDialog.EnableMetric" target="_top">.NET documentation</a>
+     */
     public boolean getEnableMetric() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +376,13 @@ public class PageSetupDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EnableMetric.
+     *
+     * @param EnableMetric the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PageSetupDialog.EnableMetric" target="_top">.NET documentation</a>
+     */
     public void setEnableMetric(boolean EnableMetric) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +393,13 @@ public class PageSetupDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShowHelp.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PageSetupDialog.ShowHelp" target="_top">.NET documentation</a>
+     */
     public boolean getShowHelp() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -312,6 +414,13 @@ public class PageSetupDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ShowHelp.
+     *
+     * @param ShowHelp the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PageSetupDialog.ShowHelp" target="_top">.NET documentation</a>
+     */
     public void setShowHelp(boolean ShowHelp) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -322,6 +431,13 @@ public class PageSetupDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShowNetwork.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PageSetupDialog.ShowNetwork" target="_top">.NET documentation</a>
+     */
     public boolean getShowNetwork() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -336,6 +452,13 @@ public class PageSetupDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ShowNetwork.
+     *
+     * @param ShowNetwork the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PageSetupDialog.ShowNetwork" target="_top">.NET documentation</a>
+     */
     public void setShowNetwork(boolean ShowNetwork) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -346,6 +469,13 @@ public class PageSetupDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinMargins.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PageSetupDialog.MinMargins" target="_top">.NET documentation</a>
+     */
     public Margins getMinMargins() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -361,6 +491,22 @@ public class PageSetupDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MinMargins.
+     *
+     * @param MinMargins the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PageSetupDialog.MinMargins" target="_top">.NET documentation</a>
+     */
     public void setMinMargins(Margins MinMargins) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -371,6 +517,13 @@ public class PageSetupDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PageSettings.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PageSetupDialog.PageSettings" target="_top">.NET documentation</a>
+     */
     public PageSettings getPageSettings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -386,6 +539,13 @@ public class PageSetupDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PageSettings.
+     *
+     * @param PageSettings the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PageSetupDialog.PageSettings" target="_top">.NET documentation</a>
+     */
     public void setPageSettings(PageSettings PageSettings) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -396,6 +556,13 @@ public class PageSetupDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Document.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PageSetupDialog.Document" target="_top">.NET documentation</a>
+     */
     public PrintDocument getDocument() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -411,6 +578,13 @@ public class PageSetupDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Document.
+     *
+     * @param Document the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PageSetupDialog.Document" target="_top">.NET documentation</a>
+     */
     public void setDocument(PrintDocument Document) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -421,6 +595,13 @@ public class PageSetupDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PrinterSettings.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PageSetupDialog.PrinterSettings" target="_top">.NET documentation</a>
+     */
     public PrinterSettings getPrinterSettings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -436,6 +617,13 @@ public class PageSetupDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PrinterSettings.
+     *
+     * @param PrinterSettings the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PageSetupDialog.PrinterSettings" target="_top">.NET documentation</a>
+     */
     public void setPrinterSettings(PrinterSettings PrinterSettings) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

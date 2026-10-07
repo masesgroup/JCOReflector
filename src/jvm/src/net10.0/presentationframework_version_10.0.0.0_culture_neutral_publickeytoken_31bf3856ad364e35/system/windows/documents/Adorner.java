@@ -101,7 +101,10 @@ public class Adorner extends system.windows.FrameworkElement  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Adorner(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,14 @@ public class Adorner extends system.windows.FrameworkElement  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetDesiredTransform.
+     *
+     * @param transform the argument of type {@code GeneralTransform}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Adorner.GetDesiredTransform" target="_top">.NET documentation</a>
+     */
     public GeneralTransform GetDesiredTransform(GeneralTransform transform) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +184,13 @@ public class Adorner extends system.windows.FrameworkElement  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsClipEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Adorner.IsClipEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getIsClipEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +205,28 @@ public class Adorner extends system.windows.FrameworkElement  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsClipEnabled.
+     *
+     * @param IsClipEnabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Adorner.IsClipEnabled" target="_top">.NET documentation</a>
+     */
     public void setIsClipEnabled(boolean IsClipEnabled) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +237,13 @@ public class Adorner extends system.windows.FrameworkElement  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AdornedElement.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Adorner.AdornedElement" target="_top">.NET documentation</a>
+     */
     public UIElement getAdornedElement() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

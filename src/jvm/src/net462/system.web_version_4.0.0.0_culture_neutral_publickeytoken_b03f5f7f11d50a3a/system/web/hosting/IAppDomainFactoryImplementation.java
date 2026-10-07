@@ -98,7 +98,10 @@ public class IAppDomainFactoryImplementation extends NetObject implements IAppDo
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IAppDomainFactoryImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,19 @@ public class IAppDomainFactoryImplementation extends NetObject implements IAppDo
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param module the argument of type {@code java.lang.String}
+     * @param typeName the argument of type {@code java.lang.String}
+     * @param appId the argument of type {@code java.lang.String}
+     * @param appPath the argument of type {@code java.lang.String}
+     * @param strUrlOfAppOrigin the argument of type {@code java.lang.String}
+     * @param iZone the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.IAppDomainFactory.Create" target="_top">.NET documentation</a>
+     */
     public NetObject Create(java.lang.String module, java.lang.String typeName, java.lang.String appId, java.lang.String appPath, java.lang.String strUrlOfAppOrigin, int iZone) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

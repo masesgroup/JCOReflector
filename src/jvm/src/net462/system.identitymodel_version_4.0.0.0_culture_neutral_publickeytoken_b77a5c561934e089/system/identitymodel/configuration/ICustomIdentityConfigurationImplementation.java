@@ -99,7 +99,10 @@ public class ICustomIdentityConfigurationImplementation extends NetObject implem
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ICustomIdentityConfigurationImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,13 @@ public class ICustomIdentityConfigurationImplementation extends NetObject implem
 
     // Methods section
     
+    /**
+     * Invokes the .NET member LoadCustomConfiguration.
+     *
+     * @param nodeList the argument of type {@code XmlNodeList}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.ICustomIdentityConfiguration.LoadCustomConfiguration" target="_top">.NET documentation</a>
+     */
     public void LoadCustomConfiguration(XmlNodeList nodeList) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

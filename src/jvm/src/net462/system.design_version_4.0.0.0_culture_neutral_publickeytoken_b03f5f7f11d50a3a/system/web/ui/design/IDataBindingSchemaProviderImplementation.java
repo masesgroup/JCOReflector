@@ -100,7 +100,10 @@ public class IDataBindingSchemaProviderImplementation extends NetObject implemen
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDataBindingSchemaProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,13 @@ public class IDataBindingSchemaProviderImplementation extends NetObject implemen
 
     // Methods section
     
+    /**
+     * Invokes the .NET member RefreshSchema.
+     *
+     * @param preferSilent the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IDataBindingSchemaProvider.RefreshSchema" target="_top">.NET documentation</a>
+     */
     public void RefreshSchema(boolean preferSilent) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -156,6 +166,13 @@ public class IDataBindingSchemaProviderImplementation extends NetObject implemen
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CanRefreshSchema.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IDataBindingSchemaProvider.CanRefreshSchema" target="_top">.NET documentation</a>
+     */
     public boolean getCanRefreshSchema() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +187,13 @@ public class IDataBindingSchemaProviderImplementation extends NetObject implemen
         }
     }
 
+    /**
+     * Gets the value of the .NET property Schema.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IDataBindingSchemaProvider.Schema" target="_top">.NET documentation</a>
+     */
     public IDataSourceViewSchema getSchema() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

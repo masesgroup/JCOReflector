@@ -99,7 +99,10 @@ public class WebContext extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WebContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,18 @@ public class WebContext extends NetObject  {
     public WebContext() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param pathLevel the argument of type {@code WebApplicationLevel}
+     * @param site the argument of type {@code java.lang.String}
+     * @param applicationPath the argument of type {@code java.lang.String}
+     * @param path the argument of type {@code java.lang.String}
+     * @param locationSubPath the argument of type {@code java.lang.String}
+     * @param appConfigPath the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.WebContext.-ctor" target="_top">.NET documentation</a>
+     */
     public WebContext(WebApplicationLevel pathLevel, java.lang.String site, java.lang.String applicationPath, java.lang.String path, java.lang.String locationSubPath, java.lang.String appConfigPath) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +183,13 @@ public class WebContext extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ApplicationPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.WebContext.ApplicationPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getApplicationPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +204,13 @@ public class WebContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LocationSubPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.WebContext.LocationSubPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getLocationSubPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +225,13 @@ public class WebContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Path.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.WebContext.Path" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +246,13 @@ public class WebContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Site.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.WebContext.Site" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSite() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +267,13 @@ public class WebContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ApplicationLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.WebContext.ApplicationLevel" target="_top">.NET documentation</a>
+     */
     public WebApplicationLevel getApplicationLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

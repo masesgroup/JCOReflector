@@ -103,7 +103,9 @@ public class PrintingCanceledException extends system.printing.PrintJobException
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public PrintingCanceledException(java.lang.Object instance) {
         super(instance);
@@ -164,6 +166,27 @@ public class PrintingCanceledException extends system.printing.PrintJobException
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param errorCode the argument of type {@code int}
+     * @param message the argument of type {@code java.lang.String}
+     * @param innerException the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PrintingCanceledException.-ctor" target="_top">.NET documentation</a>
+     */
     public PrintingCanceledException(int errorCode, java.lang.String message, NetException innerException) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.RankException, system.InvalidCastException {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +197,30 @@ public class PrintingCanceledException extends system.printing.PrintJobException
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param errorCode the argument of type {@code int}
+     * @param message the argument of type {@code java.lang.String}
+     * @param printQueueName the argument of type {@code java.lang.String}
+     * @param jobName the argument of type {@code java.lang.String}
+     * @param jobId the argument of type {@code int}
+     * @param innerException the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PrintingCanceledException.-ctor" target="_top">.NET documentation</a>
+     */
     public PrintingCanceledException(int errorCode, java.lang.String message, java.lang.String printQueueName, java.lang.String jobName, int jobId, NetException innerException) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.RankException, system.InvalidCastException {
         try {
             // add reference to assemblyName.dll file
@@ -184,6 +231,29 @@ public class PrintingCanceledException extends system.printing.PrintJobException
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param errorCode the argument of type {@code int}
+     * @param message the argument of type {@code java.lang.String}
+     * @param printQueueName the argument of type {@code java.lang.String}
+     * @param jobName the argument of type {@code java.lang.String}
+     * @param jobId the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PrintingCanceledException.-ctor" target="_top">.NET documentation</a>
+     */
     public PrintingCanceledException(int errorCode, java.lang.String message, java.lang.String printQueueName, java.lang.String jobName, int jobId) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.RankException, system.InvalidCastException {
         try {
             // add reference to assemblyName.dll file
@@ -194,6 +264,26 @@ public class PrintingCanceledException extends system.printing.PrintJobException
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param errorCode the argument of type {@code int}
+     * @param message the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PrintingCanceledException.-ctor" target="_top">.NET documentation</a>
+     */
     public PrintingCanceledException(int errorCode, java.lang.String message) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.RankException, system.InvalidCastException {
         try {
             // add reference to assemblyName.dll file

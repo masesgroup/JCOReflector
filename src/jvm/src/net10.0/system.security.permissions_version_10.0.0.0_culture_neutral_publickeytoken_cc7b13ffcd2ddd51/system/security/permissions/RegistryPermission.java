@@ -105,7 +105,10 @@ public class RegistryPermission extends system.security.CodeAccessPermission  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RegistryPermission(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,13 @@ public class RegistryPermission extends system.security.CodeAccessPermission  {
     public RegistryPermission() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param state the argument of type {@code PermissionState}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.RegistryPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public RegistryPermission(PermissionState state) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +175,15 @@ public class RegistryPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param access the argument of type {@code RegistryPermissionAccess}
+     * @param control the argument of type {@code AccessControlActions}
+     * @param pathList the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.RegistryPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public RegistryPermission(RegistryPermissionAccess access, AccessControlActions control, java.lang.String pathList) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +194,14 @@ public class RegistryPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param access the argument of type {@code RegistryPermissionAccess}
+     * @param pathList the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.RegistryPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public RegistryPermission(RegistryPermissionAccess access, java.lang.String pathList) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -190,6 +217,14 @@ public class RegistryPermission extends system.security.CodeAccessPermission  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsSubsetOf.
+     *
+     * @param target the argument of type {@code IPermission}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.RegistryPermission.IsSubsetOf" target="_top">.NET documentation</a>
+     */
     public boolean IsSubsetOf(IPermission target) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +239,13 @@ public class RegistryPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsUnrestricted.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.RegistryPermission.IsUnrestricted" target="_top">.NET documentation</a>
+     */
     public boolean IsUnrestricted() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +260,13 @@ public class RegistryPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member Copy.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.RegistryPermission.Copy" target="_top">.NET documentation</a>
+     */
     public IPermission Copy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +282,14 @@ public class RegistryPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member Intersect.
+     *
+     * @param target the argument of type {@code IPermission}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.RegistryPermission.Intersect" target="_top">.NET documentation</a>
+     */
     public IPermission Intersect(IPermission target) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +305,14 @@ public class RegistryPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member Union.
+     *
+     * @param other the argument of type {@code IPermission}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.RegistryPermission.Union" target="_top">.NET documentation</a>
+     */
     public IPermission Union(IPermission other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +328,13 @@ public class RegistryPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToXml.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.RegistryPermission.ToXml" target="_top">.NET documentation</a>
+     */
     public SecurityElement ToXml() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +350,14 @@ public class RegistryPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPathList.
+     *
+     * @param access the argument of type {@code RegistryPermissionAccess}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.RegistryPermission.GetPathList" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetPathList(RegistryPermissionAccess access) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +372,15 @@ public class RegistryPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddPathList.
+     *
+     * @param access the argument of type {@code RegistryPermissionAccess}
+     * @param actions the argument of type {@code AccessControlActions}
+     * @param pathList the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.RegistryPermission.AddPathList" target="_top">.NET documentation</a>
+     */
     public void AddPathList(RegistryPermissionAccess access, AccessControlActions actions, java.lang.String pathList) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -302,6 +391,14 @@ public class RegistryPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddPathList.
+     *
+     * @param access the argument of type {@code RegistryPermissionAccess}
+     * @param pathList the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.RegistryPermission.AddPathList" target="_top">.NET documentation</a>
+     */
     public void AddPathList(RegistryPermissionAccess access, java.lang.String pathList) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -312,6 +409,13 @@ public class RegistryPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member FromXml.
+     *
+     * @param elem the argument of type {@code SecurityElement}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.RegistryPermission.FromXml" target="_top">.NET documentation</a>
+     */
     public void FromXml(SecurityElement elem) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -322,6 +426,14 @@ public class RegistryPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetPathList.
+     *
+     * @param access the argument of type {@code RegistryPermissionAccess}
+     * @param pathList the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.RegistryPermission.SetPathList" target="_top">.NET documentation</a>
+     */
     public void SetPathList(RegistryPermissionAccess access, java.lang.String pathList) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

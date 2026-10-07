@@ -102,7 +102,10 @@ public class SequenceMarshal extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SequenceMarshal(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,18 @@ public class SequenceMarshal extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member TryGetArray.
+     *
+     * @param <T> the type of the generic argument T
+     * @param sequence the argument of type {@code ReadOnlySequence_1}
+     * @param segment the argument of type {@code JCORefOut<ArraySegment_1>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.SequenceMarshal.TryGetArray" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean TryGetArray(ReadOnlySequence_1 sequence, JCORefOut<ArraySegment_1> segment) throws Throwable, system.NotSupportedException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -169,6 +184,20 @@ public class SequenceMarshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetReadOnlyMemory.
+     *
+     * @param <T> the type of the generic argument T
+     * @param sequence the argument of type {@code ReadOnlySequence_1}
+     * @param memory the argument of type {@code JCORefOut<ReadOnlyMemory_1>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.SequenceMarshal.TryGetReadOnlyMemory" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean TryGetReadOnlyMemory(ReadOnlySequence_1 sequence, JCORefOut<ReadOnlyMemory_1> memory) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -183,6 +212,19 @@ public class SequenceMarshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetReadOnlySequenceSegment.
+     *
+     * @param <T> the type of the generic argument T
+     * @param sequence the argument of type {@code ReadOnlySequence_1}
+     * @param startSegment the argument of type {@code JCORefOut<ReadOnlySequenceSegment_1>}
+     * @param startIndex the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param endSegment the argument of type {@code JCORefOut<ReadOnlySequenceSegment_1>}
+     * @param endIndex the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.SequenceMarshal.TryGetReadOnlySequenceSegment" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean TryGetReadOnlySequenceSegment(ReadOnlySequence_1 sequence, JCORefOut<ReadOnlySequenceSegment_1> startSegment, JCORefOut<java.util.concurrent.atomic.AtomicInteger> startIndex, JCORefOut<ReadOnlySequenceSegment_1> endSegment, JCORefOut<java.util.concurrent.atomic.AtomicInteger> endIndex) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

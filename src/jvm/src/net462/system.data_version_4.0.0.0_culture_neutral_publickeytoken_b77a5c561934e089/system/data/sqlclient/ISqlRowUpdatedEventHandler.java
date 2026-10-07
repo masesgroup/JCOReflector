@@ -52,5 +52,11 @@ import system.data.sqlclient.SqlRowUpdatedEventArgs;
  * @version 2.0.0.0
  */
 public interface ISqlRowUpdatedEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.Data.SqlClient.SqlRowUpdatedEventArgs}
+     */
     public void Invoke(NetObject sender, SqlRowUpdatedEventArgs e);
 }

@@ -100,7 +100,10 @@ public class IResourceReaderImplementation extends IEnumerableImplementation imp
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IResourceReaderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,12 @@ public class IResourceReaderImplementation extends IEnumerableImplementation imp
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Close.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Resources.IResourceReader.Close" target="_top">.NET documentation</a>
+     */
     public void Close() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -152,6 +161,12 @@ public class IResourceReaderImplementation extends IEnumerableImplementation imp
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Resources.IResourceReader.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

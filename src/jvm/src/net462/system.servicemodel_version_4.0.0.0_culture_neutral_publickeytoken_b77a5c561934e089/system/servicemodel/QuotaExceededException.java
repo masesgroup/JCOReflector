@@ -103,7 +103,9 @@ public class QuotaExceededException extends system.SystemException {
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public QuotaExceededException(java.lang.Object instance) {
         super(instance);

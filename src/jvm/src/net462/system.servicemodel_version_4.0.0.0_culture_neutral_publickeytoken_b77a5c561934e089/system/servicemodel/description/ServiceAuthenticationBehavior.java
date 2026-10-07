@@ -104,7 +104,10 @@ public class ServiceAuthenticationBehavior extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ServiceAuthenticationBehavior(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,23 @@ public class ServiceAuthenticationBehavior extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceAuthenticationBehavior.-ctor" target="_top">.NET documentation</a>
+     */
     public ServiceAuthenticationBehavior() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +185,13 @@ public class ServiceAuthenticationBehavior extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ShouldSerializeAuthenticationSchemes.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceAuthenticationBehavior.ShouldSerializeAuthenticationSchemes" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeAuthenticationSchemes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +206,13 @@ public class ServiceAuthenticationBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ShouldSerializeServiceAuthenticationManager.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceAuthenticationBehavior.ShouldSerializeServiceAuthenticationManager" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeServiceAuthenticationManager() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,8 +230,15 @@ public class ServiceAuthenticationBehavior extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIServiceBehavior method available in IServiceBehavior to obtain an object with an invocable method
+     *
+     * @param serviceDescription the argument of type {@code ServiceDescription}
+     * @param serviceHostBase the argument of type {@code ServiceHostBase}
+     * @param endpoints the argument of type {@code Collection_1}
+     * @param bindingParameters the argument of type {@code BindingParameterCollection}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IServiceBehavior.AddBindingParameters" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void AddBindingParameters(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase, Collection_1 endpoints, BindingParameterCollection bindingParameters) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
     }
@@ -205,8 +246,13 @@ public class ServiceAuthenticationBehavior extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIServiceBehavior method available in IServiceBehavior to obtain an object with an invocable method
+     *
+     * @param serviceDescription the argument of type {@code ServiceDescription}
+     * @param serviceHostBase the argument of type {@code ServiceHostBase}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ApplyDispatchBehavior(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
     }
@@ -214,8 +260,13 @@ public class ServiceAuthenticationBehavior extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIServiceBehavior method available in IServiceBehavior to obtain an object with an invocable method
+     *
+     * @param serviceDescription the argument of type {@code ServiceDescription}
+     * @param serviceHostBase the argument of type {@code ServiceHostBase}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IServiceBehavior.Validate" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Validate(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
     }
@@ -224,6 +275,13 @@ public class ServiceAuthenticationBehavior extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AuthenticationSchemes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceAuthenticationBehavior.AuthenticationSchemes" target="_top">.NET documentation</a>
+     */
     public AuthenticationSchemes getAuthenticationSchemes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +297,29 @@ public class ServiceAuthenticationBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AuthenticationSchemes.
+     *
+     * @param AuthenticationSchemes the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceAuthenticationBehavior.AuthenticationSchemes" target="_top">.NET documentation</a>
+     */
     public void setAuthenticationSchemes(AuthenticationSchemes AuthenticationSchemes) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +330,13 @@ public class ServiceAuthenticationBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ServiceAuthenticationManager.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceAuthenticationBehavior.ServiceAuthenticationManager" target="_top">.NET documentation</a>
+     */
     public ServiceAuthenticationManager getServiceAuthenticationManager() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +352,29 @@ public class ServiceAuthenticationBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ServiceAuthenticationManager.
+     *
+     * @param ServiceAuthenticationManager the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceAuthenticationBehavior.ServiceAuthenticationManager" target="_top">.NET documentation</a>
+     */
     public void setServiceAuthenticationManager(ServiceAuthenticationManager ServiceAuthenticationManager) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

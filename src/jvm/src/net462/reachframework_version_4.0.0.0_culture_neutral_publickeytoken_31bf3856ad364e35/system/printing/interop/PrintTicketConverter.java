@@ -101,7 +101,10 @@ public class PrintTicketConverter extends NetObject implements AutoCloseable {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PrintTicketConverter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,29 @@ public class PrintTicketConverter extends NetObject implements AutoCloseable {
     public PrintTicketConverter() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param deviceName the argument of type {@code java.lang.String}
+     * @param clientPrintSchemaVersion the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.printing.PrintingNotSupportedException if the .NET member raises it
+     * @throws system.printing.PrintQueueException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.Interop.PrintTicketConverter.-ctor" target="_top">.NET documentation</a>
+     */
     public PrintTicketConverter(java.lang.String deviceName, int clientPrintSchemaVersion) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidCastException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.AccessViolationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.security.SecurityException {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +192,22 @@ public class PrintTicketConverter extends NetObject implements AutoCloseable {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ConvertPrintTicketToDevMode.
+     *
+     * @param printTicket the argument of type {@code PrintTicket}
+     * @param baseType the argument of type {@code BaseDevModeType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.Interop.PrintTicketConverter.ConvertPrintTicketToDevMode" target="_top">.NET documentation</a>
+     */
     public byte[] ConvertPrintTicketToDevMode(PrintTicket printTicket, BaseDevModeType baseType) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +231,23 @@ public class PrintTicketConverter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertPrintTicketToDevMode.
+     *
+     * @param printTicket the argument of type {@code PrintTicket}
+     * @param baseType the argument of type {@code BaseDevModeType}
+     * @param scope the argument of type {@code PrintTicketScope}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.Interop.PrintTicketConverter.ConvertPrintTicketToDevMode" target="_top">.NET documentation</a>
+     */
     public byte[] ConvertPrintTicketToDevMode(PrintTicket printTicket, BaseDevModeType baseType, PrintTicketScope scope) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +271,26 @@ public class PrintTicketConverter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertDevModeToPrintTicket.
+     *
+     * @param devMode the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.Interop.PrintTicketConverter.ConvertDevModeToPrintTicket" target="_top">.NET documentation</a>
+     */
     public PrintTicket ConvertDevModeToPrintTicket(byte[] devMode) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.ArgumentException, system.IndexOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +306,26 @@ public class PrintTicketConverter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertDevModeToPrintTicket.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.Interop.PrintTicketConverter.ConvertDevModeToPrintTicket" target="_top">.NET documentation</a>
+     */
     public PrintTicket ConvertDevModeToPrintTicket(JCORefOut dupParam0) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.ArgumentException, system.IndexOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +341,26 @@ public class PrintTicketConverter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertDevModeToPrintTicket.
+     *
+     * @param devMode the argument of type {@code byte[]}
+     * @param scope the argument of type {@code PrintTicketScope}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.Interop.PrintTicketConverter.ConvertDevModeToPrintTicket" target="_top">.NET documentation</a>
+     */
     public PrintTicket ConvertDevModeToPrintTicket(byte[] devMode, PrintTicketScope scope) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.ArgumentException, system.NullReferenceException, system.FormatException, system.OverflowException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +376,26 @@ public class PrintTicketConverter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertDevModeToPrintTicket.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code PrintTicketScope}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.Interop.PrintTicketConverter.ConvertDevModeToPrintTicket" target="_top">.NET documentation</a>
+     */
     public PrintTicket ConvertDevModeToPrintTicket(JCORefOut dupParam0, PrintTicketScope dupParam1) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.ArgumentException, system.NullReferenceException, system.FormatException, system.OverflowException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +411,12 @@ public class PrintTicketConverter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.Interop.PrintTicketConverter.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -299,6 +444,13 @@ public class PrintTicketConverter extends NetObject implements AutoCloseable {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MaxPrintSchemaVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.Interop.PrintTicketConverter.MaxPrintSchemaVersion" target="_top">.NET documentation</a>
+     */
     public static int getMaxPrintSchemaVersion() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

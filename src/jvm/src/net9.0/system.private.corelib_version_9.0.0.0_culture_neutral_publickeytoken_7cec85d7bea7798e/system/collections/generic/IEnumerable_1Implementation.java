@@ -98,7 +98,10 @@ public class IEnumerable_1Implementation<T extends IJCOBridgeReflected> extends 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IEnumerable_1Implementation(java.lang.Object instance) throws Throwable {
         super(instance);

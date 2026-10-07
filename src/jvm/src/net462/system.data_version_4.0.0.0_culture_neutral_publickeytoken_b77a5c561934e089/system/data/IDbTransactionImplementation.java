@@ -103,7 +103,10 @@ public class IDbTransactionImplementation extends NetObject implements IDbTransa
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDbTransactionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class IDbTransactionImplementation extends NetObject implements IDbTransa
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Commit.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbTransaction.Commit" target="_top">.NET documentation</a>
+     */
     public void Commit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -155,6 +164,12 @@ public class IDbTransactionImplementation extends NetObject implements IDbTransa
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbTransaction.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -165,6 +180,12 @@ public class IDbTransactionImplementation extends NetObject implements IDbTransa
         }
     }
 
+    /**
+     * Invokes the .NET member Rollback.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbTransaction.Rollback" target="_top">.NET documentation</a>
+     */
     public void Rollback() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +200,13 @@ public class IDbTransactionImplementation extends NetObject implements IDbTransa
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Connection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbTransaction.Connection" target="_top">.NET documentation</a>
+     */
     public IDbConnection getConnection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +222,13 @@ public class IDbTransactionImplementation extends NetObject implements IDbTransa
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsolationLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbTransaction.IsolationLevel" target="_top">.NET documentation</a>
+     */
     public IsolationLevel getIsolationLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

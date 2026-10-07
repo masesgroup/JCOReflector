@@ -98,7 +98,10 @@ public class CodeGeneratorOptions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodeGeneratorOptions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class CodeGeneratorOptions extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CodeGeneratorOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeGeneratorOptions() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,18 @@ public class CodeGeneratorOptions extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BlankLinesBetweenMembers.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CodeGeneratorOptions.BlankLinesBetweenMembers" target="_top">.NET documentation</a>
+     */
     public boolean getBlankLinesBetweenMembers() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +198,18 @@ public class CodeGeneratorOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BlankLinesBetweenMembers.
+     *
+     * @param BlankLinesBetweenMembers the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CodeGeneratorOptions.BlankLinesBetweenMembers" target="_top">.NET documentation</a>
+     */
     public void setBlankLinesBetweenMembers(boolean BlankLinesBetweenMembers) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +220,18 @@ public class CodeGeneratorOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ElseOnClosing.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CodeGeneratorOptions.ElseOnClosing" target="_top">.NET documentation</a>
+     */
     public boolean getElseOnClosing() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +246,18 @@ public class CodeGeneratorOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ElseOnClosing.
+     *
+     * @param ElseOnClosing the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CodeGeneratorOptions.ElseOnClosing" target="_top">.NET documentation</a>
+     */
     public void setElseOnClosing(boolean ElseOnClosing) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +268,18 @@ public class CodeGeneratorOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VerbatimOrder.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CodeGeneratorOptions.VerbatimOrder" target="_top">.NET documentation</a>
+     */
     public boolean getVerbatimOrder() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +294,18 @@ public class CodeGeneratorOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property VerbatimOrder.
+     *
+     * @param VerbatimOrder the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CodeGeneratorOptions.VerbatimOrder" target="_top">.NET documentation</a>
+     */
     public void setVerbatimOrder(boolean VerbatimOrder) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +316,18 @@ public class CodeGeneratorOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BracingStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CodeGeneratorOptions.BracingStyle" target="_top">.NET documentation</a>
+     */
     public java.lang.String getBracingStyle() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +342,18 @@ public class CodeGeneratorOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BracingStyle.
+     *
+     * @param BracingStyle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CodeGeneratorOptions.BracingStyle" target="_top">.NET documentation</a>
+     */
     public void setBracingStyle(java.lang.String BracingStyle) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +364,18 @@ public class CodeGeneratorOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IndentString.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CodeGeneratorOptions.IndentString" target="_top">.NET documentation</a>
+     */
     public java.lang.String getIndentString() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +390,18 @@ public class CodeGeneratorOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IndentString.
+     *
+     * @param IndentString the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CodeGeneratorOptions.IndentString" target="_top">.NET documentation</a>
+     */
     public void setIndentString(java.lang.String IndentString) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

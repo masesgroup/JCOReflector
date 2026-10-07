@@ -105,7 +105,10 @@ public class ComponentGlyph extends system.windows.forms.design.behavior.Glyph  
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ComponentGlyph(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,14 @@ public class ComponentGlyph extends system.windows.forms.design.behavior.Glyph  
     public ComponentGlyph() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param relatedComponent the argument of type {@code IComponent}
+     * @param behavior the argument of type {@code Behavior}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.ComponentGlyph.-ctor" target="_top">.NET documentation</a>
+     */
     public ComponentGlyph(IComponent relatedComponent, Behavior behavior) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +176,13 @@ public class ComponentGlyph extends system.windows.forms.design.behavior.Glyph  
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param relatedComponent the argument of type {@code IComponent}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.ComponentGlyph.-ctor" target="_top">.NET documentation</a>
+     */
     public ComponentGlyph(IComponent relatedComponent) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +198,14 @@ public class ComponentGlyph extends system.windows.forms.design.behavior.Glyph  
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetHitTest.
+     *
+     * @param p the argument of type {@code Point}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.ComponentGlyph.GetHitTest" target="_top">.NET documentation</a>
+     */
     public Cursor GetHitTest(Point p) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +221,13 @@ public class ComponentGlyph extends system.windows.forms.design.behavior.Glyph  
         }
     }
 
+    /**
+     * Invokes the .NET member Paint.
+     *
+     * @param pe the argument of type {@code PaintEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.ComponentGlyph.Paint" target="_top">.NET documentation</a>
+     */
     public void Paint(PaintEventArgs pe) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +242,13 @@ public class ComponentGlyph extends system.windows.forms.design.behavior.Glyph  
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RelatedComponent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.ComponentGlyph.RelatedComponent" target="_top">.NET documentation</a>
+     */
     public IComponent getRelatedComponent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class DataBindingHandlerAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataBindingHandlerAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class DataBindingHandlerAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataBindingHandlerAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DataBindingHandlerAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,13 @@ public class DataBindingHandlerAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param typeName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataBindingHandlerAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DataBindingHandlerAttribute(java.lang.String typeName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +182,13 @@ public class DataBindingHandlerAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param type the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataBindingHandlerAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DataBindingHandlerAttribute(NetType type) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -184,6 +207,13 @@ public class DataBindingHandlerAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HandlerTypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataBindingHandlerAttribute.HandlerTypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getHandlerTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

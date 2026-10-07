@@ -103,7 +103,10 @@ public class IContractBehaviorImplementation extends NetObject implements IContr
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IContractBehaviorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,15 @@ public class IContractBehaviorImplementation extends NetObject implements IContr
 
     // Methods section
     
+    /**
+     * Invokes the .NET member AddBindingParameters.
+     *
+     * @param contractDescription the argument of type {@code ContractDescription}
+     * @param endpoint the argument of type {@code ServiceEndpoint}
+     * @param bindingParameters the argument of type {@code BindingParameterCollection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IContractBehavior.AddBindingParameters" target="_top">.NET documentation</a>
+     */
     public void AddBindingParameters(ContractDescription contractDescription, ServiceEndpoint endpoint, BindingParameterCollection bindingParameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -155,6 +167,15 @@ public class IContractBehaviorImplementation extends NetObject implements IContr
         }
     }
 
+    /**
+     * Invokes the .NET member ApplyClientBehavior.
+     *
+     * @param contractDescription the argument of type {@code ContractDescription}
+     * @param endpoint the argument of type {@code ServiceEndpoint}
+     * @param clientRuntime the argument of type {@code ClientRuntime}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IContractBehavior.ApplyClientBehavior" target="_top">.NET documentation</a>
+     */
     public void ApplyClientBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, ClientRuntime clientRuntime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -165,6 +186,15 @@ public class IContractBehaviorImplementation extends NetObject implements IContr
         }
     }
 
+    /**
+     * Invokes the .NET member ApplyDispatchBehavior.
+     *
+     * @param contractDescription the argument of type {@code ContractDescription}
+     * @param endpoint the argument of type {@code ServiceEndpoint}
+     * @param dispatchRuntime the argument of type {@code DispatchRuntime}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior" target="_top">.NET documentation</a>
+     */
     public void ApplyDispatchBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, DispatchRuntime dispatchRuntime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +205,14 @@ public class IContractBehaviorImplementation extends NetObject implements IContr
         }
     }
 
+    /**
+     * Invokes the .NET member Validate.
+     *
+     * @param contractDescription the argument of type {@code ContractDescription}
+     * @param endpoint the argument of type {@code ServiceEndpoint}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IContractBehavior.Validate" target="_top">.NET documentation</a>
+     */
     public void Validate(ContractDescription contractDescription, ServiceEndpoint endpoint) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

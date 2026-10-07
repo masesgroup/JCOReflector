@@ -100,7 +100,10 @@ public class DataGridRowClipboardEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataGridRowClipboardEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,16 @@ public class DataGridRowClipboardEventArgs extends system.EventArgs  {
     public DataGridRowClipboardEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param item the argument of type {@code NetObject}
+     * @param startColumnDisplayIndex the argument of type {@code int}
+     * @param endColumnDisplayIndex the argument of type {@code int}
+     * @param isColumnHeadersRow the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridRowClipboardEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public DataGridRowClipboardEventArgs(NetObject item, int startColumnDisplayIndex, int endColumnDisplayIndex, boolean isColumnHeadersRow) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +178,25 @@ public class DataGridRowClipboardEventArgs extends system.EventArgs  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member FormatClipboardCellValues.
+     *
+     * @param format the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridRowClipboardEventArgs.FormatClipboardCellValues" target="_top">.NET documentation</a>
+     */
     public java.lang.String FormatClipboardCellValues(java.lang.String format) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +215,13 @@ public class DataGridRowClipboardEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsColumnHeadersRow.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridRowClipboardEventArgs.IsColumnHeadersRow" target="_top">.NET documentation</a>
+     */
     public boolean getIsColumnHeadersRow() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +236,13 @@ public class DataGridRowClipboardEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EndColumnDisplayIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridRowClipboardEventArgs.EndColumnDisplayIndex" target="_top">.NET documentation</a>
+     */
     public int getEndColumnDisplayIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +283,13 @@ public class DataGridRowClipboardEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StartColumnDisplayIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridRowClipboardEventArgs.StartColumnDisplayIndex" target="_top">.NET documentation</a>
+     */
     public int getStartColumnDisplayIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +330,13 @@ public class DataGridRowClipboardEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClipboardRowContent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridRowClipboardEventArgs.ClipboardRowContent" target="_top">.NET documentation</a>
+     */
     public List_1 getClipboardRowContent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +352,13 @@ public class DataGridRowClipboardEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Item.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridRowClipboardEventArgs.Item" target="_top">.NET documentation</a>
+     */
     public NetObject getItem() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

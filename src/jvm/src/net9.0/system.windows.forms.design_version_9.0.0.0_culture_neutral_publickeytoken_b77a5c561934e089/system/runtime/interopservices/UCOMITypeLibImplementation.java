@@ -99,7 +99,10 @@ public class UCOMITypeLibImplementation extends NetObject implements UCOMITypeLi
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UCOMITypeLibImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,15 @@ public class UCOMITypeLibImplementation extends NetObject implements UCOMITypeLi
 
     // Methods section
     
+    /**
+     * Invokes the .NET member IsName.
+     *
+     * @param szNameBuf the argument of type {@code java.lang.String}
+     * @param lHashVal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMITypeLib.IsName" target="_top">.NET documentation</a>
+     */
     public boolean IsName(java.lang.String szNameBuf, int lHashVal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -155,6 +167,13 @@ public class UCOMITypeLibImplementation extends NetObject implements UCOMITypeLi
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeInfoCount.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMITypeLib.GetTypeInfoCount" target="_top">.NET documentation</a>
+     */
     public int GetTypeInfoCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +214,17 @@ public class UCOMITypeLibImplementation extends NetObject implements UCOMITypeLi
         }
     }
 
+    /**
+     * Invokes the .NET member GetDocumentation.
+     *
+     * @param index the argument of type {@code int}
+     * @param strName the argument of type {@code JCORefOut}
+     * @param strDocString the argument of type {@code JCORefOut}
+     * @param dwHelpContext the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param strHelpFile the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMITypeLib.GetDocumentation" target="_top">.NET documentation</a>
+     */
     public void GetDocumentation(int index, JCORefOut strName, JCORefOut strDocString, JCORefOut<java.util.concurrent.atomic.AtomicInteger> dwHelpContext, JCORefOut strHelpFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +235,14 @@ public class UCOMITypeLibImplementation extends NetObject implements UCOMITypeLi
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeInfoType.
+     *
+     * @param index the argument of type {@code int}
+     * @param pTKind the argument of type {@code JCORefOut<TYPEKIND>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMITypeLib.GetTypeInfoType" target="_top">.NET documentation</a>
+     */
     public void GetTypeInfoType(int index, JCORefOut<TYPEKIND> pTKind) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

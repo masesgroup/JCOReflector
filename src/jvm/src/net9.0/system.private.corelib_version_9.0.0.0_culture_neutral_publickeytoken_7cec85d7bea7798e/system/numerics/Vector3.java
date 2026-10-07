@@ -108,7 +108,10 @@ public class Vector3 extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Vector3(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,18 @@ public class Vector3 extends system.ValueType  {
     public Vector3() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param x the argument of type {@code Single}
+     * @param y the argument of type {@code Single}
+     * @param z the argument of type {@code Single}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.-ctor" target="_top">.NET documentation</a>
+     */
     public Vector3(Single x, Single y, Single z) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +183,15 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code Single}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.-ctor" target="_top">.NET documentation</a>
+     */
     public Vector3(Single value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +202,19 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code Vector2}
+     * @param z the argument of type {@code Single}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.-ctor" target="_top">.NET documentation</a>
+     */
     public Vector3(Vector2 value, Single z) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -193,6 +230,18 @@ public class Vector3 extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(Vector3 other) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +256,19 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Distance.
+     *
+     * @param value1 the argument of type {@code Vector3}
+     * @param value2 the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Distance" target="_top">.NET documentation</a>
+     */
     public static Single Distance(Vector3 value1, Vector3 value2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -222,6 +284,20 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member DistanceSquared.
+     *
+     * @param value1 the argument of type {@code Vector3}
+     * @param value2 the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.DistanceSquared" target="_top">.NET documentation</a>
+     */
     public static Single DistanceSquared(Vector3 value1, Vector3 value2) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -237,6 +313,19 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Dot.
+     *
+     * @param vector1 the argument of type {@code Vector3}
+     * @param vector2 the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Dot" target="_top">.NET documentation</a>
+     */
     public static Single Dot(Vector3 vector1, Vector3 vector2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -252,6 +341,16 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Length.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Length" target="_top">.NET documentation</a>
+     */
     public Single Length() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +366,16 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member LengthSquared.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.LengthSquared" target="_top">.NET documentation</a>
+     */
     public Single LengthSquared() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +391,22 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Abs.
+     *
+     * @param value the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Abs" target="_top">.NET documentation</a>
+     */
     public static Vector3 Abs(Vector3 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -297,6 +422,20 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param left the argument of type {@code Vector3}
+     * @param right the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Add" target="_top">.NET documentation</a>
+     */
     public static Vector3 Add(Vector3 left, Vector3 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -312,6 +451,24 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Clamp.
+     *
+     * @param value1 the argument of type {@code Vector3}
+     * @param min the argument of type {@code Vector3}
+     * @param max the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Clamp" target="_top">.NET documentation</a>
+     */
     public static Vector3 Clamp(Vector3 value1, Vector3 min, Vector3 max) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -327,6 +484,24 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ClampNative.
+     *
+     * @param value1 the argument of type {@code Vector3}
+     * @param min the argument of type {@code Vector3}
+     * @param max the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.ClampNative" target="_top">.NET documentation</a>
+     */
     public static Vector3 ClampNative(Vector3 value1, Vector3 min, Vector3 max) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -342,6 +517,24 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CopySign.
+     *
+     * @param value the argument of type {@code Vector3}
+     * @param sign the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.CopySign" target="_top">.NET documentation</a>
+     */
     public static Vector3 CopySign(Vector3 value, Vector3 sign) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -357,6 +550,18 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Cos.
+     *
+     * @param vector the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Cos" target="_top">.NET documentation</a>
+     */
     public static Vector3 Cos(Vector3 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -372,6 +577,21 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param x the argument of type {@code Single}
+     * @param y the argument of type {@code Single}
+     * @param z the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Create" target="_top">.NET documentation</a>
+     */
     public static Vector3 Create(Single x, Single y, Single z) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -387,6 +607,17 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param value the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Create" target="_top">.NET documentation</a>
+     */
     public static Vector3 Create(Single value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -402,6 +633,23 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param vector the argument of type {@code Vector2}
+     * @param z the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Create" target="_top">.NET documentation</a>
+     */
     public static Vector3 Create(Vector2 vector, Single z) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -417,6 +665,19 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Cross.
+     *
+     * @param vector1 the argument of type {@code Vector3}
+     * @param vector2 the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Cross" target="_top">.NET documentation</a>
+     */
     public static Vector3 Cross(Vector3 vector1, Vector3 vector2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -432,6 +693,22 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member DegreesToRadians.
+     *
+     * @param degrees the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.DegreesToRadians" target="_top">.NET documentation</a>
+     */
     public static Vector3 DegreesToRadians(Vector3 degrees) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -447,6 +724,20 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Divide.
+     *
+     * @param left the argument of type {@code Vector3}
+     * @param divisor the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Divide" target="_top">.NET documentation</a>
+     */
     public static Vector3 Divide(Vector3 left, Single divisor) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -462,6 +753,20 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Divide.
+     *
+     * @param left the argument of type {@code Vector3}
+     * @param right the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Divide" target="_top">.NET documentation</a>
+     */
     public static Vector3 Divide(Vector3 left, Vector3 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -477,6 +782,18 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Exp.
+     *
+     * @param vector the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Exp" target="_top">.NET documentation</a>
+     */
     public static Vector3 Exp(Vector3 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -492,6 +809,24 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member FusedMultiplyAdd.
+     *
+     * @param left the argument of type {@code Vector3}
+     * @param right the argument of type {@code Vector3}
+     * @param addend the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.FusedMultiplyAdd" target="_top">.NET documentation</a>
+     */
     public static Vector3 FusedMultiplyAdd(Vector3 left, Vector3 right, Vector3 addend) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -507,6 +842,23 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Hypot.
+     *
+     * @param x the argument of type {@code Vector3}
+     * @param y the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Hypot" target="_top">.NET documentation</a>
+     */
     public static Vector3 Hypot(Vector3 x, Vector3 y) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -522,6 +874,18 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Lerp.
+     *
+     * @param value1 the argument of type {@code Vector3}
+     * @param value2 the argument of type {@code Vector3}
+     * @param amount the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Lerp" target="_top">.NET documentation</a>
+     */
     public static Vector3 Lerp(Vector3 value1, Vector3 value2, Single amount) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -537,6 +901,24 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Lerp.
+     *
+     * @param value1 the argument of type {@code Vector3}
+     * @param value2 the argument of type {@code Vector3}
+     * @param amount the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Lerp" target="_top">.NET documentation</a>
+     */
     public static Vector3 Lerp(Vector3 value1, Vector3 value2, Vector3 amount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -552,6 +934,19 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Log.
+     *
+     * @param vector the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Log" target="_top">.NET documentation</a>
+     */
     public static Vector3 Log(Vector3 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -567,6 +962,19 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Log2.
+     *
+     * @param vector the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Log2" target="_top">.NET documentation</a>
+     */
     public static Vector3 Log2(Vector3 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -582,6 +990,23 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Max.
+     *
+     * @param value1 the argument of type {@code Vector3}
+     * @param value2 the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Max" target="_top">.NET documentation</a>
+     */
     public static Vector3 Max(Vector3 value1, Vector3 value2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -597,6 +1022,23 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member MaxMagnitude.
+     *
+     * @param value1 the argument of type {@code Vector3}
+     * @param value2 the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.MaxMagnitude" target="_top">.NET documentation</a>
+     */
     public static Vector3 MaxMagnitude(Vector3 value1, Vector3 value2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -612,6 +1054,23 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member MaxMagnitudeNumber.
+     *
+     * @param value1 the argument of type {@code Vector3}
+     * @param value2 the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.MaxMagnitudeNumber" target="_top">.NET documentation</a>
+     */
     public static Vector3 MaxMagnitudeNumber(Vector3 value1, Vector3 value2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -627,6 +1086,23 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member MaxNative.
+     *
+     * @param value1 the argument of type {@code Vector3}
+     * @param value2 the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.MaxNative" target="_top">.NET documentation</a>
+     */
     public static Vector3 MaxNative(Vector3 value1, Vector3 value2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -642,6 +1118,23 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member MaxNumber.
+     *
+     * @param value1 the argument of type {@code Vector3}
+     * @param value2 the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.MaxNumber" target="_top">.NET documentation</a>
+     */
     public static Vector3 MaxNumber(Vector3 value1, Vector3 value2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -657,6 +1150,23 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Min.
+     *
+     * @param value1 the argument of type {@code Vector3}
+     * @param value2 the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Min" target="_top">.NET documentation</a>
+     */
     public static Vector3 Min(Vector3 value1, Vector3 value2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -672,6 +1182,23 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member MinMagnitude.
+     *
+     * @param value1 the argument of type {@code Vector3}
+     * @param value2 the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.MinMagnitude" target="_top">.NET documentation</a>
+     */
     public static Vector3 MinMagnitude(Vector3 value1, Vector3 value2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -687,6 +1214,23 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member MinMagnitudeNumber.
+     *
+     * @param value1 the argument of type {@code Vector3}
+     * @param value2 the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.MinMagnitudeNumber" target="_top">.NET documentation</a>
+     */
     public static Vector3 MinMagnitudeNumber(Vector3 value1, Vector3 value2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -702,6 +1246,23 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member MinNative.
+     *
+     * @param value1 the argument of type {@code Vector3}
+     * @param value2 the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.MinNative" target="_top">.NET documentation</a>
+     */
     public static Vector3 MinNative(Vector3 value1, Vector3 value2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -717,6 +1278,23 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member MinNumber.
+     *
+     * @param value1 the argument of type {@code Vector3}
+     * @param value2 the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.MinNumber" target="_top">.NET documentation</a>
+     */
     public static Vector3 MinNumber(Vector3 value1, Vector3 value2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -732,6 +1310,18 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Multiply.
+     *
+     * @param left the argument of type {@code Single}
+     * @param right the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Multiply" target="_top">.NET documentation</a>
+     */
     public static Vector3 Multiply(Single left, Vector3 right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -747,6 +1337,20 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Multiply.
+     *
+     * @param left the argument of type {@code Vector3}
+     * @param right the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Multiply" target="_top">.NET documentation</a>
+     */
     public static Vector3 Multiply(Vector3 left, Single right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -762,6 +1366,20 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Multiply.
+     *
+     * @param left the argument of type {@code Vector3}
+     * @param right the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Multiply" target="_top">.NET documentation</a>
+     */
     public static Vector3 Multiply(Vector3 left, Vector3 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -777,6 +1395,24 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member MultiplyAddEstimate.
+     *
+     * @param left the argument of type {@code Vector3}
+     * @param right the argument of type {@code Vector3}
+     * @param addend the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.MultiplyAddEstimate" target="_top">.NET documentation</a>
+     */
     public static Vector3 MultiplyAddEstimate(Vector3 left, Vector3 right, Vector3 addend) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -792,6 +1428,19 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Negate.
+     *
+     * @param value the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Negate" target="_top">.NET documentation</a>
+     */
     public static Vector3 Negate(Vector3 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -807,6 +1456,17 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Normalize.
+     *
+     * @param value the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Normalize" target="_top">.NET documentation</a>
+     */
     public static Vector3 Normalize(Vector3 value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -822,6 +1482,22 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member RadiansToDegrees.
+     *
+     * @param radians the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.RadiansToDegrees" target="_top">.NET documentation</a>
+     */
     public static Vector3 RadiansToDegrees(Vector3 radians) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -837,6 +1513,18 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Reflect.
+     *
+     * @param vector the argument of type {@code Vector3}
+     * @param normal the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Reflect" target="_top">.NET documentation</a>
+     */
     public static Vector3 Reflect(Vector3 vector, Vector3 normal) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -852,6 +1540,25 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Round.
+     *
+     * @param vector the argument of type {@code Vector3}
+     * @param mode the argument of type {@code MidpointRounding}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Round" target="_top">.NET documentation</a>
+     */
     public static Vector3 Round(Vector3 vector, MidpointRounding mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -867,6 +1574,22 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Round.
+     *
+     * @param vector the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Round" target="_top">.NET documentation</a>
+     */
     public static Vector3 Round(Vector3 vector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -882,6 +1605,18 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Sin.
+     *
+     * @param vector the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Sin" target="_top">.NET documentation</a>
+     */
     public static Vector3 Sin(Vector3 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -897,6 +1632,22 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member SquareRoot.
+     *
+     * @param value the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.SquareRoot" target="_top">.NET documentation</a>
+     */
     public static Vector3 SquareRoot(Vector3 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -912,6 +1663,20 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Subtract.
+     *
+     * @param left the argument of type {@code Vector3}
+     * @param right the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Subtract" target="_top">.NET documentation</a>
+     */
     public static Vector3 Subtract(Vector3 left, Vector3 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -927,6 +1692,23 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Transform.
+     *
+     * @param position the argument of type {@code Vector3}
+     * @param matrix the argument of type {@code Matrix4x4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Transform" target="_top">.NET documentation</a>
+     */
     public static Vector3 Transform(Vector3 position, Matrix4x4 matrix) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -942,6 +1724,19 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Transform.
+     *
+     * @param value the argument of type {@code Vector3}
+     * @param rotation the argument of type {@code Quaternion}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Transform" target="_top">.NET documentation</a>
+     */
     public static Vector3 Transform(Vector3 value, Quaternion rotation) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -957,6 +1752,23 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member TransformNormal.
+     *
+     * @param normal the argument of type {@code Vector3}
+     * @param matrix the argument of type {@code Matrix4x4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.TransformNormal" target="_top">.NET documentation</a>
+     */
     public static Vector3 TransformNormal(Vector3 normal, Matrix4x4 matrix) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -972,6 +1784,22 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Truncate.
+     *
+     * @param vector the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Truncate" target="_top">.NET documentation</a>
+     */
     public static Vector3 Truncate(Vector3 vector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -987,6 +1815,25 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToString.
+     *
+     * @param format the argument of type {@code java.lang.String}
+     * @param formatProvider the argument of type {@code IFormatProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.ToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String ToString(java.lang.String format, IFormatProvider formatProvider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1001,6 +1848,24 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToString.
+     *
+     * @param format the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.ToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String ToString(java.lang.String format) throws Throwable, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArrayTypeMismatchException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1015,6 +1880,18 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member SinCos.
+     *
+     * @param vector the argument of type {@code Vector3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.SinCos" target="_top">.NET documentation</a>
+     */
     public static ValueTuple_2 SinCos(Vector3 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1030,6 +1907,22 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code Single[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(Single[] array, int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1040,6 +1933,22 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code Single[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(Single[] array) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1054,6 +1963,15 @@ public class Vector3 extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property E.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.E" target="_top">.NET documentation</a>
+     */
     public static Vector3 getE() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1069,6 +1987,15 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Epsilon.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Epsilon" target="_top">.NET documentation</a>
+     */
     public static Vector3 getEpsilon() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1084,6 +2011,15 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NaN.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.NaN" target="_top">.NET documentation</a>
+     */
     public static Vector3 getNaN() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1099,6 +2035,15 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NegativeInfinity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.NegativeInfinity" target="_top">.NET documentation</a>
+     */
     public static Vector3 getNegativeInfinity() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1114,6 +2059,15 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NegativeZero.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.NegativeZero" target="_top">.NET documentation</a>
+     */
     public static Vector3 getNegativeZero() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1129,6 +2083,15 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property One.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.One" target="_top">.NET documentation</a>
+     */
     public static Vector3 getOne() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1144,6 +2107,15 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Pi.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Pi" target="_top">.NET documentation</a>
+     */
     public static Vector3 getPi() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1159,6 +2131,15 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PositiveInfinity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.PositiveInfinity" target="_top">.NET documentation</a>
+     */
     public static Vector3 getPositiveInfinity() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1174,6 +2155,15 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Tau.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Tau" target="_top">.NET documentation</a>
+     */
     public static Vector3 getTau() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1189,6 +2179,15 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnitX.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.UnitX" target="_top">.NET documentation</a>
+     */
     public static Vector3 getUnitX() throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1204,6 +2203,16 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnitY.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.UnitY" target="_top">.NET documentation</a>
+     */
     public static Vector3 getUnitY() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1219,6 +2228,16 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnitZ.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.UnitZ" target="_top">.NET documentation</a>
+     */
     public static Vector3 getUnitZ() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1234,6 +2253,13 @@ public class Vector3 extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Zero.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.Zero" target="_top">.NET documentation</a>
+     */
     public static Vector3 getZero() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

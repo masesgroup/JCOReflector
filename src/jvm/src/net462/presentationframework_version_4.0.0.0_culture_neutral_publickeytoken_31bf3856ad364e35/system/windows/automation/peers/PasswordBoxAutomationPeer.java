@@ -101,7 +101,10 @@ public class PasswordBoxAutomationPeer extends system.windows.automation.peers.T
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PasswordBoxAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,17 @@ public class PasswordBoxAutomationPeer extends system.windows.automation.peers.T
     public PasswordBoxAutomationPeer() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param owner the argument of type {@code PasswordBox}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.PasswordBoxAutomationPeer.-ctor" target="_top">.NET documentation</a>
+     */
     public PasswordBoxAutomationPeer(PasswordBox owner) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +180,27 @@ public class PasswordBoxAutomationPeer extends system.windows.automation.peers.T
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetPattern.
+     *
+     * @param patternInterface the argument of type {@code PatternInterface}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.PasswordBoxAutomationPeer.GetPattern" target="_top">.NET documentation</a>
+     */
     public NetObject GetPattern(PatternInterface patternInterface) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.MissingMethodException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,8 +219,12 @@ public class PasswordBoxAutomationPeer extends system.windows.automation.peers.T
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIValueProvider method available in IValueProvider to obtain an object with an invocable method
+     *
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IValueProvider.SetValue" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void SetValue(java.lang.String value) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIValueProvider to obtain the full interface.");
     }

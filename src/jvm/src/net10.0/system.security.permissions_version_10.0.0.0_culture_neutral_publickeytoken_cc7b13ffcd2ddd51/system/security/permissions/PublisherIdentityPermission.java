@@ -104,7 +104,10 @@ public class PublisherIdentityPermission extends system.security.CodeAccessPermi
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PublisherIdentityPermission(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,13 @@ public class PublisherIdentityPermission extends system.security.CodeAccessPermi
     public PublisherIdentityPermission() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param certificate the argument of type {@code X509Certificate}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PublisherIdentityPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public PublisherIdentityPermission(X509Certificate certificate) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +174,13 @@ public class PublisherIdentityPermission extends system.security.CodeAccessPermi
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param state the argument of type {@code PermissionState}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PublisherIdentityPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public PublisherIdentityPermission(PermissionState state) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +196,14 @@ public class PublisherIdentityPermission extends system.security.CodeAccessPermi
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsSubsetOf.
+     *
+     * @param target the argument of type {@code IPermission}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PublisherIdentityPermission.IsSubsetOf" target="_top">.NET documentation</a>
+     */
     public boolean IsSubsetOf(IPermission target) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +218,13 @@ public class PublisherIdentityPermission extends system.security.CodeAccessPermi
         }
     }
 
+    /**
+     * Invokes the .NET member Copy.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PublisherIdentityPermission.Copy" target="_top">.NET documentation</a>
+     */
     public IPermission Copy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +240,14 @@ public class PublisherIdentityPermission extends system.security.CodeAccessPermi
         }
     }
 
+    /**
+     * Invokes the .NET member Intersect.
+     *
+     * @param target the argument of type {@code IPermission}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PublisherIdentityPermission.Intersect" target="_top">.NET documentation</a>
+     */
     public IPermission Intersect(IPermission target) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +263,14 @@ public class PublisherIdentityPermission extends system.security.CodeAccessPermi
         }
     }
 
+    /**
+     * Invokes the .NET member Union.
+     *
+     * @param target the argument of type {@code IPermission}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PublisherIdentityPermission.Union" target="_top">.NET documentation</a>
+     */
     public IPermission Union(IPermission target) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +286,13 @@ public class PublisherIdentityPermission extends system.security.CodeAccessPermi
         }
     }
 
+    /**
+     * Invokes the .NET member ToXml.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PublisherIdentityPermission.ToXml" target="_top">.NET documentation</a>
+     */
     public SecurityElement ToXml() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +308,13 @@ public class PublisherIdentityPermission extends system.security.CodeAccessPermi
         }
     }
 
+    /**
+     * Invokes the .NET member FromXml.
+     *
+     * @param esd the argument of type {@code SecurityElement}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PublisherIdentityPermission.FromXml" target="_top">.NET documentation</a>
+     */
     public void FromXml(SecurityElement esd) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +329,13 @@ public class PublisherIdentityPermission extends system.security.CodeAccessPermi
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Certificate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PublisherIdentityPermission.Certificate" target="_top">.NET documentation</a>
+     */
     public X509Certificate getCertificate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +351,13 @@ public class PublisherIdentityPermission extends system.security.CodeAccessPermi
         }
     }
 
+    /**
+     * Sets the value of the .NET property Certificate.
+     *
+     * @param Certificate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PublisherIdentityPermission.Certificate" target="_top">.NET documentation</a>
+     */
     public void setCertificate(X509Certificate Certificate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

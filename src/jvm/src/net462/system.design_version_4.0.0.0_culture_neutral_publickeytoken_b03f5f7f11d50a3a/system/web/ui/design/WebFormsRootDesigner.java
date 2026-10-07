@@ -110,7 +110,10 @@ public class WebFormsRootDesigner extends NetObject implements AutoCloseable {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WebFormsRootDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -163,6 +166,16 @@ public class WebFormsRootDesigner extends NetObject implements AutoCloseable {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AddControlToDocument.
+     *
+     * @param newControl the argument of type {@code Control}
+     * @param referenceControl the argument of type {@code Control}
+     * @param location the argument of type {@code ControlLocation}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebFormsRootDesigner.AddControlToDocument" target="_top">.NET documentation</a>
+     */
     public java.lang.String AddControlToDocument(Control newControl, Control referenceControl, ControlLocation location) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +190,26 @@ public class WebFormsRootDesigner extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member GenerateEmptyDesignTimeHtml.
+     *
+     * @param control the argument of type {@code Control}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebFormsRootDesigner.GenerateEmptyDesignTimeHtml" target="_top">.NET documentation</a>
+     */
     public java.lang.String GenerateEmptyDesignTimeHtml(Control control) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +224,30 @@ public class WebFormsRootDesigner extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member GenerateErrorDesignTimeHtml.
+     *
+     * @param control the argument of type {@code Control}
+     * @param e the argument of type {@code NetException}
+     * @param errorMessage the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebFormsRootDesigner.GenerateErrorDesignTimeHtml" target="_top">.NET documentation</a>
+     */
     public java.lang.String GenerateErrorDesignTimeHtml(Control control, NetException e, java.lang.String errorMessage) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +262,29 @@ public class WebFormsRootDesigner extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member ResolveUrl.
+     *
+     * @param relativeUrl the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebFormsRootDesigner.ResolveUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String ResolveUrl(java.lang.String relativeUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.configuration.ConfigurationException, system.UriFormatException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +299,13 @@ public class WebFormsRootDesigner extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member GetClientScriptsInDocument.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebFormsRootDesigner.GetClientScriptsInDocument" target="_top">.NET documentation</a>
+     */
     public ClientScriptItemCollection GetClientScriptsInDocument() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +321,13 @@ public class WebFormsRootDesigner extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member AddClientScriptToDocument.
+     *
+     * @param scriptItem the argument of type {@code ClientScriptItem}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebFormsRootDesigner.AddClientScriptToDocument" target="_top">.NET documentation</a>
+     */
     public void AddClientScriptToDocument(ClientScriptItem scriptItem) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +338,31 @@ public class WebFormsRootDesigner extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Initialize.
+     *
+     * @param component the argument of type {@code IComponent}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebFormsRootDesigner.Initialize" target="_top">.NET documentation</a>
+     */
     public void Initialize(IComponent component) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.security.SecurityException, system.configuration.ConfigurationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +373,13 @@ public class WebFormsRootDesigner extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveClientScriptFromDocument.
+     *
+     * @param clientScriptId the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebFormsRootDesigner.RemoveClientScriptFromDocument" target="_top">.NET documentation</a>
+     */
     public void RemoveClientScriptFromDocument(java.lang.String clientScriptId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +390,13 @@ public class WebFormsRootDesigner extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveControlFromDocument.
+     *
+     * @param control the argument of type {@code Control}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebFormsRootDesigner.RemoveControlFromDocument" target="_top">.NET documentation</a>
+     */
     public void RemoveControlFromDocument(Control control) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +407,16 @@ public class WebFormsRootDesigner extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member SetControlID.
+     *
+     * @param control the argument of type {@code Control}
+     * @param id the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebFormsRootDesigner.SetControlID" target="_top">.NET documentation</a>
+     */
     public void SetControlID(Control control, java.lang.String id) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -287,8 +430,13 @@ public class WebFormsRootDesigner extends NetObject implements AutoCloseable {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIRootDesigner method available in IRootDesigner to obtain an object with an invocable method
+     *
+     * @param technology the argument of type {@code ViewTechnology}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IRootDesigner.GetView" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public NetObject GetView(ViewTechnology technology) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRootDesigner to obtain the full interface.");
     }
@@ -296,8 +444,11 @@ public class WebFormsRootDesigner extends NetObject implements AutoCloseable {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDesigner method available in IDesigner to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesigner.DoDefaultAction" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void DoDefaultAction() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesigner to obtain the full interface.");
     }
@@ -305,8 +456,11 @@ public class WebFormsRootDesigner extends NetObject implements AutoCloseable {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDisposable method available in IDisposable to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IDisposable.Dispose" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Dispose() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
     }
@@ -314,8 +468,12 @@ public class WebFormsRootDesigner extends NetObject implements AutoCloseable {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDesignerFilter method available in IDesignerFilter to obtain an object with an invocable method
+     *
+     * @param attributes the argument of type {@code IDictionary}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerFilter.PostFilterAttributes" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void PostFilterAttributes(IDictionary attributes) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
     }
@@ -323,8 +481,12 @@ public class WebFormsRootDesigner extends NetObject implements AutoCloseable {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDesignerFilter method available in IDesignerFilter to obtain an object with an invocable method
+     *
+     * @param events the argument of type {@code IDictionary}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerFilter.PostFilterEvents" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void PostFilterEvents(IDictionary events) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
     }
@@ -332,8 +494,12 @@ public class WebFormsRootDesigner extends NetObject implements AutoCloseable {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDesignerFilter method available in IDesignerFilter to obtain an object with an invocable method
+     *
+     * @param properties the argument of type {@code IDictionary}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerFilter.PostFilterProperties" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void PostFilterProperties(IDictionary properties) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
     }
@@ -341,8 +507,12 @@ public class WebFormsRootDesigner extends NetObject implements AutoCloseable {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDesignerFilter method available in IDesignerFilter to obtain an object with an invocable method
+     *
+     * @param attributes the argument of type {@code IDictionary}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerFilter.PreFilterAttributes" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void PreFilterAttributes(IDictionary attributes) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
     }
@@ -350,8 +520,12 @@ public class WebFormsRootDesigner extends NetObject implements AutoCloseable {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDesignerFilter method available in IDesignerFilter to obtain an object with an invocable method
+     *
+     * @param events the argument of type {@code IDictionary}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerFilter.PreFilterEvents" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void PreFilterEvents(IDictionary events) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
     }
@@ -359,8 +533,12 @@ public class WebFormsRootDesigner extends NetObject implements AutoCloseable {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDesignerFilter method available in IDesignerFilter to obtain an object with an invocable method
+     *
+     * @param properties the argument of type {@code IDictionary}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerFilter.PreFilterProperties" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void PreFilterProperties(IDictionary properties) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
     }
@@ -382,6 +560,13 @@ public class WebFormsRootDesigner extends NetObject implements AutoCloseable {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsDesignerViewLocked.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebFormsRootDesigner.IsDesignerViewLocked" target="_top">.NET documentation</a>
+     */
     public boolean getIsDesignerViewLocked() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -396,6 +581,13 @@ public class WebFormsRootDesigner extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsLoading.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebFormsRootDesigner.IsLoading" target="_top">.NET documentation</a>
+     */
     public boolean getIsLoading() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -410,6 +602,13 @@ public class WebFormsRootDesigner extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Component.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebFormsRootDesigner.Component" target="_top">.NET documentation</a>
+     */
     public IComponent getComponent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -425,6 +624,13 @@ public class WebFormsRootDesigner extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Component.
+     *
+     * @param Component the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebFormsRootDesigner.Component" target="_top">.NET documentation</a>
+     */
     public void setComponent(IComponent Component) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -435,6 +641,22 @@ public class WebFormsRootDesigner extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentCulture.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebFormsRootDesigner.CurrentCulture" target="_top">.NET documentation</a>
+     */
     public CultureInfo getCurrentCulture() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -450,6 +672,13 @@ public class WebFormsRootDesigner extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DocumentUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebFormsRootDesigner.DocumentUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDocumentUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -464,6 +693,13 @@ public class WebFormsRootDesigner extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReferenceManager.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebFormsRootDesigner.ReferenceManager" target="_top">.NET documentation</a>
+     */
     public WebFormsReferenceManager getReferenceManager() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -484,6 +720,13 @@ public class WebFormsRootDesigner extends NetObject implements AutoCloseable {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addLoadComplete.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addLoadComplete(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -494,6 +737,13 @@ public class WebFormsRootDesigner extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member removeLoadComplete.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeLoadComplete(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

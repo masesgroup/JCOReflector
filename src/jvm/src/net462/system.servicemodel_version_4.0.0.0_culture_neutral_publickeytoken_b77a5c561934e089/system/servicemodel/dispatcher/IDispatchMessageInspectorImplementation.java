@@ -102,7 +102,10 @@ public class IDispatchMessageInspectorImplementation extends NetObject implement
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDispatchMessageInspectorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,16 @@ public class IDispatchMessageInspectorImplementation extends NetObject implement
 
     // Methods section
     
+    /**
+     * Invokes the .NET member AfterReceiveRequest.
+     *
+     * @param request the argument of type {@code JCORefOut<Message>}
+     * @param channel the argument of type {@code IClientChannel}
+     * @param instanceContext the argument of type {@code InstanceContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest" target="_top">.NET documentation</a>
+     */
     public NetObject AfterReceiveRequest(JCORefOut<Message> request, IClientChannel channel, InstanceContext instanceContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -159,6 +172,14 @@ public class IDispatchMessageInspectorImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member BeforeSendReply.
+     *
+     * @param reply the argument of type {@code JCORefOut<Message>}
+     * @param correlationState the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply" target="_top">.NET documentation</a>
+     */
     public void BeforeSendReply(JCORefOut<Message> reply, NetObject correlationState) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

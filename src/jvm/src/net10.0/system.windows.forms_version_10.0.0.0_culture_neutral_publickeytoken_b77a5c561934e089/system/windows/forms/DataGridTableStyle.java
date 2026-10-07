@@ -107,7 +107,10 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataGridTableStyle(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,22 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.-ctor" target="_top">.NET documentation</a>
+     */
     public DataGridTableStyle() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +183,22 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param isDefaultTableStyle the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.-ctor" target="_top">.NET documentation</a>
+     */
     public DataGridTableStyle(boolean isDefaultTableStyle) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +209,22 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param listManager the argument of type {@code CurrencyManager}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.-ctor" target="_top">.NET documentation</a>
+     */
     public DataGridTableStyle(CurrencyManager listManager) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
@@ -188,6 +239,15 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member BeginEdit.
+     *
+     * @param gridColumn the argument of type {@code DataGridColumnStyle}
+     * @param rowNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.BeginEdit" target="_top">.NET documentation</a>
+     */
     public boolean BeginEdit(DataGridColumnStyle gridColumn, int rowNumber) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +262,16 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member EndEdit.
+     *
+     * @param gridColumn the argument of type {@code DataGridColumnStyle}
+     * @param rowNumber the argument of type {@code int}
+     * @param shouldAbort the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.EndEdit" target="_top">.NET documentation</a>
+     */
     public boolean EndEdit(DataGridColumnStyle gridColumn, int rowNumber, boolean shouldAbort) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +286,12 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResetAlternatingBackColor.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.ResetAlternatingBackColor" target="_top">.NET documentation</a>
+     */
     public void ResetAlternatingBackColor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +302,12 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResetBackColor.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.ResetBackColor" target="_top">.NET documentation</a>
+     */
     public void ResetBackColor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +318,12 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResetForeColor.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.ResetForeColor" target="_top">.NET documentation</a>
+     */
     public void ResetForeColor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +334,12 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResetGridLineColor.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.ResetGridLineColor" target="_top">.NET documentation</a>
+     */
     public void ResetGridLineColor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +350,12 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResetHeaderBackColor.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.ResetHeaderBackColor" target="_top">.NET documentation</a>
+     */
     public void ResetHeaderBackColor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +366,12 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResetHeaderFont.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.ResetHeaderFont" target="_top">.NET documentation</a>
+     */
     public void ResetHeaderFont() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +382,12 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResetHeaderForeColor.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.ResetHeaderForeColor" target="_top">.NET documentation</a>
+     */
     public void ResetHeaderForeColor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +398,12 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResetLinkColor.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.ResetLinkColor" target="_top">.NET documentation</a>
+     */
     public void ResetLinkColor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -296,6 +414,12 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResetLinkHoverColor.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.ResetLinkHoverColor" target="_top">.NET documentation</a>
+     */
     public void ResetLinkHoverColor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +430,12 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResetSelectionBackColor.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.ResetSelectionBackColor" target="_top">.NET documentation</a>
+     */
     public void ResetSelectionBackColor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -316,6 +446,12 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResetSelectionForeColor.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.ResetSelectionForeColor" target="_top">.NET documentation</a>
+     */
     public void ResetSelectionForeColor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -330,6 +466,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowSorting.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.AllowSorting" target="_top">.NET documentation</a>
+     */
     public boolean getAllowSorting() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -344,6 +487,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowSorting.
+     *
+     * @param AllowSorting the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.AllowSorting" target="_top">.NET documentation</a>
+     */
     public void setAllowSorting(boolean AllowSorting) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -354,6 +504,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ColumnHeadersVisible.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.ColumnHeadersVisible" target="_top">.NET documentation</a>
+     */
     public boolean getColumnHeadersVisible() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -368,6 +525,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ColumnHeadersVisible.
+     *
+     * @param ColumnHeadersVisible the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.ColumnHeadersVisible" target="_top">.NET documentation</a>
+     */
     public void setColumnHeadersVisible(boolean ColumnHeadersVisible) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -378,6 +542,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReadOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.ReadOnly" target="_top">.NET documentation</a>
+     */
     public boolean getReadOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -392,6 +563,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReadOnly.
+     *
+     * @param ReadOnly the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.ReadOnly" target="_top">.NET documentation</a>
+     */
     public void setReadOnly(boolean ReadOnly) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -402,6 +580,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RowHeadersVisible.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.RowHeadersVisible" target="_top">.NET documentation</a>
+     */
     public boolean getRowHeadersVisible() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -416,6 +601,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RowHeadersVisible.
+     *
+     * @param RowHeadersVisible the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.RowHeadersVisible" target="_top">.NET documentation</a>
+     */
     public void setRowHeadersVisible(boolean RowHeadersVisible) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -426,6 +618,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PreferredColumnWidth.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.PreferredColumnWidth" target="_top">.NET documentation</a>
+     */
     public int getPreferredColumnWidth() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -466,6 +665,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PreferredColumnWidth.
+     *
+     * @param PreferredColumnWidth the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.PreferredColumnWidth" target="_top">.NET documentation</a>
+     */
     public void setPreferredColumnWidth(int PreferredColumnWidth) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -476,6 +682,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PreferredRowHeight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.PreferredRowHeight" target="_top">.NET documentation</a>
+     */
     public int getPreferredRowHeight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -516,6 +729,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PreferredRowHeight.
+     *
+     * @param PreferredRowHeight the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.PreferredRowHeight" target="_top">.NET documentation</a>
+     */
     public void setPreferredRowHeight(int PreferredRowHeight) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -526,6 +746,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RowHeaderWidth.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.RowHeaderWidth" target="_top">.NET documentation</a>
+     */
     public int getRowHeaderWidth() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -566,6 +793,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RowHeaderWidth.
+     *
+     * @param RowHeaderWidth the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.RowHeaderWidth" target="_top">.NET documentation</a>
+     */
     public void setRowHeaderWidth(int RowHeaderWidth) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -576,6 +810,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AlternatingBackColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.AlternatingBackColor" target="_top">.NET documentation</a>
+     */
     public Color getAlternatingBackColor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -591,6 +832,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AlternatingBackColor.
+     *
+     * @param AlternatingBackColor the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.AlternatingBackColor" target="_top">.NET documentation</a>
+     */
     public void setAlternatingBackColor(Color AlternatingBackColor) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -601,6 +849,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BackColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.BackColor" target="_top">.NET documentation</a>
+     */
     public Color getBackColor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -616,6 +871,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BackColor.
+     *
+     * @param BackColor the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.BackColor" target="_top">.NET documentation</a>
+     */
     public void setBackColor(Color BackColor) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -626,6 +888,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ForeColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.ForeColor" target="_top">.NET documentation</a>
+     */
     public Color getForeColor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -641,6 +910,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ForeColor.
+     *
+     * @param ForeColor the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.ForeColor" target="_top">.NET documentation</a>
+     */
     public void setForeColor(Color ForeColor) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -651,6 +927,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GridLineColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.GridLineColor" target="_top">.NET documentation</a>
+     */
     public Color getGridLineColor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -666,6 +949,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property GridLineColor.
+     *
+     * @param GridLineColor the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.GridLineColor" target="_top">.NET documentation</a>
+     */
     public void setGridLineColor(Color GridLineColor) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -676,6 +966,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HeaderBackColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.HeaderBackColor" target="_top">.NET documentation</a>
+     */
     public Color getHeaderBackColor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -691,6 +988,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HeaderBackColor.
+     *
+     * @param HeaderBackColor the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.HeaderBackColor" target="_top">.NET documentation</a>
+     */
     public void setHeaderBackColor(Color HeaderBackColor) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -701,6 +1005,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HeaderForeColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.HeaderForeColor" target="_top">.NET documentation</a>
+     */
     public Color getHeaderForeColor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -716,6 +1027,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HeaderForeColor.
+     *
+     * @param HeaderForeColor the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.HeaderForeColor" target="_top">.NET documentation</a>
+     */
     public void setHeaderForeColor(Color HeaderForeColor) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -726,6 +1044,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LinkColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.LinkColor" target="_top">.NET documentation</a>
+     */
     public Color getLinkColor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -741,6 +1066,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LinkColor.
+     *
+     * @param LinkColor the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.LinkColor" target="_top">.NET documentation</a>
+     */
     public void setLinkColor(Color LinkColor) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -751,6 +1083,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LinkHoverColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.LinkHoverColor" target="_top">.NET documentation</a>
+     */
     public Color getLinkHoverColor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -766,6 +1105,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LinkHoverColor.
+     *
+     * @param LinkHoverColor the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.LinkHoverColor" target="_top">.NET documentation</a>
+     */
     public void setLinkHoverColor(Color LinkHoverColor) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -776,6 +1122,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SelectionBackColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.SelectionBackColor" target="_top">.NET documentation</a>
+     */
     public Color getSelectionBackColor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -791,6 +1144,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SelectionBackColor.
+     *
+     * @param SelectionBackColor the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.SelectionBackColor" target="_top">.NET documentation</a>
+     */
     public void setSelectionBackColor(Color SelectionBackColor) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -801,6 +1161,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SelectionForeColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.SelectionForeColor" target="_top">.NET documentation</a>
+     */
     public Color getSelectionForeColor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -816,6 +1183,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SelectionForeColor.
+     *
+     * @param SelectionForeColor the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.SelectionForeColor" target="_top">.NET documentation</a>
+     */
     public void setSelectionForeColor(Color SelectionForeColor) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -826,6 +1200,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HeaderFont.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.HeaderFont" target="_top">.NET documentation</a>
+     */
     public Font getHeaderFont() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -841,6 +1222,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HeaderFont.
+     *
+     * @param HeaderFont the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.HeaderFont" target="_top">.NET documentation</a>
+     */
     public void setHeaderFont(Font HeaderFont) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -851,6 +1239,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MappingName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.MappingName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMappingName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -865,6 +1260,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MappingName.
+     *
+     * @param MappingName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.MappingName" target="_top">.NET documentation</a>
+     */
     public void setMappingName(java.lang.String MappingName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -875,6 +1277,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataGrid.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.DataGrid" target="_top">.NET documentation</a>
+     */
     public DataGrid getDataGrid() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -890,6 +1299,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataGrid.
+     *
+     * @param DataGrid the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.DataGrid" target="_top">.NET documentation</a>
+     */
     public void setDataGrid(DataGrid DataGrid) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -900,6 +1316,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GridLineStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.GridLineStyle" target="_top">.NET documentation</a>
+     */
     public DataGridLineStyle getGridLineStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -915,6 +1338,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property GridLineStyle.
+     *
+     * @param GridLineStyle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.GridLineStyle" target="_top">.NET documentation</a>
+     */
     public void setGridLineStyle(DataGridLineStyle GridLineStyle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -925,6 +1355,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GridColumnStyles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTableStyle.GridColumnStyles" target="_top">.NET documentation</a>
+     */
     public GridColumnStylesCollection getGridColumnStyles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -945,6 +1382,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addAllowSortingChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addAllowSortingChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -955,6 +1399,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeAllowSortingChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeAllowSortingChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -965,6 +1416,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member addAlternatingBackColorChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addAlternatingBackColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -975,6 +1433,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeAlternatingBackColorChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeAlternatingBackColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -985,6 +1450,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member addBackColorChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addBackColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -995,6 +1467,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeBackColorChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeBackColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1005,6 +1484,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member addColumnHeadersVisibleChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addColumnHeadersVisibleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1015,6 +1501,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeColumnHeadersVisibleChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeColumnHeadersVisibleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1025,6 +1518,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member addForeColorChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addForeColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1035,6 +1535,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeForeColorChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeForeColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1045,6 +1552,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member addGridLineColorChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addGridLineColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1055,6 +1569,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeGridLineColorChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeGridLineColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1065,6 +1586,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member addGridLineStyleChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addGridLineStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1075,6 +1603,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeGridLineStyleChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeGridLineStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1085,6 +1620,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member addHeaderBackColorChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addHeaderBackColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1095,6 +1637,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeHeaderBackColorChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeHeaderBackColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1105,6 +1654,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member addHeaderFontChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addHeaderFontChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1115,6 +1671,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeHeaderFontChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeHeaderFontChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1125,6 +1688,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member addHeaderForeColorChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addHeaderForeColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1135,6 +1705,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeHeaderForeColorChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeHeaderForeColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1145,6 +1722,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member addLinkColorChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addLinkColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1155,6 +1739,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeLinkColorChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeLinkColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1165,6 +1756,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member addLinkHoverColorChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addLinkHoverColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1175,6 +1773,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeLinkHoverColorChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeLinkHoverColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1185,6 +1790,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member addMappingNameChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addMappingNameChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1195,6 +1807,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeMappingNameChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeMappingNameChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1205,6 +1824,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member addPreferredColumnWidthChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreferredColumnWidthChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1215,6 +1841,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePreferredColumnWidthChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreferredColumnWidthChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1225,6 +1858,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member addPreferredRowHeightChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPreferredRowHeightChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1235,6 +1875,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePreferredRowHeightChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePreferredRowHeightChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1245,6 +1892,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member addReadOnlyChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addReadOnlyChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1255,6 +1909,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeReadOnlyChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeReadOnlyChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1265,6 +1926,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRowHeadersVisibleChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowHeadersVisibleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1275,6 +1943,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowHeadersVisibleChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowHeadersVisibleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1285,6 +1960,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRowHeaderWidthChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowHeaderWidthChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1295,6 +1977,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowHeaderWidthChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowHeaderWidthChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1305,6 +1994,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member addSelectionBackColorChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addSelectionBackColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1315,6 +2011,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeSelectionBackColorChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeSelectionBackColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1325,6 +2028,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member addSelectionForeColorChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addSelectionForeColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1335,6 +2045,13 @@ public class DataGridTableStyle extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeSelectionForeColorChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeSelectionForeColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

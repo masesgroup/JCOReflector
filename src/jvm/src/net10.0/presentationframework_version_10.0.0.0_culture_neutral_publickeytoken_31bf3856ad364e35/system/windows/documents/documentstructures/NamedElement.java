@@ -99,7 +99,10 @@ public class NamedElement extends system.windows.documents.documentstructures.Bl
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public NamedElement(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class NamedElement extends system.windows.documents.documentstructures.Bl
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.DocumentStructures.NamedElement.-ctor" target="_top">.NET documentation</a>
+     */
     public NamedElement() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class NamedElement extends system.windows.documents.documentstructures.Bl
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property NameReference.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.DocumentStructures.NamedElement.NameReference" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNameReference() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +194,13 @@ public class NamedElement extends system.windows.documents.documentstructures.Bl
         }
     }
 
+    /**
+     * Sets the value of the .NET property NameReference.
+     *
+     * @param NameReference the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.DocumentStructures.NamedElement.NameReference" target="_top">.NET documentation</a>
+     */
     public void setNameReference(java.lang.String NameReference) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -103,7 +103,10 @@ public class StrategyBasedComWrappers extends system.runtime.interopservices.Com
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public StrategyBasedComWrappers(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,12 @@ public class StrategyBasedComWrappers extends system.runtime.interopservices.Com
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.StrategyBasedComWrappers.-ctor" target="_top">.NET documentation</a>
+     */
     public StrategyBasedComWrappers() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +177,13 @@ public class StrategyBasedComWrappers extends system.runtime.interopservices.Com
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DefaultIUnknownInterfaceDetailsStrategy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.StrategyBasedComWrappers.DefaultIUnknownInterfaceDetailsStrategy" target="_top">.NET documentation</a>
+     */
     public static IIUnknownInterfaceDetailsStrategy getDefaultIUnknownInterfaceDetailsStrategy() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -183,6 +199,13 @@ public class StrategyBasedComWrappers extends system.runtime.interopservices.Com
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultIUnknownStrategy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.StrategyBasedComWrappers.DefaultIUnknownStrategy" target="_top">.NET documentation</a>
+     */
     public static IIUnknownStrategy getDefaultIUnknownStrategy() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

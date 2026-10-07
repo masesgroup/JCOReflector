@@ -133,7 +133,10 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ToolStrip(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -180,6 +183,28 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.-ctor" target="_top">.NET documentation</a>
+     */
     public ToolStrip() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidCastException, system.FormatException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.OutOfMemoryException, system.NullReferenceException, system.componentmodel.InvalidEnumArgumentException, system.ArrayTypeMismatchException, system.threading.ThreadStateException, system.OverflowException {
         try {
             // add reference to assemblyName.dll file
@@ -190,6 +215,29 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param items the argument of type {@code ToolStripItem...}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.-ctor" target="_top">.NET documentation</a>
+     */
     public ToolStrip(ToolStripItem... items) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.InvalidCastException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NullReferenceException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.threading.ThreadStateException {
         try {
             // add reference to assemblyName.dll file
@@ -204,6 +252,25 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetChildAtPointNewToolStrip.
+     *
+     * @param pt the argument of type {@code Point}
+     * @param skipValue the argument of type {@code GetChildAtPointSkip}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.GetChildAtPointNewToolStrip" target="_top">.NET documentation</a>
+     */
     public Control GetChildAtPointNewToolStrip(Point pt, GetChildAtPointSkip skipValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +286,22 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetChildAtPointNewToolStrip.
+     *
+     * @param point the argument of type {@code Point}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.GetChildAtPointNewToolStrip" target="_top">.NET documentation</a>
+     */
     public Control GetChildAtPointNewToolStrip(Point point) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +317,20 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetItemAt.
+     *
+     * @param x the argument of type {@code int}
+     * @param y the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.GetItemAt" target="_top">.NET documentation</a>
+     */
     public ToolStripItem GetItemAt(int x, int y) throws Throwable, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +346,24 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetItemAt.
+     *
+     * @param point the argument of type {@code Point}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.GetItemAt" target="_top">.NET documentation</a>
+     */
     public ToolStripItem GetItemAt(Point point) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.threading.SynchronizationLockException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.threading.ThreadStateException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +379,26 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetNextItem.
+     *
+     * @param start the argument of type {@code ToolStripItem}
+     * @param direction the argument of type {@code ArrowDirection}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.GetNextItem" target="_top">.NET documentation</a>
+     */
     public ToolStripItem GetNextItem(ToolStripItem start, ArrowDirection direction) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +414,21 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResetMinimumSizeNewToolStrip.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.ResetMinimumSizeNewToolStrip" target="_top">.NET documentation</a>
+     */
     public void ResetMinimumSizeNewToolStrip() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidCastException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +439,21 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetAutoScrollMarginNewToolStrip.
+     *
+     * @param x the argument of type {@code int}
+     * @param y the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.SetAutoScrollMarginNewToolStrip" target="_top">.NET documentation</a>
+     */
     public void SetAutoScrollMarginNewToolStrip(int x, int y) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.InvalidCastException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +468,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowClickThrough.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.AllowClickThrough" target="_top">.NET documentation</a>
+     */
     public boolean getAllowClickThrough() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -317,6 +489,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowClickThrough.
+     *
+     * @param AllowClickThrough the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.AllowClickThrough" target="_top">.NET documentation</a>
+     */
     public void setAllowClickThrough(boolean AllowClickThrough) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -327,6 +506,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowItemReorder.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.AllowItemReorder" target="_top">.NET documentation</a>
+     */
     public boolean getAllowItemReorder() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -341,6 +527,25 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowItemReorder.
+     *
+     * @param AllowItemReorder the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.AllowItemReorder" target="_top">.NET documentation</a>
+     */
     public void setAllowItemReorder(boolean AllowItemReorder) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.ThreadStateException, system.InvalidCastException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -351,6 +556,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowMerge.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.AllowMerge" target="_top">.NET documentation</a>
+     */
     public boolean getAllowMerge() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -365,6 +577,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowMerge.
+     *
+     * @param AllowMerge the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.AllowMerge" target="_top">.NET documentation</a>
+     */
     public void setAllowMerge(boolean AllowMerge) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -375,6 +594,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanOverflow.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.CanOverflow" target="_top">.NET documentation</a>
+     */
     public boolean getCanOverflow() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -389,6 +615,18 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CanOverflow.
+     *
+     * @param CanOverflow the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.CanOverflow" target="_top">.NET documentation</a>
+     */
     public void setCanOverflow(boolean CanOverflow) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.InvalidCastException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -399,6 +637,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CausesValidation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.CausesValidation" target="_top">.NET documentation</a>
+     */
     public boolean getCausesValidation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -413,6 +658,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CausesValidation.
+     *
+     * @param CausesValidation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.CausesValidation" target="_top">.NET documentation</a>
+     */
     public void setCausesValidation(boolean CausesValidation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -423,6 +675,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HasChildren.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.HasChildren" target="_top">.NET documentation</a>
+     */
     public boolean getHasChildren() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -437,6 +696,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsCurrentlyDragging.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.IsCurrentlyDragging" target="_top">.NET documentation</a>
+     */
     public boolean getIsCurrentlyDragging() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -451,6 +717,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsDropDown.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.IsDropDown" target="_top">.NET documentation</a>
+     */
     public boolean getIsDropDown() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -465,6 +738,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShowItemToolTips.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.ShowItemToolTips" target="_top">.NET documentation</a>
+     */
     public boolean getShowItemToolTips() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -479,6 +759,31 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ShowItemToolTips.
+     *
+     * @param ShowItemToolTips the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.ShowItemToolTips" target="_top">.NET documentation</a>
+     */
     public void setShowItemToolTips(boolean ShowItemToolTips) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidCastException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.threading.LockRecursionException, system.ArrayTypeMismatchException, system.MulticastNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.threading.ThreadStateException, system.componentmodel.InvalidAsynchronousStateException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -489,6 +794,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Stretch.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.Stretch" target="_top">.NET documentation</a>
+     */
     public boolean getStretch() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -503,6 +815,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Stretch.
+     *
+     * @param Stretch the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.Stretch" target="_top">.NET documentation</a>
+     */
     public void setStretch(boolean Stretch) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -513,6 +832,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TabStop.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.TabStop" target="_top">.NET documentation</a>
+     */
     public boolean getTabStop() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -527,6 +853,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TabStop.
+     *
+     * @param TabStop the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.TabStop" target="_top">.NET documentation</a>
+     */
     public void setTabStop(boolean TabStop) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -537,6 +870,23 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BackColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.BackColor" target="_top">.NET documentation</a>
+     */
     public Color getBackColor() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidCastException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -552,6 +902,24 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BackColor.
+     *
+     * @param BackColor the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.BackColor" target="_top">.NET documentation</a>
+     */
     public void setBackColor(Color BackColor) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -562,6 +930,22 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ForeColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.ForeColor" target="_top">.NET documentation</a>
+     */
     public Color getForeColor() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidCastException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -577,6 +961,23 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ForeColor.
+     *
+     * @param ForeColor the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.ForeColor" target="_top">.NET documentation</a>
+     */
     public void setForeColor(Color ForeColor) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidCastException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -587,6 +988,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AutoScrollPosition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.AutoScrollPosition" target="_top">.NET documentation</a>
+     */
     public Point getAutoScrollPosition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -602,6 +1010,24 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AutoScrollPosition.
+     *
+     * @param AutoScrollPosition the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.AutoScrollPosition" target="_top">.NET documentation</a>
+     */
     public void setAutoScrollPosition(Point AutoScrollPosition) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.componentmodel.InvalidAsynchronousStateException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -612,6 +1038,23 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GripRectangle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.GripRectangle" target="_top">.NET documentation</a>
+     */
     public Rectangle getGripRectangle() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -627,6 +1070,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AutoScrollMargin.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.AutoScrollMargin" target="_top">.NET documentation</a>
+     */
     public Size getAutoScrollMargin() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -642,6 +1092,22 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AutoScrollMargin.
+     *
+     * @param AutoScrollMargin the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.AutoScrollMargin" target="_top">.NET documentation</a>
+     */
     public void setAutoScrollMargin(Size AutoScrollMargin) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -652,6 +1118,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AutoScrollMinSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.AutoScrollMinSize" target="_top">.NET documentation</a>
+     */
     public Size getAutoScrollMinSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -667,6 +1140,20 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AutoScrollMinSize.
+     *
+     * @param AutoScrollMinSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.AutoScrollMinSize" target="_top">.NET documentation</a>
+     */
     public void setAutoScrollMinSize(Size AutoScrollMinSize) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.InvalidCastException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -677,6 +1164,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ImageScalingSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.ImageScalingSize" target="_top">.NET documentation</a>
+     */
     public Size getImageScalingSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -692,6 +1186,19 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ImageScalingSize.
+     *
+     * @param ImageScalingSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.ImageScalingSize" target="_top">.NET documentation</a>
+     */
     public void setImageScalingSize(Size ImageScalingSize) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.InvalidCastException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -702,6 +1209,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HorizontalScroll.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.HorizontalScroll" target="_top">.NET documentation</a>
+     */
     public HScrollProperties getHorizontalScroll() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -717,6 +1231,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ImageList.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.ImageList" target="_top">.NET documentation</a>
+     */
     public ImageList getImageList() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -732,6 +1253,23 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ImageList.
+     *
+     * @param ImageList the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.ImageList" target="_top">.NET documentation</a>
+     */
     public void setImageList(ImageList ImageList) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.MulticastNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -742,6 +1280,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LayoutSettings.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.LayoutSettings" target="_top">.NET documentation</a>
+     */
     public LayoutSettings getLayoutSettings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -757,6 +1302,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LayoutSettings.
+     *
+     * @param LayoutSettings the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.LayoutSettings" target="_top">.NET documentation</a>
+     */
     public void setLayoutSettings(LayoutSettings LayoutSettings) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -767,6 +1319,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Orientation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.Orientation" target="_top">.NET documentation</a>
+     */
     public Orientation getOrientation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -782,6 +1341,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Orientation.
+     *
+     * @param Orientation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.Orientation" target="_top">.NET documentation</a>
+     */
     public void setOrientation(Orientation Orientation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -792,6 +1358,23 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GripMargin.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.GripMargin" target="_top">.NET documentation</a>
+     */
     public Padding getGripMargin() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -807,6 +1390,23 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property GripMargin.
+     *
+     * @param GripMargin the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.GripMargin" target="_top">.NET documentation</a>
+     */
     public void setGripMargin(Padding GripMargin) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -817,6 +1417,18 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultDropDownDirection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.DefaultDropDownDirection" target="_top">.NET documentation</a>
+     */
     public ToolStripDropDownDirection getDefaultDropDownDirection() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -832,6 +1444,24 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultDropDownDirection.
+     *
+     * @param DefaultDropDownDirection the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.DefaultDropDownDirection" target="_top">.NET documentation</a>
+     */
     public void setDefaultDropDownDirection(ToolStripDropDownDirection DefaultDropDownDirection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -842,6 +1472,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GripDisplayStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.GripDisplayStyle" target="_top">.NET documentation</a>
+     */
     public ToolStripGripDisplayStyle getGripDisplayStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -857,6 +1494,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GripStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.GripStyle" target="_top">.NET documentation</a>
+     */
     public ToolStripGripStyle getGripStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -872,6 +1516,25 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property GripStyle.
+     *
+     * @param GripStyle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.GripStyle" target="_top">.NET documentation</a>
+     */
     public void setGripStyle(ToolStripGripStyle GripStyle) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.collections.generic.KeyNotFoundException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -882,6 +1545,14 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Items.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.Items" target="_top">.NET documentation</a>
+     */
     public ToolStripItemCollection getItems() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -897,6 +1568,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LayoutStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.LayoutStyle" target="_top">.NET documentation</a>
+     */
     public ToolStripLayoutStyle getLayoutStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -912,6 +1590,25 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LayoutStyle.
+     *
+     * @param LayoutStyle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.LayoutStyle" target="_top">.NET documentation</a>
+     */
     public void setLayoutStyle(ToolStripLayoutStyle LayoutStyle) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidCastException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -922,6 +1619,28 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OverflowButton.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.OverflowButton" target="_top">.NET documentation</a>
+     */
     public ToolStripOverflowButton getOverflowButton() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.ThreadStateException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException, system.OverflowException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -937,6 +1656,24 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Renderer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.Renderer" target="_top">.NET documentation</a>
+     */
     public ToolStripRenderer getRenderer() throws Throwable, system.componentmodel.InvalidEnumArgumentException, system.ArgumentOutOfRangeException, system.threading.ThreadStateException, system.InvalidOperationException, system.PlatformNotSupportedException, system.OverflowException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -952,6 +1689,23 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Renderer.
+     *
+     * @param Renderer the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.Renderer" target="_top">.NET documentation</a>
+     */
     public void setRenderer(ToolStripRenderer Renderer) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.threading.ThreadStateException, system.InvalidOperationException, system.InvalidCastException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -962,6 +1716,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RenderMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.RenderMode" target="_top">.NET documentation</a>
+     */
     public ToolStripRenderMode getRenderMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -977,6 +1738,24 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RenderMode.
+     *
+     * @param RenderMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.RenderMode" target="_top">.NET documentation</a>
+     */
     public void setRenderMode(ToolStripRenderMode RenderMode) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.threading.ThreadStateException, system.InvalidCastException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -987,6 +1766,21 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TextDirection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.TextDirection" target="_top">.NET documentation</a>
+     */
     public ToolStripTextDirection getTextDirection() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1002,6 +1796,26 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TextDirection.
+     *
+     * @param TextDirection the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.TextDirection" target="_top">.NET documentation</a>
+     */
     public void setTextDirection(ToolStripTextDirection TextDirection) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidCastException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1012,6 +1826,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VerticalScroll.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStrip.VerticalScroll" target="_top">.NET documentation</a>
+     */
     public VScrollProperties getVerticalScroll() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1032,6 +1853,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addAutoSizeChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addAutoSizeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1042,6 +1870,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeAutoSizeChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeAutoSizeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1052,6 +1887,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member addBeginDrag.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addBeginDrag(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1062,6 +1904,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeBeginDrag.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeBeginDrag(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1072,6 +1921,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCausesValidationChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCausesValidationChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1082,6 +1938,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCausesValidationChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCausesValidationChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1092,6 +1955,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCursorChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCursorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1102,6 +1972,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCursorChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCursorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1112,6 +1989,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member addEndDrag.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addEndDrag(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1122,6 +2006,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeEndDrag.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeEndDrag(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1132,6 +2023,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member addForeColorChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addForeColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1142,6 +2040,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeForeColorChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeForeColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1152,6 +2057,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member addLayoutCompleted.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addLayoutCompleted(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1162,6 +2074,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeLayoutCompleted.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeLayoutCompleted(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1172,6 +2091,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member addLayoutStyleChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addLayoutStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1182,6 +2108,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeLayoutStyleChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeLayoutStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1192,6 +2125,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRendererChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRendererChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1202,6 +2142,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRendererChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRendererChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1212,6 +2159,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member addControlAdded.
+     *
+     * @param handler the argument of type {@code ControlEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addControlAdded(ControlEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1222,6 +2176,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeControlAdded.
+     *
+     * @param handler the argument of type {@code ControlEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeControlAdded(ControlEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1232,6 +2193,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member addControlRemoved.
+     *
+     * @param handler the argument of type {@code ControlEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addControlRemoved(ControlEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1242,6 +2210,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeControlRemoved.
+     *
+     * @param handler the argument of type {@code ControlEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeControlRemoved(ControlEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1252,6 +2227,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member addPaintGrip.
+     *
+     * @param handler the argument of type {@code PaintEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPaintGrip(PaintEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1262,6 +2244,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePaintGrip.
+     *
+     * @param handler the argument of type {@code PaintEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePaintGrip(PaintEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1272,6 +2261,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member addItemClicked.
+     *
+     * @param handler the argument of type {@code ToolStripItemClickedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addItemClicked(ToolStripItemClickedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1282,6 +2278,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeItemClicked.
+     *
+     * @param handler the argument of type {@code ToolStripItemClickedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeItemClicked(ToolStripItemClickedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1292,6 +2295,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member addItemAdded.
+     *
+     * @param handler the argument of type {@code ToolStripItemEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addItemAdded(ToolStripItemEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1302,6 +2312,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeItemAdded.
+     *
+     * @param handler the argument of type {@code ToolStripItemEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeItemAdded(ToolStripItemEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1312,6 +2329,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member addItemRemoved.
+     *
+     * @param handler the argument of type {@code ToolStripItemEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addItemRemoved(ToolStripItemEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1322,6 +2346,13 @@ public class ToolStrip extends system.windows.forms.ScrollableControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeItemRemoved.
+     *
+     * @param handler the argument of type {@code ToolStripItemEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeItemRemoved(ToolStripItemEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

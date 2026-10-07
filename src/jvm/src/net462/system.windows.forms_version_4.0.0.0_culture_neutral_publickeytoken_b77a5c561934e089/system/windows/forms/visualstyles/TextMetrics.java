@@ -101,7 +101,10 @@ public class TextMetrics extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TextMetrics(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class TextMetrics extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Italic.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.Italic" target="_top">.NET documentation</a>
+     */
     public boolean getItalic() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +184,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Italic.
+     *
+     * @param Italic the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.Italic" target="_top">.NET documentation</a>
+     */
     public void setItalic(boolean Italic) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +201,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StruckOut.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.StruckOut" target="_top">.NET documentation</a>
+     */
     public boolean getStruckOut() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +222,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StruckOut.
+     *
+     * @param StruckOut the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.StruckOut" target="_top">.NET documentation</a>
+     */
     public void setStruckOut(boolean StruckOut) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +239,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Underlined.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.Underlined" target="_top">.NET documentation</a>
+     */
     public boolean getUnderlined() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +260,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Underlined.
+     *
+     * @param Underlined the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.Underlined" target="_top">.NET documentation</a>
+     */
     public void setUnderlined(boolean Underlined) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +277,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BreakChar.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.BreakChar" target="_top">.NET documentation</a>
+     */
     public char getBreakChar() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +298,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BreakChar.
+     *
+     * @param BreakChar the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.BreakChar" target="_top">.NET documentation</a>
+     */
     public void setBreakChar(char BreakChar) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +315,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultChar.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.DefaultChar" target="_top">.NET documentation</a>
+     */
     public char getDefaultChar() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +336,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultChar.
+     *
+     * @param DefaultChar the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.DefaultChar" target="_top">.NET documentation</a>
+     */
     public void setDefaultChar(char DefaultChar) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +353,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FirstChar.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.FirstChar" target="_top">.NET documentation</a>
+     */
     public char getFirstChar() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +374,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FirstChar.
+     *
+     * @param FirstChar the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.FirstChar" target="_top">.NET documentation</a>
+     */
     public void setFirstChar(char FirstChar) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +391,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LastChar.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.LastChar" target="_top">.NET documentation</a>
+     */
     public char getLastChar() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +412,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LastChar.
+     *
+     * @param LastChar the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.LastChar" target="_top">.NET documentation</a>
+     */
     public void setLastChar(char LastChar) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -328,6 +429,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Ascent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.Ascent" target="_top">.NET documentation</a>
+     */
     public int getAscent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -368,6 +476,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Ascent.
+     *
+     * @param Ascent the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.Ascent" target="_top">.NET documentation</a>
+     */
     public void setAscent(int Ascent) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -378,6 +493,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AverageCharWidth.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.AverageCharWidth" target="_top">.NET documentation</a>
+     */
     public int getAverageCharWidth() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -418,6 +540,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AverageCharWidth.
+     *
+     * @param AverageCharWidth the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.AverageCharWidth" target="_top">.NET documentation</a>
+     */
     public void setAverageCharWidth(int AverageCharWidth) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -428,6 +557,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Descent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.Descent" target="_top">.NET documentation</a>
+     */
     public int getDescent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -468,6 +604,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Descent.
+     *
+     * @param Descent the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.Descent" target="_top">.NET documentation</a>
+     */
     public void setDescent(int Descent) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -478,6 +621,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DigitizedAspectX.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.DigitizedAspectX" target="_top">.NET documentation</a>
+     */
     public int getDigitizedAspectX() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -518,6 +668,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DigitizedAspectX.
+     *
+     * @param DigitizedAspectX the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.DigitizedAspectX" target="_top">.NET documentation</a>
+     */
     public void setDigitizedAspectX(int DigitizedAspectX) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -528,6 +685,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DigitizedAspectY.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.DigitizedAspectY" target="_top">.NET documentation</a>
+     */
     public int getDigitizedAspectY() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -568,6 +732,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DigitizedAspectY.
+     *
+     * @param DigitizedAspectY the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.DigitizedAspectY" target="_top">.NET documentation</a>
+     */
     public void setDigitizedAspectY(int DigitizedAspectY) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -578,6 +749,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExternalLeading.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.ExternalLeading" target="_top">.NET documentation</a>
+     */
     public int getExternalLeading() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -618,6 +796,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ExternalLeading.
+     *
+     * @param ExternalLeading the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.ExternalLeading" target="_top">.NET documentation</a>
+     */
     public void setExternalLeading(int ExternalLeading) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -628,6 +813,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Height.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.Height" target="_top">.NET documentation</a>
+     */
     public int getHeight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -668,6 +860,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Height.
+     *
+     * @param Height the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.Height" target="_top">.NET documentation</a>
+     */
     public void setHeight(int Height) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -678,6 +877,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InternalLeading.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.InternalLeading" target="_top">.NET documentation</a>
+     */
     public int getInternalLeading() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -718,6 +924,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InternalLeading.
+     *
+     * @param InternalLeading the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.InternalLeading" target="_top">.NET documentation</a>
+     */
     public void setInternalLeading(int InternalLeading) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -728,6 +941,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxCharWidth.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.MaxCharWidth" target="_top">.NET documentation</a>
+     */
     public int getMaxCharWidth() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -768,6 +988,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxCharWidth.
+     *
+     * @param MaxCharWidth the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.MaxCharWidth" target="_top">.NET documentation</a>
+     */
     public void setMaxCharWidth(int MaxCharWidth) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -778,6 +1005,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Overhang.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.Overhang" target="_top">.NET documentation</a>
+     */
     public int getOverhang() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -818,6 +1052,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Overhang.
+     *
+     * @param Overhang the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.Overhang" target="_top">.NET documentation</a>
+     */
     public void setOverhang(int Overhang) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -828,6 +1069,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Weight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.Weight" target="_top">.NET documentation</a>
+     */
     public int getWeight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -868,6 +1116,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Weight.
+     *
+     * @param Weight the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.Weight" target="_top">.NET documentation</a>
+     */
     public void setWeight(int Weight) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -878,6 +1133,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CharSet.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.CharSet" target="_top">.NET documentation</a>
+     */
     public TextMetricsCharacterSet getCharSet() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -893,6 +1155,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CharSet.
+     *
+     * @param CharSet the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.CharSet" target="_top">.NET documentation</a>
+     */
     public void setCharSet(TextMetricsCharacterSet CharSet) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -903,6 +1172,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PitchAndFamily.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.PitchAndFamily" target="_top">.NET documentation</a>
+     */
     public TextMetricsPitchAndFamilyValues getPitchAndFamily() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -918,6 +1194,13 @@ public class TextMetrics extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PitchAndFamily.
+     *
+     * @param PitchAndFamily the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.TextMetrics.PitchAndFamily" target="_top">.NET documentation</a>
+     */
     public void setPitchAndFamily(TextMetricsPitchAndFamilyValues PitchAndFamily) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

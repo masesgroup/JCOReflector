@@ -99,7 +99,10 @@ public class GetFrameworkPath extends microsoft.build.tasks.TaskExtension  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public GetFrameworkPath(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,13 @@ public class GetFrameworkPath extends microsoft.build.tasks.TaskExtension  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GetFrameworkPath.-ctor" target="_top">.NET documentation</a>
+     */
     public GetFrameworkPath() throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +170,13 @@ public class GetFrameworkPath extends microsoft.build.tasks.TaskExtension  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Execute.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GetFrameworkPath.Execute" target="_top">.NET documentation</a>
+     */
     public boolean Execute() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +195,22 @@ public class GetFrameworkPath extends microsoft.build.tasks.TaskExtension  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property FrameworkVersion11Path.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GetFrameworkPath.FrameworkVersion11Path" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFrameworkVersion11Path() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.io.IOException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.PathTooLongException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +225,22 @@ public class GetFrameworkPath extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FrameworkVersion20Path.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GetFrameworkPath.FrameworkVersion20Path" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFrameworkVersion20Path() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.io.IOException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.PathTooLongException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +255,22 @@ public class GetFrameworkPath extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FrameworkVersion30Path.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GetFrameworkPath.FrameworkVersion30Path" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFrameworkVersion30Path() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.io.IOException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.PathTooLongException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +285,22 @@ public class GetFrameworkPath extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FrameworkVersion35Path.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GetFrameworkPath.FrameworkVersion35Path" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFrameworkVersion35Path() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.io.IOException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.PathTooLongException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +315,22 @@ public class GetFrameworkPath extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FrameworkVersion40Path.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GetFrameworkPath.FrameworkVersion40Path" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFrameworkVersion40Path() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.io.IOException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.PathTooLongException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +345,22 @@ public class GetFrameworkPath extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FrameworkVersion45Path.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GetFrameworkPath.FrameworkVersion45Path" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFrameworkVersion45Path() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.io.IOException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.PathTooLongException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +375,22 @@ public class GetFrameworkPath extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Path.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GetFrameworkPath.Path" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPath() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.io.IOException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.PathTooLongException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +405,13 @@ public class GetFrameworkPath extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Path.
+     *
+     * @param Path the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GetFrameworkPath.Path" target="_top">.NET documentation</a>
+     */
     public void setPath(java.lang.String Path) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class AsyncFlowControl extends system.ValueType implements AutoCloseable 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AsyncFlowControl(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,14 @@ public class AsyncFlowControl extends system.ValueType implements AutoCloseable 
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param obj the argument of type {@code AsyncFlowControl}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.AsyncFlowControl.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(AsyncFlowControl obj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +180,18 @@ public class AsyncFlowControl extends system.ValueType implements AutoCloseable 
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.AsyncFlowControl.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +202,18 @@ public class AsyncFlowControl extends system.ValueType implements AutoCloseable 
         }
     }
 
+    /**
+     * Invokes the .NET member Undo.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.AsyncFlowControl.Undo" target="_top">.NET documentation</a>
+     */
     public void Undo() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

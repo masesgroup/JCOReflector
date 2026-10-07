@@ -103,7 +103,10 @@ public class CodeCompileUnit extends system.codedom.CodeObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodeCompileUnit(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,12 @@ public class CodeCompileUnit extends system.codedom.CodeObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeCompileUnit.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeCompileUnit() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +177,13 @@ public class CodeCompileUnit extends system.codedom.CodeObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AssemblyCustomAttributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeCompileUnit.AssemblyCustomAttributes" target="_top">.NET documentation</a>
+     */
     public CodeAttributeDeclarationCollection getAssemblyCustomAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +199,13 @@ public class CodeCompileUnit extends system.codedom.CodeObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EndDirectives.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeCompileUnit.EndDirectives" target="_top">.NET documentation</a>
+     */
     public CodeDirectiveCollection getEndDirectives() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +221,13 @@ public class CodeCompileUnit extends system.codedom.CodeObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StartDirectives.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeCompileUnit.StartDirectives" target="_top">.NET documentation</a>
+     */
     public CodeDirectiveCollection getStartDirectives() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +243,13 @@ public class CodeCompileUnit extends system.codedom.CodeObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Namespaces.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeCompileUnit.Namespaces" target="_top">.NET documentation</a>
+     */
     public CodeNamespaceCollection getNamespaces() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +265,13 @@ public class CodeCompileUnit extends system.codedom.CodeObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReferencedAssemblies.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeCompileUnit.ReferencedAssemblies" target="_top">.NET documentation</a>
+     */
     public StringCollection getReferencedAssemblies() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

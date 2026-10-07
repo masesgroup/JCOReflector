@@ -110,7 +110,10 @@ public class PipeReader extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PipeReader(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -163,6 +166,14 @@ public class PipeReader extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member TryRead.
+     *
+     * @param result the argument of type {@code JCORefOut<ReadResult>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.PipeReader.TryRead" target="_top">.NET documentation</a>
+     */
     public boolean TryRead(JCORefOut<ReadResult> result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +188,14 @@ public class PipeReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param sequence the argument of type {@code ReadOnlySequence_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.PipeReader.Create" target="_top">.NET documentation</a>
+     */
     public static PipeReader Create(ReadOnlySequence_1 sequence) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -192,6 +211,21 @@ public class PipeReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param stream the argument of type {@code Stream}
+     * @param readerOptions the argument of type {@code StreamPipeReaderOptions}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.PipeReader.Create" target="_top">.NET documentation</a>
+     */
     public static PipeReader Create(Stream stream, StreamPipeReaderOptions readerOptions) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -207,6 +241,14 @@ public class PipeReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsStream.
+     *
+     * @param leaveOpen the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.PipeReader.AsStream" target="_top">.NET documentation</a>
+     */
     public Stream AsStream(boolean leaveOpen) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +264,19 @@ public class PipeReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CopyToAsync.
+     *
+     * @param destination the argument of type {@code PipeWriter}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.PipeReader.CopyToAsync" target="_top">.NET documentation</a>
+     */
     public Task CopyToAsync(PipeWriter destination, CancellationToken cancellationToken) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +292,26 @@ public class PipeReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CopyToAsync.
+     *
+     * @param destination the argument of type {@code Stream}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.threading.SemaphoreFullException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.PipeReader.CopyToAsync" target="_top">.NET documentation</a>
+     */
     public Task CopyToAsync(Stream destination, CancellationToken cancellationToken) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.ArgumentException, system.OperationCanceledException, system.threading.SemaphoreFullException, system.threading.tasks.TaskSchedulerException, system.InvalidOperationException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +327,25 @@ public class PipeReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CompleteAsync.
+     *
+     * @param exception the argument of type {@code NetException}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.PipeReader.CompleteAsync" target="_top">.NET documentation</a>
+     */
     public ValueTask CompleteAsync(NetException exception) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +361,14 @@ public class PipeReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReadAsync.
+     *
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.PipeReader.ReadAsync" target="_top">.NET documentation</a>
+     */
     public ValueTask_1 ReadAsync(CancellationToken cancellationToken) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +384,18 @@ public class PipeReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReadAtLeastAsync.
+     *
+     * @param minimumSize the argument of type {@code int}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.PipeReader.ReadAtLeastAsync" target="_top">.NET documentation</a>
+     */
     public ValueTask_1 ReadAtLeastAsync(int minimumSize, CancellationToken cancellationToken) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -297,6 +411,14 @@ public class PipeReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AdvanceTo.
+     *
+     * @param consumed the argument of type {@code SequencePosition}
+     * @param examined the argument of type {@code SequencePosition}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.PipeReader.AdvanceTo" target="_top">.NET documentation</a>
+     */
     public void AdvanceTo(SequencePosition consumed, SequencePosition examined) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -307,6 +429,13 @@ public class PipeReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AdvanceTo.
+     *
+     * @param consumed the argument of type {@code SequencePosition}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.PipeReader.AdvanceTo" target="_top">.NET documentation</a>
+     */
     public void AdvanceTo(SequencePosition consumed) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -317,6 +446,12 @@ public class PipeReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CancelPendingRead.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.PipeReader.CancelPendingRead" target="_top">.NET documentation</a>
+     */
     public void CancelPendingRead() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -327,6 +462,13 @@ public class PipeReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Complete.
+     *
+     * @param exception the argument of type {@code NetException}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.PipeReader.Complete" target="_top">.NET documentation</a>
+     */
     public void Complete(NetException exception) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -337,6 +479,14 @@ public class PipeReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OnWriterCompleted.
+     *
+     * @param callback the argument of type {@code Action_2}
+     * @param state the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.PipeReader.OnWriterCompleted" target="_top">.NET documentation</a>
+     */
     public void OnWriterCompleted(Action_2 callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

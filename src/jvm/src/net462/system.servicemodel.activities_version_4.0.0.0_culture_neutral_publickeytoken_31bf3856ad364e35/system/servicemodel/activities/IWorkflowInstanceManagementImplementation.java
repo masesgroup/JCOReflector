@@ -102,7 +102,10 @@ public class IWorkflowInstanceManagementImplementation extends NetObject impleme
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IWorkflowInstanceManagementImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,17 @@ public class IWorkflowInstanceManagementImplementation extends NetObject impleme
 
     // Methods section
     
+    /**
+     * Invokes the .NET member BeginAbandon.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param reason the argument of type {@code java.lang.String}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.IWorkflowInstanceManagement.BeginAbandon" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginAbandon(Guid instanceId, java.lang.String reason, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -159,6 +173,16 @@ public class IWorkflowInstanceManagementImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member BeginCancel.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.IWorkflowInstanceManagement.BeginCancel" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginCancel(Guid instanceId, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +198,16 @@ public class IWorkflowInstanceManagementImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member BeginRun.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.IWorkflowInstanceManagement.BeginRun" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginRun(Guid instanceId, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +223,17 @@ public class IWorkflowInstanceManagementImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member BeginSuspend.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param reason the argument of type {@code java.lang.String}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.IWorkflowInstanceManagement.BeginSuspend" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginSuspend(Guid instanceId, java.lang.String reason, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +249,17 @@ public class IWorkflowInstanceManagementImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member BeginTerminate.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param reason the argument of type {@code java.lang.String}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.IWorkflowInstanceManagement.BeginTerminate" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginTerminate(Guid instanceId, java.lang.String reason, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +275,16 @@ public class IWorkflowInstanceManagementImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member BeginTransactedCancel.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.IWorkflowInstanceManagement.BeginTransactedCancel" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginTransactedCancel(Guid instanceId, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +300,16 @@ public class IWorkflowInstanceManagementImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member BeginTransactedRun.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.IWorkflowInstanceManagement.BeginTransactedRun" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginTransactedRun(Guid instanceId, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +325,17 @@ public class IWorkflowInstanceManagementImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member BeginTransactedSuspend.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param reason the argument of type {@code java.lang.String}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.IWorkflowInstanceManagement.BeginTransactedSuspend" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginTransactedSuspend(Guid instanceId, java.lang.String reason, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +351,17 @@ public class IWorkflowInstanceManagementImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member BeginTransactedTerminate.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param reason the argument of type {@code java.lang.String}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.IWorkflowInstanceManagement.BeginTransactedTerminate" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginTransactedTerminate(Guid instanceId, java.lang.String reason, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +377,16 @@ public class IWorkflowInstanceManagementImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member BeginTransactedUnsuspend.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.IWorkflowInstanceManagement.BeginTransactedUnsuspend" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginTransactedUnsuspend(Guid instanceId, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +402,16 @@ public class IWorkflowInstanceManagementImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member BeginUnsuspend.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.IWorkflowInstanceManagement.BeginUnsuspend" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginUnsuspend(Guid instanceId, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -309,6 +427,14 @@ public class IWorkflowInstanceManagementImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member Abandon.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param reason the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.IWorkflowInstanceManagement.Abandon" target="_top">.NET documentation</a>
+     */
     public void Abandon(Guid instanceId, java.lang.String reason) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -319,6 +445,13 @@ public class IWorkflowInstanceManagementImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member Cancel.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.IWorkflowInstanceManagement.Cancel" target="_top">.NET documentation</a>
+     */
     public void Cancel(Guid instanceId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -329,6 +462,13 @@ public class IWorkflowInstanceManagementImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member EndAbandon.
+     *
+     * @param result the argument of type {@code IAsyncResult}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.IWorkflowInstanceManagement.EndAbandon" target="_top">.NET documentation</a>
+     */
     public void EndAbandon(IAsyncResult result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -339,6 +479,13 @@ public class IWorkflowInstanceManagementImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member EndCancel.
+     *
+     * @param result the argument of type {@code IAsyncResult}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.IWorkflowInstanceManagement.EndCancel" target="_top">.NET documentation</a>
+     */
     public void EndCancel(IAsyncResult result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -349,6 +496,13 @@ public class IWorkflowInstanceManagementImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member EndRun.
+     *
+     * @param result the argument of type {@code IAsyncResult}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.IWorkflowInstanceManagement.EndRun" target="_top">.NET documentation</a>
+     */
     public void EndRun(IAsyncResult result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -359,6 +513,13 @@ public class IWorkflowInstanceManagementImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member EndSuspend.
+     *
+     * @param result the argument of type {@code IAsyncResult}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.IWorkflowInstanceManagement.EndSuspend" target="_top">.NET documentation</a>
+     */
     public void EndSuspend(IAsyncResult result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -369,6 +530,13 @@ public class IWorkflowInstanceManagementImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member EndTerminate.
+     *
+     * @param result the argument of type {@code IAsyncResult}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.IWorkflowInstanceManagement.EndTerminate" target="_top">.NET documentation</a>
+     */
     public void EndTerminate(IAsyncResult result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -379,6 +547,13 @@ public class IWorkflowInstanceManagementImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member EndTransactedCancel.
+     *
+     * @param result the argument of type {@code IAsyncResult}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.IWorkflowInstanceManagement.EndTransactedCancel" target="_top">.NET documentation</a>
+     */
     public void EndTransactedCancel(IAsyncResult result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -389,6 +564,13 @@ public class IWorkflowInstanceManagementImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member EndTransactedRun.
+     *
+     * @param result the argument of type {@code IAsyncResult}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.IWorkflowInstanceManagement.EndTransactedRun" target="_top">.NET documentation</a>
+     */
     public void EndTransactedRun(IAsyncResult result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -399,6 +581,13 @@ public class IWorkflowInstanceManagementImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member EndTransactedSuspend.
+     *
+     * @param result the argument of type {@code IAsyncResult}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.IWorkflowInstanceManagement.EndTransactedSuspend" target="_top">.NET documentation</a>
+     */
     public void EndTransactedSuspend(IAsyncResult result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -409,6 +598,13 @@ public class IWorkflowInstanceManagementImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member EndTransactedTerminate.
+     *
+     * @param result the argument of type {@code IAsyncResult}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.IWorkflowInstanceManagement.EndTransactedTerminate" target="_top">.NET documentation</a>
+     */
     public void EndTransactedTerminate(IAsyncResult result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -419,6 +615,13 @@ public class IWorkflowInstanceManagementImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member EndTransactedUnsuspend.
+     *
+     * @param result the argument of type {@code IAsyncResult}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.IWorkflowInstanceManagement.EndTransactedUnsuspend" target="_top">.NET documentation</a>
+     */
     public void EndTransactedUnsuspend(IAsyncResult result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -429,6 +632,13 @@ public class IWorkflowInstanceManagementImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member EndUnsuspend.
+     *
+     * @param result the argument of type {@code IAsyncResult}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.IWorkflowInstanceManagement.EndUnsuspend" target="_top">.NET documentation</a>
+     */
     public void EndUnsuspend(IAsyncResult result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -439,6 +649,13 @@ public class IWorkflowInstanceManagementImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member Run.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.IWorkflowInstanceManagement.Run" target="_top">.NET documentation</a>
+     */
     public void Run(Guid instanceId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -449,6 +666,14 @@ public class IWorkflowInstanceManagementImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member Suspend.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param reason the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.IWorkflowInstanceManagement.Suspend" target="_top">.NET documentation</a>
+     */
     public void Suspend(Guid instanceId, java.lang.String reason) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -459,6 +684,14 @@ public class IWorkflowInstanceManagementImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member Terminate.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param reason the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.IWorkflowInstanceManagement.Terminate" target="_top">.NET documentation</a>
+     */
     public void Terminate(Guid instanceId, java.lang.String reason) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -469,6 +702,13 @@ public class IWorkflowInstanceManagementImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member TransactedCancel.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.IWorkflowInstanceManagement.TransactedCancel" target="_top">.NET documentation</a>
+     */
     public void TransactedCancel(Guid instanceId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -479,6 +719,13 @@ public class IWorkflowInstanceManagementImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member TransactedRun.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.IWorkflowInstanceManagement.TransactedRun" target="_top">.NET documentation</a>
+     */
     public void TransactedRun(Guid instanceId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -489,6 +736,14 @@ public class IWorkflowInstanceManagementImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member TransactedSuspend.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param reason the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.IWorkflowInstanceManagement.TransactedSuspend" target="_top">.NET documentation</a>
+     */
     public void TransactedSuspend(Guid instanceId, java.lang.String reason) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -499,6 +754,14 @@ public class IWorkflowInstanceManagementImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member TransactedTerminate.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param reason the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.IWorkflowInstanceManagement.TransactedTerminate" target="_top">.NET documentation</a>
+     */
     public void TransactedTerminate(Guid instanceId, java.lang.String reason) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -509,6 +772,13 @@ public class IWorkflowInstanceManagementImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member TransactedUnsuspend.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.IWorkflowInstanceManagement.TransactedUnsuspend" target="_top">.NET documentation</a>
+     */
     public void TransactedUnsuspend(Guid instanceId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -519,6 +789,13 @@ public class IWorkflowInstanceManagementImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member Unsuspend.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.IWorkflowInstanceManagement.Unsuspend" target="_top">.NET documentation</a>
+     */
     public void Unsuspend(Guid instanceId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

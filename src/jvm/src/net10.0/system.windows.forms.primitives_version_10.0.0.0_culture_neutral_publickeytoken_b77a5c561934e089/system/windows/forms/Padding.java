@@ -101,7 +101,10 @@ public class Padding extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Padding(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,16 @@ public class Padding extends system.ValueType  {
     public Padding() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param left the argument of type {@code int}
+     * @param top the argument of type {@code int}
+     * @param right the argument of type {@code int}
+     * @param bottom the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Padding.-ctor" target="_top">.NET documentation</a>
+     */
     public Padding(int left, int top, int right, int bottom) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +174,13 @@ public class Padding extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param all the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Padding.-ctor" target="_top">.NET documentation</a>
+     */
     public Padding(int all) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +196,14 @@ public class Padding extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code Padding}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Padding.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(Padding other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +218,15 @@ public class Padding extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param p1 the argument of type {@code Padding}
+     * @param p2 the argument of type {@code Padding}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Padding.Add" target="_top">.NET documentation</a>
+     */
     public static Padding Add(Padding p1, Padding p2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -205,6 +242,15 @@ public class Padding extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Subtract.
+     *
+     * @param p1 the argument of type {@code Padding}
+     * @param p2 the argument of type {@code Padding}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Padding.Subtract" target="_top">.NET documentation</a>
+     */
     public static Padding Subtract(Padding p1, Padding p2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -224,6 +270,13 @@ public class Padding extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property All.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Padding.All" target="_top">.NET documentation</a>
+     */
     public int getAll() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +317,13 @@ public class Padding extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property All.
+     *
+     * @param All the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Padding.All" target="_top">.NET documentation</a>
+     */
     public void setAll(int All) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +334,13 @@ public class Padding extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Bottom.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Padding.Bottom" target="_top">.NET documentation</a>
+     */
     public int getBottom() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -314,6 +381,13 @@ public class Padding extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Bottom.
+     *
+     * @param Bottom the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Padding.Bottom" target="_top">.NET documentation</a>
+     */
     public void setBottom(int Bottom) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -324,6 +398,13 @@ public class Padding extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Horizontal.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Padding.Horizontal" target="_top">.NET documentation</a>
+     */
     public int getHorizontal() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -364,6 +445,13 @@ public class Padding extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Left.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Padding.Left" target="_top">.NET documentation</a>
+     */
     public int getLeft() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -404,6 +492,13 @@ public class Padding extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Left.
+     *
+     * @param Left the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Padding.Left" target="_top">.NET documentation</a>
+     */
     public void setLeft(int Left) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -414,6 +509,13 @@ public class Padding extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Right.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Padding.Right" target="_top">.NET documentation</a>
+     */
     public int getRight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -454,6 +556,13 @@ public class Padding extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Right.
+     *
+     * @param Right the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Padding.Right" target="_top">.NET documentation</a>
+     */
     public void setRight(int Right) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -464,6 +573,13 @@ public class Padding extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Top.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Padding.Top" target="_top">.NET documentation</a>
+     */
     public int getTop() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -504,6 +620,13 @@ public class Padding extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Top.
+     *
+     * @param Top the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Padding.Top" target="_top">.NET documentation</a>
+     */
     public void setTop(int Top) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -514,6 +637,13 @@ public class Padding extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Vertical.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Padding.Vertical" target="_top">.NET documentation</a>
+     */
     public int getVertical() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -554,6 +684,13 @@ public class Padding extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Size.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Padding.Size" target="_top">.NET documentation</a>
+     */
     public Size getSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

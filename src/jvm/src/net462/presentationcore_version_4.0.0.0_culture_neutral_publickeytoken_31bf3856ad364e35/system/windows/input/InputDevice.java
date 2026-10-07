@@ -102,7 +102,10 @@ public class InputDevice extends system.windows.threading.DispatcherObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public InputDevice(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class InputDevice extends system.windows.threading.DispatcherObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Target.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InputDevice.Target" target="_top">.NET documentation</a>
+     */
     public IInputElement getTarget() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +184,13 @@ public class InputDevice extends system.windows.threading.DispatcherObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ActiveSource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InputDevice.ActiveSource" target="_top">.NET documentation</a>
+     */
     public PresentationSource getActiveSource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

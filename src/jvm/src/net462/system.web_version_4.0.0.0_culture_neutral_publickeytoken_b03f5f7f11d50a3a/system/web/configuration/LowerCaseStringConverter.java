@@ -102,7 +102,10 @@ public class LowerCaseStringConverter extends system.componentmodel.TypeConverte
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public LowerCaseStringConverter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class LowerCaseStringConverter extends system.componentmodel.TypeConverte
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.LowerCaseStringConverter.-ctor" target="_top">.NET documentation</a>
+     */
     public LowerCaseStringConverter() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,15 @@ public class LowerCaseStringConverter extends system.componentmodel.TypeConverte
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CanConvertFrom.
+     *
+     * @param ctx the argument of type {@code ITypeDescriptorContext}
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.LowerCaseStringConverter.CanConvertFrom" target="_top">.NET documentation</a>
+     */
     public boolean CanConvertFrom(ITypeDescriptorContext ctx, NetType type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +195,15 @@ public class LowerCaseStringConverter extends system.componentmodel.TypeConverte
         }
     }
 
+    /**
+     * Invokes the .NET member CanConvertTo.
+     *
+     * @param ctx the argument of type {@code ITypeDescriptorContext}
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.LowerCaseStringConverter.CanConvertTo" target="_top">.NET documentation</a>
+     */
     public boolean CanConvertTo(ITypeDescriptorContext ctx, NetType type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +218,22 @@ public class LowerCaseStringConverter extends system.componentmodel.TypeConverte
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertFrom.
+     *
+     * @param ctx the argument of type {@code ITypeDescriptorContext}
+     * @param ci the argument of type {@code CultureInfo}
+     * @param data the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.LowerCaseStringConverter.ConvertFrom" target="_top">.NET documentation</a>
+     */
     public NetObject ConvertFrom(ITypeDescriptorContext ctx, CultureInfo ci, NetObject data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +249,23 @@ public class LowerCaseStringConverter extends system.componentmodel.TypeConverte
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertTo.
+     *
+     * @param ctx the argument of type {@code ITypeDescriptorContext}
+     * @param ci the argument of type {@code CultureInfo}
+     * @param value the argument of type {@code NetObject}
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.LowerCaseStringConverter.ConvertTo" target="_top">.NET documentation</a>
+     */
     public NetObject ConvertTo(ITypeDescriptorContext ctx, CultureInfo ci, NetObject value, NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

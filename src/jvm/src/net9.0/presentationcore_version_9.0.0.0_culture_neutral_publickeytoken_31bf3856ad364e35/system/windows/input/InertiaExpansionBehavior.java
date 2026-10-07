@@ -99,7 +99,10 @@ public class InertiaExpansionBehavior extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public InertiaExpansionBehavior(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class InertiaExpansionBehavior extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InertiaExpansionBehavior.-ctor" target="_top">.NET documentation</a>
+     */
     public InertiaExpansionBehavior() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class InertiaExpansionBehavior extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DesiredDeceleration.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InertiaExpansionBehavior.DesiredDeceleration" target="_top">.NET documentation</a>
+     */
     public double getDesiredDeceleration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +220,17 @@ public class InertiaExpansionBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DesiredDeceleration.
+     *
+     * @param DesiredDeceleration the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InertiaExpansionBehavior.DesiredDeceleration" target="_top">.NET documentation</a>
+     */
     public void setDesiredDeceleration(double DesiredDeceleration) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +241,13 @@ public class InertiaExpansionBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InitialRadius.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InertiaExpansionBehavior.InitialRadius" target="_top">.NET documentation</a>
+     */
     public double getInitialRadius() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +288,13 @@ public class InertiaExpansionBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InitialRadius.
+     *
+     * @param InitialRadius the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InertiaExpansionBehavior.InitialRadius" target="_top">.NET documentation</a>
+     */
     public void setInitialRadius(double InitialRadius) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +305,13 @@ public class InertiaExpansionBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DesiredExpansion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InertiaExpansionBehavior.DesiredExpansion" target="_top">.NET documentation</a>
+     */
     public Vector getDesiredExpansion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +327,13 @@ public class InertiaExpansionBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DesiredExpansion.
+     *
+     * @param DesiredExpansion the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InertiaExpansionBehavior.DesiredExpansion" target="_top">.NET documentation</a>
+     */
     public void setDesiredExpansion(Vector DesiredExpansion) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +344,13 @@ public class InertiaExpansionBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InitialVelocity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InertiaExpansionBehavior.InitialVelocity" target="_top">.NET documentation</a>
+     */
     public Vector getInitialVelocity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +366,13 @@ public class InertiaExpansionBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InitialVelocity.
+     *
+     * @param InitialVelocity the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InertiaExpansionBehavior.InitialVelocity" target="_top">.NET documentation</a>
+     */
     public void setInitialVelocity(Vector InitialVelocity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

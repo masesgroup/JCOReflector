@@ -98,7 +98,10 @@ public class TypeEntry extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TypeEntry(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,13 @@ public class TypeEntry extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AssemblyName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.TypeEntry.AssemblyName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAssemblyName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +181,13 @@ public class TypeEntry extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AssemblyName.
+     *
+     * @param AssemblyName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.TypeEntry.AssemblyName" target="_top">.NET documentation</a>
+     */
     public void setAssemblyName(java.lang.String AssemblyName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +198,13 @@ public class TypeEntry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.TypeEntry.TypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +219,13 @@ public class TypeEntry extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TypeName.
+     *
+     * @param TypeName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.TypeEntry.TypeName" target="_top">.NET documentation</a>
+     */
     public void setTypeName(java.lang.String TypeName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

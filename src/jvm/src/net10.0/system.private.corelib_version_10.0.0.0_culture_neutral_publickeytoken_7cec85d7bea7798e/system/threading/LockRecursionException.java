@@ -102,7 +102,9 @@ public class LockRecursionException extends NetException {
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public LockRecursionException(java.lang.Object instance) {
         super(instance);

@@ -100,7 +100,10 @@ public class JsonPolymorphicAttribute extends system.text.json.serialization.Jso
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public JsonPolymorphicAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class JsonPolymorphicAttribute extends system.text.json.serialization.Jso
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonPolymorphicAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public JsonPolymorphicAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class JsonPolymorphicAttribute extends system.text.json.serialization.Jso
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IgnoreUnrecognizedTypeDiscriminators.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonPolymorphicAttribute.IgnoreUnrecognizedTypeDiscriminators" target="_top">.NET documentation</a>
+     */
     public boolean getIgnoreUnrecognizedTypeDiscriminators() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +195,13 @@ public class JsonPolymorphicAttribute extends system.text.json.serialization.Jso
         }
     }
 
+    /**
+     * Sets the value of the .NET property IgnoreUnrecognizedTypeDiscriminators.
+     *
+     * @param IgnoreUnrecognizedTypeDiscriminators the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonPolymorphicAttribute.IgnoreUnrecognizedTypeDiscriminators" target="_top">.NET documentation</a>
+     */
     public void setIgnoreUnrecognizedTypeDiscriminators(boolean IgnoreUnrecognizedTypeDiscriminators) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +212,13 @@ public class JsonPolymorphicAttribute extends system.text.json.serialization.Jso
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeDiscriminatorPropertyName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonPolymorphicAttribute.TypeDiscriminatorPropertyName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTypeDiscriminatorPropertyName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +233,13 @@ public class JsonPolymorphicAttribute extends system.text.json.serialization.Jso
         }
     }
 
+    /**
+     * Sets the value of the .NET property TypeDiscriminatorPropertyName.
+     *
+     * @param TypeDiscriminatorPropertyName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonPolymorphicAttribute.TypeDiscriminatorPropertyName" target="_top">.NET documentation</a>
+     */
     public void setTypeDiscriminatorPropertyName(java.lang.String TypeDiscriminatorPropertyName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +250,13 @@ public class JsonPolymorphicAttribute extends system.text.json.serialization.Jso
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnknownDerivedTypeHandling.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonPolymorphicAttribute.UnknownDerivedTypeHandling" target="_top">.NET documentation</a>
+     */
     public JsonUnknownDerivedTypeHandling getUnknownDerivedTypeHandling() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +272,13 @@ public class JsonPolymorphicAttribute extends system.text.json.serialization.Jso
         }
     }
 
+    /**
+     * Sets the value of the .NET property UnknownDerivedTypeHandling.
+     *
+     * @param UnknownDerivedTypeHandling the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonPolymorphicAttribute.UnknownDerivedTypeHandling" target="_top">.NET documentation</a>
+     */
     public void setUnknownDerivedTypeHandling(JsonUnknownDerivedTypeHandling UnknownDerivedTypeHandling) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

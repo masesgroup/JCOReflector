@@ -105,7 +105,10 @@ public class StylusEventArgs extends system.windows.input.InputEventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public StylusEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,15 @@ public class StylusEventArgs extends system.windows.input.InputEventArgs  {
     public StylusEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param stylus the argument of type {@code StylusDevice}
+     * @param timestamp the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.StylusEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public StylusEventArgs(StylusDevice stylus, int timestamp) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +182,20 @@ public class StylusEventArgs extends system.windows.input.InputEventArgs  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetStylusPoints.
+     *
+     * @param relativeTo the argument of type {@code IInputElement}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.StylusEventArgs.GetStylusPoints" target="_top">.NET documentation</a>
+     */
     public StylusPointCollection GetStylusPoints(IInputElement relativeTo) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +211,15 @@ public class StylusEventArgs extends system.windows.input.InputEventArgs  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetStylusPoints.
+     *
+     * @param relativeTo the argument of type {@code IInputElement}
+     * @param subsetToReformatTo the argument of type {@code StylusPointDescription}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.StylusEventArgs.GetStylusPoints" target="_top">.NET documentation</a>
+     */
     public StylusPointCollection GetStylusPoints(IInputElement relativeTo, StylusPointDescription subsetToReformatTo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +235,20 @@ public class StylusEventArgs extends system.windows.input.InputEventArgs  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPosition.
+     *
+     * @param relativeTo the argument of type {@code IInputElement}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.StylusEventArgs.GetPosition" target="_top">.NET documentation</a>
+     */
     public Point GetPosition(IInputElement relativeTo) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +268,19 @@ public class StylusEventArgs extends system.windows.input.InputEventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property InAir.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.StylusEventArgs.InAir" target="_top">.NET documentation</a>
+     */
     public boolean getInAir() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +295,19 @@ public class StylusEventArgs extends system.windows.input.InputEventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Inverted.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.StylusEventArgs.Inverted" target="_top">.NET documentation</a>
+     */
     public boolean getInverted() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +322,13 @@ public class StylusEventArgs extends system.windows.input.InputEventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StylusDevice.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.StylusEventArgs.StylusDevice" target="_top">.NET documentation</a>
+     */
     public StylusDevice getStylusDevice() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

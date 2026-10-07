@@ -99,7 +99,10 @@ public class RegexWorker extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RegexWorker(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,13 @@ public class RegexWorker extends NetObject  {
     public RegexWorker() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param browserCaps the argument of type {@code HttpBrowserCapabilities}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.RegexWorker.-ctor" target="_top">.NET documentation</a>
+     */
     public RegexWorker(HttpBrowserCapabilities browserCaps) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +174,28 @@ public class RegexWorker extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ProcessRegex.
+     *
+     * @param target the argument of type {@code java.lang.String}
+     * @param regexExpression the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.RegexWorker.ProcessRegex" target="_top">.NET documentation</a>
+     */
     public boolean ProcessRegex(java.lang.String target, java.lang.String regexExpression) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MemberAccessException, system.IndexOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.security.SecurityException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

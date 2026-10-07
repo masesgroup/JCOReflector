@@ -106,7 +106,9 @@ public class XamlParseException extends system.SystemException {
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public XamlParseException(java.lang.Object instance) {
         super(instance);
@@ -167,6 +169,16 @@ public class XamlParseException extends system.SystemException {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param lineNumber the argument of type {@code int}
+     * @param linePosition the argument of type {@code int}
+     * @param innerException the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlParseException.-ctor" target="_top">.NET documentation</a>
+     */
     public XamlParseException(java.lang.String message, int lineNumber, int linePosition, NetException innerException) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -177,6 +189,15 @@ public class XamlParseException extends system.SystemException {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param lineNumber the argument of type {@code int}
+     * @param linePosition the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlParseException.-ctor" target="_top">.NET documentation</a>
+     */
     public XamlParseException(java.lang.String message, int lineNumber, int linePosition) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -191,6 +212,24 @@ public class XamlParseException extends system.SystemException {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetObjectData.
+     *
+     * @param info the argument of type {@code SerializationInfo}
+     * @param context the argument of type {@code StreamingContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlParseException.GetObjectData" target="_top">.NET documentation</a>
+     */
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.BadImageFormatException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +244,13 @@ public class XamlParseException extends system.SystemException {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property LineNumber.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlParseException.LineNumber" target="_top">.NET documentation</a>
+     */
     public int getLineNumber() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +291,13 @@ public class XamlParseException extends system.SystemException {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LineNumber.
+     *
+     * @param LineNumber the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlParseException.LineNumber" target="_top">.NET documentation</a>
+     */
     public void setLineNumber(int LineNumber) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +308,13 @@ public class XamlParseException extends system.SystemException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LinePosition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlParseException.LinePosition" target="_top">.NET documentation</a>
+     */
     public int getLinePosition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +355,13 @@ public class XamlParseException extends system.SystemException {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LinePosition.
+     *
+     * @param LinePosition the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlParseException.LinePosition" target="_top">.NET documentation</a>
+     */
     public void setLinePosition(int LinePosition) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +372,13 @@ public class XamlParseException extends system.SystemException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeyContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlParseException.KeyContext" target="_top">.NET documentation</a>
+     */
     public NetObject getKeyContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +394,13 @@ public class XamlParseException extends system.SystemException {
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeyContext.
+     *
+     * @param KeyContext the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlParseException.KeyContext" target="_top">.NET documentation</a>
+     */
     public void setKeyContext(NetObject KeyContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -330,6 +411,13 @@ public class XamlParseException extends system.SystemException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NameContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlParseException.NameContext" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNameContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -344,6 +432,13 @@ public class XamlParseException extends system.SystemException {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NameContext.
+     *
+     * @param NameContext the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlParseException.NameContext" target="_top">.NET documentation</a>
+     */
     public void setNameContext(java.lang.String NameContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -354,6 +449,13 @@ public class XamlParseException extends system.SystemException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UidContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlParseException.UidContext" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUidContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -368,6 +470,13 @@ public class XamlParseException extends system.SystemException {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UidContext.
+     *
+     * @param UidContext the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlParseException.UidContext" target="_top">.NET documentation</a>
+     */
     public void setUidContext(java.lang.String UidContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -378,6 +487,13 @@ public class XamlParseException extends system.SystemException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BaseUri.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlParseException.BaseUri" target="_top">.NET documentation</a>
+     */
     public Uri getBaseUri() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -393,6 +509,13 @@ public class XamlParseException extends system.SystemException {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BaseUri.
+     *
+     * @param BaseUri the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlParseException.BaseUri" target="_top">.NET documentation</a>
+     */
     public void setBaseUri(Uri BaseUri) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

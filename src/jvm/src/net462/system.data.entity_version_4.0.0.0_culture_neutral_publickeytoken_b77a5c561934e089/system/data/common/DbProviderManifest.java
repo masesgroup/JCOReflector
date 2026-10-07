@@ -102,7 +102,10 @@ public class DbProviderManifest extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DbProviderManifest(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,14 @@ public class DbProviderManifest extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member SupportsEscapingLikeArgument.
+     *
+     * @param escapeCharacter the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbProviderManifest.SupportsEscapingLikeArgument" target="_top">.NET documentation</a>
+     */
     public boolean SupportsEscapingLikeArgument(JCORefOut escapeCharacter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +180,13 @@ public class DbProviderManifest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetStoreFunctions.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbProviderManifest.GetStoreFunctions" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 GetStoreFunctions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +202,14 @@ public class DbProviderManifest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFacetDescriptions.
+     *
+     * @param edmType the argument of type {@code EdmType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbProviderManifest.GetFacetDescriptions" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 GetFacetDescriptions(EdmType edmType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +225,13 @@ public class DbProviderManifest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetStoreTypes.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbProviderManifest.GetStoreTypes" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 GetStoreTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +247,14 @@ public class DbProviderManifest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEdmType.
+     *
+     * @param storeType the argument of type {@code TypeUsage}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbProviderManifest.GetEdmType" target="_top">.NET documentation</a>
+     */
     public TypeUsage GetEdmType(TypeUsage storeType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +270,14 @@ public class DbProviderManifest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetStoreType.
+     *
+     * @param edmType the argument of type {@code TypeUsage}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbProviderManifest.GetStoreType" target="_top">.NET documentation</a>
+     */
     public TypeUsage GetStoreType(TypeUsage edmType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +293,25 @@ public class DbProviderManifest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EscapeLikeArgument.
+     *
+     * @param argument the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.data.ProviderIncompatibleException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbProviderManifest.EscapeLikeArgument" target="_top">.NET documentation</a>
+     */
     public java.lang.String EscapeLikeArgument(java.lang.String argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.data.ProviderIncompatibleException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +326,29 @@ public class DbProviderManifest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetInformation.
+     *
+     * @param informationType the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.data.ProviderIncompatibleException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbProviderManifest.GetInformation" target="_top">.NET documentation</a>
+     */
     public XmlReader GetInformation(java.lang.String informationType) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.data.ProviderIncompatibleException, system.NotSupportedException, system.xml.XmlException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +368,13 @@ public class DbProviderManifest extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property NamespaceName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbProviderManifest.NamespaceName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNamespaceName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

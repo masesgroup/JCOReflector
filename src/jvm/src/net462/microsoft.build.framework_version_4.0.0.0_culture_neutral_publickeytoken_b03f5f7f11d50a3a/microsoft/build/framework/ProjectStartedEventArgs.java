@@ -103,7 +103,10 @@ public class ProjectStartedEventArgs extends microsoft.build.framework.BuildStat
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ProjectStartedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,21 @@ public class ProjectStartedEventArgs extends microsoft.build.framework.BuildStat
     public ProjectStartedEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param projectId the argument of type {@code int}
+     * @param message the argument of type {@code java.lang.String}
+     * @param helpKeyword the argument of type {@code java.lang.String}
+     * @param projectFile the argument of type {@code java.lang.String}
+     * @param targetNames the argument of type {@code java.lang.String}
+     * @param properties the argument of type {@code IEnumerable}
+     * @param items the argument of type {@code IEnumerable}
+     * @param parentBuildEventContext the argument of type {@code BuildEventContext}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ProjectStartedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ProjectStartedEventArgs(int projectId, java.lang.String message, java.lang.String helpKeyword, java.lang.String projectFile, java.lang.String targetNames, IEnumerable properties, IEnumerable items, BuildEventContext parentBuildEventContext) throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +181,23 @@ public class ProjectStartedEventArgs extends microsoft.build.framework.BuildStat
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param projectId the argument of type {@code int}
+     * @param message the argument of type {@code java.lang.String}
+     * @param helpKeyword the argument of type {@code java.lang.String}
+     * @param projectFile the argument of type {@code java.lang.String}
+     * @param targetNames the argument of type {@code java.lang.String}
+     * @param properties the argument of type {@code IEnumerable}
+     * @param items the argument of type {@code IEnumerable}
+     * @param parentBuildEventContext the argument of type {@code BuildEventContext}
+     * @param globalProperties the argument of type {@code IDictionary_2}
+     * @param toolsVersion the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ProjectStartedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ProjectStartedEventArgs(int projectId, java.lang.String message, java.lang.String helpKeyword, java.lang.String projectFile, java.lang.String targetNames, IEnumerable properties, IEnumerable items, BuildEventContext parentBuildEventContext, IDictionary_2 globalProperties, java.lang.String toolsVersion) throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -173,6 +208,23 @@ public class ProjectStartedEventArgs extends microsoft.build.framework.BuildStat
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param projectId the argument of type {@code int}
+     * @param message the argument of type {@code java.lang.String}
+     * @param helpKeyword the argument of type {@code java.lang.String}
+     * @param projectFile the argument of type {@code java.lang.String}
+     * @param targetNames the argument of type {@code java.lang.String}
+     * @param properties the argument of type {@code IEnumerable}
+     * @param items the argument of type {@code IEnumerable}
+     * @param parentBuildEventContext the argument of type {@code BuildEventContext}
+     * @param eventTimestamp the argument of type {@code DateTime}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ProjectStartedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ProjectStartedEventArgs(int projectId, java.lang.String message, java.lang.String helpKeyword, java.lang.String projectFile, java.lang.String targetNames, IEnumerable properties, IEnumerable items, BuildEventContext parentBuildEventContext, DateTime eventTimestamp) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -183,6 +235,21 @@ public class ProjectStartedEventArgs extends microsoft.build.framework.BuildStat
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param helpKeyword the argument of type {@code java.lang.String}
+     * @param projectFile the argument of type {@code java.lang.String}
+     * @param targetNames the argument of type {@code java.lang.String}
+     * @param properties the argument of type {@code IEnumerable}
+     * @param items the argument of type {@code IEnumerable}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ProjectStartedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ProjectStartedEventArgs(java.lang.String message, java.lang.String helpKeyword, java.lang.String projectFile, java.lang.String targetNames, IEnumerable properties, IEnumerable items) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -193,6 +260,24 @@ public class ProjectStartedEventArgs extends microsoft.build.framework.BuildStat
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param helpKeyword the argument of type {@code java.lang.String}
+     * @param projectFile the argument of type {@code java.lang.String}
+     * @param targetNames the argument of type {@code java.lang.String}
+     * @param properties the argument of type {@code IEnumerable}
+     * @param items the argument of type {@code IEnumerable}
+     * @param eventTimestamp the argument of type {@code DateTime}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ProjectStartedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ProjectStartedEventArgs(java.lang.String message, java.lang.String helpKeyword, java.lang.String projectFile, java.lang.String targetNames, IEnumerable properties, IEnumerable items, DateTime eventTimestamp) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
             // add reference to assemblyName.dll file
@@ -212,6 +297,13 @@ public class ProjectStartedEventArgs extends microsoft.build.framework.BuildStat
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ProjectId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ProjectStartedEventArgs.ProjectId" target="_top">.NET documentation</a>
+     */
     public int getProjectId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +344,13 @@ public class ProjectStartedEventArgs extends microsoft.build.framework.BuildStat
         }
     }
 
+    /**
+     * Gets the value of the .NET property ParentProjectBuildEventContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ProjectStartedEventArgs.ParentProjectBuildEventContext" target="_top">.NET documentation</a>
+     */
     public BuildEventContext getParentProjectBuildEventContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +366,13 @@ public class ProjectStartedEventArgs extends microsoft.build.framework.BuildStat
         }
     }
 
+    /**
+     * Gets the value of the .NET property GlobalProperties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ProjectStartedEventArgs.GlobalProperties" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 getGlobalProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +388,13 @@ public class ProjectStartedEventArgs extends microsoft.build.framework.BuildStat
         }
     }
 
+    /**
+     * Sets the value of the .NET property GlobalProperties.
+     *
+     * @param GlobalProperties the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ProjectStartedEventArgs.GlobalProperties" target="_top">.NET documentation</a>
+     */
     public void setGlobalProperties(IDictionary_2 GlobalProperties) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +405,13 @@ public class ProjectStartedEventArgs extends microsoft.build.framework.BuildStat
         }
     }
 
+    /**
+     * Gets the value of the .NET property Items.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ProjectStartedEventArgs.Items" target="_top">.NET documentation</a>
+     */
     public IEnumerable getItems() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -307,6 +427,13 @@ public class ProjectStartedEventArgs extends microsoft.build.framework.BuildStat
         }
     }
 
+    /**
+     * Gets the value of the .NET property Properties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ProjectStartedEventArgs.Properties" target="_top">.NET documentation</a>
+     */
     public IEnumerable getProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -322,6 +449,13 @@ public class ProjectStartedEventArgs extends microsoft.build.framework.BuildStat
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProjectFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ProjectStartedEventArgs.ProjectFile" target="_top">.NET documentation</a>
+     */
     public java.lang.String getProjectFile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -336,6 +470,13 @@ public class ProjectStartedEventArgs extends microsoft.build.framework.BuildStat
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetNames.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ProjectStartedEventArgs.TargetNames" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTargetNames() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -350,6 +491,13 @@ public class ProjectStartedEventArgs extends microsoft.build.framework.BuildStat
         }
     }
 
+    /**
+     * Gets the value of the .NET property ToolsVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ProjectStartedEventArgs.ToolsVersion" target="_top">.NET documentation</a>
+     */
     public java.lang.String getToolsVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -364,6 +512,13 @@ public class ProjectStartedEventArgs extends microsoft.build.framework.BuildStat
         }
     }
 
+    /**
+     * Sets the value of the .NET property ToolsVersion.
+     *
+     * @param ToolsVersion the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ProjectStartedEventArgs.ToolsVersion" target="_top">.NET documentation</a>
+     */
     public void setToolsVersion(java.lang.String ToolsVersion) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

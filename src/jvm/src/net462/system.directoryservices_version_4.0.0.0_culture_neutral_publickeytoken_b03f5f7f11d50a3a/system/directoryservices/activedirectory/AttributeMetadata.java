@@ -100,7 +100,10 @@ public class AttributeMetadata extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AttributeMetadata(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class AttributeMetadata extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Version.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.AttributeMetadata.Version" target="_top">.NET documentation</a>
+     */
     public int getVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +209,13 @@ public class AttributeMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LocalChangeUsn.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.AttributeMetadata.LocalChangeUsn" target="_top">.NET documentation</a>
+     */
     public long getLocalChangeUsn() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +256,13 @@ public class AttributeMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OriginatingChangeUsn.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.AttributeMetadata.OriginatingChangeUsn" target="_top">.NET documentation</a>
+     */
     public long getOriginatingChangeUsn() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +303,13 @@ public class AttributeMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LastOriginatingChangeTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.AttributeMetadata.LastOriginatingChangeTime" target="_top">.NET documentation</a>
+     */
     public DateTime getLastOriginatingChangeTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +325,13 @@ public class AttributeMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LastOriginatingInvocationId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.AttributeMetadata.LastOriginatingInvocationId" target="_top">.NET documentation</a>
+     */
     public Guid getLastOriginatingInvocationId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -309,6 +347,13 @@ public class AttributeMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.AttributeMetadata.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -323,6 +368,27 @@ public class AttributeMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OriginatingServer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.directoryservices.activedirectory.ActiveDirectoryOperationException if the .NET member raises it
+     * @throws system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.AttributeMetadata.OriginatingServer" target="_top">.NET documentation</a>
+     */
     public java.lang.String getOriginatingServer() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentOutOfRangeException, system.AccessViolationException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

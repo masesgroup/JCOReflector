@@ -101,7 +101,10 @@ public class WizardStepTemplatedEditableRegion extends system.web.ui.design.Temp
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WizardStepTemplatedEditableRegion(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,15 @@ public class WizardStepTemplatedEditableRegion extends system.web.ui.design.Temp
     public WizardStepTemplatedEditableRegion() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param templateDefinition the argument of type {@code TemplateDefinition}
+     * @param wizardStep the argument of type {@code WizardStepBase}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebControls.WizardStepTemplatedEditableRegion.-ctor" target="_top">.NET documentation</a>
+     */
     public WizardStepTemplatedEditableRegion(TemplateDefinition templateDefinition, WizardStepBase wizardStep) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +182,13 @@ public class WizardStepTemplatedEditableRegion extends system.web.ui.design.Temp
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Step.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebControls.WizardStepTemplatedEditableRegion.Step" target="_top">.NET documentation</a>
+     */
     public WizardStepBase getStep() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

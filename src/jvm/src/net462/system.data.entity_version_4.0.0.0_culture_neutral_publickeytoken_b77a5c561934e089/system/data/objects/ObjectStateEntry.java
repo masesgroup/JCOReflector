@@ -108,7 +108,10 @@ public class ObjectStateEntry extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ObjectStateEntry(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -161,6 +164,14 @@ public class ObjectStateEntry extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsPropertyChanged.
+     *
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectStateEntry.IsPropertyChanged" target="_top">.NET documentation</a>
+     */
     public boolean IsPropertyChanged(java.lang.String propertyName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +186,13 @@ public class ObjectStateEntry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetModifiedProperties.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectStateEntry.GetModifiedProperties" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 GetModifiedProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +208,13 @@ public class ObjectStateEntry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetUpdatableOriginalValues.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectStateEntry.GetUpdatableOriginalValues" target="_top">.NET documentation</a>
+     */
     public OriginalValueRecord GetUpdatableOriginalValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +230,12 @@ public class ObjectStateEntry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AcceptChanges.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectStateEntry.AcceptChanges" target="_top">.NET documentation</a>
+     */
     public void AcceptChanges() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +246,13 @@ public class ObjectStateEntry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ApplyCurrentValues.
+     *
+     * @param currentEntity the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectStateEntry.ApplyCurrentValues" target="_top">.NET documentation</a>
+     */
     public void ApplyCurrentValues(NetObject currentEntity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +263,13 @@ public class ObjectStateEntry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ApplyOriginalValues.
+     *
+     * @param originalEntity the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectStateEntry.ApplyOriginalValues" target="_top">.NET documentation</a>
+     */
     public void ApplyOriginalValues(NetObject originalEntity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +280,13 @@ public class ObjectStateEntry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ChangeState.
+     *
+     * @param state the argument of type {@code EntityState}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectStateEntry.ChangeState" target="_top">.NET documentation</a>
+     */
     public void ChangeState(EntityState state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +297,12 @@ public class ObjectStateEntry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Delete.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectStateEntry.Delete" target="_top">.NET documentation</a>
+     */
     public void Delete() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +313,13 @@ public class ObjectStateEntry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RejectPropertyChanges.
+     *
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectStateEntry.RejectPropertyChanges" target="_top">.NET documentation</a>
+     */
     public void RejectPropertyChanges(java.lang.String propertyName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +330,12 @@ public class ObjectStateEntry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetModified.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectStateEntry.SetModified" target="_top">.NET documentation</a>
+     */
     public void SetModified() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +346,13 @@ public class ObjectStateEntry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetModifiedProperty.
+     *
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectStateEntry.SetModifiedProperty" target="_top">.NET documentation</a>
+     */
     public void SetModifiedProperty(java.lang.String propertyName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,8 +366,14 @@ public class ObjectStateEntry extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIEntityChangeTracker method available in IEntityChangeTracker to obtain an object with an invocable method
+     *
+     * @param entityMemberName the argument of type {@code java.lang.String}
+     * @param complexObject the argument of type {@code NetObject}
+     * @param complexObjectMemberName the argument of type {@code java.lang.String}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.IEntityChangeTracker.EntityComplexMemberChanged" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void EntityComplexMemberChanged(java.lang.String entityMemberName, NetObject complexObject, java.lang.String complexObjectMemberName) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEntityChangeTracker to obtain the full interface.");
     }
@@ -297,8 +381,14 @@ public class ObjectStateEntry extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIEntityChangeTracker method available in IEntityChangeTracker to obtain an object with an invocable method
+     *
+     * @param entityMemberName the argument of type {@code java.lang.String}
+     * @param complexObject the argument of type {@code NetObject}
+     * @param complexObjectMemberName the argument of type {@code java.lang.String}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.IEntityChangeTracker.EntityComplexMemberChanging" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void EntityComplexMemberChanging(java.lang.String entityMemberName, NetObject complexObject, java.lang.String complexObjectMemberName) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEntityChangeTracker to obtain the full interface.");
     }
@@ -306,8 +396,12 @@ public class ObjectStateEntry extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIEntityChangeTracker method available in IEntityChangeTracker to obtain an object with an invocable method
+     *
+     * @param entityMemberName the argument of type {@code java.lang.String}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.IEntityChangeTracker.EntityMemberChanged" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void EntityMemberChanged(java.lang.String entityMemberName) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEntityChangeTracker to obtain the full interface.");
     }
@@ -315,8 +409,12 @@ public class ObjectStateEntry extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIEntityChangeTracker method available in IEntityChangeTracker to obtain an object with an invocable method
+     *
+     * @param entityMemberName the argument of type {@code java.lang.String}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.IEntityChangeTracker.EntityMemberChanging" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void EntityMemberChanging(java.lang.String entityMemberName) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEntityChangeTracker to obtain the full interface.");
     }
@@ -325,6 +423,13 @@ public class ObjectStateEntry extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsRelationship.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectStateEntry.IsRelationship" target="_top">.NET documentation</a>
+     */
     public boolean getIsRelationship() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -339,6 +444,13 @@ public class ObjectStateEntry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OriginalValues.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectStateEntry.OriginalValues" target="_top">.NET documentation</a>
+     */
     public DbDataRecord getOriginalValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -354,6 +466,13 @@ public class ObjectStateEntry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EntityKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectStateEntry.EntityKey" target="_top">.NET documentation</a>
+     */
     public EntityKey getEntityKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -369,6 +488,13 @@ public class ObjectStateEntry extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EntityKey.
+     *
+     * @param EntityKey the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectStateEntry.EntityKey" target="_top">.NET documentation</a>
+     */
     public void setEntityKey(EntityKey EntityKey) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -379,6 +505,13 @@ public class ObjectStateEntry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property State.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectStateEntry.State" target="_top">.NET documentation</a>
+     */
     public EntityState getState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -394,6 +527,13 @@ public class ObjectStateEntry extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property State.
+     *
+     * @param State the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectStateEntry.State" target="_top">.NET documentation</a>
+     */
     public void setState(EntityState State) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -404,6 +544,19 @@ public class ObjectStateEntry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EntitySet.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectStateEntry.EntitySet" target="_top">.NET documentation</a>
+     */
     public EntitySetBase getEntitySet() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -419,6 +572,13 @@ public class ObjectStateEntry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentValues.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectStateEntry.CurrentValues" target="_top">.NET documentation</a>
+     */
     public CurrentValueRecord getCurrentValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -434,6 +594,13 @@ public class ObjectStateEntry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RelationshipManager.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectStateEntry.RelationshipManager" target="_top">.NET documentation</a>
+     */
     public RelationshipManager getRelationshipManager() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -449,6 +616,19 @@ public class ObjectStateEntry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ObjectStateManager.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectStateEntry.ObjectStateManager" target="_top">.NET documentation</a>
+     */
     public ObjectStateManager getObjectStateManager() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -464,6 +644,13 @@ public class ObjectStateEntry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Entity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectStateEntry.Entity" target="_top">.NET documentation</a>
+     */
     public NetObject getEntity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

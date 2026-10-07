@@ -100,7 +100,10 @@ public class AssertValidation extends system.activities.NativeActivity  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AssertValidation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class AssertValidation extends system.activities.NativeActivity  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Validation.AssertValidation.-ctor" target="_top">.NET documentation</a>
+     */
     public AssertValidation() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class AssertValidation extends system.activities.NativeActivity  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Assertion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Validation.AssertValidation.Assertion" target="_top">.NET documentation</a>
+     */
     public InArgument_1 getAssertion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +196,13 @@ public class AssertValidation extends system.activities.NativeActivity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Assertion.
+     *
+     * @param Assertion the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Validation.AssertValidation.Assertion" target="_top">.NET documentation</a>
+     */
     public void setAssertion(InArgument_1 Assertion) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +213,13 @@ public class AssertValidation extends system.activities.NativeActivity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsWarning.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Validation.AssertValidation.IsWarning" target="_top">.NET documentation</a>
+     */
     public InArgument_1 getIsWarning() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +235,13 @@ public class AssertValidation extends system.activities.NativeActivity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsWarning.
+     *
+     * @param IsWarning the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Validation.AssertValidation.IsWarning" target="_top">.NET documentation</a>
+     */
     public void setIsWarning(InArgument_1 IsWarning) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +252,13 @@ public class AssertValidation extends system.activities.NativeActivity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Message.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Validation.AssertValidation.Message" target="_top">.NET documentation</a>
+     */
     public InArgument_1 getMessage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +274,13 @@ public class AssertValidation extends system.activities.NativeActivity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Message.
+     *
+     * @param Message the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Validation.AssertValidation.Message" target="_top">.NET documentation</a>
+     */
     public void setMessage(InArgument_1 Message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +291,13 @@ public class AssertValidation extends system.activities.NativeActivity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Validation.AssertValidation.PropertyName" target="_top">.NET documentation</a>
+     */
     public InArgument_1 getPropertyName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +313,13 @@ public class AssertValidation extends system.activities.NativeActivity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PropertyName.
+     *
+     * @param PropertyName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Validation.AssertValidation.PropertyName" target="_top">.NET documentation</a>
+     */
     public void setPropertyName(InArgument_1 PropertyName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

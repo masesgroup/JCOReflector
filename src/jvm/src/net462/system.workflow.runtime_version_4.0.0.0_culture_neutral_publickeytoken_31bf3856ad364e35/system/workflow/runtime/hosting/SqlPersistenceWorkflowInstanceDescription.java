@@ -101,7 +101,10 @@ public class SqlPersistenceWorkflowInstanceDescription extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SqlPersistenceWorkflowInstanceDescription(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class SqlPersistenceWorkflowInstanceDescription extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsBlocked.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Hosting.SqlPersistenceWorkflowInstanceDescription.IsBlocked" target="_top">.NET documentation</a>
+     */
     public boolean getIsBlocked() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +184,13 @@ public class SqlPersistenceWorkflowInstanceDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NextTimerExpiration.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Hosting.SqlPersistenceWorkflowInstanceDescription.NextTimerExpiration" target="_top">.NET documentation</a>
+     */
     public SqlDateTime getNextTimerExpiration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +206,13 @@ public class SqlPersistenceWorkflowInstanceDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WorkflowInstanceId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Hosting.SqlPersistenceWorkflowInstanceDescription.WorkflowInstanceId" target="_top">.NET documentation</a>
+     */
     public Guid getWorkflowInstanceId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +228,13 @@ public class SqlPersistenceWorkflowInstanceDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SuspendOrTerminateDescription.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Hosting.SqlPersistenceWorkflowInstanceDescription.SuspendOrTerminateDescription" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSuspendOrTerminateDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +249,13 @@ public class SqlPersistenceWorkflowInstanceDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Status.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Hosting.SqlPersistenceWorkflowInstanceDescription.Status" target="_top">.NET documentation</a>
+     */
     public WorkflowStatus getStatus() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

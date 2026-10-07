@@ -103,7 +103,10 @@ public class DragDrop extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DragDrop(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,30 @@ public class DragDrop extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member DoDragDrop.
+     *
+     * @param dragSource the argument of type {@code DependencyObject}
+     * @param data the argument of type {@code NetObject}
+     * @param allowedEffects the argument of type {@code DragDropEffects}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DragDrop.DoDragDrop" target="_top">.NET documentation</a>
+     */
     public static DragDropEffects DoDragDrop(DependencyObject dragSource, NetObject data, DragDropEffects allowedEffects) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.threading.ThreadStateException, system.SystemException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -171,6 +198,21 @@ public class DragDrop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddDragEnterHandler.
+     *
+     * @param element the argument of type {@code DependencyObject}
+     * @param handler the argument of type {@code DragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DragDrop.AddDragEnterHandler" target="_top">.NET documentation</a>
+     */
     public static void AddDragEnterHandler(DependencyObject element, DragEventHandler handler) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -181,6 +223,21 @@ public class DragDrop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddDragLeaveHandler.
+     *
+     * @param element the argument of type {@code DependencyObject}
+     * @param handler the argument of type {@code DragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DragDrop.AddDragLeaveHandler" target="_top">.NET documentation</a>
+     */
     public static void AddDragLeaveHandler(DependencyObject element, DragEventHandler handler) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -191,6 +248,21 @@ public class DragDrop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddDragOverHandler.
+     *
+     * @param element the argument of type {@code DependencyObject}
+     * @param handler the argument of type {@code DragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DragDrop.AddDragOverHandler" target="_top">.NET documentation</a>
+     */
     public static void AddDragOverHandler(DependencyObject element, DragEventHandler handler) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -201,6 +273,21 @@ public class DragDrop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddDropHandler.
+     *
+     * @param element the argument of type {@code DependencyObject}
+     * @param handler the argument of type {@code DragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DragDrop.AddDropHandler" target="_top">.NET documentation</a>
+     */
     public static void AddDropHandler(DependencyObject element, DragEventHandler handler) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -211,6 +298,21 @@ public class DragDrop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddGiveFeedbackHandler.
+     *
+     * @param element the argument of type {@code DependencyObject}
+     * @param handler the argument of type {@code GiveFeedbackEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DragDrop.AddGiveFeedbackHandler" target="_top">.NET documentation</a>
+     */
     public static void AddGiveFeedbackHandler(DependencyObject element, GiveFeedbackEventHandler handler) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -221,6 +323,21 @@ public class DragDrop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddPreviewDragEnterHandler.
+     *
+     * @param element the argument of type {@code DependencyObject}
+     * @param handler the argument of type {@code DragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DragDrop.AddPreviewDragEnterHandler" target="_top">.NET documentation</a>
+     */
     public static void AddPreviewDragEnterHandler(DependencyObject element, DragEventHandler handler) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -231,6 +348,21 @@ public class DragDrop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddPreviewDragLeaveHandler.
+     *
+     * @param element the argument of type {@code DependencyObject}
+     * @param handler the argument of type {@code DragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DragDrop.AddPreviewDragLeaveHandler" target="_top">.NET documentation</a>
+     */
     public static void AddPreviewDragLeaveHandler(DependencyObject element, DragEventHandler handler) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -241,6 +373,21 @@ public class DragDrop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddPreviewDragOverHandler.
+     *
+     * @param element the argument of type {@code DependencyObject}
+     * @param handler the argument of type {@code DragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DragDrop.AddPreviewDragOverHandler" target="_top">.NET documentation</a>
+     */
     public static void AddPreviewDragOverHandler(DependencyObject element, DragEventHandler handler) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -251,6 +398,21 @@ public class DragDrop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddPreviewDropHandler.
+     *
+     * @param element the argument of type {@code DependencyObject}
+     * @param handler the argument of type {@code DragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DragDrop.AddPreviewDropHandler" target="_top">.NET documentation</a>
+     */
     public static void AddPreviewDropHandler(DependencyObject element, DragEventHandler handler) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -261,6 +423,21 @@ public class DragDrop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddPreviewGiveFeedbackHandler.
+     *
+     * @param element the argument of type {@code DependencyObject}
+     * @param handler the argument of type {@code GiveFeedbackEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DragDrop.AddPreviewGiveFeedbackHandler" target="_top">.NET documentation</a>
+     */
     public static void AddPreviewGiveFeedbackHandler(DependencyObject element, GiveFeedbackEventHandler handler) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -271,6 +448,21 @@ public class DragDrop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddPreviewQueryContinueDragHandler.
+     *
+     * @param element the argument of type {@code DependencyObject}
+     * @param handler the argument of type {@code QueryContinueDragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DragDrop.AddPreviewQueryContinueDragHandler" target="_top">.NET documentation</a>
+     */
     public static void AddPreviewQueryContinueDragHandler(DependencyObject element, QueryContinueDragEventHandler handler) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -281,6 +473,21 @@ public class DragDrop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddQueryContinueDragHandler.
+     *
+     * @param element the argument of type {@code DependencyObject}
+     * @param handler the argument of type {@code QueryContinueDragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DragDrop.AddQueryContinueDragHandler" target="_top">.NET documentation</a>
+     */
     public static void AddQueryContinueDragHandler(DependencyObject element, QueryContinueDragEventHandler handler) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -291,6 +498,22 @@ public class DragDrop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveDragEnterHandler.
+     *
+     * @param element the argument of type {@code DependencyObject}
+     * @param handler the argument of type {@code DragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DragDrop.RemoveDragEnterHandler" target="_top">.NET documentation</a>
+     */
     public static void RemoveDragEnterHandler(DependencyObject element, DragEventHandler handler) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -301,6 +524,22 @@ public class DragDrop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveDragLeaveHandler.
+     *
+     * @param element the argument of type {@code DependencyObject}
+     * @param handler the argument of type {@code DragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DragDrop.RemoveDragLeaveHandler" target="_top">.NET documentation</a>
+     */
     public static void RemoveDragLeaveHandler(DependencyObject element, DragEventHandler handler) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -311,6 +550,22 @@ public class DragDrop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveDragOverHandler.
+     *
+     * @param element the argument of type {@code DependencyObject}
+     * @param handler the argument of type {@code DragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DragDrop.RemoveDragOverHandler" target="_top">.NET documentation</a>
+     */
     public static void RemoveDragOverHandler(DependencyObject element, DragEventHandler handler) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -321,6 +576,22 @@ public class DragDrop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveDropHandler.
+     *
+     * @param element the argument of type {@code DependencyObject}
+     * @param handler the argument of type {@code DragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DragDrop.RemoveDropHandler" target="_top">.NET documentation</a>
+     */
     public static void RemoveDropHandler(DependencyObject element, DragEventHandler handler) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -331,6 +602,22 @@ public class DragDrop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveGiveFeedbackHandler.
+     *
+     * @param element the argument of type {@code DependencyObject}
+     * @param handler the argument of type {@code GiveFeedbackEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DragDrop.RemoveGiveFeedbackHandler" target="_top">.NET documentation</a>
+     */
     public static void RemoveGiveFeedbackHandler(DependencyObject element, GiveFeedbackEventHandler handler) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -341,6 +628,22 @@ public class DragDrop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemovePreviewDragEnterHandler.
+     *
+     * @param element the argument of type {@code DependencyObject}
+     * @param handler the argument of type {@code DragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DragDrop.RemovePreviewDragEnterHandler" target="_top">.NET documentation</a>
+     */
     public static void RemovePreviewDragEnterHandler(DependencyObject element, DragEventHandler handler) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -351,6 +654,22 @@ public class DragDrop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemovePreviewDragLeaveHandler.
+     *
+     * @param element the argument of type {@code DependencyObject}
+     * @param handler the argument of type {@code DragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DragDrop.RemovePreviewDragLeaveHandler" target="_top">.NET documentation</a>
+     */
     public static void RemovePreviewDragLeaveHandler(DependencyObject element, DragEventHandler handler) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -361,6 +680,22 @@ public class DragDrop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemovePreviewDragOverHandler.
+     *
+     * @param element the argument of type {@code DependencyObject}
+     * @param handler the argument of type {@code DragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DragDrop.RemovePreviewDragOverHandler" target="_top">.NET documentation</a>
+     */
     public static void RemovePreviewDragOverHandler(DependencyObject element, DragEventHandler handler) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -371,6 +706,22 @@ public class DragDrop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemovePreviewDropHandler.
+     *
+     * @param element the argument of type {@code DependencyObject}
+     * @param handler the argument of type {@code DragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DragDrop.RemovePreviewDropHandler" target="_top">.NET documentation</a>
+     */
     public static void RemovePreviewDropHandler(DependencyObject element, DragEventHandler handler) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -381,6 +732,22 @@ public class DragDrop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemovePreviewGiveFeedbackHandler.
+     *
+     * @param element the argument of type {@code DependencyObject}
+     * @param handler the argument of type {@code GiveFeedbackEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DragDrop.RemovePreviewGiveFeedbackHandler" target="_top">.NET documentation</a>
+     */
     public static void RemovePreviewGiveFeedbackHandler(DependencyObject element, GiveFeedbackEventHandler handler) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -391,6 +758,22 @@ public class DragDrop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemovePreviewQueryContinueDragHandler.
+     *
+     * @param element the argument of type {@code DependencyObject}
+     * @param handler the argument of type {@code QueryContinueDragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DragDrop.RemovePreviewQueryContinueDragHandler" target="_top">.NET documentation</a>
+     */
     public static void RemovePreviewQueryContinueDragHandler(DependencyObject element, QueryContinueDragEventHandler handler) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -401,6 +784,22 @@ public class DragDrop extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveQueryContinueDragHandler.
+     *
+     * @param element the argument of type {@code DependencyObject}
+     * @param handler the argument of type {@code QueryContinueDragEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DragDrop.RemoveQueryContinueDragHandler" target="_top">.NET documentation</a>
+     */
     public static void RemoveQueryContinueDragHandler(DependencyObject element, QueryContinueDragEventHandler handler) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

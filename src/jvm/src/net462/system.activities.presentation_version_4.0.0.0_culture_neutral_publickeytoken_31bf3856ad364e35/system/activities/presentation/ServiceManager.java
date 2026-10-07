@@ -102,7 +102,10 @@ public class ServiceManager extends NetObjectEnumerable  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ServiceManager(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,14 @@ public class ServiceManager extends NetObjectEnumerable  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param serviceType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ServiceManager.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(NetType serviceType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +180,14 @@ public class ServiceManager extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param <TServiceType> the type of the generic argument TServiceType
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ServiceManager.Contains" target="_top">.NET documentation</a>
+     */
     public <TServiceType extends IJCOBridgeReflected> boolean Contains() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +202,14 @@ public class ServiceManager extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetService.
+     *
+     * @param serviceType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ServiceManager.GetService" target="_top">.NET documentation</a>
+     */
     public NetObject GetService(NetType serviceType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +225,14 @@ public class ServiceManager extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member Publish.
+     *
+     * @param serviceType the argument of type {@code NetType}
+     * @param callback the argument of type {@code PublishServiceCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ServiceManager.Publish" target="_top">.NET documentation</a>
+     */
     public void Publish(NetType serviceType, PublishServiceCallback callback) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +243,14 @@ public class ServiceManager extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member Publish.
+     *
+     * @param serviceType the argument of type {@code NetType}
+     * @param serviceInstance the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ServiceManager.Publish" target="_top">.NET documentation</a>
+     */
     public void Publish(NetType serviceType, NetObject serviceInstance) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +261,22 @@ public class ServiceManager extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member Publish.
+     *
+     * @param <TServiceType> the type of the generic argument TServiceType
+     * @param callback the argument of type {@code PublishServiceCallback_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ServiceManager.Publish" target="_top">.NET documentation</a>
+     */
     public <TServiceType extends IJCOBridgeReflected> void Publish(PublishServiceCallback_1 callback) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +287,21 @@ public class ServiceManager extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member Publish.
+     *
+     * @param <TServiceType> the type of the generic argument TServiceType
+     * @param serviceInstance the argument of type {@code TServiceType}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ServiceManager.Publish" target="_top">.NET documentation</a>
+     */
     public <TServiceType extends IJCOBridgeReflected> void Publish(TServiceType serviceInstance) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +312,14 @@ public class ServiceManager extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member Subscribe.
+     *
+     * @param serviceType the argument of type {@code NetType}
+     * @param callback the argument of type {@code SubscribeServiceCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ServiceManager.Subscribe" target="_top">.NET documentation</a>
+     */
     public void Subscribe(NetType serviceType, SubscribeServiceCallback callback) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +330,21 @@ public class ServiceManager extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member Subscribe.
+     *
+     * @param <TServiceType> the type of the generic argument TServiceType
+     * @param callback the argument of type {@code SubscribeServiceCallback_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ServiceManager.Subscribe" target="_top">.NET documentation</a>
+     */
     public <TServiceType extends IJCOBridgeReflected> void Subscribe(SubscribeServiceCallback_1 callback) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +355,14 @@ public class ServiceManager extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member Unsubscribe.
+     *
+     * @param serviceType the argument of type {@code NetType}
+     * @param callback the argument of type {@code SubscribeServiceCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ServiceManager.Unsubscribe" target="_top">.NET documentation</a>
+     */
     public void Unsubscribe(NetType serviceType, SubscribeServiceCallback callback) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +373,21 @@ public class ServiceManager extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member Unsubscribe.
+     *
+     * @param <TServiceType> the type of the generic argument TServiceType
+     * @param callback the argument of type {@code SubscribeServiceCallback_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ServiceManager.Unsubscribe" target="_top">.NET documentation</a>
+     */
     public <TServiceType extends IJCOBridgeReflected> void Unsubscribe(SubscribeServiceCallback_1 callback) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

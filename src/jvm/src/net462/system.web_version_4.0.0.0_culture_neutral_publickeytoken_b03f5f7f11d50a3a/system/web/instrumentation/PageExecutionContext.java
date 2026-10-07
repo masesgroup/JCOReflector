@@ -99,7 +99,10 @@ public class PageExecutionContext extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PageExecutionContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class PageExecutionContext extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Instrumentation.PageExecutionContext.-ctor" target="_top">.NET documentation</a>
+     */
     public PageExecutionContext() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class PageExecutionContext extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsLiteral.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Instrumentation.PageExecutionContext.IsLiteral" target="_top">.NET documentation</a>
+     */
     public boolean getIsLiteral() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +194,13 @@ public class PageExecutionContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsLiteral.
+     *
+     * @param IsLiteral the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Instrumentation.PageExecutionContext.IsLiteral" target="_top">.NET documentation</a>
+     */
     public void setIsLiteral(boolean IsLiteral) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +211,13 @@ public class PageExecutionContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Length.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Instrumentation.PageExecutionContext.Length" target="_top">.NET documentation</a>
+     */
     public int getLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +258,13 @@ public class PageExecutionContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Length.
+     *
+     * @param Length the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Instrumentation.PageExecutionContext.Length" target="_top">.NET documentation</a>
+     */
     public void setLength(int Length) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +275,13 @@ public class PageExecutionContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StartPosition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Instrumentation.PageExecutionContext.StartPosition" target="_top">.NET documentation</a>
+     */
     public int getStartPosition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +322,13 @@ public class PageExecutionContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StartPosition.
+     *
+     * @param StartPosition the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Instrumentation.PageExecutionContext.StartPosition" target="_top">.NET documentation</a>
+     */
     public void setStartPosition(int StartPosition) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +339,13 @@ public class PageExecutionContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TextWriter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Instrumentation.PageExecutionContext.TextWriter" target="_top">.NET documentation</a>
+     */
     public TextWriter getTextWriter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +361,13 @@ public class PageExecutionContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TextWriter.
+     *
+     * @param TextWriter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Instrumentation.PageExecutionContext.TextWriter" target="_top">.NET documentation</a>
+     */
     public void setTextWriter(TextWriter TextWriter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -313,6 +378,13 @@ public class PageExecutionContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VirtualPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Instrumentation.PageExecutionContext.VirtualPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getVirtualPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -327,6 +399,13 @@ public class PageExecutionContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property VirtualPath.
+     *
+     * @param VirtualPath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Instrumentation.PageExecutionContext.VirtualPath" target="_top">.NET documentation</a>
+     */
     public void setVirtualPath(java.lang.String VirtualPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

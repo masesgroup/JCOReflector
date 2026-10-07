@@ -100,7 +100,10 @@ public class ManifestResourceInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ManifestResourceInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,15 @@ public class ManifestResourceInfo extends NetObject  {
     public ManifestResourceInfo() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param containingAssembly the argument of type {@code Assembly}
+     * @param containingFileName the argument of type {@code java.lang.String}
+     * @param resourceLocation the argument of type {@code ResourceLocation}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.ManifestResourceInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public ManifestResourceInfo(Assembly containingAssembly, java.lang.String containingFileName, ResourceLocation resourceLocation) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +181,13 @@ public class ManifestResourceInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ReferencedAssembly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.ManifestResourceInfo.ReferencedAssembly" target="_top">.NET documentation</a>
+     */
     public Assembly getReferencedAssembly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +203,13 @@ public class ManifestResourceInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResourceLocation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.ManifestResourceInfo.ResourceLocation" target="_top">.NET documentation</a>
+     */
     public ResourceLocation getResourceLocation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +225,13 @@ public class ManifestResourceInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FileName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.ManifestResourceInfo.FileName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFileName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -52,5 +52,11 @@ import system.data.DataColumnChangeEventArgs;
  * @version 2.0.0.0
  */
 public interface IDataColumnChangeEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.Data.DataColumnChangeEventArgs}
+     */
     public void Invoke(NetObject sender, DataColumnChangeEventArgs e);
 }

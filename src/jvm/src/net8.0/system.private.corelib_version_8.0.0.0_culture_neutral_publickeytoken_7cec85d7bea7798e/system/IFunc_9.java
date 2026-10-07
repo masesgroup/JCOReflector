@@ -51,5 +51,18 @@ import org.mases.jcobridge.netreflection.*;
  * @version 2.0.0.0
  */
 public interface IFunc_9<T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param arg1 the .NET argument of type {@code T1}
+     * @param arg2 the .NET argument of type {@code T2}
+     * @param arg3 the .NET argument of type {@code T3}
+     * @param arg4 the .NET argument of type {@code T4}
+     * @param arg5 the .NET argument of type {@code T5}
+     * @param arg6 the .NET argument of type {@code T6}
+     * @param arg7 the .NET argument of type {@code T7}
+     * @param arg8 the .NET argument of type {@code T8}
+     * @return the value returned to the CLR
+     */
     public TResult Invoke(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8);
 }

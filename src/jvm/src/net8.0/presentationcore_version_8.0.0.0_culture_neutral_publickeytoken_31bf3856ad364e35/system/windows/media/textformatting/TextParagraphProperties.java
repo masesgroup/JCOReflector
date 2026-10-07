@@ -106,7 +106,10 @@ public class TextParagraphProperties extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TextParagraphProperties(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -163,6 +166,13 @@ public class TextParagraphProperties extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AlwaysCollapsible.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextParagraphProperties.AlwaysCollapsible" target="_top">.NET documentation</a>
+     */
     public boolean getAlwaysCollapsible() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +187,13 @@ public class TextParagraphProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FirstLineInParagraph.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextParagraphProperties.FirstLineInParagraph" target="_top">.NET documentation</a>
+     */
     public boolean getFirstLineInParagraph() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +208,13 @@ public class TextParagraphProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultIncrementalTab.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextParagraphProperties.DefaultIncrementalTab" target="_top">.NET documentation</a>
+     */
     public double getDefaultIncrementalTab() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +255,13 @@ public class TextParagraphProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Indent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextParagraphProperties.Indent" target="_top">.NET documentation</a>
+     */
     public double getIndent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +302,13 @@ public class TextParagraphProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LineHeight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextParagraphProperties.LineHeight" target="_top">.NET documentation</a>
+     */
     public double getLineHeight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -311,6 +349,13 @@ public class TextParagraphProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ParagraphIndent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextParagraphProperties.ParagraphIndent" target="_top">.NET documentation</a>
+     */
     public double getParagraphIndent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -351,6 +396,13 @@ public class TextParagraphProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Tabs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextParagraphProperties.Tabs" target="_top">.NET documentation</a>
+     */
     public IList_1 getTabs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -366,6 +418,13 @@ public class TextParagraphProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FlowDirection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextParagraphProperties.FlowDirection" target="_top">.NET documentation</a>
+     */
     public FlowDirection getFlowDirection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -381,6 +440,13 @@ public class TextParagraphProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TextMarkerProperties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextParagraphProperties.TextMarkerProperties" target="_top">.NET documentation</a>
+     */
     public TextMarkerProperties getTextMarkerProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -396,6 +462,13 @@ public class TextParagraphProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultTextRunProperties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextParagraphProperties.DefaultTextRunProperties" target="_top">.NET documentation</a>
+     */
     public TextRunProperties getDefaultTextRunProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -411,6 +484,13 @@ public class TextParagraphProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TextAlignment.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextParagraphProperties.TextAlignment" target="_top">.NET documentation</a>
+     */
     public TextAlignment getTextAlignment() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -426,6 +506,13 @@ public class TextParagraphProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TextDecorations.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextParagraphProperties.TextDecorations" target="_top">.NET documentation</a>
+     */
     public TextDecorationCollection getTextDecorations() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -441,6 +528,13 @@ public class TextParagraphProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TextWrapping.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextParagraphProperties.TextWrapping" target="_top">.NET documentation</a>
+     */
     public TextWrapping getTextWrapping() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

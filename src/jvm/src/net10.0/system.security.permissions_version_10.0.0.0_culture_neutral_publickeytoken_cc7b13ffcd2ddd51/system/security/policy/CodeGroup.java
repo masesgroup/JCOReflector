@@ -107,7 +107,10 @@ public class CodeGroup extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodeGroup(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,15 @@ public class CodeGroup extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param cg the argument of type {@code CodeGroup}
+     * @param compareChildren the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.CodeGroup.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(CodeGroup cg, boolean compareChildren) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +186,13 @@ public class CodeGroup extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Copy.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.CodeGroup.Copy" target="_top">.NET documentation</a>
+     */
     public CodeGroup Copy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +208,14 @@ public class CodeGroup extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResolveMatchingCodeGroups.
+     *
+     * @param evidence the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.CodeGroup.ResolveMatchingCodeGroups" target="_top">.NET documentation</a>
+     */
     public CodeGroup ResolveMatchingCodeGroups(Evidence evidence) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +231,14 @@ public class CodeGroup extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Resolve.
+     *
+     * @param evidence the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.CodeGroup.Resolve" target="_top">.NET documentation</a>
+     */
     public PolicyStatement Resolve(Evidence evidence) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +254,13 @@ public class CodeGroup extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToXml.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.CodeGroup.ToXml" target="_top">.NET documentation</a>
+     */
     public SecurityElement ToXml() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +276,14 @@ public class CodeGroup extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToXml.
+     *
+     * @param level the argument of type {@code PolicyLevel}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.CodeGroup.ToXml" target="_top">.NET documentation</a>
+     */
     public SecurityElement ToXml(PolicyLevel level) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +299,13 @@ public class CodeGroup extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddChild.
+     *
+     * @param group the argument of type {@code CodeGroup}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.CodeGroup.AddChild" target="_top">.NET documentation</a>
+     */
     public void AddChild(CodeGroup group) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +316,14 @@ public class CodeGroup extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FromXml.
+     *
+     * @param e the argument of type {@code SecurityElement}
+     * @param level the argument of type {@code PolicyLevel}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.CodeGroup.FromXml" target="_top">.NET documentation</a>
+     */
     public void FromXml(SecurityElement e, PolicyLevel level) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +334,13 @@ public class CodeGroup extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FromXml.
+     *
+     * @param e the argument of type {@code SecurityElement}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.CodeGroup.FromXml" target="_top">.NET documentation</a>
+     */
     public void FromXml(SecurityElement e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +351,13 @@ public class CodeGroup extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveChild.
+     *
+     * @param group the argument of type {@code CodeGroup}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.CodeGroup.RemoveChild" target="_top">.NET documentation</a>
+     */
     public void RemoveChild(CodeGroup group) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +372,13 @@ public class CodeGroup extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Children.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.CodeGroup.Children" target="_top">.NET documentation</a>
+     */
     public IList getChildren() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +394,13 @@ public class CodeGroup extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Children.
+     *
+     * @param Children the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.CodeGroup.Children" target="_top">.NET documentation</a>
+     */
     public void setChildren(IList Children) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +411,13 @@ public class CodeGroup extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MembershipCondition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.CodeGroup.MembershipCondition" target="_top">.NET documentation</a>
+     */
     public IMembershipCondition getMembershipCondition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -333,6 +433,13 @@ public class CodeGroup extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MembershipCondition.
+     *
+     * @param MembershipCondition the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.CodeGroup.MembershipCondition" target="_top">.NET documentation</a>
+     */
     public void setMembershipCondition(IMembershipCondition MembershipCondition) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -343,6 +450,13 @@ public class CodeGroup extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PolicyStatement.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.CodeGroup.PolicyStatement" target="_top">.NET documentation</a>
+     */
     public PolicyStatement getPolicyStatement() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -358,6 +472,13 @@ public class CodeGroup extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PolicyStatement.
+     *
+     * @param PolicyStatement the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.CodeGroup.PolicyStatement" target="_top">.NET documentation</a>
+     */
     public void setPolicyStatement(PolicyStatement PolicyStatement) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -368,6 +489,13 @@ public class CodeGroup extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AttributeString.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.CodeGroup.AttributeString" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAttributeString() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -382,6 +510,13 @@ public class CodeGroup extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Description.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.CodeGroup.Description" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -396,6 +531,13 @@ public class CodeGroup extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Description.
+     *
+     * @param Description the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.CodeGroup.Description" target="_top">.NET documentation</a>
+     */
     public void setDescription(java.lang.String Description) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -406,6 +548,13 @@ public class CodeGroup extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MergeLogic.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.CodeGroup.MergeLogic" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMergeLogic() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -420,6 +569,13 @@ public class CodeGroup extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.CodeGroup.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -434,6 +590,13 @@ public class CodeGroup extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.CodeGroup.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -444,6 +607,13 @@ public class CodeGroup extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PermissionSetName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.CodeGroup.PermissionSetName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPermissionSetName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

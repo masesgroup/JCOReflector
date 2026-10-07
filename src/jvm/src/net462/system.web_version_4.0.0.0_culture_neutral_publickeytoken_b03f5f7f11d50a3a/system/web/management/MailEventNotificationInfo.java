@@ -102,7 +102,10 @@ public class MailEventNotificationInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MailEventNotificationInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -161,6 +164,13 @@ public class MailEventNotificationInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EventsDiscardedByBuffer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.MailEventNotificationInfo.EventsDiscardedByBuffer" target="_top">.NET documentation</a>
+     */
     public int getEventsDiscardedByBuffer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +211,13 @@ public class MailEventNotificationInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EventsDiscardedDueToMessageLimit.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.MailEventNotificationInfo.EventsDiscardedDueToMessageLimit" target="_top">.NET documentation</a>
+     */
     public int getEventsDiscardedDueToMessageLimit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +258,13 @@ public class MailEventNotificationInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EventsInBuffer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.MailEventNotificationInfo.EventsInBuffer" target="_top">.NET documentation</a>
+     */
     public int getEventsInBuffer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +305,13 @@ public class MailEventNotificationInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EventsInNotification.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.MailEventNotificationInfo.EventsInNotification" target="_top">.NET documentation</a>
+     */
     public int getEventsInNotification() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +352,13 @@ public class MailEventNotificationInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EventsRemaining.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.MailEventNotificationInfo.EventsRemaining" target="_top">.NET documentation</a>
+     */
     public int getEventsRemaining() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -361,6 +399,13 @@ public class MailEventNotificationInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MessageSequence.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.MailEventNotificationInfo.MessageSequence" target="_top">.NET documentation</a>
+     */
     public int getMessageSequence() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -401,6 +446,13 @@ public class MailEventNotificationInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MessagesInNotification.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.MailEventNotificationInfo.MessagesInNotification" target="_top">.NET documentation</a>
+     */
     public int getMessagesInNotification() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -441,6 +493,13 @@ public class MailEventNotificationInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NotificationSequence.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.MailEventNotificationInfo.NotificationSequence" target="_top">.NET documentation</a>
+     */
     public int getNotificationSequence() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -481,6 +540,13 @@ public class MailEventNotificationInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LastNotificationUtc.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.MailEventNotificationInfo.LastNotificationUtc" target="_top">.NET documentation</a>
+     */
     public DateTime getLastNotificationUtc() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -496,6 +562,13 @@ public class MailEventNotificationInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Message.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.MailEventNotificationInfo.Message" target="_top">.NET documentation</a>
+     */
     public MailMessage getMessage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -511,6 +584,13 @@ public class MailEventNotificationInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NotificationType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.MailEventNotificationInfo.NotificationType" target="_top">.NET documentation</a>
+     */
     public EventNotificationType getNotificationType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -526,6 +606,13 @@ public class MailEventNotificationInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Events.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.MailEventNotificationInfo.Events" target="_top">.NET documentation</a>
+     */
     public WebBaseEventCollection getEvents() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

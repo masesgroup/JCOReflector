@@ -101,7 +101,10 @@ public class ContextUtil extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ContextUtil(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,25 @@ public class ContextUtil extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsCallerInRole.
+     *
+     * @param role the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.runtime.interopservices.COMException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ContextUtil.IsCallerInRole" target="_top">.NET documentation</a>
+     */
     public static boolean IsCallerInRole(java.lang.String role) throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -170,6 +192,13 @@ public class ContextUtil extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsDefaultContext.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ContextUtil.IsDefaultContext" target="_top">.NET documentation</a>
+     */
     public static boolean IsDefaultContext() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -184,6 +213,25 @@ public class ContextUtil extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetNamedProperty.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.runtime.interopservices.COMException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ContextUtil.GetNamedProperty" target="_top">.NET documentation</a>
+     */
     public static NetObject GetNamedProperty(java.lang.String name) throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -199,6 +247,12 @@ public class ContextUtil extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DisableCommit.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ContextUtil.DisableCommit" target="_top">.NET documentation</a>
+     */
     public static void DisableCommit() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -209,6 +263,12 @@ public class ContextUtil extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EnableCommit.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ContextUtil.EnableCommit" target="_top">.NET documentation</a>
+     */
     public static void EnableCommit() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -219,6 +279,12 @@ public class ContextUtil extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetAbort.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ContextUtil.SetAbort" target="_top">.NET documentation</a>
+     */
     public static void SetAbort() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -229,6 +295,12 @@ public class ContextUtil extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetComplete.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ContextUtil.SetComplete" target="_top">.NET documentation</a>
+     */
     public static void SetComplete() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -239,6 +311,25 @@ public class ContextUtil extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetNamedProperty.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.runtime.interopservices.COMException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ContextUtil.SetNamedProperty" target="_top">.NET documentation</a>
+     */
     public static void SetNamedProperty(java.lang.String name, NetObject value) throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -253,6 +344,13 @@ public class ContextUtil extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DeactivateOnReturn.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ContextUtil.DeactivateOnReturn" target="_top">.NET documentation</a>
+     */
     public static boolean getDeactivateOnReturn() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -267,6 +365,13 @@ public class ContextUtil extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DeactivateOnReturn.
+     *
+     * @param DeactivateOnReturn the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ContextUtil.DeactivateOnReturn" target="_top">.NET documentation</a>
+     */
     public static void setDeactivateOnReturn(boolean DeactivateOnReturn) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -277,6 +382,13 @@ public class ContextUtil extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsInTransaction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ContextUtil.IsInTransaction" target="_top">.NET documentation</a>
+     */
     public static boolean getIsInTransaction() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -291,6 +403,24 @@ public class ContextUtil extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSecurityEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.runtime.interopservices.COMException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ContextUtil.IsSecurityEnabled" target="_top">.NET documentation</a>
+     */
     public static boolean getIsSecurityEnabled() throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -305,6 +435,13 @@ public class ContextUtil extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MyTransactionVote.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ContextUtil.MyTransactionVote" target="_top">.NET documentation</a>
+     */
     public static TransactionVote getMyTransactionVote() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -320,6 +457,13 @@ public class ContextUtil extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MyTransactionVote.
+     *
+     * @param MyTransactionVote the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ContextUtil.MyTransactionVote" target="_top">.NET documentation</a>
+     */
     public static void setMyTransactionVote(TransactionVote MyTransactionVote) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -330,6 +474,24 @@ public class ContextUtil extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ActivityId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.runtime.interopservices.COMException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ContextUtil.ActivityId" target="_top">.NET documentation</a>
+     */
     public static Guid getActivityId() throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -345,6 +507,24 @@ public class ContextUtil extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ApplicationId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.runtime.interopservices.COMException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ContextUtil.ApplicationId" target="_top">.NET documentation</a>
+     */
     public static Guid getApplicationId() throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -360,6 +540,24 @@ public class ContextUtil extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ApplicationInstanceId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.runtime.interopservices.COMException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ContextUtil.ApplicationInstanceId" target="_top">.NET documentation</a>
+     */
     public static Guid getApplicationInstanceId() throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -375,6 +573,24 @@ public class ContextUtil extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContextId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.runtime.interopservices.COMException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ContextUtil.ContextId" target="_top">.NET documentation</a>
+     */
     public static Guid getContextId() throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -390,6 +606,24 @@ public class ContextUtil extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PartitionId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.runtime.interopservices.COMException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ContextUtil.PartitionId" target="_top">.NET documentation</a>
+     */
     public static Guid getPartitionId() throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -405,6 +639,13 @@ public class ContextUtil extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TransactionId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ContextUtil.TransactionId" target="_top">.NET documentation</a>
+     */
     public static Guid getTransactionId() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -420,6 +661,13 @@ public class ContextUtil extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Transaction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ContextUtil.Transaction" target="_top">.NET documentation</a>
+     */
     public static NetObject getTransaction() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -435,6 +683,38 @@ public class ContextUtil extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SystemTransaction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.transactions.TransactionException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.transactions.TransactionManagerCommunicationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ContextUtil.SystemTransaction" target="_top">.NET documentation</a>
+     */
     public static Transaction getSystemTransaction() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.transactions.TransactionException, system.OverflowException, system.transactions.TransactionManagerCommunicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

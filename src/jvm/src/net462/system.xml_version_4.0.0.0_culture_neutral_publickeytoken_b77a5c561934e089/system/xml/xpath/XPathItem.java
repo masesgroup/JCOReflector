@@ -102,7 +102,10 @@ public class XPathItem extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XPathItem(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,14 @@ public class XPathItem extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ValueAs.
+     *
+     * @param returnType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XPath.XPathItem.ValueAs" target="_top">.NET documentation</a>
+     */
     public NetObject ValueAs(NetType returnType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +181,15 @@ public class XPathItem extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ValueAs.
+     *
+     * @param returnType the argument of type {@code NetType}
+     * @param nsResolver the argument of type {@code IXmlNamespaceResolver}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XPath.XPathItem.ValueAs" target="_top">.NET documentation</a>
+     */
     public NetObject ValueAs(NetType returnType, IXmlNamespaceResolver nsResolver) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +209,13 @@ public class XPathItem extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsNode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XPath.XPathItem.IsNode" target="_top">.NET documentation</a>
+     */
     public boolean getIsNode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +230,13 @@ public class XPathItem extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValueAsBoolean.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XPath.XPathItem.ValueAsBoolean" target="_top">.NET documentation</a>
+     */
     public boolean getValueAsBoolean() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +251,13 @@ public class XPathItem extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValueAsDouble.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XPath.XPathItem.ValueAsDouble" target="_top">.NET documentation</a>
+     */
     public double getValueAsDouble() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +298,13 @@ public class XPathItem extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValueAsInt.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XPath.XPathItem.ValueAsInt" target="_top">.NET documentation</a>
+     */
     public int getValueAsInt() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -297,6 +345,13 @@ public class XPathItem extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValueAsLong.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XPath.XPathItem.ValueAsLong" target="_top">.NET documentation</a>
+     */
     public long getValueAsLong() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -337,6 +392,13 @@ public class XPathItem extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValueAsDateTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XPath.XPathItem.ValueAsDateTime" target="_top">.NET documentation</a>
+     */
     public DateTime getValueAsDateTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -352,6 +414,13 @@ public class XPathItem extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypedValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XPath.XPathItem.TypedValue" target="_top">.NET documentation</a>
+     */
     public NetObject getTypedValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -367,6 +436,13 @@ public class XPathItem extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XPath.XPathItem.Value" target="_top">.NET documentation</a>
+     */
     public java.lang.String getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -381,6 +457,13 @@ public class XPathItem extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValueType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XPath.XPathItem.ValueType" target="_top">.NET documentation</a>
+     */
     public NetType getValueType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -396,6 +479,13 @@ public class XPathItem extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XPath.XPathItem.XmlType" target="_top">.NET documentation</a>
+     */
     public XmlSchemaType getXmlType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class JsonTypeInfo_1<T extends IJCOBridgeReflected> extends system.text.j
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public JsonTypeInfo_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class JsonTypeInfo_1<T extends IJCOBridgeReflected> extends system.text.j
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SerializeHandler.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo-1.SerializeHandler" target="_top">.NET documentation</a>
+     */
     public Action_2 getSerializeHandler() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +184,13 @@ public class JsonTypeInfo_1<T extends IJCOBridgeReflected> extends system.text.j
         }
     }
 
+    /**
+     * Sets the value of the .NET property SerializeHandler.
+     *
+     * @param SerializeHandler the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo-1.SerializeHandler" target="_top">.NET documentation</a>
+     */
     public void setSerializeHandler(Action_2 SerializeHandler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +201,13 @@ public class JsonTypeInfo_1<T extends IJCOBridgeReflected> extends system.text.j
         }
     }
 
+    /**
+     * Gets the value of the .NET property CreateObjectNewJsonTypeInfo_1.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo-1.CreateObjectNewJsonTypeInfo_1" target="_top">.NET documentation</a>
+     */
     public Func_1 getCreateObjectNewJsonTypeInfo_1() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +222,13 @@ public class JsonTypeInfo_1<T extends IJCOBridgeReflected> extends system.text.j
         }
     }
 
+    /**
+     * Sets the value of the .NET property CreateObject.
+     *
+     * @param CreateObject the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo-1.CreateObject" target="_top">.NET documentation</a>
+     */
     public void setCreateObject(Func_1 CreateObject) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

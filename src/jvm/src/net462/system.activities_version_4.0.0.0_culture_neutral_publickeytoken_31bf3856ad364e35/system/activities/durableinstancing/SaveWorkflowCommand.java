@@ -103,7 +103,10 @@ public class SaveWorkflowCommand extends system.runtime.durableinstancing.Instan
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SaveWorkflowCommand(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,20 @@ public class SaveWorkflowCommand extends system.runtime.durableinstancing.Instan
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.SaveWorkflowCommand.-ctor" target="_top">.NET documentation</a>
+     */
     public SaveWorkflowCommand() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +185,13 @@ public class SaveWorkflowCommand extends system.runtime.durableinstancing.Instan
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CompleteInstance.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.SaveWorkflowCommand.CompleteInstance" target="_top">.NET documentation</a>
+     */
     public boolean getCompleteInstance() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +206,13 @@ public class SaveWorkflowCommand extends system.runtime.durableinstancing.Instan
         }
     }
 
+    /**
+     * Sets the value of the .NET property CompleteInstance.
+     *
+     * @param CompleteInstance the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.SaveWorkflowCommand.CompleteInstance" target="_top">.NET documentation</a>
+     */
     public void setCompleteInstance(boolean CompleteInstance) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +223,13 @@ public class SaveWorkflowCommand extends system.runtime.durableinstancing.Instan
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnlockInstance.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.SaveWorkflowCommand.UnlockInstance" target="_top">.NET documentation</a>
+     */
     public boolean getUnlockInstance() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +244,13 @@ public class SaveWorkflowCommand extends system.runtime.durableinstancing.Instan
         }
     }
 
+    /**
+     * Sets the value of the .NET property UnlockInstance.
+     *
+     * @param UnlockInstance the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.SaveWorkflowCommand.UnlockInstance" target="_top">.NET documentation</a>
+     */
     public void setUnlockInstance(boolean UnlockInstance) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +261,13 @@ public class SaveWorkflowCommand extends system.runtime.durableinstancing.Instan
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceKeysToComplete.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceKeysToComplete" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getInstanceKeysToComplete() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +283,13 @@ public class SaveWorkflowCommand extends system.runtime.durableinstancing.Instan
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceKeysToFree.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceKeysToFree" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getInstanceKeysToFree() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +305,15 @@ public class SaveWorkflowCommand extends system.runtime.durableinstancing.Instan
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceKeyMetadataChanges.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceKeyMetadataChanges" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 getInstanceKeyMetadataChanges() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +329,15 @@ public class SaveWorkflowCommand extends system.runtime.durableinstancing.Instan
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceKeysToAssociate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceKeysToAssociate" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 getInstanceKeysToAssociate() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +353,15 @@ public class SaveWorkflowCommand extends system.runtime.durableinstancing.Instan
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceData.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceData" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 getInstanceData() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +377,15 @@ public class SaveWorkflowCommand extends system.runtime.durableinstancing.Instan
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceMetadataChanges.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceMetadataChanges" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 getInstanceMetadataChanges() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

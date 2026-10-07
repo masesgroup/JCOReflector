@@ -100,7 +100,10 @@ public class WorkflowCreationContext extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WorkflowCreationContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class WorkflowCreationContext extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.WorkflowCreationContext.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowCreationContext() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class WorkflowCreationContext extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CreateOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.WorkflowCreationContext.CreateOnly" target="_top">.NET documentation</a>
+     */
     public boolean getCreateOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +195,13 @@ public class WorkflowCreationContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CreateOnly.
+     *
+     * @param CreateOnly the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.WorkflowCreationContext.CreateOnly" target="_top">.NET documentation</a>
+     */
     public void setCreateOnly(boolean CreateOnly) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +212,13 @@ public class WorkflowCreationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsCompletionTransactionRequired.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.WorkflowCreationContext.IsCompletionTransactionRequired" target="_top">.NET documentation</a>
+     */
     public boolean getIsCompletionTransactionRequired() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +233,13 @@ public class WorkflowCreationContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsCompletionTransactionRequired.
+     *
+     * @param IsCompletionTransactionRequired the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.WorkflowCreationContext.IsCompletionTransactionRequired" target="_top">.NET documentation</a>
+     */
     public void setIsCompletionTransactionRequired(boolean IsCompletionTransactionRequired) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +250,15 @@ public class WorkflowCreationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WorkflowArguments.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.WorkflowCreationContext.WorkflowArguments" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 getWorkflowArguments() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

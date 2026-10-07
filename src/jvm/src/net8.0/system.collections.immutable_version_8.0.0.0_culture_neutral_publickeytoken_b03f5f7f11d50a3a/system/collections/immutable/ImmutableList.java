@@ -105,7 +105,10 @@ public class ImmutableList extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ImmutableList(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,27 @@ public class ImmutableList extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param <T> the type of the generic argument T
+     * @param list the argument of type {@code IImmutableList_1}
+     * @param item the argument of type {@code T}
+     * @param startIndex the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableList.IndexOf" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> int IndexOf(IImmutableList_1 list, T item, int startIndex, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -198,6 +222,26 @@ public class ImmutableList extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param <T> the type of the generic argument T
+     * @param list the argument of type {@code IImmutableList_1}
+     * @param item the argument of type {@code T}
+     * @param startIndex the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableList.IndexOf" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> int IndexOf(IImmutableList_1 list, T item, int startIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -238,6 +282,26 @@ public class ImmutableList extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param <T> the type of the generic argument T
+     * @param list the argument of type {@code IImmutableList_1}
+     * @param item the argument of type {@code T}
+     * @param equalityComparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableList.IndexOf" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> int IndexOf(IImmutableList_1 list, T item, IEqualityComparer_1 equalityComparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -278,6 +342,25 @@ public class ImmutableList extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param <T> the type of the generic argument T
+     * @param list the argument of type {@code IImmutableList_1}
+     * @param item the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableList.IndexOf" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> int IndexOf(IImmutableList_1 list, T item) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -318,6 +401,27 @@ public class ImmutableList extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LastIndexOf.
+     *
+     * @param <T> the type of the generic argument T
+     * @param list the argument of type {@code IImmutableList_1}
+     * @param item the argument of type {@code T}
+     * @param startIndex the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableList.LastIndexOf" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> int LastIndexOf(IImmutableList_1 list, T item, int startIndex, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -358,6 +462,26 @@ public class ImmutableList extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LastIndexOf.
+     *
+     * @param <T> the type of the generic argument T
+     * @param list the argument of type {@code IImmutableList_1}
+     * @param item the argument of type {@code T}
+     * @param startIndex the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableList.LastIndexOf" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> int LastIndexOf(IImmutableList_1 list, T item, int startIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -398,6 +522,26 @@ public class ImmutableList extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LastIndexOf.
+     *
+     * @param <T> the type of the generic argument T
+     * @param list the argument of type {@code IImmutableList_1}
+     * @param item the argument of type {@code T}
+     * @param equalityComparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableList.LastIndexOf" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> int LastIndexOf(IImmutableList_1 list, T item, IEqualityComparer_1 equalityComparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -438,6 +582,25 @@ public class ImmutableList extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LastIndexOf.
+     *
+     * @param <T> the type of the generic argument T
+     * @param list the argument of type {@code IImmutableList_1}
+     * @param item the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableList.LastIndexOf" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> int LastIndexOf(IImmutableList_1 list, T item) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -478,6 +641,25 @@ public class ImmutableList extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param <T> the type of the generic argument T
+     * @param list the argument of type {@code IImmutableList_1}
+     * @param value the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableList.Remove" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> IImmutableList_1 Remove(IImmutableList_1 list, T value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -493,6 +675,25 @@ public class ImmutableList extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveRange.
+     *
+     * @param <T> the type of the generic argument T
+     * @param list the argument of type {@code IImmutableList_1}
+     * @param items the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableList.RemoveRange" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> IImmutableList_1 RemoveRange(IImmutableList_1 list, IEnumerable_1 items) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -508,6 +709,26 @@ public class ImmutableList extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Replace.
+     *
+     * @param <T> the type of the generic argument T
+     * @param list the argument of type {@code IImmutableList_1}
+     * @param oldValue the argument of type {@code T}
+     * @param newValue the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableList.Replace" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> IImmutableList_1 Replace(IImmutableList_1 list, T oldValue, T newValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -523,6 +744,14 @@ public class ImmutableList extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param <T> the type of the generic argument T
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableList.Create" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> ImmutableList_1 Create() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -538,6 +767,16 @@ public class ImmutableList extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param <T> the type of the generic argument T
+     * @param item the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableList.Create" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> ImmutableList_1 Create(T item) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -553,6 +792,25 @@ public class ImmutableList extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param <T> the type of the generic argument T
+     * @param items the argument of type {@code T...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableList.Create" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> ImmutableList_1 Create(T... items) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -568,6 +826,20 @@ public class ImmutableList extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateRange.
+     *
+     * @param <T> the type of the generic argument T
+     * @param items the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableList.CreateRange" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> ImmutableList_1 CreateRange(IEnumerable_1 items) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -583,6 +855,20 @@ public class ImmutableList extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToImmutableList.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableList.ToImmutableList" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ImmutableList_1 ToImmutableList(IEnumerable_1 source) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

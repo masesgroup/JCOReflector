@@ -100,7 +100,10 @@ public class DynamicEnumProperty extends microsoft.build.framework.xamltypes.Bas
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DynamicEnumProperty(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class DynamicEnumProperty extends microsoft.build.framework.xamltypes.Bas
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.DynamicEnumProperty.-ctor" target="_top">.NET documentation</a>
+     */
     public DynamicEnumProperty() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class DynamicEnumProperty extends microsoft.build.framework.xamltypes.Bas
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ProviderSettings.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.DynamicEnumProperty.ProviderSettings" target="_top">.NET documentation</a>
+     */
     public List_1 getProviderSettings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +196,13 @@ public class DynamicEnumProperty extends microsoft.build.framework.xamltypes.Bas
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProviderSettings.
+     *
+     * @param ProviderSettings the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.DynamicEnumProperty.ProviderSettings" target="_top">.NET documentation</a>
+     */
     public void setProviderSettings(List_1 ProviderSettings) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +213,13 @@ public class DynamicEnumProperty extends microsoft.build.framework.xamltypes.Bas
         }
     }
 
+    /**
+     * Gets the value of the .NET property EnumProvider.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.DynamicEnumProperty.EnumProvider" target="_top">.NET documentation</a>
+     */
     public java.lang.String getEnumProvider() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +234,13 @@ public class DynamicEnumProperty extends microsoft.build.framework.xamltypes.Bas
         }
     }
 
+    /**
+     * Sets the value of the .NET property EnumProvider.
+     *
+     * @param EnumProvider the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.DynamicEnumProperty.EnumProvider" target="_top">.NET documentation</a>
+     */
     public void setEnumProvider(java.lang.String EnumProvider) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

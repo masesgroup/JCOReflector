@@ -101,7 +101,10 @@ public class TransferCodingHeaderValue extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TransferCodingHeaderValue(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,22 @@ public class TransferCodingHeaderValue extends NetObject  {
     public TransferCodingHeaderValue() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.TransferCodingHeaderValue.-ctor" target="_top">.NET documentation</a>
+     */
     public TransferCodingHeaderValue(java.lang.String value) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.globalization.CultureNotFoundException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +185,15 @@ public class TransferCodingHeaderValue extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member TryParse.
+     *
+     * @param input the argument of type {@code java.lang.String}
+     * @param parsedValue the argument of type {@code JCORefOut<TransferCodingHeaderValue>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.TransferCodingHeaderValue.TryParse" target="_top">.NET documentation</a>
+     */
     public static boolean TryParse(java.lang.String input, JCORefOut<TransferCodingHeaderValue> parsedValue) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -180,6 +208,22 @@ public class TransferCodingHeaderValue extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Parse.
+     *
+     * @param input the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.TransferCodingHeaderValue.Parse" target="_top">.NET documentation</a>
+     */
     public static TransferCodingHeaderValue Parse(java.lang.String input) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -198,8 +242,12 @@ public class TransferCodingHeaderValue extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICloneable method available in ICloneable to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ICloneable.Clone" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public NetObject Clone() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICloneable to obtain the full interface.");
     }
@@ -208,6 +256,13 @@ public class TransferCodingHeaderValue extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Parameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.TransferCodingHeaderValue.Parameters" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +278,13 @@ public class TransferCodingHeaderValue extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.TransferCodingHeaderValue.Value" target="_top">.NET documentation</a>
+     */
     public java.lang.String getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

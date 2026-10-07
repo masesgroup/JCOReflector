@@ -102,7 +102,10 @@ public class IWorkflowDebuggerImplementation extends NetObject implements IWorkf
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IWorkflowDebuggerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,19 @@ public class IWorkflowDebuggerImplementation extends NetObject implements IWorkf
 
     // Methods section
     
+    /**
+     * Invokes the .NET member ActivityStatusChanged.
+     *
+     * @param programId the argument of type {@code Guid}
+     * @param scheduleTypeId the argument of type {@code Guid}
+     * @param instanceId the argument of type {@code Guid}
+     * @param activityQualifiedName the argument of type {@code java.lang.String}
+     * @param hierarchicalActivityId the argument of type {@code java.lang.String}
+     * @param status the argument of type {@code ActivityExecutionStatus}
+     * @param stateReaderId the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.DebugEngine.IWorkflowDebugger.ActivityStatusChanged" target="_top">.NET documentation</a>
+     */
     public void ActivityStatusChanged(Guid programId, Guid scheduleTypeId, Guid instanceId, java.lang.String activityQualifiedName, java.lang.String hierarchicalActivityId, ActivityExecutionStatus status, int stateReaderId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -154,6 +170,15 @@ public class IWorkflowDebuggerImplementation extends NetObject implements IWorkf
         }
     }
 
+    /**
+     * Invokes the .NET member AssemblyLoaded.
+     *
+     * @param programId the argument of type {@code Guid}
+     * @param assemblyPath the argument of type {@code java.lang.String}
+     * @param fromGlobalAssemblyCache the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.DebugEngine.IWorkflowDebugger.AssemblyLoaded" target="_top">.NET documentation</a>
+     */
     public void AssemblyLoaded(Guid programId, java.lang.String assemblyPath, boolean fromGlobalAssemblyCache) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -164,6 +189,19 @@ public class IWorkflowDebuggerImplementation extends NetObject implements IWorkf
         }
     }
 
+    /**
+     * Invokes the .NET member BeforeActivityStatusChanged.
+     *
+     * @param programId the argument of type {@code Guid}
+     * @param scheduleTypeId the argument of type {@code Guid}
+     * @param instanceId the argument of type {@code Guid}
+     * @param activityQualifiedName the argument of type {@code java.lang.String}
+     * @param hierarchicalActivityId the argument of type {@code java.lang.String}
+     * @param status the argument of type {@code ActivityExecutionStatus}
+     * @param stateReaderId the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.DebugEngine.IWorkflowDebugger.BeforeActivityStatusChanged" target="_top">.NET documentation</a>
+     */
     public void BeforeActivityStatusChanged(Guid programId, Guid scheduleTypeId, Guid instanceId, java.lang.String activityQualifiedName, java.lang.String hierarchicalActivityId, ActivityExecutionStatus status, int stateReaderId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +212,16 @@ public class IWorkflowDebuggerImplementation extends NetObject implements IWorkf
         }
     }
 
+    /**
+     * Invokes the .NET member BeforeHandlerInvoked.
+     *
+     * @param programId the argument of type {@code Guid}
+     * @param scheduleTypeId the argument of type {@code Guid}
+     * @param activityQualifiedName the argument of type {@code java.lang.String}
+     * @param handlerMethod the argument of type {@code ActivityHandlerDescriptor}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.DebugEngine.IWorkflowDebugger.BeforeHandlerInvoked" target="_top">.NET documentation</a>
+     */
     public void BeforeHandlerInvoked(Guid programId, Guid scheduleTypeId, java.lang.String activityQualifiedName, ActivityHandlerDescriptor handlerMethod) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +232,16 @@ public class IWorkflowDebuggerImplementation extends NetObject implements IWorkf
         }
     }
 
+    /**
+     * Invokes the .NET member HandlerInvoked.
+     *
+     * @param programId the argument of type {@code Guid}
+     * @param instanceId the argument of type {@code Guid}
+     * @param threadId the argument of type {@code int}
+     * @param activityQualifiedName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.DebugEngine.IWorkflowDebugger.HandlerInvoked" target="_top">.NET documentation</a>
+     */
     public void HandlerInvoked(Guid programId, Guid instanceId, int threadId, java.lang.String activityQualifiedName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +252,14 @@ public class IWorkflowDebuggerImplementation extends NetObject implements IWorkf
         }
     }
 
+    /**
+     * Invokes the .NET member InstanceCompleted.
+     *
+     * @param programId the argument of type {@code Guid}
+     * @param instanceId the argument of type {@code Guid}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.DebugEngine.IWorkflowDebugger.InstanceCompleted" target="_top">.NET documentation</a>
+     */
     public void InstanceCompleted(Guid programId, Guid instanceId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +270,15 @@ public class IWorkflowDebuggerImplementation extends NetObject implements IWorkf
         }
     }
 
+    /**
+     * Invokes the .NET member InstanceCreated.
+     *
+     * @param programId the argument of type {@code Guid}
+     * @param instanceId the argument of type {@code Guid}
+     * @param scheduleTypeId the argument of type {@code Guid}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.DebugEngine.IWorkflowDebugger.InstanceCreated" target="_top">.NET documentation</a>
+     */
     public void InstanceCreated(Guid programId, Guid instanceId, Guid scheduleTypeId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +289,15 @@ public class IWorkflowDebuggerImplementation extends NetObject implements IWorkf
         }
     }
 
+    /**
+     * Invokes the .NET member InstanceDynamicallyUpdated.
+     *
+     * @param programId the argument of type {@code Guid}
+     * @param instanceId the argument of type {@code Guid}
+     * @param scheduleTypeId the argument of type {@code Guid}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.DebugEngine.IWorkflowDebugger.InstanceDynamicallyUpdated" target="_top">.NET documentation</a>
+     */
     public void InstanceDynamicallyUpdated(Guid programId, Guid instanceId, Guid scheduleTypeId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +308,21 @@ public class IWorkflowDebuggerImplementation extends NetObject implements IWorkf
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleTypeLoaded.
+     *
+     * @param programId the argument of type {@code Guid}
+     * @param scheduleTypeId the argument of type {@code Guid}
+     * @param assemblyFullName the argument of type {@code java.lang.String}
+     * @param fileName the argument of type {@code java.lang.String}
+     * @param md5Digest the argument of type {@code java.lang.String}
+     * @param isDynamic the argument of type {@code boolean}
+     * @param scheduleNamespace the argument of type {@code java.lang.String}
+     * @param scheduleName the argument of type {@code java.lang.String}
+     * @param workflowMarkup the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.DebugEngine.IWorkflowDebugger.ScheduleTypeLoaded" target="_top">.NET documentation</a>
+     */
     public void ScheduleTypeLoaded(Guid programId, Guid scheduleTypeId, java.lang.String assemblyFullName, java.lang.String fileName, java.lang.String md5Digest, boolean isDynamic, java.lang.String scheduleNamespace, java.lang.String scheduleName, java.lang.String workflowMarkup) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +333,19 @@ public class IWorkflowDebuggerImplementation extends NetObject implements IWorkf
         }
     }
 
+    /**
+     * Invokes the .NET member SetInitialActivityStatus.
+     *
+     * @param programId the argument of type {@code Guid}
+     * @param scheduleTypeId the argument of type {@code Guid}
+     * @param instanceId the argument of type {@code Guid}
+     * @param activityQualifiedName the argument of type {@code java.lang.String}
+     * @param hierarchicalActivityId the argument of type {@code java.lang.String}
+     * @param status the argument of type {@code ActivityExecutionStatus}
+     * @param stateReaderId the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.DebugEngine.IWorkflowDebugger.SetInitialActivityStatus" target="_top">.NET documentation</a>
+     */
     public void SetInitialActivityStatus(Guid programId, Guid scheduleTypeId, Guid instanceId, java.lang.String activityQualifiedName, java.lang.String hierarchicalActivityId, ActivityExecutionStatus status, int stateReaderId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +356,16 @@ public class IWorkflowDebuggerImplementation extends NetObject implements IWorkf
         }
     }
 
+    /**
+     * Invokes the .NET member UpdateHandlerMethodsForActivity.
+     *
+     * @param programId the argument of type {@code Guid}
+     * @param scheduleTypeId the argument of type {@code Guid}
+     * @param activityQualifiedName the argument of type {@code java.lang.String}
+     * @param handlerMethods the argument of type {@code List_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.DebugEngine.IWorkflowDebugger.UpdateHandlerMethodsForActivity" target="_top">.NET documentation</a>
+     */
     public void UpdateHandlerMethodsForActivity(Guid programId, Guid scheduleTypeId, java.lang.String activityQualifiedName, List_1 handlerMethods) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

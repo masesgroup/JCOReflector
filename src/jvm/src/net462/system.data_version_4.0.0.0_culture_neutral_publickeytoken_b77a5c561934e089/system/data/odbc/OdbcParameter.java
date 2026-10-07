@@ -103,7 +103,10 @@ public class OdbcParameter extends system.data.common.DbParameter  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public OdbcParameter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,12 @@ public class OdbcParameter extends system.data.common.DbParameter  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Odbc.OdbcParameter.-ctor" target="_top">.NET documentation</a>
+     */
     public OdbcParameter() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +169,22 @@ public class OdbcParameter extends system.data.common.DbParameter  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param type the argument of type {@code OdbcType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Odbc.OdbcParameter.-ctor" target="_top">.NET documentation</a>
+     */
     public OdbcParameter(java.lang.String name, OdbcType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +195,23 @@ public class OdbcParameter extends system.data.common.DbParameter  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param type the argument of type {@code OdbcType}
+     * @param size the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Odbc.OdbcParameter.-ctor" target="_top">.NET documentation</a>
+     */
     public OdbcParameter(java.lang.String name, OdbcType type, int size) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +222,30 @@ public class OdbcParameter extends system.data.common.DbParameter  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param parameterName the argument of type {@code java.lang.String}
+     * @param odbcType the argument of type {@code OdbcType}
+     * @param size the argument of type {@code int}
+     * @param parameterDirection the argument of type {@code ParameterDirection}
+     * @param isNullable the argument of type {@code boolean}
+     * @param precision the argument of type {@code byte}
+     * @param scale the argument of type {@code byte}
+     * @param srcColumn the argument of type {@code java.lang.String}
+     * @param srcVersion the argument of type {@code DataRowVersion}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Odbc.OdbcParameter.-ctor" target="_top">.NET documentation</a>
+     */
     public OdbcParameter(java.lang.String parameterName, OdbcType odbcType, int size, ParameterDirection parameterDirection, boolean isNullable, byte precision, byte scale, java.lang.String srcColumn, DataRowVersion srcVersion, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -190,6 +256,30 @@ public class OdbcParameter extends system.data.common.DbParameter  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param parameterName the argument of type {@code java.lang.String}
+     * @param odbcType the argument of type {@code OdbcType}
+     * @param size the argument of type {@code int}
+     * @param parameterDirection the argument of type {@code ParameterDirection}
+     * @param precision the argument of type {@code byte}
+     * @param scale the argument of type {@code byte}
+     * @param sourceColumn the argument of type {@code java.lang.String}
+     * @param sourceVersion the argument of type {@code DataRowVersion}
+     * @param sourceColumnNullMapping the argument of type {@code boolean}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Odbc.OdbcParameter.-ctor" target="_top">.NET documentation</a>
+     */
     public OdbcParameter(java.lang.String parameterName, OdbcType odbcType, int size, ParameterDirection parameterDirection, byte precision, byte scale, java.lang.String sourceColumn, DataRowVersion sourceVersion, boolean sourceColumnNullMapping, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -200,6 +290,24 @@ public class OdbcParameter extends system.data.common.DbParameter  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param type the argument of type {@code OdbcType}
+     * @param size the argument of type {@code int}
+     * @param sourcecolumn the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Odbc.OdbcParameter.-ctor" target="_top">.NET documentation</a>
+     */
     public OdbcParameter(java.lang.String name, OdbcType type, int size, java.lang.String sourcecolumn) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -210,6 +318,14 @@ public class OdbcParameter extends system.data.common.DbParameter  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Odbc.OdbcParameter.-ctor" target="_top">.NET documentation</a>
+     */
     public OdbcParameter(java.lang.String name, NetObject value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -224,6 +340,12 @@ public class OdbcParameter extends system.data.common.DbParameter  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ResetDbType.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Odbc.OdbcParameter.ResetDbType" target="_top">.NET documentation</a>
+     */
     public void ResetDbType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +356,12 @@ public class OdbcParameter extends system.data.common.DbParameter  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResetOdbcType.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Odbc.OdbcParameter.ResetOdbcType" target="_top">.NET documentation</a>
+     */
     public void ResetOdbcType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,8 +375,12 @@ public class OdbcParameter extends system.data.common.DbParameter  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICloneable method available in ICloneable to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ICloneable.Clone" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public NetObject Clone() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICloneable to obtain the full interface.");
     }
@@ -257,6 +389,14 @@ public class OdbcParameter extends system.data.common.DbParameter  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Precision.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.data.sqltypes.SqlNullValueException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Odbc.OdbcParameter.Precision" target="_top">.NET documentation</a>
+     */
     public byte getPrecision() throws Throwable, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -297,6 +437,13 @@ public class OdbcParameter extends system.data.common.DbParameter  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Precision.
+     *
+     * @param Precision the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Odbc.OdbcParameter.Precision" target="_top">.NET documentation</a>
+     */
     public void setPrecision(byte Precision) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -307,6 +454,13 @@ public class OdbcParameter extends system.data.common.DbParameter  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Scale.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Odbc.OdbcParameter.Scale" target="_top">.NET documentation</a>
+     */
     public byte getScale() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -347,6 +501,13 @@ public class OdbcParameter extends system.data.common.DbParameter  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Scale.
+     *
+     * @param Scale the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Odbc.OdbcParameter.Scale" target="_top">.NET documentation</a>
+     */
     public void setScale(byte Scale) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -357,6 +518,13 @@ public class OdbcParameter extends system.data.common.DbParameter  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OdbcType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Odbc.OdbcParameter.OdbcType" target="_top">.NET documentation</a>
+     */
     public OdbcType getOdbcType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -372,6 +540,21 @@ public class OdbcParameter extends system.data.common.DbParameter  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OdbcType.
+     *
+     * @param OdbcType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Odbc.OdbcParameter.OdbcType" target="_top">.NET documentation</a>
+     */
     public void setOdbcType(OdbcType OdbcType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class ComponentChangedEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ComponentChangedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,16 @@ public class ComponentChangedEventArgs extends system.EventArgs  {
     public ComponentChangedEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param component the argument of type {@code NetObject}
+     * @param member the argument of type {@code MemberDescriptor}
+     * @param oldValue the argument of type {@code NetObject}
+     * @param newValue the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ComponentChangedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ComponentChangedEventArgs(NetObject component, MemberDescriptor member, NetObject oldValue, NetObject newValue) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +182,13 @@ public class ComponentChangedEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Member.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ComponentChangedEventArgs.Member" target="_top">.NET documentation</a>
+     */
     public MemberDescriptor getMember() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +204,13 @@ public class ComponentChangedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Component.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ComponentChangedEventArgs.Component" target="_top">.NET documentation</a>
+     */
     public NetObject getComponent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +226,13 @@ public class ComponentChangedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NewValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ComponentChangedEventArgs.NewValue" target="_top">.NET documentation</a>
+     */
     public NetObject getNewValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +248,13 @@ public class ComponentChangedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OldValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ComponentChangedEventArgs.OldValue" target="_top">.NET documentation</a>
+     */
     public NetObject getOldValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

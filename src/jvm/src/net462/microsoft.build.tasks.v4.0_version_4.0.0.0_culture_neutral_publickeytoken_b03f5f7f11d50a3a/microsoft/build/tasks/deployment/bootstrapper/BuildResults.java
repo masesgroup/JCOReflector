@@ -99,7 +99,10 @@ public class BuildResults extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BuildResults(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class BuildResults extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Succeeded.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults.Succeeded" target="_top">.NET documentation</a>
+     */
     public boolean getSucceeded() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +182,14 @@ public class BuildResults extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Messages.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults.Messages" target="_top">.NET documentation</a>
+     */
     public final BuildMessage[] getMessages() throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +211,13 @@ public class BuildResults extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeyFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults.KeyFile" target="_top">.NET documentation</a>
+     */
     public java.lang.String getKeyFile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +232,14 @@ public class BuildResults extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ComponentFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults.ComponentFiles" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getComponentFiles() throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -102,7 +102,10 @@ public class SiteMapDesignerDataSourceView extends system.web.ui.design.Designer
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SiteMapDesignerDataSourceView(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,15 @@ public class SiteMapDesignerDataSourceView extends system.web.ui.design.Designer
     public SiteMapDesignerDataSourceView() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param owner the argument of type {@code SiteMapDataSourceDesigner}
+     * @param viewName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebControls.SiteMapDesignerDataSourceView.-ctor" target="_top">.NET documentation</a>
+     */
     public SiteMapDesignerDataSourceView(SiteMapDataSourceDesigner owner, java.lang.String viewName) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +179,30 @@ public class SiteMapDesignerDataSourceView extends system.web.ui.design.Designer
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetDesignTimeData.
+     *
+     * @param minimumRows the argument of type {@code int}
+     * @param isSampleData the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicBoolean>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.data.DataException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebControls.SiteMapDesignerDataSourceView.GetDesignTimeData" target="_top">.NET documentation</a>
+     */
     public IEnumerable GetDesignTimeData(int minimumRows, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isSampleData) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.NullReferenceException, system.data.DataException, system.collections.generic.KeyNotFoundException, system.InvalidTimeZoneException, system.OverflowException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

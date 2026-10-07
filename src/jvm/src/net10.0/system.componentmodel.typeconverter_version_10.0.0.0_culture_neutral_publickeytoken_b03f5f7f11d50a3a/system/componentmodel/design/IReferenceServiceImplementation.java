@@ -100,7 +100,10 @@ public class IReferenceServiceImplementation extends NetObject implements IRefer
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IReferenceServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,14 @@ public class IReferenceServiceImplementation extends NetObject implements IRefer
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetComponent.
+     *
+     * @param reference the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IReferenceService.GetComponent" target="_top">.NET documentation</a>
+     */
     public IComponent GetComponent(NetObject reference) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -157,6 +168,14 @@ public class IReferenceServiceImplementation extends NetObject implements IRefer
         }
     }
 
+    /**
+     * Invokes the .NET member GetReference.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IReferenceService.GetReference" target="_top">.NET documentation</a>
+     */
     public NetObject GetReference(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +191,13 @@ public class IReferenceServiceImplementation extends NetObject implements IRefer
         }
     }
 
+    /**
+     * Invokes the .NET member GetReferences.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IReferenceService.GetReferences" target="_top">.NET documentation</a>
+     */
     public NetObject[] GetReferences() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +219,14 @@ public class IReferenceServiceImplementation extends NetObject implements IRefer
         }
     }
 
+    /**
+     * Invokes the .NET member GetReferences.
+     *
+     * @param baseType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IReferenceService.GetReferences" target="_top">.NET documentation</a>
+     */
     public NetObject[] GetReferences(NetType baseType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +248,14 @@ public class IReferenceServiceImplementation extends NetObject implements IRefer
         }
     }
 
+    /**
+     * Invokes the .NET member GetName.
+     *
+     * @param reference the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IReferenceService.GetName" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetName(NetObject reference) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

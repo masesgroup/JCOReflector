@@ -99,7 +99,10 @@ public class ContractNamespaceAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ContractNamespaceAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,13 @@ public class ContractNamespaceAttribute extends system.Attribute  {
     public ContractNamespaceAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param contractNamespace the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ContractNamespaceAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ContractNamespaceAttribute(java.lang.String contractNamespace) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +178,13 @@ public class ContractNamespaceAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ClrNamespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ContractNamespaceAttribute.ClrNamespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getClrNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +199,13 @@ public class ContractNamespaceAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ClrNamespace.
+     *
+     * @param ClrNamespace the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ContractNamespaceAttribute.ClrNamespace" target="_top">.NET documentation</a>
+     */
     public void setClrNamespace(java.lang.String ClrNamespace) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +216,13 @@ public class ContractNamespaceAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContractNamespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ContractNamespaceAttribute.ContractNamespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getContractNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

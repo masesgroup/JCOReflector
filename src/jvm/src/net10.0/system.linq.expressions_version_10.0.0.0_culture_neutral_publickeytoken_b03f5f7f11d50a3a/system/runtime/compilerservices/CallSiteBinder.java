@@ -101,7 +101,10 @@ public class CallSiteBinder extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CallSiteBinder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,16 @@ public class CallSiteBinder extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Bind.
+     *
+     * @param args the argument of type {@code NetObject[]}
+     * @param parameters the argument of type {@code ReadOnlyCollection_1}
+     * @param returnLabel the argument of type {@code LabelTarget}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.CallSiteBinder.Bind" target="_top">.NET documentation</a>
+     */
     public Expression Bind(NetObject[] args, ReadOnlyCollection_1 parameters, LabelTarget returnLabel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +186,13 @@ public class CallSiteBinder extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property UpdateLabel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.CallSiteBinder.UpdateLabel" target="_top">.NET documentation</a>
+     */
     public static LabelTarget getUpdateLabel() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

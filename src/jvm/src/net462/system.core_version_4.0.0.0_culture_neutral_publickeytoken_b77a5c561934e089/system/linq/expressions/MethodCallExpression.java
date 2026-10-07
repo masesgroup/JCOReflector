@@ -105,7 +105,10 @@ public class MethodCallExpression extends system.linq.expressions.Expression  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MethodCallExpression(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,24 @@ public class MethodCallExpression extends system.linq.expressions.Expression  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Update.
+     *
+     * @param object the argument of type {@code Expression}
+     * @param arguments the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.MethodCallExpression.Update" target="_top">.NET documentation</a>
+     */
     public MethodCallExpression Update(Expression object, IEnumerable_1 arguments) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,8 +199,13 @@ public class MethodCallExpression extends system.linq.expressions.Expression  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIArgumentProvider method available in IArgumentProvider to obtain an object with an invocable method
+     *
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.IArgumentProvider.GetArgument" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public Expression GetArgument(int index) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIArgumentProvider to obtain the full interface.");
     }
@@ -188,6 +214,13 @@ public class MethodCallExpression extends system.linq.expressions.Expression  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Arguments.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.MethodCallExpression.Arguments" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getArguments() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +236,13 @@ public class MethodCallExpression extends system.linq.expressions.Expression  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Object.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.MethodCallExpression.Object" target="_top">.NET documentation</a>
+     */
     public Expression getObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +258,13 @@ public class MethodCallExpression extends system.linq.expressions.Expression  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Method.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.MethodCallExpression.Method" target="_top">.NET documentation</a>
+     */
     public MethodInfo getMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

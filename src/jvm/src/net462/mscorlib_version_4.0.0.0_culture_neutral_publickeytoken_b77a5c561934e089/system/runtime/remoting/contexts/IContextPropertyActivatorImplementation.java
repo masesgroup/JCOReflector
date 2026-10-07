@@ -102,7 +102,10 @@ public class IContextPropertyActivatorImplementation extends NetObject implement
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IContextPropertyActivatorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,14 @@ public class IContextPropertyActivatorImplementation extends NetObject implement
 
     // Methods section
     
+    /**
+     * Invokes the .NET member DeliverClientContextToServerContext.
+     *
+     * @param msg the argument of type {@code IConstructionCallMessage}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Contexts.IContextPropertyActivator.DeliverClientContextToServerContext" target="_top">.NET documentation</a>
+     */
     public boolean DeliverClientContextToServerContext(IConstructionCallMessage msg) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -158,6 +169,14 @@ public class IContextPropertyActivatorImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member DeliverServerContextToClientContext.
+     *
+     * @param msg the argument of type {@code IConstructionReturnMessage}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Contexts.IContextPropertyActivator.DeliverServerContextToClientContext" target="_top">.NET documentation</a>
+     */
     public boolean DeliverServerContextToClientContext(IConstructionReturnMessage msg) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +191,14 @@ public class IContextPropertyActivatorImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member IsOKToActivate.
+     *
+     * @param msg the argument of type {@code IConstructionCallMessage}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Contexts.IContextPropertyActivator.IsOKToActivate" target="_top">.NET documentation</a>
+     */
     public boolean IsOKToActivate(IConstructionCallMessage msg) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +213,13 @@ public class IContextPropertyActivatorImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member CollectFromClientContext.
+     *
+     * @param msg the argument of type {@code IConstructionCallMessage}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Contexts.IContextPropertyActivator.CollectFromClientContext" target="_top">.NET documentation</a>
+     */
     public void CollectFromClientContext(IConstructionCallMessage msg) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +230,13 @@ public class IContextPropertyActivatorImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member CollectFromServerContext.
+     *
+     * @param msg the argument of type {@code IConstructionReturnMessage}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Contexts.IContextPropertyActivator.CollectFromServerContext" target="_top">.NET documentation</a>
+     */
     public void CollectFromServerContext(IConstructionReturnMessage msg) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

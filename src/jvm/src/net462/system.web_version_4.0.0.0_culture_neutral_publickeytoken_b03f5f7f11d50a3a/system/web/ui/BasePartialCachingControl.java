@@ -101,7 +101,10 @@ public class BasePartialCachingControl extends system.web.ui.Control  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BasePartialCachingControl(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,23 @@ public class BasePartialCachingControl extends system.web.ui.Control  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.BasePartialCachingControl.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.web.HttpException, system.OverflowException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +188,13 @@ public class BasePartialCachingControl extends system.web.ui.Control  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Dependency.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.BasePartialCachingControl.Dependency" target="_top">.NET documentation</a>
+     */
     public CacheDependency getDependency() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +210,13 @@ public class BasePartialCachingControl extends system.web.ui.Control  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Dependency.
+     *
+     * @param Dependency the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.BasePartialCachingControl.Dependency" target="_top">.NET documentation</a>
+     */
     public void setDependency(CacheDependency Dependency) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +227,13 @@ public class BasePartialCachingControl extends system.web.ui.Control  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CachePolicy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.BasePartialCachingControl.CachePolicy" target="_top">.NET documentation</a>
+     */
     public ControlCachePolicy getCachePolicy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

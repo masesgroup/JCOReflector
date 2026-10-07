@@ -101,7 +101,10 @@ public class IHttpHandlerFactoryImplementation extends NetObject implements IHtt
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IHttpHandlerFactoryImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,17 @@ public class IHttpHandlerFactoryImplementation extends NetObject implements IHtt
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetHandler.
+     *
+     * @param context the argument of type {@code HttpContext}
+     * @param requestType the argument of type {@code java.lang.String}
+     * @param url the argument of type {@code java.lang.String}
+     * @param pathTranslated the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.IHttpHandlerFactory.GetHandler" target="_top">.NET documentation</a>
+     */
     public IHttpHandler GetHandler(HttpContext context, java.lang.String requestType, java.lang.String url, java.lang.String pathTranslated) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -158,6 +172,13 @@ public class IHttpHandlerFactoryImplementation extends NetObject implements IHtt
         }
     }
 
+    /**
+     * Invokes the .NET member ReleaseHandler.
+     *
+     * @param handler the argument of type {@code IHttpHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.IHttpHandlerFactory.ReleaseHandler" target="_top">.NET documentation</a>
+     */
     public void ReleaseHandler(IHttpHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

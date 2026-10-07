@@ -98,7 +98,10 @@ public class BaseReference extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BaseReference(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,19 @@ public class BaseReference extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsOptional.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.IsOptional" target="_top">.NET documentation</a>
+     */
     public boolean getIsOptional() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +185,13 @@ public class BaseReference extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsOptional.
+     *
+     * @param IsOptional the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.IsOptional" target="_top">.NET documentation</a>
+     */
     public void setIsOptional(boolean IsOptional) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +202,22 @@ public class BaseReference extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Size.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.Size" target="_top">.NET documentation</a>
+     */
     public long getSize() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +258,19 @@ public class BaseReference extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Size.
+     *
+     * @param Size the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.Size" target="_top">.NET documentation</a>
+     */
     public void setSize(long Size) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +281,13 @@ public class BaseReference extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Group.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.Group" target="_top">.NET documentation</a>
+     */
     public java.lang.String getGroup() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +302,13 @@ public class BaseReference extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Group.
+     *
+     * @param Group the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.Group" target="_top">.NET documentation</a>
+     */
     public void setGroup(java.lang.String Group) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +319,13 @@ public class BaseReference extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Hash.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.Hash" target="_top">.NET documentation</a>
+     */
     public java.lang.String getHash() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +340,13 @@ public class BaseReference extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Hash.
+     *
+     * @param Hash the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.Hash" target="_top">.NET documentation</a>
+     */
     public void setHash(java.lang.String Hash) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +357,13 @@ public class BaseReference extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResolvedPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.ResolvedPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getResolvedPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +378,13 @@ public class BaseReference extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ResolvedPath.
+     *
+     * @param ResolvedPath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.ResolvedPath" target="_top">.NET documentation</a>
+     */
     public void setResolvedPath(java.lang.String ResolvedPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +395,13 @@ public class BaseReference extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SourcePath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.SourcePath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSourcePath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -315,6 +416,13 @@ public class BaseReference extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SourcePath.
+     *
+     * @param SourcePath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.SourcePath" target="_top">.NET documentation</a>
+     */
     public void setSourcePath(java.lang.String SourcePath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -325,6 +433,13 @@ public class BaseReference extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.TargetPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTargetPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -339,6 +454,13 @@ public class BaseReference extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TargetPath.
+     *
+     * @param TargetPath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.TargetPath" target="_top">.NET documentation</a>
+     */
     public void setTargetPath(java.lang.String TargetPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -349,6 +471,13 @@ public class BaseReference extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlGroup.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.XmlGroup" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlGroup() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -363,6 +492,13 @@ public class BaseReference extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlGroup.
+     *
+     * @param XmlGroup the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.XmlGroup" target="_top">.NET documentation</a>
+     */
     public void setXmlGroup(java.lang.String XmlGroup) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -373,6 +509,13 @@ public class BaseReference extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlHash.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.XmlHash" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlHash() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -387,6 +530,13 @@ public class BaseReference extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlHash.
+     *
+     * @param XmlHash the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.XmlHash" target="_top">.NET documentation</a>
+     */
     public void setXmlHash(java.lang.String XmlHash) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -397,6 +547,13 @@ public class BaseReference extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlHashAlgorithm.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.XmlHashAlgorithm" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlHashAlgorithm() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -411,6 +568,13 @@ public class BaseReference extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlHashAlgorithm.
+     *
+     * @param XmlHashAlgorithm the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.XmlHashAlgorithm" target="_top">.NET documentation</a>
+     */
     public void setXmlHashAlgorithm(java.lang.String XmlHashAlgorithm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -421,6 +585,19 @@ public class BaseReference extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlIsOptional.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.XmlIsOptional" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlIsOptional() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -435,6 +612,13 @@ public class BaseReference extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlIsOptional.
+     *
+     * @param XmlIsOptional the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.XmlIsOptional" target="_top">.NET documentation</a>
+     */
     public void setXmlIsOptional(java.lang.String XmlIsOptional) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -445,6 +629,13 @@ public class BaseReference extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.XmlPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -459,6 +650,13 @@ public class BaseReference extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlPath.
+     *
+     * @param XmlPath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.XmlPath" target="_top">.NET documentation</a>
+     */
     public void setXmlPath(java.lang.String XmlPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -469,6 +667,13 @@ public class BaseReference extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.XmlSize" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -483,6 +688,13 @@ public class BaseReference extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlSize.
+     *
+     * @param XmlSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference.XmlSize" target="_top">.NET documentation</a>
+     */
     public void setXmlSize(java.lang.String XmlSize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

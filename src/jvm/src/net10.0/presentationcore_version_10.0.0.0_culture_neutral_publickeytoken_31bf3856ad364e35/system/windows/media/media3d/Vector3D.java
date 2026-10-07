@@ -104,7 +104,10 @@ public class Vector3D extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Vector3D(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,15 @@ public class Vector3D extends system.ValueType  {
     public Vector3D() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param x the argument of type {@code double}
+     * @param y the argument of type {@code double}
+     * @param z the argument of type {@code double}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Vector3D.-ctor" target="_top">.NET documentation</a>
+     */
     public Vector3D(double x, double y, double z) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +181,15 @@ public class Vector3D extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param vector1 the argument of type {@code Vector3D}
+     * @param vector2 the argument of type {@code Vector3D}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Vector3D.Equals" target="_top">.NET documentation</a>
+     */
     public static boolean Equals(Vector3D vector1, Vector3D vector2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -183,6 +204,14 @@ public class Vector3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param value the argument of type {@code Vector3D}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Vector3D.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(Vector3D value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +226,17 @@ public class Vector3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member AngleBetween.
+     *
+     * @param vector1 the argument of type {@code Vector3D}
+     * @param vector2 the argument of type {@code Vector3D}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Vector3D.AngleBetween" target="_top">.NET documentation</a>
+     */
     public static double AngleBetween(Vector3D vector1, Vector3D vector2) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -237,6 +277,15 @@ public class Vector3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member DotProduct.
+     *
+     * @param vector1 the argument of type {@code Vector3D}
+     * @param vector2 the argument of type {@code Vector3D}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Vector3D.DotProduct" target="_top">.NET documentation</a>
+     */
     public static double DotProduct(Vector3D vector1, Vector3D vector2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -277,6 +326,23 @@ public class Vector3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToString.
+     *
+     * @param provider the argument of type {@code IFormatProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Vector3D.ToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String ToString(IFormatProvider provider) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +357,15 @@ public class Vector3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param vector the argument of type {@code Vector3D}
+     * @param point the argument of type {@code Point3D}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Vector3D.Add" target="_top">.NET documentation</a>
+     */
     public static Point3D Add(Vector3D vector, Point3D point) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -306,6 +381,15 @@ public class Vector3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Subtract.
+     *
+     * @param vector the argument of type {@code Vector3D}
+     * @param point the argument of type {@code Point3D}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Vector3D.Subtract" target="_top">.NET documentation</a>
+     */
     public static Point3D Subtract(Vector3D vector, Point3D point) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -321,6 +405,15 @@ public class Vector3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param vector1 the argument of type {@code Vector3D}
+     * @param vector2 the argument of type {@code Vector3D}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Vector3D.Add" target="_top">.NET documentation</a>
+     */
     public static Vector3D Add(Vector3D vector1, Vector3D vector2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -336,6 +429,15 @@ public class Vector3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CrossProduct.
+     *
+     * @param vector1 the argument of type {@code Vector3D}
+     * @param vector2 the argument of type {@code Vector3D}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Vector3D.CrossProduct" target="_top">.NET documentation</a>
+     */
     public static Vector3D CrossProduct(Vector3D vector1, Vector3D vector2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -351,6 +453,15 @@ public class Vector3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Divide.
+     *
+     * @param vector the argument of type {@code Vector3D}
+     * @param scalar the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Vector3D.Divide" target="_top">.NET documentation</a>
+     */
     public static Vector3D Divide(Vector3D vector, double scalar) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -366,6 +477,15 @@ public class Vector3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Multiply.
+     *
+     * @param scalar the argument of type {@code double}
+     * @param vector the argument of type {@code Vector3D}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Vector3D.Multiply" target="_top">.NET documentation</a>
+     */
     public static Vector3D Multiply(double scalar, Vector3D vector) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -381,6 +501,15 @@ public class Vector3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Multiply.
+     *
+     * @param vector the argument of type {@code Vector3D}
+     * @param scalar the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Vector3D.Multiply" target="_top">.NET documentation</a>
+     */
     public static Vector3D Multiply(Vector3D vector, double scalar) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -396,6 +525,15 @@ public class Vector3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Multiply.
+     *
+     * @param vector the argument of type {@code Vector3D}
+     * @param matrix the argument of type {@code Matrix3D}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Vector3D.Multiply" target="_top">.NET documentation</a>
+     */
     public static Vector3D Multiply(Vector3D vector, Matrix3D matrix) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -411,6 +549,23 @@ public class Vector3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Parse.
+     *
+     * @param source the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Vector3D.Parse" target="_top">.NET documentation</a>
+     */
     public static Vector3D Parse(java.lang.String source) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -426,6 +581,15 @@ public class Vector3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Subtract.
+     *
+     * @param vector1 the argument of type {@code Vector3D}
+     * @param vector2 the argument of type {@code Vector3D}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Vector3D.Subtract" target="_top">.NET documentation</a>
+     */
     public static Vector3D Subtract(Vector3D vector1, Vector3D vector2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -441,6 +605,12 @@ public class Vector3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Negate.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Vector3D.Negate" target="_top">.NET documentation</a>
+     */
     public void Negate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -451,6 +621,15 @@ public class Vector3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Normalize.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Vector3D.Normalize" target="_top">.NET documentation</a>
+     */
     public void Normalize() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -464,8 +643,14 @@ public class Vector3D extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIFormattable method available in IFormattable to obtain an object with an invocable method
+     *
+     * @param format the argument of type {@code java.lang.String}
+     * @param formatProvider the argument of type {@code IFormatProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IFormattable.ToString" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public java.lang.String ToString(java.lang.String format, IFormatProvider formatProvider) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
     }
@@ -474,6 +659,13 @@ public class Vector3D extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Length.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Vector3D.Length" target="_top">.NET documentation</a>
+     */
     public double getLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -514,6 +706,13 @@ public class Vector3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LengthSquared.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Vector3D.LengthSquared" target="_top">.NET documentation</a>
+     */
     public double getLengthSquared() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -554,6 +753,13 @@ public class Vector3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property X.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Vector3D.X" target="_top">.NET documentation</a>
+     */
     public double getX() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -594,6 +800,13 @@ public class Vector3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property X.
+     *
+     * @param X the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Vector3D.X" target="_top">.NET documentation</a>
+     */
     public void setX(double X) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -604,6 +817,13 @@ public class Vector3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Y.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Vector3D.Y" target="_top">.NET documentation</a>
+     */
     public double getY() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -644,6 +864,13 @@ public class Vector3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Y.
+     *
+     * @param Y the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Vector3D.Y" target="_top">.NET documentation</a>
+     */
     public void setY(double Y) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -654,6 +881,13 @@ public class Vector3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Z.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Vector3D.Z" target="_top">.NET documentation</a>
+     */
     public double getZ() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -694,6 +928,13 @@ public class Vector3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Z.
+     *
+     * @param Z the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Vector3D.Z" target="_top">.NET documentation</a>
+     */
     public void setZ(double Z) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

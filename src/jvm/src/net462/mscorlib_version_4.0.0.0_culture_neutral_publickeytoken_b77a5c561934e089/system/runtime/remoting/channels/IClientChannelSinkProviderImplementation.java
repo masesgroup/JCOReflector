@@ -104,7 +104,10 @@ public class IClientChannelSinkProviderImplementation extends NetObject implemen
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IClientChannelSinkProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,16 @@ public class IClientChannelSinkProviderImplementation extends NetObject implemen
 
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateSink.
+     *
+     * @param channel the argument of type {@code IChannelSender}
+     * @param url the argument of type {@code java.lang.String}
+     * @param remoteChannelData the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IClientChannelSinkProvider.CreateSink" target="_top">.NET documentation</a>
+     */
     public IClientChannelSink CreateSink(IChannelSender channel, java.lang.String url, NetObject remoteChannelData) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -165,6 +178,13 @@ public class IClientChannelSinkProviderImplementation extends NetObject implemen
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Next.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IClientChannelSinkProvider.Next" target="_top">.NET documentation</a>
+     */
     public IClientChannelSinkProvider getNext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +200,13 @@ public class IClientChannelSinkProviderImplementation extends NetObject implemen
         }
     }
 
+    /**
+     * Sets the value of the .NET property Next.
+     *
+     * @param Next the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IClientChannelSinkProvider.Next" target="_top">.NET documentation</a>
+     */
     public void setNext(IClientChannelSinkProvider Next) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

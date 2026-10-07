@@ -99,7 +99,10 @@ public class XNodeEqualityComparer extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XNodeEqualityComparer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class XNodeEqualityComparer extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XNodeEqualityComparer.-ctor" target="_top">.NET documentation</a>
+     */
     public XNodeEqualityComparer() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +169,15 @@ public class XNodeEqualityComparer extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param x the argument of type {@code XNode}
+     * @param y the argument of type {@code XNode}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XNodeEqualityComparer.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(XNode x, XNode y) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +192,14 @@ public class XNodeEqualityComparer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetHashCode.
+     *
+     * @param obj the argument of type {@code XNode}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XNodeEqualityComparer.GetHashCode" target="_top">.NET documentation</a>
+     */
     public int GetHashCode(XNode obj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,8 +243,14 @@ public class XNodeEqualityComparer extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIEqualityComparer method available in IEqualityComparer to obtain an object with an invocable method
+     *
+     * @param x the argument of type {@code NetObject}
+     * @param y the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IEqualityComparer.Equals" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean Equals(NetObject x, NetObject y) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEqualityComparer to obtain the full interface.");
     }
@@ -226,8 +258,13 @@ public class XNodeEqualityComparer extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIEqualityComparer method available in IEqualityComparer to obtain an object with an invocable method
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IEqualityComparer.GetHashCode" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int GetHashCode(NetObject obj) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEqualityComparer to obtain the full interface.");
     }

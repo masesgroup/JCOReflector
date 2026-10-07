@@ -100,7 +100,10 @@ public class IValueSerializableExpressionImplementation extends NetObject implem
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IValueSerializableExpressionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,14 @@ public class IValueSerializableExpressionImplementation extends NetObject implem
 
     // Methods section
     
+    /**
+     * Invokes the .NET member CanConvertToString.
+     *
+     * @param context the argument of type {@code IValueSerializerContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.IValueSerializableExpression.CanConvertToString" target="_top">.NET documentation</a>
+     */
     public boolean CanConvertToString(IValueSerializerContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -156,6 +167,14 @@ public class IValueSerializableExpressionImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertToString.
+     *
+     * @param context the argument of type {@code IValueSerializerContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.IValueSerializableExpression.ConvertToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String ConvertToString(IValueSerializerContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

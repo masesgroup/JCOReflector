@@ -99,7 +99,10 @@ public class RequestCachePolicy extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RequestCachePolicy(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,13 @@ public class RequestCachePolicy extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Cache.RequestCachePolicy.-ctor" target="_top">.NET documentation</a>
+     */
     public RequestCachePolicy() throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +166,14 @@ public class RequestCachePolicy extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param level the argument of type {@code RequestCacheLevel}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Cache.RequestCachePolicy.-ctor" target="_top">.NET documentation</a>
+     */
     public RequestCachePolicy(RequestCacheLevel level) throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +192,13 @@ public class RequestCachePolicy extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Level.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Cache.RequestCachePolicy.Level" target="_top">.NET documentation</a>
+     */
     public RequestCacheLevel getLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

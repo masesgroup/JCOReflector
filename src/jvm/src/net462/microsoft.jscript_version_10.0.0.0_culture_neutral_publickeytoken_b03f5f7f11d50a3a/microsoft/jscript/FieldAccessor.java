@@ -98,7 +98,10 @@ public class FieldAccessor extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FieldAccessor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,14 @@ public class FieldAccessor extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetValue.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.FieldAccessor.GetValue" target="_top">.NET documentation</a>
+     */
     public NetObject GetValue(NetObject thisob) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -166,6 +177,14 @@ public class FieldAccessor extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetValue.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.FieldAccessor.SetValue" target="_top">.NET documentation</a>
+     */
     public void SetValue(NetObject thisob, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

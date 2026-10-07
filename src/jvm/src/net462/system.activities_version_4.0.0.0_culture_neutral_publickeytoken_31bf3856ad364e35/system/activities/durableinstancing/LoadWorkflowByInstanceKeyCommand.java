@@ -102,7 +102,10 @@ public class LoadWorkflowByInstanceKeyCommand extends system.runtime.durableinst
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public LoadWorkflowByInstanceKeyCommand(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,20 @@ public class LoadWorkflowByInstanceKeyCommand extends system.runtime.durableinst
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand.-ctor" target="_top">.NET documentation</a>
+     */
     public LoadWorkflowByInstanceKeyCommand() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +184,13 @@ public class LoadWorkflowByInstanceKeyCommand extends system.runtime.durableinst
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AcceptUninitializedInstance.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand.AcceptUninitializedInstance" target="_top">.NET documentation</a>
+     */
     public boolean getAcceptUninitializedInstance() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +205,13 @@ public class LoadWorkflowByInstanceKeyCommand extends system.runtime.durableinst
         }
     }
 
+    /**
+     * Sets the value of the .NET property AcceptUninitializedInstance.
+     *
+     * @param AcceptUninitializedInstance the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand.AcceptUninitializedInstance" target="_top">.NET documentation</a>
+     */
     public void setAcceptUninitializedInstance(boolean AcceptUninitializedInstance) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +222,15 @@ public class LoadWorkflowByInstanceKeyCommand extends system.runtime.durableinst
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceKeysToAssociate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand.InstanceKeysToAssociate" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 getInstanceKeysToAssociate() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +246,13 @@ public class LoadWorkflowByInstanceKeyCommand extends system.runtime.durableinst
         }
     }
 
+    /**
+     * Gets the value of the .NET property AssociateInstanceKeyToInstanceId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand.AssociateInstanceKeyToInstanceId" target="_top">.NET documentation</a>
+     */
     public Guid getAssociateInstanceKeyToInstanceId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +268,13 @@ public class LoadWorkflowByInstanceKeyCommand extends system.runtime.durableinst
         }
     }
 
+    /**
+     * Sets the value of the .NET property AssociateInstanceKeyToInstanceId.
+     *
+     * @param AssociateInstanceKeyToInstanceId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand.AssociateInstanceKeyToInstanceId" target="_top">.NET documentation</a>
+     */
     public void setAssociateInstanceKeyToInstanceId(Guid AssociateInstanceKeyToInstanceId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +285,13 @@ public class LoadWorkflowByInstanceKeyCommand extends system.runtime.durableinst
         }
     }
 
+    /**
+     * Gets the value of the .NET property LookupInstanceKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand.LookupInstanceKey" target="_top">.NET documentation</a>
+     */
     public Guid getLookupInstanceKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +307,13 @@ public class LoadWorkflowByInstanceKeyCommand extends system.runtime.durableinst
         }
     }
 
+    /**
+     * Sets the value of the .NET property LookupInstanceKey.
+     *
+     * @param LookupInstanceKey the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand.LookupInstanceKey" target="_top">.NET documentation</a>
+     */
     public void setLookupInstanceKey(Guid LookupInstanceKey) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

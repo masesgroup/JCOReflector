@@ -103,7 +103,10 @@ public class PrinterUnitConvert extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PrinterUnitConvert(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,16 @@ public class PrinterUnitConvert extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Convert.
+     *
+     * @param value the argument of type {@code double}
+     * @param fromUnit the argument of type {@code PrinterUnit}
+     * @param toUnit the argument of type {@code PrinterUnit}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Printing.PrinterUnitConvert.Convert" target="_top">.NET documentation</a>
+     */
     public static double Convert(double value, PrinterUnit fromUnit, PrinterUnit toUnit) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -198,6 +211,19 @@ public class PrinterUnitConvert extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Convert.
+     *
+     * @param value the argument of type {@code int}
+     * @param fromUnit the argument of type {@code PrinterUnit}
+     * @param toUnit the argument of type {@code PrinterUnit}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Printing.PrinterUnitConvert.Convert" target="_top">.NET documentation</a>
+     */
     public static int Convert(int value, PrinterUnit fromUnit, PrinterUnit toUnit) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -238,6 +264,18 @@ public class PrinterUnitConvert extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Convert.
+     *
+     * @param value the argument of type {@code Point}
+     * @param fromUnit the argument of type {@code PrinterUnit}
+     * @param toUnit the argument of type {@code PrinterUnit}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Printing.PrinterUnitConvert.Convert" target="_top">.NET documentation</a>
+     */
     public static Point Convert(Point value, PrinterUnit fromUnit, PrinterUnit toUnit) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -253,6 +291,25 @@ public class PrinterUnitConvert extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Convert.
+     *
+     * @param value the argument of type {@code Margins}
+     * @param fromUnit the argument of type {@code PrinterUnit}
+     * @param toUnit the argument of type {@code PrinterUnit}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Printing.PrinterUnitConvert.Convert" target="_top">.NET documentation</a>
+     */
     public static Margins Convert(Margins value, PrinterUnit fromUnit, PrinterUnit toUnit) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -268,6 +325,18 @@ public class PrinterUnitConvert extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Convert.
+     *
+     * @param value the argument of type {@code Rectangle}
+     * @param fromUnit the argument of type {@code PrinterUnit}
+     * @param toUnit the argument of type {@code PrinterUnit}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Printing.PrinterUnitConvert.Convert" target="_top">.NET documentation</a>
+     */
     public static Rectangle Convert(Rectangle value, PrinterUnit fromUnit, PrinterUnit toUnit) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -283,6 +352,18 @@ public class PrinterUnitConvert extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Convert.
+     *
+     * @param value the argument of type {@code Size}
+     * @param fromUnit the argument of type {@code PrinterUnit}
+     * @param toUnit the argument of type {@code PrinterUnit}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Printing.PrinterUnitConvert.Convert" target="_top">.NET documentation</a>
+     */
     public static Size Convert(Size value, PrinterUnit fromUnit, PrinterUnit toUnit) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

@@ -106,7 +106,10 @@ public class IRootDesignerImplementation extends NetObject implements IRootDesig
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IRootDesignerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,14 @@ public class IRootDesignerImplementation extends NetObject implements IRootDesig
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetView.
+     *
+     * @param technology the argument of type {@code ViewTechnology}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IRootDesigner.GetView" target="_top">.NET documentation</a>
+     */
     public NetObject GetView(ViewTechnology technology) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -163,6 +174,12 @@ public class IRootDesignerImplementation extends NetObject implements IRootDesig
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IRootDesigner.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +190,12 @@ public class IRootDesignerImplementation extends NetObject implements IRootDesig
         }
     }
 
+    /**
+     * Invokes the .NET member DoDefaultAction.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IRootDesigner.DoDefaultAction" target="_top">.NET documentation</a>
+     */
     public void DoDefaultAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +206,13 @@ public class IRootDesignerImplementation extends NetObject implements IRootDesig
         }
     }
 
+    /**
+     * Invokes the .NET member Initialize.
+     *
+     * @param component the argument of type {@code IComponent}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IRootDesigner.Initialize" target="_top">.NET documentation</a>
+     */
     public void Initialize(IComponent component) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +227,13 @@ public class IRootDesignerImplementation extends NetObject implements IRootDesig
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Verbs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IRootDesigner.Verbs" target="_top">.NET documentation</a>
+     */
     public DesignerVerbCollection getVerbs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +249,13 @@ public class IRootDesignerImplementation extends NetObject implements IRootDesig
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportedTechnologies.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IRootDesigner.SupportedTechnologies" target="_top">.NET documentation</a>
+     */
     public final ViewTechnology[] getSupportedTechnologies() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +277,13 @@ public class IRootDesignerImplementation extends NetObject implements IRootDesig
         }
     }
 
+    /**
+     * Gets the value of the .NET property Component.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IRootDesigner.Component" target="_top">.NET documentation</a>
+     */
     public IComponent getComponent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

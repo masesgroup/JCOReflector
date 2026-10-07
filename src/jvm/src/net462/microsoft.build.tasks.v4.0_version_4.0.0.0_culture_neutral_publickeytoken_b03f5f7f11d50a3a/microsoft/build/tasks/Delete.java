@@ -101,7 +101,10 @@ public class Delete extends microsoft.build.tasks.TaskExtension  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Delete(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,13 @@ public class Delete extends microsoft.build.tasks.TaskExtension  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Delete.-ctor" target="_top">.NET documentation</a>
+     */
     public Delete() throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +172,22 @@ public class Delete extends microsoft.build.tasks.TaskExtension  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Execute.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Delete.Execute" target="_top">.NET documentation</a>
+     */
     public boolean Execute() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.NotSupportedException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +202,12 @@ public class Delete extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Invokes the .NET member Cancel.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Delete.Cancel" target="_top">.NET documentation</a>
+     */
     public void Cancel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +222,13 @@ public class Delete extends microsoft.build.tasks.TaskExtension  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property TreatErrorsAsWarnings.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Delete.TreatErrorsAsWarnings" target="_top">.NET documentation</a>
+     */
     public boolean getTreatErrorsAsWarnings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +243,13 @@ public class Delete extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TreatErrorsAsWarnings.
+     *
+     * @param TreatErrorsAsWarnings the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Delete.TreatErrorsAsWarnings" target="_top">.NET documentation</a>
+     */
     public void setTreatErrorsAsWarnings(boolean TreatErrorsAsWarnings) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +260,13 @@ public class Delete extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DeletedFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Delete.DeletedFiles" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getDeletedFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +288,13 @@ public class Delete extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DeletedFiles.
+     *
+     * @param DeletedFiles the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Delete.DeletedFiles" target="_top">.NET documentation</a>
+     */
     public void setDeletedFiles(ITaskItem[] DeletedFiles) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +305,19 @@ public class Delete extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Files.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Delete.Files" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getFiles() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +339,13 @@ public class Delete extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Files.
+     *
+     * @param Files the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Delete.Files" target="_top">.NET documentation</a>
+     */
     public void setFiles(ITaskItem[] Files) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

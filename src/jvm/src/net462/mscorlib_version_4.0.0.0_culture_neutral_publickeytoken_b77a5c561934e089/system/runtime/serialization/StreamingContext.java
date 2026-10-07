@@ -100,7 +100,10 @@ public class StreamingContext extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public StreamingContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class StreamingContext extends system.ValueType  {
     public StreamingContext() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param state the argument of type {@code StreamingContextStates}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.StreamingContext.-ctor" target="_top">.NET documentation</a>
+     */
     public StreamingContext(StreamingContextStates state) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +170,14 @@ public class StreamingContext extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param state the argument of type {@code StreamingContextStates}
+     * @param additional the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.StreamingContext.-ctor" target="_top">.NET documentation</a>
+     */
     public StreamingContext(StreamingContextStates state, NetObject additional) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +197,13 @@ public class StreamingContext extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Context.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.StreamingContext.Context" target="_top">.NET documentation</a>
+     */
     public NetObject getContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +219,13 @@ public class StreamingContext extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property State.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.StreamingContext.State" target="_top">.NET documentation</a>
+     */
     public StreamingContextStates getState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

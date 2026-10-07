@@ -102,7 +102,10 @@ public class OutputCacheProviderAsync extends system.web.caching.OutputCacheProv
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public OutputCacheProviderAsync(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,14 @@ public class OutputCacheProviderAsync extends system.web.caching.OutputCacheProv
     
     // Methods section
     
+    /**
+     * Invokes the .NET member RemoveAsync.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.OutputCacheProviderAsync.RemoveAsync" target="_top">.NET documentation</a>
+     */
     public Task RemoveAsync(java.lang.String key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +181,16 @@ public class OutputCacheProviderAsync extends system.web.caching.OutputCacheProv
         }
     }
 
+    /**
+     * Invokes the .NET member SetAsync.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @param entry the argument of type {@code NetObject}
+     * @param utcExpiry the argument of type {@code DateTime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.OutputCacheProviderAsync.SetAsync" target="_top">.NET documentation</a>
+     */
     public Task SetAsync(java.lang.String key, NetObject entry, DateTime utcExpiry) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +206,16 @@ public class OutputCacheProviderAsync extends system.web.caching.OutputCacheProv
         }
     }
 
+    /**
+     * Invokes the .NET member AddAsync.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @param entry the argument of type {@code NetObject}
+     * @param utcExpiry the argument of type {@code DateTime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.OutputCacheProviderAsync.AddAsync" target="_top">.NET documentation</a>
+     */
     public Task_1 AddAsync(java.lang.String key, NetObject entry, DateTime utcExpiry) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +231,14 @@ public class OutputCacheProviderAsync extends system.web.caching.OutputCacheProv
         }
     }
 
+    /**
+     * Invokes the .NET member GetAsync.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.OutputCacheProviderAsync.GetAsync" target="_top">.NET documentation</a>
+     */
     public Task_1 GetAsync(java.lang.String key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

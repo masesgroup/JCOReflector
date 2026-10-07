@@ -109,7 +109,10 @@ public class TextLine extends NetObject implements AutoCloseable {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TextLine(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -162,6 +165,14 @@ public class TextLine extends NetObject implements AutoCloseable {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetDistanceFromCharacterHit.
+     *
+     * @param characterHit the argument of type {@code CharacterHit}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.GetDistanceFromCharacterHit" target="_top">.NET documentation</a>
+     */
     public double GetDistanceFromCharacterHit(CharacterHit characterHit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +213,13 @@ public class TextLine extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member GetIndexedGlyphRuns.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.GetIndexedGlyphRuns" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 GetIndexedGlyphRuns() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +235,15 @@ public class TextLine extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTextBounds.
+     *
+     * @param firstTextSourceCharacterIndex the argument of type {@code int}
+     * @param textLength the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.GetTextBounds" target="_top">.NET documentation</a>
+     */
     public IList_1 GetTextBounds(int firstTextSourceCharacterIndex, int textLength) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +259,13 @@ public class TextLine extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTextCollapsedRanges.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.GetTextCollapsedRanges" target="_top">.NET documentation</a>
+     */
     public IList_1 GetTextCollapsedRanges() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +281,13 @@ public class TextLine extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTextRunSpans.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.GetTextRunSpans" target="_top">.NET documentation</a>
+     */
     public IList_1 GetTextRunSpans() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +303,14 @@ public class TextLine extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member GetBackspaceCaretCharacterHit.
+     *
+     * @param characterHit the argument of type {@code CharacterHit}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.GetBackspaceCaretCharacterHit" target="_top">.NET documentation</a>
+     */
     public CharacterHit GetBackspaceCaretCharacterHit(CharacterHit characterHit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +326,14 @@ public class TextLine extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCharacterHitFromDistance.
+     *
+     * @param distance the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.GetCharacterHitFromDistance" target="_top">.NET documentation</a>
+     */
     public CharacterHit GetCharacterHitFromDistance(double distance) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +349,14 @@ public class TextLine extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member GetNextCaretCharacterHit.
+     *
+     * @param characterHit the argument of type {@code CharacterHit}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.GetNextCaretCharacterHit" target="_top">.NET documentation</a>
+     */
     public CharacterHit GetNextCaretCharacterHit(CharacterHit characterHit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -307,6 +372,14 @@ public class TextLine extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPreviousCaretCharacterHit.
+     *
+     * @param characterHit the argument of type {@code CharacterHit}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.GetPreviousCaretCharacterHit" target="_top">.NET documentation</a>
+     */
     public CharacterHit GetPreviousCaretCharacterHit(CharacterHit characterHit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -322,6 +395,14 @@ public class TextLine extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Collapse.
+     *
+     * @param collapsingPropertiesList the argument of type {@code TextCollapsingProperties...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.Collapse" target="_top">.NET documentation</a>
+     */
     public TextLine Collapse(TextCollapsingProperties... collapsingPropertiesList) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -337,6 +418,13 @@ public class TextLine extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTextLineBreak.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.GetTextLineBreak" target="_top">.NET documentation</a>
+     */
     public TextLineBreak GetTextLineBreak() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -352,6 +440,12 @@ public class TextLine extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -362,6 +456,15 @@ public class TextLine extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Draw.
+     *
+     * @param drawingContext the argument of type {@code DrawingContext}
+     * @param origin the argument of type {@code Point}
+     * @param inversion the argument of type {@code InvertAxes}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.Draw" target="_top">.NET documentation</a>
+     */
     public void Draw(DrawingContext drawingContext, Point origin, InvertAxes inversion) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -389,6 +492,13 @@ public class TextLine extends NetObject implements AutoCloseable {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HasCollapsed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.HasCollapsed" target="_top">.NET documentation</a>
+     */
     public boolean getHasCollapsed() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -403,6 +513,13 @@ public class TextLine extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HasOverflowed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.HasOverflowed" target="_top">.NET documentation</a>
+     */
     public boolean getHasOverflowed() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -417,6 +534,13 @@ public class TextLine extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsTruncated.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.IsTruncated" target="_top">.NET documentation</a>
+     */
     public boolean getIsTruncated() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -431,6 +555,13 @@ public class TextLine extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Baseline.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.Baseline" target="_top">.NET documentation</a>
+     */
     public double getBaseline() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -471,6 +602,13 @@ public class TextLine extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Extent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.Extent" target="_top">.NET documentation</a>
+     */
     public double getExtent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -511,6 +649,13 @@ public class TextLine extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Height.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.Height" target="_top">.NET documentation</a>
+     */
     public double getHeight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -551,6 +696,13 @@ public class TextLine extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MarkerBaseline.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.MarkerBaseline" target="_top">.NET documentation</a>
+     */
     public double getMarkerBaseline() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -591,6 +743,13 @@ public class TextLine extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MarkerHeight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.MarkerHeight" target="_top">.NET documentation</a>
+     */
     public double getMarkerHeight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -631,6 +790,13 @@ public class TextLine extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OverhangAfter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.OverhangAfter" target="_top">.NET documentation</a>
+     */
     public double getOverhangAfter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -671,6 +837,13 @@ public class TextLine extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OverhangLeading.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.OverhangLeading" target="_top">.NET documentation</a>
+     */
     public double getOverhangLeading() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -711,6 +884,13 @@ public class TextLine extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OverhangTrailing.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.OverhangTrailing" target="_top">.NET documentation</a>
+     */
     public double getOverhangTrailing() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -751,6 +931,13 @@ public class TextLine extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PixelsPerDip.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.PixelsPerDip" target="_top">.NET documentation</a>
+     */
     public double getPixelsPerDip() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -791,6 +978,13 @@ public class TextLine extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PixelsPerDip.
+     *
+     * @param PixelsPerDip the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.PixelsPerDip" target="_top">.NET documentation</a>
+     */
     public void setPixelsPerDip(double PixelsPerDip) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -801,6 +995,13 @@ public class TextLine extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Start.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.Start" target="_top">.NET documentation</a>
+     */
     public double getStart() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -841,6 +1042,13 @@ public class TextLine extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TextBaseline.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.TextBaseline" target="_top">.NET documentation</a>
+     */
     public double getTextBaseline() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -881,6 +1089,13 @@ public class TextLine extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TextHeight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.TextHeight" target="_top">.NET documentation</a>
+     */
     public double getTextHeight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -921,6 +1136,13 @@ public class TextLine extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Width.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.Width" target="_top">.NET documentation</a>
+     */
     public double getWidth() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -961,6 +1183,13 @@ public class TextLine extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WidthIncludingTrailingWhitespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.WidthIncludingTrailingWhitespace" target="_top">.NET documentation</a>
+     */
     public double getWidthIncludingTrailingWhitespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1001,6 +1230,13 @@ public class TextLine extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DependentLength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.DependentLength" target="_top">.NET documentation</a>
+     */
     public int getDependentLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1041,6 +1277,13 @@ public class TextLine extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Length.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.Length" target="_top">.NET documentation</a>
+     */
     public int getLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1081,6 +1324,13 @@ public class TextLine extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NewlineLength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.NewlineLength" target="_top">.NET documentation</a>
+     */
     public int getNewlineLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1121,6 +1371,13 @@ public class TextLine extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TrailingWhitespaceLength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.TrailingWhitespaceLength" target="_top">.NET documentation</a>
+     */
     public int getTrailingWhitespaceLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -98,7 +98,10 @@ public class XmlQualifiedName extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlQualifiedName(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class XmlQualifiedName extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlQualifiedName.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlQualifiedName() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -155,6 +164,13 @@ public class XmlQualifiedName extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlQualifiedName.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlQualifiedName(java.lang.String name) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +181,14 @@ public class XmlQualifiedName extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param ns the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlQualifiedName.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlQualifiedName(java.lang.String name, java.lang.String ns) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +203,16 @@ public class XmlQualifiedName extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ToString.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param ns the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlQualifiedName.ToString" target="_top">.NET documentation</a>
+     */
     public static java.lang.String ToString(java.lang.String name, java.lang.String ns) throws Throwable, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -197,6 +231,13 @@ public class XmlQualifiedName extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsEmpty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlQualifiedName.IsEmpty" target="_top">.NET documentation</a>
+     */
     public boolean getIsEmpty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +252,13 @@ public class XmlQualifiedName extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlQualifiedName.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +273,13 @@ public class XmlQualifiedName extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Namespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlQualifiedName.Namespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class WebServiceHandlerFactory extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WebServiceHandlerFactory(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class WebServiceHandlerFactory extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.WebServiceHandlerFactory.-ctor" target="_top">.NET documentation</a>
+     */
     public WebServiceHandlerFactory() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +171,41 @@ public class WebServiceHandlerFactory extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetHandler.
+     *
+     * @param context the argument of type {@code HttpContext}
+     * @param verb the argument of type {@code java.lang.String}
+     * @param url the argument of type {@code java.lang.String}
+     * @param filePath the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.net.sockets.SocketException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.web.HttpRequestValidationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.web.HttpCompileException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.WebServiceHandlerFactory.GetHandler" target="_top">.NET documentation</a>
+     */
     public IHttpHandler GetHandler(HttpContext context, java.lang.String verb, java.lang.String url, java.lang.String filePath) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.web.HttpException, system.InvalidOperationException, system.OutOfMemoryException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.FormatException, system.NotImplementedException, system.AccessViolationException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException, system.globalization.CultureNotFoundException, system.UriFormatException, system.web.HttpCompileException, system.MemberAccessException, system.io.PathTooLongException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +221,13 @@ public class WebServiceHandlerFactory extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReleaseHandler.
+     *
+     * @param handler the argument of type {@code IHttpHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.WebServiceHandlerFactory.ReleaseHandler" target="_top">.NET documentation</a>
+     */
     public void ReleaseHandler(IHttpHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

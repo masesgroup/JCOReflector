@@ -108,7 +108,10 @@ public class SqlWorkflowInstanceStoreBehavior extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SqlWorkflowInstanceStoreBehavior(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,23 @@ public class SqlWorkflowInstanceStoreBehavior extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.runtime.durableinstancing.InstancePersistenceCommandException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlWorkflowInstanceStoreBehavior() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.runtime.durableinstancing.InstancePersistenceCommandException, system.configuration.ConfigurationErrorsException, system.OverflowException {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +185,26 @@ public class SqlWorkflowInstanceStoreBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param connectionString the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.runtime.durableinstancing.InstancePersistenceCommandException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlWorkflowInstanceStoreBehavior(java.lang.String connectionString) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.runtime.durableinstancing.InstancePersistenceCommandException, system.threading.WaitHandleCannotBeOpenedException, system.OverflowException {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +219,16 @@ public class SqlWorkflowInstanceStoreBehavior extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AddBindingParameters.
+     *
+     * @param serviceDescription the argument of type {@code ServiceDescription}
+     * @param serviceHostBase the argument of type {@code ServiceHostBase}
+     * @param endpoints the argument of type {@code Collection_1}
+     * @param bindingParameters the argument of type {@code BindingParameterCollection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.AddBindingParameters" target="_top">.NET documentation</a>
+     */
     public void AddBindingParameters(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase, Collection_1 endpoints, BindingParameterCollection bindingParameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +239,21 @@ public class SqlWorkflowInstanceStoreBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ApplyDispatchBehavior.
+     *
+     * @param serviceDescription the argument of type {@code ServiceDescription}
+     * @param serviceHostBase the argument of type {@code ServiceHostBase}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.ApplyDispatchBehavior" target="_top">.NET documentation</a>
+     */
     public void ApplyDispatchBehavior(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +264,26 @@ public class SqlWorkflowInstanceStoreBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Promote.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param promoteAsSqlVariant the argument of type {@code IEnumerable_1}
+     * @param promoteAsBinary the argument of type {@code IEnumerable_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.Promote" target="_top">.NET documentation</a>
+     */
     public void Promote(java.lang.String name, IEnumerable_1 promoteAsSqlVariant, IEnumerable_1 promoteAsBinary) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +294,14 @@ public class SqlWorkflowInstanceStoreBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Validate.
+     *
+     * @param serviceDescription the argument of type {@code ServiceDescription}
+     * @param serviceHostBase the argument of type {@code ServiceHostBase}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.Validate" target="_top">.NET documentation</a>
+     */
     public void Validate(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +316,13 @@ public class SqlWorkflowInstanceStoreBehavior extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MaxConnectionRetries.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.MaxConnectionRetries" target="_top">.NET documentation</a>
+     */
     public int getMaxConnectionRetries() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +363,13 @@ public class SqlWorkflowInstanceStoreBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxConnectionRetries.
+     *
+     * @param MaxConnectionRetries the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.MaxConnectionRetries" target="_top">.NET documentation</a>
+     */
     public void setMaxConnectionRetries(int MaxConnectionRetries) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +380,13 @@ public class SqlWorkflowInstanceStoreBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceCompletionAction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.InstanceCompletionAction" target="_top">.NET documentation</a>
+     */
     public InstanceCompletionAction getInstanceCompletionAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +402,24 @@ public class SqlWorkflowInstanceStoreBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InstanceCompletionAction.
+     *
+     * @param InstanceCompletionAction the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.InstanceCompletionAction" target="_top">.NET documentation</a>
+     */
     public void setInstanceCompletionAction(InstanceCompletionAction InstanceCompletionAction) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +430,13 @@ public class SqlWorkflowInstanceStoreBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceEncodingOption.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.InstanceEncodingOption" target="_top">.NET documentation</a>
+     */
     public InstanceEncodingOption getInstanceEncodingOption() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -313,6 +452,24 @@ public class SqlWorkflowInstanceStoreBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InstanceEncodingOption.
+     *
+     * @param InstanceEncodingOption the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.InstanceEncodingOption" target="_top">.NET documentation</a>
+     */
     public void setInstanceEncodingOption(InstanceEncodingOption InstanceEncodingOption) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -323,6 +480,13 @@ public class SqlWorkflowInstanceStoreBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceLockedExceptionAction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.InstanceLockedExceptionAction" target="_top">.NET documentation</a>
+     */
     public InstanceLockedExceptionAction getInstanceLockedExceptionAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -338,6 +502,24 @@ public class SqlWorkflowInstanceStoreBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InstanceLockedExceptionAction.
+     *
+     * @param InstanceLockedExceptionAction the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.InstanceLockedExceptionAction" target="_top">.NET documentation</a>
+     */
     public void setInstanceLockedExceptionAction(InstanceLockedExceptionAction InstanceLockedExceptionAction) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +530,13 @@ public class SqlWorkflowInstanceStoreBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConnectionString.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.ConnectionString" target="_top">.NET documentation</a>
+     */
     public java.lang.String getConnectionString() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -362,6 +551,24 @@ public class SqlWorkflowInstanceStoreBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConnectionString.
+     *
+     * @param ConnectionString the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.ConnectionString" target="_top">.NET documentation</a>
+     */
     public void setConnectionString(java.lang.String ConnectionString) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -372,6 +579,13 @@ public class SqlWorkflowInstanceStoreBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HostLockRenewalPeriod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.HostLockRenewalPeriod" target="_top">.NET documentation</a>
+     */
     public TimeSpan getHostLockRenewalPeriod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -387,6 +601,22 @@ public class SqlWorkflowInstanceStoreBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HostLockRenewalPeriod.
+     *
+     * @param HostLockRenewalPeriod the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.HostLockRenewalPeriod" target="_top">.NET documentation</a>
+     */
     public void setHostLockRenewalPeriod(TimeSpan HostLockRenewalPeriod) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -397,6 +627,13 @@ public class SqlWorkflowInstanceStoreBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RunnableInstancesDetectionPeriod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.RunnableInstancesDetectionPeriod" target="_top">.NET documentation</a>
+     */
     public TimeSpan getRunnableInstancesDetectionPeriod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -412,6 +649,22 @@ public class SqlWorkflowInstanceStoreBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RunnableInstancesDetectionPeriod.
+     *
+     * @param RunnableInstancesDetectionPeriod the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.RunnableInstancesDetectionPeriod" target="_top">.NET documentation</a>
+     */
     public void setRunnableInstancesDetectionPeriod(TimeSpan RunnableInstancesDetectionPeriod) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

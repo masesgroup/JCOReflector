@@ -103,7 +103,10 @@ public class WorkflowQueueInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WorkflowQueueInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -162,6 +165,13 @@ public class WorkflowQueueInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Items.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.WorkflowQueueInfo.Items" target="_top">.NET documentation</a>
+     */
     public ICollection getItems() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +187,13 @@ public class WorkflowQueueInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SubscribedActivityNames.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.WorkflowQueueInfo.SubscribedActivityNames" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getSubscribedActivityNames() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +209,13 @@ public class WorkflowQueueInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property QueueName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.WorkflowQueueInfo.QueueName" target="_top">.NET documentation</a>
+     */
     public IComparable getQueueName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class UploadProgressChangedEventArgs extends system.componentmodel.Progre
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UploadProgressChangedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class UploadProgressChangedEventArgs extends system.componentmodel.Progre
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BytesReceived.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.UploadProgressChangedEventArgs.BytesReceived" target="_top">.NET documentation</a>
+     */
     public long getBytesReceived() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +208,13 @@ public class UploadProgressChangedEventArgs extends system.componentmodel.Progre
         }
     }
 
+    /**
+     * Gets the value of the .NET property BytesSent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.UploadProgressChangedEventArgs.BytesSent" target="_top">.NET documentation</a>
+     */
     public long getBytesSent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +255,13 @@ public class UploadProgressChangedEventArgs extends system.componentmodel.Progre
         }
     }
 
+    /**
+     * Gets the value of the .NET property TotalBytesToReceive.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.UploadProgressChangedEventArgs.TotalBytesToReceive" target="_top">.NET documentation</a>
+     */
     public long getTotalBytesToReceive() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +302,13 @@ public class UploadProgressChangedEventArgs extends system.componentmodel.Progre
         }
     }
 
+    /**
+     * Gets the value of the .NET property TotalBytesToSend.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.UploadProgressChangedEventArgs.TotalBytesToSend" target="_top">.NET documentation</a>
+     */
     public long getTotalBytesToSend() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

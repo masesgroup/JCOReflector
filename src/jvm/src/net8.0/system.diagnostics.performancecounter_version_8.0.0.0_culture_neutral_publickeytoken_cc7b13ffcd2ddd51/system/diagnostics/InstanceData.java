@@ -99,7 +99,10 @@ public class InstanceData extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public InstanceData(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class InstanceData extends NetObject  {
     public InstanceData() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param instanceName the argument of type {@code java.lang.String}
+     * @param sample the argument of type {@code CounterSample}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.InstanceData.-ctor" target="_top">.NET documentation</a>
+     */
     public InstanceData(java.lang.String instanceName, CounterSample sample) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +179,13 @@ public class InstanceData extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RawValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.InstanceData.RawValue" target="_top">.NET documentation</a>
+     */
     public long getRawValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +226,13 @@ public class InstanceData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Sample.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.InstanceData.Sample" target="_top">.NET documentation</a>
+     */
     public CounterSample getSample() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +248,13 @@ public class InstanceData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.InstanceData.InstanceName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getInstanceName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

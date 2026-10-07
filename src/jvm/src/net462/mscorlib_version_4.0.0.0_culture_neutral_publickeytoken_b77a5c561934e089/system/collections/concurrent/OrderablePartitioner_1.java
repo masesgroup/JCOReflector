@@ -103,7 +103,10 @@ public class OrderablePartitioner_1<TSource extends IJCOBridgeReflected> extends
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public OrderablePartitioner_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,14 @@ public class OrderablePartitioner_1<TSource extends IJCOBridgeReflected> extends
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetOrderableDynamicPartitions.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.OrderablePartitioner-1.GetOrderableDynamicPartitions" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 GetOrderableDynamicPartitions() throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +182,14 @@ public class OrderablePartitioner_1<TSource extends IJCOBridgeReflected> extends
         }
     }
 
+    /**
+     * Invokes the .NET member GetDynamicPartitions.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.OrderablePartitioner-1.GetDynamicPartitions" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 GetDynamicPartitions() throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +205,14 @@ public class OrderablePartitioner_1<TSource extends IJCOBridgeReflected> extends
         }
     }
 
+    /**
+     * Invokes the .NET member GetOrderablePartitions.
+     *
+     * @param partitionCount the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.OrderablePartitioner-1.GetOrderablePartitions" target="_top">.NET documentation</a>
+     */
     public IList_1 GetOrderablePartitions(int partitionCount) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +228,15 @@ public class OrderablePartitioner_1<TSource extends IJCOBridgeReflected> extends
         }
     }
 
+    /**
+     * Invokes the .NET member GetPartitions.
+     *
+     * @param partitionCount the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.OrderablePartitioner-1.GetPartitions" target="_top">.NET documentation</a>
+     */
     public IList_1 GetPartitions(int partitionCount) throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +256,13 @@ public class OrderablePartitioner_1<TSource extends IJCOBridgeReflected> extends
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property KeysNormalized.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.OrderablePartitioner-1.KeysNormalized" target="_top">.NET documentation</a>
+     */
     public boolean getKeysNormalized() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +277,13 @@ public class OrderablePartitioner_1<TSource extends IJCOBridgeReflected> extends
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeysNormalized.
+     *
+     * @param KeysNormalized the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.OrderablePartitioner-1.KeysNormalized" target="_top">.NET documentation</a>
+     */
     public void setKeysNormalized(boolean KeysNormalized) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +294,13 @@ public class OrderablePartitioner_1<TSource extends IJCOBridgeReflected> extends
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeysOrderedAcrossPartitions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.OrderablePartitioner-1.KeysOrderedAcrossPartitions" target="_top">.NET documentation</a>
+     */
     public boolean getKeysOrderedAcrossPartitions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +315,13 @@ public class OrderablePartitioner_1<TSource extends IJCOBridgeReflected> extends
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeysOrderedAcrossPartitions.
+     *
+     * @param KeysOrderedAcrossPartitions the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.OrderablePartitioner-1.KeysOrderedAcrossPartitions" target="_top">.NET documentation</a>
+     */
     public void setKeysOrderedAcrossPartitions(boolean KeysOrderedAcrossPartitions) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +332,13 @@ public class OrderablePartitioner_1<TSource extends IJCOBridgeReflected> extends
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeysOrderedInEachPartition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.OrderablePartitioner-1.KeysOrderedInEachPartition" target="_top">.NET documentation</a>
+     */
     public boolean getKeysOrderedInEachPartition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +353,13 @@ public class OrderablePartitioner_1<TSource extends IJCOBridgeReflected> extends
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeysOrderedInEachPartition.
+     *
+     * @param KeysOrderedInEachPartition the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.OrderablePartitioner-1.KeysOrderedInEachPartition" target="_top">.NET documentation</a>
+     */
     public void setKeysOrderedInEachPartition(boolean KeysOrderedInEachPartition) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

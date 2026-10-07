@@ -100,7 +100,10 @@ public class PageInstrumentationService extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PageInstrumentationService(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class PageInstrumentationService extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Instrumentation.PageInstrumentationService.-ctor" target="_top">.NET documentation</a>
+     */
     public PageInstrumentationService() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class PageInstrumentationService extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Instrumentation.PageInstrumentationService.IsEnabled" target="_top">.NET documentation</a>
+     */
     public static boolean getIsEnabled() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -179,6 +195,13 @@ public class PageInstrumentationService extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsEnabled.
+     *
+     * @param IsEnabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Instrumentation.PageInstrumentationService.IsEnabled" target="_top">.NET documentation</a>
+     */
     public static void setIsEnabled(boolean IsEnabled) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -189,6 +212,13 @@ public class PageInstrumentationService extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExecutionListeners.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Instrumentation.PageInstrumentationService.ExecutionListeners" target="_top">.NET documentation</a>
+     */
     public IList_1 getExecutionListeners() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -98,7 +98,10 @@ public class IRangeValueProviderImplementation extends NetObject implements IRan
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IRangeValueProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,13 @@ public class IRangeValueProviderImplementation extends NetObject implements IRan
 
     // Methods section
     
+    /**
+     * Invokes the .NET member SetValue.
+     *
+     * @param value the argument of type {@code double}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IRangeValueProvider.SetValue" target="_top">.NET documentation</a>
+     */
     public void SetValue(double value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -154,6 +164,13 @@ public class IRangeValueProviderImplementation extends NetObject implements IRan
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsReadOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IRangeValueProvider.IsReadOnly" target="_top">.NET documentation</a>
+     */
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +185,13 @@ public class IRangeValueProviderImplementation extends NetObject implements IRan
         }
     }
 
+    /**
+     * Gets the value of the .NET property LargeChange.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IRangeValueProvider.LargeChange" target="_top">.NET documentation</a>
+     */
     public double getLargeChange() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +232,13 @@ public class IRangeValueProviderImplementation extends NetObject implements IRan
         }
     }
 
+    /**
+     * Gets the value of the .NET property Maximum.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IRangeValueProvider.Maximum" target="_top">.NET documentation</a>
+     */
     public double getMaximum() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +279,13 @@ public class IRangeValueProviderImplementation extends NetObject implements IRan
         }
     }
 
+    /**
+     * Gets the value of the .NET property Minimum.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IRangeValueProvider.Minimum" target="_top">.NET documentation</a>
+     */
     public double getMinimum() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +326,13 @@ public class IRangeValueProviderImplementation extends NetObject implements IRan
         }
     }
 
+    /**
+     * Gets the value of the .NET property SmallChange.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IRangeValueProvider.SmallChange" target="_top">.NET documentation</a>
+     */
     public double getSmallChange() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -328,6 +373,13 @@ public class IRangeValueProviderImplementation extends NetObject implements IRan
         }
     }
 
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IRangeValueProvider.Value" target="_top">.NET documentation</a>
+     */
     public double getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -178,7 +178,10 @@ public class AppDomainInitializer extends JCVoidDelegate implements IJCVoidEvent
         callerInstance = instance;
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AppDomainInitializer(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
@@ -200,6 +203,13 @@ public class AppDomainInitializer extends JCVoidDelegate implements IJCVoidEvent
         return JCOBridgeInstance.translateException(ne);
     }
 
+    /**
+     * Invokes the .NET member DynamicInvoke.
+     *
+     * @param args the argument of type {@code java.lang.String[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Delegate.DynamicInvoke" target="_top">.NET documentation</a>
+     */
     public void DynamicInvoke(java.lang.String[] args) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,7 +221,9 @@ public class AppDomainInitializer extends JCVoidDelegate implements IJCVoidEvent
     }
 
     /**
-     * Methods invoked in JVM when an event is raised in CLR 
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param args the .NET argument of type {@code System.String[]}
      */
     public void Invoke(java.lang.String[] args) {
     }

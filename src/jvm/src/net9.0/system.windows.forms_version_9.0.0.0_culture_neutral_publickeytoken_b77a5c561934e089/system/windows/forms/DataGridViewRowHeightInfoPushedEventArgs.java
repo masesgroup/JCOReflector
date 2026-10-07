@@ -99,7 +99,10 @@ public class DataGridViewRowHeightInfoPushedEventArgs extends system.componentmo
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataGridViewRowHeightInfoPushedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class DataGridViewRowHeightInfoPushedEventArgs extends system.componentmo
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Height.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewRowHeightInfoPushedEventArgs.Height" target="_top">.NET documentation</a>
+     */
     public int getHeight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +208,13 @@ public class DataGridViewRowHeightInfoPushedEventArgs extends system.componentmo
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinimumHeight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewRowHeightInfoPushedEventArgs.MinimumHeight" target="_top">.NET documentation</a>
+     */
     public int getMinimumHeight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +255,13 @@ public class DataGridViewRowHeightInfoPushedEventArgs extends system.componentmo
         }
     }
 
+    /**
+     * Gets the value of the .NET property RowIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewRowHeightInfoPushedEventArgs.RowIndex" target="_top">.NET documentation</a>
+     */
     public int getRowIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

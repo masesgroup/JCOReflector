@@ -109,7 +109,10 @@ public class CodeGenerator extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodeGenerator(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -162,6 +165,14 @@ public class CodeGenerator extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsValidLanguageIndependentIdentifier.
+     *
+     * @param value the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CodeGenerator.IsValidLanguageIndependentIdentifier" target="_top">.NET documentation</a>
+     */
     public static boolean IsValidLanguageIndependentIdentifier(java.lang.String value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -176,6 +187,27 @@ public class CodeGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GenerateCodeFromMember.
+     *
+     * @param member the argument of type {@code CodeTypeMember}
+     * @param writer the argument of type {@code TextWriter}
+     * @param options the argument of type {@code CodeGeneratorOptions}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CodeGenerator.GenerateCodeFromMember" target="_top">.NET documentation</a>
+     */
     public void GenerateCodeFromMember(CodeTypeMember member, TextWriter writer, CodeGeneratorOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +218,21 @@ public class CodeGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ValidateIdentifiers.
+     *
+     * @param e the argument of type {@code CodeObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CodeGenerator.ValidateIdentifiers" target="_top">.NET documentation</a>
+     */
     public static void ValidateIdentifiers(CodeObject e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -199,8 +246,13 @@ public class CodeGenerator extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICodeGenerator method available in ICodeGenerator to obtain an object with an invocable method
+     *
+     * @param value the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.ICodeGenerator.IsValidIdentifier" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean IsValidIdentifier(java.lang.String value) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
     }
@@ -208,8 +260,13 @@ public class CodeGenerator extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICodeGenerator method available in ICodeGenerator to obtain an object with an invocable method
+     *
+     * @param supports the argument of type {@code GeneratorSupport}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.ICodeGenerator.Supports" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean Supports(GeneratorSupport supports) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
     }
@@ -217,8 +274,13 @@ public class CodeGenerator extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICodeGenerator method available in ICodeGenerator to obtain an object with an invocable method
+     *
+     * @param value the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.ICodeGenerator.CreateEscapedIdentifier" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public java.lang.String CreateEscapedIdentifier(java.lang.String value) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
     }
@@ -226,8 +288,13 @@ public class CodeGenerator extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICodeGenerator method available in ICodeGenerator to obtain an object with an invocable method
+     *
+     * @param value the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.ICodeGenerator.CreateValidIdentifier" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public java.lang.String CreateValidIdentifier(java.lang.String value) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
     }
@@ -235,8 +302,13 @@ public class CodeGenerator extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICodeGenerator method available in ICodeGenerator to obtain an object with an invocable method
+     *
+     * @param type the argument of type {@code CodeTypeReference}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.ICodeGenerator.GetTypeOutput" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public java.lang.String GetTypeOutput(CodeTypeReference type) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
     }
@@ -244,8 +316,14 @@ public class CodeGenerator extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICodeGenerator method available in ICodeGenerator to obtain an object with an invocable method
+     *
+     * @param e the argument of type {@code CodeCompileUnit}
+     * @param w the argument of type {@code TextWriter}
+     * @param o the argument of type {@code CodeGeneratorOptions}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.ICodeGenerator.GenerateCodeFromCompileUnit" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void GenerateCodeFromCompileUnit(CodeCompileUnit e, TextWriter w, CodeGeneratorOptions o) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
     }
@@ -253,8 +331,14 @@ public class CodeGenerator extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICodeGenerator method available in ICodeGenerator to obtain an object with an invocable method
+     *
+     * @param e the argument of type {@code CodeExpression}
+     * @param w the argument of type {@code TextWriter}
+     * @param o the argument of type {@code CodeGeneratorOptions}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.ICodeGenerator.GenerateCodeFromExpression" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void GenerateCodeFromExpression(CodeExpression e, TextWriter w, CodeGeneratorOptions o) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
     }
@@ -262,8 +346,14 @@ public class CodeGenerator extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICodeGenerator method available in ICodeGenerator to obtain an object with an invocable method
+     *
+     * @param e the argument of type {@code CodeNamespace}
+     * @param w the argument of type {@code TextWriter}
+     * @param o the argument of type {@code CodeGeneratorOptions}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.ICodeGenerator.GenerateCodeFromNamespace" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void GenerateCodeFromNamespace(CodeNamespace e, TextWriter w, CodeGeneratorOptions o) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
     }
@@ -271,8 +361,14 @@ public class CodeGenerator extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICodeGenerator method available in ICodeGenerator to obtain an object with an invocable method
+     *
+     * @param e the argument of type {@code CodeStatement}
+     * @param w the argument of type {@code TextWriter}
+     * @param o the argument of type {@code CodeGeneratorOptions}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.ICodeGenerator.GenerateCodeFromStatement" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void GenerateCodeFromStatement(CodeStatement e, TextWriter w, CodeGeneratorOptions o) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
     }
@@ -280,8 +376,14 @@ public class CodeGenerator extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICodeGenerator method available in ICodeGenerator to obtain an object with an invocable method
+     *
+     * @param e the argument of type {@code CodeTypeDeclaration}
+     * @param w the argument of type {@code TextWriter}
+     * @param o the argument of type {@code CodeGeneratorOptions}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.ICodeGenerator.GenerateCodeFromType" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void GenerateCodeFromType(CodeTypeDeclaration e, TextWriter w, CodeGeneratorOptions o) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
     }
@@ -289,8 +391,12 @@ public class CodeGenerator extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICodeGenerator method available in ICodeGenerator to obtain an object with an invocable method
+     *
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.ICodeGenerator.ValidateIdentifier" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ValidateIdentifier(java.lang.String value) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
     }

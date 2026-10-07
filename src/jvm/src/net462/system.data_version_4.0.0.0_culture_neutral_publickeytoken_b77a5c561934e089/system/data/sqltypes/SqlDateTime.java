@@ -109,7 +109,10 @@ public class SqlDateTime extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SqlDateTime(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,15 @@ public class SqlDateTime extends system.ValueType  {
     public SqlDateTime() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param dayTicks the argument of type {@code int}
+     * @param timeTicks the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlDateTime.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlDateTime(int dayTicks, int timeTicks) throws Throwable, system.OverflowException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +181,17 @@ public class SqlDateTime extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param year the argument of type {@code int}
+     * @param month the argument of type {@code int}
+     * @param day the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.data.sqltypes.SqlTypeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlDateTime.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlDateTime(int year, int month, int day) throws Throwable, system.OverflowException, system.data.sqltypes.SqlTypeException {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +202,20 @@ public class SqlDateTime extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param year the argument of type {@code int}
+     * @param month the argument of type {@code int}
+     * @param day the argument of type {@code int}
+     * @param hour the argument of type {@code int}
+     * @param minute the argument of type {@code int}
+     * @param second the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.data.sqltypes.SqlTypeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlDateTime.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlDateTime(int year, int month, int day, int hour, int minute, int second) throws Throwable, system.OverflowException, system.data.sqltypes.SqlTypeException {
         try {
             // add reference to assemblyName.dll file
@@ -189,6 +226,21 @@ public class SqlDateTime extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param year the argument of type {@code int}
+     * @param month the argument of type {@code int}
+     * @param day the argument of type {@code int}
+     * @param hour the argument of type {@code int}
+     * @param minute the argument of type {@code int}
+     * @param second the argument of type {@code int}
+     * @param millisecond the argument of type {@code double}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.data.sqltypes.SqlTypeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlDateTime.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlDateTime(int year, int month, int day, int hour, int minute, int second, double millisecond) throws Throwable, system.OverflowException, system.data.sqltypes.SqlTypeException {
         try {
             // add reference to assemblyName.dll file
@@ -199,6 +251,21 @@ public class SqlDateTime extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param year the argument of type {@code int}
+     * @param month the argument of type {@code int}
+     * @param day the argument of type {@code int}
+     * @param hour the argument of type {@code int}
+     * @param minute the argument of type {@code int}
+     * @param second the argument of type {@code int}
+     * @param bilisecond the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.data.sqltypes.SqlTypeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlDateTime.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlDateTime(int year, int month, int day, int hour, int minute, int second, int bilisecond) throws Throwable, system.OverflowException, system.data.sqltypes.SqlTypeException {
         try {
             // add reference to assemblyName.dll file
@@ -209,6 +276,15 @@ public class SqlDateTime extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code DateTime}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.data.sqltypes.SqlTypeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlDateTime.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlDateTime(DateTime value) throws Throwable, system.data.sqltypes.SqlTypeException, system.OverflowException {
         try {
             // add reference to assemblyName.dll file
@@ -224,6 +300,14 @@ public class SqlDateTime extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CompareTo.
+     *
+     * @param value the argument of type {@code SqlDateTime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlDateTime.CompareTo" target="_top">.NET documentation</a>
+     */
     public int CompareTo(SqlDateTime value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +348,25 @@ public class SqlDateTime extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CompareTo.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlDateTime.CompareTo" target="_top">.NET documentation</a>
+     */
     public int CompareTo(NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +407,15 @@ public class SqlDateTime extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param x the argument of type {@code SqlDateTime}
+     * @param y the argument of type {@code SqlDateTime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlDateTime.Equals" target="_top">.NET documentation</a>
+     */
     public static SqlBoolean Equals(SqlDateTime x, SqlDateTime y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -319,6 +431,15 @@ public class SqlDateTime extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member GreaterThan.
+     *
+     * @param x the argument of type {@code SqlDateTime}
+     * @param y the argument of type {@code SqlDateTime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlDateTime.GreaterThan" target="_top">.NET documentation</a>
+     */
     public static SqlBoolean GreaterThan(SqlDateTime x, SqlDateTime y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -334,6 +455,15 @@ public class SqlDateTime extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member GreaterThanOrEqual.
+     *
+     * @param x the argument of type {@code SqlDateTime}
+     * @param y the argument of type {@code SqlDateTime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlDateTime.GreaterThanOrEqual" target="_top">.NET documentation</a>
+     */
     public static SqlBoolean GreaterThanOrEqual(SqlDateTime x, SqlDateTime y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -349,6 +479,15 @@ public class SqlDateTime extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member LessThan.
+     *
+     * @param x the argument of type {@code SqlDateTime}
+     * @param y the argument of type {@code SqlDateTime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlDateTime.LessThan" target="_top">.NET documentation</a>
+     */
     public static SqlBoolean LessThan(SqlDateTime x, SqlDateTime y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -364,6 +503,15 @@ public class SqlDateTime extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member LessThanOrEqual.
+     *
+     * @param x the argument of type {@code SqlDateTime}
+     * @param y the argument of type {@code SqlDateTime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlDateTime.LessThanOrEqual" target="_top">.NET documentation</a>
+     */
     public static SqlBoolean LessThanOrEqual(SqlDateTime x, SqlDateTime y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -379,6 +527,15 @@ public class SqlDateTime extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member NotEquals.
+     *
+     * @param x the argument of type {@code SqlDateTime}
+     * @param y the argument of type {@code SqlDateTime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlDateTime.NotEquals" target="_top">.NET documentation</a>
+     */
     public static SqlBoolean NotEquals(SqlDateTime x, SqlDateTime y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -394,6 +551,18 @@ public class SqlDateTime extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param x the argument of type {@code SqlDateTime}
+     * @param t the argument of type {@code TimeSpan}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.data.sqltypes.SqlTypeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlDateTime.Add" target="_top">.NET documentation</a>
+     */
     public static SqlDateTime Add(SqlDateTime x, TimeSpan t) throws Throwable, system.ArgumentOutOfRangeException, system.data.sqltypes.SqlTypeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -409,6 +578,28 @@ public class SqlDateTime extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Parse.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.data.sqltypes.SqlTypeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlDateTime.Parse" target="_top">.NET documentation</a>
+     */
     public static SqlDateTime Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.FormatException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.OverflowException, system.data.sqltypes.SqlTypeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -424,6 +615,18 @@ public class SqlDateTime extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Subtract.
+     *
+     * @param x the argument of type {@code SqlDateTime}
+     * @param t the argument of type {@code TimeSpan}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.data.sqltypes.SqlTypeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlDateTime.Subtract" target="_top">.NET documentation</a>
+     */
     public static SqlDateTime Subtract(SqlDateTime x, TimeSpan t) throws Throwable, system.ArgumentOutOfRangeException, system.data.sqltypes.SqlTypeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -439,6 +642,20 @@ public class SqlDateTime extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToSqlString.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlDateTime.ToSqlString" target="_top">.NET documentation</a>
+     */
     public SqlString ToSqlString() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -454,6 +671,14 @@ public class SqlDateTime extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetXsdType.
+     *
+     * @param schemaSet the argument of type {@code XmlSchemaSet}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlDateTime.GetXsdType" target="_top">.NET documentation</a>
+     */
     public static XmlQualifiedName GetXsdType(XmlSchemaSet schemaSet) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -472,8 +697,12 @@ public class SqlDateTime extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIXmlSerializable method available in IXmlSerializable to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.IXmlSerializable.GetSchema" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public XmlSchema GetSchema() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
     }
@@ -481,8 +710,12 @@ public class SqlDateTime extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIXmlSerializable method available in IXmlSerializable to obtain an object with an invocable method
+     *
+     * @param reader the argument of type {@code XmlReader}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.IXmlSerializable.ReadXml" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ReadXml(XmlReader reader) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
     }
@@ -490,8 +723,12 @@ public class SqlDateTime extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIXmlSerializable method available in IXmlSerializable to obtain an object with an invocable method
+     *
+     * @param writer the argument of type {@code XmlWriter}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.IXmlSerializable.WriteXml" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void WriteXml(XmlWriter writer) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
     }
@@ -500,6 +737,13 @@ public class SqlDateTime extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsNull.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlDateTime.IsNull" target="_top">.NET documentation</a>
+     */
     public boolean getIsNull() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -514,6 +758,14 @@ public class SqlDateTime extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DayTicks.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.data.sqltypes.SqlNullValueException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlDateTime.DayTicks" target="_top">.NET documentation</a>
+     */
     public int getDayTicks() throws Throwable, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -554,6 +806,14 @@ public class SqlDateTime extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TimeTicks.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.data.sqltypes.SqlNullValueException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlDateTime.TimeTicks" target="_top">.NET documentation</a>
+     */
     public int getTimeTicks() throws Throwable, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -594,6 +854,15 @@ public class SqlDateTime extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.data.sqltypes.SqlNullValueException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlDateTime.Value" target="_top">.NET documentation</a>
+     */
     public DateTime getValue() throws Throwable, system.ArgumentOutOfRangeException, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

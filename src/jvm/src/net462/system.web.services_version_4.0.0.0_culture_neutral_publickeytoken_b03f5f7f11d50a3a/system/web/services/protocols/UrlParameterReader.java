@@ -100,7 +100,10 @@ public class UrlParameterReader extends system.web.services.protocols.ValueColle
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UrlParameterReader(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class UrlParameterReader extends system.web.services.protocols.ValueColle
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.UrlParameterReader.-ctor" target="_top">.NET documentation</a>
+     */
     public UrlParameterReader() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,25 @@ public class UrlParameterReader extends system.web.services.protocols.ValueColle
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Read.
+     *
+     * @param request the argument of type {@code HttpRequest}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.UrlParameterReader.Read" target="_top">.NET documentation</a>
+     */
     public NetObject[] Read(HttpRequest request) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.NotSupportedException, system.NullReferenceException, system.InvalidOperationException, system.threading.ThreadAbortException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

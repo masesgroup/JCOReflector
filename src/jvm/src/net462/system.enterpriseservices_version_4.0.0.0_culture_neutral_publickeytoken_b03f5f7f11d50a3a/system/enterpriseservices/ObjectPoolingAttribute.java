@@ -100,7 +100,10 @@ public class ObjectPoolingAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ObjectPoolingAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class ObjectPoolingAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ObjectPoolingAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ObjectPoolingAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +166,13 @@ public class ObjectPoolingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param enable the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ObjectPoolingAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ObjectPoolingAttribute(boolean enable) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +183,15 @@ public class ObjectPoolingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param enable the argument of type {@code boolean}
+     * @param minPoolSize the argument of type {@code int}
+     * @param maxPoolSize the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ObjectPoolingAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ObjectPoolingAttribute(boolean enable, int minPoolSize, int maxPoolSize) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -177,6 +202,14 @@ public class ObjectPoolingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param minPoolSize the argument of type {@code int}
+     * @param maxPoolSize the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ObjectPoolingAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ObjectPoolingAttribute(int minPoolSize, int maxPoolSize) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -191,6 +224,14 @@ public class ObjectPoolingAttribute extends system.Attribute  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AfterSaveChanges.
+     *
+     * @param info the argument of type {@code Hashtable}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ObjectPoolingAttribute.AfterSaveChanges" target="_top">.NET documentation</a>
+     */
     public boolean AfterSaveChanges(Hashtable info) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +246,17 @@ public class ObjectPoolingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Invokes the .NET member Apply.
+     *
+     * @param info the argument of type {@code Hashtable}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ObjectPoolingAttribute.Apply" target="_top">.NET documentation</a>
+     */
     public boolean Apply(Hashtable info) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +271,14 @@ public class ObjectPoolingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsValidTarget.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ObjectPoolingAttribute.IsValidTarget" target="_top">.NET documentation</a>
+     */
     public boolean IsValidTarget(java.lang.String s) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +297,13 @@ public class ObjectPoolingAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Enabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ObjectPoolingAttribute.Enabled" target="_top">.NET documentation</a>
+     */
     public boolean getEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +318,13 @@ public class ObjectPoolingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Enabled.
+     *
+     * @param Enabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ObjectPoolingAttribute.Enabled" target="_top">.NET documentation</a>
+     */
     public void setEnabled(boolean Enabled) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +335,13 @@ public class ObjectPoolingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CreationTimeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ObjectPoolingAttribute.CreationTimeout" target="_top">.NET documentation</a>
+     */
     public int getCreationTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +382,13 @@ public class ObjectPoolingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CreationTimeout.
+     *
+     * @param CreationTimeout the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ObjectPoolingAttribute.CreationTimeout" target="_top">.NET documentation</a>
+     */
     public void setCreationTimeout(int CreationTimeout) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -311,6 +399,13 @@ public class ObjectPoolingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxPoolSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ObjectPoolingAttribute.MaxPoolSize" target="_top">.NET documentation</a>
+     */
     public int getMaxPoolSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -351,6 +446,13 @@ public class ObjectPoolingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxPoolSize.
+     *
+     * @param MaxPoolSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ObjectPoolingAttribute.MaxPoolSize" target="_top">.NET documentation</a>
+     */
     public void setMaxPoolSize(int MaxPoolSize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -361,6 +463,13 @@ public class ObjectPoolingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinPoolSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ObjectPoolingAttribute.MinPoolSize" target="_top">.NET documentation</a>
+     */
     public int getMinPoolSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -401,6 +510,13 @@ public class ObjectPoolingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MinPoolSize.
+     *
+     * @param MinPoolSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ObjectPoolingAttribute.MinPoolSize" target="_top">.NET documentation</a>
+     */
     public void setMinPoolSize(int MinPoolSize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

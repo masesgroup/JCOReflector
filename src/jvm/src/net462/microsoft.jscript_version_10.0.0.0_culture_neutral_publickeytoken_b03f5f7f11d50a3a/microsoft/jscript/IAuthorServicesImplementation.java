@@ -102,7 +102,10 @@ public class IAuthorServicesImplementation extends NetObject implements IAuthorS
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IAuthorServicesImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,13 @@ public class IAuthorServicesImplementation extends NetObject implements IAuthorS
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetColorizer.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IAuthorServices.GetColorizer" target="_top">.NET documentation</a>
+     */
     public IColorizeText GetColorizer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -159,6 +169,13 @@ public class IAuthorServicesImplementation extends NetObject implements IAuthorS
         }
     }
 
+    /**
+     * Invokes the .NET member GetCodeSense.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IAuthorServices.GetCodeSense" target="_top">.NET documentation</a>
+     */
     public IParseText GetCodeSense() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -102,7 +102,10 @@ public class DataAnnotationsModelMetadata extends system.web.modelbinding.ModelM
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataAnnotationsModelMetadata(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,22 @@ public class DataAnnotationsModelMetadata extends system.web.modelbinding.ModelM
     public DataAnnotationsModelMetadata() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param provider the argument of type {@code DataAnnotationsModelMetadataProvider}
+     * @param containerType the argument of type {@code NetType}
+     * @param modelAccessor the argument of type {@code Func_1}
+     * @param modelType the argument of type {@code NetType}
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @param displayColumnAttribute the argument of type {@code DisplayColumnAttribute}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.DataAnnotationsModelMetadata.-ctor" target="_top">.NET documentation</a>
+     */
     public DataAnnotationsModelMetadata(DataAnnotationsModelMetadataProvider provider, NetType containerType, Func_1 modelAccessor, NetType modelType, java.lang.String propertyName, DisplayColumnAttribute displayColumnAttribute) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file

@@ -114,7 +114,9 @@ public class SelectiveScrollingOrientation extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public SelectiveScrollingOrientation(java.lang.Object instance) {
         super(instance);

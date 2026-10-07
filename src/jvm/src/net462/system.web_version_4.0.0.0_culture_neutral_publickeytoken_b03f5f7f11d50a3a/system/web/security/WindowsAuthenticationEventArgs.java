@@ -103,7 +103,10 @@ public class WindowsAuthenticationEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WindowsAuthenticationEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,14 @@ public class WindowsAuthenticationEventArgs extends system.EventArgs  {
     public WindowsAuthenticationEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param identity the argument of type {@code WindowsIdentity}
+     * @param context the argument of type {@code HttpContext}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.WindowsAuthenticationEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public WindowsAuthenticationEventArgs(WindowsIdentity identity, HttpContext context) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +183,13 @@ public class WindowsAuthenticationEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property User.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.WindowsAuthenticationEventArgs.User" target="_top">.NET documentation</a>
+     */
     public IPrincipal getUser() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +205,13 @@ public class WindowsAuthenticationEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property User.
+     *
+     * @param User the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.WindowsAuthenticationEventArgs.User" target="_top">.NET documentation</a>
+     */
     public void setUser(IPrincipal User) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +222,13 @@ public class WindowsAuthenticationEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Identity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.WindowsAuthenticationEventArgs.Identity" target="_top">.NET documentation</a>
+     */
     public WindowsIdentity getIdentity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +244,13 @@ public class WindowsAuthenticationEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Context.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.WindowsAuthenticationEventArgs.Context" target="_top">.NET documentation</a>
+     */
     public HttpContext getContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

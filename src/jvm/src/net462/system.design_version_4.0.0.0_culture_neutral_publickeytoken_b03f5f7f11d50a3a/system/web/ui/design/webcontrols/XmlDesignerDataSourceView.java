@@ -102,7 +102,10 @@ public class XmlDesignerDataSourceView extends system.web.ui.design.DesignerData
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlDesignerDataSourceView(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,15 @@ public class XmlDesignerDataSourceView extends system.web.ui.design.DesignerData
     public XmlDesignerDataSourceView() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param owner the argument of type {@code XmlDataSourceDesigner}
+     * @param viewName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebControls.XmlDesignerDataSourceView.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlDesignerDataSourceView(XmlDataSourceDesigner owner, java.lang.String viewName) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +179,24 @@ public class XmlDesignerDataSourceView extends system.web.ui.design.DesignerData
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetDesignTimeData.
+     *
+     * @param minimumRows the argument of type {@code int}
+     * @param isSampleData the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicBoolean>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebControls.XmlDesignerDataSourceView.GetDesignTimeData" target="_top">.NET documentation</a>
+     */
     public IEnumerable GetDesignTimeData(int minimumRows, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isSampleData) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.io.PathTooLongException, system.NotSupportedException, system.OverflowException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

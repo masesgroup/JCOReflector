@@ -100,7 +100,10 @@ public class BitVector32 extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BitVector32(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class BitVector32 extends system.ValueType  {
     public BitVector32() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param data the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Specialized.BitVector32.-ctor" target="_top">.NET documentation</a>
+     */
     public BitVector32(int data) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +170,13 @@ public class BitVector32 extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code BitVector32}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Specialized.BitVector32.-ctor" target="_top">.NET documentation</a>
+     */
     public BitVector32(BitVector32 value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +192,14 @@ public class BitVector32 extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code BitVector32}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Specialized.BitVector32.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(BitVector32 other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +214,13 @@ public class BitVector32 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateMask.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Specialized.BitVector32.CreateMask" target="_top">.NET documentation</a>
+     */
     public static int CreateMask() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -229,6 +261,21 @@ public class BitVector32 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateMask.
+     *
+     * @param previous the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Specialized.BitVector32.CreateMask" target="_top">.NET documentation</a>
+     */
     public static int CreateMask(int previous) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -269,6 +316,21 @@ public class BitVector32 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToString.
+     *
+     * @param value the argument of type {@code BitVector32}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Specialized.BitVector32.ToString" target="_top">.NET documentation</a>
+     */
     public static java.lang.String ToString(BitVector32 value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -287,6 +349,13 @@ public class BitVector32 extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Data.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Specialized.BitVector32.Data" target="_top">.NET documentation</a>
+     */
     public int getData() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

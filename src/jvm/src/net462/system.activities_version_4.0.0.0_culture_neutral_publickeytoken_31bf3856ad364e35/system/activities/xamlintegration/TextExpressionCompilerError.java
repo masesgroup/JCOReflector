@@ -98,7 +98,10 @@ public class TextExpressionCompilerError extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TextExpressionCompilerError(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,13 @@ public class TextExpressionCompilerError extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsWarning.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerError.IsWarning" target="_top">.NET documentation</a>
+     */
     public boolean getIsWarning() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +181,13 @@ public class TextExpressionCompilerError extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsWarning.
+     *
+     * @param IsWarning the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerError.IsWarning" target="_top">.NET documentation</a>
+     */
     public void setIsWarning(boolean IsWarning) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +198,13 @@ public class TextExpressionCompilerError extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SourceLineNumber.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerError.SourceLineNumber" target="_top">.NET documentation</a>
+     */
     public int getSourceLineNumber() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +245,13 @@ public class TextExpressionCompilerError extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SourceLineNumber.
+     *
+     * @param SourceLineNumber the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerError.SourceLineNumber" target="_top">.NET documentation</a>
+     */
     public void setSourceLineNumber(int SourceLineNumber) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +262,13 @@ public class TextExpressionCompilerError extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Message.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerError.Message" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMessage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +283,13 @@ public class TextExpressionCompilerError extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Message.
+     *
+     * @param Message the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerError.Message" target="_top">.NET documentation</a>
+     */
     public void setMessage(java.lang.String Message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +300,13 @@ public class TextExpressionCompilerError extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Number.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerError.Number" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNumber() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +321,13 @@ public class TextExpressionCompilerError extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Number.
+     *
+     * @param Number the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerError.Number" target="_top">.NET documentation</a>
+     */
     public void setNumber(java.lang.String Number) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class StreamSecurityUpgradeAcceptor extends system.servicemodel.channels.
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public StreamSecurityUpgradeAcceptor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,13 @@ public class StreamSecurityUpgradeAcceptor extends system.servicemodel.channels.
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetRemoteSecurity.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor.GetRemoteSecurity" target="_top">.NET documentation</a>
+     */
     public SecurityMessageProperty GetRemoteSecurity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

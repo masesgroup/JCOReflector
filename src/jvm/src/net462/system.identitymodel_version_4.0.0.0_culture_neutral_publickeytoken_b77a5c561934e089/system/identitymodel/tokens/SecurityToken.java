@@ -102,7 +102,10 @@ public class SecurityToken extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SecurityToken(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,14 @@ public class SecurityToken extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CanCreateKeyIdentifierClause.
+     *
+     * @param <T> the type of the generic argument T
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityToken.CanCreateKeyIdentifierClause" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> boolean CanCreateKeyIdentifierClause() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +180,14 @@ public class SecurityToken extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MatchesKeyIdentifierClause.
+     *
+     * @param keyIdentifierClause the argument of type {@code SecurityKeyIdentifierClause}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityToken.MatchesKeyIdentifierClause" target="_top">.NET documentation</a>
+     */
     public boolean MatchesKeyIdentifierClause(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +202,14 @@ public class SecurityToken extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResolveKeyIdentifierClause.
+     *
+     * @param keyIdentifierClause the argument of type {@code SecurityKeyIdentifierClause}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityToken.ResolveKeyIdentifierClause" target="_top">.NET documentation</a>
+     */
     public SecurityKey ResolveKeyIdentifierClause(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +229,13 @@ public class SecurityToken extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SecurityKeys.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityToken.SecurityKeys" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getSecurityKeys() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +251,13 @@ public class SecurityToken extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValidFrom.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityToken.ValidFrom" target="_top">.NET documentation</a>
+     */
     public DateTime getValidFrom() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +273,13 @@ public class SecurityToken extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValidTo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityToken.ValidTo" target="_top">.NET documentation</a>
+     */
     public DateTime getValidTo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +295,13 @@ public class SecurityToken extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Id.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityToken.Id" target="_top">.NET documentation</a>
+     */
     public java.lang.String getId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -105,7 +105,10 @@ public class PortablePdbBuilder extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PortablePdbBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,30 @@ public class PortablePdbBuilder extends NetObject  {
     public PortablePdbBuilder() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param tablesAndHeaps the argument of type {@code MetadataBuilder}
+     * @param typeSystemRowCounts the argument of type {@code ImmutableArray_1}
+     * @param entryPoint the argument of type {@code MethodDefinitionHandle}
+     * @param idProvider the argument of type {@code Func_2}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.PortablePdbBuilder.-ctor" target="_top">.NET documentation</a>
+     */
     public PortablePdbBuilder(MetadataBuilder tablesAndHeaps, ImmutableArray_1 typeSystemRowCounts, MethodDefinitionHandle entryPoint, Func_2 idProvider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +197,25 @@ public class PortablePdbBuilder extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Serialize.
+     *
+     * @param builder the argument of type {@code BlobBuilder}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.PortablePdbBuilder.Serialize" target="_top">.NET documentation</a>
+     */
     public BlobContentId Serialize(BlobBuilder builder) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.BadImageFormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +235,13 @@ public class PortablePdbBuilder extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IdProvider.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.PortablePdbBuilder.IdProvider" target="_top">.NET documentation</a>
+     */
     public Func_2 getIdProvider() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +256,13 @@ public class PortablePdbBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MetadataVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.PortablePdbBuilder.MetadataVersion" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMetadataVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +277,13 @@ public class PortablePdbBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FormatVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.PortablePdbBuilder.FormatVersion" target="_top">.NET documentation</a>
+     */
     public UInt16 getFormatVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

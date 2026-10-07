@@ -100,7 +100,10 @@ public class EnumeratorPrototype extends microsoft.jscript.JSObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EnumeratorPrototype(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,15 @@ public class EnumeratorPrototype extends microsoft.jscript.JSObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member atEnd.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.EnumeratorPrototype.atEnd" target="_top">.NET documentation</a>
+     */
     public static boolean atEnd(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -169,6 +181,15 @@ public class EnumeratorPrototype extends microsoft.jscript.JSObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member item.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.EnumeratorPrototype.item" target="_top">.NET documentation</a>
+     */
     public static NetObject item(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -184,6 +205,14 @@ public class EnumeratorPrototype extends microsoft.jscript.JSObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member moveFirst.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.EnumeratorPrototype.moveFirst" target="_top">.NET documentation</a>
+     */
     public static void moveFirst(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -194,6 +223,14 @@ public class EnumeratorPrototype extends microsoft.jscript.JSObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member moveNext.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.EnumeratorPrototype.moveNext" target="_top">.NET documentation</a>
+     */
     public static void moveNext(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -208,6 +245,13 @@ public class EnumeratorPrototype extends microsoft.jscript.JSObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property constructor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.EnumeratorPrototype.getconstructor" target="_top">.NET documentation</a>
+     */
     public static EnumeratorConstructor getconstructor() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

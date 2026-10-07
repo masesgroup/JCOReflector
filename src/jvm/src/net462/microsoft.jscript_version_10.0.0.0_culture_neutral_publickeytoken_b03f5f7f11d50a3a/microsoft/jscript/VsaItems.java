@@ -103,7 +103,10 @@ public class VsaItems extends NetObjectEnumerable  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public VsaItems(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,22 @@ public class VsaItems extends NetObjectEnumerable  {
     public VsaItems() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param engine the argument of type {@code VsaEngine}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.VsaItems.-ctor" target="_top">.NET documentation</a>
+     */
     public VsaItems(VsaEngine engine) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +187,25 @@ public class VsaItems extends NetObjectEnumerable  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateItem.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param itemType the argument of type {@code JSVsaItemType}
+     * @param itemFlag the argument of type {@code JSVsaItemFlag}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.VsaItems.CreateItem" target="_top">.NET documentation</a>
+     */
     public IJSVsaItem CreateItem(java.lang.String name, JSVsaItemType itemType, JSVsaItemFlag itemFlag) throws Throwable, microsoft.jscript.vsa.JSVsaException, system.ArgumentException, system.NullReferenceException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +221,14 @@ public class VsaItems extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member Close.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.VsaItems.Close" target="_top">.NET documentation</a>
+     */
     public void Close() throws Throwable, microsoft.jscript.vsa.JSVsaException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +239,16 @@ public class VsaItems extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param itemIndex the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.VsaItems.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(int itemIndex) throws Throwable, microsoft.jscript.vsa.JSVsaException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +259,18 @@ public class VsaItems extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param itemName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.VsaItems.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(java.lang.String itemName) throws Throwable, microsoft.jscript.vsa.JSVsaException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +285,14 @@ public class VsaItems extends NetObjectEnumerable  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Count.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.VsaItems.Count" target="_top">.NET documentation</a>
+     */
     public int getCount() throws Throwable, microsoft.jscript.vsa.JSVsaException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

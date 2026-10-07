@@ -102,7 +102,10 @@ public class MethodSignatureGenerator extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MethodSignatureGenerator(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class MethodSignatureGenerator extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Design.MethodSignatureGenerator.-ctor" target="_top">.NET documentation</a>
+     */
     public MethodSignatureGenerator() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,22 @@ public class MethodSignatureGenerator extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GenerateMethod.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Design.MethodSignatureGenerator.GenerateMethod" target="_top">.NET documentation</a>
+     */
     public CodeMemberMethod GenerateMethod() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +203,25 @@ public class MethodSignatureGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GenerateUpdatingMethods.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.data.DataException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Design.MethodSignatureGenerator.GenerateUpdatingMethods" target="_top">.NET documentation</a>
+     */
     public CodeTypeDeclaration GenerateUpdatingMethods() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.FormatException, system.data.DataException, system.configuration.ConfigurationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +237,25 @@ public class MethodSignatureGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GenerateMethodSignature.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Design.MethodSignatureGenerator.GenerateMethodSignature" target="_top">.NET documentation</a>
+     */
     public java.lang.String GenerateMethodSignature() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +270,28 @@ public class MethodSignatureGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetDesignTableContent.
+     *
+     * @param designTableContent the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.xml.schema.XmlSchemaInferenceException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Design.MethodSignatureGenerator.SetDesignTableContent" target="_top">.NET documentation</a>
+     */
     public void SetDesignTableContent(java.lang.String designTableContent) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.RankException, system.xml.schema.XmlSchemaInferenceException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +302,28 @@ public class MethodSignatureGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetMethodSourceContent.
+     *
+     * @param methodSourceContent the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.xml.schema.XmlSchemaInferenceException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Design.MethodSignatureGenerator.SetMethodSourceContent" target="_top">.NET documentation</a>
+     */
     public void SetMethodSourceContent(java.lang.String methodSourceContent) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.RankException, system.xml.schema.XmlSchemaInferenceException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +338,13 @@ public class MethodSignatureGenerator extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsGetMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Design.MethodSignatureGenerator.IsGetMethod" target="_top">.NET documentation</a>
+     */
     public boolean getIsGetMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +359,13 @@ public class MethodSignatureGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsGetMethod.
+     *
+     * @param IsGetMethod the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Design.MethodSignatureGenerator.IsGetMethod" target="_top">.NET documentation</a>
+     */
     public void setIsGetMethod(boolean IsGetMethod) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +376,13 @@ public class MethodSignatureGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PagingMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Design.MethodSignatureGenerator.PagingMethod" target="_top">.NET documentation</a>
+     */
     public boolean getPagingMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +397,13 @@ public class MethodSignatureGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PagingMethod.
+     *
+     * @param PagingMethod the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Design.MethodSignatureGenerator.PagingMethod" target="_top">.NET documentation</a>
+     */
     public void setPagingMethod(boolean PagingMethod) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +414,13 @@ public class MethodSignatureGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CodeProvider.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Design.MethodSignatureGenerator.CodeProvider" target="_top">.NET documentation</a>
+     */
     public CodeDomProvider getCodeProvider() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +436,13 @@ public class MethodSignatureGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CodeProvider.
+     *
+     * @param CodeProvider the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Design.MethodSignatureGenerator.CodeProvider" target="_top">.NET documentation</a>
+     */
     public void setCodeProvider(CodeDomProvider CodeProvider) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +453,13 @@ public class MethodSignatureGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ParameterOption.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Design.MethodSignatureGenerator.ParameterOption" target="_top">.NET documentation</a>
+     */
     public ParameterGenerationOption getParameterOption() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -319,6 +475,13 @@ public class MethodSignatureGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ParameterOption.
+     *
+     * @param ParameterOption the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Design.MethodSignatureGenerator.ParameterOption" target="_top">.NET documentation</a>
+     */
     public void setParameterOption(ParameterGenerationOption ParameterOption) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -329,6 +492,13 @@ public class MethodSignatureGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataSetClassName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Design.MethodSignatureGenerator.DataSetClassName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDataSetClassName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -343,6 +513,13 @@ public class MethodSignatureGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataSetClassName.
+     *
+     * @param DataSetClassName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Design.MethodSignatureGenerator.DataSetClassName" target="_top">.NET documentation</a>
+     */
     public void setDataSetClassName(java.lang.String DataSetClassName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -353,6 +530,13 @@ public class MethodSignatureGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TableClassName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Design.MethodSignatureGenerator.TableClassName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTableClassName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -367,6 +551,13 @@ public class MethodSignatureGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TableClassName.
+     *
+     * @param TableClassName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Design.MethodSignatureGenerator.TableClassName" target="_top">.NET documentation</a>
+     */
     public void setTableClassName(java.lang.String TableClassName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -377,6 +568,13 @@ public class MethodSignatureGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContainerParameterType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Design.MethodSignatureGenerator.ContainerParameterType" target="_top">.NET documentation</a>
+     */
     public NetType getContainerParameterType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -392,6 +590,19 @@ public class MethodSignatureGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ContainerParameterType.
+     *
+     * @param ContainerParameterType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Design.MethodSignatureGenerator.ContainerParameterType" target="_top">.NET documentation</a>
+     */
     public void setContainerParameterType(NetType ContainerParameterType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class WebApplicationInformation extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WebApplicationInformation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,31 @@ public class WebApplicationInformation extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member FormatToString.
+     *
+     * @param formatter the argument of type {@code WebEventFormatter}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.WebApplicationInformation.FormatToString" target="_top">.NET documentation</a>
+     */
     public void FormatToString(WebEventFormatter formatter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.web.HttpException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.MemberAccessException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +196,13 @@ public class WebApplicationInformation extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ApplicationDomain.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.WebApplicationInformation.ApplicationDomain" target="_top">.NET documentation</a>
+     */
     public java.lang.String getApplicationDomain() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +217,13 @@ public class WebApplicationInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ApplicationPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.WebApplicationInformation.ApplicationPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getApplicationPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +238,13 @@ public class WebApplicationInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ApplicationVirtualPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.WebApplicationInformation.ApplicationVirtualPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getApplicationVirtualPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +259,13 @@ public class WebApplicationInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MachineName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.WebApplicationInformation.MachineName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMachineName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +280,13 @@ public class WebApplicationInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TrustLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.WebApplicationInformation.TrustLevel" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTrustLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

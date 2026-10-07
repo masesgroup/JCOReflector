@@ -99,7 +99,10 @@ public class XamlWriterSettings extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XamlWriterSettings(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class XamlWriterSettings extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlWriterSettings.-ctor" target="_top">.NET documentation</a>
+     */
     public XamlWriterSettings() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,13 @@ public class XamlWriterSettings extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param settings the argument of type {@code XamlWriterSettings}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlWriterSettings.-ctor" target="_top">.NET documentation</a>
+     */
     public XamlWriterSettings(XamlWriterSettings settings) throws Throwable {
         try {
             // add reference to assemblyName.dll file

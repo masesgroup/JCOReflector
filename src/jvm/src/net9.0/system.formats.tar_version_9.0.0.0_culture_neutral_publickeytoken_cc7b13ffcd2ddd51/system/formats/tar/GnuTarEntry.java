@@ -102,7 +102,10 @@ public class GnuTarEntry extends system.formats.tar.PosixTarEntry  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public GnuTarEntry(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,24 @@ public class GnuTarEntry extends system.formats.tar.PosixTarEntry  {
     public GnuTarEntry() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param other the argument of type {@code TarEntry}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.io.InvalidDataException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Tar.GnuTarEntry.-ctor" target="_top">.NET documentation</a>
+     */
     public GnuTarEntry(TarEntry other) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.io.InvalidDataException, system.IndexOutOfRangeException, system.InvalidOperationException, system.NullReferenceException, system.NotSupportedException, system.OverflowException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +183,23 @@ public class GnuTarEntry extends system.formats.tar.PosixTarEntry  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param entryType the argument of type {@code TarEntryType}
+     * @param entryName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.io.InvalidDataException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Tar.GnuTarEntry.-ctor" target="_top">.NET documentation</a>
+     */
     public GnuTarEntry(TarEntryType entryType, java.lang.String entryName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.io.InvalidDataException {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +219,13 @@ public class GnuTarEntry extends system.formats.tar.PosixTarEntry  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AccessTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Tar.GnuTarEntry.AccessTime" target="_top">.NET documentation</a>
+     */
     public DateTimeOffset getAccessTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +241,13 @@ public class GnuTarEntry extends system.formats.tar.PosixTarEntry  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AccessTime.
+     *
+     * @param AccessTime the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Tar.GnuTarEntry.AccessTime" target="_top">.NET documentation</a>
+     */
     public void setAccessTime(DateTimeOffset AccessTime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +258,13 @@ public class GnuTarEntry extends system.formats.tar.PosixTarEntry  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ChangeTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Tar.GnuTarEntry.ChangeTime" target="_top">.NET documentation</a>
+     */
     public DateTimeOffset getChangeTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +280,13 @@ public class GnuTarEntry extends system.formats.tar.PosixTarEntry  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ChangeTime.
+     *
+     * @param ChangeTime the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Tar.GnuTarEntry.ChangeTime" target="_top">.NET documentation</a>
+     */
     public void setChangeTime(DateTimeOffset ChangeTime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

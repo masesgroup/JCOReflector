@@ -100,7 +100,10 @@ public class AsyncOperationManager extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AsyncOperationManager(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,15 @@ public class AsyncOperationManager extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateOperation.
+     *
+     * @param userSuppliedState the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.AsyncOperationManager.CreateOperation" target="_top">.NET documentation</a>
+     */
     public static AsyncOperation CreateOperation(NetObject userSuppliedState) throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -172,6 +184,14 @@ public class AsyncOperationManager extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SynchronizationContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.AsyncOperationManager.SynchronizationContext" target="_top">.NET documentation</a>
+     */
     public static SynchronizationContext getSynchronizationContext() throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -187,6 +207,14 @@ public class AsyncOperationManager extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SynchronizationContext.
+     *
+     * @param SynchronizationContext the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.AsyncOperationManager.SynchronizationContext" target="_top">.NET documentation</a>
+     */
     public static void setSynchronizationContext(SynchronizationContext SynchronizationContext) throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

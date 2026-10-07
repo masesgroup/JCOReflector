@@ -99,7 +99,10 @@ public class XDeclaration extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XDeclaration(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,15 @@ public class XDeclaration extends NetObject  {
     public XDeclaration() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param version the argument of type {@code java.lang.String}
+     * @param encoding the argument of type {@code java.lang.String}
+     * @param standalone the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDeclaration.-ctor" target="_top">.NET documentation</a>
+     */
     public XDeclaration(java.lang.String version, java.lang.String encoding, java.lang.String standalone) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +171,22 @@ public class XDeclaration extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param other the argument of type {@code XDeclaration}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDeclaration.-ctor" target="_top">.NET documentation</a>
+     */
     public XDeclaration(XDeclaration other) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +206,13 @@ public class XDeclaration extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Encoding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDeclaration.Encoding" target="_top">.NET documentation</a>
+     */
     public java.lang.String getEncoding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +227,13 @@ public class XDeclaration extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Encoding.
+     *
+     * @param Encoding the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDeclaration.Encoding" target="_top">.NET documentation</a>
+     */
     public void setEncoding(java.lang.String Encoding) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +244,13 @@ public class XDeclaration extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Standalone.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDeclaration.Standalone" target="_top">.NET documentation</a>
+     */
     public java.lang.String getStandalone() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +265,13 @@ public class XDeclaration extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Standalone.
+     *
+     * @param Standalone the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDeclaration.Standalone" target="_top">.NET documentation</a>
+     */
     public void setStandalone(java.lang.String Standalone) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +282,13 @@ public class XDeclaration extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Version.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDeclaration.Version" target="_top">.NET documentation</a>
+     */
     public java.lang.String getVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +303,13 @@ public class XDeclaration extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Version.
+     *
+     * @param Version the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDeclaration.Version" target="_top">.NET documentation</a>
+     */
     public void setVersion(java.lang.String Version) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

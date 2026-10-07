@@ -99,7 +99,10 @@ public class SettingsPropertyValue extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SettingsPropertyValue(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,13 @@ public class SettingsPropertyValue extends NetObject  {
     public SettingsPropertyValue() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param property the argument of type {@code SettingsProperty}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsPropertyValue.-ctor" target="_top">.NET documentation</a>
+     */
     public SettingsPropertyValue(SettingsProperty property) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +178,13 @@ public class SettingsPropertyValue extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Deserialized.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsPropertyValue.Deserialized" target="_top">.NET documentation</a>
+     */
     public boolean getDeserialized() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +199,13 @@ public class SettingsPropertyValue extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Deserialized.
+     *
+     * @param Deserialized the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsPropertyValue.Deserialized" target="_top">.NET documentation</a>
+     */
     public void setDeserialized(boolean Deserialized) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +216,13 @@ public class SettingsPropertyValue extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsDirty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsPropertyValue.IsDirty" target="_top">.NET documentation</a>
+     */
     public boolean getIsDirty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +237,13 @@ public class SettingsPropertyValue extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsDirty.
+     *
+     * @param IsDirty the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsPropertyValue.IsDirty" target="_top">.NET documentation</a>
+     */
     public void setIsDirty(boolean IsDirty) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +254,13 @@ public class SettingsPropertyValue extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UsingDefaultValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsPropertyValue.UsingDefaultValue" target="_top">.NET documentation</a>
+     */
     public boolean getUsingDefaultValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +275,13 @@ public class SettingsPropertyValue extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UsingDefaultValue.
+     *
+     * @param UsingDefaultValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsPropertyValue.UsingDefaultValue" target="_top">.NET documentation</a>
+     */
     public void setUsingDefaultValue(boolean UsingDefaultValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +292,13 @@ public class SettingsPropertyValue extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Property.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsPropertyValue.Property" target="_top">.NET documentation</a>
+     */
     public SettingsProperty getProperty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +314,13 @@ public class SettingsPropertyValue extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Property.
+     *
+     * @param Property the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsPropertyValue.Property" target="_top">.NET documentation</a>
+     */
     public void setProperty(SettingsProperty Property) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +331,35 @@ public class SettingsPropertyValue extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.FileLoadException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.io.EndOfStreamException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MethodAccessException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsPropertyValue.PropertyValue" target="_top">.NET documentation</a>
+     */
     public NetObject getPropertyValue() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.io.FileNotFoundException, system.io.FileLoadException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.runtime.serialization.SerializationException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.FormatException, system.io.EndOfStreamException, system.io.IOException, system.xml.XmlException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.TypeLoadException, system.MethodAccessException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +375,13 @@ public class SettingsPropertyValue extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PropertyValue.
+     *
+     * @param PropertyValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsPropertyValue.PropertyValue" target="_top">.NET documentation</a>
+     */
     public void setPropertyValue(NetObject PropertyValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +392,33 @@ public class SettingsPropertyValue extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SerializedValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.io.FileLoadException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsPropertyValue.SerializedValue" target="_top">.NET documentation</a>
+     */
     public NetObject getSerializedValue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.io.FileNotFoundException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.io.FileLoadException, system.NotImplementedException, system.MissingMethodException, system.runtime.serialization.SerializationException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +434,13 @@ public class SettingsPropertyValue extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SerializedValue.
+     *
+     * @param SerializedValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsPropertyValue.SerializedValue" target="_top">.NET documentation</a>
+     */
     public void setSerializedValue(NetObject SerializedValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -315,6 +451,13 @@ public class SettingsPropertyValue extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsPropertyValue.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class ContractFailedEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ContractFailedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,16 @@ public class ContractFailedEventArgs extends system.EventArgs  {
     public ContractFailedEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param failureKind the argument of type {@code ContractFailureKind}
+     * @param message the argument of type {@code java.lang.String}
+     * @param condition the argument of type {@code java.lang.String}
+     * @param originalException the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Contracts.ContractFailedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ContractFailedEventArgs(ContractFailureKind failureKind, java.lang.String message, java.lang.String condition, NetException originalException) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +178,12 @@ public class ContractFailedEventArgs extends system.EventArgs  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member SetHandled.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Contracts.ContractFailedEventArgs.SetHandled" target="_top">.NET documentation</a>
+     */
     public void SetHandled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +194,12 @@ public class ContractFailedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetUnwind.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Contracts.ContractFailedEventArgs.SetUnwind" target="_top">.NET documentation</a>
+     */
     public void SetUnwind() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +214,13 @@ public class ContractFailedEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Handled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Contracts.ContractFailedEventArgs.Handled" target="_top">.NET documentation</a>
+     */
     public boolean getHandled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +235,13 @@ public class ContractFailedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Unwind.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Contracts.ContractFailedEventArgs.Unwind" target="_top">.NET documentation</a>
+     */
     public boolean getUnwind() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +256,13 @@ public class ContractFailedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FailureKind.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Contracts.ContractFailedEventArgs.FailureKind" target="_top">.NET documentation</a>
+     */
     public ContractFailureKind getFailureKind() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +278,13 @@ public class ContractFailedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OriginalException.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Contracts.ContractFailedEventArgs.OriginalException" target="_top">.NET documentation</a>
+     */
     public NetException getOriginalException() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +300,13 @@ public class ContractFailedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Condition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Contracts.ContractFailedEventArgs.Condition" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCondition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +321,13 @@ public class ContractFailedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Message.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Contracts.ContractFailedEventArgs.Message" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMessage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

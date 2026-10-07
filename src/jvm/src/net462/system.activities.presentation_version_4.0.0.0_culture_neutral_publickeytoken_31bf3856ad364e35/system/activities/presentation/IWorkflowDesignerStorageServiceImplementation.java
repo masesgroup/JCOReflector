@@ -98,7 +98,10 @@ public class IWorkflowDesignerStorageServiceImplementation extends NetObject imp
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IWorkflowDesignerStorageServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,14 @@ public class IWorkflowDesignerStorageServiceImplementation extends NetObject imp
 
     // Methods section
     
+    /**
+     * Invokes the .NET member ContainsKey.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.IWorkflowDesignerStorageService.ContainsKey" target="_top">.NET documentation</a>
+     */
     public boolean ContainsKey(java.lang.String key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -154,6 +165,14 @@ public class IWorkflowDesignerStorageServiceImplementation extends NetObject imp
         }
     }
 
+    /**
+     * Invokes the .NET member GetData.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.IWorkflowDesignerStorageService.GetData" target="_top">.NET documentation</a>
+     */
     public NetObject GetData(java.lang.String key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +188,14 @@ public class IWorkflowDesignerStorageServiceImplementation extends NetObject imp
         }
     }
 
+    /**
+     * Invokes the .NET member AddData.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.IWorkflowDesignerStorageService.AddData" target="_top">.NET documentation</a>
+     */
     public void AddData(java.lang.String key, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +206,13 @@ public class IWorkflowDesignerStorageServiceImplementation extends NetObject imp
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveData.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.IWorkflowDesignerStorageService.RemoveData" target="_top">.NET documentation</a>
+     */
     public void RemoveData(java.lang.String key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +223,14 @@ public class IWorkflowDesignerStorageServiceImplementation extends NetObject imp
         }
     }
 
+    /**
+     * Invokes the .NET member SetData.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.IWorkflowDesignerStorageService.SetData" target="_top">.NET documentation</a>
+     */
     public void SetData(java.lang.String key, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

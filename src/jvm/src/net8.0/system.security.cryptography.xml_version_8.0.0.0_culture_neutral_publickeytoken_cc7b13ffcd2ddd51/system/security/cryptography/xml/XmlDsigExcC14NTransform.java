@@ -101,7 +101,10 @@ public class XmlDsigExcC14NTransform extends system.security.cryptography.xml.Tr
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlDsigExcC14NTransform(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class XmlDsigExcC14NTransform extends system.security.cryptography.xml.Tr
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.XmlDsigExcC14NTransform.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlDsigExcC14NTransform() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,14 @@ public class XmlDsigExcC14NTransform extends system.security.cryptography.xml.Tr
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param includeComments the argument of type {@code boolean}
+     * @param inclusiveNamespacesPrefixList the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.XmlDsigExcC14NTransform.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlDsigExcC14NTransform(boolean includeComments, java.lang.String inclusiveNamespacesPrefixList) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +185,13 @@ public class XmlDsigExcC14NTransform extends system.security.cryptography.xml.Tr
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param includeComments the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.XmlDsigExcC14NTransform.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlDsigExcC14NTransform(boolean includeComments) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +202,13 @@ public class XmlDsigExcC14NTransform extends system.security.cryptography.xml.Tr
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param inclusiveNamespacesPrefixList the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.XmlDsigExcC14NTransform.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlDsigExcC14NTransform(java.lang.String inclusiveNamespacesPrefixList) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -192,6 +223,22 @@ public class XmlDsigExcC14NTransform extends system.security.cryptography.xml.Tr
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetDigestedOutput.
+     *
+     * @param hash the argument of type {@code HashAlgorithm}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicUnexpectedOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.XmlDsigExcC14NTransform.GetDigestedOutput" target="_top">.NET documentation</a>
+     */
     public byte[] GetDigestedOutput(HashAlgorithm hash) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.ArgumentOutOfRangeException, system.security.cryptography.CryptographicUnexpectedOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +262,19 @@ public class XmlDsigExcC14NTransform extends system.security.cryptography.xml.Tr
         }
     }
 
+    /**
+     * Invokes the .NET member GetOutput.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.XmlDsigExcC14NTransform.GetOutput" target="_top">.NET documentation</a>
+     */
     public NetObject GetOutput() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +290,22 @@ public class XmlDsigExcC14NTransform extends system.security.cryptography.xml.Tr
         }
     }
 
+    /**
+     * Invokes the .NET member GetOutput.
+     *
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.XmlDsigExcC14NTransform.GetOutput" target="_top">.NET documentation</a>
+     */
     public NetObject GetOutput(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +321,23 @@ public class XmlDsigExcC14NTransform extends system.security.cryptography.xml.Tr
         }
     }
 
+    /**
+     * Invokes the .NET member LoadInnerXml.
+     *
+     * @param nodeList the argument of type {@code XmlNodeList}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.XmlDsigExcC14NTransform.LoadInnerXml" target="_top">.NET documentation</a>
+     */
     public void LoadInnerXml(XmlNodeList nodeList) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +348,26 @@ public class XmlDsigExcC14NTransform extends system.security.cryptography.xml.Tr
         }
     }
 
+    /**
+     * Invokes the .NET member LoadInput.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.XmlDsigExcC14NTransform.LoadInput" target="_top">.NET documentation</a>
+     */
     public void LoadInput(NetObject obj) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.xml.XmlException, system.xml.schema.XmlSchemaException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +382,13 @@ public class XmlDsigExcC14NTransform extends system.security.cryptography.xml.Tr
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property InclusiveNamespacesPrefixList.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.XmlDsigExcC14NTransform.InclusiveNamespacesPrefixList" target="_top">.NET documentation</a>
+     */
     public java.lang.String getInclusiveNamespacesPrefixList() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +403,13 @@ public class XmlDsigExcC14NTransform extends system.security.cryptography.xml.Tr
         }
     }
 
+    /**
+     * Sets the value of the .NET property InclusiveNamespacesPrefixList.
+     *
+     * @param InclusiveNamespacesPrefixList the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.XmlDsigExcC14NTransform.InclusiveNamespacesPrefixList" target="_top">.NET documentation</a>
+     */
     public void setInclusiveNamespacesPrefixList(java.lang.String InclusiveNamespacesPrefixList) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class IContentResolutionServiceImplementation extends NetObject implement
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IContentResolutionServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,14 @@ public class IContentResolutionServiceImplementation extends NetObject implement
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetContentDesignerState.
+     *
+     * @param identifier the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IContentResolutionService.GetContentDesignerState" target="_top">.NET documentation</a>
+     */
     public ContentDesignerState GetContentDesignerState(java.lang.String identifier) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -158,6 +169,14 @@ public class IContentResolutionServiceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member SetContentDesignerState.
+     *
+     * @param identifier the argument of type {@code java.lang.String}
+     * @param state the argument of type {@code ContentDesignerState}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IContentResolutionService.SetContentDesignerState" target="_top">.NET documentation</a>
+     */
     public void SetContentDesignerState(java.lang.String identifier, ContentDesignerState state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +191,13 @@ public class IContentResolutionServiceImplementation extends NetObject implement
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ContentDefinitions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IContentResolutionService.ContentDefinitions" target="_top">.NET documentation</a>
+     */
     public IDictionary getContentDefinitions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

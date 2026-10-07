@@ -100,7 +100,10 @@ public class AutomationPropertyChangedEventArgs extends system.windows.automatio
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AutomationPropertyChangedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,15 @@ public class AutomationPropertyChangedEventArgs extends system.windows.automatio
     public AutomationPropertyChangedEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param property the argument of type {@code AutomationProperty}
+     * @param oldValue the argument of type {@code NetObject}
+     * @param newValue the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.AutomationPropertyChangedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public AutomationPropertyChangedEventArgs(AutomationProperty property, NetObject oldValue, NetObject newValue) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +181,13 @@ public class AutomationPropertyChangedEventArgs extends system.windows.automatio
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property NewValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.AutomationPropertyChangedEventArgs.NewValue" target="_top">.NET documentation</a>
+     */
     public NetObject getNewValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +203,13 @@ public class AutomationPropertyChangedEventArgs extends system.windows.automatio
         }
     }
 
+    /**
+     * Gets the value of the .NET property OldValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.AutomationPropertyChangedEventArgs.OldValue" target="_top">.NET documentation</a>
+     */
     public NetObject getOldValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +225,13 @@ public class AutomationPropertyChangedEventArgs extends system.windows.automatio
         }
     }
 
+    /**
+     * Gets the value of the .NET property Property.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.AutomationPropertyChangedEventArgs.Property" target="_top">.NET documentation</a>
+     */
     public AutomationProperty getProperty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

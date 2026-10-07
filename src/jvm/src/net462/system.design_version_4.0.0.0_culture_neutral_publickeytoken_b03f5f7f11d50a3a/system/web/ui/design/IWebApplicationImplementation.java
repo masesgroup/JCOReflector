@@ -103,7 +103,10 @@ public class IWebApplicationImplementation extends NetObject implements IWebAppl
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IWebApplicationImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,14 @@ public class IWebApplicationImplementation extends NetObject implements IWebAppl
 
     // Methods section
     
+    /**
+     * Invokes the .NET member OpenWebConfiguration.
+     *
+     * @param isReadOnly the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IWebApplication.OpenWebConfiguration" target="_top">.NET documentation</a>
+     */
     public Configuration OpenWebConfiguration(boolean isReadOnly) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -160,6 +171,14 @@ public class IWebApplicationImplementation extends NetObject implements IWebAppl
         }
     }
 
+    /**
+     * Invokes the .NET member GetService.
+     *
+     * @param serviceType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IWebApplication.GetService" target="_top">.NET documentation</a>
+     */
     public NetObject GetService(NetType serviceType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +194,14 @@ public class IWebApplicationImplementation extends NetObject implements IWebAppl
         }
     }
 
+    /**
+     * Invokes the .NET member GetProjectItemFromUrl.
+     *
+     * @param appRelativeUrl the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IWebApplication.GetProjectItemFromUrl" target="_top">.NET documentation</a>
+     */
     public IProjectItem GetProjectItemFromUrl(java.lang.String appRelativeUrl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +221,13 @@ public class IWebApplicationImplementation extends NetObject implements IWebAppl
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RootProjectItem.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IWebApplication.RootProjectItem" target="_top">.NET documentation</a>
+     */
     public IProjectItem getRootProjectItem() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -199,7 +199,10 @@ return (retVal == null) ? null : (TResult)retVal;
         callerInstance = instance;
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     @SuppressWarnings("unchecked")
     public Func_13(java.lang.Object instance) throws Throwable {
@@ -222,6 +225,25 @@ return (retVal == null) ? null : (TResult)retVal;
         return JCOBridgeInstance.translateException(ne);
     }
 
+    /**
+     * Invokes the .NET member DynamicInvoke.
+     *
+     * @param arg1 the argument of type {@code T1}
+     * @param arg2 the argument of type {@code T2}
+     * @param arg3 the argument of type {@code T3}
+     * @param arg4 the argument of type {@code T4}
+     * @param arg5 the argument of type {@code T5}
+     * @param arg6 the argument of type {@code T6}
+     * @param arg7 the argument of type {@code T7}
+     * @param arg8 the argument of type {@code T8}
+     * @param arg9 the argument of type {@code T9}
+     * @param arg10 the argument of type {@code T10}
+     * @param arg11 the argument of type {@code T11}
+     * @param arg12 the argument of type {@code T12}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Delegate.DynamicInvoke" target="_top">.NET documentation</a>
+     */
     public TResult DynamicInvoke(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,7 +259,21 @@ return (retVal == null) ? null : (TResult)retVal;
     }
 
     /**
-     * Methods invoked in JVM when an event is raised in CLR 
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param arg1 the .NET argument of type {@code T1}
+     * @param arg2 the .NET argument of type {@code T2}
+     * @param arg3 the .NET argument of type {@code T3}
+     * @param arg4 the .NET argument of type {@code T4}
+     * @param arg5 the .NET argument of type {@code T5}
+     * @param arg6 the .NET argument of type {@code T6}
+     * @param arg7 the .NET argument of type {@code T7}
+     * @param arg8 the .NET argument of type {@code T8}
+     * @param arg9 the .NET argument of type {@code T9}
+     * @param arg10 the .NET argument of type {@code T10}
+     * @param arg11 the .NET argument of type {@code T11}
+     * @param arg12 the .NET argument of type {@code T12}
+     * @return the value returned to the CLR; this default implementation returns {@code null}
      */
     public TResult Invoke(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12) {
         return null;

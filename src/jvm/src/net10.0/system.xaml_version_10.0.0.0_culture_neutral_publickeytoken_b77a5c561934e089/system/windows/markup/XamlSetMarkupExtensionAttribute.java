@@ -99,7 +99,10 @@ public class XamlSetMarkupExtensionAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XamlSetMarkupExtensionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,13 @@ public class XamlSetMarkupExtensionAttribute extends system.Attribute  {
     public XamlSetMarkupExtensionAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param xamlSetMarkupExtensionHandler the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlSetMarkupExtensionAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public XamlSetMarkupExtensionAttribute(java.lang.String xamlSetMarkupExtensionHandler) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +178,13 @@ public class XamlSetMarkupExtensionAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property XamlSetMarkupExtensionHandler.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlSetMarkupExtensionAttribute.XamlSetMarkupExtensionHandler" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXamlSetMarkupExtensionHandler() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

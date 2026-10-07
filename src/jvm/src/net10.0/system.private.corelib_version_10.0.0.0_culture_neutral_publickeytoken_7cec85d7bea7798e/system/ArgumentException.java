@@ -105,7 +105,9 @@ public class ArgumentException extends system.SystemException {
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public ArgumentException(java.lang.Object instance) {
         super(instance);
@@ -166,6 +168,15 @@ public class ArgumentException extends system.SystemException {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param paramName the argument of type {@code java.lang.String}
+     * @param innerException the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ArgumentException.-ctor" target="_top">.NET documentation</a>
+     */
     public ArgumentException(java.lang.String message, java.lang.String paramName, NetException innerException) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +187,14 @@ public class ArgumentException extends system.SystemException {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param paramName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ArgumentException.-ctor" target="_top">.NET documentation</a>
+     */
     public ArgumentException(java.lang.String message, java.lang.String paramName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -190,6 +209,24 @@ public class ArgumentException extends system.SystemException {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetObjectData.
+     *
+     * @param info the argument of type {@code SerializationInfo}
+     * @param context the argument of type {@code StreamingContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ArgumentException.GetObjectData" target="_top">.NET documentation</a>
+     */
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.BadImageFormatException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +237,19 @@ public class ArgumentException extends system.SystemException {
         }
     }
 
+    /**
+     * Invokes the .NET member ThrowIfNullOrEmpty.
+     *
+     * @param argument the argument of type {@code java.lang.String}
+     * @param paramName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ArgumentException.ThrowIfNullOrEmpty" target="_top">.NET documentation</a>
+     */
     public static void ThrowIfNullOrEmpty(java.lang.String argument, java.lang.String paramName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -210,6 +260,20 @@ public class ArgumentException extends system.SystemException {
         }
     }
 
+    /**
+     * Invokes the .NET member ThrowIfNullOrWhiteSpace.
+     *
+     * @param argument the argument of type {@code java.lang.String}
+     * @param paramName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ArgumentException.ThrowIfNullOrWhiteSpace" target="_top">.NET documentation</a>
+     */
     public static void ThrowIfNullOrWhiteSpace(java.lang.String argument, java.lang.String paramName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -224,6 +288,13 @@ public class ArgumentException extends system.SystemException {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ParamName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ArgumentException.ParamName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getParamName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

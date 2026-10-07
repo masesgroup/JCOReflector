@@ -103,7 +103,9 @@ public class MsmqException extends system.runtime.interopservices.ExternalExcept
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public MsmqException(java.lang.Object instance) {
         super(instance);
@@ -164,6 +166,14 @@ public class MsmqException extends system.runtime.interopservices.ExternalExcept
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param error the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqException.-ctor" target="_top">.NET documentation</a>
+     */
     public MsmqException(java.lang.String message, int error) throws Throwable {
         try {
             // add reference to assemblyName.dll file

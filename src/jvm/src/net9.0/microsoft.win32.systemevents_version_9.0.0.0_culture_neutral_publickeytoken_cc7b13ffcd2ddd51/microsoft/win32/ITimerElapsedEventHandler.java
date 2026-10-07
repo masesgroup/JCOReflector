@@ -52,5 +52,11 @@ import microsoft.win32.TimerElapsedEventArgs;
  * @version 2.0.0.0
  */
 public interface ITimerElapsedEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code Microsoft.Win32.TimerElapsedEventArgs}
+     */
     public void Invoke(NetObject sender, TimerElapsedEventArgs e);
 }

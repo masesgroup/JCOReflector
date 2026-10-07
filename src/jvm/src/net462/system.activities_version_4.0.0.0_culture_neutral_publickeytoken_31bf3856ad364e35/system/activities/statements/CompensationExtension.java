@@ -102,7 +102,10 @@ public class CompensationExtension extends system.activities.persistence.Persist
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CompensationExtension(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class CompensationExtension extends system.activities.persistence.Persist
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.CompensationExtension.-ctor" target="_top">.NET documentation</a>
+     */
     public CompensationExtension() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -166,8 +177,12 @@ public class CompensationExtension extends system.activities.persistence.Persist
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIWorkflowInstanceExtension method available in IWorkflowInstanceExtension to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Hosting.IWorkflowInstanceExtension.GetAdditionalExtensions" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public IEnumerable_1 GetAdditionalExtensions() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWorkflowInstanceExtension to obtain the full interface.");
     }
@@ -175,8 +190,12 @@ public class CompensationExtension extends system.activities.persistence.Persist
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIWorkflowInstanceExtension method available in IWorkflowInstanceExtension to obtain an object with an invocable method
+     *
+     * @param instance the argument of type {@code WorkflowInstanceProxy}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Hosting.IWorkflowInstanceExtension.SetInstance" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void SetInstance(WorkflowInstanceProxy instance) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWorkflowInstanceExtension to obtain the full interface.");
     }

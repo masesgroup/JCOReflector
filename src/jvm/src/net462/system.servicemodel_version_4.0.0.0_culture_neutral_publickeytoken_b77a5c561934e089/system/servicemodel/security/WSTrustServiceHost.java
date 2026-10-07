@@ -102,7 +102,10 @@ public class WSTrustServiceHost extends system.servicemodel.ServiceHost  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WSTrustServiceHost(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,27 @@ public class WSTrustServiceHost extends system.servicemodel.ServiceHost  {
     public WSTrustServiceHost() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param securityTokenServiceConfiguration the argument of type {@code SecurityTokenServiceConfiguration}
+     * @param baseAddresses the argument of type {@code Uri...}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.WSTrustServiceHost.-ctor" target="_top">.NET documentation</a>
+     */
     public WSTrustServiceHost(SecurityTokenServiceConfiguration securityTokenServiceConfiguration, Uri... baseAddresses) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +186,27 @@ public class WSTrustServiceHost extends system.servicemodel.ServiceHost  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param serviceContract the argument of type {@code WSTrustServiceContract}
+     * @param baseAddresses the argument of type {@code Uri...}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.WSTrustServiceHost.-ctor" target="_top">.NET documentation</a>
+     */
     public WSTrustServiceHost(WSTrustServiceContract serviceContract, Uri... baseAddresses) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.FormatException, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +226,13 @@ public class WSTrustServiceHost extends system.servicemodel.ServiceHost  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SecurityTokenServiceConfiguration.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.WSTrustServiceHost.SecurityTokenServiceConfiguration" target="_top">.NET documentation</a>
+     */
     public SecurityTokenServiceConfiguration getSecurityTokenServiceConfiguration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +248,13 @@ public class WSTrustServiceHost extends system.servicemodel.ServiceHost  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ServiceContract.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.WSTrustServiceHost.ServiceContract" target="_top">.NET documentation</a>
+     */
     public WSTrustServiceContract getServiceContract() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

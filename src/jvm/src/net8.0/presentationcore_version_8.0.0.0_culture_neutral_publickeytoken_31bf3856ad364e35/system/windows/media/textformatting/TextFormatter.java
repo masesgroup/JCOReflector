@@ -106,7 +106,10 @@ public class TextFormatter extends NetObject implements AutoCloseable {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TextFormatter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,17 @@ public class TextFormatter extends NetObject implements AutoCloseable {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member FormatMinMaxParagraphWidth.
+     *
+     * @param textSource the argument of type {@code TextSource}
+     * @param firstCharIndex the argument of type {@code int}
+     * @param paragraphProperties the argument of type {@code TextParagraphProperties}
+     * @param textRunCache the argument of type {@code TextRunCache}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextFormatter.FormatMinMaxParagraphWidth" target="_top">.NET documentation</a>
+     */
     public MinMaxParagraphWidth FormatMinMaxParagraphWidth(TextSource textSource, int firstCharIndex, TextParagraphProperties paragraphProperties, TextRunCache textRunCache) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +188,16 @@ public class TextFormatter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member FormatMinMaxParagraphWidth.
+     *
+     * @param textSource the argument of type {@code TextSource}
+     * @param firstCharIndex the argument of type {@code int}
+     * @param paragraphProperties the argument of type {@code TextParagraphProperties}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextFormatter.FormatMinMaxParagraphWidth" target="_top">.NET documentation</a>
+     */
     public MinMaxParagraphWidth FormatMinMaxParagraphWidth(TextSource textSource, int firstCharIndex, TextParagraphProperties paragraphProperties) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +213,18 @@ public class TextFormatter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextFormatter.Create" target="_top">.NET documentation</a>
+     */
     public static TextFormatter Create() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -204,6 +240,24 @@ public class TextFormatter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param textFormattingMode the argument of type {@code TextFormattingMode}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextFormatter.Create" target="_top">.NET documentation</a>
+     */
     public static TextFormatter Create(TextFormattingMode textFormattingMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -219,6 +273,19 @@ public class TextFormatter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member FormatLine.
+     *
+     * @param textSource the argument of type {@code TextSource}
+     * @param firstCharIndex the argument of type {@code int}
+     * @param paragraphWidth the argument of type {@code double}
+     * @param paragraphProperties the argument of type {@code TextParagraphProperties}
+     * @param previousLineBreak the argument of type {@code TextLineBreak}
+     * @param textRunCache the argument of type {@code TextRunCache}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextFormatter.FormatLine" target="_top">.NET documentation</a>
+     */
     public TextLine FormatLine(TextSource textSource, int firstCharIndex, double paragraphWidth, TextParagraphProperties paragraphProperties, TextLineBreak previousLineBreak, TextRunCache textRunCache) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +301,18 @@ public class TextFormatter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member FormatLine.
+     *
+     * @param textSource the argument of type {@code TextSource}
+     * @param firstCharIndex the argument of type {@code int}
+     * @param paragraphWidth the argument of type {@code double}
+     * @param paragraphProperties the argument of type {@code TextParagraphProperties}
+     * @param previousLineBreak the argument of type {@code TextLineBreak}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextFormatter.FormatLine" target="_top">.NET documentation</a>
+     */
     public TextLine FormatLine(TextSource textSource, int firstCharIndex, double paragraphWidth, TextParagraphProperties paragraphProperties, TextLineBreak previousLineBreak) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +328,12 @@ public class TextFormatter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextFormatter.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

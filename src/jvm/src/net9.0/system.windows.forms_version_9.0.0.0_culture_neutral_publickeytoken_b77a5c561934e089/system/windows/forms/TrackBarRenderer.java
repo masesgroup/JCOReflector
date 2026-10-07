@@ -103,7 +103,10 @@ public class TrackBarRenderer extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TrackBarRenderer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,23 @@ public class TrackBarRenderer extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetBottomPointingThumbSize.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param state the argument of type {@code TrackBarThumbState}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TrackBarRenderer.GetBottomPointingThumbSize" target="_top">.NET documentation</a>
+     */
     public static Size GetBottomPointingThumbSize(Graphics g, TrackBarThumbState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -171,6 +191,23 @@ public class TrackBarRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetLeftPointingThumbSize.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param state the argument of type {@code TrackBarThumbState}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TrackBarRenderer.GetLeftPointingThumbSize" target="_top">.NET documentation</a>
+     */
     public static Size GetLeftPointingThumbSize(Graphics g, TrackBarThumbState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -186,6 +223,23 @@ public class TrackBarRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRightPointingThumbSize.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param state the argument of type {@code TrackBarThumbState}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TrackBarRenderer.GetRightPointingThumbSize" target="_top">.NET documentation</a>
+     */
     public static Size GetRightPointingThumbSize(Graphics g, TrackBarThumbState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -201,6 +255,23 @@ public class TrackBarRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTopPointingThumbSize.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param state the argument of type {@code TrackBarThumbState}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TrackBarRenderer.GetTopPointingThumbSize" target="_top">.NET documentation</a>
+     */
     public static Size GetTopPointingThumbSize(Graphics g, TrackBarThumbState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -216,6 +287,21 @@ public class TrackBarRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawBottomPointingThumb.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param bounds the argument of type {@code Rectangle}
+     * @param state the argument of type {@code TrackBarThumbState}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TrackBarRenderer.DrawBottomPointingThumb" target="_top">.NET documentation</a>
+     */
     public static void DrawBottomPointingThumb(Graphics g, Rectangle bounds, TrackBarThumbState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -226,6 +312,21 @@ public class TrackBarRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawHorizontalThumb.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param bounds the argument of type {@code Rectangle}
+     * @param state the argument of type {@code TrackBarThumbState}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TrackBarRenderer.DrawHorizontalThumb" target="_top">.NET documentation</a>
+     */
     public static void DrawHorizontalThumb(Graphics g, Rectangle bounds, TrackBarThumbState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -236,6 +337,24 @@ public class TrackBarRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawHorizontalTicks.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param bounds the argument of type {@code Rectangle}
+     * @param numTicks the argument of type {@code int}
+     * @param edgeStyle the argument of type {@code EdgeStyle}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TrackBarRenderer.DrawHorizontalTicks" target="_top">.NET documentation</a>
+     */
     public static void DrawHorizontalTicks(Graphics g, Rectangle bounds, int numTicks, EdgeStyle edgeStyle) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -246,6 +365,20 @@ public class TrackBarRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawHorizontalTrack.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param bounds the argument of type {@code Rectangle}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TrackBarRenderer.DrawHorizontalTrack" target="_top">.NET documentation</a>
+     */
     public static void DrawHorizontalTrack(Graphics g, Rectangle bounds) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -256,6 +389,21 @@ public class TrackBarRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawLeftPointingThumb.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param bounds the argument of type {@code Rectangle}
+     * @param state the argument of type {@code TrackBarThumbState}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TrackBarRenderer.DrawLeftPointingThumb" target="_top">.NET documentation</a>
+     */
     public static void DrawLeftPointingThumb(Graphics g, Rectangle bounds, TrackBarThumbState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -266,6 +414,21 @@ public class TrackBarRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawRightPointingThumb.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param bounds the argument of type {@code Rectangle}
+     * @param state the argument of type {@code TrackBarThumbState}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TrackBarRenderer.DrawRightPointingThumb" target="_top">.NET documentation</a>
+     */
     public static void DrawRightPointingThumb(Graphics g, Rectangle bounds, TrackBarThumbState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -276,6 +439,21 @@ public class TrackBarRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawTopPointingThumb.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param bounds the argument of type {@code Rectangle}
+     * @param state the argument of type {@code TrackBarThumbState}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TrackBarRenderer.DrawTopPointingThumb" target="_top">.NET documentation</a>
+     */
     public static void DrawTopPointingThumb(Graphics g, Rectangle bounds, TrackBarThumbState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -286,6 +464,21 @@ public class TrackBarRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawVerticalThumb.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param bounds the argument of type {@code Rectangle}
+     * @param state the argument of type {@code TrackBarThumbState}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TrackBarRenderer.DrawVerticalThumb" target="_top">.NET documentation</a>
+     */
     public static void DrawVerticalThumb(Graphics g, Rectangle bounds, TrackBarThumbState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -296,6 +489,24 @@ public class TrackBarRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawVerticalTicks.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param bounds the argument of type {@code Rectangle}
+     * @param numTicks the argument of type {@code int}
+     * @param edgeStyle the argument of type {@code EdgeStyle}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TrackBarRenderer.DrawVerticalTicks" target="_top">.NET documentation</a>
+     */
     public static void DrawVerticalTicks(Graphics g, Rectangle bounds, int numTicks, EdgeStyle edgeStyle) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -306,6 +517,20 @@ public class TrackBarRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawVerticalTrack.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param bounds the argument of type {@code Rectangle}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TrackBarRenderer.DrawVerticalTrack" target="_top">.NET documentation</a>
+     */
     public static void DrawVerticalTrack(Graphics g, Rectangle bounds) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -320,6 +545,22 @@ public class TrackBarRenderer extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsSupported.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TrackBarRenderer.IsSupported" target="_top">.NET documentation</a>
+     */
     public static boolean getIsSupported() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

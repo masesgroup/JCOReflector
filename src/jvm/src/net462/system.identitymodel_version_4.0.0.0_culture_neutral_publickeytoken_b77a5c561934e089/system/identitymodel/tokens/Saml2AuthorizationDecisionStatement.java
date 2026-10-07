@@ -105,7 +105,10 @@ public class Saml2AuthorizationDecisionStatement extends system.identitymodel.to
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Saml2AuthorizationDecisionStatement(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,27 @@ public class Saml2AuthorizationDecisionStatement extends system.identitymodel.to
     public Saml2AuthorizationDecisionStatement() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param resource the argument of type {@code Uri}
+     * @param decision the argument of type {@code SamlAccessDecision}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement.-ctor" target="_top">.NET documentation</a>
+     */
     public Saml2AuthorizationDecisionStatement(Uri resource, SamlAccessDecision decision) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +189,27 @@ public class Saml2AuthorizationDecisionStatement extends system.identitymodel.to
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param resource the argument of type {@code Uri}
+     * @param decision the argument of type {@code SamlAccessDecision}
+     * @param actions the argument of type {@code IEnumerable_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement.-ctor" target="_top">.NET documentation</a>
+     */
     public Saml2AuthorizationDecisionStatement(Uri resource, SamlAccessDecision decision, IEnumerable_1 actions) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -184,6 +229,13 @@ public class Saml2AuthorizationDecisionStatement extends system.identitymodel.to
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Actions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement.Actions" target="_top">.NET documentation</a>
+     */
     public Collection_1 getActions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +251,13 @@ public class Saml2AuthorizationDecisionStatement extends system.identitymodel.to
         }
     }
 
+    /**
+     * Gets the value of the .NET property Evidence.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement.Evidence" target="_top">.NET documentation</a>
+     */
     public Saml2Evidence getEvidence() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +273,13 @@ public class Saml2AuthorizationDecisionStatement extends system.identitymodel.to
         }
     }
 
+    /**
+     * Sets the value of the .NET property Evidence.
+     *
+     * @param Evidence the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement.Evidence" target="_top">.NET documentation</a>
+     */
     public void setEvidence(Saml2Evidence Evidence) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +290,13 @@ public class Saml2AuthorizationDecisionStatement extends system.identitymodel.to
         }
     }
 
+    /**
+     * Gets the value of the .NET property Decision.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement.Decision" target="_top">.NET documentation</a>
+     */
     public SamlAccessDecision getDecision() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +312,24 @@ public class Saml2AuthorizationDecisionStatement extends system.identitymodel.to
         }
     }
 
+    /**
+     * Sets the value of the .NET property Decision.
+     *
+     * @param Decision the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement.Decision" target="_top">.NET documentation</a>
+     */
     public void setDecision(SamlAccessDecision Decision) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +340,13 @@ public class Saml2AuthorizationDecisionStatement extends system.identitymodel.to
         }
     }
 
+    /**
+     * Gets the value of the .NET property Resource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement.Resource" target="_top">.NET documentation</a>
+     */
     public Uri getResource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +362,24 @@ public class Saml2AuthorizationDecisionStatement extends system.identitymodel.to
         }
     }
 
+    /**
+     * Sets the value of the .NET property Resource.
+     *
+     * @param Resource the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement.Resource" target="_top">.NET documentation</a>
+     */
     public void setResource(Uri Resource) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class IDataItemContainerImplementation extends NetObject implements IData
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDataItemContainerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,13 @@ public class IDataItemContainerImplementation extends NetObject implements IData
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DataItemIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IDataItemContainer.DataItemIndex" target="_top">.NET documentation</a>
+     */
     public int getDataItemIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +196,13 @@ public class IDataItemContainerImplementation extends NetObject implements IData
         }
     }
 
+    /**
+     * Gets the value of the .NET property DisplayIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IDataItemContainer.DisplayIndex" target="_top">.NET documentation</a>
+     */
     public int getDisplayIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +243,13 @@ public class IDataItemContainerImplementation extends NetObject implements IData
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataItem.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IDataItemContainer.DataItem" target="_top">.NET documentation</a>
+     */
     public NetObject getDataItem() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

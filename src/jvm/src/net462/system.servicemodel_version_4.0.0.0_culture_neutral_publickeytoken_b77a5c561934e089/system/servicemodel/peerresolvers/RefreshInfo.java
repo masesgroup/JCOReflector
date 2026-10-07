@@ -99,7 +99,10 @@ public class RefreshInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RefreshInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class RefreshInfo extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolvers.RefreshInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public RefreshInfo() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,14 @@ public class RefreshInfo extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param meshId the argument of type {@code java.lang.String}
+     * @param regId the argument of type {@code Guid}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolvers.RefreshInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public RefreshInfo(java.lang.String meshId, Guid regId) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +187,13 @@ public class RefreshInfo extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member HasBody.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolvers.RefreshInfo.HasBody" target="_top">.NET documentation</a>
+     */
     public boolean HasBody() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +212,13 @@ public class RefreshInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RegistrationId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolvers.RefreshInfo.RegistrationId" target="_top">.NET documentation</a>
+     */
     public Guid getRegistrationId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +234,13 @@ public class RefreshInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MeshId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolvers.RefreshInfo.MeshId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMeshId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

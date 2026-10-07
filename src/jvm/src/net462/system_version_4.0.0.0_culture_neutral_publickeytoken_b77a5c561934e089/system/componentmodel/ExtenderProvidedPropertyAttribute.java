@@ -102,7 +102,10 @@ public class ExtenderProvidedPropertyAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ExtenderProvidedPropertyAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class ExtenderProvidedPropertyAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ExtenderProvidedPropertyAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ExtenderProvidedPropertyAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,13 @@ public class ExtenderProvidedPropertyAttribute extends system.Attribute  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsDefaultAttribute.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ExtenderProvidedPropertyAttribute.IsDefaultAttribute" target="_top">.NET documentation</a>
+     */
     public boolean IsDefaultAttribute() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +197,13 @@ public class ExtenderProvidedPropertyAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Provider.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ExtenderProvidedPropertyAttribute.Provider" target="_top">.NET documentation</a>
+     */
     public IExtenderProvider getProvider() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +219,13 @@ public class ExtenderProvidedPropertyAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExtenderProperty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ExtenderProvidedPropertyAttribute.ExtenderProperty" target="_top">.NET documentation</a>
+     */
     public PropertyDescriptor getExtenderProperty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +241,13 @@ public class ExtenderProvidedPropertyAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReceiverType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ExtenderProvidedPropertyAttribute.ReceiverType" target="_top">.NET documentation</a>
+     */
     public NetType getReceiverType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

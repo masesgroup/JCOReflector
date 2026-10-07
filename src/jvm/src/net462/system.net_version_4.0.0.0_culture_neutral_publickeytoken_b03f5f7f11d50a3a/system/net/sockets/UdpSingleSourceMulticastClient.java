@@ -102,7 +102,10 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UdpSingleSourceMulticastClient(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,15 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
     public UdpSingleSourceMulticastClient() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param sourceAddress the argument of type {@code IPAddress}
+     * @param groupAddress the argument of type {@code IPAddress}
+     * @param localPort the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.UdpSingleSourceMulticastClient.-ctor" target="_top">.NET documentation</a>
+     */
     public UdpSingleSourceMulticastClient(IPAddress sourceAddress, IPAddress groupAddress, int localPort) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +179,20 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
     
     // Methods section
     
+    /**
+     * Invokes the .NET member EndReceiveFromSource.
+     *
+     * @param result the argument of type {@code IAsyncResult}
+     * @param sourcePort the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.net.sockets.SocketException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.UdpSingleSourceMulticastClient.EndReceiveFromSource" target="_top">.NET documentation</a>
+     */
     public int EndReceiveFromSource(IAsyncResult result, JCORefOut<java.util.concurrent.atomic.AtomicInteger> sourcePort) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +233,20 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
         }
     }
 
+    /**
+     * Invokes the .NET member BeginJoinGroup.
+     *
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.net.sockets.SocketException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.UdpSingleSourceMulticastClient.BeginJoinGroup" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginJoinGroup(AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +262,23 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
         }
     }
 
+    /**
+     * Invokes the .NET member BeginReceiveFromSource.
+     *
+     * @param buffer the argument of type {@code byte[]}
+     * @param offset the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.net.sockets.SocketException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.UdpSingleSourceMulticastClient.BeginReceiveFromSource" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginReceiveFromSource(byte[] buffer, int offset, int count, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +294,23 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
         }
     }
 
+    /**
+     * Invokes the .NET member BeginReceiveFromSource.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code int}
+     * @param dupParam3 the argument of type {@code AsyncCallback}
+     * @param dupParam4 the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.net.sockets.SocketException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.UdpSingleSourceMulticastClient.BeginReceiveFromSource" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginReceiveFromSource(JCORefOut dupParam0, int dupParam1, int dupParam2, AsyncCallback dupParam3, NetObject dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +326,24 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
         }
     }
 
+    /**
+     * Invokes the .NET member BeginSendToSource.
+     *
+     * @param buffer the argument of type {@code byte[]}
+     * @param offset the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @param remotePort the argument of type {@code int}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.net.sockets.SocketException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.UdpSingleSourceMulticastClient.BeginSendToSource" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginSendToSource(byte[] buffer, int offset, int count, int remotePort, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +359,24 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
         }
     }
 
+    /**
+     * Invokes the .NET member BeginSendToSource.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code int}
+     * @param dupParam3 the argument of type {@code int}
+     * @param dupParam4 the argument of type {@code AsyncCallback}
+     * @param dupParam5 the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.net.sockets.SocketException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.UdpSingleSourceMulticastClient.BeginSendToSource" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginSendToSource(JCORefOut dupParam0, int dupParam1, int dupParam2, int dupParam3, AsyncCallback dupParam4, NetObject dupParam5) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +392,12 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.UdpSingleSourceMulticastClient.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +408,13 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
         }
     }
 
+    /**
+     * Invokes the .NET member EndJoinGroup.
+     *
+     * @param result the argument of type {@code IAsyncResult}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.UdpSingleSourceMulticastClient.EndJoinGroup" target="_top">.NET documentation</a>
+     */
     public void EndJoinGroup(IAsyncResult result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -302,6 +425,13 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
         }
     }
 
+    /**
+     * Invokes the .NET member EndSendToSource.
+     *
+     * @param result the argument of type {@code IAsyncResult}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.UdpSingleSourceMulticastClient.EndSendToSource" target="_top">.NET documentation</a>
+     */
     public void EndSendToSource(IAsyncResult result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -329,6 +459,13 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ReceiveBufferSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.UdpSingleSourceMulticastClient.ReceiveBufferSize" target="_top">.NET documentation</a>
+     */
     public int getReceiveBufferSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -369,6 +506,13 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReceiveBufferSize.
+     *
+     * @param ReceiveBufferSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.UdpSingleSourceMulticastClient.ReceiveBufferSize" target="_top">.NET documentation</a>
+     */
     public void setReceiveBufferSize(int ReceiveBufferSize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -379,6 +523,13 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
         }
     }
 
+    /**
+     * Gets the value of the .NET property SendBufferSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.UdpSingleSourceMulticastClient.SendBufferSize" target="_top">.NET documentation</a>
+     */
     public int getSendBufferSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -419,6 +570,13 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
         }
     }
 
+    /**
+     * Sets the value of the .NET property SendBufferSize.
+     *
+     * @param SendBufferSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.UdpSingleSourceMulticastClient.SendBufferSize" target="_top">.NET documentation</a>
+     */
     public void setSendBufferSize(int SendBufferSize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

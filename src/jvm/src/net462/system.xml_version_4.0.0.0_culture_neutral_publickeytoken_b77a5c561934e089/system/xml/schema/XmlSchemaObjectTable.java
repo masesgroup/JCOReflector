@@ -104,7 +104,10 @@ public class XmlSchemaObjectTable extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlSchemaObjectTable(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,15 @@ public class XmlSchemaObjectTable extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param name the argument of type {@code XmlQualifiedName}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaObjectTable.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(XmlQualifiedName name) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +185,13 @@ public class XmlSchemaObjectTable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEnumerator.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaObjectTable.GetEnumerator" target="_top">.NET documentation</a>
+     */
     public IDictionaryEnumerator GetEnumerator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +211,13 @@ public class XmlSchemaObjectTable extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Count.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaObjectTable.Count" target="_top">.NET documentation</a>
+     */
     public int getCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +258,13 @@ public class XmlSchemaObjectTable extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Names.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaObjectTable.Names" target="_top">.NET documentation</a>
+     */
     public ICollection getNames() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +280,13 @@ public class XmlSchemaObjectTable extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Values.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaObjectTable.Values" target="_top">.NET documentation</a>
+     */
     public ICollection getValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

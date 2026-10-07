@@ -102,7 +102,10 @@ public class CacheControlHeaderValue extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CacheControlHeaderValue(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class CacheControlHeaderValue extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.-ctor" target="_top">.NET documentation</a>
+     */
     public CacheControlHeaderValue() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,15 @@ public class CacheControlHeaderValue extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member TryParse.
+     *
+     * @param input the argument of type {@code java.lang.String}
+     * @param parsedValue the argument of type {@code JCORefOut<CacheControlHeaderValue>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.TryParse" target="_top">.NET documentation</a>
+     */
     public static boolean TryParse(java.lang.String input, JCORefOut<CacheControlHeaderValue> parsedValue) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -177,6 +195,23 @@ public class CacheControlHeaderValue extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Parse.
+     *
+     * @param input the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.Parse" target="_top">.NET documentation</a>
+     */
     public static CacheControlHeaderValue Parse(java.lang.String input) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -195,8 +230,12 @@ public class CacheControlHeaderValue extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICloneable method available in ICloneable to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ICloneable.Clone" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public NetObject Clone() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICloneable to obtain the full interface.");
     }
@@ -205,6 +244,13 @@ public class CacheControlHeaderValue extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MaxStale.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.MaxStale" target="_top">.NET documentation</a>
+     */
     public boolean getMaxStale() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +265,21 @@ public class CacheControlHeaderValue extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxStale.
+     *
+     * @param MaxStale the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.MaxStale" target="_top">.NET documentation</a>
+     */
     public void setMaxStale(boolean MaxStale) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +290,13 @@ public class CacheControlHeaderValue extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MustRevalidate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.MustRevalidate" target="_top">.NET documentation</a>
+     */
     public boolean getMustRevalidate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +311,21 @@ public class CacheControlHeaderValue extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MustRevalidate.
+     *
+     * @param MustRevalidate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.MustRevalidate" target="_top">.NET documentation</a>
+     */
     public void setMustRevalidate(boolean MustRevalidate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +336,13 @@ public class CacheControlHeaderValue extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NoCache.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.NoCache" target="_top">.NET documentation</a>
+     */
     public boolean getNoCache() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +357,21 @@ public class CacheControlHeaderValue extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NoCache.
+     *
+     * @param NoCache the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.NoCache" target="_top">.NET documentation</a>
+     */
     public void setNoCache(boolean NoCache) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +382,13 @@ public class CacheControlHeaderValue extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NoStore.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.NoStore" target="_top">.NET documentation</a>
+     */
     public boolean getNoStore() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +403,21 @@ public class CacheControlHeaderValue extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NoStore.
+     *
+     * @param NoStore the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.NoStore" target="_top">.NET documentation</a>
+     */
     public void setNoStore(boolean NoStore) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +428,13 @@ public class CacheControlHeaderValue extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NoTransform.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.NoTransform" target="_top">.NET documentation</a>
+     */
     public boolean getNoTransform() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -315,6 +449,21 @@ public class CacheControlHeaderValue extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NoTransform.
+     *
+     * @param NoTransform the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.NoTransform" target="_top">.NET documentation</a>
+     */
     public void setNoTransform(boolean NoTransform) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -325,6 +474,13 @@ public class CacheControlHeaderValue extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OnlyIfCached.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.OnlyIfCached" target="_top">.NET documentation</a>
+     */
     public boolean getOnlyIfCached() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -339,6 +495,21 @@ public class CacheControlHeaderValue extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OnlyIfCached.
+     *
+     * @param OnlyIfCached the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.OnlyIfCached" target="_top">.NET documentation</a>
+     */
     public void setOnlyIfCached(boolean OnlyIfCached) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -349,6 +520,13 @@ public class CacheControlHeaderValue extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Private.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.Private" target="_top">.NET documentation</a>
+     */
     public boolean getPrivate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -363,6 +541,21 @@ public class CacheControlHeaderValue extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Private.
+     *
+     * @param Private the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.Private" target="_top">.NET documentation</a>
+     */
     public void setPrivate(boolean Private) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -373,6 +566,13 @@ public class CacheControlHeaderValue extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProxyRevalidate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.ProxyRevalidate" target="_top">.NET documentation</a>
+     */
     public boolean getProxyRevalidate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -387,6 +587,21 @@ public class CacheControlHeaderValue extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProxyRevalidate.
+     *
+     * @param ProxyRevalidate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.ProxyRevalidate" target="_top">.NET documentation</a>
+     */
     public void setProxyRevalidate(boolean ProxyRevalidate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -397,6 +612,13 @@ public class CacheControlHeaderValue extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Public.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.Public" target="_top">.NET documentation</a>
+     */
     public boolean getPublic() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -411,6 +633,21 @@ public class CacheControlHeaderValue extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Public.
+     *
+     * @param Public the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.Public" target="_top">.NET documentation</a>
+     */
     public void setPublic(boolean Public) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -421,6 +658,13 @@ public class CacheControlHeaderValue extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Extensions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.Extensions" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getExtensions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -436,6 +680,13 @@ public class CacheControlHeaderValue extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NoCacheHeaders.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.NoCacheHeaders" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getNoCacheHeaders() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -451,6 +702,13 @@ public class CacheControlHeaderValue extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PrivateHeaders.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.PrivateHeaders" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getPrivateHeaders() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -466,6 +724,13 @@ public class CacheControlHeaderValue extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxAge.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.MaxAge" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getMaxAge() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -481,6 +746,18 @@ public class CacheControlHeaderValue extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxAge.
+     *
+     * @param MaxAge the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.MaxAge" target="_top">.NET documentation</a>
+     */
     public void setMaxAge(Nullable_1 MaxAge) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -491,6 +768,13 @@ public class CacheControlHeaderValue extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxStaleLimit.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.MaxStaleLimit" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getMaxStaleLimit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -506,6 +790,18 @@ public class CacheControlHeaderValue extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxStaleLimit.
+     *
+     * @param MaxStaleLimit the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.MaxStaleLimit" target="_top">.NET documentation</a>
+     */
     public void setMaxStaleLimit(Nullable_1 MaxStaleLimit) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -516,6 +812,13 @@ public class CacheControlHeaderValue extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinFresh.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.MinFresh" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getMinFresh() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -531,6 +834,18 @@ public class CacheControlHeaderValue extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MinFresh.
+     *
+     * @param MinFresh the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.MinFresh" target="_top">.NET documentation</a>
+     */
     public void setMinFresh(Nullable_1 MinFresh) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -541,6 +856,13 @@ public class CacheControlHeaderValue extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SharedMaxAge.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.SharedMaxAge" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getSharedMaxAge() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -556,6 +878,18 @@ public class CacheControlHeaderValue extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SharedMaxAge.
+     *
+     * @param SharedMaxAge the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.SharedMaxAge" target="_top">.NET documentation</a>
+     */
     public void setSharedMaxAge(Nullable_1 SharedMaxAge) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

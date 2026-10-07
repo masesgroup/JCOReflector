@@ -100,7 +100,10 @@ public class IProgressPageImplementation extends NetObject implements IProgressP
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IProgressPageImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,14 @@ public class IProgressPageImplementation extends NetObject implements IProgressP
 
     // Methods section
     
+    /**
+     * Invokes the .NET member UpdateProgress.
+     *
+     * @param bytesDownloaded the argument of type {@code long}
+     * @param bytesTotal the argument of type {@code long}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IProgressPage.UpdateProgress" target="_top">.NET documentation</a>
+     */
     public void UpdateProgress(long bytesDownloaded, long bytesTotal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -156,6 +167,13 @@ public class IProgressPageImplementation extends NetObject implements IProgressP
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ApplicationName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IProgressPage.ApplicationName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getApplicationName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +188,13 @@ public class IProgressPageImplementation extends NetObject implements IProgressP
         }
     }
 
+    /**
+     * Sets the value of the .NET property ApplicationName.
+     *
+     * @param ApplicationName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IProgressPage.ApplicationName" target="_top">.NET documentation</a>
+     */
     public void setApplicationName(java.lang.String ApplicationName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +205,13 @@ public class IProgressPageImplementation extends NetObject implements IProgressP
         }
     }
 
+    /**
+     * Gets the value of the .NET property PublisherName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IProgressPage.PublisherName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPublisherName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +226,13 @@ public class IProgressPageImplementation extends NetObject implements IProgressP
         }
     }
 
+    /**
+     * Sets the value of the .NET property PublisherName.
+     *
+     * @param PublisherName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IProgressPage.PublisherName" target="_top">.NET documentation</a>
+     */
     public void setPublisherName(java.lang.String PublisherName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +243,13 @@ public class IProgressPageImplementation extends NetObject implements IProgressP
         }
     }
 
+    /**
+     * Gets the value of the .NET property DeploymentPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IProgressPage.DeploymentPath" target="_top">.NET documentation</a>
+     */
     public Uri getDeploymentPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +265,13 @@ public class IProgressPageImplementation extends NetObject implements IProgressP
         }
     }
 
+    /**
+     * Sets the value of the .NET property DeploymentPath.
+     *
+     * @param DeploymentPath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IProgressPage.DeploymentPath" target="_top">.NET documentation</a>
+     */
     public void setDeploymentPath(Uri DeploymentPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +282,13 @@ public class IProgressPageImplementation extends NetObject implements IProgressP
         }
     }
 
+    /**
+     * Gets the value of the .NET property RefreshCallback.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IProgressPage.RefreshCallback" target="_top">.NET documentation</a>
+     */
     public DispatcherOperationCallback getRefreshCallback() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +303,13 @@ public class IProgressPageImplementation extends NetObject implements IProgressP
         }
     }
 
+    /**
+     * Sets the value of the .NET property RefreshCallback.
+     *
+     * @param RefreshCallback the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IProgressPage.RefreshCallback" target="_top">.NET documentation</a>
+     */
     public void setRefreshCallback(DispatcherOperationCallback RefreshCallback) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +320,13 @@ public class IProgressPageImplementation extends NetObject implements IProgressP
         }
     }
 
+    /**
+     * Gets the value of the .NET property StopCallback.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IProgressPage.StopCallback" target="_top">.NET documentation</a>
+     */
     public DispatcherOperationCallback getStopCallback() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +341,13 @@ public class IProgressPageImplementation extends NetObject implements IProgressP
         }
     }
 
+    /**
+     * Sets the value of the .NET property StopCallback.
+     *
+     * @param StopCallback the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IProgressPage.StopCallback" target="_top">.NET documentation</a>
+     */
     public void setStopCallback(DispatcherOperationCallback StopCallback) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

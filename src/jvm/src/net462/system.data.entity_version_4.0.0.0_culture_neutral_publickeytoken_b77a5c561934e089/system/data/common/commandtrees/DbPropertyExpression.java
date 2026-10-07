@@ -102,7 +102,10 @@ public class DbPropertyExpression extends system.data.common.commandtrees.DbExpr
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DbPropertyExpression(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,13 @@ public class DbPropertyExpression extends system.data.common.commandtrees.DbExpr
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ToKeyValuePair.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbPropertyExpression.ToKeyValuePair" target="_top">.NET documentation</a>
+     */
     public KeyValuePair_2 ToKeyValuePair() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +182,14 @@ public class DbPropertyExpression extends system.data.common.commandtrees.DbExpr
         }
     }
 
+    /**
+     * Invokes the .NET member Accept.
+     *
+     * @param visitor the argument of type {@code DbExpressionVisitor}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbPropertyExpression.Accept" target="_top">.NET documentation</a>
+     */
     public void Accept(DbExpressionVisitor visitor) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +204,13 @@ public class DbPropertyExpression extends system.data.common.commandtrees.DbExpr
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Instance.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbPropertyExpression.Instance" target="_top">.NET documentation</a>
+     */
     public DbExpression getInstance() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +226,13 @@ public class DbPropertyExpression extends system.data.common.commandtrees.DbExpr
         }
     }
 
+    /**
+     * Gets the value of the .NET property Property.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbPropertyExpression.Property" target="_top">.NET documentation</a>
+     */
     public EdmMember getProperty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class CollectionChangeEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CollectionChangeEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class CollectionChangeEventArgs extends system.EventArgs  {
     public CollectionChangeEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param action the argument of type {@code CollectionChangeAction}
+     * @param element the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CollectionChangeEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public CollectionChangeEventArgs(CollectionChangeAction action, NetObject element) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +180,13 @@ public class CollectionChangeEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Action.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CollectionChangeEventArgs.Action" target="_top">.NET documentation</a>
+     */
     public CollectionChangeAction getAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +202,13 @@ public class CollectionChangeEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Element.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CollectionChangeEventArgs.Element" target="_top">.NET documentation</a>
+     */
     public NetObject getElement() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

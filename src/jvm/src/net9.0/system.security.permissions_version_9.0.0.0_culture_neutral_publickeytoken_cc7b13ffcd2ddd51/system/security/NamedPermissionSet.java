@@ -102,7 +102,10 @@ public class NamedPermissionSet extends system.security.PermissionSet  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public NamedPermissionSet(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,13 @@ public class NamedPermissionSet extends system.security.PermissionSet  {
     public NamedPermissionSet() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param permSet the argument of type {@code NamedPermissionSet}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.NamedPermissionSet.-ctor" target="_top">.NET documentation</a>
+     */
     public NamedPermissionSet(NamedPermissionSet permSet) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +172,14 @@ public class NamedPermissionSet extends system.security.PermissionSet  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param state the argument of type {@code PermissionState}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.NamedPermissionSet.-ctor" target="_top">.NET documentation</a>
+     */
     public NamedPermissionSet(java.lang.String name, PermissionState state) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +190,14 @@ public class NamedPermissionSet extends system.security.PermissionSet  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param permSet the argument of type {@code PermissionSet}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.NamedPermissionSet.-ctor" target="_top">.NET documentation</a>
+     */
     public NamedPermissionSet(java.lang.String name, PermissionSet permSet) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +208,13 @@ public class NamedPermissionSet extends system.security.PermissionSet  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.NamedPermissionSet.-ctor" target="_top">.NET documentation</a>
+     */
     public NamedPermissionSet(java.lang.String name) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -197,6 +230,14 @@ public class NamedPermissionSet extends system.security.PermissionSet  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Copy.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.NamedPermissionSet.Copy" target="_top">.NET documentation</a>
+     */
     public NamedPermissionSet Copy(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +253,13 @@ public class NamedPermissionSet extends system.security.PermissionSet  {
         }
     }
 
+    /**
+     * Invokes the .NET member Copy.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.NamedPermissionSet.Copy" target="_top">.NET documentation</a>
+     */
     public PermissionSet Copy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +275,13 @@ public class NamedPermissionSet extends system.security.PermissionSet  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToXml.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.NamedPermissionSet.ToXml" target="_top">.NET documentation</a>
+     */
     public SecurityElement ToXml() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +297,13 @@ public class NamedPermissionSet extends system.security.PermissionSet  {
         }
     }
 
+    /**
+     * Invokes the .NET member FromXml.
+     *
+     * @param et the argument of type {@code SecurityElement}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.NamedPermissionSet.FromXml" target="_top">.NET documentation</a>
+     */
     public void FromXml(SecurityElement et) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +318,13 @@ public class NamedPermissionSet extends system.security.PermissionSet  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Description.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.NamedPermissionSet.Description" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +339,13 @@ public class NamedPermissionSet extends system.security.PermissionSet  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Description.
+     *
+     * @param Description the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.NamedPermissionSet.Description" target="_top">.NET documentation</a>
+     */
     public void setDescription(java.lang.String Description) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +356,13 @@ public class NamedPermissionSet extends system.security.PermissionSet  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.NamedPermissionSet.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +377,13 @@ public class NamedPermissionSet extends system.security.PermissionSet  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.NamedPermissionSet.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

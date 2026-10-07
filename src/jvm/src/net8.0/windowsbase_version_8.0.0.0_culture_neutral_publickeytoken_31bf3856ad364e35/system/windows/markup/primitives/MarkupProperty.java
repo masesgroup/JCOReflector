@@ -103,7 +103,10 @@ public class MarkupProperty extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MarkupProperty(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class MarkupProperty extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsAttached.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Primitives.MarkupProperty.IsAttached" target="_top">.NET documentation</a>
+     */
     public boolean getIsAttached() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +184,13 @@ public class MarkupProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsComposite.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Primitives.MarkupProperty.IsComposite" target="_top">.NET documentation</a>
+     */
     public boolean getIsComposite() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +205,13 @@ public class MarkupProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsConstructorArgument.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Primitives.MarkupProperty.IsConstructorArgument" target="_top">.NET documentation</a>
+     */
     public boolean getIsConstructorArgument() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +226,13 @@ public class MarkupProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsContent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Primitives.MarkupProperty.IsContent" target="_top">.NET documentation</a>
+     */
     public boolean getIsContent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +247,13 @@ public class MarkupProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Primitives.MarkupProperty.IsKey" target="_top">.NET documentation</a>
+     */
     public boolean getIsKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +268,13 @@ public class MarkupProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsValueAsString.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Primitives.MarkupProperty.IsValueAsString" target="_top">.NET documentation</a>
+     */
     public boolean getIsValueAsString() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +289,13 @@ public class MarkupProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeReferences.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Primitives.MarkupProperty.TypeReferences" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 getTypeReferences() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +311,13 @@ public class MarkupProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Items.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Primitives.MarkupProperty.Items" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 getItems() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +333,13 @@ public class MarkupProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Attributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Primitives.MarkupProperty.Attributes" target="_top">.NET documentation</a>
+     */
     public AttributeCollection getAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +355,13 @@ public class MarkupProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyDescriptor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Primitives.MarkupProperty.PropertyDescriptor" target="_top">.NET documentation</a>
+     */
     public PropertyDescriptor getPropertyDescriptor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +377,13 @@ public class MarkupProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Primitives.MarkupProperty.Value" target="_top">.NET documentation</a>
+     */
     public NetObject getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -319,6 +399,13 @@ public class MarkupProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Primitives.MarkupProperty.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -333,6 +420,13 @@ public class MarkupProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StringValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Primitives.MarkupProperty.StringValue" target="_top">.NET documentation</a>
+     */
     public java.lang.String getStringValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -347,6 +441,13 @@ public class MarkupProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Primitives.MarkupProperty.PropertyType" target="_top">.NET documentation</a>
+     */
     public NetType getPropertyType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -362,6 +463,13 @@ public class MarkupProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DependencyProperty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Primitives.MarkupProperty.DependencyProperty" target="_top">.NET documentation</a>
+     */
     public DependencyProperty getDependencyProperty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

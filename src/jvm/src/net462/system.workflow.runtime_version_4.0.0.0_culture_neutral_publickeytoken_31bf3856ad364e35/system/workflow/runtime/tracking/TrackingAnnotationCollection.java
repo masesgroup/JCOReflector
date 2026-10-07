@@ -101,7 +101,10 @@ public class TrackingAnnotationCollection extends system.collections.generic.Lis
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TrackingAnnotationCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class TrackingAnnotationCollection extends system.collections.generic.Lis
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.TrackingAnnotationCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public TrackingAnnotationCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,16 @@ public class TrackingAnnotationCollection extends system.collections.generic.Lis
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param annotations the argument of type {@code IEnumerable_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.TrackingAnnotationCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public TrackingAnnotationCollection(IEnumerable_1 annotations) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file

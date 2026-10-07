@@ -102,7 +102,10 @@ public class DbGroupExpressionBinding extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DbGroupExpressionBinding(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -161,6 +164,13 @@ public class DbGroupExpressionBinding extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Expression.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbGroupExpressionBinding.Expression" target="_top">.NET documentation</a>
+     */
     public DbExpression getExpression() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +186,17 @@ public class DbGroupExpressionBinding extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GroupAggregate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbGroupExpressionBinding.GroupAggregate" target="_top">.NET documentation</a>
+     */
     public DbGroupAggregate getGroupAggregate() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +212,13 @@ public class DbGroupExpressionBinding extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GroupVariable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbGroupExpressionBinding.GroupVariable" target="_top">.NET documentation</a>
+     */
     public DbVariableReferenceExpression getGroupVariable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +234,13 @@ public class DbGroupExpressionBinding extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Variable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbGroupExpressionBinding.Variable" target="_top">.NET documentation</a>
+     */
     public DbVariableReferenceExpression getVariable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +256,13 @@ public class DbGroupExpressionBinding extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GroupVariableType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbGroupExpressionBinding.GroupVariableType" target="_top">.NET documentation</a>
+     */
     public TypeUsage getGroupVariableType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +278,13 @@ public class DbGroupExpressionBinding extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VariableType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbGroupExpressionBinding.VariableType" target="_top">.NET documentation</a>
+     */
     public TypeUsage getVariableType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +300,13 @@ public class DbGroupExpressionBinding extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GroupVariableName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbGroupExpressionBinding.GroupVariableName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getGroupVariableName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +321,13 @@ public class DbGroupExpressionBinding extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VariableName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbGroupExpressionBinding.VariableName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getVariableName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

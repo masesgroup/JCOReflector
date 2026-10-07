@@ -101,7 +101,10 @@ public class IXamlNameResolverImplementation extends NetObject implements IXamlN
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IXamlNameResolverImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,13 @@ public class IXamlNameResolverImplementation extends NetObject implements IXamlN
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetAllNamesAndValuesInScope.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.IXamlNameResolver.GetAllNamesAndValuesInScope" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 GetAllNamesAndValuesInScope() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -158,6 +168,14 @@ public class IXamlNameResolverImplementation extends NetObject implements IXamlN
         }
     }
 
+    /**
+     * Invokes the .NET member GetFixupToken.
+     *
+     * @param names the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.IXamlNameResolver.GetFixupToken" target="_top">.NET documentation</a>
+     */
     public NetObject GetFixupToken(IEnumerable_1 names) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +191,15 @@ public class IXamlNameResolverImplementation extends NetObject implements IXamlN
         }
     }
 
+    /**
+     * Invokes the .NET member GetFixupToken.
+     *
+     * @param names the argument of type {@code IEnumerable_1}
+     * @param canAssignDirectly the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.IXamlNameResolver.GetFixupToken" target="_top">.NET documentation</a>
+     */
     public NetObject GetFixupToken(IEnumerable_1 names, boolean canAssignDirectly) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +215,14 @@ public class IXamlNameResolverImplementation extends NetObject implements IXamlN
         }
     }
 
+    /**
+     * Invokes the .NET member Resolve.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.IXamlNameResolver.Resolve" target="_top">.NET documentation</a>
+     */
     public NetObject Resolve(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +238,15 @@ public class IXamlNameResolverImplementation extends NetObject implements IXamlN
         }
     }
 
+    /**
+     * Invokes the .NET member Resolve.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param isFullyInitialized the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicBoolean>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.IXamlNameResolver.Resolve" target="_top">.NET documentation</a>
+     */
     public NetObject Resolve(java.lang.String name, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isFullyInitialized) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +266,13 @@ public class IXamlNameResolverImplementation extends NetObject implements IXamlN
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsFixupTokenAvailable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.IXamlNameResolver.IsFixupTokenAvailable" target="_top">.NET documentation</a>
+     */
     public boolean getIsFixupTokenAvailable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +292,13 @@ public class IXamlNameResolverImplementation extends NetObject implements IXamlN
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addOnNameScopeInitializationComplete.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addOnNameScopeInitializationComplete(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +309,13 @@ public class IXamlNameResolverImplementation extends NetObject implements IXamlN
         }
     }
 
+    /**
+     * Invokes the .NET member removeOnNameScopeInitializationComplete.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeOnNameScopeInitializationComplete(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

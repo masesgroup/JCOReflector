@@ -101,7 +101,10 @@ public class ObjectAuditRule extends system.security.accesscontrol.AuditRule  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ObjectAuditRule(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class ObjectAuditRule extends system.security.accesscontrol.AuditRule  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property InheritedObjectType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.ObjectAuditRule.InheritedObjectType" target="_top">.NET documentation</a>
+     */
     public Guid getInheritedObjectType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +183,13 @@ public class ObjectAuditRule extends system.security.accesscontrol.AuditRule  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ObjectType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.ObjectAuditRule.ObjectType" target="_top">.NET documentation</a>
+     */
     public Guid getObjectType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +205,13 @@ public class ObjectAuditRule extends system.security.accesscontrol.AuditRule  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ObjectFlags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.ObjectAuditRule.ObjectFlags" target="_top">.NET documentation</a>
+     */
     public ObjectAceFlags getObjectFlags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

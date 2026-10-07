@@ -107,7 +107,10 @@ public class TemplateField extends system.web.ui.webcontrols.DataControlField  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TemplateField(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,12 @@ public class TemplateField extends system.web.ui.webcontrols.DataControlField  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TemplateField.-ctor" target="_top">.NET documentation</a>
+     */
     public TemplateField() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +177,24 @@ public class TemplateField extends system.web.ui.webcontrols.DataControlField  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ExtractValuesFromCell.
+     *
+     * @param dictionary the argument of type {@code IOrderedDictionary}
+     * @param cell the argument of type {@code DataControlFieldCell}
+     * @param rowState the argument of type {@code DataControlRowState}
+     * @param includeReadOnly the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TemplateField.ExtractValuesFromCell" target="_top">.NET documentation</a>
+     */
     public void ExtractValuesFromCell(IOrderedDictionary dictionary, DataControlFieldCell cell, DataControlRowState rowState, boolean includeReadOnly) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +205,28 @@ public class TemplateField extends system.web.ui.webcontrols.DataControlField  {
         }
     }
 
+    /**
+     * Invokes the .NET member InitializeCell.
+     *
+     * @param cell the argument of type {@code DataControlFieldCell}
+     * @param cellType the argument of type {@code DataControlCellType}
+     * @param rowState the argument of type {@code DataControlRowState}
+     * @param rowIndex the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TemplateField.InitializeCell" target="_top">.NET documentation</a>
+     */
     public void InitializeCell(DataControlFieldCell cell, DataControlCellType cellType, DataControlRowState rowState, int rowIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.reflection.AmbiguousMatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +237,24 @@ public class TemplateField extends system.web.ui.webcontrols.DataControlField  {
         }
     }
 
+    /**
+     * Invokes the .NET member ValidateSupportsCallback.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TemplateField.ValidateSupportsCallback" target="_top">.NET documentation</a>
+     */
     public void ValidateSupportsCallback() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +269,22 @@ public class TemplateField extends system.web.ui.webcontrols.DataControlField  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ConvertEmptyStringToNull.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TemplateField.ConvertEmptyStringToNull" target="_top">.NET documentation</a>
+     */
     public boolean getConvertEmptyStringToNull() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +299,21 @@ public class TemplateField extends system.web.ui.webcontrols.DataControlField  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConvertEmptyStringToNull.
+     *
+     * @param ConvertEmptyStringToNull the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TemplateField.ConvertEmptyStringToNull" target="_top">.NET documentation</a>
+     */
     public void setConvertEmptyStringToNull(boolean ConvertEmptyStringToNull) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +324,13 @@ public class TemplateField extends system.web.ui.webcontrols.DataControlField  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AlternatingItemTemplate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TemplateField.AlternatingItemTemplate" target="_top">.NET documentation</a>
+     */
     public ITemplate getAlternatingItemTemplate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +346,13 @@ public class TemplateField extends system.web.ui.webcontrols.DataControlField  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AlternatingItemTemplate.
+     *
+     * @param AlternatingItemTemplate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TemplateField.AlternatingItemTemplate" target="_top">.NET documentation</a>
+     */
     public void setAlternatingItemTemplate(ITemplate AlternatingItemTemplate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +363,13 @@ public class TemplateField extends system.web.ui.webcontrols.DataControlField  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EditItemTemplate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TemplateField.EditItemTemplate" target="_top">.NET documentation</a>
+     */
     public ITemplate getEditItemTemplate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +385,13 @@ public class TemplateField extends system.web.ui.webcontrols.DataControlField  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EditItemTemplate.
+     *
+     * @param EditItemTemplate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TemplateField.EditItemTemplate" target="_top">.NET documentation</a>
+     */
     public void setEditItemTemplate(ITemplate EditItemTemplate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +402,13 @@ public class TemplateField extends system.web.ui.webcontrols.DataControlField  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FooterTemplate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TemplateField.FooterTemplate" target="_top">.NET documentation</a>
+     */
     public ITemplate getFooterTemplate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +424,13 @@ public class TemplateField extends system.web.ui.webcontrols.DataControlField  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FooterTemplate.
+     *
+     * @param FooterTemplate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TemplateField.FooterTemplate" target="_top">.NET documentation</a>
+     */
     public void setFooterTemplate(ITemplate FooterTemplate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +441,13 @@ public class TemplateField extends system.web.ui.webcontrols.DataControlField  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HeaderTemplate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TemplateField.HeaderTemplate" target="_top">.NET documentation</a>
+     */
     public ITemplate getHeaderTemplate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -316,6 +463,13 @@ public class TemplateField extends system.web.ui.webcontrols.DataControlField  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HeaderTemplate.
+     *
+     * @param HeaderTemplate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TemplateField.HeaderTemplate" target="_top">.NET documentation</a>
+     */
     public void setHeaderTemplate(ITemplate HeaderTemplate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -326,6 +480,13 @@ public class TemplateField extends system.web.ui.webcontrols.DataControlField  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InsertItemTemplate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TemplateField.InsertItemTemplate" target="_top">.NET documentation</a>
+     */
     public ITemplate getInsertItemTemplate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -341,6 +502,13 @@ public class TemplateField extends system.web.ui.webcontrols.DataControlField  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InsertItemTemplate.
+     *
+     * @param InsertItemTemplate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TemplateField.InsertItemTemplate" target="_top">.NET documentation</a>
+     */
     public void setInsertItemTemplate(ITemplate InsertItemTemplate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -351,6 +519,13 @@ public class TemplateField extends system.web.ui.webcontrols.DataControlField  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ItemTemplate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TemplateField.ItemTemplate" target="_top">.NET documentation</a>
+     */
     public ITemplate getItemTemplate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -366,6 +541,13 @@ public class TemplateField extends system.web.ui.webcontrols.DataControlField  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ItemTemplate.
+     *
+     * @param ItemTemplate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TemplateField.ItemTemplate" target="_top">.NET documentation</a>
+     */
     public void setItemTemplate(ITemplate ItemTemplate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -376,6 +558,21 @@ public class TemplateField extends system.web.ui.webcontrols.DataControlField  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValidateRequestMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TemplateField.ValidateRequestMode" target="_top">.NET documentation</a>
+     */
     public ValidateRequestMode getValidateRequestMode() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -391,6 +588,21 @@ public class TemplateField extends system.web.ui.webcontrols.DataControlField  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ValidateRequestMode.
+     *
+     * @param ValidateRequestMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TemplateField.ValidateRequestMode" target="_top">.NET documentation</a>
+     */
     public void setValidateRequestMode(ValidateRequestMode ValidateRequestMode) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

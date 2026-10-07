@@ -102,7 +102,10 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FederatedMessageSecurityOverHttp(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.FederatedMessageSecurityOverHttp.-ctor" target="_top">.NET documentation</a>
+     */
     public FederatedMessageSecurityOverHttp() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,13 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ShouldSerializeAlgorithmSuite.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.FederatedMessageSecurityOverHttp.ShouldSerializeAlgorithmSuite" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeAlgorithmSuite() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +193,13 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ShouldSerializeClaimTypeRequirements.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.FederatedMessageSecurityOverHttp.ShouldSerializeClaimTypeRequirements" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeClaimTypeRequirements() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +214,13 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ShouldSerializeEstablishSecurityContext.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.FederatedMessageSecurityOverHttp.ShouldSerializeEstablishSecurityContext" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeEstablishSecurityContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +235,13 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ShouldSerializeIssuedKeyType.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.FederatedMessageSecurityOverHttp.ShouldSerializeIssuedKeyType" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeIssuedKeyType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +256,13 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ShouldSerializeNegotiateServiceCredential.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.FederatedMessageSecurityOverHttp.ShouldSerializeNegotiateServiceCredential" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeNegotiateServiceCredential() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +277,13 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ShouldSerializeTokenRequestParameters.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.FederatedMessageSecurityOverHttp.ShouldSerializeTokenRequestParameters" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeTokenRequestParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +302,13 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EstablishSecurityContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.FederatedMessageSecurityOverHttp.EstablishSecurityContext" target="_top">.NET documentation</a>
+     */
     public boolean getEstablishSecurityContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +323,13 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EstablishSecurityContext.
+     *
+     * @param EstablishSecurityContext the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.FederatedMessageSecurityOverHttp.EstablishSecurityContext" target="_top">.NET documentation</a>
+     */
     public void setEstablishSecurityContext(boolean EstablishSecurityContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +340,13 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NegotiateServiceCredential.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.FederatedMessageSecurityOverHttp.NegotiateServiceCredential" target="_top">.NET documentation</a>
+     */
     public boolean getNegotiateServiceCredential() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +361,13 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NegotiateServiceCredential.
+     *
+     * @param NegotiateServiceCredential the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.FederatedMessageSecurityOverHttp.NegotiateServiceCredential" target="_top">.NET documentation</a>
+     */
     public void setNegotiateServiceCredential(boolean NegotiateServiceCredential) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -299,6 +378,13 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClaimTypeRequirements.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.FederatedMessageSecurityOverHttp.ClaimTypeRequirements" target="_top">.NET documentation</a>
+     */
     public Collection_1 getClaimTypeRequirements() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -314,6 +400,13 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TokenRequestParameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.FederatedMessageSecurityOverHttp.TokenRequestParameters" target="_top">.NET documentation</a>
+     */
     public Collection_1 getTokenRequestParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -329,6 +422,13 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IssuedKeyType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedKeyType" target="_top">.NET documentation</a>
+     */
     public SecurityKeyType getIssuedKeyType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -344,6 +444,24 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IssuedKeyType.
+     *
+     * @param IssuedKeyType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedKeyType" target="_top">.NET documentation</a>
+     */
     public void setIssuedKeyType(SecurityKeyType IssuedKeyType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -354,6 +472,13 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IssuerBinding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerBinding" target="_top">.NET documentation</a>
+     */
     public system.servicemodel.channels.Binding getIssuerBinding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -369,6 +494,13 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IssuerBinding.
+     *
+     * @param IssuerBinding the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerBinding" target="_top">.NET documentation</a>
+     */
     public void setIssuerBinding(system.servicemodel.channels.Binding IssuerBinding) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -379,6 +511,13 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IssuerAddress.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerAddress" target="_top">.NET documentation</a>
+     */
     public EndpointAddress getIssuerAddress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -394,6 +533,13 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IssuerAddress.
+     *
+     * @param IssuerAddress the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerAddress" target="_top">.NET documentation</a>
+     */
     public void setIssuerAddress(EndpointAddress IssuerAddress) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -404,6 +550,13 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IssuerMetadataAddress.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress" target="_top">.NET documentation</a>
+     */
     public EndpointAddress getIssuerMetadataAddress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -419,6 +572,13 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IssuerMetadataAddress.
+     *
+     * @param IssuerMetadataAddress the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress" target="_top">.NET documentation</a>
+     */
     public void setIssuerMetadataAddress(EndpointAddress IssuerMetadataAddress) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -429,6 +589,13 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AlgorithmSuite.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.FederatedMessageSecurityOverHttp.AlgorithmSuite" target="_top">.NET documentation</a>
+     */
     public SecurityAlgorithmSuite getAlgorithmSuite() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -444,6 +611,24 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AlgorithmSuite.
+     *
+     * @param AlgorithmSuite the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.FederatedMessageSecurityOverHttp.AlgorithmSuite" target="_top">.NET documentation</a>
+     */
     public void setAlgorithmSuite(SecurityAlgorithmSuite AlgorithmSuite) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -454,6 +639,13 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IssuedTokenType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getIssuedTokenType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -468,6 +660,13 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IssuedTokenType.
+     *
+     * @param IssuedTokenType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType" target="_top">.NET documentation</a>
+     */
     public void setIssuedTokenType(java.lang.String IssuedTokenType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

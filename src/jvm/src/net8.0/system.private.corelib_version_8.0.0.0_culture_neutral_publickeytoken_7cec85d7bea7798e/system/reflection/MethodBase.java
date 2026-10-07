@@ -110,7 +110,10 @@ public class MethodBase extends system.reflection.MemberInfo  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MethodBase(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -163,6 +166,15 @@ public class MethodBase extends system.reflection.MemberInfo  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Invoke.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @param parameters the argument of type {@code NetObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.MethodBase.Invoke" target="_top">.NET documentation</a>
+     */
     public NetObject Invoke(NetObject obj, NetObject[] parameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +190,18 @@ public class MethodBase extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member Invoke.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @param invokeAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param parameters the argument of type {@code NetObject[]}
+     * @param culture the argument of type {@code CultureInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.MethodBase.Invoke" target="_top">.NET documentation</a>
+     */
     public NetObject Invoke(NetObject obj, BindingFlags invokeAttr, Binder binder, NetObject[] parameters, CultureInfo culture) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +217,21 @@ public class MethodBase extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCurrentMethod.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.MethodBase.GetCurrentMethod" target="_top">.NET documentation</a>
+     */
     public static MethodBase GetCurrentMethod() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -208,6 +247,27 @@ public class MethodBase extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethodFromHandle.
+     *
+     * @param handle the argument of type {@code RuntimeMethodHandle}
+     * @param declaringType the argument of type {@code RuntimeTypeHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.MethodBase.GetMethodFromHandle" target="_top">.NET documentation</a>
+     */
     public static MethodBase GetMethodFromHandle(RuntimeMethodHandle handle, RuntimeTypeHandle declaringType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -223,6 +283,26 @@ public class MethodBase extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethodFromHandle.
+     *
+     * @param handle the argument of type {@code RuntimeMethodHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.MethodBase.GetMethodFromHandle" target="_top">.NET documentation</a>
+     */
     public static MethodBase GetMethodFromHandle(RuntimeMethodHandle handle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -238,6 +318,22 @@ public class MethodBase extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethodBody.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.MethodBase.GetMethodBody" target="_top">.NET documentation</a>
+     */
     public MethodBody GetMethodBody() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +349,13 @@ public class MethodBase extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethodImplementationFlags.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.MethodBase.GetMethodImplementationFlags" target="_top">.NET documentation</a>
+     */
     public MethodImplAttributes GetMethodImplementationFlags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +371,13 @@ public class MethodBase extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetParameters.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.MethodBase.GetParameters" target="_top">.NET documentation</a>
+     */
     public ParameterInfo[] GetParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +399,24 @@ public class MethodBase extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetGenericArguments.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.MethodBase.GetGenericArguments" target="_top">.NET documentation</a>
+     */
     public NetType[] GetGenericArguments() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -314,6 +442,13 @@ public class MethodBase extends system.reflection.MemberInfo  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ContainsGenericParameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.MethodBase.ContainsGenericParameters" target="_top">.NET documentation</a>
+     */
     public boolean getContainsGenericParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -328,6 +463,13 @@ public class MethodBase extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsAbstract.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.MethodBase.IsAbstract" target="_top">.NET documentation</a>
+     */
     public boolean getIsAbstract() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -342,6 +484,13 @@ public class MethodBase extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsAssembly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.MethodBase.IsAssembly" target="_top">.NET documentation</a>
+     */
     public boolean getIsAssembly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -356,6 +505,13 @@ public class MethodBase extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsConstructedGenericMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.MethodBase.IsConstructedGenericMethod" target="_top">.NET documentation</a>
+     */
     public boolean getIsConstructedGenericMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -370,6 +526,13 @@ public class MethodBase extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsConstructor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.MethodBase.IsConstructor" target="_top">.NET documentation</a>
+     */
     public boolean getIsConstructor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -384,6 +547,13 @@ public class MethodBase extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsFamily.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.MethodBase.IsFamily" target="_top">.NET documentation</a>
+     */
     public boolean getIsFamily() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -398,6 +568,13 @@ public class MethodBase extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsFamilyAndAssembly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.MethodBase.IsFamilyAndAssembly" target="_top">.NET documentation</a>
+     */
     public boolean getIsFamilyAndAssembly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -412,6 +589,13 @@ public class MethodBase extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsFamilyOrAssembly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.MethodBase.IsFamilyOrAssembly" target="_top">.NET documentation</a>
+     */
     public boolean getIsFamilyOrAssembly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -426,6 +610,13 @@ public class MethodBase extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsFinal.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.MethodBase.IsFinal" target="_top">.NET documentation</a>
+     */
     public boolean getIsFinal() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -440,6 +631,13 @@ public class MethodBase extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsGenericMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.MethodBase.IsGenericMethod" target="_top">.NET documentation</a>
+     */
     public boolean getIsGenericMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -454,6 +652,13 @@ public class MethodBase extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsGenericMethodDefinition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.MethodBase.IsGenericMethodDefinition" target="_top">.NET documentation</a>
+     */
     public boolean getIsGenericMethodDefinition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -468,6 +673,13 @@ public class MethodBase extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsHideBySig.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.MethodBase.IsHideBySig" target="_top">.NET documentation</a>
+     */
     public boolean getIsHideBySig() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -482,6 +694,13 @@ public class MethodBase extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsPrivate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.MethodBase.IsPrivate" target="_top">.NET documentation</a>
+     */
     public boolean getIsPrivate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -496,6 +715,13 @@ public class MethodBase extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsPublic.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.MethodBase.IsPublic" target="_top">.NET documentation</a>
+     */
     public boolean getIsPublic() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -510,6 +736,23 @@ public class MethodBase extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSecurityCritical.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.MethodBase.IsSecurityCritical" target="_top">.NET documentation</a>
+     */
     public boolean getIsSecurityCritical() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -524,6 +767,23 @@ public class MethodBase extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSecuritySafeCritical.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.MethodBase.IsSecuritySafeCritical" target="_top">.NET documentation</a>
+     */
     public boolean getIsSecuritySafeCritical() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -538,6 +798,23 @@ public class MethodBase extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSecurityTransparent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.MethodBase.IsSecurityTransparent" target="_top">.NET documentation</a>
+     */
     public boolean getIsSecurityTransparent() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -552,6 +829,13 @@ public class MethodBase extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSpecialName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.MethodBase.IsSpecialName" target="_top">.NET documentation</a>
+     */
     public boolean getIsSpecialName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -566,6 +850,13 @@ public class MethodBase extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsStatic.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.MethodBase.IsStatic" target="_top">.NET documentation</a>
+     */
     public boolean getIsStatic() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -580,6 +871,13 @@ public class MethodBase extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsVirtual.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.MethodBase.IsVirtual" target="_top">.NET documentation</a>
+     */
     public boolean getIsVirtual() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -594,6 +892,13 @@ public class MethodBase extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CallingConvention.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.MethodBase.CallingConvention" target="_top">.NET documentation</a>
+     */
     public CallingConventions getCallingConvention() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -609,6 +914,13 @@ public class MethodBase extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Attributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.MethodBase.Attributes" target="_top">.NET documentation</a>
+     */
     public MethodAttributes getAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -624,6 +936,13 @@ public class MethodBase extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MethodImplementationFlags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.MethodBase.MethodImplementationFlags" target="_top">.NET documentation</a>
+     */
     public MethodImplAttributes getMethodImplementationFlags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -639,6 +958,13 @@ public class MethodBase extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MethodHandle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.MethodBase.MethodHandle" target="_top">.NET documentation</a>
+     */
     public RuntimeMethodHandle getMethodHandle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

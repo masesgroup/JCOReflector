@@ -106,7 +106,10 @@ public class SecurityTokenServiceConfiguration extends system.identitymodel.conf
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SecurityTokenServiceConfiguration(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,28 @@ public class SecurityTokenServiceConfiguration extends system.identitymodel.conf
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.-ctor" target="_top">.NET documentation</a>
+     */
     public SecurityTokenServiceConfiguration() throws Throwable, system.ArgumentException, system.OverflowException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.configuration.ConfigurationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NotImplementedException, system.MissingMethodException, system.TypeLoadException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +188,29 @@ public class SecurityTokenServiceConfiguration extends system.identitymodel.conf
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param loadConfig the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.-ctor" target="_top">.NET documentation</a>
+     */
     public SecurityTokenServiceConfiguration(boolean loadConfig) throws Throwable, system.ArgumentException, system.OverflowException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ObjectDisposedException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.configuration.ConfigurationException, system.MissingMethodException {
         try {
             // add reference to assemblyName.dll file
@@ -173,6 +221,29 @@ public class SecurityTokenServiceConfiguration extends system.identitymodel.conf
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param issuerName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.-ctor" target="_top">.NET documentation</a>
+     */
     public SecurityTokenServiceConfiguration(java.lang.String issuerName) throws Throwable, system.ArgumentException, system.OverflowException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.configuration.ConfigurationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NotImplementedException, system.MissingMethodException, system.TypeLoadException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -183,6 +254,30 @@ public class SecurityTokenServiceConfiguration extends system.identitymodel.conf
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param issuerName the argument of type {@code java.lang.String}
+     * @param loadConfig the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.-ctor" target="_top">.NET documentation</a>
+     */
     public SecurityTokenServiceConfiguration(java.lang.String issuerName, boolean loadConfig) throws Throwable, system.ArgumentException, system.OverflowException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ObjectDisposedException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.configuration.ConfigurationException, system.MissingMethodException {
         try {
             // add reference to assemblyName.dll file
@@ -193,6 +288,32 @@ public class SecurityTokenServiceConfiguration extends system.identitymodel.conf
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param issuerName the argument of type {@code java.lang.String}
+     * @param signingCredentials the argument of type {@code SigningCredentials}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.-ctor" target="_top">.NET documentation</a>
+     */
     public SecurityTokenServiceConfiguration(java.lang.String issuerName, SigningCredentials signingCredentials) throws Throwable, system.ArgumentException, system.OverflowException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.UriFormatException, system.TypeLoadException {
         try {
             // add reference to assemblyName.dll file
@@ -203,6 +324,34 @@ public class SecurityTokenServiceConfiguration extends system.identitymodel.conf
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param issuerName the argument of type {@code java.lang.String}
+     * @param signingCredentials the argument of type {@code SigningCredentials}
+     * @param loadConfig the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.-ctor" target="_top">.NET documentation</a>
+     */
     public SecurityTokenServiceConfiguration(java.lang.String issuerName, SigningCredentials signingCredentials, boolean loadConfig) throws Throwable, system.ArgumentException, system.OverflowException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException, system.UriFormatException {
         try {
             // add reference to assemblyName.dll file
@@ -213,6 +362,34 @@ public class SecurityTokenServiceConfiguration extends system.identitymodel.conf
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param issuerName the argument of type {@code java.lang.String}
+     * @param signingCredentials the argument of type {@code SigningCredentials}
+     * @param serviceName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.-ctor" target="_top">.NET documentation</a>
+     */
     public SecurityTokenServiceConfiguration(java.lang.String issuerName, SigningCredentials signingCredentials, java.lang.String serviceName) throws Throwable, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.UriFormatException, system.TypeLoadException {
         try {
             // add reference to assemblyName.dll file
@@ -227,6 +404,30 @@ public class SecurityTokenServiceConfiguration extends system.identitymodel.conf
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateSecurityTokenService.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.CreateSecurityTokenService" target="_top">.NET documentation</a>
+     */
     public SecurityTokenService CreateSecurityTokenService() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +447,13 @@ public class SecurityTokenServiceConfiguration extends system.identitymodel.conf
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DisableWsdl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.DisableWsdl" target="_top">.NET documentation</a>
+     */
     public boolean getDisableWsdl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +468,13 @@ public class SecurityTokenServiceConfiguration extends system.identitymodel.conf
         }
     }
 
+    /**
+     * Sets the value of the .NET property DisableWsdl.
+     *
+     * @param DisableWsdl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.DisableWsdl" target="_top">.NET documentation</a>
+     */
     public void setDisableWsdl(boolean DisableWsdl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +485,13 @@ public class SecurityTokenServiceConfiguration extends system.identitymodel.conf
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultMaxSymmetricKeySizeInBits.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.DefaultMaxSymmetricKeySizeInBits" target="_top">.NET documentation</a>
+     */
     public int getDefaultMaxSymmetricKeySizeInBits() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +532,30 @@ public class SecurityTokenServiceConfiguration extends system.identitymodel.conf
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultMaxSymmetricKeySizeInBits.
+     *
+     * @param DefaultMaxSymmetricKeySizeInBits the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.DefaultMaxSymmetricKeySizeInBits" target="_top">.NET documentation</a>
+     */
     public void setDefaultMaxSymmetricKeySizeInBits(int DefaultMaxSymmetricKeySizeInBits) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +566,13 @@ public class SecurityTokenServiceConfiguration extends system.identitymodel.conf
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultSymmetricKeySizeInBits.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.DefaultSymmetricKeySizeInBits" target="_top">.NET documentation</a>
+     */
     public int getDefaultSymmetricKeySizeInBits() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -360,6 +613,30 @@ public class SecurityTokenServiceConfiguration extends system.identitymodel.conf
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultSymmetricKeySizeInBits.
+     *
+     * @param DefaultSymmetricKeySizeInBits the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.DefaultSymmetricKeySizeInBits" target="_top">.NET documentation</a>
+     */
     public void setDefaultSymmetricKeySizeInBits(int DefaultSymmetricKeySizeInBits) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -370,6 +647,13 @@ public class SecurityTokenServiceConfiguration extends system.identitymodel.conf
         }
     }
 
+    /**
+     * Gets the value of the .NET property WSTrust13RequestSerializer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.WSTrust13RequestSerializer" target="_top">.NET documentation</a>
+     */
     public WSTrust13RequestSerializer getWSTrust13RequestSerializer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -385,6 +669,24 @@ public class SecurityTokenServiceConfiguration extends system.identitymodel.conf
         }
     }
 
+    /**
+     * Sets the value of the .NET property WSTrust13RequestSerializer.
+     *
+     * @param WSTrust13RequestSerializer the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.WSTrust13RequestSerializer" target="_top">.NET documentation</a>
+     */
     public void setWSTrust13RequestSerializer(WSTrust13RequestSerializer WSTrust13RequestSerializer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -395,6 +697,13 @@ public class SecurityTokenServiceConfiguration extends system.identitymodel.conf
         }
     }
 
+    /**
+     * Gets the value of the .NET property WSTrust13ResponseSerializer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.WSTrust13ResponseSerializer" target="_top">.NET documentation</a>
+     */
     public WSTrust13ResponseSerializer getWSTrust13ResponseSerializer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -410,6 +719,24 @@ public class SecurityTokenServiceConfiguration extends system.identitymodel.conf
         }
     }
 
+    /**
+     * Sets the value of the .NET property WSTrust13ResponseSerializer.
+     *
+     * @param WSTrust13ResponseSerializer the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.WSTrust13ResponseSerializer" target="_top">.NET documentation</a>
+     */
     public void setWSTrust13ResponseSerializer(WSTrust13ResponseSerializer WSTrust13ResponseSerializer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -420,6 +747,13 @@ public class SecurityTokenServiceConfiguration extends system.identitymodel.conf
         }
     }
 
+    /**
+     * Gets the value of the .NET property WSTrustFeb2005RequestSerializer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.WSTrustFeb2005RequestSerializer" target="_top">.NET documentation</a>
+     */
     public WSTrustFeb2005RequestSerializer getWSTrustFeb2005RequestSerializer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -435,6 +769,24 @@ public class SecurityTokenServiceConfiguration extends system.identitymodel.conf
         }
     }
 
+    /**
+     * Sets the value of the .NET property WSTrustFeb2005RequestSerializer.
+     *
+     * @param WSTrustFeb2005RequestSerializer the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.WSTrustFeb2005RequestSerializer" target="_top">.NET documentation</a>
+     */
     public void setWSTrustFeb2005RequestSerializer(WSTrustFeb2005RequestSerializer WSTrustFeb2005RequestSerializer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -445,6 +797,13 @@ public class SecurityTokenServiceConfiguration extends system.identitymodel.conf
         }
     }
 
+    /**
+     * Gets the value of the .NET property WSTrustFeb2005ResponseSerializer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.WSTrustFeb2005ResponseSerializer" target="_top">.NET documentation</a>
+     */
     public WSTrustFeb2005ResponseSerializer getWSTrustFeb2005ResponseSerializer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -460,6 +819,24 @@ public class SecurityTokenServiceConfiguration extends system.identitymodel.conf
         }
     }
 
+    /**
+     * Sets the value of the .NET property WSTrustFeb2005ResponseSerializer.
+     *
+     * @param WSTrustFeb2005ResponseSerializer the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.WSTrustFeb2005ResponseSerializer" target="_top">.NET documentation</a>
+     */
     public void setWSTrustFeb2005ResponseSerializer(WSTrustFeb2005ResponseSerializer WSTrustFeb2005ResponseSerializer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -470,6 +847,13 @@ public class SecurityTokenServiceConfiguration extends system.identitymodel.conf
         }
     }
 
+    /**
+     * Gets the value of the .NET property SigningCredentials.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.SigningCredentials" target="_top">.NET documentation</a>
+     */
     public SigningCredentials getSigningCredentials() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -485,6 +869,13 @@ public class SecurityTokenServiceConfiguration extends system.identitymodel.conf
         }
     }
 
+    /**
+     * Sets the value of the .NET property SigningCredentials.
+     *
+     * @param SigningCredentials the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.SigningCredentials" target="_top">.NET documentation</a>
+     */
     public void setSigningCredentials(SigningCredentials SigningCredentials) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -495,6 +886,13 @@ public class SecurityTokenServiceConfiguration extends system.identitymodel.conf
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultTokenType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.DefaultTokenType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDefaultTokenType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -509,6 +907,30 @@ public class SecurityTokenServiceConfiguration extends system.identitymodel.conf
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultTokenType.
+     *
+     * @param DefaultTokenType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.DefaultTokenType" target="_top">.NET documentation</a>
+     */
     public void setDefaultTokenType(java.lang.String DefaultTokenType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -519,6 +941,13 @@ public class SecurityTokenServiceConfiguration extends system.identitymodel.conf
         }
     }
 
+    /**
+     * Gets the value of the .NET property TokenIssuerName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.TokenIssuerName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTokenIssuerName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -533,6 +962,24 @@ public class SecurityTokenServiceConfiguration extends system.identitymodel.conf
         }
     }
 
+    /**
+     * Sets the value of the .NET property TokenIssuerName.
+     *
+     * @param TokenIssuerName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.TokenIssuerName" target="_top">.NET documentation</a>
+     */
     public void setTokenIssuerName(java.lang.String TokenIssuerName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -543,6 +990,13 @@ public class SecurityTokenServiceConfiguration extends system.identitymodel.conf
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultTokenLifetime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.DefaultTokenLifetime" target="_top">.NET documentation</a>
+     */
     public TimeSpan getDefaultTokenLifetime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -558,6 +1012,13 @@ public class SecurityTokenServiceConfiguration extends system.identitymodel.conf
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultTokenLifetime.
+     *
+     * @param DefaultTokenLifetime the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.DefaultTokenLifetime" target="_top">.NET documentation</a>
+     */
     public void setDefaultTokenLifetime(TimeSpan DefaultTokenLifetime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -568,6 +1029,13 @@ public class SecurityTokenServiceConfiguration extends system.identitymodel.conf
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaximumTokenLifetime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.MaximumTokenLifetime" target="_top">.NET documentation</a>
+     */
     public TimeSpan getMaximumTokenLifetime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -583,6 +1051,30 @@ public class SecurityTokenServiceConfiguration extends system.identitymodel.conf
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaximumTokenLifetime.
+     *
+     * @param MaximumTokenLifetime the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.MaximumTokenLifetime" target="_top">.NET documentation</a>
+     */
     public void setMaximumTokenLifetime(TimeSpan MaximumTokenLifetime) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -593,6 +1085,13 @@ public class SecurityTokenServiceConfiguration extends system.identitymodel.conf
         }
     }
 
+    /**
+     * Gets the value of the .NET property SecurityTokenService.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.SecurityTokenService" target="_top">.NET documentation</a>
+     */
     public NetType getSecurityTokenService() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -608,6 +1107,24 @@ public class SecurityTokenServiceConfiguration extends system.identitymodel.conf
         }
     }
 
+    /**
+     * Sets the value of the .NET property SecurityTokenService.
+     *
+     * @param SecurityTokenService the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.SecurityTokenService" target="_top">.NET documentation</a>
+     */
     public void setSecurityTokenService(NetType SecurityTokenService) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

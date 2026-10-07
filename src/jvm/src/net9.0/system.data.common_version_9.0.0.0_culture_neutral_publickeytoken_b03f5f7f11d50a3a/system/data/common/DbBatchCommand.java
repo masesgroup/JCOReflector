@@ -101,7 +101,10 @@ public class DbBatchCommand extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DbBatchCommand(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,22 @@ public class DbBatchCommand extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateParameter.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbBatchCommand.CreateParameter" target="_top">.NET documentation</a>
+     */
     public DbParameter CreateParameter() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +192,13 @@ public class DbBatchCommand extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CanCreateParameter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbBatchCommand.CanCreateParameter" target="_top">.NET documentation</a>
+     */
     public boolean getCanCreateParameter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +213,13 @@ public class DbBatchCommand extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RecordsAffected.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbBatchCommand.RecordsAffected" target="_top">.NET documentation</a>
+     */
     public int getRecordsAffected() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +260,13 @@ public class DbBatchCommand extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CommandType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbBatchCommand.CommandType" target="_top">.NET documentation</a>
+     */
     public CommandType getCommandType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +282,13 @@ public class DbBatchCommand extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CommandType.
+     *
+     * @param CommandType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbBatchCommand.CommandType" target="_top">.NET documentation</a>
+     */
     public void setCommandType(CommandType CommandType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +299,13 @@ public class DbBatchCommand extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Parameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbBatchCommand.Parameters" target="_top">.NET documentation</a>
+     */
     public DbParameterCollection getParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +321,13 @@ public class DbBatchCommand extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CommandText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbBatchCommand.CommandText" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCommandText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +342,13 @@ public class DbBatchCommand extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CommandText.
+     *
+     * @param CommandText the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbBatchCommand.CommandText" target="_top">.NET documentation</a>
+     */
     public void setCommandText(java.lang.String CommandText) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

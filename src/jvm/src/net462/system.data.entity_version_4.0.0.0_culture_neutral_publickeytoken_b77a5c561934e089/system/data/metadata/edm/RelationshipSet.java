@@ -101,7 +101,10 @@ public class RelationshipSet extends system.data.metadata.edm.EntitySetBase  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RelationshipSet(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class RelationshipSet extends system.data.metadata.edm.EntitySetBase  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ElementTypeNewRelationshipSet.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.RelationshipSet.ElementTypeNewRelationshipSet" target="_top">.NET documentation</a>
+     */
     public RelationshipType getElementTypeNewRelationshipSet() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

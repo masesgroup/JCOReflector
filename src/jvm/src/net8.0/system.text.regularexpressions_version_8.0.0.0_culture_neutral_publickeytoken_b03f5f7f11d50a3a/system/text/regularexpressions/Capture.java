@@ -98,7 +98,10 @@ public class Capture extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Capture(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,13 @@ public class Capture extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Index.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.RegularExpressions.Capture.Index" target="_top">.NET documentation</a>
+     */
     public int getIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +207,13 @@ public class Capture extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Index.
+     *
+     * @param Index the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.RegularExpressions.Capture.Index" target="_top">.NET documentation</a>
+     */
     public void setIndex(int Index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +224,13 @@ public class Capture extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Length.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.RegularExpressions.Capture.Length" target="_top">.NET documentation</a>
+     */
     public int getLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +271,13 @@ public class Capture extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Length.
+     *
+     * @param Length the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.RegularExpressions.Capture.Length" target="_top">.NET documentation</a>
+     */
     public void setLength(int Length) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +288,20 @@ public class Capture extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.RegularExpressions.Capture.Value" target="_top">.NET documentation</a>
+     */
     public java.lang.String getValue() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

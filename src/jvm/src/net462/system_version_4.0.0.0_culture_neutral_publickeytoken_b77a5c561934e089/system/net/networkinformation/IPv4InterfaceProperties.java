@@ -98,7 +98,10 @@ public class IPv4InterfaceProperties extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IPv4InterfaceProperties(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,13 @@ public class IPv4InterfaceProperties extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsAutomaticPrivateAddressingActive.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPv4InterfaceProperties.IsAutomaticPrivateAddressingActive" target="_top">.NET documentation</a>
+     */
     public boolean getIsAutomaticPrivateAddressingActive() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +179,13 @@ public class IPv4InterfaceProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsAutomaticPrivateAddressingEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPv4InterfaceProperties.IsAutomaticPrivateAddressingEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getIsAutomaticPrivateAddressingEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +200,13 @@ public class IPv4InterfaceProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsDhcpEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPv4InterfaceProperties.IsDhcpEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getIsDhcpEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +221,13 @@ public class IPv4InterfaceProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsForwardingEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPv4InterfaceProperties.IsForwardingEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getIsForwardingEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +242,13 @@ public class IPv4InterfaceProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UsesWins.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPv4InterfaceProperties.UsesWins" target="_top">.NET documentation</a>
+     */
     public boolean getUsesWins() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +263,13 @@ public class IPv4InterfaceProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Index.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPv4InterfaceProperties.Index" target="_top">.NET documentation</a>
+     */
     public int getIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +310,13 @@ public class IPv4InterfaceProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Mtu.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPv4InterfaceProperties.Mtu" target="_top">.NET documentation</a>
+     */
     public int getMtu() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

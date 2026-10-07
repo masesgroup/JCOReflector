@@ -101,7 +101,10 @@ public class DesignerDataTable extends system.componentmodel.design.data.Designe
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DesignerDataTable(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class DesignerDataTable extends system.componentmodel.design.data.Designe
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Relationships.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Data.DesignerDataTable.Relationships" target="_top">.NET documentation</a>
+     */
     public ICollection getRelationships() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

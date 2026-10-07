@@ -99,7 +99,10 @@ public class TypeDescriptionProviderAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TypeDescriptionProviderAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class TypeDescriptionProviderAttribute extends system.Attribute  {
     public TypeDescriptionProviderAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param typeName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.TypeDescriptionProviderAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public TypeDescriptionProviderAttribute(java.lang.String typeName) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +170,14 @@ public class TypeDescriptionProviderAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param type the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.TypeDescriptionProviderAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public TypeDescriptionProviderAttribute(NetType type) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +197,13 @@ public class TypeDescriptionProviderAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property TypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.TypeDescriptionProviderAttribute.TypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class SelectionRange extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SelectionRange(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class SelectionRange extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SelectionRange.-ctor" target="_top">.NET documentation</a>
+     */
     public SelectionRange() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +166,14 @@ public class SelectionRange extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param lower the argument of type {@code DateTime}
+     * @param upper the argument of type {@code DateTime}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SelectionRange.-ctor" target="_top">.NET documentation</a>
+     */
     public SelectionRange(DateTime lower, DateTime upper) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +184,13 @@ public class SelectionRange extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param range the argument of type {@code SelectionRange}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SelectionRange.-ctor" target="_top">.NET documentation</a>
+     */
     public SelectionRange(SelectionRange range) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -185,6 +209,13 @@ public class SelectionRange extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property End.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SelectionRange.End" target="_top">.NET documentation</a>
+     */
     public DateTime getEnd() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +231,13 @@ public class SelectionRange extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property End.
+     *
+     * @param End the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SelectionRange.End" target="_top">.NET documentation</a>
+     */
     public void setEnd(DateTime End) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +248,13 @@ public class SelectionRange extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Start.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SelectionRange.Start" target="_top">.NET documentation</a>
+     */
     public DateTime getStart() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +270,13 @@ public class SelectionRange extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Start.
+     *
+     * @param Start the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SelectionRange.Start" target="_top">.NET documentation</a>
+     */
     public void setStart(DateTime Start) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

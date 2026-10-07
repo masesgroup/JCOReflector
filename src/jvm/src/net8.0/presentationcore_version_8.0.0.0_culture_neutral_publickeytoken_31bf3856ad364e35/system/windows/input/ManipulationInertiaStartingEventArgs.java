@@ -109,7 +109,10 @@ public class ManipulationInertiaStartingEventArgs extends system.windows.input.I
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ManipulationInertiaStartingEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -164,6 +167,13 @@ public class ManipulationInertiaStartingEventArgs extends system.windows.input.I
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Cancel.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationInertiaStartingEventArgs.Cancel" target="_top">.NET documentation</a>
+     */
     public boolean Cancel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +188,22 @@ public class ManipulationInertiaStartingEventArgs extends system.windows.input.I
         }
     }
 
+    /**
+     * Invokes the .NET member SetInertiaParameter.
+     *
+     * @param parameter the argument of type {@code InertiaParameters2D}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationInertiaStartingEventArgs.SetInertiaParameter" target="_top">.NET documentation</a>
+     */
     public void SetInertiaParameter(InertiaParameters2D parameter) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +218,18 @@ public class ManipulationInertiaStartingEventArgs extends system.windows.input.I
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Manipulators.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationInertiaStartingEventArgs.Manipulators" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 getManipulators() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +245,13 @@ public class ManipulationInertiaStartingEventArgs extends system.windows.input.I
         }
     }
 
+    /**
+     * Gets the value of the .NET property ManipulationContainer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationInertiaStartingEventArgs.ManipulationContainer" target="_top">.NET documentation</a>
+     */
     public IInputElement getManipulationContainer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +267,13 @@ public class ManipulationInertiaStartingEventArgs extends system.windows.input.I
         }
     }
 
+    /**
+     * Sets the value of the .NET property ManipulationContainer.
+     *
+     * @param ManipulationContainer the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationInertiaStartingEventArgs.ManipulationContainer" target="_top">.NET documentation</a>
+     */
     public void setManipulationContainer(IInputElement ManipulationContainer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +284,13 @@ public class ManipulationInertiaStartingEventArgs extends system.windows.input.I
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExpansionBehavior.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationInertiaStartingEventArgs.ExpansionBehavior" target="_top">.NET documentation</a>
+     */
     public InertiaExpansionBehavior getExpansionBehavior() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +306,13 @@ public class ManipulationInertiaStartingEventArgs extends system.windows.input.I
         }
     }
 
+    /**
+     * Sets the value of the .NET property ExpansionBehavior.
+     *
+     * @param ExpansionBehavior the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationInertiaStartingEventArgs.ExpansionBehavior" target="_top">.NET documentation</a>
+     */
     public void setExpansionBehavior(InertiaExpansionBehavior ExpansionBehavior) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +323,13 @@ public class ManipulationInertiaStartingEventArgs extends system.windows.input.I
         }
     }
 
+    /**
+     * Gets the value of the .NET property RotationBehavior.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationInertiaStartingEventArgs.RotationBehavior" target="_top">.NET documentation</a>
+     */
     public InertiaRotationBehavior getRotationBehavior() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +345,13 @@ public class ManipulationInertiaStartingEventArgs extends system.windows.input.I
         }
     }
 
+    /**
+     * Sets the value of the .NET property RotationBehavior.
+     *
+     * @param RotationBehavior the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationInertiaStartingEventArgs.RotationBehavior" target="_top">.NET documentation</a>
+     */
     public void setRotationBehavior(InertiaRotationBehavior RotationBehavior) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +362,13 @@ public class ManipulationInertiaStartingEventArgs extends system.windows.input.I
         }
     }
 
+    /**
+     * Gets the value of the .NET property TranslationBehavior.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationInertiaStartingEventArgs.TranslationBehavior" target="_top">.NET documentation</a>
+     */
     public InertiaTranslationBehavior getTranslationBehavior() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -297,6 +384,13 @@ public class ManipulationInertiaStartingEventArgs extends system.windows.input.I
         }
     }
 
+    /**
+     * Sets the value of the .NET property TranslationBehavior.
+     *
+     * @param TranslationBehavior the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationInertiaStartingEventArgs.TranslationBehavior" target="_top">.NET documentation</a>
+     */
     public void setTranslationBehavior(InertiaTranslationBehavior TranslationBehavior) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -307,6 +401,13 @@ public class ManipulationInertiaStartingEventArgs extends system.windows.input.I
         }
     }
 
+    /**
+     * Gets the value of the .NET property InitialVelocities.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationInertiaStartingEventArgs.InitialVelocities" target="_top">.NET documentation</a>
+     */
     public ManipulationVelocities getInitialVelocities() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -322,6 +423,13 @@ public class ManipulationInertiaStartingEventArgs extends system.windows.input.I
         }
     }
 
+    /**
+     * Sets the value of the .NET property InitialVelocities.
+     *
+     * @param InitialVelocities the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationInertiaStartingEventArgs.InitialVelocities" target="_top">.NET documentation</a>
+     */
     public void setInitialVelocities(ManipulationVelocities InitialVelocities) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -332,6 +440,13 @@ public class ManipulationInertiaStartingEventArgs extends system.windows.input.I
         }
     }
 
+    /**
+     * Gets the value of the .NET property ManipulationOrigin.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationInertiaStartingEventArgs.ManipulationOrigin" target="_top">.NET documentation</a>
+     */
     public Point getManipulationOrigin() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -347,6 +462,13 @@ public class ManipulationInertiaStartingEventArgs extends system.windows.input.I
         }
     }
 
+    /**
+     * Sets the value of the .NET property ManipulationOrigin.
+     *
+     * @param ManipulationOrigin the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationInertiaStartingEventArgs.ManipulationOrigin" target="_top">.NET documentation</a>
+     */
     public void setManipulationOrigin(Point ManipulationOrigin) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

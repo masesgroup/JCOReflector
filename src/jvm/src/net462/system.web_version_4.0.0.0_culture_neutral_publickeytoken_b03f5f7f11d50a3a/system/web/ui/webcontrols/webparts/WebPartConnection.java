@@ -103,7 +103,10 @@ public class WebPartConnection extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WebPartConnection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,12 @@ public class WebPartConnection extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartConnection.-ctor" target="_top">.NET documentation</a>
+     */
     public WebPartConnection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +177,13 @@ public class WebPartConnection extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsActive.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartConnection.IsActive" target="_top">.NET documentation</a>
+     */
     public boolean getIsActive() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +198,13 @@ public class WebPartConnection extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsShared.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartConnection.IsShared" target="_top">.NET documentation</a>
+     */
     public boolean getIsShared() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +219,13 @@ public class WebPartConnection extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsStatic.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartConnection.IsStatic" target="_top">.NET documentation</a>
+     */
     public boolean getIsStatic() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +240,13 @@ public class WebPartConnection extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConsumerConnectionPointID.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerConnectionPointID" target="_top">.NET documentation</a>
+     */
     public java.lang.String getConsumerConnectionPointID() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +261,13 @@ public class WebPartConnection extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConsumerConnectionPointID.
+     *
+     * @param ConsumerConnectionPointID the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerConnectionPointID" target="_top">.NET documentation</a>
+     */
     public void setConsumerConnectionPointID(java.lang.String ConsumerConnectionPointID) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +278,13 @@ public class WebPartConnection extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConsumerID.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerID" target="_top">.NET documentation</a>
+     */
     public java.lang.String getConsumerID() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +299,13 @@ public class WebPartConnection extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConsumerID.
+     *
+     * @param ConsumerID the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerID" target="_top">.NET documentation</a>
+     */
     public void setConsumerID(java.lang.String ConsumerID) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +316,13 @@ public class WebPartConnection extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ID.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartConnection.ID" target="_top">.NET documentation</a>
+     */
     public java.lang.String getID() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +337,13 @@ public class WebPartConnection extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ID.
+     *
+     * @param ID the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartConnection.ID" target="_top">.NET documentation</a>
+     */
     public void setID(java.lang.String ID) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +354,13 @@ public class WebPartConnection extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProviderConnectionPointID.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderConnectionPointID" target="_top">.NET documentation</a>
+     */
     public java.lang.String getProviderConnectionPointID() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -296,6 +375,13 @@ public class WebPartConnection extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProviderConnectionPointID.
+     *
+     * @param ProviderConnectionPointID the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderConnectionPointID" target="_top">.NET documentation</a>
+     */
     public void setProviderConnectionPointID(java.lang.String ProviderConnectionPointID) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +392,13 @@ public class WebPartConnection extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProviderID.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderID" target="_top">.NET documentation</a>
+     */
     public java.lang.String getProviderID() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +413,13 @@ public class WebPartConnection extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProviderID.
+     *
+     * @param ProviderID the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderID" target="_top">.NET documentation</a>
+     */
     public void setProviderID(java.lang.String ProviderID) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -330,6 +430,25 @@ public class WebPartConnection extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConsumerConnectionPoint.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerConnectionPoint" target="_top">.NET documentation</a>
+     */
     public ConsumerConnectionPoint getConsumerConnectionPoint() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -345,6 +464,25 @@ public class WebPartConnection extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProviderConnectionPoint.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderConnectionPoint" target="_top">.NET documentation</a>
+     */
     public ProviderConnectionPoint getProviderConnectionPoint() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -360,6 +498,25 @@ public class WebPartConnection extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Consumer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartConnection.Consumer" target="_top">.NET documentation</a>
+     */
     public WebPart getConsumer() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -375,6 +532,25 @@ public class WebPartConnection extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Provider.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartConnection.Provider" target="_top">.NET documentation</a>
+     */
     public WebPart getProvider() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -390,6 +566,13 @@ public class WebPartConnection extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Transformer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartConnection.Transformer" target="_top">.NET documentation</a>
+     */
     public WebPartTransformer getTransformer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -405,6 +588,13 @@ public class WebPartConnection extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Transformers.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartConnection.Transformers" target="_top">.NET documentation</a>
+     */
     public WebPartTransformerCollection getTransformers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -102,7 +102,10 @@ public class SubordinateTransaction extends system.transactions.Transaction  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SubordinateTransaction(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,25 @@ public class SubordinateTransaction extends system.transactions.Transaction  {
     public SubordinateTransaction() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param isoLevel the argument of type {@code IsolationLevel}
+     * @param superior the argument of type {@code ISimpleTransactionSuperior}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Transactions.SubordinateTransaction.-ctor" target="_top">.NET documentation</a>
+     */
     public SubordinateTransaction(IsolationLevel isoLevel, ISimpleTransactionSuperior superior) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.FormatException, system.threading.AbandonedMutexException {
         try {
             // add reference to assemblyName.dll file

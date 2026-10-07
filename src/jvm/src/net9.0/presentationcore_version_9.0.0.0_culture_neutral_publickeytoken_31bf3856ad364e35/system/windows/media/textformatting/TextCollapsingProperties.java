@@ -100,7 +100,10 @@ public class TextCollapsingProperties extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TextCollapsingProperties(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,13 @@ public class TextCollapsingProperties extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Width.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextCollapsingProperties.Width" target="_top">.NET documentation</a>
+     */
     public double getWidth() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +207,13 @@ public class TextCollapsingProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Style.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextCollapsingProperties.Style" target="_top">.NET documentation</a>
+     */
     public TextCollapsingStyle getStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +229,13 @@ public class TextCollapsingProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Symbol.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextCollapsingProperties.Symbol" target="_top">.NET documentation</a>
+     */
     public TextRun getSymbol() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

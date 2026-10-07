@@ -103,7 +103,10 @@ public class ITypeCompImplementation extends NetObject implements ITypeComp {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ITypeCompImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,16 @@ public class ITypeCompImplementation extends NetObject implements ITypeComp {
 
     // Methods section
     
+    /**
+     * Invokes the .NET member BindType.
+     *
+     * @param szName the argument of type {@code java.lang.String}
+     * @param lHashVal the argument of type {@code int}
+     * @param ppTInfo the argument of type {@code JCORefOut<ITypeInfo>}
+     * @param ppTComp the argument of type {@code JCORefOut<ITypeComp>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.ITypeComp.BindType" target="_top">.NET documentation</a>
+     */
     public void BindType(java.lang.String szName, int lHashVal, JCORefOut<ITypeInfo> ppTInfo, JCORefOut<ITypeComp> ppTComp) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

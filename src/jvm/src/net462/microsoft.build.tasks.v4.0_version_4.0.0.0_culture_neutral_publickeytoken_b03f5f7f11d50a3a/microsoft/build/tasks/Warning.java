@@ -99,7 +99,10 @@ public class Warning extends microsoft.build.tasks.TaskExtension  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Warning(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,13 @@ public class Warning extends microsoft.build.tasks.TaskExtension  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Warning.-ctor" target="_top">.NET documentation</a>
+     */
     public Warning() throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +170,18 @@ public class Warning extends microsoft.build.tasks.TaskExtension  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Execute.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Warning.Execute" target="_top">.NET documentation</a>
+     */
     public boolean Execute() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +200,13 @@ public class Warning extends microsoft.build.tasks.TaskExtension  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Code.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Warning.Code" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +221,13 @@ public class Warning extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Code.
+     *
+     * @param Code the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Warning.Code" target="_top">.NET documentation</a>
+     */
     public void setCode(java.lang.String Code) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +238,13 @@ public class Warning extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property File.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Warning.File" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +259,13 @@ public class Warning extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property File.
+     *
+     * @param File the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Warning.File" target="_top">.NET documentation</a>
+     */
     public void setFile(java.lang.String File) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +276,13 @@ public class Warning extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HelpKeyword.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Warning.HelpKeyword" target="_top">.NET documentation</a>
+     */
     public java.lang.String getHelpKeyword() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +297,13 @@ public class Warning extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HelpKeyword.
+     *
+     * @param HelpKeyword the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Warning.HelpKeyword" target="_top">.NET documentation</a>
+     */
     public void setHelpKeyword(java.lang.String HelpKeyword) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +314,13 @@ public class Warning extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Text.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Warning.Text" target="_top">.NET documentation</a>
+     */
     public java.lang.String getText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +335,13 @@ public class Warning extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Text.
+     *
+     * @param Text the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Warning.Text" target="_top">.NET documentation</a>
+     */
     public void setText(java.lang.String Text) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

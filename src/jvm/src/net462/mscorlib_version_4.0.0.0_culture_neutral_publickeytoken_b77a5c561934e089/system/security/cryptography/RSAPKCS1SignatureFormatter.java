@@ -100,7 +100,10 @@ public class RSAPKCS1SignatureFormatter extends system.security.cryptography.Asy
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RSAPKCS1SignatureFormatter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class RSAPKCS1SignatureFormatter extends system.security.cryptography.Asy
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSAPKCS1SignatureFormatter.-ctor" target="_top">.NET documentation</a>
+     */
     public RSAPKCS1SignatureFormatter() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +166,14 @@ public class RSAPKCS1SignatureFormatter extends system.security.cryptography.Asy
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param key the argument of type {@code AsymmetricAlgorithm}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSAPKCS1SignatureFormatter.-ctor" target="_top">.NET documentation</a>
+     */
     public RSAPKCS1SignatureFormatter(AsymmetricAlgorithm key) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +188,31 @@ public class RSAPKCS1SignatureFormatter extends system.security.cryptography.Asy
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateSignature.
+     *
+     * @param rgbHash the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicUnexpectedOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.security.accesscontrol.PrivilegeNotHeldException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSAPKCS1SignatureFormatter.CreateSignature" target="_top">.NET documentation</a>
+     */
     public byte[] CreateSignature(byte[] rgbHash) throws Throwable, system.ArgumentNullException, system.security.cryptography.CryptographicUnexpectedOperationException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.RankException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +236,31 @@ public class RSAPKCS1SignatureFormatter extends system.security.cryptography.Asy
         }
     }
 
+    /**
+     * Invokes the .NET member CreateSignature.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicUnexpectedOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.security.accesscontrol.PrivilegeNotHeldException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSAPKCS1SignatureFormatter.CreateSignature" target="_top">.NET documentation</a>
+     */
     public byte[] CreateSignature(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.security.cryptography.CryptographicUnexpectedOperationException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.RankException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +284,32 @@ public class RSAPKCS1SignatureFormatter extends system.security.cryptography.Asy
         }
     }
 
+    /**
+     * Invokes the .NET member SetHashAlgorithm.
+     *
+     * @param strName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSAPKCS1SignatureFormatter.SetHashAlgorithm" target="_top">.NET documentation</a>
+     */
     public void SetHashAlgorithm(java.lang.String strName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +320,14 @@ public class RSAPKCS1SignatureFormatter extends system.security.cryptography.Asy
         }
     }
 
+    /**
+     * Invokes the .NET member SetKey.
+     *
+     * @param key the argument of type {@code AsymmetricAlgorithm}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSAPKCS1SignatureFormatter.SetKey" target="_top">.NET documentation</a>
+     */
     public void SetKey(AsymmetricAlgorithm key) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

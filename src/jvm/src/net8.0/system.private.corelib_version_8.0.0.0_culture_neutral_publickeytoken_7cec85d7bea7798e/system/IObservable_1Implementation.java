@@ -102,7 +102,10 @@ public class IObservable_1Implementation<T extends IJCOBridgeReflected> extends 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IObservable_1Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,14 @@ public class IObservable_1Implementation<T extends IJCOBridgeReflected> extends 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Subscribe.
+     *
+     * @param observer the argument of type {@code IObserver_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IObservable-1.Subscribe" target="_top">.NET documentation</a>
+     */
     public IDisposable Subscribe(IObserver_1 observer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

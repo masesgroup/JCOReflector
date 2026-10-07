@@ -102,7 +102,10 @@ public class UCOMIEnumMonikerImplementation extends NetObject implements UCOMIEn
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UCOMIEnumMonikerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,16 @@ public class UCOMIEnumMonikerImplementation extends NetObject implements UCOMIEn
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Next.
+     *
+     * @param celt the argument of type {@code int}
+     * @param rgelt the argument of type {@code JCORefOut<UCOMIMoniker[]>}
+     * @param pceltFetched the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIEnumMoniker.Next" target="_top">.NET documentation</a>
+     */
     public int Next(int celt, JCORefOut<UCOMIMoniker[]> rgelt, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pceltFetched) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +197,13 @@ public class UCOMIEnumMonikerImplementation extends NetObject implements UCOMIEn
         }
     }
 
+    /**
+     * Invokes the .NET member Reset.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIEnumMoniker.Reset" target="_top">.NET documentation</a>
+     */
     public int Reset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +244,14 @@ public class UCOMIEnumMonikerImplementation extends NetObject implements UCOMIEn
         }
     }
 
+    /**
+     * Invokes the .NET member Skip.
+     *
+     * @param celt the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIEnumMoniker.Skip" target="_top">.NET documentation</a>
+     */
     public int Skip(int celt) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +292,13 @@ public class UCOMIEnumMonikerImplementation extends NetObject implements UCOMIEn
         }
     }
 
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @param ppenum the argument of type {@code JCORefOut<UCOMIEnumMoniker>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIEnumMoniker.Clone" target="_top">.NET documentation</a>
+     */
     public void Clone(JCORefOut<UCOMIEnumMoniker> ppenum) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

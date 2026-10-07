@@ -100,7 +100,10 @@ public class PageMediaSize extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PageMediaSize(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class PageMediaSize extends NetObject  {
     public PageMediaSize() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param width the argument of type {@code double}
+     * @param height the argument of type {@code double}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PageMediaSize.-ctor" target="_top">.NET documentation</a>
+     */
     public PageMediaSize(double width, double height) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +171,15 @@ public class PageMediaSize extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param mediaSizeName the argument of type {@code PageMediaSizeName}
+     * @param width the argument of type {@code double}
+     * @param height the argument of type {@code double}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PageMediaSize.-ctor" target="_top">.NET documentation</a>
+     */
     public PageMediaSize(PageMediaSizeName mediaSizeName, double width, double height) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +190,13 @@ public class PageMediaSize extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param mediaSizeName the argument of type {@code PageMediaSizeName}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PageMediaSize.-ctor" target="_top">.NET documentation</a>
+     */
     public PageMediaSize(PageMediaSizeName mediaSizeName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -189,6 +216,13 @@ public class PageMediaSize extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Height.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PageMediaSize.Height" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getHeight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +238,13 @@ public class PageMediaSize extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Width.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PageMediaSize.Width" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getWidth() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +260,13 @@ public class PageMediaSize extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PageMediaSizeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PageMediaSize.PageMediaSizeName" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getPageMediaSizeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

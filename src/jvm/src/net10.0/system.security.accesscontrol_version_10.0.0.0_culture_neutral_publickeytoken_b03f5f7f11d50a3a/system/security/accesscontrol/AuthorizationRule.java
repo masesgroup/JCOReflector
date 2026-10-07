@@ -101,7 +101,10 @@ public class AuthorizationRule extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AuthorizationRule(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class AuthorizationRule extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsInherited.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.AuthorizationRule.IsInherited" target="_top">.NET documentation</a>
+     */
     public boolean getIsInherited() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +182,13 @@ public class AuthorizationRule extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InheritanceFlags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.AuthorizationRule.InheritanceFlags" target="_top">.NET documentation</a>
+     */
     public InheritanceFlags getInheritanceFlags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +204,13 @@ public class AuthorizationRule extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropagationFlags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.AuthorizationRule.PropagationFlags" target="_top">.NET documentation</a>
+     */
     public PropagationFlags getPropagationFlags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +226,13 @@ public class AuthorizationRule extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IdentityReference.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.AuthorizationRule.IdentityReference" target="_top">.NET documentation</a>
+     */
     public IdentityReference getIdentityReference() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class PickBranch extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PickBranch(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class PickBranch extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.PickBranch.-ctor" target="_top">.NET documentation</a>
+     */
     public PickBranch() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class PickBranch extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Action.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.PickBranch.Action" target="_top">.NET documentation</a>
+     */
     public Activity getAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +196,13 @@ public class PickBranch extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Action.
+     *
+     * @param Action the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.PickBranch.Action" target="_top">.NET documentation</a>
+     */
     public void setAction(Activity Action) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +213,13 @@ public class PickBranch extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Trigger.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.PickBranch.Trigger" target="_top">.NET documentation</a>
+     */
     public Activity getTrigger() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +235,13 @@ public class PickBranch extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Trigger.
+     *
+     * @param Trigger the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.PickBranch.Trigger" target="_top">.NET documentation</a>
+     */
     public void setTrigger(Activity Trigger) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +252,17 @@ public class PickBranch extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Variables.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.PickBranch.Variables" target="_top">.NET documentation</a>
+     */
     public Collection_1 getVariables() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +278,13 @@ public class PickBranch extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DisplayName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.PickBranch.DisplayName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDisplayName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +299,13 @@ public class PickBranch extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DisplayName.
+     *
+     * @param DisplayName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.PickBranch.DisplayName" target="_top">.NET documentation</a>
+     */
     public void setDisplayName(java.lang.String DisplayName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class ViewStateService extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ViewStateService(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,15 @@ public class ViewStateService extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member RemoveViewState.
+     *
+     * @param modelItem the argument of type {@code ModelItem}
+     * @param key the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.ViewStateService.RemoveViewState" target="_top">.NET documentation</a>
+     */
     public boolean RemoveViewState(ModelItem modelItem, java.lang.String key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +180,14 @@ public class ViewStateService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RetrieveAllViewState.
+     *
+     * @param modelItem the argument of type {@code ModelItem}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.ViewStateService.RetrieveAllViewState" target="_top">.NET documentation</a>
+     */
     public Dictionary_2 RetrieveAllViewState(ModelItem modelItem) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +203,15 @@ public class ViewStateService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RetrieveViewState.
+     *
+     * @param modelItem the argument of type {@code ModelItem}
+     * @param key the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.ViewStateService.RetrieveViewState" target="_top">.NET documentation</a>
+     */
     public NetObject RetrieveViewState(ModelItem modelItem, java.lang.String key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +227,15 @@ public class ViewStateService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member StoreViewState.
+     *
+     * @param modelItem the argument of type {@code ModelItem}
+     * @param key the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.ViewStateService.StoreViewState" target="_top">.NET documentation</a>
+     */
     public void StoreViewState(ModelItem modelItem, java.lang.String key, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +246,15 @@ public class ViewStateService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member StoreViewStateWithUndo.
+     *
+     * @param modelItem the argument of type {@code ModelItem}
+     * @param key the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.ViewStateService.StoreViewStateWithUndo" target="_top">.NET documentation</a>
+     */
     public void StoreViewStateWithUndo(ModelItem modelItem, java.lang.String key, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +274,13 @@ public class ViewStateService extends NetObject  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addUndoableViewStateChanged.
+     *
+     * @param handler the argument of type {@code ViewStateChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addUndoableViewStateChanged(ViewStateChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +291,13 @@ public class ViewStateService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeUndoableViewStateChanged.
+     *
+     * @param handler the argument of type {@code ViewStateChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeUndoableViewStateChanged(ViewStateChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +308,13 @@ public class ViewStateService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addViewStateChanged.
+     *
+     * @param handler the argument of type {@code ViewStateChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addViewStateChanged(ViewStateChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +325,13 @@ public class ViewStateService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeViewStateChanged.
+     *
+     * @param handler the argument of type {@code ViewStateChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeViewStateChanged(ViewStateChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class CodeMemberField extends system.codedom.CodeTypeMember  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodeMemberField(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class CodeMemberField extends system.codedom.CodeTypeMember  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMemberField.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeMemberField() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,14 @@ public class CodeMemberField extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param type the argument of type {@code CodeTypeReference}
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMemberField.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeMemberField(CodeTypeReference type, java.lang.String name) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +185,22 @@ public class CodeMemberField extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param type the argument of type {@code java.lang.String}
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMemberField.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeMemberField(java.lang.String type, java.lang.String name) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +211,21 @@ public class CodeMemberField extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMemberField.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeMemberField(NetType type, java.lang.String name) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -196,6 +244,13 @@ public class CodeMemberField extends system.codedom.CodeTypeMember  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property InitExpression.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMemberField.InitExpression" target="_top">.NET documentation</a>
+     */
     public CodeExpression getInitExpression() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +266,13 @@ public class CodeMemberField extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InitExpression.
+     *
+     * @param InitExpression the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMemberField.InitExpression" target="_top">.NET documentation</a>
+     */
     public void setInitExpression(CodeExpression InitExpression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +283,21 @@ public class CodeMemberField extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Type.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMemberField.Type" target="_top">.NET documentation</a>
+     */
     public CodeTypeReference getType() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +313,13 @@ public class CodeMemberField extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Type.
+     *
+     * @param Type the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMemberField.Type" target="_top">.NET documentation</a>
+     */
     public void setType(CodeTypeReference Type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

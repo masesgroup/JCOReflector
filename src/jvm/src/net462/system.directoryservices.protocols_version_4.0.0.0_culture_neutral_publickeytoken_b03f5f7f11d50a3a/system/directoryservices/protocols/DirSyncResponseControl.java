@@ -99,7 +99,10 @@ public class DirSyncResponseControl extends system.directoryservices.protocols.D
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DirSyncResponseControl(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class DirSyncResponseControl extends system.directoryservices.protocols.D
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MoreData.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.DirSyncResponseControl.MoreData" target="_top">.NET documentation</a>
+     */
     public boolean getMoreData() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +182,13 @@ public class DirSyncResponseControl extends system.directoryservices.protocols.D
         }
     }
 
+    /**
+     * Gets the value of the .NET property Cookie.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.DirSyncResponseControl.Cookie" target="_top">.NET documentation</a>
+     */
     public byte[] getCookie() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +212,13 @@ public class DirSyncResponseControl extends system.directoryservices.protocols.D
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResultSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.DirSyncResponseControl.ResultSize" target="_top">.NET documentation</a>
+     */
     public int getResultSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

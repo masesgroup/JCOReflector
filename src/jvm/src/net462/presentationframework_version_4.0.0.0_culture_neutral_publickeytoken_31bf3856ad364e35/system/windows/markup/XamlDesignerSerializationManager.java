@@ -101,7 +101,10 @@ public class XamlDesignerSerializationManager extends system.windows.markup.Serv
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XamlDesignerSerializationManager(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,15 @@ public class XamlDesignerSerializationManager extends system.windows.markup.Serv
     public XamlDesignerSerializationManager() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param xmlWriter the argument of type {@code XmlWriter}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlDesignerSerializationManager.-ctor" target="_top">.NET documentation</a>
+     */
     public XamlDesignerSerializationManager(XmlWriter xmlWriter) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +182,13 @@ public class XamlDesignerSerializationManager extends system.windows.markup.Serv
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property XamlWriterMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlDesignerSerializationManager.XamlWriterMode" target="_top">.NET documentation</a>
+     */
     public XamlWriterMode getXamlWriterMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +204,28 @@ public class XamlDesignerSerializationManager extends system.windows.markup.Serv
         }
     }
 
+    /**
+     * Sets the value of the .NET property XamlWriterMode.
+     *
+     * @param XamlWriterMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlDesignerSerializationManager.XamlWriterMode" target="_top">.NET documentation</a>
+     */
     public void setXamlWriterMode(XamlWriterMode XamlWriterMode) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

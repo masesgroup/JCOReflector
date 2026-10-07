@@ -101,7 +101,10 @@ public class DispatcherOperation_1<TResult extends IJCOBridgeReflected> extends 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DispatcherOperation_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,13 @@ public class DispatcherOperation_1<TResult extends IJCOBridgeReflected> extends 
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetAwaiterNewDispatcherOperation_1.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Threading.DispatcherOperation-1.GetAwaiterNewDispatcherOperation_1" target="_top">.NET documentation</a>
+     */
     public TaskAwaiter_1 GetAwaiterNewDispatcherOperation_1() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +185,13 @@ public class DispatcherOperation_1<TResult extends IJCOBridgeReflected> extends 
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property TaskNewDispatcherOperation_1.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Threading.DispatcherOperation-1.TaskNewDispatcherOperation_1" target="_top">.NET documentation</a>
+     */
     public Task_1 getTaskNewDispatcherOperation_1() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +207,27 @@ public class DispatcherOperation_1<TResult extends IJCOBridgeReflected> extends 
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResultNewDispatcherOperation_1.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.threading.tasks.TaskCanceledException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Threading.DispatcherOperation-1.ResultNewDispatcherOperation_1" target="_top">.NET documentation</a>
+     */
     public TResult getResultNewDispatcherOperation_1() throws Throwable, system.NotSupportedException, system.ArgumentException, system.OverflowException, system.InvalidOperationException, system.ArgumentNullException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.NullReferenceException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

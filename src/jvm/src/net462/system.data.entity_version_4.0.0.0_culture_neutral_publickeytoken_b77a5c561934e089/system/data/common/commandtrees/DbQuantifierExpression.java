@@ -101,7 +101,10 @@ public class DbQuantifierExpression extends system.data.common.commandtrees.DbEx
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DbQuantifierExpression(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,14 @@ public class DbQuantifierExpression extends system.data.common.commandtrees.DbEx
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Accept.
+     *
+     * @param visitor the argument of type {@code DbExpressionVisitor}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbQuantifierExpression.Accept" target="_top">.NET documentation</a>
+     */
     public void Accept(DbExpressionVisitor visitor) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +181,13 @@ public class DbQuantifierExpression extends system.data.common.commandtrees.DbEx
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Predicate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbQuantifierExpression.Predicate" target="_top">.NET documentation</a>
+     */
     public DbExpression getPredicate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +203,13 @@ public class DbQuantifierExpression extends system.data.common.commandtrees.DbEx
         }
     }
 
+    /**
+     * Gets the value of the .NET property Input.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbQuantifierExpression.Input" target="_top">.NET documentation</a>
+     */
     public DbExpressionBinding getInput() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

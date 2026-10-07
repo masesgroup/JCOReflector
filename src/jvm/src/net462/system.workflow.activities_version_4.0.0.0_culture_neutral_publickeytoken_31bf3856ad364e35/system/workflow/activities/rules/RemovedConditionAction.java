@@ -100,7 +100,10 @@ public class RemovedConditionAction extends system.workflow.activities.rules.Rul
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RemovedConditionAction(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class RemovedConditionAction extends system.workflow.activities.rules.Rul
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.RemovedConditionAction.-ctor" target="_top">.NET documentation</a>
+     */
     public RemovedConditionAction() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +166,14 @@ public class RemovedConditionAction extends system.workflow.activities.rules.Rul
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param removedConditionDefinition the argument of type {@code RuleCondition}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.RemovedConditionAction.-ctor" target="_top">.NET documentation</a>
+     */
     public RemovedConditionAction(RuleCondition removedConditionDefinition) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +192,13 @@ public class RemovedConditionAction extends system.workflow.activities.rules.Rul
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ConditionDefinition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.RemovedConditionAction.ConditionDefinition" target="_top">.NET documentation</a>
+     */
     public RuleCondition getConditionDefinition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +214,14 @@ public class RemovedConditionAction extends system.workflow.activities.rules.Rul
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConditionDefinition.
+     *
+     * @param ConditionDefinition the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.RemovedConditionAction.ConditionDefinition" target="_top">.NET documentation</a>
+     */
     public void setConditionDefinition(RuleCondition ConditionDefinition) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

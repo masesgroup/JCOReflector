@@ -100,7 +100,10 @@ public class LinkedListNode_1<T extends IJCOBridgeReflected> extends NetObject  
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public LinkedListNode_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class LinkedListNode_1<T extends IJCOBridgeReflected> extends NetObject  
     public LinkedListNode_1() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code T}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.LinkedListNode-1.-ctor" target="_top">.NET documentation</a>
+     */
     public LinkedListNode_1(T value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +181,13 @@ public class LinkedListNode_1<T extends IJCOBridgeReflected> extends NetObject  
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property List.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.LinkedListNode-1.List" target="_top">.NET documentation</a>
+     */
     public LinkedList_1 getList() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +203,13 @@ public class LinkedListNode_1<T extends IJCOBridgeReflected> extends NetObject  
         }
     }
 
+    /**
+     * Gets the value of the .NET property Next.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.LinkedListNode-1.Next" target="_top">.NET documentation</a>
+     */
     public LinkedListNode_1 getNext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +225,13 @@ public class LinkedListNode_1<T extends IJCOBridgeReflected> extends NetObject  
         }
     }
 
+    /**
+     * Gets the value of the .NET property Previous.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.LinkedListNode-1.Previous" target="_top">.NET documentation</a>
+     */
     public LinkedListNode_1 getPrevious() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +247,13 @@ public class LinkedListNode_1<T extends IJCOBridgeReflected> extends NetObject  
         }
     }
 
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.LinkedListNode-1.Value" target="_top">.NET documentation</a>
+     */
     public T getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +268,13 @@ public class LinkedListNode_1<T extends IJCOBridgeReflected> extends NetObject  
         }
     }
 
+    /**
+     * Sets the value of the .NET property Value.
+     *
+     * @param Value the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.LinkedListNode-1.Value" target="_top">.NET documentation</a>
+     */
     public void setValue(T Value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +285,13 @@ public class LinkedListNode_1<T extends IJCOBridgeReflected> extends NetObject  
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValueRef.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.LinkedListNode-1.ValueRef" target="_top">.NET documentation</a>
+     */
     public T getValueRef() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

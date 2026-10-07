@@ -98,7 +98,10 @@ public class IcmpV4Statistics extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IcmpV4Statistics(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,13 @@ public class IcmpV4Statistics extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AddressMaskRepliesReceived.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IcmpV4Statistics.AddressMaskRepliesReceived" target="_top">.NET documentation</a>
+     */
     public long getAddressMaskRepliesReceived() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +205,13 @@ public class IcmpV4Statistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AddressMaskRepliesSent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IcmpV4Statistics.AddressMaskRepliesSent" target="_top">.NET documentation</a>
+     */
     public long getAddressMaskRepliesSent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +252,13 @@ public class IcmpV4Statistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AddressMaskRequestsReceived.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IcmpV4Statistics.AddressMaskRequestsReceived" target="_top">.NET documentation</a>
+     */
     public long getAddressMaskRequestsReceived() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +299,13 @@ public class IcmpV4Statistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AddressMaskRequestsSent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IcmpV4Statistics.AddressMaskRequestsSent" target="_top">.NET documentation</a>
+     */
     public long getAddressMaskRequestsSent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -315,6 +346,13 @@ public class IcmpV4Statistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DestinationUnreachableMessagesReceived.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IcmpV4Statistics.DestinationUnreachableMessagesReceived" target="_top">.NET documentation</a>
+     */
     public long getDestinationUnreachableMessagesReceived() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -355,6 +393,13 @@ public class IcmpV4Statistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DestinationUnreachableMessagesSent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IcmpV4Statistics.DestinationUnreachableMessagesSent" target="_top">.NET documentation</a>
+     */
     public long getDestinationUnreachableMessagesSent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -395,6 +440,13 @@ public class IcmpV4Statistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EchoRepliesReceived.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IcmpV4Statistics.EchoRepliesReceived" target="_top">.NET documentation</a>
+     */
     public long getEchoRepliesReceived() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -435,6 +487,13 @@ public class IcmpV4Statistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EchoRepliesSent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IcmpV4Statistics.EchoRepliesSent" target="_top">.NET documentation</a>
+     */
     public long getEchoRepliesSent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -475,6 +534,13 @@ public class IcmpV4Statistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EchoRequestsReceived.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IcmpV4Statistics.EchoRequestsReceived" target="_top">.NET documentation</a>
+     */
     public long getEchoRequestsReceived() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -515,6 +581,13 @@ public class IcmpV4Statistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EchoRequestsSent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IcmpV4Statistics.EchoRequestsSent" target="_top">.NET documentation</a>
+     */
     public long getEchoRequestsSent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -555,6 +628,13 @@ public class IcmpV4Statistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ErrorsReceived.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IcmpV4Statistics.ErrorsReceived" target="_top">.NET documentation</a>
+     */
     public long getErrorsReceived() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -595,6 +675,13 @@ public class IcmpV4Statistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ErrorsSent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IcmpV4Statistics.ErrorsSent" target="_top">.NET documentation</a>
+     */
     public long getErrorsSent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -635,6 +722,13 @@ public class IcmpV4Statistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MessagesReceived.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IcmpV4Statistics.MessagesReceived" target="_top">.NET documentation</a>
+     */
     public long getMessagesReceived() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -675,6 +769,13 @@ public class IcmpV4Statistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MessagesSent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IcmpV4Statistics.MessagesSent" target="_top">.NET documentation</a>
+     */
     public long getMessagesSent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -715,6 +816,13 @@ public class IcmpV4Statistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ParameterProblemsReceived.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IcmpV4Statistics.ParameterProblemsReceived" target="_top">.NET documentation</a>
+     */
     public long getParameterProblemsReceived() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -755,6 +863,13 @@ public class IcmpV4Statistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ParameterProblemsSent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IcmpV4Statistics.ParameterProblemsSent" target="_top">.NET documentation</a>
+     */
     public long getParameterProblemsSent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -795,6 +910,13 @@ public class IcmpV4Statistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RedirectsReceived.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IcmpV4Statistics.RedirectsReceived" target="_top">.NET documentation</a>
+     */
     public long getRedirectsReceived() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -835,6 +957,13 @@ public class IcmpV4Statistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RedirectsSent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IcmpV4Statistics.RedirectsSent" target="_top">.NET documentation</a>
+     */
     public long getRedirectsSent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -875,6 +1004,13 @@ public class IcmpV4Statistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SourceQuenchesReceived.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IcmpV4Statistics.SourceQuenchesReceived" target="_top">.NET documentation</a>
+     */
     public long getSourceQuenchesReceived() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -915,6 +1051,13 @@ public class IcmpV4Statistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SourceQuenchesSent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IcmpV4Statistics.SourceQuenchesSent" target="_top">.NET documentation</a>
+     */
     public long getSourceQuenchesSent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -955,6 +1098,13 @@ public class IcmpV4Statistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TimeExceededMessagesReceived.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IcmpV4Statistics.TimeExceededMessagesReceived" target="_top">.NET documentation</a>
+     */
     public long getTimeExceededMessagesReceived() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -995,6 +1145,13 @@ public class IcmpV4Statistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TimeExceededMessagesSent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IcmpV4Statistics.TimeExceededMessagesSent" target="_top">.NET documentation</a>
+     */
     public long getTimeExceededMessagesSent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1035,6 +1192,13 @@ public class IcmpV4Statistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TimestampRepliesReceived.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IcmpV4Statistics.TimestampRepliesReceived" target="_top">.NET documentation</a>
+     */
     public long getTimestampRepliesReceived() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1075,6 +1239,13 @@ public class IcmpV4Statistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TimestampRepliesSent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IcmpV4Statistics.TimestampRepliesSent" target="_top">.NET documentation</a>
+     */
     public long getTimestampRepliesSent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1115,6 +1286,13 @@ public class IcmpV4Statistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TimestampRequestsReceived.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IcmpV4Statistics.TimestampRequestsReceived" target="_top">.NET documentation</a>
+     */
     public long getTimestampRequestsReceived() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1155,6 +1333,13 @@ public class IcmpV4Statistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TimestampRequestsSent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IcmpV4Statistics.TimestampRequestsSent" target="_top">.NET documentation</a>
+     */
     public long getTimestampRequestsSent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

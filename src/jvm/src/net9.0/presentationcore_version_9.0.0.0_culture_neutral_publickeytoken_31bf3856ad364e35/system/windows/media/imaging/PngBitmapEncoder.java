@@ -100,7 +100,10 @@ public class PngBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PngBitmapEncoder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,20 @@ public class PngBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.PngBitmapEncoder.-ctor" target="_top">.NET documentation</a>
+     */
     public PngBitmapEncoder() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +182,13 @@ public class PngBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Interlace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.PngBitmapEncoder.Interlace" target="_top">.NET documentation</a>
+     */
     public PngInterlaceOption getInterlace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +204,13 @@ public class PngBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
 
+    /**
+     * Sets the value of the .NET property Interlace.
+     *
+     * @param Interlace the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.PngBitmapEncoder.Interlace" target="_top">.NET documentation</a>
+     */
     public void setInterlace(PngInterlaceOption Interlace) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

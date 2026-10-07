@@ -106,7 +106,10 @@ public class Rfc3161TimestampRequest extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Rfc3161TimestampRequest(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -161,6 +164,27 @@ public class Rfc3161TimestampRequest extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member TryDecode.
+     *
+     * @param encodedBytes the argument of type {@code ReadOnlyMemory_1}
+     * @param request the argument of type {@code JCORefOut<Rfc3161TimestampRequest>}
+     * @param bytesConsumed the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.formats.asn1.AsnContentException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.Rfc3161TimestampRequest.TryDecode" target="_top">.NET documentation</a>
+     */
     public static boolean TryDecode(ReadOnlyMemory_1 encodedBytes, JCORefOut<Rfc3161TimestampRequest> request, JCORefOut<java.util.concurrent.atomic.AtomicInteger> bytesConsumed) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -175,6 +199,14 @@ public class Rfc3161TimestampRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Encode.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.Rfc3161TimestampRequest.Encode" target="_top">.NET documentation</a>
+     */
     public byte[] Encode() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +230,13 @@ public class Rfc3161TimestampRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetNonce.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.Rfc3161TimestampRequest.GetNonce" target="_top">.NET documentation</a>
+     */
     public Nullable_1 GetNonce() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +252,13 @@ public class Rfc3161TimestampRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMessageHash.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.Rfc3161TimestampRequest.GetMessageHash" target="_top">.NET documentation</a>
+     */
     public ReadOnlyMemory_1 GetMessageHash() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +274,32 @@ public class Rfc3161TimestampRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateFromHash.
+     *
+     * @param hash the argument of type {@code ReadOnlyMemory_1}
+     * @param hashAlgorithm the argument of type {@code HashAlgorithmName}
+     * @param requestedPolicyId the argument of type {@code Oid}
+     * @param nonce the argument of type {@code Nullable_1}
+     * @param requestSignerCertificates the argument of type {@code boolean}
+     * @param extensions the argument of type {@code X509ExtensionCollection}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.formats.asn1.AsnContentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.Rfc3161TimestampRequest.CreateFromHash" target="_top">.NET documentation</a>
+     */
     public static Rfc3161TimestampRequest CreateFromHash(ReadOnlyMemory_1 hash, HashAlgorithmName hashAlgorithm, Oid requestedPolicyId, Nullable_1 nonce, boolean requestSignerCertificates, X509ExtensionCollection extensions) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.OverflowException, system.formats.asn1.AsnContentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -243,6 +315,32 @@ public class Rfc3161TimestampRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateFromHash.
+     *
+     * @param hash the argument of type {@code ReadOnlyMemory_1}
+     * @param hashAlgorithmId the argument of type {@code Oid}
+     * @param requestedPolicyId the argument of type {@code Oid}
+     * @param nonce the argument of type {@code Nullable_1}
+     * @param requestSignerCertificates the argument of type {@code boolean}
+     * @param extensions the argument of type {@code X509ExtensionCollection}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.formats.asn1.AsnContentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.Rfc3161TimestampRequest.CreateFromHash" target="_top">.NET documentation</a>
+     */
     public static Rfc3161TimestampRequest CreateFromHash(ReadOnlyMemory_1 hash, Oid hashAlgorithmId, Oid requestedPolicyId, Nullable_1 nonce, boolean requestSignerCertificates, X509ExtensionCollection extensions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException, system.security.cryptography.CryptographicException, system.formats.asn1.AsnContentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -258,6 +356,33 @@ public class Rfc3161TimestampRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateFromSignerInfo.
+     *
+     * @param signerInfo the argument of type {@code SignerInfo}
+     * @param hashAlgorithm the argument of type {@code HashAlgorithmName}
+     * @param requestedPolicyId the argument of type {@code Oid}
+     * @param nonce the argument of type {@code Nullable_1}
+     * @param requestSignerCertificates the argument of type {@code boolean}
+     * @param extensions the argument of type {@code X509ExtensionCollection}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.formats.asn1.AsnContentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.Rfc3161TimestampRequest.CreateFromSignerInfo" target="_top">.NET documentation</a>
+     */
     public static Rfc3161TimestampRequest CreateFromSignerInfo(SignerInfo signerInfo, HashAlgorithmName hashAlgorithm, Oid requestedPolicyId, Nullable_1 nonce, boolean requestSignerCertificates, X509ExtensionCollection extensions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -273,6 +398,27 @@ public class Rfc3161TimestampRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ProcessResponse.
+     *
+     * @param responseBytes the argument of type {@code ReadOnlyMemory_1}
+     * @param bytesConsumed the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.formats.asn1.AsnContentException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.Rfc3161TimestampRequest.ProcessResponse" target="_top">.NET documentation</a>
+     */
     public Rfc3161TimestampToken ProcessResponse(ReadOnlyMemory_1 responseBytes, JCORefOut<java.util.concurrent.atomic.AtomicInteger> bytesConsumed) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +434,24 @@ public class Rfc3161TimestampRequest extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetExtensions.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.Rfc3161TimestampRequest.GetExtensions" target="_top">.NET documentation</a>
+     */
     public X509ExtensionCollection GetExtensions() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -307,6 +471,13 @@ public class Rfc3161TimestampRequest extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HasExtensions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.Rfc3161TimestampRequest.HasExtensions" target="_top">.NET documentation</a>
+     */
     public boolean getHasExtensions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +492,13 @@ public class Rfc3161TimestampRequest extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequestSignerCertificate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.Rfc3161TimestampRequest.RequestSignerCertificate" target="_top">.NET documentation</a>
+     */
     public boolean getRequestSignerCertificate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +513,13 @@ public class Rfc3161TimestampRequest extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Version.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.Rfc3161TimestampRequest.Version" target="_top">.NET documentation</a>
+     */
     public int getVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -375,6 +560,13 @@ public class Rfc3161TimestampRequest extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HashAlgorithmId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.Rfc3161TimestampRequest.HashAlgorithmId" target="_top">.NET documentation</a>
+     */
     public Oid getHashAlgorithmId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -390,6 +582,13 @@ public class Rfc3161TimestampRequest extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequestedPolicyId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.Rfc3161TimestampRequest.RequestedPolicyId" target="_top">.NET documentation</a>
+     */
     public Oid getRequestedPolicyId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

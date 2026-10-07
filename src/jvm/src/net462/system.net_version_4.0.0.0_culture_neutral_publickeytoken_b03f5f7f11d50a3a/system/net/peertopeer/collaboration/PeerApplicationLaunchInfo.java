@@ -101,7 +101,10 @@ public class PeerApplicationLaunchInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PeerApplicationLaunchInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class PeerApplicationLaunchInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Data.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.Collaboration.PeerApplicationLaunchInfo.Data" target="_top">.NET documentation</a>
+     */
     public byte[] getData() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +193,13 @@ public class PeerApplicationLaunchInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Data.
+     *
+     * @param Data the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.Collaboration.PeerApplicationLaunchInfo.Data" target="_top">.NET documentation</a>
+     */
     public void setData(byte[] Data) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +210,13 @@ public class PeerApplicationLaunchInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PeerApplication.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.Collaboration.PeerApplicationLaunchInfo.PeerApplication" target="_top">.NET documentation</a>
+     */
     public PeerApplication getPeerApplication() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +232,13 @@ public class PeerApplicationLaunchInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PeerApplication.
+     *
+     * @param PeerApplication the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.Collaboration.PeerApplicationLaunchInfo.PeerApplication" target="_top">.NET documentation</a>
+     */
     public void setPeerApplication(PeerApplication PeerApplication) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +249,13 @@ public class PeerApplicationLaunchInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PeerContact.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.Collaboration.PeerApplicationLaunchInfo.PeerContact" target="_top">.NET documentation</a>
+     */
     public PeerContact getPeerContact() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +271,13 @@ public class PeerApplicationLaunchInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PeerContact.
+     *
+     * @param PeerContact the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.Collaboration.PeerApplicationLaunchInfo.PeerContact" target="_top">.NET documentation</a>
+     */
     public void setPeerContact(PeerContact PeerContact) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +288,13 @@ public class PeerApplicationLaunchInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PeerEndPoint.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.Collaboration.PeerApplicationLaunchInfo.PeerEndPoint" target="_top">.NET documentation</a>
+     */
     public PeerEndPoint getPeerEndPoint() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +310,13 @@ public class PeerApplicationLaunchInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PeerEndPoint.
+     *
+     * @param PeerEndPoint the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.Collaboration.PeerApplicationLaunchInfo.PeerEndPoint" target="_top">.NET documentation</a>
+     */
     public void setPeerEndPoint(PeerEndPoint PeerEndPoint) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +327,13 @@ public class PeerApplicationLaunchInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Message.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.Collaboration.PeerApplicationLaunchInfo.Message" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMessage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +348,13 @@ public class PeerApplicationLaunchInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Message.
+     *
+     * @param Message the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.Collaboration.PeerApplicationLaunchInfo.Message" target="_top">.NET documentation</a>
+     */
     public void setMessage(java.lang.String Message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

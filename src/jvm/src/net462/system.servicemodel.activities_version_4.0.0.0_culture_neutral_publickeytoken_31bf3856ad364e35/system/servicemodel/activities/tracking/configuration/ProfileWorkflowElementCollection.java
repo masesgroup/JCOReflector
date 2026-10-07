@@ -100,7 +100,10 @@ public class ProfileWorkflowElementCollection extends system.servicemodel.activi
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ProfileWorkflowElementCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,16 @@ public class ProfileWorkflowElementCollection extends system.servicemodel.activi
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElementCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public ProfileWorkflowElementCollection() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         try {
             // add reference to assemblyName.dll file

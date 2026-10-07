@@ -100,7 +100,10 @@ public class MessageFilter extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MessageFilter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,14 @@ public class MessageFilter extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Match.
+     *
+     * @param message the argument of type {@code Message}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.MessageFilter.Match" target="_top">.NET documentation</a>
+     */
     public boolean Match(Message message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -167,6 +178,14 @@ public class MessageFilter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Match.
+     *
+     * @param buffer the argument of type {@code MessageBuffer}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.MessageFilter.Match" target="_top">.NET documentation</a>
+     */
     public boolean Match(MessageBuffer buffer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class GlobalProxySelection extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public GlobalProxySelection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class GlobalProxySelection extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.GlobalProxySelection.-ctor" target="_top">.NET documentation</a>
+     */
     public GlobalProxySelection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,13 @@ public class GlobalProxySelection extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetEmptyWebProxy.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.GlobalProxySelection.GetEmptyWebProxy" target="_top">.NET documentation</a>
+     */
     public static IWebProxy GetEmptyWebProxy() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -180,6 +196,27 @@ public class GlobalProxySelection extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Select.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.GlobalProxySelection.Select" target="_top">.NET documentation</a>
+     */
     public static IWebProxy getSelect() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.security.SecurityException, system.TypeLoadException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -195,6 +232,14 @@ public class GlobalProxySelection extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Select.
+     *
+     * @param Select the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.GlobalProxySelection.Select" target="_top">.NET documentation</a>
+     */
     public static void setSelect(IWebProxy Select) throws Throwable, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

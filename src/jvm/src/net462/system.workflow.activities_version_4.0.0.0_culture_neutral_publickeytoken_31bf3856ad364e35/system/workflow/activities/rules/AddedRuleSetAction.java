@@ -100,7 +100,10 @@ public class AddedRuleSetAction extends system.workflow.activities.rules.RuleSet
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AddedRuleSetAction(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class AddedRuleSetAction extends system.workflow.activities.rules.RuleSet
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.AddedRuleSetAction.-ctor" target="_top">.NET documentation</a>
+     */
     public AddedRuleSetAction() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +166,14 @@ public class AddedRuleSetAction extends system.workflow.activities.rules.RuleSet
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param addedRuleSetDefinition the argument of type {@code RuleSet}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.AddedRuleSetAction.-ctor" target="_top">.NET documentation</a>
+     */
     public AddedRuleSetAction(RuleSet addedRuleSetDefinition) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +192,13 @@ public class AddedRuleSetAction extends system.workflow.activities.rules.RuleSet
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RuleSetDefinition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.AddedRuleSetAction.RuleSetDefinition" target="_top">.NET documentation</a>
+     */
     public RuleSet getRuleSetDefinition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +214,14 @@ public class AddedRuleSetAction extends system.workflow.activities.rules.RuleSet
         }
     }
 
+    /**
+     * Sets the value of the .NET property RuleSetDefinition.
+     *
+     * @param RuleSetDefinition the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.AddedRuleSetAction.RuleSetDefinition" target="_top">.NET documentation</a>
+     */
     public void setRuleSetDefinition(RuleSet RuleSetDefinition) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

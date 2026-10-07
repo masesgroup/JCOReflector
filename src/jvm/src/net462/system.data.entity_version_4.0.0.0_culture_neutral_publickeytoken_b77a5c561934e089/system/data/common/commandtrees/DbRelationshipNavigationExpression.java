@@ -102,7 +102,10 @@ public class DbRelationshipNavigationExpression extends system.data.common.comma
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DbRelationshipNavigationExpression(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,14 @@ public class DbRelationshipNavigationExpression extends system.data.common.comma
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Accept.
+     *
+     * @param visitor the argument of type {@code DbExpressionVisitor}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbRelationshipNavigationExpression.Accept" target="_top">.NET documentation</a>
+     */
     public void Accept(DbExpressionVisitor visitor) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +182,13 @@ public class DbRelationshipNavigationExpression extends system.data.common.comma
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property NavigationSource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbRelationshipNavigationExpression.NavigationSource" target="_top">.NET documentation</a>
+     */
     public DbExpression getNavigationSource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +204,13 @@ public class DbRelationshipNavigationExpression extends system.data.common.comma
         }
     }
 
+    /**
+     * Gets the value of the .NET property NavigateFrom.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbRelationshipNavigationExpression.NavigateFrom" target="_top">.NET documentation</a>
+     */
     public RelationshipEndMember getNavigateFrom() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +226,13 @@ public class DbRelationshipNavigationExpression extends system.data.common.comma
         }
     }
 
+    /**
+     * Gets the value of the .NET property NavigateTo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbRelationshipNavigationExpression.NavigateTo" target="_top">.NET documentation</a>
+     */
     public RelationshipEndMember getNavigateTo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +248,13 @@ public class DbRelationshipNavigationExpression extends system.data.common.comma
         }
     }
 
+    /**
+     * Gets the value of the .NET property Relationship.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbRelationshipNavigationExpression.Relationship" target="_top">.NET documentation</a>
+     */
     public RelationshipType getRelationship() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

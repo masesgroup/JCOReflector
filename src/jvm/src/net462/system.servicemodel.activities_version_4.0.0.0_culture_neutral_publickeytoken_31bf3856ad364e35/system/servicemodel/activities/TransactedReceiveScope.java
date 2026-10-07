@@ -102,7 +102,10 @@ public class TransactedReceiveScope extends system.activities.NativeActivity  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TransactedReceiveScope(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,19 @@ public class TransactedReceiveScope extends system.activities.NativeActivity  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.TransactedReceiveScope.-ctor" target="_top">.NET documentation</a>
+     */
     public TransactedReceiveScope() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotImplementedException {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +183,13 @@ public class TransactedReceiveScope extends system.activities.NativeActivity  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Body.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.TransactedReceiveScope.Body" target="_top">.NET documentation</a>
+     */
     public Activity getBody() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +205,13 @@ public class TransactedReceiveScope extends system.activities.NativeActivity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Body.
+     *
+     * @param Body the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.TransactedReceiveScope.Body" target="_top">.NET documentation</a>
+     */
     public void setBody(Activity Body) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +222,17 @@ public class TransactedReceiveScope extends system.activities.NativeActivity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Variables.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.TransactedReceiveScope.Variables" target="_top">.NET documentation</a>
+     */
     public Collection_1 getVariables() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +248,13 @@ public class TransactedReceiveScope extends system.activities.NativeActivity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Request.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.TransactedReceiveScope.Request" target="_top">.NET documentation</a>
+     */
     public Receive getRequest() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +270,13 @@ public class TransactedReceiveScope extends system.activities.NativeActivity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Request.
+     *
+     * @param Request the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.TransactedReceiveScope.Request" target="_top">.NET documentation</a>
+     */
     public void setRequest(Receive Request) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

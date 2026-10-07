@@ -101,7 +101,10 @@ public class IRegistrationServicesImplementation extends NetObject implements IR
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IRegistrationServicesImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,15 @@ public class IRegistrationServicesImplementation extends NetObject implements IR
 
     // Methods section
     
+    /**
+     * Invokes the .NET member RegisterAssembly.
+     *
+     * @param assembly the argument of type {@code Assembly}
+     * @param flags the argument of type {@code AssemblyRegistrationFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.IRegistrationServices.RegisterAssembly" target="_top">.NET documentation</a>
+     */
     public boolean RegisterAssembly(Assembly assembly, AssemblyRegistrationFlags flags) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -157,6 +169,14 @@ public class IRegistrationServicesImplementation extends NetObject implements IR
         }
     }
 
+    /**
+     * Invokes the .NET member TypeRepresentsComType.
+     *
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.IRegistrationServices.TypeRepresentsComType" target="_top">.NET documentation</a>
+     */
     public boolean TypeRepresentsComType(NetType type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +191,14 @@ public class IRegistrationServicesImplementation extends NetObject implements IR
         }
     }
 
+    /**
+     * Invokes the .NET member TypeRequiresRegistration.
+     *
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.IRegistrationServices.TypeRequiresRegistration" target="_top">.NET documentation</a>
+     */
     public boolean TypeRequiresRegistration(NetType type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +213,14 @@ public class IRegistrationServicesImplementation extends NetObject implements IR
         }
     }
 
+    /**
+     * Invokes the .NET member UnregisterAssembly.
+     *
+     * @param assembly the argument of type {@code Assembly}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.IRegistrationServices.UnregisterAssembly" target="_top">.NET documentation</a>
+     */
     public boolean UnregisterAssembly(Assembly assembly) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +235,13 @@ public class IRegistrationServicesImplementation extends NetObject implements IR
         }
     }
 
+    /**
+     * Invokes the .NET member GetManagedCategoryGuid.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.IRegistrationServices.GetManagedCategoryGuid" target="_top">.NET documentation</a>
+     */
     public Guid GetManagedCategoryGuid() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +257,14 @@ public class IRegistrationServicesImplementation extends NetObject implements IR
         }
     }
 
+    /**
+     * Invokes the .NET member GetProgIdForType.
+     *
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.IRegistrationServices.GetProgIdForType" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetProgIdForType(NetType type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +279,14 @@ public class IRegistrationServicesImplementation extends NetObject implements IR
         }
     }
 
+    /**
+     * Invokes the .NET member GetRegistrableTypesInAssembly.
+     *
+     * @param assembly the argument of type {@code Assembly}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.IRegistrationServices.GetRegistrableTypesInAssembly" target="_top">.NET documentation</a>
+     */
     public NetType[] GetRegistrableTypesInAssembly(Assembly assembly) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +308,14 @@ public class IRegistrationServicesImplementation extends NetObject implements IR
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterTypeForComClients.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param g the argument of type {@code JCORefOut<Guid>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.IRegistrationServices.RegisterTypeForComClients" target="_top">.NET documentation</a>
+     */
     public void RegisterTypeForComClients(NetType type, JCORefOut<Guid> g) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

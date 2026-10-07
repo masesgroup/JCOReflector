@@ -100,7 +100,10 @@ public class ApplicationMonitors extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ApplicationMonitors(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class ApplicationMonitors extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MemoryMonitor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.ApplicationMonitors.MemoryMonitor" target="_top">.NET documentation</a>
+     */
     public IApplicationMonitor getMemoryMonitor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +184,13 @@ public class ApplicationMonitors extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MemoryMonitor.
+     *
+     * @param MemoryMonitor the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.ApplicationMonitors.MemoryMonitor" target="_top">.NET documentation</a>
+     */
     public void setMemoryMonitor(IApplicationMonitor MemoryMonitor) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -110,7 +110,10 @@ public class SoapFormatter extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SoapFormatter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,12 @@ public class SoapFormatter extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Soap.SoapFormatter.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapFormatter() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +176,14 @@ public class SoapFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param selector the argument of type {@code ISurrogateSelector}
+     * @param context the argument of type {@code StreamingContext}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Soap.SoapFormatter.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapFormatter(ISurrogateSelector selector, StreamingContext context) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +198,38 @@ public class SoapFormatter extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Deserialize.
+     *
+     * @param serializationStream the argument of type {@code Stream}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.reflection.TargetException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.runtime.remoting.ServerException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Deserialize" target="_top">.NET documentation</a>
+     */
     public NetObject Deserialize(Stream serializationStream) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.serialization.SerializationException, system.IndexOutOfRangeException, system.FormatException, system.security.SecurityException, system.MissingMemberException, system.reflection.TargetException, system.RankException, system.runtime.remoting.RemotingException, system.NullReferenceException, system.runtime.remoting.ServerException, system.OverflowException, system.InvalidCastException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +245,43 @@ public class SoapFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Deserialize.
+     *
+     * @param serializationStream the argument of type {@code Stream}
+     * @param handler the argument of type {@code HeaderHandler}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.reflection.TargetException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.runtime.remoting.ServerException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Deserialize" target="_top">.NET documentation</a>
+     */
     public NetObject Deserialize(Stream serializationStream, HeaderHandler handler) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.serialization.SerializationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.FormatException, system.MissingMemberException, system.reflection.TargetException, system.RankException, system.runtime.remoting.RemotingException, system.NullReferenceException, system.MulticastNotSupportedException, system.runtime.remoting.ServerException, system.OverflowException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +297,33 @@ public class SoapFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Serialize.
+     *
+     * @param serializationStream the argument of type {@code Stream}
+     * @param graph the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.reflection.TargetException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Serialize" target="_top">.NET documentation</a>
+     */
     public void Serialize(Stream serializationStream, NetObject graph) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.OverflowException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.NullReferenceException, system.reflection.TargetException, system.MulticastNotSupportedException, system.InvalidCastException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +334,33 @@ public class SoapFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Serialize.
+     *
+     * @param serializationStream the argument of type {@code Stream}
+     * @param graph the argument of type {@code NetObject}
+     * @param headers the argument of type {@code Header[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.reflection.TargetException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Serialize" target="_top">.NET documentation</a>
+     */
     public void Serialize(Stream serializationStream, NetObject graph, Header[] headers) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.serialization.SerializationException, system.OverflowException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.reflection.TargetException, system.MulticastNotSupportedException, system.InvalidCastException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +375,13 @@ public class SoapFormatter extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AssemblyFormat.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Soap.SoapFormatter.AssemblyFormat" target="_top">.NET documentation</a>
+     */
     public FormatterAssemblyStyle getAssemblyFormat() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +397,13 @@ public class SoapFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AssemblyFormat.
+     *
+     * @param AssemblyFormat the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Soap.SoapFormatter.AssemblyFormat" target="_top">.NET documentation</a>
+     */
     public void setAssemblyFormat(FormatterAssemblyStyle AssemblyFormat) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +414,13 @@ public class SoapFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeFormat.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Soap.SoapFormatter.TypeFormat" target="_top">.NET documentation</a>
+     */
     public FormatterTypeStyle getTypeFormat() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +436,13 @@ public class SoapFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TypeFormat.
+     *
+     * @param TypeFormat the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Soap.SoapFormatter.TypeFormat" target="_top">.NET documentation</a>
+     */
     public void setTypeFormat(FormatterTypeStyle TypeFormat) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -285,6 +453,13 @@ public class SoapFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TopObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Soap.SoapFormatter.TopObject" target="_top">.NET documentation</a>
+     */
     public ISoapMessage getTopObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +475,13 @@ public class SoapFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TopObject.
+     *
+     * @param TopObject the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Soap.SoapFormatter.TopObject" target="_top">.NET documentation</a>
+     */
     public void setTopObject(ISoapMessage TopObject) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +492,13 @@ public class SoapFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FilterLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Soap.SoapFormatter.FilterLevel" target="_top">.NET documentation</a>
+     */
     public TypeFilterLevel getFilterLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -325,6 +514,13 @@ public class SoapFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FilterLevel.
+     *
+     * @param FilterLevel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Soap.SoapFormatter.FilterLevel" target="_top">.NET documentation</a>
+     */
     public void setFilterLevel(TypeFilterLevel FilterLevel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +531,13 @@ public class SoapFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SurrogateSelector.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Soap.SoapFormatter.SurrogateSelector" target="_top">.NET documentation</a>
+     */
     public ISurrogateSelector getSurrogateSelector() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -350,6 +553,13 @@ public class SoapFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SurrogateSelector.
+     *
+     * @param SurrogateSelector the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Soap.SoapFormatter.SurrogateSelector" target="_top">.NET documentation</a>
+     */
     public void setSurrogateSelector(ISurrogateSelector SurrogateSelector) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -360,6 +570,13 @@ public class SoapFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Binder.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Binder" target="_top">.NET documentation</a>
+     */
     public SerializationBinder getBinder() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -375,6 +592,13 @@ public class SoapFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Binder.
+     *
+     * @param Binder the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Binder" target="_top">.NET documentation</a>
+     */
     public void setBinder(SerializationBinder Binder) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -385,6 +609,13 @@ public class SoapFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Context.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Context" target="_top">.NET documentation</a>
+     */
     public StreamingContext getContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -400,6 +631,13 @@ public class SoapFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Context.
+     *
+     * @param Context the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Context" target="_top">.NET documentation</a>
+     */
     public void setContext(StreamingContext Context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

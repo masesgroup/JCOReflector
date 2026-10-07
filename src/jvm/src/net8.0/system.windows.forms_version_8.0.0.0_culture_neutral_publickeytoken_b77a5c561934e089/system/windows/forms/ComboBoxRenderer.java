@@ -103,7 +103,10 @@ public class ComboBoxRenderer extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ComboBoxRenderer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,28 @@ public class ComboBoxRenderer extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member DrawDropDownButton.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param bounds the argument of type {@code Rectangle}
+     * @param state the argument of type {@code ComboBoxState}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ComboBoxRenderer.DrawDropDownButton" target="_top">.NET documentation</a>
+     */
     public static void DrawDropDownButton(Graphics g, Rectangle bounds, ComboBoxState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -166,6 +191,30 @@ public class ComboBoxRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawTextBox.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param bounds the argument of type {@code Rectangle}
+     * @param comboBoxText the argument of type {@code java.lang.String}
+     * @param font the argument of type {@code Font}
+     * @param textBounds the argument of type {@code Rectangle}
+     * @param flags the argument of type {@code TextFormatFlags}
+     * @param state the argument of type {@code ComboBoxState}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ComboBoxRenderer.DrawTextBox" target="_top">.NET documentation</a>
+     */
     public static void DrawTextBox(Graphics g, Rectangle bounds, java.lang.String comboBoxText, Font font, Rectangle textBounds, TextFormatFlags flags, ComboBoxState state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -176,6 +225,27 @@ public class ComboBoxRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawTextBox.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param bounds the argument of type {@code Rectangle}
+     * @param comboBoxText the argument of type {@code java.lang.String}
+     * @param font the argument of type {@code Font}
+     * @param textBounds the argument of type {@code Rectangle}
+     * @param state the argument of type {@code ComboBoxState}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ComboBoxRenderer.DrawTextBox" target="_top">.NET documentation</a>
+     */
     public static void DrawTextBox(Graphics g, Rectangle bounds, java.lang.String comboBoxText, Font font, Rectangle textBounds, ComboBoxState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -186,6 +256,28 @@ public class ComboBoxRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawTextBox.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param bounds the argument of type {@code Rectangle}
+     * @param comboBoxText the argument of type {@code java.lang.String}
+     * @param font the argument of type {@code Font}
+     * @param flags the argument of type {@code TextFormatFlags}
+     * @param state the argument of type {@code ComboBoxState}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ComboBoxRenderer.DrawTextBox" target="_top">.NET documentation</a>
+     */
     public static void DrawTextBox(Graphics g, Rectangle bounds, java.lang.String comboBoxText, Font font, TextFormatFlags flags, ComboBoxState state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.FormatException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -196,6 +288,25 @@ public class ComboBoxRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawTextBox.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param bounds the argument of type {@code Rectangle}
+     * @param comboBoxText the argument of type {@code java.lang.String}
+     * @param font the argument of type {@code Font}
+     * @param state the argument of type {@code ComboBoxState}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ComboBoxRenderer.DrawTextBox" target="_top">.NET documentation</a>
+     */
     public static void DrawTextBox(Graphics g, Rectangle bounds, java.lang.String comboBoxText, Font font, ComboBoxState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -206,6 +317,26 @@ public class ComboBoxRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawTextBox.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param bounds the argument of type {@code Rectangle}
+     * @param state the argument of type {@code ComboBoxState}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ComboBoxRenderer.DrawTextBox" target="_top">.NET documentation</a>
+     */
     public static void DrawTextBox(Graphics g, Rectangle bounds, ComboBoxState state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -220,6 +351,22 @@ public class ComboBoxRenderer extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsSupported.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ComboBoxRenderer.IsSupported" target="_top">.NET documentation</a>
+     */
     public static boolean getIsSupported() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

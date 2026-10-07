@@ -54,5 +54,13 @@ import system.windows.Point;
  * @version 2.0.0.0
  */
 public interface ICustomPopupPlacementCallback {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param popupSize the .NET argument of type {@code System.Windows.Size}
+     * @param targetSize the .NET argument of type {@code System.Windows.Size}
+     * @param offset the .NET argument of type {@code System.Windows.Point}
+     * @return the value returned to the CLR
+     */
     public CustomPopupPlacement[] Invoke(Size popupSize, Size targetSize, Point offset);
 }

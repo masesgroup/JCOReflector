@@ -101,7 +101,10 @@ public class SocketsHttpPlaintextStreamFilterContext extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SocketsHttpPlaintextStreamFilterContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class SocketsHttpPlaintextStreamFilterContext extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PlaintextStream.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpPlaintextStreamFilterContext.PlaintextStream" target="_top">.NET documentation</a>
+     */
     public Stream getPlaintextStream() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +185,13 @@ public class SocketsHttpPlaintextStreamFilterContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InitialRequestMessage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpPlaintextStreamFilterContext.InitialRequestMessage" target="_top">.NET documentation</a>
+     */
     public HttpRequestMessage getInitialRequestMessage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +207,13 @@ public class SocketsHttpPlaintextStreamFilterContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NegotiatedHttpVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpPlaintextStreamFilterContext.NegotiatedHttpVersion" target="_top">.NET documentation</a>
+     */
     public Version getNegotiatedHttpVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class ModelValidatingEventArgs extends system.componentmodel.CancelEventA
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ModelValidatingEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,15 @@ public class ModelValidatingEventArgs extends system.componentmodel.CancelEventA
     public ModelValidatingEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param modelBindingExecutionContext the argument of type {@code ModelBindingExecutionContext}
+     * @param parentNode the argument of type {@code ModelValidationNode}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelValidatingEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ModelValidatingEventArgs(ModelBindingExecutionContext modelBindingExecutionContext, ModelValidationNode parentNode) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +182,13 @@ public class ModelValidatingEventArgs extends system.componentmodel.CancelEventA
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ModelBindingExecutionContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelValidatingEventArgs.ModelBindingExecutionContext" target="_top">.NET documentation</a>
+     */
     public ModelBindingExecutionContext getModelBindingExecutionContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +204,13 @@ public class ModelValidatingEventArgs extends system.componentmodel.CancelEventA
         }
     }
 
+    /**
+     * Sets the value of the .NET property ModelBindingExecutionContext.
+     *
+     * @param ModelBindingExecutionContext the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelValidatingEventArgs.ModelBindingExecutionContext" target="_top">.NET documentation</a>
+     */
     public void setModelBindingExecutionContext(ModelBindingExecutionContext ModelBindingExecutionContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +221,13 @@ public class ModelValidatingEventArgs extends system.componentmodel.CancelEventA
         }
     }
 
+    /**
+     * Gets the value of the .NET property ParentNode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelValidatingEventArgs.ParentNode" target="_top">.NET documentation</a>
+     */
     public ModelValidationNode getParentNode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +243,13 @@ public class ModelValidatingEventArgs extends system.componentmodel.CancelEventA
         }
     }
 
+    /**
+     * Sets the value of the .NET property ParentNode.
+     *
+     * @param ParentNode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelValidatingEventArgs.ParentNode" target="_top">.NET documentation</a>
+     */
     public void setParentNode(ModelValidationNode ParentNode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

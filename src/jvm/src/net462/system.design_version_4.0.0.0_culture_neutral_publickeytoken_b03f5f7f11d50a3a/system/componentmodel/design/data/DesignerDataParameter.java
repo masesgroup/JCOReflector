@@ -100,7 +100,10 @@ public class DesignerDataParameter extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DesignerDataParameter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,15 @@ public class DesignerDataParameter extends NetObject  {
     public DesignerDataParameter() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param dataType the argument of type {@code DbType}
+     * @param direction the argument of type {@code ParameterDirection}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Data.DesignerDataParameter.-ctor" target="_top">.NET documentation</a>
+     */
     public DesignerDataParameter(java.lang.String name, DbType dataType, ParameterDirection direction) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +181,13 @@ public class DesignerDataParameter extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DataType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Data.DesignerDataParameter.DataType" target="_top">.NET documentation</a>
+     */
     public DbType getDataType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +203,13 @@ public class DesignerDataParameter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Direction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Data.DesignerDataParameter.Direction" target="_top">.NET documentation</a>
+     */
     public ParameterDirection getDirection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +225,13 @@ public class DesignerDataParameter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Data.DesignerDataParameter.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

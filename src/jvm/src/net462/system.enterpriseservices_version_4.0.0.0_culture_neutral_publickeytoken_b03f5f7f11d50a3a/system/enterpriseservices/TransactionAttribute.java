@@ -101,7 +101,10 @@ public class TransactionAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TransactionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class TransactionAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.TransactionAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public TransactionAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,13 @@ public class TransactionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param val the argument of type {@code TransactionOption}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.TransactionAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public TransactionAttribute(TransactionOption val) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +192,13 @@ public class TransactionAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Timeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.TransactionAttribute.Timeout" target="_top">.NET documentation</a>
+     */
     public int getTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +239,13 @@ public class TransactionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Timeout.
+     *
+     * @param Timeout the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.TransactionAttribute.Timeout" target="_top">.NET documentation</a>
+     */
     public void setTimeout(int Timeout) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +256,13 @@ public class TransactionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Isolation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.TransactionAttribute.Isolation" target="_top">.NET documentation</a>
+     */
     public TransactionIsolationLevel getIsolation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +278,13 @@ public class TransactionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Isolation.
+     *
+     * @param Isolation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.TransactionAttribute.Isolation" target="_top">.NET documentation</a>
+     */
     public void setIsolation(TransactionIsolationLevel Isolation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +295,13 @@ public class TransactionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.TransactionAttribute.Value" target="_top">.NET documentation</a>
+     */
     public TransactionOption getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

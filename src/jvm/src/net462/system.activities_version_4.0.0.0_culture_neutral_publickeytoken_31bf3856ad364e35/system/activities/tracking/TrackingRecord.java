@@ -103,7 +103,10 @@ public class TrackingRecord extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TrackingRecord(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class TrackingRecord extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RecordNumber.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.TrackingRecord.RecordNumber" target="_top">.NET documentation</a>
+     */
     public long getRecordNumber() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +210,13 @@ public class TrackingRecord extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RecordNumber.
+     *
+     * @param RecordNumber the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.TrackingRecord.RecordNumber" target="_top">.NET documentation</a>
+     */
     public void setRecordNumber(long RecordNumber) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +227,15 @@ public class TrackingRecord extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Annotations.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.TrackingRecord.Annotations" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 getAnnotations() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +251,13 @@ public class TrackingRecord extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Annotations.
+     *
+     * @param Annotations the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.TrackingRecord.Annotations" target="_top">.NET documentation</a>
+     */
     public void setAnnotations(IDictionary_2 Annotations) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +268,13 @@ public class TrackingRecord extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EventTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.TrackingRecord.EventTime" target="_top">.NET documentation</a>
+     */
     public DateTime getEventTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +290,13 @@ public class TrackingRecord extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EventTime.
+     *
+     * @param EventTime the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.TrackingRecord.EventTime" target="_top">.NET documentation</a>
+     */
     public void setEventTime(DateTime EventTime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +307,13 @@ public class TrackingRecord extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Level.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.TrackingRecord.Level" target="_top">.NET documentation</a>
+     */
     public TraceLevel getLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +329,13 @@ public class TrackingRecord extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Level.
+     *
+     * @param Level the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.TrackingRecord.Level" target="_top">.NET documentation</a>
+     */
     public void setLevel(TraceLevel Level) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -285,6 +346,13 @@ public class TrackingRecord extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.TrackingRecord.InstanceId" target="_top">.NET documentation</a>
+     */
     public Guid getInstanceId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +368,13 @@ public class TrackingRecord extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InstanceId.
+     *
+     * @param InstanceId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.TrackingRecord.InstanceId" target="_top">.NET documentation</a>
+     */
     public void setInstanceId(Guid InstanceId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

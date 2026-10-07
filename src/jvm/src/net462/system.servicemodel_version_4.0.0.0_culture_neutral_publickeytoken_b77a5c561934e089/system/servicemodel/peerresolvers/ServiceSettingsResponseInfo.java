@@ -98,7 +98,10 @@ public class ServiceSettingsResponseInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ServiceSettingsResponseInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class ServiceSettingsResponseInfo extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolvers.ServiceSettingsResponseInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public ServiceSettingsResponseInfo() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -155,6 +164,13 @@ public class ServiceSettingsResponseInfo extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param control the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolvers.ServiceSettingsResponseInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public ServiceSettingsResponseInfo(boolean control) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +185,13 @@ public class ServiceSettingsResponseInfo extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member HasBody.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolvers.ServiceSettingsResponseInfo.HasBody" target="_top">.NET documentation</a>
+     */
     public boolean HasBody() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +210,13 @@ public class ServiceSettingsResponseInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ControlMeshShape.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolvers.ServiceSettingsResponseInfo.ControlMeshShape" target="_top">.NET documentation</a>
+     */
     public boolean getControlMeshShape() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +231,13 @@ public class ServiceSettingsResponseInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ControlMeshShape.
+     *
+     * @param ControlMeshShape the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolvers.ServiceSettingsResponseInfo.ControlMeshShape" target="_top">.NET documentation</a>
+     */
     public void setControlMeshShape(boolean ControlMeshShape) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

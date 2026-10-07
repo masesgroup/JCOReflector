@@ -110,7 +110,10 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SocketAsyncEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,23 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public SocketAsyncEventArgs() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.FormatException, system.diagnostics.tracing.EventSourceException {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +187,25 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param unsafeSuppressExecutionContextFlow the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public SocketAsyncEventArgs(boolean unsafeSuppressExecutionContextFlow) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.FormatException, system.diagnostics.tracing.EventSourceException {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +220,21 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +245,25 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
         }
     }
 
+    /**
+     * Invokes the .NET member SetBuffer.
+     *
+     * @param buffer the argument of type {@code byte[]}
+     * @param offset the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs.SetBuffer" target="_top">.NET documentation</a>
+     */
     public void SetBuffer(byte[] buffer, int offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +274,25 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
         }
     }
 
+    /**
+     * Invokes the .NET member SetBuffer.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs.SetBuffer" target="_top">.NET documentation</a>
+     */
     public void SetBuffer(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +303,23 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
         }
     }
 
+    /**
+     * Invokes the .NET member SetBuffer.
+     *
+     * @param offset the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs.SetBuffer" target="_top">.NET documentation</a>
+     */
     public void SetBuffer(int offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +330,20 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
         }
     }
 
+    /**
+     * Invokes the .NET member SetBuffer.
+     *
+     * @param buffer the argument of type {@code Memory_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs.SetBuffer" target="_top">.NET documentation</a>
+     */
     public void SetBuffer(Memory_1 buffer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +371,13 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DisconnectReuseSocket.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs.DisconnectReuseSocket" target="_top">.NET documentation</a>
+     */
     public boolean getDisconnectReuseSocket() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +392,13 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
         }
     }
 
+    /**
+     * Sets the value of the .NET property DisconnectReuseSocket.
+     *
+     * @param DisconnectReuseSocket the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs.DisconnectReuseSocket" target="_top">.NET documentation</a>
+     */
     public void setDisconnectReuseSocket(boolean DisconnectReuseSocket) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +409,21 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
         }
     }
 
+    /**
+     * Gets the value of the .NET property Buffer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs.Buffer" target="_top">.NET documentation</a>
+     */
     public byte[] getBuffer() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +447,13 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
         }
     }
 
+    /**
+     * Gets the value of the .NET property BytesTransferred.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs.BytesTransferred" target="_top">.NET documentation</a>
+     */
     public int getBytesTransferred() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +494,13 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
         }
     }
 
+    /**
+     * Gets the value of the .NET property Count.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs.Count" target="_top">.NET documentation</a>
+     */
     public int getCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -375,6 +541,13 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
         }
     }
 
+    /**
+     * Gets the value of the .NET property Offset.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs.Offset" target="_top">.NET documentation</a>
+     */
     public int getOffset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -415,6 +588,13 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
         }
     }
 
+    /**
+     * Gets the value of the .NET property SendPacketsSendSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs.SendPacketsSendSize" target="_top">.NET documentation</a>
+     */
     public int getSendPacketsSendSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -455,6 +635,13 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
         }
     }
 
+    /**
+     * Sets the value of the .NET property SendPacketsSendSize.
+     *
+     * @param SendPacketsSendSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs.SendPacketsSendSize" target="_top">.NET documentation</a>
+     */
     public void setSendPacketsSendSize(int SendPacketsSendSize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -465,6 +652,13 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
         }
     }
 
+    /**
+     * Gets the value of the .NET property BufferList.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs.BufferList" target="_top">.NET documentation</a>
+     */
     public IList_1 getBufferList() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -480,6 +674,23 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
         }
     }
 
+    /**
+     * Sets the value of the .NET property BufferList.
+     *
+     * @param BufferList the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs.BufferList" target="_top">.NET documentation</a>
+     */
     public void setBufferList(IList_1 BufferList) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.ObjectDisposedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -490,6 +701,13 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConnectByNameError.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs.ConnectByNameError" target="_top">.NET documentation</a>
+     */
     public NetException getConnectByNameError() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -505,6 +723,13 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
         }
     }
 
+    /**
+     * Gets the value of the .NET property MemoryBuffer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs.MemoryBuffer" target="_top">.NET documentation</a>
+     */
     public Memory_1 getMemoryBuffer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -520,6 +745,13 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
         }
     }
 
+    /**
+     * Gets the value of the .NET property RemoteEndPoint.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs.RemoteEndPoint" target="_top">.NET documentation</a>
+     */
     public EndPoint getRemoteEndPoint() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -535,6 +767,13 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
         }
     }
 
+    /**
+     * Sets the value of the .NET property RemoteEndPoint.
+     *
+     * @param RemoteEndPoint the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs.RemoteEndPoint" target="_top">.NET documentation</a>
+     */
     public void setRemoteEndPoint(EndPoint RemoteEndPoint) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -545,6 +784,13 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReceiveMessageFromPacketInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs.ReceiveMessageFromPacketInfo" target="_top">.NET documentation</a>
+     */
     public IPPacketInformation getReceiveMessageFromPacketInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -560,6 +806,13 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
         }
     }
 
+    /**
+     * Gets the value of the .NET property SendPacketsElements.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs.SendPacketsElements" target="_top">.NET documentation</a>
+     */
     public final SendPacketsElement[] getSendPacketsElements() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -581,6 +834,20 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
         }
     }
 
+    /**
+     * Sets the value of the .NET property SendPacketsElements.
+     *
+     * @param SendPacketsElements the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs.SendPacketsElements" target="_top">.NET documentation</a>
+     */
     public void setSendPacketsElements(SendPacketsElement[] SendPacketsElements) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -591,6 +858,13 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
         }
     }
 
+    /**
+     * Gets the value of the .NET property AcceptSocket.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs.AcceptSocket" target="_top">.NET documentation</a>
+     */
     public Socket getAcceptSocket() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -606,6 +880,13 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
         }
     }
 
+    /**
+     * Sets the value of the .NET property AcceptSocket.
+     *
+     * @param AcceptSocket the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs.AcceptSocket" target="_top">.NET documentation</a>
+     */
     public void setAcceptSocket(Socket AcceptSocket) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -616,6 +897,13 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConnectSocket.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs.ConnectSocket" target="_top">.NET documentation</a>
+     */
     public Socket getConnectSocket() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -631,6 +919,13 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
         }
     }
 
+    /**
+     * Gets the value of the .NET property LastOperation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs.LastOperation" target="_top">.NET documentation</a>
+     */
     public SocketAsyncOperation getLastOperation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -646,6 +941,13 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
         }
     }
 
+    /**
+     * Gets the value of the .NET property SocketError.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs.SocketError" target="_top">.NET documentation</a>
+     */
     public SocketError getSocketError() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -661,6 +963,13 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
         }
     }
 
+    /**
+     * Sets the value of the .NET property SocketError.
+     *
+     * @param SocketError the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs.SocketError" target="_top">.NET documentation</a>
+     */
     public void setSocketError(SocketError SocketError) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -671,6 +980,13 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
         }
     }
 
+    /**
+     * Gets the value of the .NET property SocketFlags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs.SocketFlags" target="_top">.NET documentation</a>
+     */
     public SocketFlags getSocketFlags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -686,6 +1002,13 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
         }
     }
 
+    /**
+     * Sets the value of the .NET property SocketFlags.
+     *
+     * @param SocketFlags the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs.SocketFlags" target="_top">.NET documentation</a>
+     */
     public void setSocketFlags(SocketFlags SocketFlags) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -696,6 +1019,13 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
         }
     }
 
+    /**
+     * Gets the value of the .NET property SendPacketsFlags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs.SendPacketsFlags" target="_top">.NET documentation</a>
+     */
     public TransmitFileOptions getSendPacketsFlags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -711,6 +1041,13 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
         }
     }
 
+    /**
+     * Sets the value of the .NET property SendPacketsFlags.
+     *
+     * @param SendPacketsFlags the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs.SendPacketsFlags" target="_top">.NET documentation</a>
+     */
     public void setSendPacketsFlags(TransmitFileOptions SendPacketsFlags) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -721,6 +1058,13 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
         }
     }
 
+    /**
+     * Gets the value of the .NET property UserToken.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs.UserToken" target="_top">.NET documentation</a>
+     */
     public NetObject getUserToken() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -736,6 +1080,13 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
         }
     }
 
+    /**
+     * Sets the value of the .NET property UserToken.
+     *
+     * @param UserToken the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketAsyncEventArgs.UserToken" target="_top">.NET documentation</a>
+     */
     public void setUserToken(NetObject UserToken) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

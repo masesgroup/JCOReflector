@@ -101,7 +101,10 @@ public class IUnvalidatedValueProviderImplementation extends NetObject implement
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IUnvalidatedValueProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,14 @@ public class IUnvalidatedValueProviderImplementation extends NetObject implement
 
     // Methods section
     
+    /**
+     * Invokes the .NET member ContainsPrefix.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.IUnvalidatedValueProvider.ContainsPrefix" target="_top">.NET documentation</a>
+     */
     public boolean ContainsPrefix(java.lang.String prefix) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -157,6 +168,14 @@ public class IUnvalidatedValueProviderImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member GetValue.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.IUnvalidatedValueProvider.GetValue" target="_top">.NET documentation</a>
+     */
     public ValueProviderResult GetValue(java.lang.String key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +191,15 @@ public class IUnvalidatedValueProviderImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member GetValue.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @param skipValidation the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.IUnvalidatedValueProvider.GetValue" target="_top">.NET documentation</a>
+     */
     public ValueProviderResult GetValue(java.lang.String key, boolean skipValidation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

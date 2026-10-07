@@ -98,7 +98,10 @@ public class ServiceModelSecurityTokenTypes extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ServiceModelSecurityTokenTypes(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,13 @@ public class ServiceModelSecurityTokenTypes extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AnonymousSslnego.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenTypes.AnonymousSslnego" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getAnonymousSslnego() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -169,6 +179,13 @@ public class ServiceModelSecurityTokenTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MutualSslnego.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenTypes.MutualSslnego" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getMutualSslnego() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -183,6 +200,13 @@ public class ServiceModelSecurityTokenTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SecureConversation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenTypes.SecureConversation" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getSecureConversation() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -197,6 +221,13 @@ public class ServiceModelSecurityTokenTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SecurityContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenTypes.SecurityContext" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getSecurityContext() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -211,6 +242,13 @@ public class ServiceModelSecurityTokenTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Spnego.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenTypes.Spnego" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getSpnego() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -225,6 +263,13 @@ public class ServiceModelSecurityTokenTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SspiCredential.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenTypes.SspiCredential" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getSspiCredential() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

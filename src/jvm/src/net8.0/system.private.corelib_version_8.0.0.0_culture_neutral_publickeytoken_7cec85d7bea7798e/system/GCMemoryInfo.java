@@ -99,7 +99,10 @@ public class GCMemoryInfo extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public GCMemoryInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class GCMemoryInfo extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Compacted.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GCMemoryInfo.Compacted" target="_top">.NET documentation</a>
+     */
     public boolean getCompacted() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +182,13 @@ public class GCMemoryInfo extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Concurrent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GCMemoryInfo.Concurrent" target="_top">.NET documentation</a>
+     */
     public boolean getConcurrent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +203,13 @@ public class GCMemoryInfo extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PauseTimePercentage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GCMemoryInfo.PauseTimePercentage" target="_top">.NET documentation</a>
+     */
     public double getPauseTimePercentage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +250,13 @@ public class GCMemoryInfo extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Generation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GCMemoryInfo.Generation" target="_top">.NET documentation</a>
+     */
     public int getGeneration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +297,13 @@ public class GCMemoryInfo extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FinalizationPendingCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GCMemoryInfo.FinalizationPendingCount" target="_top">.NET documentation</a>
+     */
     public long getFinalizationPendingCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +344,13 @@ public class GCMemoryInfo extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FragmentedBytes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GCMemoryInfo.FragmentedBytes" target="_top">.NET documentation</a>
+     */
     public long getFragmentedBytes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -346,6 +391,13 @@ public class GCMemoryInfo extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HeapSizeBytes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GCMemoryInfo.HeapSizeBytes" target="_top">.NET documentation</a>
+     */
     public long getHeapSizeBytes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -386,6 +438,13 @@ public class GCMemoryInfo extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HighMemoryLoadThresholdBytes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GCMemoryInfo.HighMemoryLoadThresholdBytes" target="_top">.NET documentation</a>
+     */
     public long getHighMemoryLoadThresholdBytes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -426,6 +485,13 @@ public class GCMemoryInfo extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Index.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GCMemoryInfo.Index" target="_top">.NET documentation</a>
+     */
     public long getIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -466,6 +532,13 @@ public class GCMemoryInfo extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MemoryLoadBytes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GCMemoryInfo.MemoryLoadBytes" target="_top">.NET documentation</a>
+     */
     public long getMemoryLoadBytes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -506,6 +579,13 @@ public class GCMemoryInfo extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PinnedObjectsCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GCMemoryInfo.PinnedObjectsCount" target="_top">.NET documentation</a>
+     */
     public long getPinnedObjectsCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -546,6 +626,13 @@ public class GCMemoryInfo extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PromotedBytes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GCMemoryInfo.PromotedBytes" target="_top">.NET documentation</a>
+     */
     public long getPromotedBytes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -586,6 +673,13 @@ public class GCMemoryInfo extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TotalAvailableMemoryBytes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GCMemoryInfo.TotalAvailableMemoryBytes" target="_top">.NET documentation</a>
+     */
     public long getTotalAvailableMemoryBytes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -626,6 +720,13 @@ public class GCMemoryInfo extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TotalCommittedBytes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GCMemoryInfo.TotalCommittedBytes" target="_top">.NET documentation</a>
+     */
     public long getTotalCommittedBytes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

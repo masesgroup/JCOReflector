@@ -108,7 +108,10 @@ public class IDataEnvironmentImplementation extends NetObject implements IDataEn
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDataEnvironmentImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class IDataEnvironmentImplementation extends NetObject implements IDataEn
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetCodeExpression.
+     *
+     * @param connection the argument of type {@code DesignerDataConnection}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Data.IDataEnvironment.GetCodeExpression" target="_top">.NET documentation</a>
+     */
     public CodeExpression GetCodeExpression(DesignerDataConnection connection) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -165,6 +176,15 @@ public class IDataEnvironmentImplementation extends NetObject implements IDataEn
         }
     }
 
+    /**
+     * Invokes the .NET member BuildConnection.
+     *
+     * @param owner the argument of type {@code IWin32Window}
+     * @param initialConnection the argument of type {@code DesignerDataConnection}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Data.IDataEnvironment.BuildConnection" target="_top">.NET documentation</a>
+     */
     public DesignerDataConnection BuildConnection(IWin32Window owner, DesignerDataConnection initialConnection) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +200,16 @@ public class IDataEnvironmentImplementation extends NetObject implements IDataEn
         }
     }
 
+    /**
+     * Invokes the .NET member ConfigureConnection.
+     *
+     * @param owner the argument of type {@code IWin32Window}
+     * @param connection the argument of type {@code DesignerDataConnection}
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Data.IDataEnvironment.ConfigureConnection" target="_top">.NET documentation</a>
+     */
     public DesignerDataConnection ConfigureConnection(IWin32Window owner, DesignerDataConnection connection, java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +225,14 @@ public class IDataEnvironmentImplementation extends NetObject implements IDataEn
         }
     }
 
+    /**
+     * Invokes the .NET member GetConnectionSchema.
+     *
+     * @param connection the argument of type {@code DesignerDataConnection}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Data.IDataEnvironment.GetConnectionSchema" target="_top">.NET documentation</a>
+     */
     public IDesignerDataSchema GetConnectionSchema(DesignerDataConnection connection) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +248,14 @@ public class IDataEnvironmentImplementation extends NetObject implements IDataEn
         }
     }
 
+    /**
+     * Invokes the .NET member GetDesignTimeConnection.
+     *
+     * @param connection the argument of type {@code DesignerDataConnection}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Data.IDataEnvironment.GetDesignTimeConnection" target="_top">.NET documentation</a>
+     */
     public DbConnection GetDesignTimeConnection(DesignerDataConnection connection) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +271,17 @@ public class IDataEnvironmentImplementation extends NetObject implements IDataEn
         }
     }
 
+    /**
+     * Invokes the .NET member BuildQuery.
+     *
+     * @param owner the argument of type {@code IWin32Window}
+     * @param connection the argument of type {@code DesignerDataConnection}
+     * @param mode the argument of type {@code QueryBuilderMode}
+     * @param initialQueryText the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Data.IDataEnvironment.BuildQuery" target="_top">.NET documentation</a>
+     */
     public java.lang.String BuildQuery(IWin32Window owner, DesignerDataConnection connection, QueryBuilderMode mode, java.lang.String initialQueryText) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +300,13 @@ public class IDataEnvironmentImplementation extends NetObject implements IDataEn
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Connections.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Data.IDataEnvironment.Connections" target="_top">.NET documentation</a>
+     */
     public ICollection getConnections() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

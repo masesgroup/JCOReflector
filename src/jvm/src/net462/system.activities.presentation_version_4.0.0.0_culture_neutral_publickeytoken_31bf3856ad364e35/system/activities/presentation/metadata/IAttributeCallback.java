@@ -52,5 +52,10 @@ import system.activities.presentation.metadata.AttributeCallbackBuilder;
  * @version 2.0.0.0
  */
 public interface IAttributeCallback {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param builder the .NET argument of type {@code System.Activities.Presentation.Metadata.AttributeCallbackBuilder}
+     */
     public void Invoke(AttributeCallbackBuilder builder);
 }

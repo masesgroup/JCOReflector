@@ -165,7 +165,10 @@ public class VerifyServerCertificateCallback extends JCDelegate implements IJCEv
         callerInstance = instance;
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public VerifyServerCertificateCallback(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
@@ -187,6 +190,15 @@ public class VerifyServerCertificateCallback extends JCDelegate implements IJCEv
         return JCOBridgeInstance.translateException(ne);
     }
 
+    /**
+     * Invokes the .NET member DynamicInvoke.
+     *
+     * @param connection the argument of type {@code LdapConnection}
+     * @param certificate the argument of type {@code X509Certificate}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Delegate.DynamicInvoke" target="_top">.NET documentation</a>
+     */
     public boolean DynamicInvoke(LdapConnection connection, X509Certificate certificate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,7 +214,11 @@ public class VerifyServerCertificateCallback extends JCDelegate implements IJCEv
     }
 
     /**
-     * Methods invoked in JVM when an event is raised in CLR 
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param connection the .NET argument of type {@code System.DirectoryServices.Protocols.LdapConnection}
+     * @param certificate the .NET argument of type {@code System.Security.Cryptography.X509Certificates.X509Certificate}
+     * @return the value returned to the CLR; this default implementation returns {@code null}
      */
     public boolean Invoke(LdapConnection connection, X509Certificate certificate) {
         return false;

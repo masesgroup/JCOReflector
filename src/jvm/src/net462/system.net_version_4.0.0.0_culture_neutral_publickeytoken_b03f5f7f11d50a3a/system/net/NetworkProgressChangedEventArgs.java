@@ -99,7 +99,10 @@ public class NetworkProgressChangedEventArgs extends system.componentmodel.Progr
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public NetworkProgressChangedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,16 @@ public class NetworkProgressChangedEventArgs extends system.componentmodel.Progr
     public NetworkProgressChangedEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param percentage the argument of type {@code int}
+     * @param processedBytes the argument of type {@code int}
+     * @param totalBytes the argument of type {@code int}
+     * @param userState the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkProgressChangedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public NetworkProgressChangedEventArgs(int percentage, int processedBytes, int totalBytes, NetObject userState) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +181,14 @@ public class NetworkProgressChangedEventArgs extends system.componentmodel.Progr
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ProcessedBytes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkProgressChangedEventArgs.ProcessedBytes" target="_top">.NET documentation</a>
+     */
     public int getProcessedBytes() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +229,14 @@ public class NetworkProgressChangedEventArgs extends system.componentmodel.Progr
         }
     }
 
+    /**
+     * Gets the value of the .NET property TotalBytes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkProgressChangedEventArgs.TotalBytes" target="_top">.NET documentation</a>
+     */
     public int getTotalBytes() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

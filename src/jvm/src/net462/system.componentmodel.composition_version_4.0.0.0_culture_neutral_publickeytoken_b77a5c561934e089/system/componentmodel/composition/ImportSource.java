@@ -114,7 +114,9 @@ public class ImportSource extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public ImportSource(java.lang.Object instance) {
         super(instance);

@@ -102,7 +102,10 @@ public class SqlTrackingQueryOptions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SqlTrackingQueryOptions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class SqlTrackingQueryOptions extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingQueryOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlTrackingQueryOptions() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,12 @@ public class SqlTrackingQueryOptions extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Clear.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingQueryOptions.Clear" target="_top">.NET documentation</a>
+     */
     public void Clear() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +192,13 @@ public class SqlTrackingQueryOptions extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property TrackingDataItems.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingQueryOptions.TrackingDataItems" target="_top">.NET documentation</a>
+     */
     public IList_1 getTrackingDataItems() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +214,13 @@ public class SqlTrackingQueryOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StatusMaxDateTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingQueryOptions.StatusMaxDateTime" target="_top">.NET documentation</a>
+     */
     public DateTime getStatusMaxDateTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +236,13 @@ public class SqlTrackingQueryOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StatusMaxDateTime.
+     *
+     * @param StatusMaxDateTime the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingQueryOptions.StatusMaxDateTime" target="_top">.NET documentation</a>
+     */
     public void setStatusMaxDateTime(DateTime StatusMaxDateTime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +253,13 @@ public class SqlTrackingQueryOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StatusMinDateTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingQueryOptions.StatusMinDateTime" target="_top">.NET documentation</a>
+     */
     public DateTime getStatusMinDateTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +275,13 @@ public class SqlTrackingQueryOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StatusMinDateTime.
+     *
+     * @param StatusMinDateTime the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingQueryOptions.StatusMinDateTime" target="_top">.NET documentation</a>
+     */
     public void setStatusMinDateTime(DateTime StatusMinDateTime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +292,13 @@ public class SqlTrackingQueryOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WorkflowStatus.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingQueryOptions.WorkflowStatus" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getWorkflowStatus() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +314,13 @@ public class SqlTrackingQueryOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WorkflowStatus.
+     *
+     * @param WorkflowStatus the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingQueryOptions.WorkflowStatus" target="_top">.NET documentation</a>
+     */
     public void setWorkflowStatus(Nullable_1 WorkflowStatus) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +331,13 @@ public class SqlTrackingQueryOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WorkflowType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingQueryOptions.WorkflowType" target="_top">.NET documentation</a>
+     */
     public NetType getWorkflowType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +353,13 @@ public class SqlTrackingQueryOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WorkflowType.
+     *
+     * @param WorkflowType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingQueryOptions.WorkflowType" target="_top">.NET documentation</a>
+     */
     public void setWorkflowType(NetType WorkflowType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

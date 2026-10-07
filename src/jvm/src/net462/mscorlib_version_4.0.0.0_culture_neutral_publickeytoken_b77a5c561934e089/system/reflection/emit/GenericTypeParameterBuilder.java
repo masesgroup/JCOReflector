@@ -118,7 +118,10 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public GenericTypeParameterBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -173,6 +176,15 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsAssignableFrom.
+     *
+     * @param typeInfo the argument of type {@code TypeInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.GenericTypeParameterBuilder.IsAssignableFrom" target="_top">.NET documentation</a>
+     */
     public boolean IsAssignableFrom(TypeInfo typeInfo) throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +199,15 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsAssignableFrom.
+     *
+     * @param c the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.GenericTypeParameterBuilder.IsAssignableFrom" target="_top">.NET documentation</a>
+     */
     public boolean IsAssignableFrom(NetType c) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +222,16 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsDefined.
+     *
+     * @param attributeType the argument of type {@code NetType}
+     * @param inherit the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.GenericTypeParameterBuilder.IsDefined" target="_top">.NET documentation</a>
+     */
     public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +246,15 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsSubclassOf.
+     *
+     * @param c the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.GenericTypeParameterBuilder.IsSubclassOf" target="_top">.NET documentation</a>
+     */
     public boolean IsSubclassOf(NetType c) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +269,22 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member InvokeMember.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param invokeAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param target the argument of type {@code NetObject}
+     * @param args the argument of type {@code NetObject[]}
+     * @param modifiers the argument of type {@code ParameterModifier[]}
+     * @param culture the argument of type {@code CultureInfo}
+     * @param namedParameters the argument of type {@code java.lang.String[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.GenericTypeParameterBuilder.InvokeMember" target="_top">.NET documentation</a>
+     */
     public NetObject InvokeMember(java.lang.String name, BindingFlags invokeAttr, Binder binder, NetObject target, NetObject[] args, ParameterModifier[] modifiers, CultureInfo culture, java.lang.String[] namedParameters) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +300,22 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member InvokeMember.
+     *
+     * @param dupParam0 the argument of type {@code java.lang.String}
+     * @param dupParam1 the argument of type {@code BindingFlags}
+     * @param dupParam2 the argument of type {@code Binder}
+     * @param dupParam3 the argument of type {@code NetObject}
+     * @param dupParam4 the argument of type {@code NetObject[]}
+     * @param dupParam5 the argument of type {@code ParameterModifier[]}
+     * @param dupParam6 the argument of type {@code CultureInfo}
+     * @param dupParam7 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.GenericTypeParameterBuilder.InvokeMember" target="_top">.NET documentation</a>
+     */
     public NetObject InvokeMember(java.lang.String dupParam0, BindingFlags dupParam1, Binder dupParam2, NetObject dupParam3, NetObject[] dupParam4, ParameterModifier[] dupParam5, CultureInfo dupParam6, JCORefOut dupParam7) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +331,15 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCustomAttributes.
+     *
+     * @param inherit the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.GenericTypeParameterBuilder.GetCustomAttributes" target="_top">.NET documentation</a>
+     */
     public NetObject[] GetCustomAttributes(boolean inherit) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +361,16 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCustomAttributes.
+     *
+     * @param attributeType the argument of type {@code NetType}
+     * @param inherit the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.GenericTypeParameterBuilder.GetCustomAttributes" target="_top">.NET documentation</a>
+     */
     public NetObject[] GetCustomAttributes(NetType attributeType, boolean inherit) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +392,15 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetConstructors.
+     *
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.GenericTypeParameterBuilder.GetConstructors" target="_top">.NET documentation</a>
+     */
     public ConstructorInfo[] GetConstructors(BindingFlags bindingAttr) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -322,6 +422,16 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEvent.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.GenericTypeParameterBuilder.GetEvent" target="_top">.NET documentation</a>
+     */
     public EventInfo GetEvent(java.lang.String name, BindingFlags bindingAttr) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -337,6 +447,14 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEvents.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.GenericTypeParameterBuilder.GetEvents" target="_top">.NET documentation</a>
+     */
     public EventInfo[] GetEvents() throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -358,6 +476,15 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEvents.
+     *
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.GenericTypeParameterBuilder.GetEvents" target="_top">.NET documentation</a>
+     */
     public EventInfo[] GetEvents(BindingFlags bindingAttr) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -379,6 +506,16 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetField.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.GenericTypeParameterBuilder.GetField" target="_top">.NET documentation</a>
+     */
     public FieldInfo GetField(java.lang.String name, BindingFlags bindingAttr) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -394,6 +531,15 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFields.
+     *
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.GenericTypeParameterBuilder.GetFields" target="_top">.NET documentation</a>
+     */
     public FieldInfo[] GetFields(BindingFlags bindingAttr) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -415,6 +561,15 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetInterfaceMap.
+     *
+     * @param interfaceType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.GenericTypeParameterBuilder.GetInterfaceMap" target="_top">.NET documentation</a>
+     */
     public InterfaceMapping GetInterfaceMap(NetType interfaceType) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -430,6 +585,17 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMember.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param type the argument of type {@code MemberTypes}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.GenericTypeParameterBuilder.GetMember" target="_top">.NET documentation</a>
+     */
     public MemberInfo[] GetMember(java.lang.String name, MemberTypes type, BindingFlags bindingAttr) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -451,6 +617,15 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMembers.
+     *
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.GenericTypeParameterBuilder.GetMembers" target="_top">.NET documentation</a>
+     */
     public MemberInfo[] GetMembers(BindingFlags bindingAttr) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -472,6 +647,15 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethods.
+     *
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.GenericTypeParameterBuilder.GetMethods" target="_top">.NET documentation</a>
+     */
     public MethodInfo[] GetMethods(BindingFlags bindingAttr) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -493,6 +677,15 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetProperties.
+     *
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.GenericTypeParameterBuilder.GetProperties" target="_top">.NET documentation</a>
+     */
     public PropertyInfo[] GetProperties(BindingFlags bindingAttr) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -514,6 +707,14 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetElementType.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.GenericTypeParameterBuilder.GetElementType" target="_top">.NET documentation</a>
+     */
     public NetType GetElementType() throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -529,6 +730,14 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetGenericTypeDefinition.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.GenericTypeParameterBuilder.GetGenericTypeDefinition" target="_top">.NET documentation</a>
+     */
     public NetType GetGenericTypeDefinition() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -544,6 +753,16 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetInterface.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.GenericTypeParameterBuilder.GetInterface" target="_top">.NET documentation</a>
+     */
     public NetType GetInterface(java.lang.String name, boolean ignoreCase) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -559,6 +778,16 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetNestedType.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.GenericTypeParameterBuilder.GetNestedType" target="_top">.NET documentation</a>
+     */
     public NetType GetNestedType(java.lang.String name, BindingFlags bindingAttr) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -574,6 +803,15 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member MakeArrayType.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.GenericTypeParameterBuilder.MakeArrayType" target="_top">.NET documentation</a>
+     */
     public NetType MakeArrayType() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -589,6 +827,20 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member MakeArrayType.
+     *
+     * @param rank the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.GenericTypeParameterBuilder.MakeArrayType" target="_top">.NET documentation</a>
+     */
     public NetType MakeArrayType(int rank) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -604,6 +856,15 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member MakeByRefType.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.GenericTypeParameterBuilder.MakeByRefType" target="_top">.NET documentation</a>
+     */
     public NetType MakeByRefType() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -619,6 +880,15 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member MakeGenericType.
+     *
+     * @param typeArguments the argument of type {@code NetType...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.GenericTypeParameterBuilder.MakeGenericType" target="_top">.NET documentation</a>
+     */
     public NetType MakeGenericType(NetType... typeArguments) throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -634,6 +904,15 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member MakePointerType.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.GenericTypeParameterBuilder.MakePointerType" target="_top">.NET documentation</a>
+     */
     public NetType MakePointerType() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -649,6 +928,14 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetGenericArguments.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.GenericTypeParameterBuilder.GetGenericArguments" target="_top">.NET documentation</a>
+     */
     public NetType[] GetGenericArguments() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -670,6 +957,14 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetInterfaces.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.GenericTypeParameterBuilder.GetInterfaces" target="_top">.NET documentation</a>
+     */
     public NetType[] GetInterfaces() throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -691,6 +986,15 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetNestedTypes.
+     *
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.GenericTypeParameterBuilder.GetNestedTypes" target="_top">.NET documentation</a>
+     */
     public NetType[] GetNestedTypes(BindingFlags bindingAttr) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -712,6 +1016,19 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetBaseTypeConstraint.
+     *
+     * @param baseTypeConstraint the argument of type {@code NetType}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.GenericTypeParameterBuilder.SetBaseTypeConstraint" target="_top">.NET documentation</a>
+     */
     public void SetBaseTypeConstraint(NetType baseTypeConstraint) throws Throwable, system.NotImplementedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -722,6 +1039,17 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetCustomAttribute.
+     *
+     * @param con the argument of type {@code ConstructorInfo}
+     * @param binaryAttribute the argument of type {@code byte[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.GenericTypeParameterBuilder.SetCustomAttribute" target="_top">.NET documentation</a>
+     */
     public void SetCustomAttribute(ConstructorInfo con, byte[] binaryAttribute) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -732,6 +1060,17 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetCustomAttribute.
+     *
+     * @param dupParam0 the argument of type {@code ConstructorInfo}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.GenericTypeParameterBuilder.SetCustomAttribute" target="_top">.NET documentation</a>
+     */
     public void SetCustomAttribute(ConstructorInfo dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -742,6 +1081,16 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetCustomAttribute.
+     *
+     * @param customBuilder the argument of type {@code CustomAttributeBuilder}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.GenericTypeParameterBuilder.SetCustomAttribute" target="_top">.NET documentation</a>
+     */
     public void SetCustomAttribute(CustomAttributeBuilder customBuilder) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -752,6 +1101,13 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetGenericParameterAttributes.
+     *
+     * @param genericParameterAttributes the argument of type {@code GenericParameterAttributes}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.GenericTypeParameterBuilder.SetGenericParameterAttributes" target="_top">.NET documentation</a>
+     */
     public void SetGenericParameterAttributes(GenericParameterAttributes genericParameterAttributes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -762,6 +1118,19 @@ public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetInterfaceConstraints.
+     *
+     * @param interfaceConstraints the argument of type {@code NetType...}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.GenericTypeParameterBuilder.SetInterfaceConstraints" target="_top">.NET documentation</a>
+     */
     public void SetInterfaceConstraints(NetType... interfaceConstraints) throws Throwable, system.NotImplementedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

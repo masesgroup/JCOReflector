@@ -105,7 +105,10 @@ public class PrintDocument extends system.componentmodel.Component  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PrintDocument(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,16 @@ public class PrintDocument extends system.componentmodel.Component  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Printing.PrintDocument.-ctor" target="_top">.NET documentation</a>
+     */
     public PrintDocument() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +179,26 @@ public class PrintDocument extends system.componentmodel.Component  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Print.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.drawing.printing.InvalidPrinterException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Printing.PrintDocument.Print" target="_top">.NET documentation</a>
+     */
     public void Print() throws Throwable, system.componentmodel.Win32Exception, system.drawing.printing.InvalidPrinterException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidCastException, system.NotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +213,13 @@ public class PrintDocument extends system.componentmodel.Component  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property OriginAtMargins.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Printing.PrintDocument.OriginAtMargins" target="_top">.NET documentation</a>
+     */
     public boolean getOriginAtMargins() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +234,13 @@ public class PrintDocument extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OriginAtMargins.
+     *
+     * @param OriginAtMargins the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Printing.PrintDocument.OriginAtMargins" target="_top">.NET documentation</a>
+     */
     public void setOriginAtMargins(boolean OriginAtMargins) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +251,13 @@ public class PrintDocument extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultPageSettings.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Printing.PrintDocument.DefaultPageSettings" target="_top">.NET documentation</a>
+     */
     public PageSettings getDefaultPageSettings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +273,14 @@ public class PrintDocument extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultPageSettings.
+     *
+     * @param DefaultPageSettings the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Printing.PrintDocument.DefaultPageSettings" target="_top">.NET documentation</a>
+     */
     public void setDefaultPageSettings(PageSettings DefaultPageSettings) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +291,13 @@ public class PrintDocument extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PrintController.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Printing.PrintDocument.PrintController" target="_top">.NET documentation</a>
+     */
     public PrintController getPrintController() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +313,13 @@ public class PrintDocument extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PrintController.
+     *
+     * @param PrintController the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Printing.PrintDocument.PrintController" target="_top">.NET documentation</a>
+     */
     public void setPrintController(PrintController PrintController) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +330,13 @@ public class PrintDocument extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PrinterSettings.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Printing.PrintDocument.PrinterSettings" target="_top">.NET documentation</a>
+     */
     public PrinterSettings getPrinterSettings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +352,17 @@ public class PrintDocument extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PrinterSettings.
+     *
+     * @param PrinterSettings the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Printing.PrintDocument.PrinterSettings" target="_top">.NET documentation</a>
+     */
     public void setPrinterSettings(PrinterSettings PrinterSettings) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +373,13 @@ public class PrintDocument extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DocumentName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Printing.PrintDocument.DocumentName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDocumentName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +394,13 @@ public class PrintDocument extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DocumentName.
+     *
+     * @param DocumentName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Printing.PrintDocument.DocumentName" target="_top">.NET documentation</a>
+     */
     public void setDocumentName(java.lang.String DocumentName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +416,13 @@ public class PrintDocument extends system.componentmodel.Component  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addBeginPrint.
+     *
+     * @param handler the argument of type {@code PrintEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addBeginPrint(PrintEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +433,13 @@ public class PrintDocument extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeBeginPrint.
+     *
+     * @param handler the argument of type {@code PrintEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeBeginPrint(PrintEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -328,6 +450,13 @@ public class PrintDocument extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member addEndPrint.
+     *
+     * @param handler the argument of type {@code PrintEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addEndPrint(PrintEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -338,6 +467,13 @@ public class PrintDocument extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeEndPrint.
+     *
+     * @param handler the argument of type {@code PrintEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeEndPrint(PrintEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +484,13 @@ public class PrintDocument extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member addPrintPage.
+     *
+     * @param handler the argument of type {@code PrintPageEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPrintPage(PrintPageEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -358,6 +501,13 @@ public class PrintDocument extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePrintPage.
+     *
+     * @param handler the argument of type {@code PrintPageEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePrintPage(PrintPageEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -368,6 +518,13 @@ public class PrintDocument extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member addQueryPageSettings.
+     *
+     * @param handler the argument of type {@code QueryPageSettingsEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addQueryPageSettings(QueryPageSettingsEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -378,6 +535,13 @@ public class PrintDocument extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeQueryPageSettings.
+     *
+     * @param handler the argument of type {@code QueryPageSettingsEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeQueryPageSettings(QueryPageSettingsEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

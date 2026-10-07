@@ -98,7 +98,10 @@ public class EntityViewContainer extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EntityViewContainer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,13 @@ public class EntityViewContainer extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ViewCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Mapping.EntityViewContainer.ViewCount" target="_top">.NET documentation</a>
+     */
     public int getViewCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +205,13 @@ public class EntityViewContainer extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ViewCount.
+     *
+     * @param ViewCount the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Mapping.EntityViewContainer.ViewCount" target="_top">.NET documentation</a>
+     */
     public void setViewCount(int ViewCount) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +222,13 @@ public class EntityViewContainer extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EdmEntityContainerName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Mapping.EntityViewContainer.EdmEntityContainerName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getEdmEntityContainerName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +243,13 @@ public class EntityViewContainer extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EdmEntityContainerName.
+     *
+     * @param EdmEntityContainerName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Mapping.EntityViewContainer.EdmEntityContainerName" target="_top">.NET documentation</a>
+     */
     public void setEdmEntityContainerName(java.lang.String EdmEntityContainerName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +260,13 @@ public class EntityViewContainer extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HashOverAllExtentViews.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Mapping.EntityViewContainer.HashOverAllExtentViews" target="_top">.NET documentation</a>
+     */
     public java.lang.String getHashOverAllExtentViews() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +281,13 @@ public class EntityViewContainer extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HashOverAllExtentViews.
+     *
+     * @param HashOverAllExtentViews the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Mapping.EntityViewContainer.HashOverAllExtentViews" target="_top">.NET documentation</a>
+     */
     public void setHashOverAllExtentViews(java.lang.String HashOverAllExtentViews) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +298,13 @@ public class EntityViewContainer extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HashOverMappingClosure.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Mapping.EntityViewContainer.HashOverMappingClosure" target="_top">.NET documentation</a>
+     */
     public java.lang.String getHashOverMappingClosure() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +319,13 @@ public class EntityViewContainer extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HashOverMappingClosure.
+     *
+     * @param HashOverMappingClosure the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Mapping.EntityViewContainer.HashOverMappingClosure" target="_top">.NET documentation</a>
+     */
     public void setHashOverMappingClosure(java.lang.String HashOverMappingClosure) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +336,13 @@ public class EntityViewContainer extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StoreEntityContainerName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Mapping.EntityViewContainer.StoreEntityContainerName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getStoreEntityContainerName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +357,13 @@ public class EntityViewContainer extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StoreEntityContainerName.
+     *
+     * @param StoreEntityContainerName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Mapping.EntityViewContainer.StoreEntityContainerName" target="_top">.NET documentation</a>
+     */
     public void setStoreEntityContainerName(java.lang.String StoreEntityContainerName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

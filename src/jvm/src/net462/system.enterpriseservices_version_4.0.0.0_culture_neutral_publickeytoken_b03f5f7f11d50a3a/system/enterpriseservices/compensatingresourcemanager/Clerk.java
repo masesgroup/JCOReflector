@@ -99,7 +99,10 @@ public class Clerk extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Clerk(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,26 @@ public class Clerk extends NetObject  {
     public Clerk() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param compensator the argument of type {@code java.lang.String}
+     * @param description the argument of type {@code java.lang.String}
+     * @param flags the argument of type {@code CompensatorOptions}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.CompensatingResourceManager.Clerk.-ctor" target="_top">.NET documentation</a>
+     */
     public Clerk(java.lang.String compensator, java.lang.String description, CompensatorOptions flags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.NullReferenceException {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +182,31 @@ public class Clerk extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param compensator the argument of type {@code NetType}
+     * @param description the argument of type {@code java.lang.String}
+     * @param flags the argument of type {@code CompensatorOptions}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.CompensatingResourceManager.Clerk.-ctor" target="_top">.NET documentation</a>
+     */
     public Clerk(NetType compensator, java.lang.String description, CompensatorOptions flags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.remoting.RemotingException, system.OutOfMemoryException, system.NullReferenceException {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +222,12 @@ public class Clerk extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ForceLog.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.CompensatingResourceManager.Clerk.ForceLog" target="_top">.NET documentation</a>
+     */
     public void ForceLog() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +238,12 @@ public class Clerk extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ForceTransactionToAbort.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.CompensatingResourceManager.Clerk.ForceTransactionToAbort" target="_top">.NET documentation</a>
+     */
     public void ForceTransactionToAbort() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +254,12 @@ public class Clerk extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ForgetLogRecord.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.CompensatingResourceManager.Clerk.ForgetLogRecord" target="_top">.NET documentation</a>
+     */
     public void ForgetLogRecord() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +270,24 @@ public class Clerk extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteLogRecord.
+     *
+     * @param record the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.CompensatingResourceManager.Clerk.WriteLogRecord" target="_top">.NET documentation</a>
+     */
     public void WriteLogRecord(NetObject record) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.InvalidOperationException, system.security.SecurityException, system.NullReferenceException, system.IndexOutOfRangeException, system.UnauthorizedAccessException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +302,13 @@ public class Clerk extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property LogRecordCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.CompensatingResourceManager.Clerk.LogRecordCount" target="_top">.NET documentation</a>
+     */
     public int getLogRecordCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +349,15 @@ public class Clerk extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TransactionUOW.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.CompensatingResourceManager.Clerk.TransactionUOW" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTransactionUOW() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

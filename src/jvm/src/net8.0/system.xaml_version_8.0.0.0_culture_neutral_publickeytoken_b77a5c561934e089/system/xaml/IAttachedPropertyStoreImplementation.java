@@ -100,7 +100,10 @@ public class IAttachedPropertyStoreImplementation extends NetObject implements I
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IAttachedPropertyStoreImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,14 @@ public class IAttachedPropertyStoreImplementation extends NetObject implements I
 
     // Methods section
     
+    /**
+     * Invokes the .NET member RemoveProperty.
+     *
+     * @param attachableMemberIdentifier the argument of type {@code AttachableMemberIdentifier}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.IAttachedPropertyStore.RemoveProperty" target="_top">.NET documentation</a>
+     */
     public boolean RemoveProperty(AttachableMemberIdentifier attachableMemberIdentifier) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -156,6 +167,15 @@ public class IAttachedPropertyStoreImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetProperty.
+     *
+     * @param attachableMemberIdentifier the argument of type {@code AttachableMemberIdentifier}
+     * @param value the argument of type {@code JCORefOut<NetObject>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.IAttachedPropertyStore.TryGetProperty" target="_top">.NET documentation</a>
+     */
     public boolean TryGetProperty(AttachableMemberIdentifier attachableMemberIdentifier, JCORefOut<NetObject> value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +190,14 @@ public class IAttachedPropertyStoreImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Invokes the .NET member CopyPropertiesTo.
+     *
+     * @param array the argument of type {@code KeyValuePair_2[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.IAttachedPropertyStore.CopyPropertiesTo" target="_top">.NET documentation</a>
+     */
     public void CopyPropertiesTo(KeyValuePair_2[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +208,14 @@ public class IAttachedPropertyStoreImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Invokes the .NET member SetProperty.
+     *
+     * @param attachableMemberIdentifier the argument of type {@code AttachableMemberIdentifier}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.IAttachedPropertyStore.SetProperty" target="_top">.NET documentation</a>
+     */
     public void SetProperty(AttachableMemberIdentifier attachableMemberIdentifier, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +230,13 @@ public class IAttachedPropertyStoreImplementation extends NetObject implements I
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PropertyCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.IAttachedPropertyStore.PropertyCount" target="_top">.NET documentation</a>
+     */
     public int getPropertyCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

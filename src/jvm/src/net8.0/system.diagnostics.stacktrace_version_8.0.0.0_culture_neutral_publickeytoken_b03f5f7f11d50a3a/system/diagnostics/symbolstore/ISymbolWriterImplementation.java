@@ -105,7 +105,10 @@ public class ISymbolWriterImplementation extends NetObject implements ISymbolWri
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ISymbolWriterImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,14 @@ public class ISymbolWriterImplementation extends NetObject implements ISymbolWri
 
     // Methods section
     
+    /**
+     * Invokes the .NET member OpenScope.
+     *
+     * @param startOffset the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolWriter.OpenScope" target="_top">.NET documentation</a>
+     */
     public int OpenScope(int startOffset) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +198,17 @@ public class ISymbolWriterImplementation extends NetObject implements ISymbolWri
         }
     }
 
+    /**
+     * Invokes the .NET member DefineDocument.
+     *
+     * @param url the argument of type {@code java.lang.String}
+     * @param language the argument of type {@code Guid}
+     * @param languageVendor the argument of type {@code Guid}
+     * @param documentType the argument of type {@code Guid}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolWriter.DefineDocument" target="_top">.NET documentation</a>
+     */
     public ISymbolDocumentWriter DefineDocument(java.lang.String url, Guid language, Guid languageVendor, Guid documentType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +224,12 @@ public class ISymbolWriterImplementation extends NetObject implements ISymbolWri
         }
     }
 
+    /**
+     * Invokes the .NET member Close.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolWriter.Close" target="_top">.NET documentation</a>
+     */
     public void Close() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +240,12 @@ public class ISymbolWriterImplementation extends NetObject implements ISymbolWri
         }
     }
 
+    /**
+     * Invokes the .NET member CloseMethod.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolWriter.CloseMethod" target="_top">.NET documentation</a>
+     */
     public void CloseMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +256,12 @@ public class ISymbolWriterImplementation extends NetObject implements ISymbolWri
         }
     }
 
+    /**
+     * Invokes the .NET member CloseNamespace.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolWriter.CloseNamespace" target="_top">.NET documentation</a>
+     */
     public void CloseNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +272,13 @@ public class ISymbolWriterImplementation extends NetObject implements ISymbolWri
         }
     }
 
+    /**
+     * Invokes the .NET member CloseScope.
+     *
+     * @param endOffset the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolWriter.CloseScope" target="_top">.NET documentation</a>
+     */
     public void CloseScope(int endOffset) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +289,20 @@ public class ISymbolWriterImplementation extends NetObject implements ISymbolWri
         }
     }
 
+    /**
+     * Invokes the .NET member DefineField.
+     *
+     * @param parent the argument of type {@code SymbolToken}
+     * @param name the argument of type {@code java.lang.String}
+     * @param attributes the argument of type {@code FieldAttributes}
+     * @param signature the argument of type {@code byte[]}
+     * @param addrKind the argument of type {@code SymAddressKind}
+     * @param addr1 the argument of type {@code int}
+     * @param addr2 the argument of type {@code int}
+     * @param addr3 the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolWriter.DefineField" target="_top">.NET documentation</a>
+     */
     public void DefineField(SymbolToken parent, java.lang.String name, FieldAttributes attributes, byte[] signature, SymAddressKind addrKind, int addr1, int addr2, int addr3) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +313,20 @@ public class ISymbolWriterImplementation extends NetObject implements ISymbolWri
         }
     }
 
+    /**
+     * Invokes the .NET member DefineField.
+     *
+     * @param dupParam0 the argument of type {@code SymbolToken}
+     * @param dupParam1 the argument of type {@code java.lang.String}
+     * @param dupParam2 the argument of type {@code FieldAttributes}
+     * @param dupParam3 the argument of type {@code JCORefOut}
+     * @param dupParam4 the argument of type {@code SymAddressKind}
+     * @param dupParam5 the argument of type {@code int}
+     * @param dupParam6 the argument of type {@code int}
+     * @param dupParam7 the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolWriter.DefineField" target="_top">.NET documentation</a>
+     */
     public void DefineField(SymbolToken dupParam0, java.lang.String dupParam1, FieldAttributes dupParam2, JCORefOut dupParam3, SymAddressKind dupParam4, int dupParam5, int dupParam6, int dupParam7) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +337,19 @@ public class ISymbolWriterImplementation extends NetObject implements ISymbolWri
         }
     }
 
+    /**
+     * Invokes the .NET member DefineGlobalVariable.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param attributes the argument of type {@code FieldAttributes}
+     * @param signature the argument of type {@code byte[]}
+     * @param addrKind the argument of type {@code SymAddressKind}
+     * @param addr1 the argument of type {@code int}
+     * @param addr2 the argument of type {@code int}
+     * @param addr3 the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolWriter.DefineGlobalVariable" target="_top">.NET documentation</a>
+     */
     public void DefineGlobalVariable(java.lang.String name, FieldAttributes attributes, byte[] signature, SymAddressKind addrKind, int addr1, int addr2, int addr3) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +360,19 @@ public class ISymbolWriterImplementation extends NetObject implements ISymbolWri
         }
     }
 
+    /**
+     * Invokes the .NET member DefineGlobalVariable.
+     *
+     * @param dupParam0 the argument of type {@code java.lang.String}
+     * @param dupParam1 the argument of type {@code FieldAttributes}
+     * @param dupParam2 the argument of type {@code JCORefOut}
+     * @param dupParam3 the argument of type {@code SymAddressKind}
+     * @param dupParam4 the argument of type {@code int}
+     * @param dupParam5 the argument of type {@code int}
+     * @param dupParam6 the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolWriter.DefineGlobalVariable" target="_top">.NET documentation</a>
+     */
     public void DefineGlobalVariable(java.lang.String dupParam0, FieldAttributes dupParam1, JCORefOut dupParam2, SymAddressKind dupParam3, int dupParam4, int dupParam5, int dupParam6) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +383,21 @@ public class ISymbolWriterImplementation extends NetObject implements ISymbolWri
         }
     }
 
+    /**
+     * Invokes the .NET member DefineLocalVariable.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param attributes the argument of type {@code FieldAttributes}
+     * @param signature the argument of type {@code byte[]}
+     * @param addrKind the argument of type {@code SymAddressKind}
+     * @param addr1 the argument of type {@code int}
+     * @param addr2 the argument of type {@code int}
+     * @param addr3 the argument of type {@code int}
+     * @param startOffset the argument of type {@code int}
+     * @param endOffset the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolWriter.DefineLocalVariable" target="_top">.NET documentation</a>
+     */
     public void DefineLocalVariable(java.lang.String name, FieldAttributes attributes, byte[] signature, SymAddressKind addrKind, int addr1, int addr2, int addr3, int startOffset, int endOffset) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +408,21 @@ public class ISymbolWriterImplementation extends NetObject implements ISymbolWri
         }
     }
 
+    /**
+     * Invokes the .NET member DefineLocalVariable.
+     *
+     * @param dupParam0 the argument of type {@code java.lang.String}
+     * @param dupParam1 the argument of type {@code FieldAttributes}
+     * @param dupParam2 the argument of type {@code JCORefOut}
+     * @param dupParam3 the argument of type {@code SymAddressKind}
+     * @param dupParam4 the argument of type {@code int}
+     * @param dupParam5 the argument of type {@code int}
+     * @param dupParam6 the argument of type {@code int}
+     * @param dupParam7 the argument of type {@code int}
+     * @param dupParam8 the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolWriter.DefineLocalVariable" target="_top">.NET documentation</a>
+     */
     public void DefineLocalVariable(java.lang.String dupParam0, FieldAttributes dupParam1, JCORefOut dupParam2, SymAddressKind dupParam3, int dupParam4, int dupParam5, int dupParam6, int dupParam7, int dupParam8) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -302,6 +433,19 @@ public class ISymbolWriterImplementation extends NetObject implements ISymbolWri
         }
     }
 
+    /**
+     * Invokes the .NET member DefineParameter.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param attributes the argument of type {@code ParameterAttributes}
+     * @param sequence the argument of type {@code int}
+     * @param addrKind the argument of type {@code SymAddressKind}
+     * @param addr1 the argument of type {@code int}
+     * @param addr2 the argument of type {@code int}
+     * @param addr3 the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolWriter.DefineParameter" target="_top">.NET documentation</a>
+     */
     public void DefineParameter(java.lang.String name, ParameterAttributes attributes, int sequence, SymAddressKind addrKind, int addr1, int addr2, int addr3) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -312,6 +456,18 @@ public class ISymbolWriterImplementation extends NetObject implements ISymbolWri
         }
     }
 
+    /**
+     * Invokes the .NET member DefineSequencePoints.
+     *
+     * @param document the argument of type {@code ISymbolDocumentWriter}
+     * @param offsets the argument of type {@code int[]}
+     * @param lines the argument of type {@code int[]}
+     * @param columns the argument of type {@code int[]}
+     * @param endLines the argument of type {@code int[]}
+     * @param endColumns the argument of type {@code int[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolWriter.DefineSequencePoints" target="_top">.NET documentation</a>
+     */
     public void DefineSequencePoints(ISymbolDocumentWriter document, int[] offsets, int[] lines, int[] columns, int[] endLines, int[] endColumns) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -322,6 +478,18 @@ public class ISymbolWriterImplementation extends NetObject implements ISymbolWri
         }
     }
 
+    /**
+     * Invokes the .NET member DefineSequencePoints.
+     *
+     * @param dupParam0 the argument of type {@code ISymbolDocumentWriter}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @param dupParam2 the argument of type {@code JCORefOut}
+     * @param dupParam3 the argument of type {@code JCORefOut}
+     * @param dupParam4 the argument of type {@code JCORefOut}
+     * @param dupParam5 the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolWriter.DefineSequencePoints" target="_top">.NET documentation</a>
+     */
     public void DefineSequencePoints(ISymbolDocumentWriter dupParam0, JCORefOut dupParam1, JCORefOut dupParam2, JCORefOut dupParam3, JCORefOut dupParam4, JCORefOut dupParam5) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -332,6 +500,13 @@ public class ISymbolWriterImplementation extends NetObject implements ISymbolWri
         }
     }
 
+    /**
+     * Invokes the .NET member OpenMethod.
+     *
+     * @param method the argument of type {@code SymbolToken}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolWriter.OpenMethod" target="_top">.NET documentation</a>
+     */
     public void OpenMethod(SymbolToken method) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -342,6 +517,13 @@ public class ISymbolWriterImplementation extends NetObject implements ISymbolWri
         }
     }
 
+    /**
+     * Invokes the .NET member OpenNamespace.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolWriter.OpenNamespace" target="_top">.NET documentation</a>
+     */
     public void OpenNamespace(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -352,6 +534,18 @@ public class ISymbolWriterImplementation extends NetObject implements ISymbolWri
         }
     }
 
+    /**
+     * Invokes the .NET member SetMethodSourceRange.
+     *
+     * @param startDoc the argument of type {@code ISymbolDocumentWriter}
+     * @param startLine the argument of type {@code int}
+     * @param startColumn the argument of type {@code int}
+     * @param endDoc the argument of type {@code ISymbolDocumentWriter}
+     * @param endLine the argument of type {@code int}
+     * @param endColumn the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolWriter.SetMethodSourceRange" target="_top">.NET documentation</a>
+     */
     public void SetMethodSourceRange(ISymbolDocumentWriter startDoc, int startLine, int startColumn, ISymbolDocumentWriter endDoc, int endLine, int endColumn) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -362,6 +556,15 @@ public class ISymbolWriterImplementation extends NetObject implements ISymbolWri
         }
     }
 
+    /**
+     * Invokes the .NET member SetScopeRange.
+     *
+     * @param scopeID the argument of type {@code int}
+     * @param startOffset the argument of type {@code int}
+     * @param endOffset the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolWriter.SetScopeRange" target="_top">.NET documentation</a>
+     */
     public void SetScopeRange(int scopeID, int startOffset, int endOffset) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -372,6 +575,15 @@ public class ISymbolWriterImplementation extends NetObject implements ISymbolWri
         }
     }
 
+    /**
+     * Invokes the .NET member SetSymAttribute.
+     *
+     * @param parent the argument of type {@code SymbolToken}
+     * @param name the argument of type {@code java.lang.String}
+     * @param data the argument of type {@code byte[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolWriter.SetSymAttribute" target="_top">.NET documentation</a>
+     */
     public void SetSymAttribute(SymbolToken parent, java.lang.String name, byte[] data) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -382,6 +594,15 @@ public class ISymbolWriterImplementation extends NetObject implements ISymbolWri
         }
     }
 
+    /**
+     * Invokes the .NET member SetSymAttribute.
+     *
+     * @param dupParam0 the argument of type {@code SymbolToken}
+     * @param dupParam1 the argument of type {@code java.lang.String}
+     * @param dupParam2 the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolWriter.SetSymAttribute" target="_top">.NET documentation</a>
+     */
     public void SetSymAttribute(SymbolToken dupParam0, java.lang.String dupParam1, JCORefOut dupParam2) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -392,6 +613,13 @@ public class ISymbolWriterImplementation extends NetObject implements ISymbolWri
         }
     }
 
+    /**
+     * Invokes the .NET member SetUserEntryPoint.
+     *
+     * @param entryMethod the argument of type {@code SymbolToken}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolWriter.SetUserEntryPoint" target="_top">.NET documentation</a>
+     */
     public void SetUserEntryPoint(SymbolToken entryMethod) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -402,6 +630,13 @@ public class ISymbolWriterImplementation extends NetObject implements ISymbolWri
         }
     }
 
+    /**
+     * Invokes the .NET member UsingNamespace.
+     *
+     * @param fullName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolWriter.UsingNamespace" target="_top">.NET documentation</a>
+     */
     public void UsingNamespace(java.lang.String fullName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

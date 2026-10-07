@@ -103,7 +103,10 @@ public class CustomAttributeBuilder extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CustomAttributeBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,26 @@ public class CustomAttributeBuilder extends NetObject  {
     public CustomAttributeBuilder() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param con the argument of type {@code ConstructorInfo}
+     * @param constructorArgs the argument of type {@code NetObject[]}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.CustomAttributeBuilder.-ctor" target="_top">.NET documentation</a>
+     */
     public CustomAttributeBuilder(ConstructorInfo con, NetObject[] constructorArgs) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException, system.NotImplementedException {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +186,28 @@ public class CustomAttributeBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param con the argument of type {@code ConstructorInfo}
+     * @param constructorArgs the argument of type {@code NetObject[]}
+     * @param namedFields the argument of type {@code FieldInfo[]}
+     * @param fieldValues the argument of type {@code NetObject[]}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.CustomAttributeBuilder.-ctor" target="_top">.NET documentation</a>
+     */
     public CustomAttributeBuilder(ConstructorInfo con, NetObject[] constructorArgs, FieldInfo[] namedFields, NetObject[] fieldValues) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException, system.NotImplementedException {
         try {
             // add reference to assemblyName.dll file
@@ -173,6 +218,28 @@ public class CustomAttributeBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param con the argument of type {@code ConstructorInfo}
+     * @param constructorArgs the argument of type {@code NetObject[]}
+     * @param namedProperties the argument of type {@code PropertyInfo[]}
+     * @param propertyValues the argument of type {@code NetObject[]}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.CustomAttributeBuilder.-ctor" target="_top">.NET documentation</a>
+     */
     public CustomAttributeBuilder(ConstructorInfo con, NetObject[] constructorArgs, PropertyInfo[] namedProperties, NetObject[] propertyValues) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException, system.NotImplementedException {
         try {
             // add reference to assemblyName.dll file
@@ -183,6 +250,30 @@ public class CustomAttributeBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param con the argument of type {@code ConstructorInfo}
+     * @param constructorArgs the argument of type {@code NetObject[]}
+     * @param namedProperties the argument of type {@code PropertyInfo[]}
+     * @param propertyValues the argument of type {@code NetObject[]}
+     * @param namedFields the argument of type {@code FieldInfo[]}
+     * @param fieldValues the argument of type {@code NetObject[]}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.CustomAttributeBuilder.-ctor" target="_top">.NET documentation</a>
+     */
     public CustomAttributeBuilder(ConstructorInfo con, NetObject[] constructorArgs, PropertyInfo[] namedProperties, NetObject[] propertyValues, FieldInfo[] namedFields, NetObject[] fieldValues) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException, system.NotImplementedException {
         try {
             // add reference to assemblyName.dll file
@@ -201,8 +292,12 @@ public class CustomAttributeBuilder extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static To_CustomAttributeBuilder method available in _CustomAttributeBuilder to obtain an object with an invocable method
+     *
+     * @param pcTInfo the argument of type {@code JCORefOut<UInt32>}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._CustomAttributeBuilder.GetTypeInfoCount" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_CustomAttributeBuilder to obtain the full interface.");
     }

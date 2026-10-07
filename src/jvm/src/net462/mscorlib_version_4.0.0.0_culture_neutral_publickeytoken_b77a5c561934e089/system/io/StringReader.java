@@ -100,7 +100,10 @@ public class StringReader extends system.io.TextReader  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public StringReader(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class StringReader extends system.io.TextReader  {
     public StringReader() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.StringReader.-ctor" target="_top">.NET documentation</a>
+     */
     public StringReader(java.lang.String s) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +176,14 @@ public class StringReader extends system.io.TextReader  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Peek.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.StringReader.Peek" target="_top">.NET documentation</a>
+     */
     public int Peek() throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +224,14 @@ public class StringReader extends system.io.TextReader  {
         }
     }
 
+    /**
+     * Invokes the .NET member Read.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.StringReader.Read" target="_top">.NET documentation</a>
+     */
     public int Read() throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +272,20 @@ public class StringReader extends system.io.TextReader  {
         }
     }
 
+    /**
+     * Invokes the .NET member Read.
+     *
+     * @param buffer the argument of type {@code JCORefOut}
+     * @param index the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.StringReader.Read" target="_top">.NET documentation</a>
+     */
     public int Read(JCORefOut buffer, int index, int count) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -285,6 +326,15 @@ public class StringReader extends system.io.TextReader  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReadLine.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.StringReader.ReadLine" target="_top">.NET documentation</a>
+     */
     public java.lang.String ReadLine() throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -299,6 +349,15 @@ public class StringReader extends system.io.TextReader  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReadToEnd.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.StringReader.ReadToEnd" target="_top">.NET documentation</a>
+     */
     public java.lang.String ReadToEnd() throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -313,6 +372,19 @@ public class StringReader extends system.io.TextReader  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReadAsync.
+     *
+     * @param buffer the argument of type {@code char[]}
+     * @param index the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.StringReader.ReadAsync" target="_top">.NET documentation</a>
+     */
     public Task_1 ReadAsync(char[] buffer, int index, int count) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -328,6 +400,19 @@ public class StringReader extends system.io.TextReader  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReadAsync.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.StringReader.ReadAsync" target="_top">.NET documentation</a>
+     */
     public Task_1 ReadAsync(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -343,6 +428,19 @@ public class StringReader extends system.io.TextReader  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReadBlockAsync.
+     *
+     * @param buffer the argument of type {@code char[]}
+     * @param index the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.StringReader.ReadBlockAsync" target="_top">.NET documentation</a>
+     */
     public Task_1 ReadBlockAsync(char[] buffer, int index, int count) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -358,6 +456,19 @@ public class StringReader extends system.io.TextReader  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReadBlockAsync.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.StringReader.ReadBlockAsync" target="_top">.NET documentation</a>
+     */
     public Task_1 ReadBlockAsync(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -373,6 +484,16 @@ public class StringReader extends system.io.TextReader  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReadLineAsync.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.StringReader.ReadLineAsync" target="_top">.NET documentation</a>
+     */
     public Task_1 ReadLineAsync() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -388,6 +509,19 @@ public class StringReader extends system.io.TextReader  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReadToEndAsync.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.StringReader.ReadToEndAsync" target="_top">.NET documentation</a>
+     */
     public Task_1 ReadToEndAsync() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -403,6 +537,12 @@ public class StringReader extends system.io.TextReader  {
         }
     }
 
+    /**
+     * Invokes the .NET member Close.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.StringReader.Close" target="_top">.NET documentation</a>
+     */
     public void Close() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

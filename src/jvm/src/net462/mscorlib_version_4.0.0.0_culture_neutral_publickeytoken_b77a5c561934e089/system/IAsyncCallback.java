@@ -53,5 +53,10 @@ import system.IAsyncResultImplementation;
  * @version 2.0.0.0
  */
 public interface IAsyncCallback {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param ar the .NET argument of type {@code System.IAsyncResult}
+     */
     public void Invoke(IAsyncResult ar);
 }

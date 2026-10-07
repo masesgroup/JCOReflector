@@ -108,7 +108,10 @@ public class Activator extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Activator(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -163,6 +166,22 @@ public class Activator extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateInstance.
+     *
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activator.CreateInstance" target="_top">.NET documentation</a>
+     */
     public static NetObject CreateInstance(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -178,6 +197,24 @@ public class Activator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstance.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param nonPublic the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activator.CreateInstance" target="_top">.NET documentation</a>
+     */
     public static NetObject CreateInstance(NetType type, boolean nonPublic) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.MissingMethodException, system.security.SecurityException, system.reflection.TargetInvocationException, system.NotImplementedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -193,6 +230,22 @@ public class Activator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstance.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param args the argument of type {@code NetObject...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activator.CreateInstance" target="_top">.NET documentation</a>
+     */
     public static NetObject CreateInstance(NetType type, NetObject... args) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.MissingMethodException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -208,6 +261,23 @@ public class Activator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstance.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param args the argument of type {@code NetObject[]}
+     * @param activationAttributes the argument of type {@code NetObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activator.CreateInstance" target="_top">.NET documentation</a>
+     */
     public static NetObject CreateInstance(NetType type, NetObject[] args, NetObject[] activationAttributes) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.MissingMethodException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -223,6 +293,25 @@ public class Activator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstance.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param args the argument of type {@code NetObject[]}
+     * @param culture the argument of type {@code CultureInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activator.CreateInstance" target="_top">.NET documentation</a>
+     */
     public static NetObject CreateInstance(NetType type, BindingFlags bindingAttr, Binder binder, NetObject[] args, CultureInfo culture) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.MissingMethodException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -238,6 +327,27 @@ public class Activator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstance.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param args the argument of type {@code NetObject[]}
+     * @param culture the argument of type {@code CultureInfo}
+     * @param activationAttributes the argument of type {@code NetObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activator.CreateInstance" target="_top">.NET documentation</a>
+     */
     public static NetObject CreateInstance(NetType type, BindingFlags bindingAttr, Binder binder, NetObject[] args, CultureInfo culture, NetObject[] activationAttributes) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -253,6 +363,27 @@ public class Activator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetObject.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param url the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activator.GetObject" target="_top">.NET documentation</a>
+     */
     public static NetObject GetObject(NetType type, java.lang.String url) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.runtime.remoting.RemotingException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -268,6 +399,27 @@ public class Activator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetObject.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param url the argument of type {@code java.lang.String}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activator.GetObject" target="_top">.NET documentation</a>
+     */
     public static NetObject GetObject(NetType type, java.lang.String url, NetObject state) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.runtime.remoting.RemotingException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -283,6 +435,28 @@ public class Activator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateComInstanceFrom.
+     *
+     * @param assemblyName the argument of type {@code java.lang.String}
+     * @param typeName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activator.CreateComInstanceFrom" target="_top">.NET documentation</a>
+     */
     public static ObjectHandle CreateComInstanceFrom(java.lang.String assemblyName, java.lang.String typeName) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.FormatException, system.TypeLoadException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -298,6 +472,31 @@ public class Activator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateComInstanceFrom.
+     *
+     * @param assemblyName the argument of type {@code java.lang.String}
+     * @param typeName the argument of type {@code java.lang.String}
+     * @param hashValue the argument of type {@code byte[]}
+     * @param hashAlgorithm the argument of type {@code AssemblyHashAlgorithm}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activator.CreateComInstanceFrom" target="_top">.NET documentation</a>
+     */
     public static ObjectHandle CreateComInstanceFrom(java.lang.String assemblyName, java.lang.String typeName, byte[] hashValue, AssemblyHashAlgorithm hashAlgorithm) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.TypeLoadException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -313,6 +512,31 @@ public class Activator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateComInstanceFrom.
+     *
+     * @param dupParam0 the argument of type {@code java.lang.String}
+     * @param dupParam1 the argument of type {@code java.lang.String}
+     * @param dupParam2 the argument of type {@code JCORefOut}
+     * @param dupParam3 the argument of type {@code AssemblyHashAlgorithm}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activator.CreateComInstanceFrom" target="_top">.NET documentation</a>
+     */
     public static ObjectHandle CreateComInstanceFrom(java.lang.String dupParam0, java.lang.String dupParam1, JCORefOut dupParam2, AssemblyHashAlgorithm dupParam3) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.TypeLoadException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -328,6 +552,30 @@ public class Activator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstance.
+     *
+     * @param activationContext the argument of type {@code ActivationContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.security.policy.PolicyException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activator.CreateInstance" target="_top">.NET documentation</a>
+     */
     public static ObjectHandle CreateInstance(ActivationContext activationContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.io.PathTooLongException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.NotImplementedException, system.MemberAccessException, system.security.policy.PolicyException, system.OverflowException, system.RankException, system.NullReferenceException, system.runtime.remoting.RemotingException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -343,6 +591,38 @@ public class Activator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstance.
+     *
+     * @param activationContext the argument of type {@code ActivationContext}
+     * @param activationCustomData the argument of type {@code java.lang.String[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.security.policy.PolicyException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.reflection.TargetParameterCountException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activator.CreateInstance" target="_top">.NET documentation</a>
+     */
     public static ObjectHandle CreateInstance(ActivationContext activationContext, java.lang.String[] activationCustomData) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.NotImplementedException, system.OutOfMemoryException, system.MemberAccessException, system.security.policy.PolicyException, system.OverflowException, system.RankException, system.reflection.TargetParameterCountException, system.runtime.remoting.RemotingException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -358,6 +638,38 @@ public class Activator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstance.
+     *
+     * @param dupParam0 the argument of type {@code ActivationContext}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.security.policy.PolicyException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.reflection.TargetParameterCountException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activator.CreateInstance" target="_top">.NET documentation</a>
+     */
     public static ObjectHandle CreateInstance(ActivationContext dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.NotImplementedException, system.OutOfMemoryException, system.MemberAccessException, system.security.policy.PolicyException, system.OverflowException, system.RankException, system.reflection.TargetParameterCountException, system.runtime.remoting.RemotingException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -373,6 +685,28 @@ public class Activator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstance.
+     *
+     * @param domain the argument of type {@code AppDomain}
+     * @param assemblyName the argument of type {@code java.lang.String}
+     * @param typeName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activator.CreateInstance" target="_top">.NET documentation</a>
+     */
     public static ObjectHandle CreateInstance(AppDomain domain, java.lang.String assemblyName, java.lang.String typeName) throws Throwable, system.ArgumentNullException, system.security.SecurityException, system.NullReferenceException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.TypeLoadException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -388,6 +722,34 @@ public class Activator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstance.
+     *
+     * @param domain the argument of type {@code AppDomain}
+     * @param assemblyName the argument of type {@code java.lang.String}
+     * @param typeName the argument of type {@code java.lang.String}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param args the argument of type {@code NetObject[]}
+     * @param culture the argument of type {@code CultureInfo}
+     * @param activationAttributes the argument of type {@code NetObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activator.CreateInstance" target="_top">.NET documentation</a>
+     */
     public static ObjectHandle CreateInstance(AppDomain domain, java.lang.String assemblyName, java.lang.String typeName, boolean ignoreCase, BindingFlags bindingAttr, Binder binder, NetObject[] args, CultureInfo culture, NetObject[] activationAttributes) throws Throwable, system.ArgumentNullException, system.security.SecurityException, system.NullReferenceException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.TypeLoadException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -403,6 +765,35 @@ public class Activator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstance.
+     *
+     * @param domain the argument of type {@code AppDomain}
+     * @param assemblyName the argument of type {@code java.lang.String}
+     * @param typeName the argument of type {@code java.lang.String}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param args the argument of type {@code NetObject[]}
+     * @param culture the argument of type {@code CultureInfo}
+     * @param activationAttributes the argument of type {@code NetObject[]}
+     * @param securityAttributes the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activator.CreateInstance" target="_top">.NET documentation</a>
+     */
     public static ObjectHandle CreateInstance(AppDomain domain, java.lang.String assemblyName, java.lang.String typeName, boolean ignoreCase, BindingFlags bindingAttr, Binder binder, NetObject[] args, CultureInfo culture, NetObject[] activationAttributes, Evidence securityAttributes) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.ArgumentException, system.IndexOutOfRangeException, system.TypeLoadException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -418,6 +809,28 @@ public class Activator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstance.
+     *
+     * @param assemblyName the argument of type {@code java.lang.String}
+     * @param typeName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activator.CreateInstance" target="_top">.NET documentation</a>
+     */
     public static ObjectHandle CreateInstance(java.lang.String assemblyName, java.lang.String typeName) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -433,6 +846,34 @@ public class Activator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstance.
+     *
+     * @param assemblyName the argument of type {@code java.lang.String}
+     * @param typeName the argument of type {@code java.lang.String}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param args the argument of type {@code NetObject[]}
+     * @param culture the argument of type {@code CultureInfo}
+     * @param activationAttributes the argument of type {@code NetObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activator.CreateInstance" target="_top">.NET documentation</a>
+     */
     public static ObjectHandle CreateInstance(java.lang.String assemblyName, java.lang.String typeName, boolean ignoreCase, BindingFlags bindingAttr, Binder binder, NetObject[] args, CultureInfo culture, NetObject[] activationAttributes) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -448,6 +889,35 @@ public class Activator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstance.
+     *
+     * @param assemblyName the argument of type {@code java.lang.String}
+     * @param typeName the argument of type {@code java.lang.String}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param args the argument of type {@code NetObject[]}
+     * @param culture the argument of type {@code CultureInfo}
+     * @param activationAttributes the argument of type {@code NetObject[]}
+     * @param securityInfo the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activator.CreateInstance" target="_top">.NET documentation</a>
+     */
     public static ObjectHandle CreateInstance(java.lang.String assemblyName, java.lang.String typeName, boolean ignoreCase, BindingFlags bindingAttr, Binder binder, NetObject[] args, CultureInfo culture, NetObject[] activationAttributes, Evidence securityInfo) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -463,6 +933,29 @@ public class Activator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstance.
+     *
+     * @param assemblyName the argument of type {@code java.lang.String}
+     * @param typeName the argument of type {@code java.lang.String}
+     * @param activationAttributes the argument of type {@code NetObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activator.CreateInstance" target="_top">.NET documentation</a>
+     */
     public static ObjectHandle CreateInstance(java.lang.String assemblyName, java.lang.String typeName, NetObject[] activationAttributes) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -478,6 +971,25 @@ public class Activator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstanceFrom.
+     *
+     * @param domain the argument of type {@code AppDomain}
+     * @param assemblyFile the argument of type {@code java.lang.String}
+     * @param typeName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activator.CreateInstanceFrom" target="_top">.NET documentation</a>
+     */
     public static ObjectHandle CreateInstanceFrom(AppDomain domain, java.lang.String assemblyFile, java.lang.String typeName) throws Throwable, system.ArgumentNullException, system.security.SecurityException, system.NullReferenceException, system.NotSupportedException, system.NotImplementedException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -493,6 +1005,33 @@ public class Activator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstanceFrom.
+     *
+     * @param domain the argument of type {@code AppDomain}
+     * @param assemblyFile the argument of type {@code java.lang.String}
+     * @param typeName the argument of type {@code java.lang.String}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param args the argument of type {@code NetObject[]}
+     * @param culture the argument of type {@code CultureInfo}
+     * @param activationAttributes the argument of type {@code NetObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activator.CreateInstanceFrom" target="_top">.NET documentation</a>
+     */
     public static ObjectHandle CreateInstanceFrom(AppDomain domain, java.lang.String assemblyFile, java.lang.String typeName, boolean ignoreCase, BindingFlags bindingAttr, Binder binder, NetObject[] args, CultureInfo culture, NetObject[] activationAttributes) throws Throwable, system.ArgumentNullException, system.security.SecurityException, system.NullReferenceException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -508,6 +1047,34 @@ public class Activator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstanceFrom.
+     *
+     * @param domain the argument of type {@code AppDomain}
+     * @param assemblyFile the argument of type {@code java.lang.String}
+     * @param typeName the argument of type {@code java.lang.String}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param args the argument of type {@code NetObject[]}
+     * @param culture the argument of type {@code CultureInfo}
+     * @param activationAttributes the argument of type {@code NetObject[]}
+     * @param securityAttributes the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activator.CreateInstanceFrom" target="_top">.NET documentation</a>
+     */
     public static ObjectHandle CreateInstanceFrom(AppDomain domain, java.lang.String assemblyFile, java.lang.String typeName, boolean ignoreCase, BindingFlags bindingAttr, Binder binder, NetObject[] args, CultureInfo culture, NetObject[] activationAttributes, Evidence securityAttributes) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -523,6 +1090,20 @@ public class Activator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstanceFrom.
+     *
+     * @param assemblyFile the argument of type {@code java.lang.String}
+     * @param typeName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activator.CreateInstanceFrom" target="_top">.NET documentation</a>
+     */
     public static ObjectHandle CreateInstanceFrom(java.lang.String assemblyFile, java.lang.String typeName) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -538,6 +1119,33 @@ public class Activator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstanceFrom.
+     *
+     * @param assemblyFile the argument of type {@code java.lang.String}
+     * @param typeName the argument of type {@code java.lang.String}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param args the argument of type {@code NetObject[]}
+     * @param culture the argument of type {@code CultureInfo}
+     * @param activationAttributes the argument of type {@code NetObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activator.CreateInstanceFrom" target="_top">.NET documentation</a>
+     */
     public static ObjectHandle CreateInstanceFrom(java.lang.String assemblyFile, java.lang.String typeName, boolean ignoreCase, BindingFlags bindingAttr, Binder binder, NetObject[] args, CultureInfo culture, NetObject[] activationAttributes) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -553,6 +1161,34 @@ public class Activator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstanceFrom.
+     *
+     * @param assemblyFile the argument of type {@code java.lang.String}
+     * @param typeName the argument of type {@code java.lang.String}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param args the argument of type {@code NetObject[]}
+     * @param culture the argument of type {@code CultureInfo}
+     * @param activationAttributes the argument of type {@code NetObject[]}
+     * @param securityInfo the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activator.CreateInstanceFrom" target="_top">.NET documentation</a>
+     */
     public static ObjectHandle CreateInstanceFrom(java.lang.String assemblyFile, java.lang.String typeName, boolean ignoreCase, BindingFlags bindingAttr, Binder binder, NetObject[] args, CultureInfo culture, NetObject[] activationAttributes, Evidence securityInfo) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -568,6 +1204,25 @@ public class Activator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstanceFrom.
+     *
+     * @param assemblyFile the argument of type {@code java.lang.String}
+     * @param typeName the argument of type {@code java.lang.String}
+     * @param activationAttributes the argument of type {@code NetObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activator.CreateInstanceFrom" target="_top">.NET documentation</a>
+     */
     public static ObjectHandle CreateInstanceFrom(java.lang.String assemblyFile, java.lang.String typeName, NetObject[] activationAttributes) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -586,8 +1241,12 @@ public class Activator extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static To_Activator method available in _Activator to obtain an object with an invocable method
+     *
+     * @param pcTInfo the argument of type {@code JCORefOut<UInt32>}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Activator.GetTypeInfoCount" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_Activator to obtain the full interface.");
     }

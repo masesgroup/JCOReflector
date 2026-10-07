@@ -98,7 +98,10 @@ public class DiscoveryClientResult extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DiscoveryClientResult(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class DiscoveryClientResult extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Discovery.DiscoveryClientResult.-ctor" target="_top">.NET documentation</a>
+     */
     public DiscoveryClientResult() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -155,6 +164,15 @@ public class DiscoveryClientResult extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param referenceType the argument of type {@code NetType}
+     * @param url the argument of type {@code java.lang.String}
+     * @param filename the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Discovery.DiscoveryClientResult.-ctor" target="_top">.NET documentation</a>
+     */
     public DiscoveryClientResult(NetType referenceType, java.lang.String url, java.lang.String filename) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -173,6 +191,13 @@ public class DiscoveryClientResult extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Filename.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Discovery.DiscoveryClientResult.Filename" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFilename() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +212,13 @@ public class DiscoveryClientResult extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Filename.
+     *
+     * @param Filename the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Discovery.DiscoveryClientResult.Filename" target="_top">.NET documentation</a>
+     */
     public void setFilename(java.lang.String Filename) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +229,13 @@ public class DiscoveryClientResult extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReferenceTypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Discovery.DiscoveryClientResult.ReferenceTypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getReferenceTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +250,13 @@ public class DiscoveryClientResult extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReferenceTypeName.
+     *
+     * @param ReferenceTypeName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Discovery.DiscoveryClientResult.ReferenceTypeName" target="_top">.NET documentation</a>
+     */
     public void setReferenceTypeName(java.lang.String ReferenceTypeName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +267,13 @@ public class DiscoveryClientResult extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Url.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Discovery.DiscoveryClientResult.Url" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +288,13 @@ public class DiscoveryClientResult extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Url.
+     *
+     * @param Url the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Discovery.DiscoveryClientResult.Url" target="_top">.NET documentation</a>
+     */
     public void setUrl(java.lang.String Url) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

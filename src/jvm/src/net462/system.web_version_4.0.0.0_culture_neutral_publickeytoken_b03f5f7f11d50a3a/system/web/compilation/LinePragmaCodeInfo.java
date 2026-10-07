@@ -98,7 +98,10 @@ public class LinePragmaCodeInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public LinePragmaCodeInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class LinePragmaCodeInfo extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.LinePragmaCodeInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public LinePragmaCodeInfo() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -155,6 +164,17 @@ public class LinePragmaCodeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param startLine the argument of type {@code int}
+     * @param startColumn the argument of type {@code int}
+     * @param startGeneratedColumn the argument of type {@code int}
+     * @param codeLength the argument of type {@code int}
+     * @param isCodeNugget the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.LinePragmaCodeInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public LinePragmaCodeInfo(int startLine, int startColumn, int startGeneratedColumn, int codeLength, boolean isCodeNugget) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -173,6 +193,13 @@ public class LinePragmaCodeInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsCodeNugget.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.LinePragmaCodeInfo.IsCodeNugget" target="_top">.NET documentation</a>
+     */
     public boolean getIsCodeNugget() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +214,13 @@ public class LinePragmaCodeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CodeLength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.LinePragmaCodeInfo.CodeLength" target="_top">.NET documentation</a>
+     */
     public int getCodeLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +261,13 @@ public class LinePragmaCodeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StartColumn.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.LinePragmaCodeInfo.StartColumn" target="_top">.NET documentation</a>
+     */
     public int getStartColumn() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +308,13 @@ public class LinePragmaCodeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StartGeneratedColumn.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.LinePragmaCodeInfo.StartGeneratedColumn" target="_top">.NET documentation</a>
+     */
     public int getStartGeneratedColumn() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -307,6 +355,13 @@ public class LinePragmaCodeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StartLine.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.LinePragmaCodeInfo.StartLine" target="_top">.NET documentation</a>
+     */
     public int getStartLine() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

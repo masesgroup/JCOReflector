@@ -100,7 +100,10 @@ public class PeerNameRecordCollection extends system.collections.objectmodel.Col
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PeerNameRecordCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class PeerNameRecordCollection extends system.collections.objectmodel.Col
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.PeerNameRecordCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public PeerNameRecordCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file

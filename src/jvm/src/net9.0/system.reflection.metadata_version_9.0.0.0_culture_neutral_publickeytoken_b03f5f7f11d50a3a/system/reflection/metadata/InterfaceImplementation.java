@@ -101,7 +101,10 @@ public class InterfaceImplementation extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public InterfaceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,15 @@ public class InterfaceImplementation extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetCustomAttributes.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.InterfaceImplementation.GetCustomAttributes" target="_top">.NET documentation</a>
+     */
     public CustomAttributeHandleCollection GetCustomAttributes() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +187,15 @@ public class InterfaceImplementation extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Interface.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.InterfaceImplementation.Interface" target="_top">.NET documentation</a>
+     */
     public EntityHandle getInterface() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

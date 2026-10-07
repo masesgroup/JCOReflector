@@ -103,7 +103,10 @@ public class GotoExpression extends system.linq.expressions.Expression  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public GotoExpression(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,23 @@ public class GotoExpression extends system.linq.expressions.Expression  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Update.
+     *
+     * @param target the argument of type {@code LabelTarget}
+     * @param value the argument of type {@code Expression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.GotoExpression.Update" target="_top">.NET documentation</a>
+     */
     public GotoExpression Update(LabelTarget target, Expression value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +197,13 @@ public class GotoExpression extends system.linq.expressions.Expression  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.GotoExpression.Value" target="_top">.NET documentation</a>
+     */
     public Expression getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +219,13 @@ public class GotoExpression extends system.linq.expressions.Expression  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Kind.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.GotoExpression.Kind" target="_top">.NET documentation</a>
+     */
     public GotoExpressionKind getKind() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +241,13 @@ public class GotoExpression extends system.linq.expressions.Expression  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Target.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.GotoExpression.Target" target="_top">.NET documentation</a>
+     */
     public LabelTarget getTarget() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

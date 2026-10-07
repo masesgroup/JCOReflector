@@ -98,7 +98,10 @@ public class TcpStatistics extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TcpStatistics(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,13 @@ public class TcpStatistics extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ConnectionsAccepted.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.TcpStatistics.ConnectionsAccepted" target="_top">.NET documentation</a>
+     */
     public long getConnectionsAccepted() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +205,13 @@ public class TcpStatistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConnectionsInitiated.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.TcpStatistics.ConnectionsInitiated" target="_top">.NET documentation</a>
+     */
     public long getConnectionsInitiated() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +252,13 @@ public class TcpStatistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CumulativeConnections.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.TcpStatistics.CumulativeConnections" target="_top">.NET documentation</a>
+     */
     public long getCumulativeConnections() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +299,13 @@ public class TcpStatistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentConnections.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.TcpStatistics.CurrentConnections" target="_top">.NET documentation</a>
+     */
     public long getCurrentConnections() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -315,6 +346,13 @@ public class TcpStatistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ErrorsReceived.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.TcpStatistics.ErrorsReceived" target="_top">.NET documentation</a>
+     */
     public long getErrorsReceived() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -355,6 +393,13 @@ public class TcpStatistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FailedConnectionAttempts.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.TcpStatistics.FailedConnectionAttempts" target="_top">.NET documentation</a>
+     */
     public long getFailedConnectionAttempts() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -395,6 +440,13 @@ public class TcpStatistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaximumConnections.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.TcpStatistics.MaximumConnections" target="_top">.NET documentation</a>
+     */
     public long getMaximumConnections() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -435,6 +487,13 @@ public class TcpStatistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaximumTransmissionTimeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.TcpStatistics.MaximumTransmissionTimeout" target="_top">.NET documentation</a>
+     */
     public long getMaximumTransmissionTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -475,6 +534,13 @@ public class TcpStatistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinimumTransmissionTimeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.TcpStatistics.MinimumTransmissionTimeout" target="_top">.NET documentation</a>
+     */
     public long getMinimumTransmissionTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -515,6 +581,13 @@ public class TcpStatistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResetConnections.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.TcpStatistics.ResetConnections" target="_top">.NET documentation</a>
+     */
     public long getResetConnections() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -555,6 +628,13 @@ public class TcpStatistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResetsSent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.TcpStatistics.ResetsSent" target="_top">.NET documentation</a>
+     */
     public long getResetsSent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -595,6 +675,13 @@ public class TcpStatistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SegmentsReceived.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.TcpStatistics.SegmentsReceived" target="_top">.NET documentation</a>
+     */
     public long getSegmentsReceived() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -635,6 +722,13 @@ public class TcpStatistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SegmentsResent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.TcpStatistics.SegmentsResent" target="_top">.NET documentation</a>
+     */
     public long getSegmentsResent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -675,6 +769,13 @@ public class TcpStatistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SegmentsSent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.TcpStatistics.SegmentsSent" target="_top">.NET documentation</a>
+     */
     public long getSegmentsSent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

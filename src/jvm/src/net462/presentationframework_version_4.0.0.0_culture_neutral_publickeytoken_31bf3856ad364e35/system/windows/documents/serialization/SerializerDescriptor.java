@@ -103,7 +103,10 @@ public class SerializerDescriptor extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SerializerDescriptor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,24 @@ public class SerializerDescriptor extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateFromFactoryInstance.
+     *
+     * @param factoryInstance the argument of type {@code ISerializerFactory}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Serialization.SerializerDescriptor.CreateFromFactoryInstance" target="_top">.NET documentation</a>
+     */
     public static SerializerDescriptor CreateFromFactoryInstance(ISerializerFactory factoryInstance) throws Throwable, system.ArgumentException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -177,6 +198,13 @@ public class SerializerDescriptor extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsLoadable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable" target="_top">.NET documentation</a>
+     */
     public boolean getIsLoadable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +219,13 @@ public class SerializerDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AssemblyName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Serialization.SerializerDescriptor.AssemblyName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAssemblyName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +240,13 @@ public class SerializerDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AssemblyPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Serialization.SerializerDescriptor.AssemblyPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAssemblyPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +261,13 @@ public class SerializerDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultFileExtension.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDefaultFileExtension() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +282,13 @@ public class SerializerDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DisplayName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDisplayName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +303,13 @@ public class SerializerDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FactoryInterfaceName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Serialization.SerializerDescriptor.FactoryInterfaceName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFactoryInterfaceName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +324,13 @@ public class SerializerDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ManufacturerName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Serialization.SerializerDescriptor.ManufacturerName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getManufacturerName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +345,13 @@ public class SerializerDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ManufacturerWebsite.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Serialization.SerializerDescriptor.ManufacturerWebsite" target="_top">.NET documentation</a>
+     */
     public Uri getManufacturerWebsite() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +367,13 @@ public class SerializerDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AssemblyVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Serialization.SerializerDescriptor.AssemblyVersion" target="_top">.NET documentation</a>
+     */
     public Version getAssemblyVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +389,13 @@ public class SerializerDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WinFXVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Serialization.SerializerDescriptor.WinFXVersion" target="_top">.NET documentation</a>
+     */
     public Version getWinFXVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

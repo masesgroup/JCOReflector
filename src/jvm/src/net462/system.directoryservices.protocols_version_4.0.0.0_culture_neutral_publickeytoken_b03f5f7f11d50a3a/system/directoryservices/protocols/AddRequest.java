@@ -101,7 +101,10 @@ public class AddRequest extends system.directoryservices.protocols.DirectoryRequ
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AddRequest(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,22 @@ public class AddRequest extends system.directoryservices.protocols.DirectoryRequ
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.AddRequest.-ctor" target="_top">.NET documentation</a>
+     */
     public AddRequest() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +177,21 @@ public class AddRequest extends system.directoryservices.protocols.DirectoryRequ
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param distinguishedName the argument of type {@code java.lang.String}
+     * @param attributes the argument of type {@code DirectoryAttribute...}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.AddRequest.-ctor" target="_top">.NET documentation</a>
+     */
     public AddRequest(java.lang.String distinguishedName, DirectoryAttribute... attributes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +202,21 @@ public class AddRequest extends system.directoryservices.protocols.DirectoryRequ
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param distinguishedName the argument of type {@code java.lang.String}
+     * @param objectClass the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.AddRequest.-ctor" target="_top">.NET documentation</a>
+     */
     public AddRequest(java.lang.String distinguishedName, java.lang.String objectClass) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -186,6 +235,13 @@ public class AddRequest extends system.directoryservices.protocols.DirectoryRequ
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Attributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.AddRequest.Attributes" target="_top">.NET documentation</a>
+     */
     public DirectoryAttributeCollection getAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +257,13 @@ public class AddRequest extends system.directoryservices.protocols.DirectoryRequ
         }
     }
 
+    /**
+     * Gets the value of the .NET property DistinguishedName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.AddRequest.DistinguishedName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDistinguishedName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +278,13 @@ public class AddRequest extends system.directoryservices.protocols.DirectoryRequ
         }
     }
 
+    /**
+     * Sets the value of the .NET property DistinguishedName.
+     *
+     * @param DistinguishedName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.AddRequest.DistinguishedName" target="_top">.NET documentation</a>
+     */
     public void setDistinguishedName(java.lang.String DistinguishedName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

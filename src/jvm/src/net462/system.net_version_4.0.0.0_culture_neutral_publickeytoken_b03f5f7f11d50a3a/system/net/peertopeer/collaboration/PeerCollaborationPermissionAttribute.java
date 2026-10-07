@@ -102,7 +102,10 @@ public class PeerCollaborationPermissionAttribute extends system.security.permis
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PeerCollaborationPermissionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,13 @@ public class PeerCollaborationPermissionAttribute extends system.security.permis
     public PeerCollaborationPermissionAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param action the argument of type {@code SecurityAction}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.Collaboration.PeerCollaborationPermissionAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public PeerCollaborationPermissionAttribute(SecurityAction action) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +177,13 @@ public class PeerCollaborationPermissionAttribute extends system.security.permis
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreatePermission.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.Collaboration.PeerCollaborationPermissionAttribute.CreatePermission" target="_top">.NET documentation</a>
+     */
     public IPermission CreatePermission() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -103,7 +103,10 @@ public class FirstMatchCodeGroup extends system.security.policy.CodeGroup  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FirstMatchCodeGroup(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,14 @@ public class FirstMatchCodeGroup extends system.security.policy.CodeGroup  {
     public FirstMatchCodeGroup() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param membershipCondition the argument of type {@code IMembershipCondition}
+     * @param policy the argument of type {@code PolicyStatement}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.FirstMatchCodeGroup.-ctor" target="_top">.NET documentation</a>
+     */
     public FirstMatchCodeGroup(IMembershipCondition membershipCondition, PolicyStatement policy) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +179,13 @@ public class FirstMatchCodeGroup extends system.security.policy.CodeGroup  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Copy.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.FirstMatchCodeGroup.Copy" target="_top">.NET documentation</a>
+     */
     public CodeGroup Copy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +201,14 @@ public class FirstMatchCodeGroup extends system.security.policy.CodeGroup  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResolveMatchingCodeGroups.
+     *
+     * @param evidence the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.FirstMatchCodeGroup.ResolveMatchingCodeGroups" target="_top">.NET documentation</a>
+     */
     public CodeGroup ResolveMatchingCodeGroups(Evidence evidence) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +224,14 @@ public class FirstMatchCodeGroup extends system.security.policy.CodeGroup  {
         }
     }
 
+    /**
+     * Invokes the .NET member Resolve.
+     *
+     * @param evidence the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.FirstMatchCodeGroup.Resolve" target="_top">.NET documentation</a>
+     */
     public PolicyStatement Resolve(Evidence evidence) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class CorrelationQuery extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CorrelationQuery(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class CorrelationQuery extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.CorrelationQuery.-ctor" target="_top">.NET documentation</a>
+     */
     public CorrelationQuery() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +175,13 @@ public class CorrelationQuery extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SelectAdditional.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.CorrelationQuery.SelectAdditional" target="_top">.NET documentation</a>
+     */
     public Collection_1 getSelectAdditional() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +197,13 @@ public class CorrelationQuery extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Where.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.CorrelationQuery.Where" target="_top">.NET documentation</a>
+     */
     public MessageFilter getWhere() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +219,13 @@ public class CorrelationQuery extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Where.
+     *
+     * @param Where the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.CorrelationQuery.Where" target="_top">.NET documentation</a>
+     */
     public void setWhere(MessageFilter Where) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +236,13 @@ public class CorrelationQuery extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Select.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.CorrelationQuery.Select" target="_top">.NET documentation</a>
+     */
     public MessageQuerySet getSelect() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +258,13 @@ public class CorrelationQuery extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Select.
+     *
+     * @param Select the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.CorrelationQuery.Select" target="_top">.NET documentation</a>
+     */
     public void setSelect(MessageQuerySet Select) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

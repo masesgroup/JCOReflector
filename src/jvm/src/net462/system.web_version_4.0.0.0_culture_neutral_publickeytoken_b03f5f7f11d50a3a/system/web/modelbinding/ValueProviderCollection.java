@@ -104,7 +104,10 @@ public class ValueProviderCollection extends system.collections.objectmodel.Coll
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ValueProviderCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,12 @@ public class ValueProviderCollection extends system.collections.objectmodel.Coll
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ValueProviderCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public ValueProviderCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,14 @@ public class ValueProviderCollection extends system.collections.objectmodel.Coll
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param list the argument of type {@code IList_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ValueProviderCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public ValueProviderCollection(IList_1 list) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +192,14 @@ public class ValueProviderCollection extends system.collections.objectmodel.Coll
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ContainsPrefix.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ValueProviderCollection.ContainsPrefix" target="_top">.NET documentation</a>
+     */
     public boolean ContainsPrefix(java.lang.String prefix) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +214,14 @@ public class ValueProviderCollection extends system.collections.objectmodel.Coll
         }
     }
 
+    /**
+     * Invokes the .NET member GetValue.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ValueProviderCollection.GetValue" target="_top">.NET documentation</a>
+     */
     public ValueProviderResult GetValue(java.lang.String key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +237,15 @@ public class ValueProviderCollection extends system.collections.objectmodel.Coll
         }
     }
 
+    /**
+     * Invokes the .NET member GetValue.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @param skipValidation the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ValueProviderCollection.GetValue" target="_top">.NET documentation</a>
+     */
     public ValueProviderResult GetValue(java.lang.String key, boolean skipValidation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

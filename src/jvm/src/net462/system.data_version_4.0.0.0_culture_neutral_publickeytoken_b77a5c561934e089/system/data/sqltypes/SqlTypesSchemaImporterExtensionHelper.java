@@ -108,7 +108,10 @@ public class SqlTypesSchemaImporterExtensionHelper extends system.xml.serializat
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SqlTypesSchemaImporterExtensionHelper(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,14 @@ public class SqlTypesSchemaImporterExtensionHelper extends system.xml.serializat
     public SqlTypesSchemaImporterExtensionHelper() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param destinationType the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlTypesSchemaImporterExtensionHelper.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlTypesSchemaImporterExtensionHelper(java.lang.String name, java.lang.String destinationType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +179,15 @@ public class SqlTypesSchemaImporterExtensionHelper extends system.xml.serializat
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param destinationType the argument of type {@code java.lang.String}
+     * @param direct the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlTypesSchemaImporterExtensionHelper.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlTypesSchemaImporterExtensionHelper(java.lang.String name, java.lang.String destinationType, boolean direct) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +198,18 @@ public class SqlTypesSchemaImporterExtensionHelper extends system.xml.serializat
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param targetNamespace the argument of type {@code java.lang.String}
+     * @param references the argument of type {@code java.lang.String[]}
+     * @param namespaceImports the argument of type {@code CodeNamespaceImport[]}
+     * @param destinationType the argument of type {@code java.lang.String}
+     * @param direct the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlTypesSchemaImporterExtensionHelper.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlTypesSchemaImporterExtensionHelper(java.lang.String name, java.lang.String targetNamespace, java.lang.String[] references, CodeNamespaceImport[] namespaceImports, java.lang.String destinationType, boolean direct) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -193,6 +225,27 @@ public class SqlTypesSchemaImporterExtensionHelper extends system.xml.serializat
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ImportSchemaType.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param xmlNamespace the argument of type {@code java.lang.String}
+     * @param context the argument of type {@code XmlSchemaObject}
+     * @param schemas the argument of type {@code XmlSchemas}
+     * @param importer the argument of type {@code XmlSchemaImporter}
+     * @param compileUnit the argument of type {@code CodeCompileUnit}
+     * @param mainNamespace the argument of type {@code CodeNamespace}
+     * @param options the argument of type {@code CodeGenerationOptions}
+     * @param codeProvider the argument of type {@code CodeDomProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlTypesSchemaImporterExtensionHelper.ImportSchemaType" target="_top">.NET documentation</a>
+     */
     public java.lang.String ImportSchemaType(java.lang.String name, java.lang.String xmlNamespace, XmlSchemaObject context, XmlSchemas schemas, XmlSchemaImporter importer, CodeCompileUnit compileUnit, CodeNamespace mainNamespace, CodeGenerationOptions options, CodeDomProvider codeProvider) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +260,26 @@ public class SqlTypesSchemaImporterExtensionHelper extends system.xml.serializat
         }
     }
 
+    /**
+     * Invokes the .NET member ImportSchemaType.
+     *
+     * @param type the argument of type {@code XmlSchemaType}
+     * @param context the argument of type {@code XmlSchemaObject}
+     * @param schemas the argument of type {@code XmlSchemas}
+     * @param importer the argument of type {@code XmlSchemaImporter}
+     * @param compileUnit the argument of type {@code CodeCompileUnit}
+     * @param mainNamespace the argument of type {@code CodeNamespace}
+     * @param options the argument of type {@code CodeGenerationOptions}
+     * @param codeProvider the argument of type {@code CodeDomProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlTypesSchemaImporterExtensionHelper.ImportSchemaType" target="_top">.NET documentation</a>
+     */
     public java.lang.String ImportSchemaType(XmlSchemaType type, XmlSchemaObject context, XmlSchemas schemas, XmlSchemaImporter importer, CodeCompileUnit compileUnit, CodeNamespace mainNamespace, CodeGenerationOptions options, CodeDomProvider codeProvider) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

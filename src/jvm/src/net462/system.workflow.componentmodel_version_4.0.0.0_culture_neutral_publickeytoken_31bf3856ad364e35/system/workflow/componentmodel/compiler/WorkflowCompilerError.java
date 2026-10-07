@@ -102,7 +102,10 @@ public class WorkflowCompilerError extends system.codedom.compiler.CompilerError
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WorkflowCompilerError(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class WorkflowCompilerError extends system.codedom.compiler.CompilerError
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.WorkflowCompilerError.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowCompilerError() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +168,17 @@ public class WorkflowCompilerError extends system.codedom.compiler.CompilerError
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param fileName the argument of type {@code java.lang.String}
+     * @param line the argument of type {@code int}
+     * @param column the argument of type {@code int}
+     * @param errorNumber the argument of type {@code java.lang.String}
+     * @param errorText the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.WorkflowCompilerError.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowCompilerError(java.lang.String fileName, int line, int column, java.lang.String errorNumber, java.lang.String errorText) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +189,23 @@ public class WorkflowCompilerError extends system.codedom.compiler.CompilerError
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param fileName the argument of type {@code java.lang.String}
+     * @param exception the argument of type {@code WorkflowMarkupSerializationException}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.WorkflowCompilerError.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowCompilerError(java.lang.String fileName, WorkflowMarkupSerializationException exception) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -187,6 +224,20 @@ public class WorkflowCompilerError extends system.codedom.compiler.CompilerError
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property UserData.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.WorkflowCompilerError.UserData" target="_top">.NET documentation</a>
+     */
     public IDictionary getUserData() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +253,13 @@ public class WorkflowCompilerError extends system.codedom.compiler.CompilerError
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.WorkflowCompilerError.PropertyName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPropertyName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +274,13 @@ public class WorkflowCompilerError extends system.codedom.compiler.CompilerError
         }
     }
 
+    /**
+     * Sets the value of the .NET property PropertyName.
+     *
+     * @param PropertyName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.WorkflowCompilerError.PropertyName" target="_top">.NET documentation</a>
+     */
     public void setPropertyName(java.lang.String PropertyName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

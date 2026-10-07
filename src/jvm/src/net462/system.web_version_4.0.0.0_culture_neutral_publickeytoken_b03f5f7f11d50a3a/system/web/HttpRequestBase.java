@@ -114,7 +114,10 @@ public class HttpRequestBase extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HttpRequestBase(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -167,6 +170,15 @@ public class HttpRequestBase extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member BinaryRead.
+     *
+     * @param count the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.BinaryRead" target="_top">.NET documentation</a>
+     */
     public byte[] BinaryRead(int count) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +202,15 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MapRawImageCoordinates.
+     *
+     * @param imageFieldName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.MapRawImageCoordinates" target="_top">.NET documentation</a>
+     */
     public double[] MapRawImageCoordinates(java.lang.String imageFieldName) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +234,15 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MapImageCoordinates.
+     *
+     * @param imageFieldName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.MapImageCoordinates" target="_top">.NET documentation</a>
+     */
     public int[] MapImageCoordinates(java.lang.String imageFieldName) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +266,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetBufferedInputStream.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.GetBufferedInputStream" target="_top">.NET documentation</a>
+     */
     public Stream GetBufferedInputStream() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +289,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetBufferlessInputStream.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.GetBufferlessInputStream" target="_top">.NET documentation</a>
+     */
     public Stream GetBufferlessInputStream() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +312,15 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetBufferlessInputStream.
+     *
+     * @param disableMaxRequestLength the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.GetBufferlessInputStream" target="_top">.NET documentation</a>
+     */
     public Stream GetBufferlessInputStream(boolean disableMaxRequestLength) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +336,15 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MapPath.
+     *
+     * @param virtualPath the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.MapPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String MapPath(java.lang.String virtualPath) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +359,17 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MapPath.
+     *
+     * @param virtualPath the argument of type {@code java.lang.String}
+     * @param baseVirtualDir the argument of type {@code java.lang.String}
+     * @param allowCrossAppMapping the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.MapPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String MapPath(java.lang.String virtualPath, java.lang.String baseVirtualDir, boolean allowCrossAppMapping) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -309,6 +384,13 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Abort.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.Abort" target="_top">.NET documentation</a>
+     */
     public void Abort() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -319,6 +401,13 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member InsertEntityBody.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.InsertEntityBody" target="_top">.NET documentation</a>
+     */
     public void InsertEntityBody() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -329,6 +418,16 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member InsertEntityBody.
+     *
+     * @param buffer the argument of type {@code byte[]}
+     * @param offset the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.InsertEntityBody" target="_top">.NET documentation</a>
+     */
     public void InsertEntityBody(byte[] buffer, int offset, int count) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -339,6 +438,16 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member InsertEntityBody.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.InsertEntityBody" target="_top">.NET documentation</a>
+     */
     public void InsertEntityBody(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -349,6 +458,15 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SaveAs.
+     *
+     * @param filename the argument of type {@code java.lang.String}
+     * @param includeHeaders the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.SaveAs" target="_top">.NET documentation</a>
+     */
     public void SaveAs(java.lang.String filename, boolean includeHeaders) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -359,6 +477,13 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ValidateInput.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.ValidateInput" target="_top">.NET documentation</a>
+     */
     public void ValidateInput() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -373,6 +498,14 @@ public class HttpRequestBase extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsAuthenticated.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.IsAuthenticated" target="_top">.NET documentation</a>
+     */
     public boolean getIsAuthenticated() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -387,6 +520,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsLocal.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.IsLocal" target="_top">.NET documentation</a>
+     */
     public boolean getIsLocal() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -401,6 +542,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSecureConnection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.IsSecureConnection" target="_top">.NET documentation</a>
+     */
     public boolean getIsSecureConnection() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -415,6 +564,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContentLength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.ContentLength" target="_top">.NET documentation</a>
+     */
     public int getContentLength() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -455,6 +612,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TotalBytes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.TotalBytes" target="_top">.NET documentation</a>
+     */
     public int getTotalBytes() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -495,6 +660,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Form.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.Form" target="_top">.NET documentation</a>
+     */
     public NameValueCollection getForm() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -510,6 +683,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Headers.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.Headers" target="_top">.NET documentation</a>
+     */
     public NameValueCollection getHeaders() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -525,6 +706,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Params.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.Params" target="_top">.NET documentation</a>
+     */
     public NameValueCollection getParams() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -540,6 +729,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property QueryString.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.QueryString" target="_top">.NET documentation</a>
+     */
     public NameValueCollection getQueryString() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -555,6 +752,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ServerVariables.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.ServerVariables" target="_top">.NET documentation</a>
+     */
     public NameValueCollection getServerVariables() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -570,6 +775,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Filter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.Filter" target="_top">.NET documentation</a>
+     */
     public Stream getFilter() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -585,6 +798,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Filter.
+     *
+     * @param Filter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.Filter" target="_top">.NET documentation</a>
+     */
     public void setFilter(Stream Filter) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -595,6 +816,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InputStream.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.InputStream" target="_top">.NET documentation</a>
+     */
     public Stream getInputStream() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -610,6 +839,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HttpChannelBinding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.HttpChannelBinding" target="_top">.NET documentation</a>
+     */
     public ChannelBinding getHttpChannelBinding() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -625,6 +862,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LogonUserIdentity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.LogonUserIdentity" target="_top">.NET documentation</a>
+     */
     public WindowsIdentity getLogonUserIdentity() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -640,6 +885,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AnonymousID.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.AnonymousID" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAnonymousID() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -654,6 +907,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ApplicationPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.ApplicationPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getApplicationPath() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -668,6 +929,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AppRelativeCurrentExecutionFilePath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.AppRelativeCurrentExecutionFilePath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAppRelativeCurrentExecutionFilePath() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -682,6 +951,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContentType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.ContentType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getContentType() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -696,6 +973,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ContentType.
+     *
+     * @param ContentType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.ContentType" target="_top">.NET documentation</a>
+     */
     public void setContentType(java.lang.String ContentType) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -706,6 +991,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentExecutionFilePath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.CurrentExecutionFilePath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCurrentExecutionFilePath() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -720,6 +1013,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentExecutionFilePathExtension.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.CurrentExecutionFilePathExtension" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCurrentExecutionFilePathExtension() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -734,6 +1035,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FilePath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.FilePath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFilePath() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -748,6 +1057,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HttpMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.HttpMethod" target="_top">.NET documentation</a>
+     */
     public java.lang.String getHttpMethod() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -762,6 +1079,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Path.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.Path" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPath() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -776,6 +1101,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PathInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.PathInfo" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPathInfo() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -790,6 +1123,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PhysicalApplicationPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.PhysicalApplicationPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPhysicalApplicationPath() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -804,6 +1145,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PhysicalPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.PhysicalPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPhysicalPath() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -818,6 +1167,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RawUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.RawUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRawUrl() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -832,6 +1189,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequestType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.RequestType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRequestType() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -846,6 +1211,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RequestType.
+     *
+     * @param RequestType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.RequestType" target="_top">.NET documentation</a>
+     */
     public void setRequestType(java.lang.String RequestType) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -856,6 +1229,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UserAgent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.UserAgent" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUserAgent() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -870,6 +1251,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UserHostAddress.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.UserHostAddress" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUserHostAddress() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -884,6 +1273,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UserHostName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.UserHostName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUserHostName() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -898,6 +1295,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AcceptTypes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.AcceptTypes" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getAcceptTypes() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -921,6 +1326,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UserLanguages.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.UserLanguages" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getUserLanguages() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -944,6 +1357,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContentEncoding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.ContentEncoding" target="_top">.NET documentation</a>
+     */
     public Encoding getContentEncoding() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -959,6 +1380,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ContentEncoding.
+     *
+     * @param ContentEncoding the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.ContentEncoding" target="_top">.NET documentation</a>
+     */
     public void setContentEncoding(Encoding ContentEncoding) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -969,6 +1398,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TimedOutToken.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.TimedOutToken" target="_top">.NET documentation</a>
+     */
     public CancellationToken getTimedOutToken() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -984,6 +1421,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Url.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.Url" target="_top">.NET documentation</a>
+     */
     public Uri getUrl() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -999,6 +1444,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UrlReferrer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.UrlReferrer" target="_top">.NET documentation</a>
+     */
     public Uri getUrlReferrer() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1014,6 +1467,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Browser.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.Browser" target="_top">.NET documentation</a>
+     */
     public HttpBrowserCapabilitiesBase getBrowser() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1029,6 +1490,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClientCertificate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.ClientCertificate" target="_top">.NET documentation</a>
+     */
     public HttpClientCertificate getClientCertificate() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1044,6 +1513,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Cookies.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.Cookies" target="_top">.NET documentation</a>
+     */
     public HttpCookieCollection getCookies() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1059,6 +1536,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Files.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.Files" target="_top">.NET documentation</a>
+     */
     public HttpFileCollectionBase getFiles() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1074,6 +1559,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TlsTokenBindingInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.TlsTokenBindingInfo" target="_top">.NET documentation</a>
+     */
     public ITlsTokenBindingInfo getTlsTokenBindingInfo() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1089,6 +1582,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReadEntityBodyMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.ReadEntityBodyMode" target="_top">.NET documentation</a>
+     */
     public ReadEntityBodyMode getReadEntityBodyMode() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1104,6 +1605,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequestContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.RequestContext" target="_top">.NET documentation</a>
+     */
     public RequestContext getRequestContext() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1119,6 +1628,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RequestContext.
+     *
+     * @param RequestContext the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.RequestContext" target="_top">.NET documentation</a>
+     */
     public void setRequestContext(RequestContext RequestContext) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1129,6 +1646,14 @@ public class HttpRequestBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Unvalidated.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpRequestBase.Unvalidated" target="_top">.NET documentation</a>
+     */
     public UnvalidatedRequestValuesBase getUnvalidated() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

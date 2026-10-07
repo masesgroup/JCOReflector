@@ -100,7 +100,10 @@ public class TrustRelationshipInformation extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TrustRelationshipInformation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class TrustRelationshipInformation extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property TrustDirection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation.TrustDirection" target="_top">.NET documentation</a>
+     */
     public TrustDirection getTrustDirection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +184,13 @@ public class TrustRelationshipInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TrustType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation.TrustType" target="_top">.NET documentation</a>
+     */
     public TrustType getTrustType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +206,13 @@ public class TrustRelationshipInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SourceName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation.SourceName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSourceName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +227,13 @@ public class TrustRelationshipInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation.TargetName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTargetName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

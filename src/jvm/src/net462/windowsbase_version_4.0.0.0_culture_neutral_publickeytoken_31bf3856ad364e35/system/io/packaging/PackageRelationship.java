@@ -101,7 +101,10 @@ public class PackageRelationship extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PackageRelationship(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class PackageRelationship extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Package.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackageRelationship.Package" target="_top">.NET documentation</a>
+     */
     public Package getPackage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +185,13 @@ public class PackageRelationship extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackageRelationship.TargetMode" target="_top">.NET documentation</a>
+     */
     public TargetMode getTargetMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +207,13 @@ public class PackageRelationship extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Id.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackageRelationship.Id" target="_top">.NET documentation</a>
+     */
     public java.lang.String getId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +228,13 @@ public class PackageRelationship extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RelationshipType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackageRelationship.RelationshipType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRelationshipType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +249,19 @@ public class PackageRelationship extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SourceUri.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackageRelationship.SourceUri" target="_top">.NET documentation</a>
+     */
     public Uri getSourceUri() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +277,13 @@ public class PackageRelationship extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetUri.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackageRelationship.TargetUri" target="_top">.NET documentation</a>
+     */
     public Uri getTargetUri() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

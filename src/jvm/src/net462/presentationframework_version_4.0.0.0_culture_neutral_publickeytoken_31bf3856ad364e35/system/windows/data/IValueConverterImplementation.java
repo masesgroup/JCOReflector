@@ -99,7 +99,10 @@ public class IValueConverterImplementation extends NetObject implements IValueCo
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IValueConverterImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,17 @@ public class IValueConverterImplementation extends NetObject implements IValueCo
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Convert.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @param targetType the argument of type {@code NetType}
+     * @param parameter the argument of type {@code NetObject}
+     * @param culture the argument of type {@code CultureInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.IValueConverter.Convert" target="_top">.NET documentation</a>
+     */
     public NetObject Convert(NetObject value, NetType targetType, NetObject parameter, CultureInfo culture) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -156,6 +170,17 @@ public class IValueConverterImplementation extends NetObject implements IValueCo
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertBack.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @param targetType the argument of type {@code NetType}
+     * @param parameter the argument of type {@code NetObject}
+     * @param culture the argument of type {@code CultureInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.IValueConverter.ConvertBack" target="_top">.NET documentation</a>
+     */
     public NetObject ConvertBack(NetObject value, NetType targetType, NetObject parameter, CultureInfo culture) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

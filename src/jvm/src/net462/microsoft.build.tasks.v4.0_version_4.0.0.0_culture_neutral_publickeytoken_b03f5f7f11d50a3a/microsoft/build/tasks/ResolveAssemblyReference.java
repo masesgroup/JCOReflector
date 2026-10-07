@@ -101,7 +101,10 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ResolveAssemblyReference(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,15 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.-ctor" target="_top">.NET documentation</a>
+     */
     public ResolveAssemblyReference() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +174,41 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Execute.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.EndOfStreamException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.Execute" target="_top">.NET documentation</a>
+     */
     public boolean Execute() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NullReferenceException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.AccessViolationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.security.SecurityException, system.io.EndOfStreamException, system.collections.generic.KeyNotFoundException, system.runtime.serialization.SerializationException, system.RankException, system.BadImageFormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +227,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AutoUnify.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.AutoUnify" target="_top">.NET documentation</a>
+     */
     public boolean getAutoUnify() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +248,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property AutoUnify.
+     *
+     * @param AutoUnify the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.AutoUnify" target="_top">.NET documentation</a>
+     */
     public void setAutoUnify(boolean AutoUnify) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +265,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property CopyLocalDependenciesWhenParentReferenceInGac.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.CopyLocalDependenciesWhenParentReferenceInGac" target="_top">.NET documentation</a>
+     */
     public boolean getCopyLocalDependenciesWhenParentReferenceInGac() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +286,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property CopyLocalDependenciesWhenParentReferenceInGac.
+     *
+     * @param CopyLocalDependenciesWhenParentReferenceInGac the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.CopyLocalDependenciesWhenParentReferenceInGac" target="_top">.NET documentation</a>
+     */
     public void setCopyLocalDependenciesWhenParentReferenceInGac(boolean CopyLocalDependenciesWhenParentReferenceInGac) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +303,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property FindDependencies.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.FindDependencies" target="_top">.NET documentation</a>
+     */
     public boolean getFindDependencies() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +324,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property FindDependencies.
+     *
+     * @param FindDependencies the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.FindDependencies" target="_top">.NET documentation</a>
+     */
     public void setFindDependencies(boolean FindDependencies) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +341,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property FindRelatedFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.FindRelatedFiles" target="_top">.NET documentation</a>
+     */
     public boolean getFindRelatedFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +362,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property FindRelatedFiles.
+     *
+     * @param FindRelatedFiles the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.FindRelatedFiles" target="_top">.NET documentation</a>
+     */
     public void setFindRelatedFiles(boolean FindRelatedFiles) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +379,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property FindSatellites.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.FindSatellites" target="_top">.NET documentation</a>
+     */
     public boolean getFindSatellites() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +400,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property FindSatellites.
+     *
+     * @param FindSatellites the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.FindSatellites" target="_top">.NET documentation</a>
+     */
     public void setFindSatellites(boolean FindSatellites) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +417,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property FindSerializationAssemblies.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.FindSerializationAssemblies" target="_top">.NET documentation</a>
+     */
     public boolean getFindSerializationAssemblies() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -314,6 +438,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property FindSerializationAssemblies.
+     *
+     * @param FindSerializationAssemblies the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.FindSerializationAssemblies" target="_top">.NET documentation</a>
+     */
     public void setFindSerializationAssemblies(boolean FindSerializationAssemblies) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -324,6 +455,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property IgnoreDefaultInstalledAssemblySubsetTables.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.IgnoreDefaultInstalledAssemblySubsetTables" target="_top">.NET documentation</a>
+     */
     public boolean getIgnoreDefaultInstalledAssemblySubsetTables() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -338,6 +476,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property IgnoreDefaultInstalledAssemblySubsetTables.
+     *
+     * @param IgnoreDefaultInstalledAssemblySubsetTables the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.IgnoreDefaultInstalledAssemblySubsetTables" target="_top">.NET documentation</a>
+     */
     public void setIgnoreDefaultInstalledAssemblySubsetTables(boolean IgnoreDefaultInstalledAssemblySubsetTables) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +493,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property IgnoreDefaultInstalledAssemblyTables.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.IgnoreDefaultInstalledAssemblyTables" target="_top">.NET documentation</a>
+     */
     public boolean getIgnoreDefaultInstalledAssemblyTables() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -362,6 +514,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property IgnoreDefaultInstalledAssemblyTables.
+     *
+     * @param IgnoreDefaultInstalledAssemblyTables the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.IgnoreDefaultInstalledAssemblyTables" target="_top">.NET documentation</a>
+     */
     public void setIgnoreDefaultInstalledAssemblyTables(boolean IgnoreDefaultInstalledAssemblyTables) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -372,6 +531,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property IgnoreTargetFrameworkAttributeVersionMismatch.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.IgnoreTargetFrameworkAttributeVersionMismatch" target="_top">.NET documentation</a>
+     */
     public boolean getIgnoreTargetFrameworkAttributeVersionMismatch() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -386,6 +552,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property IgnoreTargetFrameworkAttributeVersionMismatch.
+     *
+     * @param IgnoreTargetFrameworkAttributeVersionMismatch the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.IgnoreTargetFrameworkAttributeVersionMismatch" target="_top">.NET documentation</a>
+     */
     public void setIgnoreTargetFrameworkAttributeVersionMismatch(boolean IgnoreTargetFrameworkAttributeVersionMismatch) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -396,6 +569,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property IgnoreVersionForFrameworkReferences.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.IgnoreVersionForFrameworkReferences" target="_top">.NET documentation</a>
+     */
     public boolean getIgnoreVersionForFrameworkReferences() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -410,6 +590,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property IgnoreVersionForFrameworkReferences.
+     *
+     * @param IgnoreVersionForFrameworkReferences the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.IgnoreVersionForFrameworkReferences" target="_top">.NET documentation</a>
+     */
     public void setIgnoreVersionForFrameworkReferences(boolean IgnoreVersionForFrameworkReferences) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -420,6 +607,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property Silent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.Silent" target="_top">.NET documentation</a>
+     */
     public boolean getSilent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -434,6 +628,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property Silent.
+     *
+     * @param Silent the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.Silent" target="_top">.NET documentation</a>
+     */
     public void setSilent(boolean Silent) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -444,6 +645,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property Assemblies.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.Assemblies" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getAssemblies() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -465,6 +673,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property Assemblies.
+     *
+     * @param Assemblies the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.Assemblies" target="_top">.NET documentation</a>
+     */
     public void setAssemblies(ITaskItem[] Assemblies) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -475,6 +690,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property AssemblyFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.AssemblyFiles" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getAssemblyFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -496,6 +718,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property AssemblyFiles.
+     *
+     * @param AssemblyFiles the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.AssemblyFiles" target="_top">.NET documentation</a>
+     */
     public void setAssemblyFiles(ITaskItem[] AssemblyFiles) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -506,6 +735,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property CopyLocalFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.CopyLocalFiles" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getCopyLocalFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -527,6 +763,17 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property FilesWritten.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.FilesWritten" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getFilesWritten() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -548,6 +795,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property FilesWritten.
+     *
+     * @param FilesWritten the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.FilesWritten" target="_top">.NET documentation</a>
+     */
     public void setFilesWritten(ITaskItem[] FilesWritten) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -558,6 +812,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property FullFrameworkAssemblyTables.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.FullFrameworkAssemblyTables" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getFullFrameworkAssemblyTables() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -579,6 +840,19 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property FullFrameworkAssemblyTables.
+     *
+     * @param FullFrameworkAssemblyTables the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.FullFrameworkAssemblyTables" target="_top">.NET documentation</a>
+     */
     public void setFullFrameworkAssemblyTables(ITaskItem[] FullFrameworkAssemblyTables) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -589,6 +863,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstalledAssemblySubsetTables.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.InstalledAssemblySubsetTables" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getInstalledAssemblySubsetTables() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -610,6 +891,19 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property InstalledAssemblySubsetTables.
+     *
+     * @param InstalledAssemblySubsetTables the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.InstalledAssemblySubsetTables" target="_top">.NET documentation</a>
+     */
     public void setInstalledAssemblySubsetTables(ITaskItem[] InstalledAssemblySubsetTables) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -620,6 +914,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstalledAssemblyTables.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.InstalledAssemblyTables" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getInstalledAssemblyTables() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -641,6 +942,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property InstalledAssemblyTables.
+     *
+     * @param InstalledAssemblyTables the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.InstalledAssemblyTables" target="_top">.NET documentation</a>
+     */
     public void setInstalledAssemblyTables(ITaskItem[] InstalledAssemblyTables) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -651,6 +959,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property RelatedFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.RelatedFiles" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getRelatedFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -672,6 +987,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResolvedDependencyFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.ResolvedDependencyFiles" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getResolvedDependencyFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -693,6 +1015,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResolvedFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.ResolvedFiles" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getResolvedFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -714,6 +1043,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResolvedSDKReferences.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.ResolvedSDKReferences" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getResolvedSDKReferences() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -735,6 +1071,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property ResolvedSDKReferences.
+     *
+     * @param ResolvedSDKReferences the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.ResolvedSDKReferences" target="_top">.NET documentation</a>
+     */
     public void setResolvedSDKReferences(ITaskItem[] ResolvedSDKReferences) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -745,6 +1088,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property SatelliteFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.SatelliteFiles" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getSatelliteFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -766,6 +1116,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property ScatterFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.ScatterFiles" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getScatterFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -787,6 +1144,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property SerializationAssemblyFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.SerializationAssemblyFiles" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getSerializationAssemblyFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -808,6 +1172,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property SuggestedRedirects.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.SuggestedRedirects" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getSuggestedRedirects() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -829,6 +1200,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property AppConfigFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.AppConfigFile" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAppConfigFile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -843,6 +1221,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property AppConfigFile.
+     *
+     * @param AppConfigFile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.AppConfigFile" target="_top">.NET documentation</a>
+     */
     public void setAppConfigFile(java.lang.String AppConfigFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -853,6 +1238,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProfileName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.ProfileName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getProfileName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -867,6 +1259,19 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProfileName.
+     *
+     * @param ProfileName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.ProfileName" target="_top">.NET documentation</a>
+     */
     public void setProfileName(java.lang.String ProfileName) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -877,6 +1282,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property StateFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.StateFile" target="_top">.NET documentation</a>
+     */
     public java.lang.String getStateFile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -891,6 +1303,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property StateFile.
+     *
+     * @param StateFile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.StateFile" target="_top">.NET documentation</a>
+     */
     public void setStateFile(java.lang.String StateFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -901,6 +1320,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetedRuntimeVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.TargetedRuntimeVersion" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTargetedRuntimeVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -915,6 +1341,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property TargetedRuntimeVersion.
+     *
+     * @param TargetedRuntimeVersion the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.TargetedRuntimeVersion" target="_top">.NET documentation</a>
+     */
     public void setTargetedRuntimeVersion(java.lang.String TargetedRuntimeVersion) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -925,6 +1358,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetFrameworkMoniker.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.TargetFrameworkMoniker" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTargetFrameworkMoniker() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -939,6 +1379,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property TargetFrameworkMoniker.
+     *
+     * @param TargetFrameworkMoniker the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.TargetFrameworkMoniker" target="_top">.NET documentation</a>
+     */
     public void setTargetFrameworkMoniker(java.lang.String TargetFrameworkMoniker) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -949,6 +1396,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetFrameworkMonikerDisplayName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.TargetFrameworkMonikerDisplayName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTargetFrameworkMonikerDisplayName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -963,6 +1417,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property TargetFrameworkMonikerDisplayName.
+     *
+     * @param TargetFrameworkMonikerDisplayName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.TargetFrameworkMonikerDisplayName" target="_top">.NET documentation</a>
+     */
     public void setTargetFrameworkMonikerDisplayName(java.lang.String TargetFrameworkMonikerDisplayName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -973,6 +1434,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetFrameworkVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.TargetFrameworkVersion" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTargetFrameworkVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -987,6 +1455,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property TargetFrameworkVersion.
+     *
+     * @param TargetFrameworkVersion the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.TargetFrameworkVersion" target="_top">.NET documentation</a>
+     */
     public void setTargetFrameworkVersion(java.lang.String TargetFrameworkVersion) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -997,6 +1472,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetProcessorArchitecture.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.TargetProcessorArchitecture" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTargetProcessorArchitecture() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1011,6 +1493,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property TargetProcessorArchitecture.
+     *
+     * @param TargetProcessorArchitecture the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.TargetProcessorArchitecture" target="_top">.NET documentation</a>
+     */
     public void setTargetProcessorArchitecture(java.lang.String TargetProcessorArchitecture) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1021,6 +1510,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property WarnOrErrorOnTargetArchitectureMismatch.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.WarnOrErrorOnTargetArchitectureMismatch" target="_top">.NET documentation</a>
+     */
     public java.lang.String getWarnOrErrorOnTargetArchitectureMismatch() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1035,6 +1531,24 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property WarnOrErrorOnTargetArchitectureMismatch.
+     *
+     * @param WarnOrErrorOnTargetArchitectureMismatch the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.WarnOrErrorOnTargetArchitectureMismatch" target="_top">.NET documentation</a>
+     */
     public void setWarnOrErrorOnTargetArchitectureMismatch(java.lang.String WarnOrErrorOnTargetArchitectureMismatch) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidCastException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1045,6 +1559,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowedAssemblyExtensions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.AllowedAssemblyExtensions" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getAllowedAssemblyExtensions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1068,6 +1589,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowedAssemblyExtensions.
+     *
+     * @param AllowedAssemblyExtensions the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.AllowedAssemblyExtensions" target="_top">.NET documentation</a>
+     */
     public void setAllowedAssemblyExtensions(java.lang.String[] AllowedAssemblyExtensions) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1078,6 +1606,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowedRelatedFileExtensions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.AllowedRelatedFileExtensions" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getAllowedRelatedFileExtensions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1101,6 +1636,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowedRelatedFileExtensions.
+     *
+     * @param AllowedRelatedFileExtensions the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.AllowedRelatedFileExtensions" target="_top">.NET documentation</a>
+     */
     public void setAllowedRelatedFileExtensions(java.lang.String[] AllowedRelatedFileExtensions) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1111,6 +1653,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property CandidateAssemblyFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.CandidateAssemblyFiles" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getCandidateAssemblyFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1134,6 +1683,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property CandidateAssemblyFiles.
+     *
+     * @param CandidateAssemblyFiles the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.CandidateAssemblyFiles" target="_top">.NET documentation</a>
+     */
     public void setCandidateAssemblyFiles(java.lang.String[] CandidateAssemblyFiles) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1144,6 +1700,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property FullFrameworkFolders.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.FullFrameworkFolders" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getFullFrameworkFolders() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1167,6 +1730,19 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property FullFrameworkFolders.
+     *
+     * @param FullFrameworkFolders the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.FullFrameworkFolders" target="_top">.NET documentation</a>
+     */
     public void setFullFrameworkFolders(java.lang.String[] FullFrameworkFolders) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1177,6 +1753,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property FullTargetFrameworkSubsetNames.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.FullTargetFrameworkSubsetNames" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getFullTargetFrameworkSubsetNames() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1200,6 +1783,19 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property FullTargetFrameworkSubsetNames.
+     *
+     * @param FullTargetFrameworkSubsetNames the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.FullTargetFrameworkSubsetNames" target="_top">.NET documentation</a>
+     */
     public void setFullTargetFrameworkSubsetNames(java.lang.String[] FullTargetFrameworkSubsetNames) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1210,6 +1806,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property LatestTargetFrameworkDirectories.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.LatestTargetFrameworkDirectories" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getLatestTargetFrameworkDirectories() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1233,6 +1836,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property LatestTargetFrameworkDirectories.
+     *
+     * @param LatestTargetFrameworkDirectories the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.LatestTargetFrameworkDirectories" target="_top">.NET documentation</a>
+     */
     public void setLatestTargetFrameworkDirectories(java.lang.String[] LatestTargetFrameworkDirectories) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1243,6 +1853,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property SearchPaths.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.SearchPaths" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getSearchPaths() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1266,6 +1883,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property SearchPaths.
+     *
+     * @param SearchPaths the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.SearchPaths" target="_top">.NET documentation</a>
+     */
     public void setSearchPaths(java.lang.String[] SearchPaths) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1276,6 +1900,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetFrameworkDirectories.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.TargetFrameworkDirectories" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getTargetFrameworkDirectories() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1299,6 +1930,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property TargetFrameworkDirectories.
+     *
+     * @param TargetFrameworkDirectories the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.TargetFrameworkDirectories" target="_top">.NET documentation</a>
+     */
     public void setTargetFrameworkDirectories(java.lang.String[] TargetFrameworkDirectories) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1309,6 +1947,13 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetFrameworkSubsets.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.TargetFrameworkSubsets" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getTargetFrameworkSubsets() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1332,6 +1977,19 @@ public class ResolveAssemblyReference extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property TargetFrameworkSubsets.
+     *
+     * @param TargetFrameworkSubsets the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveAssemblyReference.TargetFrameworkSubsets" target="_top">.NET documentation</a>
+     */
     public void setTargetFrameworkSubsets(java.lang.String[] TargetFrameworkSubsets) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

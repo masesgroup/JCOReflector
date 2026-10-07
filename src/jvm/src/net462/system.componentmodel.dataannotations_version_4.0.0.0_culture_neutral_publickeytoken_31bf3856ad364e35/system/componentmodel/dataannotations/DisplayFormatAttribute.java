@@ -99,7 +99,10 @@ public class DisplayFormatAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DisplayFormatAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class DisplayFormatAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.DisplayFormatAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DisplayFormatAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class DisplayFormatAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ApplyFormatInEditMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.DisplayFormatAttribute.ApplyFormatInEditMode" target="_top">.NET documentation</a>
+     */
     public boolean getApplyFormatInEditMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +194,13 @@ public class DisplayFormatAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ApplyFormatInEditMode.
+     *
+     * @param ApplyFormatInEditMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.DisplayFormatAttribute.ApplyFormatInEditMode" target="_top">.NET documentation</a>
+     */
     public void setApplyFormatInEditMode(boolean ApplyFormatInEditMode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +211,13 @@ public class DisplayFormatAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConvertEmptyStringToNull.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.DisplayFormatAttribute.ConvertEmptyStringToNull" target="_top">.NET documentation</a>
+     */
     public boolean getConvertEmptyStringToNull() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +232,13 @@ public class DisplayFormatAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConvertEmptyStringToNull.
+     *
+     * @param ConvertEmptyStringToNull the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.DisplayFormatAttribute.ConvertEmptyStringToNull" target="_top">.NET documentation</a>
+     */
     public void setConvertEmptyStringToNull(boolean ConvertEmptyStringToNull) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +249,13 @@ public class DisplayFormatAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HtmlEncode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.DisplayFormatAttribute.HtmlEncode" target="_top">.NET documentation</a>
+     */
     public boolean getHtmlEncode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +270,13 @@ public class DisplayFormatAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HtmlEncode.
+     *
+     * @param HtmlEncode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.DisplayFormatAttribute.HtmlEncode" target="_top">.NET documentation</a>
+     */
     public void setHtmlEncode(boolean HtmlEncode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +287,13 @@ public class DisplayFormatAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataFormatString.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.DisplayFormatAttribute.DataFormatString" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDataFormatString() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +308,13 @@ public class DisplayFormatAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataFormatString.
+     *
+     * @param DataFormatString the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.DisplayFormatAttribute.DataFormatString" target="_top">.NET documentation</a>
+     */
     public void setDataFormatString(java.lang.String DataFormatString) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +325,13 @@ public class DisplayFormatAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NullDisplayText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.DisplayFormatAttribute.NullDisplayText" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNullDisplayText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +346,13 @@ public class DisplayFormatAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NullDisplayText.
+     *
+     * @param NullDisplayText the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.DisplayFormatAttribute.NullDisplayText" target="_top">.NET documentation</a>
+     */
     public void setNullDisplayText(java.lang.String NullDisplayText) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

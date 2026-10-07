@@ -104,7 +104,10 @@ public class IImmutableSet_1Implementation<T extends IJCOBridgeReflected> extend
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IImmutableSet_1Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,14 @@ public class IImmutableSet_1Implementation<T extends IJCOBridgeReflected> extend
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param value the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableSet-1.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(T value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -160,6 +171,14 @@ public class IImmutableSet_1Implementation<T extends IJCOBridgeReflected> extend
         }
     }
 
+    /**
+     * Invokes the .NET member IsProperSubsetOf.
+     *
+     * @param other the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableSet-1.IsProperSubsetOf" target="_top">.NET documentation</a>
+     */
     public boolean IsProperSubsetOf(IEnumerable_1 other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +193,14 @@ public class IImmutableSet_1Implementation<T extends IJCOBridgeReflected> extend
         }
     }
 
+    /**
+     * Invokes the .NET member IsProperSupersetOf.
+     *
+     * @param other the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableSet-1.IsProperSupersetOf" target="_top">.NET documentation</a>
+     */
     public boolean IsProperSupersetOf(IEnumerable_1 other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +215,14 @@ public class IImmutableSet_1Implementation<T extends IJCOBridgeReflected> extend
         }
     }
 
+    /**
+     * Invokes the .NET member IsSubsetOf.
+     *
+     * @param other the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableSet-1.IsSubsetOf" target="_top">.NET documentation</a>
+     */
     public boolean IsSubsetOf(IEnumerable_1 other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +237,14 @@ public class IImmutableSet_1Implementation<T extends IJCOBridgeReflected> extend
         }
     }
 
+    /**
+     * Invokes the .NET member IsSupersetOf.
+     *
+     * @param other the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableSet-1.IsSupersetOf" target="_top">.NET documentation</a>
+     */
     public boolean IsSupersetOf(IEnumerable_1 other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +259,14 @@ public class IImmutableSet_1Implementation<T extends IJCOBridgeReflected> extend
         }
     }
 
+    /**
+     * Invokes the .NET member Overlaps.
+     *
+     * @param other the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableSet-1.Overlaps" target="_top">.NET documentation</a>
+     */
     public boolean Overlaps(IEnumerable_1 other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +281,14 @@ public class IImmutableSet_1Implementation<T extends IJCOBridgeReflected> extend
         }
     }
 
+    /**
+     * Invokes the .NET member SetEquals.
+     *
+     * @param other the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableSet-1.SetEquals" target="_top">.NET documentation</a>
+     */
     public boolean SetEquals(IEnumerable_1 other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +303,15 @@ public class IImmutableSet_1Implementation<T extends IJCOBridgeReflected> extend
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetValue.
+     *
+     * @param equalValue the argument of type {@code T}
+     * @param actualValue the argument of type {@code JCORefOut<T>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableSet-1.TryGetValue" target="_top">.NET documentation</a>
+     */
     public boolean TryGetValue(T equalValue, JCORefOut<T> actualValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +326,14 @@ public class IImmutableSet_1Implementation<T extends IJCOBridgeReflected> extend
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param value the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableSet-1.Add" target="_top">.NET documentation</a>
+     */
     public IImmutableSet_1 Add(T value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +349,13 @@ public class IImmutableSet_1Implementation<T extends IJCOBridgeReflected> extend
         }
     }
 
+    /**
+     * Invokes the .NET member Clear.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableSet-1.Clear" target="_top">.NET documentation</a>
+     */
     public IImmutableSet_1 Clear() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +371,14 @@ public class IImmutableSet_1Implementation<T extends IJCOBridgeReflected> extend
         }
     }
 
+    /**
+     * Invokes the .NET member Except.
+     *
+     * @param other the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableSet-1.Except" target="_top">.NET documentation</a>
+     */
     public IImmutableSet_1 Except(IEnumerable_1 other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +394,14 @@ public class IImmutableSet_1Implementation<T extends IJCOBridgeReflected> extend
         }
     }
 
+    /**
+     * Invokes the .NET member Intersect.
+     *
+     * @param other the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableSet-1.Intersect" target="_top">.NET documentation</a>
+     */
     public IImmutableSet_1 Intersect(IEnumerable_1 other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +417,14 @@ public class IImmutableSet_1Implementation<T extends IJCOBridgeReflected> extend
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param value the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableSet-1.Remove" target="_top">.NET documentation</a>
+     */
     public IImmutableSet_1 Remove(T value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -333,6 +440,14 @@ public class IImmutableSet_1Implementation<T extends IJCOBridgeReflected> extend
         }
     }
 
+    /**
+     * Invokes the .NET member SymmetricExcept.
+     *
+     * @param other the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableSet-1.SymmetricExcept" target="_top">.NET documentation</a>
+     */
     public IImmutableSet_1 SymmetricExcept(IEnumerable_1 other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +463,14 @@ public class IImmutableSet_1Implementation<T extends IJCOBridgeReflected> extend
         }
     }
 
+    /**
+     * Invokes the .NET member Union.
+     *
+     * @param other the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableSet-1.Union" target="_top">.NET documentation</a>
+     */
     public IImmutableSet_1 Union(IEnumerable_1 other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -367,6 +490,13 @@ public class IImmutableSet_1Implementation<T extends IJCOBridgeReflected> extend
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Count.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableSet-1.Count" target="_top">.NET documentation</a>
+     */
     public int getCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

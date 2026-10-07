@@ -105,7 +105,10 @@ public class JSFieldInfo extends system.reflection.FieldInfo  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public JSFieldInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,15 @@ public class JSFieldInfo extends system.reflection.FieldInfo  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsDefined.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param inherit the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.JSFieldInfo.IsDefined" target="_top">.NET documentation</a>
+     */
     public boolean IsDefined(NetType type, boolean inherit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +186,24 @@ public class JSFieldInfo extends system.reflection.FieldInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetValue.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.JSFieldInfo.GetValue" target="_top">.NET documentation</a>
+     */
     public NetObject GetValue(NetObject obj) throws Throwable, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.TypeLoadException, system.security.SecurityException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +219,14 @@ public class JSFieldInfo extends system.reflection.FieldInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCustomAttributes.
+     *
+     * @param inherit the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.JSFieldInfo.GetCustomAttributes" target="_top">.NET documentation</a>
+     */
     public NetObject[] GetCustomAttributes(boolean inherit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +248,15 @@ public class JSFieldInfo extends system.reflection.FieldInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCustomAttributes.
+     *
+     * @param t the argument of type {@code NetType}
+     * @param inherit the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.JSFieldInfo.GetCustomAttributes" target="_top">.NET documentation</a>
+     */
     public NetObject[] GetCustomAttributes(NetType t, boolean inherit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +278,15 @@ public class JSFieldInfo extends system.reflection.FieldInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetValueNewJSFieldInfo.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.JSFieldInfo.SetValueNewJSFieldInfo" target="_top">.NET documentation</a>
+     */
     public void SetValueNewJSFieldInfo(NetObject obj, NetObject value) throws Throwable, microsoft.jscript.JScriptException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +297,27 @@ public class JSFieldInfo extends system.reflection.FieldInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetValue.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @param value the argument of type {@code NetObject}
+     * @param invokeAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param culture the argument of type {@code CultureInfo}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.JSFieldInfo.SetValue" target="_top">.NET documentation</a>
+     */
     public void SetValue(NetObject obj, NetObject value, BindingFlags invokeAttr, Binder binder, CultureInfo culture) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.TypeLoadException, system.security.SecurityException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

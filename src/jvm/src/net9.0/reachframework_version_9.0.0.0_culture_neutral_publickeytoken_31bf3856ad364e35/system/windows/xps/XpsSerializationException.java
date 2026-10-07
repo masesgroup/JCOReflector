@@ -103,7 +103,9 @@ public class XpsSerializationException extends system.windows.xps.XpsException {
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public XpsSerializationException(java.lang.Object instance) {
         super(instance);

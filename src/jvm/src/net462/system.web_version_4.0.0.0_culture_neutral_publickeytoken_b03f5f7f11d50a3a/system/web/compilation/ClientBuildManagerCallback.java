@@ -101,7 +101,10 @@ public class ClientBuildManagerCallback extends system.MarshalByRefObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ClientBuildManagerCallback(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class ClientBuildManagerCallback extends system.MarshalByRefObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManagerCallback.-ctor" target="_top">.NET documentation</a>
+     */
     public ClientBuildManagerCallback() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +171,13 @@ public class ClientBuildManagerCallback extends system.MarshalByRefObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member InitializeLifetimeService.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManagerCallback.InitializeLifetimeService" target="_top">.NET documentation</a>
+     */
     public NetObject InitializeLifetimeService() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +193,13 @@ public class ClientBuildManagerCallback extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReportCompilerError.
+     *
+     * @param error the argument of type {@code CompilerError}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManagerCallback.ReportCompilerError" target="_top">.NET documentation</a>
+     */
     public void ReportCompilerError(CompilerError error) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +210,13 @@ public class ClientBuildManagerCallback extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReportParseError.
+     *
+     * @param error the argument of type {@code ParserError}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManagerCallback.ReportParseError" target="_top">.NET documentation</a>
+     */
     public void ReportParseError(ParserError error) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +227,13 @@ public class ClientBuildManagerCallback extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReportProgress.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManagerCallback.ReportProgress" target="_top">.NET documentation</a>
+     */
     public void ReportProgress(java.lang.String message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -53,5 +53,11 @@ import system.windows.DependencyObject;
  * @version 2.0.0.0
  */
 public interface IHitTestFilterCallback {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param potentialHitTestTarget the .NET argument of type {@code System.Windows.DependencyObject}
+     * @return the value returned to the CLR
+     */
     public HitTestFilterBehavior Invoke(DependencyObject potentialHitTestTarget);
 }

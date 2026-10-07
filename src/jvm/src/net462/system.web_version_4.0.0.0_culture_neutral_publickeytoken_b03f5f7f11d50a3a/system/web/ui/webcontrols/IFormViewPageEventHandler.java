@@ -52,5 +52,11 @@ import system.web.ui.webcontrols.FormViewPageEventArgs;
  * @version 2.0.0.0
  */
 public interface IFormViewPageEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.Web.UI.WebControls.FormViewPageEventArgs}
+     */
     public void Invoke(NetObject sender, FormViewPageEventArgs e);
 }

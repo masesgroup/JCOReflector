@@ -103,7 +103,10 @@ public class DataControlFieldDesigner extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataControlFieldDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,14 @@ public class DataControlFieldDesigner extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsEnabled.
+     *
+     * @param parent the argument of type {@code DataBoundControl}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebControls.DataControlFieldDesigner.IsEnabled" target="_top">.NET documentation</a>
+     */
     public boolean IsEnabled(DataBoundControl parent) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +181,14 @@ public class DataControlFieldDesigner extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetNodeText.
+     *
+     * @param dataControlField the argument of type {@code DataControlField}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebControls.DataControlFieldDesigner.GetNodeText" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetNodeText(DataControlField dataControlField) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +203,13 @@ public class DataControlFieldDesigner extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateField.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebControls.DataControlFieldDesigner.CreateField" target="_top">.NET documentation</a>
+     */
     public DataControlField CreateField() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +225,14 @@ public class DataControlFieldDesigner extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateField.
+     *
+     * @param fieldSchema the argument of type {@code IDataSourceFieldSchema}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebControls.DataControlFieldDesigner.CreateField" target="_top">.NET documentation</a>
+     */
     public DataControlField CreateField(IDataSourceFieldSchema fieldSchema) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +248,15 @@ public class DataControlFieldDesigner extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateTemplateField.
+     *
+     * @param dataControlField the argument of type {@code DataControlField}
+     * @param dataBoundControl the argument of type {@code DataBoundControl}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebControls.DataControlFieldDesigner.CreateTemplateField" target="_top">.NET documentation</a>
+     */
     public TemplateField CreateTemplateField(DataControlField dataControlField, DataBoundControl dataBoundControl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +276,13 @@ public class DataControlFieldDesigner extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property UsesSchema.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebControls.DataControlFieldDesigner.UsesSchema" target="_top">.NET documentation</a>
+     */
     public boolean getUsesSchema() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +297,13 @@ public class DataControlFieldDesigner extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultNodeText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebControls.DataControlFieldDesigner.DefaultNodeText" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDefaultNodeText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

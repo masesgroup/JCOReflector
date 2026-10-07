@@ -100,7 +100,10 @@ public class XamlObjectEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XamlObjectEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class XamlObjectEventArgs extends system.EventArgs  {
     public XamlObjectEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param instance the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public XamlObjectEventArgs(NetObject instance) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +180,13 @@ public class XamlObjectEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ElementLineNumber.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectEventArgs.ElementLineNumber" target="_top">.NET documentation</a>
+     */
     public int getElementLineNumber() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +227,13 @@ public class XamlObjectEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ElementLineNumber.
+     *
+     * @param ElementLineNumber the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectEventArgs.ElementLineNumber" target="_top">.NET documentation</a>
+     */
     public void setElementLineNumber(int ElementLineNumber) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +244,13 @@ public class XamlObjectEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ElementLinePosition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectEventArgs.ElementLinePosition" target="_top">.NET documentation</a>
+     */
     public int getElementLinePosition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +291,13 @@ public class XamlObjectEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ElementLinePosition.
+     *
+     * @param ElementLinePosition the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectEventArgs.ElementLinePosition" target="_top">.NET documentation</a>
+     */
     public void setElementLinePosition(int ElementLinePosition) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +308,13 @@ public class XamlObjectEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Instance.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectEventArgs.Instance" target="_top">.NET documentation</a>
+     */
     public NetObject getInstance() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -284,6 +330,13 @@ public class XamlObjectEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Instance.
+     *
+     * @param Instance the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectEventArgs.Instance" target="_top">.NET documentation</a>
+     */
     public void setInstance(NetObject Instance) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +347,13 @@ public class XamlObjectEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SourceBamlUri.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectEventArgs.SourceBamlUri" target="_top">.NET documentation</a>
+     */
     public Uri getSourceBamlUri() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -309,6 +369,13 @@ public class XamlObjectEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SourceBamlUri.
+     *
+     * @param SourceBamlUri the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectEventArgs.SourceBamlUri" target="_top">.NET documentation</a>
+     */
     public void setSourceBamlUri(Uri SourceBamlUri) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

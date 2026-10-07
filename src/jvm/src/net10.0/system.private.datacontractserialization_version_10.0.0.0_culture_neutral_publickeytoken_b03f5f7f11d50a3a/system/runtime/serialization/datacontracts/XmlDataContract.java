@@ -102,7 +102,10 @@ public class XmlDataContract extends system.runtime.serialization.datacontracts.
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlDataContract(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -161,6 +164,13 @@ public class XmlDataContract extends system.runtime.serialization.datacontracts.
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HasRoot.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.XmlDataContract.HasRoot" target="_top">.NET documentation</a>
+     */
     public boolean getHasRoot() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +185,13 @@ public class XmlDataContract extends system.runtime.serialization.datacontracts.
         }
     }
 
+    /**
+     * Sets the value of the .NET property HasRoot.
+     *
+     * @param HasRoot the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.XmlDataContract.HasRoot" target="_top">.NET documentation</a>
+     */
     public void setHasRoot(boolean HasRoot) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +202,13 @@ public class XmlDataContract extends system.runtime.serialization.datacontracts.
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsAnonymous.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.XmlDataContract.IsAnonymous" target="_top">.NET documentation</a>
+     */
     public boolean getIsAnonymous() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +223,13 @@ public class XmlDataContract extends system.runtime.serialization.datacontracts.
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsTopLevelElementNullable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.XmlDataContract.IsTopLevelElementNullable" target="_top">.NET documentation</a>
+     */
     public boolean getIsTopLevelElementNullable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +244,13 @@ public class XmlDataContract extends system.runtime.serialization.datacontracts.
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsTopLevelElementNullable.
+     *
+     * @param IsTopLevelElementNullable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.XmlDataContract.IsTopLevelElementNullable" target="_top">.NET documentation</a>
+     */
     public void setIsTopLevelElementNullable(boolean IsTopLevelElementNullable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +261,13 @@ public class XmlDataContract extends system.runtime.serialization.datacontracts.
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsTypeDefinedOnImport.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.XmlDataContract.IsTypeDefinedOnImport" target="_top">.NET documentation</a>
+     */
     public boolean getIsTypeDefinedOnImport() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +282,13 @@ public class XmlDataContract extends system.runtime.serialization.datacontracts.
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsTypeDefinedOnImport.
+     *
+     * @param IsTypeDefinedOnImport the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.XmlDataContract.IsTypeDefinedOnImport" target="_top">.NET documentation</a>
+     */
     public void setIsTypeDefinedOnImport(boolean IsTypeDefinedOnImport) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +299,13 @@ public class XmlDataContract extends system.runtime.serialization.datacontracts.
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsValueType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.XmlDataContract.IsValueType" target="_top">.NET documentation</a>
+     */
     public boolean getIsValueType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +320,13 @@ public class XmlDataContract extends system.runtime.serialization.datacontracts.
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsValueType.
+     *
+     * @param IsValueType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.XmlDataContract.IsValueType" target="_top">.NET documentation</a>
+     */
     public void setIsValueType(boolean IsValueType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +337,13 @@ public class XmlDataContract extends system.runtime.serialization.datacontracts.
         }
     }
 
+    /**
+     * Gets the value of the .NET property XsdType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.XmlDataContract.XsdType" target="_top">.NET documentation</a>
+     */
     public XmlSchemaType getXsdType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +359,13 @@ public class XmlDataContract extends system.runtime.serialization.datacontracts.
         }
     }
 
+    /**
+     * Sets the value of the .NET property XsdType.
+     *
+     * @param XsdType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.XmlDataContract.XsdType" target="_top">.NET documentation</a>
+     */
     public void setXsdType(XmlSchemaType XsdType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

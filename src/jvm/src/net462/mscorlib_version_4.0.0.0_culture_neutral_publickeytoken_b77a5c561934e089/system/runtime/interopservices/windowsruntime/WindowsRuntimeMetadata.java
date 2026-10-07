@@ -100,7 +100,10 @@ public class WindowsRuntimeMetadata extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WindowsRuntimeMetadata(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,18 @@ public class WindowsRuntimeMetadata extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ResolveNamespace.
+     *
+     * @param namespaceName the argument of type {@code java.lang.String}
+     * @param packageGraphFilePaths the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMetadata.ResolveNamespace" target="_top">.NET documentation</a>
+     */
     public static IEnumerable_1 ResolveNamespace(java.lang.String namespaceName, IEnumerable_1 packageGraphFilePaths) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -168,6 +183,19 @@ public class WindowsRuntimeMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResolveNamespace.
+     *
+     * @param namespaceName the argument of type {@code java.lang.String}
+     * @param windowsSdkFilePath the argument of type {@code java.lang.String}
+     * @param packageGraphFilePaths the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMetadata.ResolveNamespace" target="_top">.NET documentation</a>
+     */
     public static IEnumerable_1 ResolveNamespace(java.lang.String namespaceName, java.lang.String windowsSdkFilePath, IEnumerable_1 packageGraphFilePaths) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

@@ -100,7 +100,10 @@ public class RNGCryptoServiceProvider extends system.security.cryptography.Rando
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RNGCryptoServiceProvider(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,14 @@ public class RNGCryptoServiceProvider extends system.security.cryptography.Rando
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RNGCryptoServiceProvider.-ctor" target="_top">.NET documentation</a>
+     */
     public RNGCryptoServiceProvider() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +168,15 @@ public class RNGCryptoServiceProvider extends system.security.cryptography.Rando
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param rgb the argument of type {@code byte[]}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RNGCryptoServiceProvider.-ctor" target="_top">.NET documentation</a>
+     */
     public RNGCryptoServiceProvider(byte[] rgb) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +187,16 @@ public class RNGCryptoServiceProvider extends system.security.cryptography.Rando
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param cspParams the argument of type {@code CspParameters}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RNGCryptoServiceProvider.-ctor" target="_top">.NET documentation</a>
+     */
     public RNGCryptoServiceProvider(CspParameters cspParams) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -177,6 +207,15 @@ public class RNGCryptoServiceProvider extends system.security.cryptography.Rando
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param str the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RNGCryptoServiceProvider.-ctor" target="_top">.NET documentation</a>
+     */
     public RNGCryptoServiceProvider(java.lang.String str) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -191,6 +230,14 @@ public class RNGCryptoServiceProvider extends system.security.cryptography.Rando
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetBytes.
+     *
+     * @param data the argument of type {@code byte[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RNGCryptoServiceProvider.GetBytes" target="_top">.NET documentation</a>
+     */
     public void GetBytes(byte[] data) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +248,14 @@ public class RNGCryptoServiceProvider extends system.security.cryptography.Rando
         }
     }
 
+    /**
+     * Invokes the .NET member GetBytes.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RNGCryptoServiceProvider.GetBytes" target="_top">.NET documentation</a>
+     */
     public void GetBytes(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +266,14 @@ public class RNGCryptoServiceProvider extends system.security.cryptography.Rando
         }
     }
 
+    /**
+     * Invokes the .NET member GetNonZeroBytes.
+     *
+     * @param data the argument of type {@code byte[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RNGCryptoServiceProvider.GetNonZeroBytes" target="_top">.NET documentation</a>
+     */
     public void GetNonZeroBytes(byte[] data) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +284,14 @@ public class RNGCryptoServiceProvider extends system.security.cryptography.Rando
         }
     }
 
+    /**
+     * Invokes the .NET member GetNonZeroBytes.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RNGCryptoServiceProvider.GetNonZeroBytes" target="_top">.NET documentation</a>
+     */
     public void GetNonZeroBytes(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class FunctionConstructor extends microsoft.jscript.ScriptFunction  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FunctionConstructor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,29 @@ public class FunctionConstructor extends microsoft.jscript.ScriptFunction  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateInstanceNewFunctionConstructor.
+     *
+     * @param args the argument of type {@code NetObject...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws microsoft.jscript.EndOfFile if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.FunctionConstructor.CreateInstanceNewFunctionConstructor" target="_top">.NET documentation</a>
+     */
     public ScriptFunction CreateInstanceNewFunctionConstructor(NetObject... args) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.OverflowException, system.OutOfMemoryException, microsoft.jscript.vsa.JSVsaException, system.resources.MissingManifestResourceException, microsoft.jscript.EndOfFile {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +195,29 @@ public class FunctionConstructor extends microsoft.jscript.ScriptFunction  {
         }
     }
 
+    /**
+     * Invokes the .NET member Invoke.
+     *
+     * @param args the argument of type {@code NetObject...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws microsoft.jscript.EndOfFile if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.FunctionConstructor.Invoke" target="_top">.NET documentation</a>
+     */
     public ScriptFunction Invoke(NetObject... args) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.OverflowException, system.OutOfMemoryException, microsoft.jscript.vsa.JSVsaException, system.resources.MissingManifestResourceException, microsoft.jscript.EndOfFile {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

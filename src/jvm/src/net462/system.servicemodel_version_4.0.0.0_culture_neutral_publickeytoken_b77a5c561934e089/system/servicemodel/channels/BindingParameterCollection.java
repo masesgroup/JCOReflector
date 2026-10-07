@@ -100,7 +100,10 @@ public class BindingParameterCollection extends system.collections.generic.Keyed
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BindingParameterCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,13 @@ public class BindingParameterCollection extends system.collections.generic.Keyed
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.BindingParameterCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public BindingParameterCollection() throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file

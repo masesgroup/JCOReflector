@@ -98,7 +98,10 @@ public class SqlError extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SqlError(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,13 @@ public class SqlError extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property _Class.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlError.get_Class" target="_top">.NET documentation</a>
+     */
     public byte get_Class() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +207,13 @@ public class SqlError extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property State.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlError.State" target="_top">.NET documentation</a>
+     */
     public byte getState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +254,13 @@ public class SqlError extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LineNumber.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlError.LineNumber" target="_top">.NET documentation</a>
+     */
     public int getLineNumber() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +301,13 @@ public class SqlError extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Number.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlError.Number" target="_top">.NET documentation</a>
+     */
     public int getNumber() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -317,6 +348,13 @@ public class SqlError extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Message.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlError.Message" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMessage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -331,6 +369,13 @@ public class SqlError extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Procedure.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlError.Procedure" target="_top">.NET documentation</a>
+     */
     public java.lang.String getProcedure() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -345,6 +390,13 @@ public class SqlError extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Server.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlError.Server" target="_top">.NET documentation</a>
+     */
     public java.lang.String getServer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -359,6 +411,13 @@ public class SqlError extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Source.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlError.Source" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

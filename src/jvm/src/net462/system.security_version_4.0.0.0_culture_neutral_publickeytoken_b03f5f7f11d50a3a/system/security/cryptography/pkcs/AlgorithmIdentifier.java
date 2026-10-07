@@ -99,7 +99,10 @@ public class AlgorithmIdentifier extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AlgorithmIdentifier(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,26 @@ public class AlgorithmIdentifier extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.AlgorithmIdentifier.-ctor" target="_top">.NET documentation</a>
+     */
     public AlgorithmIdentifier() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +179,13 @@ public class AlgorithmIdentifier extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param oid the argument of type {@code Oid}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.AlgorithmIdentifier.-ctor" target="_top">.NET documentation</a>
+     */
     public AlgorithmIdentifier(Oid oid) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +196,14 @@ public class AlgorithmIdentifier extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param oid the argument of type {@code Oid}
+     * @param keyLength the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.AlgorithmIdentifier.-ctor" target="_top">.NET documentation</a>
+     */
     public AlgorithmIdentifier(Oid oid, int keyLength) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -184,6 +222,13 @@ public class AlgorithmIdentifier extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Parameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.AlgorithmIdentifier.Parameters" target="_top">.NET documentation</a>
+     */
     public byte[] getParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +252,13 @@ public class AlgorithmIdentifier extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Parameters.
+     *
+     * @param Parameters the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.AlgorithmIdentifier.Parameters" target="_top">.NET documentation</a>
+     */
     public void setParameters(byte[] Parameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +269,13 @@ public class AlgorithmIdentifier extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeyLength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.AlgorithmIdentifier.KeyLength" target="_top">.NET documentation</a>
+     */
     public int getKeyLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +316,13 @@ public class AlgorithmIdentifier extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeyLength.
+     *
+     * @param KeyLength the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.AlgorithmIdentifier.KeyLength" target="_top">.NET documentation</a>
+     */
     public void setKeyLength(int KeyLength) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +333,13 @@ public class AlgorithmIdentifier extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Oid.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.AlgorithmIdentifier.Oid" target="_top">.NET documentation</a>
+     */
     public Oid getOid() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +355,13 @@ public class AlgorithmIdentifier extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Oid.
+     *
+     * @param Oid the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.AlgorithmIdentifier.Oid" target="_top">.NET documentation</a>
+     */
     public void setOid(Oid Oid) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

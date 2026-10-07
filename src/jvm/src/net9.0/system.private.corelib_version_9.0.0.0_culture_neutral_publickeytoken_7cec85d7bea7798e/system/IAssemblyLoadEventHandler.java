@@ -52,5 +52,11 @@ import system.AssemblyLoadEventArgs;
  * @version 2.0.0.0
  */
 public interface IAssemblyLoadEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param args the .NET argument of type {@code System.AssemblyLoadEventArgs}
+     */
     public void Invoke(NetObject sender, AssemblyLoadEventArgs args);
 }

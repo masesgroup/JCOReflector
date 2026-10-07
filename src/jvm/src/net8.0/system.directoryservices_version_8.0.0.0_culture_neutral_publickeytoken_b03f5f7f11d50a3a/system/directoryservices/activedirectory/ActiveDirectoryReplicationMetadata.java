@@ -102,7 +102,10 @@ public class ActiveDirectoryReplicationMetadata extends system.collections.Dicti
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ActiveDirectoryReplicationMetadata(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,22 @@ public class ActiveDirectoryReplicationMetadata extends system.collections.Dicti
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param attributeName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.ActiveDirectoryReplicationMetadata.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(java.lang.String attributeName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +190,14 @@ public class ActiveDirectoryReplicationMetadata extends system.collections.Dicti
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code AttributeMetadata[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.ActiveDirectoryReplicationMetadata.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(AttributeMetadata[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +212,13 @@ public class ActiveDirectoryReplicationMetadata extends system.collections.Dicti
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Values.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.ActiveDirectoryReplicationMetadata.Values" target="_top">.NET documentation</a>
+     */
     public AttributeMetadataCollection getValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +234,13 @@ public class ActiveDirectoryReplicationMetadata extends system.collections.Dicti
         }
     }
 
+    /**
+     * Gets the value of the .NET property AttributeNames.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.ActiveDirectoryReplicationMetadata.AttributeNames" target="_top">.NET documentation</a>
+     */
     public ReadOnlyStringCollection getAttributeNames() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

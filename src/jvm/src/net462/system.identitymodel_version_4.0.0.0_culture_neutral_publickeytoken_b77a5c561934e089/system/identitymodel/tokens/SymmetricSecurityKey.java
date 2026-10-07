@@ -103,7 +103,10 @@ public class SymmetricSecurityKey extends system.identitymodel.tokens.SecurityKe
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SymmetricSecurityKey(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,18 @@ public class SymmetricSecurityKey extends system.identitymodel.tokens.SecurityKe
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GenerateDerivedKey.
+     *
+     * @param algorithm the argument of type {@code java.lang.String}
+     * @param label the argument of type {@code byte[]}
+     * @param nonce the argument of type {@code byte[]}
+     * @param derivedKeyLength the argument of type {@code int}
+     * @param offset the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SymmetricSecurityKey.GenerateDerivedKey" target="_top">.NET documentation</a>
+     */
     public byte[] GenerateDerivedKey(java.lang.String algorithm, byte[] label, byte[] nonce, int derivedKeyLength, int offset) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +194,18 @@ public class SymmetricSecurityKey extends system.identitymodel.tokens.SecurityKe
         }
     }
 
+    /**
+     * Invokes the .NET member GenerateDerivedKey.
+     *
+     * @param dupParam0 the argument of type {@code java.lang.String}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @param dupParam2 the argument of type {@code JCORefOut}
+     * @param dupParam3 the argument of type {@code int}
+     * @param dupParam4 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SymmetricSecurityKey.GenerateDerivedKey" target="_top">.NET documentation</a>
+     */
     public byte[] GenerateDerivedKey(java.lang.String dupParam0, JCORefOut dupParam1, JCORefOut dupParam2, int dupParam3, int dupParam4) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +229,13 @@ public class SymmetricSecurityKey extends system.identitymodel.tokens.SecurityKe
         }
     }
 
+    /**
+     * Invokes the .NET member GetSymmetricKey.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SymmetricSecurityKey.GetSymmetricKey" target="_top">.NET documentation</a>
+     */
     public byte[] GetSymmetricKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +259,14 @@ public class SymmetricSecurityKey extends system.identitymodel.tokens.SecurityKe
         }
     }
 
+    /**
+     * Invokes the .NET member GetIVSize.
+     *
+     * @param algorithm the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SymmetricSecurityKey.GetIVSize" target="_top">.NET documentation</a>
+     */
     public int GetIVSize(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +307,15 @@ public class SymmetricSecurityKey extends system.identitymodel.tokens.SecurityKe
         }
     }
 
+    /**
+     * Invokes the .NET member GetDecryptionTransform.
+     *
+     * @param algorithm the argument of type {@code java.lang.String}
+     * @param iv the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SymmetricSecurityKey.GetDecryptionTransform" target="_top">.NET documentation</a>
+     */
     public ICryptoTransform GetDecryptionTransform(java.lang.String algorithm, byte[] iv) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +331,15 @@ public class SymmetricSecurityKey extends system.identitymodel.tokens.SecurityKe
         }
     }
 
+    /**
+     * Invokes the .NET member GetDecryptionTransform.
+     *
+     * @param dupParam0 the argument of type {@code java.lang.String}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SymmetricSecurityKey.GetDecryptionTransform" target="_top">.NET documentation</a>
+     */
     public ICryptoTransform GetDecryptionTransform(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +355,15 @@ public class SymmetricSecurityKey extends system.identitymodel.tokens.SecurityKe
         }
     }
 
+    /**
+     * Invokes the .NET member GetEncryptionTransform.
+     *
+     * @param algorithm the argument of type {@code java.lang.String}
+     * @param iv the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SymmetricSecurityKey.GetEncryptionTransform" target="_top">.NET documentation</a>
+     */
     public ICryptoTransform GetEncryptionTransform(java.lang.String algorithm, byte[] iv) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +379,15 @@ public class SymmetricSecurityKey extends system.identitymodel.tokens.SecurityKe
         }
     }
 
+    /**
+     * Invokes the .NET member GetEncryptionTransform.
+     *
+     * @param dupParam0 the argument of type {@code java.lang.String}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SymmetricSecurityKey.GetEncryptionTransform" target="_top">.NET documentation</a>
+     */
     public ICryptoTransform GetEncryptionTransform(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -325,6 +403,14 @@ public class SymmetricSecurityKey extends system.identitymodel.tokens.SecurityKe
         }
     }
 
+    /**
+     * Invokes the .NET member GetKeyedHashAlgorithm.
+     *
+     * @param algorithm the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SymmetricSecurityKey.GetKeyedHashAlgorithm" target="_top">.NET documentation</a>
+     */
     public KeyedHashAlgorithm GetKeyedHashAlgorithm(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -340,6 +426,14 @@ public class SymmetricSecurityKey extends system.identitymodel.tokens.SecurityKe
         }
     }
 
+    /**
+     * Invokes the .NET member GetSymmetricAlgorithm.
+     *
+     * @param algorithm the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SymmetricSecurityKey.GetSymmetricAlgorithm" target="_top">.NET documentation</a>
+     */
     public SymmetricAlgorithm GetSymmetricAlgorithm(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

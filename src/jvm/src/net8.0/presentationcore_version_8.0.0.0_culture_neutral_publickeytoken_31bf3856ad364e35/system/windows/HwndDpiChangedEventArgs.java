@@ -101,7 +101,10 @@ public class HwndDpiChangedEventArgs extends system.componentmodel.HandledEventA
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HwndDpiChangedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class HwndDpiChangedEventArgs extends system.componentmodel.HandledEventA
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property NewDpi.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.HwndDpiChangedEventArgs.NewDpi" target="_top">.NET documentation</a>
+     */
     public DpiScale getNewDpi() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +185,13 @@ public class HwndDpiChangedEventArgs extends system.componentmodel.HandledEventA
         }
     }
 
+    /**
+     * Sets the value of the .NET property NewDpi.
+     *
+     * @param NewDpi the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.HwndDpiChangedEventArgs.NewDpi" target="_top">.NET documentation</a>
+     */
     public void setNewDpi(DpiScale NewDpi) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +202,13 @@ public class HwndDpiChangedEventArgs extends system.componentmodel.HandledEventA
         }
     }
 
+    /**
+     * Gets the value of the .NET property OldDpi.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.HwndDpiChangedEventArgs.OldDpi" target="_top">.NET documentation</a>
+     */
     public DpiScale getOldDpi() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +224,13 @@ public class HwndDpiChangedEventArgs extends system.componentmodel.HandledEventA
         }
     }
 
+    /**
+     * Sets the value of the .NET property OldDpi.
+     *
+     * @param OldDpi the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.HwndDpiChangedEventArgs.OldDpi" target="_top">.NET documentation</a>
+     */
     public void setOldDpi(DpiScale OldDpi) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +241,13 @@ public class HwndDpiChangedEventArgs extends system.componentmodel.HandledEventA
         }
     }
 
+    /**
+     * Gets the value of the .NET property SuggestedRect.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.HwndDpiChangedEventArgs.SuggestedRect" target="_top">.NET documentation</a>
+     */
     public Rect getSuggestedRect() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +263,13 @@ public class HwndDpiChangedEventArgs extends system.componentmodel.HandledEventA
         }
     }
 
+    /**
+     * Sets the value of the .NET property SuggestedRect.
+     *
+     * @param SuggestedRect the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.HwndDpiChangedEventArgs.SuggestedRect" target="_top">.NET documentation</a>
+     */
     public void setSuggestedRect(Rect SuggestedRect) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

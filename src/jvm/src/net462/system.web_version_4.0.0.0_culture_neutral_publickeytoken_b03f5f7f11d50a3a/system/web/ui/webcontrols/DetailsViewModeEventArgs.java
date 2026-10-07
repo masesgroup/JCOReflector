@@ -100,7 +100,10 @@ public class DetailsViewModeEventArgs extends system.componentmodel.CancelEventA
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DetailsViewModeEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class DetailsViewModeEventArgs extends system.componentmodel.CancelEventA
     public DetailsViewModeEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param mode the argument of type {@code DetailsViewMode}
+     * @param cancelingEdit the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.DetailsViewModeEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public DetailsViewModeEventArgs(DetailsViewMode mode, boolean cancelingEdit) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +180,13 @@ public class DetailsViewModeEventArgs extends system.componentmodel.CancelEventA
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CancelingEdit.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.DetailsViewModeEventArgs.CancelingEdit" target="_top">.NET documentation</a>
+     */
     public boolean getCancelingEdit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +201,13 @@ public class DetailsViewModeEventArgs extends system.componentmodel.CancelEventA
         }
     }
 
+    /**
+     * Gets the value of the .NET property NewMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.DetailsViewModeEventArgs.NewMode" target="_top">.NET documentation</a>
+     */
     public DetailsViewMode getNewMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +223,13 @@ public class DetailsViewModeEventArgs extends system.componentmodel.CancelEventA
         }
     }
 
+    /**
+     * Sets the value of the .NET property NewMode.
+     *
+     * @param NewMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.DetailsViewModeEventArgs.NewMode" target="_top">.NET documentation</a>
+     */
     public void setNewMode(DetailsViewMode NewMode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

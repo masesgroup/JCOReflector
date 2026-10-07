@@ -100,7 +100,10 @@ public class Cast_2<TOperand extends IJCOBridgeReflected, TResult extends IJCOBr
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Cast_2(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class Cast_2<TOperand extends IJCOBridgeReflected, TResult extends IJCOBr
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.Cast-2.-ctor" target="_top">.NET documentation</a>
+     */
     public Cast_2() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +176,13 @@ public class Cast_2<TOperand extends IJCOBridgeReflected, TResult extends IJCOBr
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Checked.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.Cast-2.Checked" target="_top">.NET documentation</a>
+     */
     public boolean getChecked() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +197,13 @@ public class Cast_2<TOperand extends IJCOBridgeReflected, TResult extends IJCOBr
         }
     }
 
+    /**
+     * Sets the value of the .NET property Checked.
+     *
+     * @param Checked the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.Cast-2.Checked" target="_top">.NET documentation</a>
+     */
     public void setChecked(boolean Checked) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +214,13 @@ public class Cast_2<TOperand extends IJCOBridgeReflected, TResult extends IJCOBr
         }
     }
 
+    /**
+     * Gets the value of the .NET property Operand.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.Cast-2.Operand" target="_top">.NET documentation</a>
+     */
     public InArgument_1 getOperand() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +236,13 @@ public class Cast_2<TOperand extends IJCOBridgeReflected, TResult extends IJCOBr
         }
     }
 
+    /**
+     * Sets the value of the .NET property Operand.
+     *
+     * @param Operand the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.Cast-2.Operand" target="_top">.NET documentation</a>
+     */
     public void setOperand(InArgument_1 Operand) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

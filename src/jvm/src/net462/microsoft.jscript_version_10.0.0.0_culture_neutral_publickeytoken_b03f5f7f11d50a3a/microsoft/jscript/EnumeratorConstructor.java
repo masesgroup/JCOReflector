@@ -100,7 +100,10 @@ public class EnumeratorConstructor extends microsoft.jscript.ScriptFunction  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EnumeratorConstructor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,23 @@ public class EnumeratorConstructor extends microsoft.jscript.ScriptFunction  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateInstanceNewEnumeratorConstructor.
+     *
+     * @param args the argument of type {@code NetObject...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.EnumeratorConstructor.CreateInstanceNewEnumeratorConstructor" target="_top">.NET documentation</a>
+     */
     public EnumeratorObject CreateInstanceNewEnumeratorConstructor(NetObject... args) throws Throwable, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, microsoft.jscript.JScriptException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +190,13 @@ public class EnumeratorConstructor extends microsoft.jscript.ScriptFunction  {
         }
     }
 
+    /**
+     * Invokes the .NET member Invoke.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.EnumeratorConstructor.Invoke" target="_top">.NET documentation</a>
+     */
     public NetObject Invoke() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

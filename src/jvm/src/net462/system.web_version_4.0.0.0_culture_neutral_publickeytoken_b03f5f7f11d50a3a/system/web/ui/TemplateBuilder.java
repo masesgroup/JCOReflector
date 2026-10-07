@@ -103,7 +103,10 @@ public class TemplateBuilder extends system.web.ui.ControlBuilder  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TemplateBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,12 @@ public class TemplateBuilder extends system.web.ui.ControlBuilder  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.TemplateBuilder.-ctor" target="_top">.NET documentation</a>
+     */
     public TemplateBuilder() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,19 @@ public class TemplateBuilder extends system.web.ui.ControlBuilder  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member NeedsTagInnerText.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.TemplateBuilder.NeedsTagInnerText" target="_top">.NET documentation</a>
+     */
     public boolean NeedsTagInnerText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +200,13 @@ public class TemplateBuilder extends system.web.ui.ControlBuilder  {
         }
     }
 
+    /**
+     * Invokes the .NET member BuildObject.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.TemplateBuilder.BuildObject" target="_top">.NET documentation</a>
+     */
     public NetObject BuildObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +222,18 @@ public class TemplateBuilder extends system.web.ui.ControlBuilder  {
         }
     }
 
+    /**
+     * Invokes the .NET member CloseControl.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.TemplateBuilder.CloseControl" target="_top">.NET documentation</a>
+     */
     public void CloseControl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +244,35 @@ public class TemplateBuilder extends system.web.ui.ControlBuilder  {
         }
     }
 
+    /**
+     * Invokes the .NET member Init.
+     *
+     * @param parser the argument of type {@code TemplateParser}
+     * @param parentBuilder the argument of type {@code ControlBuilder}
+     * @param type the argument of type {@code NetType}
+     * @param tagName the argument of type {@code java.lang.String}
+     * @param ID the argument of type {@code java.lang.String}
+     * @param attribs the argument of type {@code IDictionary}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.web.HttpParseException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.TemplateBuilder.Init" target="_top">.NET documentation</a>
+     */
     public void Init(TemplateParser parser, ControlBuilder parentBuilder, NetType type, java.lang.String tagName, java.lang.String ID, IDictionary attribs) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.FormatException, system.reflection.AmbiguousMatchException, system.configuration.provider.ProviderException, system.web.HttpParseException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +283,26 @@ public class TemplateBuilder extends system.web.ui.ControlBuilder  {
         }
     }
 
+    /**
+     * Invokes the .NET member InstantiateIn.
+     *
+     * @param container the argument of type {@code Control}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.TemplateBuilder.InstantiateIn" target="_top">.NET documentation</a>
+     */
     public void InstantiateIn(Control container) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MissingMethodException, system.web.HttpException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +313,13 @@ public class TemplateBuilder extends system.web.ui.ControlBuilder  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetTagInnerText.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.TemplateBuilder.SetTagInnerText" target="_top">.NET documentation</a>
+     */
     public void SetTagInnerText(java.lang.String text) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +334,13 @@ public class TemplateBuilder extends system.web.ui.ControlBuilder  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Text.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.TemplateBuilder.Text" target="_top">.NET documentation</a>
+     */
     public java.lang.String getText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +355,13 @@ public class TemplateBuilder extends system.web.ui.ControlBuilder  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Text.
+     *
+     * @param Text the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.TemplateBuilder.Text" target="_top">.NET documentation</a>
+     */
     public void setText(java.lang.String Text) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

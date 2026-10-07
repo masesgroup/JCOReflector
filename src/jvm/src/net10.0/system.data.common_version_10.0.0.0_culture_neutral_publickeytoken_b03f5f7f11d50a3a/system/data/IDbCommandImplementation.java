@@ -113,7 +113,10 @@ public class IDbCommandImplementation extends NetObject implements IDbCommand {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDbCommandImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,13 @@ public class IDbCommandImplementation extends NetObject implements IDbCommand {
 
     // Methods section
     
+    /**
+     * Invokes the .NET member ExecuteNonQuery.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbCommand.ExecuteNonQuery" target="_top">.NET documentation</a>
+     */
     public int ExecuteNonQuery() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +205,13 @@ public class IDbCommandImplementation extends NetObject implements IDbCommand {
         }
     }
 
+    /**
+     * Invokes the .NET member ExecuteReader.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbCommand.ExecuteReader" target="_top">.NET documentation</a>
+     */
     public IDataReader ExecuteReader() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +227,14 @@ public class IDbCommandImplementation extends NetObject implements IDbCommand {
         }
     }
 
+    /**
+     * Invokes the .NET member ExecuteReader.
+     *
+     * @param behavior the argument of type {@code CommandBehavior}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbCommand.ExecuteReader" target="_top">.NET documentation</a>
+     */
     public IDataReader ExecuteReader(CommandBehavior behavior) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +250,13 @@ public class IDbCommandImplementation extends NetObject implements IDbCommand {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateParameter.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbCommand.CreateParameter" target="_top">.NET documentation</a>
+     */
     public IDbDataParameter CreateParameter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +272,13 @@ public class IDbCommandImplementation extends NetObject implements IDbCommand {
         }
     }
 
+    /**
+     * Invokes the .NET member ExecuteScalar.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbCommand.ExecuteScalar" target="_top">.NET documentation</a>
+     */
     public NetObject ExecuteScalar() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +294,12 @@ public class IDbCommandImplementation extends NetObject implements IDbCommand {
         }
     }
 
+    /**
+     * Invokes the .NET member Cancel.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbCommand.Cancel" target="_top">.NET documentation</a>
+     */
     public void Cancel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +310,12 @@ public class IDbCommandImplementation extends NetObject implements IDbCommand {
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbCommand.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +326,12 @@ public class IDbCommandImplementation extends NetObject implements IDbCommand {
         }
     }
 
+    /**
+     * Invokes the .NET member Prepare.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbCommand.Prepare" target="_top">.NET documentation</a>
+     */
     public void Prepare() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +346,13 @@ public class IDbCommandImplementation extends NetObject implements IDbCommand {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CommandTimeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbCommand.CommandTimeout" target="_top">.NET documentation</a>
+     */
     public int getCommandTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -329,6 +393,13 @@ public class IDbCommandImplementation extends NetObject implements IDbCommand {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CommandTimeout.
+     *
+     * @param CommandTimeout the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbCommand.CommandTimeout" target="_top">.NET documentation</a>
+     */
     public void setCommandTimeout(int CommandTimeout) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -339,6 +410,13 @@ public class IDbCommandImplementation extends NetObject implements IDbCommand {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CommandType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbCommand.CommandType" target="_top">.NET documentation</a>
+     */
     public CommandType getCommandType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -354,6 +432,13 @@ public class IDbCommandImplementation extends NetObject implements IDbCommand {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CommandType.
+     *
+     * @param CommandType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbCommand.CommandType" target="_top">.NET documentation</a>
+     */
     public void setCommandType(CommandType CommandType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -364,6 +449,13 @@ public class IDbCommandImplementation extends NetObject implements IDbCommand {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Parameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbCommand.Parameters" target="_top">.NET documentation</a>
+     */
     public IDataParameterCollection getParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -379,6 +471,13 @@ public class IDbCommandImplementation extends NetObject implements IDbCommand {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Connection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbCommand.Connection" target="_top">.NET documentation</a>
+     */
     public IDbConnection getConnection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -394,6 +493,13 @@ public class IDbCommandImplementation extends NetObject implements IDbCommand {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Connection.
+     *
+     * @param Connection the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbCommand.Connection" target="_top">.NET documentation</a>
+     */
     public void setConnection(IDbConnection Connection) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -404,6 +510,13 @@ public class IDbCommandImplementation extends NetObject implements IDbCommand {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Transaction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbCommand.Transaction" target="_top">.NET documentation</a>
+     */
     public IDbTransaction getTransaction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -419,6 +532,13 @@ public class IDbCommandImplementation extends NetObject implements IDbCommand {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Transaction.
+     *
+     * @param Transaction the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbCommand.Transaction" target="_top">.NET documentation</a>
+     */
     public void setTransaction(IDbTransaction Transaction) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -429,6 +549,13 @@ public class IDbCommandImplementation extends NetObject implements IDbCommand {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UpdatedRowSource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbCommand.UpdatedRowSource" target="_top">.NET documentation</a>
+     */
     public UpdateRowSource getUpdatedRowSource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -444,6 +571,13 @@ public class IDbCommandImplementation extends NetObject implements IDbCommand {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UpdatedRowSource.
+     *
+     * @param UpdatedRowSource the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbCommand.UpdatedRowSource" target="_top">.NET documentation</a>
+     */
     public void setUpdatedRowSource(UpdateRowSource UpdatedRowSource) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -454,6 +588,13 @@ public class IDbCommandImplementation extends NetObject implements IDbCommand {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CommandText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbCommand.CommandText" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCommandText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -468,6 +609,13 @@ public class IDbCommandImplementation extends NetObject implements IDbCommand {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CommandText.
+     *
+     * @param CommandText the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbCommand.CommandText" target="_top">.NET documentation</a>
+     */
     public void setCommandText(java.lang.String CommandText) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

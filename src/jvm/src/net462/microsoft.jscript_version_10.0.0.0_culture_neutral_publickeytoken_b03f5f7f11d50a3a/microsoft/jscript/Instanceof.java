@@ -99,7 +99,10 @@ public class Instanceof extends microsoft.jscript.BinaryOp  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Instanceof(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,33 @@ public class Instanceof extends microsoft.jscript.BinaryOp  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member JScriptInstanceof.
+     *
+     * @param v1 the argument of type {@code NetObject}
+     * @param v2 the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @throws microsoft.jscript.EndOfFile if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Instanceof.JScriptInstanceof" target="_top">.NET documentation</a>
+     */
     public static boolean JScriptInstanceof(NetObject v1, NetObject v2) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.NotImplementedException, system.MissingMethodException, system.FormatException, system.OverflowException, system.IndexOutOfRangeException, system.security.SecurityException, system.reflection.TargetInvocationException, microsoft.jscript.vsa.JSVsaException, microsoft.jscript.EndOfFile {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

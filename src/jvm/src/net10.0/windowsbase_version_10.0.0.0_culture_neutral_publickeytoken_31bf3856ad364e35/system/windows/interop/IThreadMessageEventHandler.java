@@ -52,5 +52,11 @@ import system.windows.interop.MSG;
  * @version 2.0.0.0
  */
 public interface IThreadMessageEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param msg the .NET argument of type {@code System.Windows.Interop.MSG&}
+     * @param handled the .NET argument of type {@code System.Boolean&}
+     */
     public void Invoke(MSG msg, boolean handled);
 }

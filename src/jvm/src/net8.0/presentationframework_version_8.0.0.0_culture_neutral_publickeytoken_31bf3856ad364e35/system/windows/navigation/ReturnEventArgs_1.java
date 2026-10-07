@@ -99,7 +99,10 @@ public class ReturnEventArgs_1<T extends IJCOBridgeReflected> extends system.Eve
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ReturnEventArgs_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class ReturnEventArgs_1<T extends IJCOBridgeReflected> extends system.Eve
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Navigation.ReturnEventArgs-1.-ctor" target="_top">.NET documentation</a>
+     */
     public ReturnEventArgs_1() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,13 @@ public class ReturnEventArgs_1<T extends IJCOBridgeReflected> extends system.Eve
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param result the argument of type {@code T}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Navigation.ReturnEventArgs-1.-ctor" target="_top">.NET documentation</a>
+     */
     public ReturnEventArgs_1(T result) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +194,13 @@ public class ReturnEventArgs_1<T extends IJCOBridgeReflected> extends system.Eve
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Result.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Navigation.ReturnEventArgs-1.Result" target="_top">.NET documentation</a>
+     */
     public T getResult() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +215,13 @@ public class ReturnEventArgs_1<T extends IJCOBridgeReflected> extends system.Eve
         }
     }
 
+    /**
+     * Sets the value of the .NET property Result.
+     *
+     * @param Result the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Navigation.ReturnEventArgs-1.Result" target="_top">.NET documentation</a>
+     */
     public void setResult(T Result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

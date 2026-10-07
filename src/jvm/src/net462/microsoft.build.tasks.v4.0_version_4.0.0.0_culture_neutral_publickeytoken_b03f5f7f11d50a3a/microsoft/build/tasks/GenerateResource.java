@@ -101,7 +101,10 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public GenerateResource(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,15 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.-ctor" target="_top">.NET documentation</a>
+     */
     public GenerateResource() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +174,42 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Execute.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.CannotUnloadAppDomainException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.Execute" target="_top">.NET documentation</a>
+     */
     public boolean Execute() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.runtime.serialization.SerializationException, system.FormatException, system.io.PathTooLongException, system.OverflowException, system.configuration.ConfigurationErrorsException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.NotImplementedException, system.UnauthorizedAccessException, system.xml.XmlException, system.MulticastNotSupportedException, system.BadImageFormatException, system.RankException, system.CannotUnloadAppDomainException, system.runtime.remoting.RemotingException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +228,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ExecuteAsTool.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.ExecuteAsTool" target="_top">.NET documentation</a>
+     */
     public boolean getExecuteAsTool() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +249,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ExecuteAsTool.
+     *
+     * @param ExecuteAsTool the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.ExecuteAsTool" target="_top">.NET documentation</a>
+     */
     public void setExecuteAsTool(boolean ExecuteAsTool) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +266,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExtractResWFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.ExtractResWFiles" target="_top">.NET documentation</a>
+     */
     public boolean getExtractResWFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +287,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ExtractResWFiles.
+     *
+     * @param ExtractResWFiles the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.ExtractResWFiles" target="_top">.NET documentation</a>
+     */
     public void setExtractResWFiles(boolean ExtractResWFiles) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +304,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinimalRebuildFromTracking.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.MinimalRebuildFromTracking" target="_top">.NET documentation</a>
+     */
     public boolean getMinimalRebuildFromTracking() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +325,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MinimalRebuildFromTracking.
+     *
+     * @param MinimalRebuildFromTracking the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.MinimalRebuildFromTracking" target="_top">.NET documentation</a>
+     */
     public void setMinimalRebuildFromTracking(boolean MinimalRebuildFromTracking) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +342,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NeverLockTypeAssemblies.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.NeverLockTypeAssemblies" target="_top">.NET documentation</a>
+     */
     public boolean getNeverLockTypeAssemblies() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +363,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NeverLockTypeAssemblies.
+     *
+     * @param NeverLockTypeAssemblies the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.NeverLockTypeAssemblies" target="_top">.NET documentation</a>
+     */
     public void setNeverLockTypeAssemblies(boolean NeverLockTypeAssemblies) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +380,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PublicClass.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.PublicClass" target="_top">.NET documentation</a>
+     */
     public boolean getPublicClass() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +401,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PublicClass.
+     *
+     * @param PublicClass the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.PublicClass" target="_top">.NET documentation</a>
+     */
     public void setPublicClass(boolean PublicClass) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +418,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TrackFileAccess.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.TrackFileAccess" target="_top">.NET documentation</a>
+     */
     public boolean getTrackFileAccess() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -314,6 +439,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TrackFileAccess.
+     *
+     * @param TrackFileAccess the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.TrackFileAccess" target="_top">.NET documentation</a>
+     */
     public void setTrackFileAccess(boolean TrackFileAccess) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -324,6 +456,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseSourcePath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.UseSourcePath" target="_top">.NET documentation</a>
+     */
     public boolean getUseSourcePath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -338,6 +477,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseSourcePath.
+     *
+     * @param UseSourcePath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.UseSourcePath" target="_top">.NET documentation</a>
+     */
     public void setUseSourcePath(boolean UseSourcePath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +494,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StateFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.StateFile" target="_top">.NET documentation</a>
+     */
     public ITaskItem getStateFile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -363,6 +516,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StateFile.
+     *
+     * @param StateFile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.StateFile" target="_top">.NET documentation</a>
+     */
     public void setStateFile(ITaskItem StateFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -373,6 +533,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AdditionalInputs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.AdditionalInputs" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getAdditionalInputs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -394,6 +561,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AdditionalInputs.
+     *
+     * @param AdditionalInputs the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.AdditionalInputs" target="_top">.NET documentation</a>
+     */
     public void setAdditionalInputs(ITaskItem[] AdditionalInputs) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -404,6 +578,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExcludedInputPaths.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.ExcludedInputPaths" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getExcludedInputPaths() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -425,6 +606,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ExcludedInputPaths.
+     *
+     * @param ExcludedInputPaths the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.ExcludedInputPaths" target="_top">.NET documentation</a>
+     */
     public void setExcludedInputPaths(ITaskItem[] ExcludedInputPaths) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -435,6 +623,17 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FilesWritten.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.FilesWritten" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getFilesWritten() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -456,6 +655,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OutputResources.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.OutputResources" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getOutputResources() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -477,6 +683,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OutputResources.
+     *
+     * @param OutputResources the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.OutputResources" target="_top">.NET documentation</a>
+     */
     public void setOutputResources(ITaskItem[] OutputResources) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -487,6 +700,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property References.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.References" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getReferences() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -508,6 +728,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property References.
+     *
+     * @param References the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.References" target="_top">.NET documentation</a>
+     */
     public void setReferences(ITaskItem[] References) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -518,6 +745,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Sources.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.Sources" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getSources() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -539,6 +773,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Sources.
+     *
+     * @param Sources the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.Sources" target="_top">.NET documentation</a>
+     */
     public void setSources(ITaskItem[] Sources) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -549,6 +790,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TLogReadFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.TLogReadFiles" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getTLogReadFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -570,6 +818,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TLogWriteFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.TLogWriteFiles" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getTLogWriteFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -591,6 +846,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OutputDirectory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.OutputDirectory" target="_top">.NET documentation</a>
+     */
     public java.lang.String getOutputDirectory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -605,6 +867,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OutputDirectory.
+     *
+     * @param OutputDirectory the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.OutputDirectory" target="_top">.NET documentation</a>
+     */
     public void setOutputDirectory(java.lang.String OutputDirectory) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -615,6 +884,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SdkToolsPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.SdkToolsPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSdkToolsPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -629,6 +905,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SdkToolsPath.
+     *
+     * @param SdkToolsPath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.SdkToolsPath" target="_top">.NET documentation</a>
+     */
     public void setSdkToolsPath(java.lang.String SdkToolsPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -639,6 +922,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StronglyTypedClassName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.StronglyTypedClassName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getStronglyTypedClassName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -653,6 +943,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StronglyTypedClassName.
+     *
+     * @param StronglyTypedClassName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.StronglyTypedClassName" target="_top">.NET documentation</a>
+     */
     public void setStronglyTypedClassName(java.lang.String StronglyTypedClassName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -663,6 +960,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StronglyTypedFileName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.StronglyTypedFileName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getStronglyTypedFileName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -677,6 +981,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StronglyTypedFileName.
+     *
+     * @param StronglyTypedFileName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.StronglyTypedFileName" target="_top">.NET documentation</a>
+     */
     public void setStronglyTypedFileName(java.lang.String StronglyTypedFileName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -687,6 +998,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StronglyTypedLanguage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.StronglyTypedLanguage" target="_top">.NET documentation</a>
+     */
     public java.lang.String getStronglyTypedLanguage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -701,6 +1019,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StronglyTypedLanguage.
+     *
+     * @param StronglyTypedLanguage the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.StronglyTypedLanguage" target="_top">.NET documentation</a>
+     */
     public void setStronglyTypedLanguage(java.lang.String StronglyTypedLanguage) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -711,6 +1036,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StronglyTypedManifestPrefix.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.StronglyTypedManifestPrefix" target="_top">.NET documentation</a>
+     */
     public java.lang.String getStronglyTypedManifestPrefix() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -725,6 +1057,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StronglyTypedManifestPrefix.
+     *
+     * @param StronglyTypedManifestPrefix the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.StronglyTypedManifestPrefix" target="_top">.NET documentation</a>
+     */
     public void setStronglyTypedManifestPrefix(java.lang.String StronglyTypedManifestPrefix) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -735,6 +1074,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StronglyTypedNamespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.StronglyTypedNamespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getStronglyTypedNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -749,6 +1095,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StronglyTypedNamespace.
+     *
+     * @param StronglyTypedNamespace the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.StronglyTypedNamespace" target="_top">.NET documentation</a>
+     */
     public void setStronglyTypedNamespace(java.lang.String StronglyTypedNamespace) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -759,6 +1112,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ToolArchitecture.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.ToolArchitecture" target="_top">.NET documentation</a>
+     */
     public java.lang.String getToolArchitecture() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -773,6 +1133,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ToolArchitecture.
+     *
+     * @param ToolArchitecture the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.ToolArchitecture" target="_top">.NET documentation</a>
+     */
     public void setToolArchitecture(java.lang.String ToolArchitecture) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -783,6 +1150,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TrackerFrameworkPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.TrackerFrameworkPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTrackerFrameworkPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -797,6 +1171,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TrackerFrameworkPath.
+     *
+     * @param TrackerFrameworkPath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.TrackerFrameworkPath" target="_top">.NET documentation</a>
+     */
     public void setTrackerFrameworkPath(java.lang.String TrackerFrameworkPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -807,6 +1188,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TrackerLogDirectory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.TrackerLogDirectory" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTrackerLogDirectory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -821,6 +1209,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TrackerLogDirectory.
+     *
+     * @param TrackerLogDirectory the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.TrackerLogDirectory" target="_top">.NET documentation</a>
+     */
     public void setTrackerLogDirectory(java.lang.String TrackerLogDirectory) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -831,6 +1226,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TrackerSdkPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.TrackerSdkPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTrackerSdkPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -845,6 +1247,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TrackerSdkPath.
+     *
+     * @param TrackerSdkPath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.TrackerSdkPath" target="_top">.NET documentation</a>
+     */
     public void setTrackerSdkPath(java.lang.String TrackerSdkPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -855,6 +1264,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EnvironmentVariables.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.EnvironmentVariables" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getEnvironmentVariables() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -878,6 +1294,13 @@ public class GenerateResource extends microsoft.build.tasks.TaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EnvironmentVariables.
+     *
+     * @param EnvironmentVariables the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateResource.EnvironmentVariables" target="_top">.NET documentation</a>
+     */
     public void setEnvironmentVariables(java.lang.String[] EnvironmentVariables) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

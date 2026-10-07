@@ -99,7 +99,10 @@ public class AspNetCompiler extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AspNetCompiler(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,24 @@ public class AspNetCompiler extends microsoft.build.tasks.ToolTaskExtension  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AspNetCompiler.-ctor" target="_top">.NET documentation</a>
+     */
     public AspNetCompiler() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +181,41 @@ public class AspNetCompiler extends microsoft.build.tasks.ToolTaskExtension  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Execute.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.threading.SemaphoreFullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AspNetCompiler.Execute" target="_top">.NET documentation</a>
+     */
     public boolean Execute() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.InvalidCastException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.WaitHandleCannotBeOpenedException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.RankException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.threading.SemaphoreFullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +234,13 @@ public class AspNetCompiler extends microsoft.build.tasks.ToolTaskExtension  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowPartiallyTrustedCallers.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AspNetCompiler.AllowPartiallyTrustedCallers" target="_top">.NET documentation</a>
+     */
     public boolean getAllowPartiallyTrustedCallers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +255,13 @@ public class AspNetCompiler extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowPartiallyTrustedCallers.
+     *
+     * @param AllowPartiallyTrustedCallers the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AspNetCompiler.AllowPartiallyTrustedCallers" target="_top">.NET documentation</a>
+     */
     public void setAllowPartiallyTrustedCallers(boolean AllowPartiallyTrustedCallers) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +272,13 @@ public class AspNetCompiler extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Clean.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AspNetCompiler.Clean" target="_top">.NET documentation</a>
+     */
     public boolean getClean() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +293,13 @@ public class AspNetCompiler extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Clean.
+     *
+     * @param Clean the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AspNetCompiler.Clean" target="_top">.NET documentation</a>
+     */
     public void setClean(boolean Clean) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +310,13 @@ public class AspNetCompiler extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Debug.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AspNetCompiler.Debug" target="_top">.NET documentation</a>
+     */
     public boolean getDebug() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +331,13 @@ public class AspNetCompiler extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Debug.
+     *
+     * @param Debug the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AspNetCompiler.Debug" target="_top">.NET documentation</a>
+     */
     public void setDebug(boolean Debug) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +348,13 @@ public class AspNetCompiler extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DelaySign.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AspNetCompiler.DelaySign" target="_top">.NET documentation</a>
+     */
     public boolean getDelaySign() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +369,13 @@ public class AspNetCompiler extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DelaySign.
+     *
+     * @param DelaySign the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AspNetCompiler.DelaySign" target="_top">.NET documentation</a>
+     */
     public void setDelaySign(boolean DelaySign) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +386,13 @@ public class AspNetCompiler extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FixedNames.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AspNetCompiler.FixedNames" target="_top">.NET documentation</a>
+     */
     public boolean getFixedNames() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +407,13 @@ public class AspNetCompiler extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FixedNames.
+     *
+     * @param FixedNames the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AspNetCompiler.FixedNames" target="_top">.NET documentation</a>
+     */
     public void setFixedNames(boolean FixedNames) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +424,13 @@ public class AspNetCompiler extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Force.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AspNetCompiler.Force" target="_top">.NET documentation</a>
+     */
     public boolean getForce() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -312,6 +445,13 @@ public class AspNetCompiler extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Force.
+     *
+     * @param Force the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AspNetCompiler.Force" target="_top">.NET documentation</a>
+     */
     public void setForce(boolean Force) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -322,6 +462,13 @@ public class AspNetCompiler extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Updateable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AspNetCompiler.Updateable" target="_top">.NET documentation</a>
+     */
     public boolean getUpdateable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -336,6 +483,13 @@ public class AspNetCompiler extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Updateable.
+     *
+     * @param Updateable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AspNetCompiler.Updateable" target="_top">.NET documentation</a>
+     */
     public void setUpdateable(boolean Updateable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -346,6 +500,16 @@ public class AspNetCompiler extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeyContainer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AspNetCompiler.KeyContainer" target="_top">.NET documentation</a>
+     */
     public java.lang.String getKeyContainer() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -360,6 +524,20 @@ public class AspNetCompiler extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeyContainer.
+     *
+     * @param KeyContainer the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AspNetCompiler.KeyContainer" target="_top">.NET documentation</a>
+     */
     public void setKeyContainer(java.lang.String KeyContainer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -370,6 +548,16 @@ public class AspNetCompiler extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeyFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AspNetCompiler.KeyFile" target="_top">.NET documentation</a>
+     */
     public java.lang.String getKeyFile() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -384,6 +572,20 @@ public class AspNetCompiler extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeyFile.
+     *
+     * @param KeyFile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AspNetCompiler.KeyFile" target="_top">.NET documentation</a>
+     */
     public void setKeyFile(java.lang.String KeyFile) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -394,6 +596,16 @@ public class AspNetCompiler extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MetabasePath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AspNetCompiler.MetabasePath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMetabasePath() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -408,6 +620,20 @@ public class AspNetCompiler extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MetabasePath.
+     *
+     * @param MetabasePath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AspNetCompiler.MetabasePath" target="_top">.NET documentation</a>
+     */
     public void setMetabasePath(java.lang.String MetabasePath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -418,6 +644,16 @@ public class AspNetCompiler extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PhysicalPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AspNetCompiler.PhysicalPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPhysicalPath() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -432,6 +668,20 @@ public class AspNetCompiler extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PhysicalPath.
+     *
+     * @param PhysicalPath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AspNetCompiler.PhysicalPath" target="_top">.NET documentation</a>
+     */
     public void setPhysicalPath(java.lang.String PhysicalPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -442,6 +692,16 @@ public class AspNetCompiler extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetFrameworkMoniker.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AspNetCompiler.TargetFrameworkMoniker" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTargetFrameworkMoniker() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -456,6 +716,20 @@ public class AspNetCompiler extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TargetFrameworkMoniker.
+     *
+     * @param TargetFrameworkMoniker the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AspNetCompiler.TargetFrameworkMoniker" target="_top">.NET documentation</a>
+     */
     public void setTargetFrameworkMoniker(java.lang.String TargetFrameworkMoniker) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -466,6 +740,16 @@ public class AspNetCompiler extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AspNetCompiler.TargetPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTargetPath() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -480,6 +764,20 @@ public class AspNetCompiler extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TargetPath.
+     *
+     * @param TargetPath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AspNetCompiler.TargetPath" target="_top">.NET documentation</a>
+     */
     public void setTargetPath(java.lang.String TargetPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -490,6 +788,16 @@ public class AspNetCompiler extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VirtualPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AspNetCompiler.VirtualPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getVirtualPath() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -504,6 +812,20 @@ public class AspNetCompiler extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property VirtualPath.
+     *
+     * @param VirtualPath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AspNetCompiler.VirtualPath" target="_top">.NET documentation</a>
+     */
     public void setVirtualPath(java.lang.String VirtualPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

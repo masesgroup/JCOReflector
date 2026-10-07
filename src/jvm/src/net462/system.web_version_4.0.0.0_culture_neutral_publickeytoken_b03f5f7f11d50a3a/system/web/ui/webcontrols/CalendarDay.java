@@ -99,7 +99,10 @@ public class CalendarDay extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CalendarDay(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,18 @@ public class CalendarDay extends NetObject  {
     public CalendarDay() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param date the argument of type {@code DateTime}
+     * @param isWeekend the argument of type {@code boolean}
+     * @param isToday the argument of type {@code boolean}
+     * @param isSelected the argument of type {@code boolean}
+     * @param isOtherMonth the argument of type {@code boolean}
+     * @param dayNumberText the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.CalendarDay.-ctor" target="_top">.NET documentation</a>
+     */
     public CalendarDay(DateTime date, boolean isWeekend, boolean isToday, boolean isSelected, boolean isOtherMonth, java.lang.String dayNumberText) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +183,13 @@ public class CalendarDay extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsOtherMonth.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.CalendarDay.IsOtherMonth" target="_top">.NET documentation</a>
+     */
     public boolean getIsOtherMonth() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +204,13 @@ public class CalendarDay extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSelectable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.CalendarDay.IsSelectable" target="_top">.NET documentation</a>
+     */
     public boolean getIsSelectable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +225,13 @@ public class CalendarDay extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsSelectable.
+     *
+     * @param IsSelectable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.CalendarDay.IsSelectable" target="_top">.NET documentation</a>
+     */
     public void setIsSelectable(boolean IsSelectable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +242,13 @@ public class CalendarDay extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSelected.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.CalendarDay.IsSelected" target="_top">.NET documentation</a>
+     */
     public boolean getIsSelected() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +263,13 @@ public class CalendarDay extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsToday.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.CalendarDay.IsToday" target="_top">.NET documentation</a>
+     */
     public boolean getIsToday() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +284,13 @@ public class CalendarDay extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsWeekend.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.CalendarDay.IsWeekend" target="_top">.NET documentation</a>
+     */
     public boolean getIsWeekend() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +305,13 @@ public class CalendarDay extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Date.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.CalendarDay.Date" target="_top">.NET documentation</a>
+     */
     public DateTime getDate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +327,13 @@ public class CalendarDay extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DayNumberText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.CalendarDay.DayNumberText" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDayNumberText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

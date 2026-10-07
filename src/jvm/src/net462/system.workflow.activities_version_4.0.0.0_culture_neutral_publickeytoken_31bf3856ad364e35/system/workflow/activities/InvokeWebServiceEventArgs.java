@@ -99,7 +99,10 @@ public class InvokeWebServiceEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public InvokeWebServiceEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,13 @@ public class InvokeWebServiceEventArgs extends system.EventArgs  {
     public InvokeWebServiceEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param proxyInstance the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.InvokeWebServiceEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public InvokeWebServiceEventArgs(NetObject proxyInstance) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +178,13 @@ public class InvokeWebServiceEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property WebServiceProxy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.InvokeWebServiceEventArgs.WebServiceProxy" target="_top">.NET documentation</a>
+     */
     public NetObject getWebServiceProxy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

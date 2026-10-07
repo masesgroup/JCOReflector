@@ -101,7 +101,10 @@ public class ContextItemManager extends NetObjectEnumerable  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ContextItemManager(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,14 @@ public class ContextItemManager extends NetObjectEnumerable  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param itemType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ContextItemManager.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(NetType itemType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +179,14 @@ public class ContextItemManager extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param <TItemType> the type of the generic argument TItemType
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ContextItemManager.Contains" target="_top">.NET documentation</a>
+     */
     public <TItemType extends IJCOBridgeReflected> boolean Contains() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +201,14 @@ public class ContextItemManager extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetValue.
+     *
+     * @param itemType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ContextItemManager.GetValue" target="_top">.NET documentation</a>
+     */
     public ContextItem GetValue(NetType itemType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +224,13 @@ public class ContextItemManager extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetValue.
+     *
+     * @param value the argument of type {@code ContextItem}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ContextItemManager.SetValue" target="_top">.NET documentation</a>
+     */
     public void SetValue(ContextItem value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +241,14 @@ public class ContextItemManager extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member Subscribe.
+     *
+     * @param contextItemType the argument of type {@code NetType}
+     * @param callback the argument of type {@code SubscribeContextCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ContextItemManager.Subscribe" target="_top">.NET documentation</a>
+     */
     public void Subscribe(NetType contextItemType, SubscribeContextCallback callback) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +259,21 @@ public class ContextItemManager extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member Subscribe.
+     *
+     * @param <TContextItemType> the type of the generic argument TContextItemType
+     * @param callback the argument of type {@code SubscribeContextCallback_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ContextItemManager.Subscribe" target="_top">.NET documentation</a>
+     */
     public <TContextItemType extends IJCOBridgeReflected> void Subscribe(SubscribeContextCallback_1 callback) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +284,14 @@ public class ContextItemManager extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member Unsubscribe.
+     *
+     * @param contextItemType the argument of type {@code NetType}
+     * @param callback the argument of type {@code SubscribeContextCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ContextItemManager.Unsubscribe" target="_top">.NET documentation</a>
+     */
     public void Unsubscribe(NetType contextItemType, SubscribeContextCallback callback) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +302,21 @@ public class ContextItemManager extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member Unsubscribe.
+     *
+     * @param <TContextItemType> the type of the generic argument TContextItemType
+     * @param callback the argument of type {@code SubscribeContextCallback_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ContextItemManager.Unsubscribe" target="_top">.NET documentation</a>
+     */
     public <TContextItemType extends IJCOBridgeReflected> void Unsubscribe(SubscribeContextCallback_1 callback) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

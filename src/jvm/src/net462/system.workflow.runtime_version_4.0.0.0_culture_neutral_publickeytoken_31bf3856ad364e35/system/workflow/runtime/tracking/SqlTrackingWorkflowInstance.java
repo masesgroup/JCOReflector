@@ -104,7 +104,10 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SqlTrackingWorkflowInstance(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Refresh.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.Refresh" target="_top">.NET documentation</a>
+     */
     public void Refresh() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +183,13 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AutoRefresh.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.AutoRefresh" target="_top">.NET documentation</a>
+     */
     public boolean getAutoRefresh() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +204,13 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AutoRefresh.
+     *
+     * @param AutoRefresh the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.AutoRefresh" target="_top">.NET documentation</a>
+     */
     public void setAutoRefresh(boolean AutoRefresh) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +221,32 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WorkflowDefinitionUpdated.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.WorkflowDefinitionUpdated" target="_top">.NET documentation</a>
+     */
     public boolean getWorkflowDefinitionUpdated() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xml.XmlException, system.configuration.ConfigurationErrorsException, system.FormatException, system.OutOfMemoryException, system.NotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +261,13 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WorkflowInstanceInternalId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.WorkflowInstanceInternalId" target="_top">.NET documentation</a>
+     */
     public long getWorkflowInstanceInternalId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +308,13 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WorkflowInstanceInternalId.
+     *
+     * @param WorkflowInstanceInternalId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.WorkflowInstanceInternalId" target="_top">.NET documentation</a>
+     */
     public void setWorkflowInstanceInternalId(long WorkflowInstanceInternalId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +325,24 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ActivityEvents.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.sqltypes.SqlNullValueException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.ActivityEvents" target="_top">.NET documentation</a>
+     */
     public IList_1 getActivityEvents() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.data.sqltypes.SqlNullValueException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +358,22 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InvokedWorkflows.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.data.sqltypes.SqlNullValueException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.InvokedWorkflows" target="_top">.NET documentation</a>
+     */
     public IList_1 getInvokedWorkflows() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.data.sqltypes.SqlNullValueException, system.TypeLoadException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +389,24 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UserEvents.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.sqltypes.SqlNullValueException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.UserEvents" target="_top">.NET documentation</a>
+     */
     public IList_1 getUserEvents() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.data.sqltypes.SqlNullValueException, system.runtime.serialization.SerializationException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +422,32 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WorkflowEvents.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.sqltypes.SqlNullValueException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.WorkflowEvents" target="_top">.NET documentation</a>
+     */
     public IList_1 getWorkflowEvents() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.data.sqltypes.SqlNullValueException, system.runtime.serialization.SerializationException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.xml.XmlException, system.configuration.ConfigurationErrorsException, system.FormatException, system.MulticastNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +463,13 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Initialized.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.Initialized" target="_top">.NET documentation</a>
+     */
     public DateTime getInitialized() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -336,6 +485,13 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Initialized.
+     *
+     * @param Initialized the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.Initialized" target="_top">.NET documentation</a>
+     */
     public void setInitialized(DateTime Initialized) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -346,6 +502,13 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InvokingWorkflowInstanceId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.InvokingWorkflowInstanceId" target="_top">.NET documentation</a>
+     */
     public Guid getInvokingWorkflowInstanceId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -361,6 +524,13 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InvokingWorkflowInstanceId.
+     *
+     * @param InvokingWorkflowInstanceId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.InvokingWorkflowInstanceId" target="_top">.NET documentation</a>
+     */
     public void setInvokingWorkflowInstanceId(Guid InvokingWorkflowInstanceId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -371,6 +541,13 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WorkflowInstanceId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.WorkflowInstanceId" target="_top">.NET documentation</a>
+     */
     public Guid getWorkflowInstanceId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -386,6 +563,13 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WorkflowInstanceId.
+     *
+     * @param WorkflowInstanceId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.WorkflowInstanceId" target="_top">.NET documentation</a>
+     */
     public void setWorkflowInstanceId(Guid WorkflowInstanceId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -396,6 +580,13 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WorkflowType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.WorkflowType" target="_top">.NET documentation</a>
+     */
     public NetType getWorkflowType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -411,6 +602,13 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WorkflowType.
+     *
+     * @param WorkflowType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.WorkflowType" target="_top">.NET documentation</a>
+     */
     public void setWorkflowType(NetType WorkflowType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -421,6 +619,32 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WorkflowDefinition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.WorkflowDefinition" target="_top">.NET documentation</a>
+     */
     public Activity getWorkflowDefinition() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xml.XmlException, system.configuration.ConfigurationErrorsException, system.FormatException, system.OutOfMemoryException, system.NotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -436,6 +660,13 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Status.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.Status" target="_top">.NET documentation</a>
+     */
     public WorkflowStatus getStatus() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -451,6 +682,13 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Status.
+     *
+     * @param Status the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.Status" target="_top">.NET documentation</a>
+     */
     public void setStatus(WorkflowStatus Status) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

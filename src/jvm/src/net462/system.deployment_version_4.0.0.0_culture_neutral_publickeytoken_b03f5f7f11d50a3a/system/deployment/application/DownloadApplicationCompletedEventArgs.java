@@ -99,7 +99,10 @@ public class DownloadApplicationCompletedEventArgs extends system.componentmodel
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DownloadApplicationCompletedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class DownloadApplicationCompletedEventArgs extends system.componentmodel
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property LogFilePath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Deployment.Application.DownloadApplicationCompletedEventArgs.LogFilePath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getLogFilePath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +182,13 @@ public class DownloadApplicationCompletedEventArgs extends system.componentmodel
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShortcutAppId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Deployment.Application.DownloadApplicationCompletedEventArgs.ShortcutAppId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getShortcutAppId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

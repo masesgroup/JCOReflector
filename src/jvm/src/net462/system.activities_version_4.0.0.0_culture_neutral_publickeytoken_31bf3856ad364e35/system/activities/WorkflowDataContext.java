@@ -101,7 +101,10 @@ public class WorkflowDataContext extends system.componentmodel.CustomTypeDescrip
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WorkflowDataContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,13 @@ public class WorkflowDataContext extends system.componentmodel.CustomTypeDescrip
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetProperties.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.WorkflowDataContext.GetProperties" target="_top">.NET documentation</a>
+     */
     public PropertyDescriptorCollection GetProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +181,13 @@ public class WorkflowDataContext extends system.componentmodel.CustomTypeDescrip
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.WorkflowDataContext.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +220,13 @@ public class WorkflowDataContext extends system.componentmodel.CustomTypeDescrip
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addPropertyChanged.
+     *
+     * @param handler the argument of type {@code PropertyChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPropertyChanged(PropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +237,13 @@ public class WorkflowDataContext extends system.componentmodel.CustomTypeDescrip
         }
     }
 
+    /**
+     * Invokes the .NET member removePropertyChanged.
+     *
+     * @param handler the argument of type {@code PropertyChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePropertyChanged(PropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

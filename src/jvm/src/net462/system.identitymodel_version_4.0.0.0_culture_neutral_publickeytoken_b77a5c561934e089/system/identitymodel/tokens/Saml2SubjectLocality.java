@@ -98,7 +98,10 @@ public class Saml2SubjectLocality extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Saml2SubjectLocality(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class Saml2SubjectLocality extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2SubjectLocality.-ctor" target="_top">.NET documentation</a>
+     */
     public Saml2SubjectLocality() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -155,6 +164,14 @@ public class Saml2SubjectLocality extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param address the argument of type {@code java.lang.String}
+     * @param dnsName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2SubjectLocality.-ctor" target="_top">.NET documentation</a>
+     */
     public Saml2SubjectLocality(java.lang.String address, java.lang.String dnsName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -173,6 +190,13 @@ public class Saml2SubjectLocality extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Address.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2SubjectLocality.Address" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAddress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +211,13 @@ public class Saml2SubjectLocality extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Address.
+     *
+     * @param Address the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2SubjectLocality.Address" target="_top">.NET documentation</a>
+     */
     public void setAddress(java.lang.String Address) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +228,13 @@ public class Saml2SubjectLocality extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DnsName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2SubjectLocality.DnsName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDnsName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +249,13 @@ public class Saml2SubjectLocality extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DnsName.
+     *
+     * @param DnsName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2SubjectLocality.DnsName" target="_top">.NET documentation</a>
+     */
     public void setDnsName(java.lang.String DnsName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

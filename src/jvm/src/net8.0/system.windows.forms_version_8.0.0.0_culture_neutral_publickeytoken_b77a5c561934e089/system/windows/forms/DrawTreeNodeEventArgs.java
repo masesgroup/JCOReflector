@@ -103,7 +103,10 @@ public class DrawTreeNodeEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DrawTreeNodeEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,21 @@ public class DrawTreeNodeEventArgs extends system.EventArgs  {
     public DrawTreeNodeEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param graphics the argument of type {@code Graphics}
+     * @param node the argument of type {@code TreeNode}
+     * @param bounds the argument of type {@code Rectangle}
+     * @param state the argument of type {@code TreeNodeStates}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DrawTreeNodeEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public DrawTreeNodeEventArgs(Graphics graphics, TreeNode node, Rectangle bounds, TreeNodeStates state) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +190,13 @@ public class DrawTreeNodeEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DrawDefault.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DrawTreeNodeEventArgs.DrawDefault" target="_top">.NET documentation</a>
+     */
     public boolean getDrawDefault() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +211,13 @@ public class DrawTreeNodeEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DrawDefault.
+     *
+     * @param DrawDefault the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DrawTreeNodeEventArgs.DrawDefault" target="_top">.NET documentation</a>
+     */
     public void setDrawDefault(boolean DrawDefault) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +228,13 @@ public class DrawTreeNodeEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Graphics.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DrawTreeNodeEventArgs.Graphics" target="_top">.NET documentation</a>
+     */
     public Graphics getGraphics() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +250,13 @@ public class DrawTreeNodeEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Bounds.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DrawTreeNodeEventArgs.Bounds" target="_top">.NET documentation</a>
+     */
     public Rectangle getBounds() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +272,13 @@ public class DrawTreeNodeEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Node.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DrawTreeNodeEventArgs.Node" target="_top">.NET documentation</a>
+     */
     public TreeNode getNode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +294,13 @@ public class DrawTreeNodeEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property State.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DrawTreeNodeEventArgs.State" target="_top">.NET documentation</a>
+     */
     public TreeNodeStates getState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -103,7 +103,10 @@ public class ApplicationChangedEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ApplicationChangedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -162,6 +165,13 @@ public class ApplicationChangedEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PeerApplication.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.Collaboration.ApplicationChangedEventArgs.PeerApplication" target="_top">.NET documentation</a>
+     */
     public PeerApplication getPeerApplication() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +187,13 @@ public class ApplicationChangedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PeerChangeType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.Collaboration.ApplicationChangedEventArgs.PeerChangeType" target="_top">.NET documentation</a>
+     */
     public PeerChangeType getPeerChangeType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +209,13 @@ public class ApplicationChangedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PeerContact.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.Collaboration.ApplicationChangedEventArgs.PeerContact" target="_top">.NET documentation</a>
+     */
     public PeerContact getPeerContact() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +231,13 @@ public class ApplicationChangedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PeerEndPoint.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.Collaboration.ApplicationChangedEventArgs.PeerEndPoint" target="_top">.NET documentation</a>
+     */
     public PeerEndPoint getPeerEndPoint() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class ControlSkin extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ControlSkin(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class ControlSkin extends NetObject  {
     public ControlSkin() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param controlType the argument of type {@code NetType}
+     * @param themeDelegate the argument of type {@code ControlSkinDelegate}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ControlSkin.-ctor" target="_top">.NET documentation</a>
+     */
     public ControlSkin(NetType controlType, ControlSkinDelegate themeDelegate) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +176,13 @@ public class ControlSkin extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ApplySkin.
+     *
+     * @param control the argument of type {@code Control}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ControlSkin.ApplySkin" target="_top">.NET documentation</a>
+     */
     public void ApplySkin(Control control) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +197,13 @@ public class ControlSkin extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ControlType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ControlSkin.ControlType" target="_top">.NET documentation</a>
+     */
     public NetType getControlType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

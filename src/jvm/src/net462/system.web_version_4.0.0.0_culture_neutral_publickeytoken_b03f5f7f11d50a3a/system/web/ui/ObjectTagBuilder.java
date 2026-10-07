@@ -102,7 +102,10 @@ public class ObjectTagBuilder extends system.web.ui.ControlBuilder  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ObjectTagBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class ObjectTagBuilder extends system.web.ui.ControlBuilder  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ObjectTagBuilder.-ctor" target="_top">.NET documentation</a>
+     */
     public ObjectTagBuilder() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,13 @@ public class ObjectTagBuilder extends system.web.ui.ControlBuilder  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AppendLiteralString.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ObjectTagBuilder.AppendLiteralString" target="_top">.NET documentation</a>
+     */
     public void AppendLiteralString(java.lang.String s) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +189,13 @@ public class ObjectTagBuilder extends system.web.ui.ControlBuilder  {
         }
     }
 
+    /**
+     * Invokes the .NET member AppendSubBuilder.
+     *
+     * @param subBuilder the argument of type {@code ControlBuilder}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ObjectTagBuilder.AppendSubBuilder" target="_top">.NET documentation</a>
+     */
     public void AppendSubBuilder(ControlBuilder subBuilder) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +206,34 @@ public class ObjectTagBuilder extends system.web.ui.ControlBuilder  {
         }
     }
 
+    /**
+     * Invokes the .NET member Init.
+     *
+     * @param parser the argument of type {@code TemplateParser}
+     * @param parentBuilder the argument of type {@code ControlBuilder}
+     * @param type the argument of type {@code NetType}
+     * @param tagName the argument of type {@code java.lang.String}
+     * @param id the argument of type {@code java.lang.String}
+     * @param attribs the argument of type {@code IDictionary}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ObjectTagBuilder.Init" target="_top">.NET documentation</a>
+     */
     public void Init(TemplateParser parser, ControlBuilder parentBuilder, NetType type, java.lang.String tagName, java.lang.String id, IDictionary attribs) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.FormatException, system.threading.ThreadAbortException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

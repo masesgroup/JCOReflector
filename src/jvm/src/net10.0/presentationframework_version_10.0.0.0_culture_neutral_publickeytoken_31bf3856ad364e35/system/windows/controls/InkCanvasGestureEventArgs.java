@@ -103,7 +103,10 @@ public class InkCanvasGestureEventArgs extends system.windows.RoutedEventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public InkCanvasGestureEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,23 @@ public class InkCanvasGestureEventArgs extends system.windows.RoutedEventArgs  {
     public InkCanvasGestureEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param strokes the argument of type {@code StrokeCollection}
+     * @param gestureRecognitionResults the argument of type {@code IEnumerable_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.InkCanvasGestureEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public InkCanvasGestureEventArgs(StrokeCollection strokes, IEnumerable_1 gestureRecognitionResults) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +188,22 @@ public class InkCanvasGestureEventArgs extends system.windows.RoutedEventArgs  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetGestureRecognitionResults.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.InkCanvasGestureEventArgs.GetGestureRecognitionResults" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 GetGestureRecognitionResults() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +223,13 @@ public class InkCanvasGestureEventArgs extends system.windows.RoutedEventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Cancel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.InkCanvasGestureEventArgs.Cancel" target="_top">.NET documentation</a>
+     */
     public boolean getCancel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +244,13 @@ public class InkCanvasGestureEventArgs extends system.windows.RoutedEventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Cancel.
+     *
+     * @param Cancel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.InkCanvasGestureEventArgs.Cancel" target="_top">.NET documentation</a>
+     */
     public void setCancel(boolean Cancel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +261,13 @@ public class InkCanvasGestureEventArgs extends system.windows.RoutedEventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Strokes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.InkCanvasGestureEventArgs.Strokes" target="_top">.NET documentation</a>
+     */
     public StrokeCollection getStrokes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

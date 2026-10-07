@@ -100,7 +100,10 @@ public class IAccPropServerImplementation extends NetObject implements IAccPropS
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IAccPropServerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,17 @@ public class IAccPropServerImplementation extends NetObject implements IAccPropS
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetPropValue.
+     *
+     * @param pIDString the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>>}
+     * @param dwIDStringLen the argument of type {@code UInt32}
+     * @param idProp the argument of type {@code Guid}
+     * @param pvarValue the argument of type {@code JCORefOut<NetObject>}
+     * @param pfHasProp the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Accessibility.IAccPropServer.GetPropValue" target="_top">.NET documentation</a>
+     */
     public void GetPropValue(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> pIDString, UInt32 dwIDStringLen, Guid idProp, JCORefOut<NetObject> pvarValue, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pfHasProp) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

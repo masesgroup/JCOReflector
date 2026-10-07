@@ -106,7 +106,10 @@ public class IJSVsaEngineImplementation extends NetObject implements IJSVsaEngin
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IJSVsaEngineImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,13 @@ public class IJSVsaEngineImplementation extends NetObject implements IJSVsaEngin
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Compile.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaEngine.Compile" target="_top">.NET documentation</a>
+     */
     public boolean Compile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -162,6 +172,14 @@ public class IJSVsaEngineImplementation extends NetObject implements IJSVsaEngin
         }
     }
 
+    /**
+     * Invokes the .NET member IsValidIdentifier.
+     *
+     * @param identifier the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaEngine.IsValidIdentifier" target="_top">.NET documentation</a>
+     */
     public boolean IsValidIdentifier(java.lang.String identifier) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +194,14 @@ public class IJSVsaEngineImplementation extends NetObject implements IJSVsaEngin
         }
     }
 
+    /**
+     * Invokes the .NET member GetOption.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaEngine.GetOption" target="_top">.NET documentation</a>
+     */
     public NetObject GetOption(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +217,12 @@ public class IJSVsaEngineImplementation extends NetObject implements IJSVsaEngin
         }
     }
 
+    /**
+     * Invokes the .NET member Close.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaEngine.Close" target="_top">.NET documentation</a>
+     */
     public void Close() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +233,12 @@ public class IJSVsaEngineImplementation extends NetObject implements IJSVsaEngin
         }
     }
 
+    /**
+     * Invokes the .NET member InitNew.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaEngine.InitNew" target="_top">.NET documentation</a>
+     */
     public void InitNew() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +249,13 @@ public class IJSVsaEngineImplementation extends NetObject implements IJSVsaEngin
         }
     }
 
+    /**
+     * Invokes the .NET member LoadSourceState.
+     *
+     * @param site the argument of type {@code IJSVsaPersistSite}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaEngine.LoadSourceState" target="_top">.NET documentation</a>
+     */
     public void LoadSourceState(IJSVsaPersistSite site) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +266,12 @@ public class IJSVsaEngineImplementation extends NetObject implements IJSVsaEngin
         }
     }
 
+    /**
+     * Invokes the .NET member Reset.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaEngine.Reset" target="_top">.NET documentation</a>
+     */
     public void Reset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +282,12 @@ public class IJSVsaEngineImplementation extends NetObject implements IJSVsaEngin
         }
     }
 
+    /**
+     * Invokes the .NET member RevokeCache.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaEngine.RevokeCache" target="_top">.NET documentation</a>
+     */
     public void RevokeCache() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +298,12 @@ public class IJSVsaEngineImplementation extends NetObject implements IJSVsaEngin
         }
     }
 
+    /**
+     * Invokes the .NET member Run.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaEngine.Run" target="_top">.NET documentation</a>
+     */
     public void Run() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +314,14 @@ public class IJSVsaEngineImplementation extends NetObject implements IJSVsaEngin
         }
     }
 
+    /**
+     * Invokes the .NET member SaveCompiledState.
+     *
+     * @param pe the argument of type {@code JCORefOut}
+     * @param pdb the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaEngine.SaveCompiledState" target="_top">.NET documentation</a>
+     */
     public void SaveCompiledState(JCORefOut pe, JCORefOut pdb) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +332,13 @@ public class IJSVsaEngineImplementation extends NetObject implements IJSVsaEngin
         }
     }
 
+    /**
+     * Invokes the .NET member SaveSourceState.
+     *
+     * @param site the argument of type {@code IJSVsaPersistSite}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaEngine.SaveSourceState" target="_top">.NET documentation</a>
+     */
     public void SaveSourceState(IJSVsaPersistSite site) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +349,14 @@ public class IJSVsaEngineImplementation extends NetObject implements IJSVsaEngin
         }
     }
 
+    /**
+     * Invokes the .NET member SetOption.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaEngine.SetOption" target="_top">.NET documentation</a>
+     */
     public void SetOption(java.lang.String name, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -285,6 +371,13 @@ public class IJSVsaEngineImplementation extends NetObject implements IJSVsaEngin
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property GenerateDebugInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaEngine.GenerateDebugInfo" target="_top">.NET documentation</a>
+     */
     public boolean getGenerateDebugInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -299,6 +392,13 @@ public class IJSVsaEngineImplementation extends NetObject implements IJSVsaEngin
         }
     }
 
+    /**
+     * Sets the value of the .NET property GenerateDebugInfo.
+     *
+     * @param GenerateDebugInfo the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaEngine.GenerateDebugInfo" target="_top">.NET documentation</a>
+     */
     public void setGenerateDebugInfo(boolean GenerateDebugInfo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -309,6 +409,13 @@ public class IJSVsaEngineImplementation extends NetObject implements IJSVsaEngin
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsCompiled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaEngine.IsCompiled" target="_top">.NET documentation</a>
+     */
     public boolean getIsCompiled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -323,6 +430,13 @@ public class IJSVsaEngineImplementation extends NetObject implements IJSVsaEngin
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsDirty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaEngine.IsDirty" target="_top">.NET documentation</a>
+     */
     public boolean getIsDirty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -337,6 +451,13 @@ public class IJSVsaEngineImplementation extends NetObject implements IJSVsaEngin
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsRunning.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaEngine.IsRunning" target="_top">.NET documentation</a>
+     */
     public boolean getIsRunning() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -351,6 +472,13 @@ public class IJSVsaEngineImplementation extends NetObject implements IJSVsaEngin
         }
     }
 
+    /**
+     * Gets the value of the .NET property LCID.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaEngine.LCID" target="_top">.NET documentation</a>
+     */
     public int getLCID() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -391,6 +519,13 @@ public class IJSVsaEngineImplementation extends NetObject implements IJSVsaEngin
         }
     }
 
+    /**
+     * Sets the value of the .NET property LCID.
+     *
+     * @param LCID the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaEngine.LCID" target="_top">.NET documentation</a>
+     */
     public void setLCID(int LCID) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -401,6 +536,13 @@ public class IJSVsaEngineImplementation extends NetObject implements IJSVsaEngin
         }
     }
 
+    /**
+     * Gets the value of the .NET property Items.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaEngine.Items" target="_top">.NET documentation</a>
+     */
     public IJSVsaItems getItems() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -416,6 +558,13 @@ public class IJSVsaEngineImplementation extends NetObject implements IJSVsaEngin
         }
     }
 
+    /**
+     * Gets the value of the .NET property Site.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaEngine.Site" target="_top">.NET documentation</a>
+     */
     public IJSVsaSite getSite() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -431,6 +580,13 @@ public class IJSVsaEngineImplementation extends NetObject implements IJSVsaEngin
         }
     }
 
+    /**
+     * Sets the value of the .NET property Site.
+     *
+     * @param Site the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaEngine.Site" target="_top">.NET documentation</a>
+     */
     public void setSite(IJSVsaSite Site) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -441,6 +597,13 @@ public class IJSVsaEngineImplementation extends NetObject implements IJSVsaEngin
         }
     }
 
+    /**
+     * Gets the value of the .NET property Assembly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaEngine.Assembly" target="_top">.NET documentation</a>
+     */
     public Assembly getAssembly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -456,6 +619,13 @@ public class IJSVsaEngineImplementation extends NetObject implements IJSVsaEngin
         }
     }
 
+    /**
+     * Gets the value of the .NET property Evidence.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaEngine.Evidence" target="_top">.NET documentation</a>
+     */
     public Evidence getEvidence() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -471,6 +641,13 @@ public class IJSVsaEngineImplementation extends NetObject implements IJSVsaEngin
         }
     }
 
+    /**
+     * Sets the value of the .NET property Evidence.
+     *
+     * @param Evidence the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaEngine.Evidence" target="_top">.NET documentation</a>
+     */
     public void setEvidence(Evidence Evidence) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -481,6 +658,13 @@ public class IJSVsaEngineImplementation extends NetObject implements IJSVsaEngin
         }
     }
 
+    /**
+     * Gets the value of the .NET property Language.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaEngine.Language" target="_top">.NET documentation</a>
+     */
     public java.lang.String getLanguage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -495,6 +679,13 @@ public class IJSVsaEngineImplementation extends NetObject implements IJSVsaEngin
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaEngine.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -509,6 +700,13 @@ public class IJSVsaEngineImplementation extends NetObject implements IJSVsaEngin
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaEngine.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -519,6 +717,13 @@ public class IJSVsaEngineImplementation extends NetObject implements IJSVsaEngin
         }
     }
 
+    /**
+     * Gets the value of the .NET property RootMoniker.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaEngine.RootMoniker" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRootMoniker() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -533,6 +738,13 @@ public class IJSVsaEngineImplementation extends NetObject implements IJSVsaEngin
         }
     }
 
+    /**
+     * Sets the value of the .NET property RootMoniker.
+     *
+     * @param RootMoniker the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaEngine.RootMoniker" target="_top">.NET documentation</a>
+     */
     public void setRootMoniker(java.lang.String RootMoniker) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -543,6 +755,13 @@ public class IJSVsaEngineImplementation extends NetObject implements IJSVsaEngin
         }
     }
 
+    /**
+     * Gets the value of the .NET property RootNamespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaEngine.RootNamespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRootNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -557,6 +776,13 @@ public class IJSVsaEngineImplementation extends NetObject implements IJSVsaEngin
         }
     }
 
+    /**
+     * Sets the value of the .NET property RootNamespace.
+     *
+     * @param RootNamespace the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaEngine.RootNamespace" target="_top">.NET documentation</a>
+     */
     public void setRootNamespace(java.lang.String RootNamespace) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -567,6 +793,13 @@ public class IJSVsaEngineImplementation extends NetObject implements IJSVsaEngin
         }
     }
 
+    /**
+     * Gets the value of the .NET property Version.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaEngine.Version" target="_top">.NET documentation</a>
+     */
     public java.lang.String getVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

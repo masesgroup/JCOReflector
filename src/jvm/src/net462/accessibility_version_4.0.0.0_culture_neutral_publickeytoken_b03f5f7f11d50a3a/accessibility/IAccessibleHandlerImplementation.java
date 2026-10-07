@@ -100,7 +100,10 @@ public class IAccessibleHandlerImplementation extends NetObject implements IAcce
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IAccessibleHandlerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,15 @@ public class IAccessibleHandlerImplementation extends NetObject implements IAcce
 
     // Methods section
     
+    /**
+     * Invokes the .NET member AccessibleObjectFromID.
+     *
+     * @param hwnd the argument of type {@code int}
+     * @param lObjectID the argument of type {@code int}
+     * @param pIAccessible the argument of type {@code JCORefOut<IAccessible>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Accessibility.IAccessibleHandler.AccessibleObjectFromID" target="_top">.NET documentation</a>
+     */
     public void AccessibleObjectFromID(int hwnd, int lObjectID, JCORefOut<IAccessible> pIAccessible) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

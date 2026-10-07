@@ -51,5 +51,12 @@ import org.mases.jcobridge.netreflection.*;
  * @version 2.0.0.0
  */
 public interface IUpdateSourceExceptionFilterCallback {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param bindExpression the .NET argument of type {@code System.Object}
+     * @param exception the .NET argument of type {@code System.Exception}
+     * @return the value returned to the CLR
+     */
     public NetObject Invoke(NetObject bindExpression, NetException exception);
 }

@@ -103,7 +103,10 @@ public class Site extends system.security.policy.EvidenceBase  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Site(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,13 @@ public class Site extends system.security.policy.EvidenceBase  {
     public Site() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.Site.-ctor" target="_top">.NET documentation</a>
+     */
     public Site(java.lang.String name) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +178,13 @@ public class Site extends system.security.policy.EvidenceBase  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Copy.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.Site.Copy" target="_top">.NET documentation</a>
+     */
     public NetObject Copy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +200,14 @@ public class Site extends system.security.policy.EvidenceBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateIdentityPermission.
+     *
+     * @param evidence the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.Site.CreateIdentityPermission" target="_top">.NET documentation</a>
+     */
     public IPermission CreateIdentityPermission(Evidence evidence) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +223,14 @@ public class Site extends system.security.policy.EvidenceBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateFromUrl.
+     *
+     * @param url the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.Site.CreateFromUrl" target="_top">.NET documentation</a>
+     */
     public static Site CreateFromUrl(java.lang.String url) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -217,6 +250,13 @@ public class Site extends system.security.policy.EvidenceBase  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.Site.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

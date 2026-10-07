@@ -103,7 +103,10 @@ public class DataSetViewSchema extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataSetViewSchema(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,14 @@ public class DataSetViewSchema extends NetObject  {
     public DataSetViewSchema() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param dataTable the argument of type {@code DataTable}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DataSetViewSchema.-ctor" target="_top">.NET documentation</a>
+     */
     public DataSetViewSchema(DataTable dataTable) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +179,15 @@ public class DataSetViewSchema extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetFields.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DataSetViewSchema.GetFields" target="_top">.NET documentation</a>
+     */
     public IDataSourceFieldSchema[] GetFields() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +209,13 @@ public class DataSetViewSchema extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetChildren.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DataSetViewSchema.GetChildren" target="_top">.NET documentation</a>
+     */
     public IDataSourceViewSchema[] GetChildren() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +241,13 @@ public class DataSetViewSchema extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DataSetViewSchema.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

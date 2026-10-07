@@ -103,7 +103,10 @@ public class UrlMembershipCondition extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UrlMembershipCondition(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,13 @@ public class UrlMembershipCondition extends NetObject  {
     public UrlMembershipCondition() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param url the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.UrlMembershipCondition.-ctor" target="_top">.NET documentation</a>
+     */
     public UrlMembershipCondition(java.lang.String url) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +178,14 @@ public class UrlMembershipCondition extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Check.
+     *
+     * @param evidence the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.UrlMembershipCondition.Check" target="_top">.NET documentation</a>
+     */
     public boolean Check(Evidence evidence) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +200,13 @@ public class UrlMembershipCondition extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Copy.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.UrlMembershipCondition.Copy" target="_top">.NET documentation</a>
+     */
     public IMembershipCondition Copy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +222,13 @@ public class UrlMembershipCondition extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToXml.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.UrlMembershipCondition.ToXml" target="_top">.NET documentation</a>
+     */
     public SecurityElement ToXml() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +244,14 @@ public class UrlMembershipCondition extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToXml.
+     *
+     * @param level the argument of type {@code PolicyLevel}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.UrlMembershipCondition.ToXml" target="_top">.NET documentation</a>
+     */
     public SecurityElement ToXml(PolicyLevel level) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +267,14 @@ public class UrlMembershipCondition extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FromXml.
+     *
+     * @param e the argument of type {@code SecurityElement}
+     * @param level the argument of type {@code PolicyLevel}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.UrlMembershipCondition.FromXml" target="_top">.NET documentation</a>
+     */
     public void FromXml(SecurityElement e, PolicyLevel level) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +285,13 @@ public class UrlMembershipCondition extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FromXml.
+     *
+     * @param e the argument of type {@code SecurityElement}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.UrlMembershipCondition.FromXml" target="_top">.NET documentation</a>
+     */
     public void FromXml(SecurityElement e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +306,13 @@ public class UrlMembershipCondition extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Url.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.UrlMembershipCondition.Url" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +327,13 @@ public class UrlMembershipCondition extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Url.
+     *
+     * @param Url the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.UrlMembershipCondition.Url" target="_top">.NET documentation</a>
+     */
     public void setUrl(java.lang.String Url) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

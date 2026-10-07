@@ -100,7 +100,10 @@ public class CheckBoxAutomationPeer extends system.windows.automation.peers.Togg
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CheckBoxAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class CheckBoxAutomationPeer extends system.windows.automation.peers.Togg
     public CheckBoxAutomationPeer() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param owner the argument of type {@code CheckBox}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.CheckBoxAutomationPeer.-ctor" target="_top">.NET documentation</a>
+     */
     public CheckBoxAutomationPeer(CheckBox owner) throws Throwable, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file

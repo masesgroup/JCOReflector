@@ -103,7 +103,10 @@ public class ToolStripItemImageRenderEventArgs extends system.windows.forms.Tool
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ToolStripItemImageRenderEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,16 @@ public class ToolStripItemImageRenderEventArgs extends system.windows.forms.Tool
     public ToolStripItemImageRenderEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param item the argument of type {@code ToolStripItem}
+     * @param image the argument of type {@code Image}
+     * @param imageRectangle the argument of type {@code Rectangle}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripItemImageRenderEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ToolStripItemImageRenderEventArgs(Graphics g, ToolStripItem item, Image image, Rectangle imageRectangle) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +176,26 @@ public class ToolStripItemImageRenderEventArgs extends system.windows.forms.Tool
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param item the argument of type {@code ToolStripItem}
+     * @param imageRectangle the argument of type {@code Rectangle}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripItemImageRenderEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ToolStripItemImageRenderEventArgs(Graphics g, ToolStripItem item, Rectangle imageRectangle) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.FormatException, system.security.SecurityException, system.OverflowException {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +215,13 @@ public class ToolStripItemImageRenderEventArgs extends system.windows.forms.Tool
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Image.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripItemImageRenderEventArgs.Image" target="_top">.NET documentation</a>
+     */
     public Image getImage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +237,13 @@ public class ToolStripItemImageRenderEventArgs extends system.windows.forms.Tool
         }
     }
 
+    /**
+     * Gets the value of the .NET property ImageRectangle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripItemImageRenderEventArgs.ImageRectangle" target="_top">.NET documentation</a>
+     */
     public Rectangle getImageRectangle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

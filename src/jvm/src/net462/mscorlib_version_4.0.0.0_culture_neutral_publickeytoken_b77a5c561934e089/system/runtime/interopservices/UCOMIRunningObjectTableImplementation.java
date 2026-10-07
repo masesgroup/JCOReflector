@@ -103,7 +103,10 @@ public class UCOMIRunningObjectTableImplementation extends NetObject implements 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UCOMIRunningObjectTableImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,13 @@ public class UCOMIRunningObjectTableImplementation extends NetObject implements 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member EnumRunning.
+     *
+     * @param ppenumMoniker the argument of type {@code JCORefOut<UCOMIEnumMoniker>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIRunningObjectTable.EnumRunning" target="_top">.NET documentation</a>
+     */
     public void EnumRunning(JCORefOut<UCOMIEnumMoniker> ppenumMoniker) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -155,6 +165,14 @@ public class UCOMIRunningObjectTableImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member GetObject.
+     *
+     * @param pmkObjectName the argument of type {@code UCOMIMoniker}
+     * @param ppunkObject the argument of type {@code JCORefOut<NetObject>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIRunningObjectTable.GetObject" target="_top">.NET documentation</a>
+     */
     public void GetObject(UCOMIMoniker pmkObjectName, JCORefOut<NetObject> ppunkObject) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -165,6 +183,14 @@ public class UCOMIRunningObjectTableImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member GetTimeOfLastChange.
+     *
+     * @param pmkObjectName the argument of type {@code UCOMIMoniker}
+     * @param pfiletime the argument of type {@code JCORefOut<FILETIME>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIRunningObjectTable.GetTimeOfLastChange" target="_top">.NET documentation</a>
+     */
     public void GetTimeOfLastChange(UCOMIMoniker pmkObjectName, JCORefOut<FILETIME> pfiletime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +201,13 @@ public class UCOMIRunningObjectTableImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member IsRunning.
+     *
+     * @param pmkObjectName the argument of type {@code UCOMIMoniker}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIRunningObjectTable.IsRunning" target="_top">.NET documentation</a>
+     */
     public void IsRunning(UCOMIMoniker pmkObjectName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +218,14 @@ public class UCOMIRunningObjectTableImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member NoteChangeTime.
+     *
+     * @param dwRegister the argument of type {@code int}
+     * @param pfiletime the argument of type {@code JCORefOut<FILETIME>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIRunningObjectTable.NoteChangeTime" target="_top">.NET documentation</a>
+     */
     public void NoteChangeTime(int dwRegister, JCORefOut<FILETIME> pfiletime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +236,16 @@ public class UCOMIRunningObjectTableImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member Register.
+     *
+     * @param grfFlags the argument of type {@code int}
+     * @param punkObject the argument of type {@code NetObject}
+     * @param pmkObjectName the argument of type {@code UCOMIMoniker}
+     * @param pdwRegister the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIRunningObjectTable.Register" target="_top">.NET documentation</a>
+     */
     public void Register(int grfFlags, NetObject punkObject, UCOMIMoniker pmkObjectName, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pdwRegister) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +256,13 @@ public class UCOMIRunningObjectTableImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member Revoke.
+     *
+     * @param dwRegister the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIRunningObjectTable.Revoke" target="_top">.NET documentation</a>
+     */
     public void Revoke(int dwRegister) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

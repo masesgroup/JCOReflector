@@ -114,7 +114,9 @@ public class PrintSystemObjectLoadMode extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public PrintSystemObjectLoadMode(java.lang.Object instance) {
         super(instance);

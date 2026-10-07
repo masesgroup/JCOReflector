@@ -99,7 +99,10 @@ public class ComplexModelResult extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ComplexModelResult(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,15 @@ public class ComplexModelResult extends NetObject  {
     public ComplexModelResult() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param model the argument of type {@code NetObject}
+     * @param validationNode the argument of type {@code ModelValidationNode}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ComplexModelResult.-ctor" target="_top">.NET documentation</a>
+     */
     public ComplexModelResult(NetObject model, ModelValidationNode validationNode) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +180,13 @@ public class ComplexModelResult extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Model.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ComplexModelResult.Model" target="_top">.NET documentation</a>
+     */
     public NetObject getModel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +202,13 @@ public class ComplexModelResult extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Model.
+     *
+     * @param Model the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ComplexModelResult.Model" target="_top">.NET documentation</a>
+     */
     public void setModel(NetObject Model) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +219,13 @@ public class ComplexModelResult extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValidationNode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ComplexModelResult.ValidationNode" target="_top">.NET documentation</a>
+     */
     public ModelValidationNode getValidationNode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +241,13 @@ public class ComplexModelResult extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ValidationNode.
+     *
+     * @param ValidationNode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ComplexModelResult.ValidationNode" target="_top">.NET documentation</a>
+     */
     public void setValidationNode(ModelValidationNode ValidationNode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

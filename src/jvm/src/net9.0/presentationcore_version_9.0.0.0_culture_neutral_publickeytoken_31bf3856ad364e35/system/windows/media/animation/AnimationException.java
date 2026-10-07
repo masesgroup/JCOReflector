@@ -107,7 +107,9 @@ public class AnimationException extends system.SystemException {
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public AnimationException(java.lang.Object instance) {
         super(instance);
@@ -176,6 +178,13 @@ public class AnimationException extends system.SystemException {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Property.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.AnimationException.Property" target="_top">.NET documentation</a>
+     */
     public DependencyProperty getProperty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +200,13 @@ public class AnimationException extends system.SystemException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Clock.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.AnimationException.Clock" target="_top">.NET documentation</a>
+     */
     public AnimationClock getClock() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +222,13 @@ public class AnimationException extends system.SystemException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Target.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.AnimationException.Target" target="_top">.NET documentation</a>
+     */
     public IAnimatable getTarget() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

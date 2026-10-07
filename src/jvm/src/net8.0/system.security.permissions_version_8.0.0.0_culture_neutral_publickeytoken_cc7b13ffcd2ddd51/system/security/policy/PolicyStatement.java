@@ -103,7 +103,10 @@ public class PolicyStatement extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PolicyStatement(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,14 @@ public class PolicyStatement extends NetObject  {
     public PolicyStatement() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param permSet the argument of type {@code PermissionSet}
+     * @param attributes the argument of type {@code PolicyStatementAttribute}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.PolicyStatement.-ctor" target="_top">.NET documentation</a>
+     */
     public PolicyStatement(PermissionSet permSet, PolicyStatementAttribute attributes) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +174,13 @@ public class PolicyStatement extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param permSet the argument of type {@code PermissionSet}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.PolicyStatement.-ctor" target="_top">.NET documentation</a>
+     */
     public PolicyStatement(PermissionSet permSet) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +196,13 @@ public class PolicyStatement extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Copy.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.PolicyStatement.Copy" target="_top">.NET documentation</a>
+     */
     public PolicyStatement Copy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +218,13 @@ public class PolicyStatement extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToXml.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.PolicyStatement.ToXml" target="_top">.NET documentation</a>
+     */
     public SecurityElement ToXml() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +240,14 @@ public class PolicyStatement extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToXml.
+     *
+     * @param level the argument of type {@code PolicyLevel}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.PolicyStatement.ToXml" target="_top">.NET documentation</a>
+     */
     public SecurityElement ToXml(PolicyLevel level) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +263,14 @@ public class PolicyStatement extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FromXml.
+     *
+     * @param et the argument of type {@code SecurityElement}
+     * @param level the argument of type {@code PolicyLevel}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.PolicyStatement.FromXml" target="_top">.NET documentation</a>
+     */
     public void FromXml(SecurityElement et, PolicyLevel level) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +281,13 @@ public class PolicyStatement extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FromXml.
+     *
+     * @param et the argument of type {@code SecurityElement}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.PolicyStatement.FromXml" target="_top">.NET documentation</a>
+     */
     public void FromXml(SecurityElement et) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +302,13 @@ public class PolicyStatement extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PermissionSet.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.PolicyStatement.PermissionSet" target="_top">.NET documentation</a>
+     */
     public PermissionSet getPermissionSet() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +324,13 @@ public class PolicyStatement extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PermissionSet.
+     *
+     * @param PermissionSet the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.PolicyStatement.PermissionSet" target="_top">.NET documentation</a>
+     */
     public void setPermissionSet(PermissionSet PermissionSet) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +341,13 @@ public class PolicyStatement extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Attributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.PolicyStatement.Attributes" target="_top">.NET documentation</a>
+     */
     public PolicyStatementAttribute getAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -287,6 +363,13 @@ public class PolicyStatement extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Attributes.
+     *
+     * @param Attributes the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.PolicyStatement.Attributes" target="_top">.NET documentation</a>
+     */
     public void setAttributes(PolicyStatementAttribute Attributes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -297,6 +380,13 @@ public class PolicyStatement extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AttributeString.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.PolicyStatement.AttributeString" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAttributeString() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

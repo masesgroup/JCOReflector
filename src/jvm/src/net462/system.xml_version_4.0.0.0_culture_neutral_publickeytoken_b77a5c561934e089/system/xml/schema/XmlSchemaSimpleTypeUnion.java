@@ -102,7 +102,10 @@ public class XmlSchemaSimpleTypeUnion extends system.xml.schema.XmlSchemaSimpleT
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlSchemaSimpleTypeUnion(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class XmlSchemaSimpleTypeUnion extends system.xml.schema.XmlSchemaSimpleT
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaSimpleTypeUnion.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlSchemaSimpleTypeUnion() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +176,13 @@ public class XmlSchemaSimpleTypeUnion extends system.xml.schema.XmlSchemaSimpleT
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BaseTypes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaSimpleTypeUnion.BaseTypes" target="_top">.NET documentation</a>
+     */
     public XmlSchemaObjectCollection getBaseTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +198,13 @@ public class XmlSchemaSimpleTypeUnion extends system.xml.schema.XmlSchemaSimpleT
         }
     }
 
+    /**
+     * Gets the value of the .NET property BaseMemberTypes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaSimpleTypeUnion.BaseMemberTypes" target="_top">.NET documentation</a>
+     */
     public final XmlSchemaSimpleType[] getBaseMemberTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +226,13 @@ public class XmlSchemaSimpleTypeUnion extends system.xml.schema.XmlSchemaSimpleT
         }
     }
 
+    /**
+     * Gets the value of the .NET property MemberTypes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaSimpleTypeUnion.MemberTypes" target="_top">.NET documentation</a>
+     */
     public final XmlQualifiedName[] getMemberTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +254,13 @@ public class XmlSchemaSimpleTypeUnion extends system.xml.schema.XmlSchemaSimpleT
         }
     }
 
+    /**
+     * Sets the value of the .NET property MemberTypes.
+     *
+     * @param MemberTypes the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaSimpleTypeUnion.MemberTypes" target="_top">.NET documentation</a>
+     */
     public void setMemberTypes(XmlQualifiedName[] MemberTypes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

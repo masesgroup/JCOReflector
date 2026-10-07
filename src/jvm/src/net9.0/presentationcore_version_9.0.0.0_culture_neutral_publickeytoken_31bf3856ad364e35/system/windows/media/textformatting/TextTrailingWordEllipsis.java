@@ -102,7 +102,10 @@ public class TextTrailingWordEllipsis extends system.windows.media.textformattin
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TextTrailingWordEllipsis(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,17 @@ public class TextTrailingWordEllipsis extends system.windows.media.textformattin
     public TextTrailingWordEllipsis() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param width the argument of type {@code double}
+     * @param textRunProperties the argument of type {@code TextRunProperties}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextTrailingWordEllipsis.-ctor" target="_top">.NET documentation</a>
+     */
     public TextTrailingWordEllipsis(double width, TextRunProperties textRunProperties) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file

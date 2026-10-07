@@ -100,7 +100,10 @@ public class IDebuggerObjectImplementation extends NetObject implements IDebugge
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDebuggerObjectImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,14 @@ public class IDebuggerObjectImplementation extends NetObject implements IDebugge
 
     // Methods section
     
+    /**
+     * Invokes the .NET member HasEnumerableMember.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IDebuggerObject.HasEnumerableMember" target="_top">.NET documentation</a>
+     */
     public boolean HasEnumerableMember(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -156,6 +167,13 @@ public class IDebuggerObjectImplementation extends NetObject implements IDebugge
         }
     }
 
+    /**
+     * Invokes the .NET member IsCOMObject.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IDebuggerObject.IsCOMObject" target="_top">.NET documentation</a>
+     */
     public boolean IsCOMObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +188,14 @@ public class IDebuggerObjectImplementation extends NetObject implements IDebugge
         }
     }
 
+    /**
+     * Invokes the .NET member IsEqual.
+     *
+     * @param o the argument of type {@code IDebuggerObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IDebuggerObject.IsEqual" target="_top">.NET documentation</a>
+     */
     public boolean IsEqual(IDebuggerObject o) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +210,13 @@ public class IDebuggerObjectImplementation extends NetObject implements IDebugge
         }
     }
 
+    /**
+     * Invokes the .NET member IsScriptFunction.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IDebuggerObject.IsScriptFunction" target="_top">.NET documentation</a>
+     */
     public boolean IsScriptFunction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +231,13 @@ public class IDebuggerObjectImplementation extends NetObject implements IDebugge
         }
     }
 
+    /**
+     * Invokes the .NET member IsScriptObject.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IDebuggerObject.IsScriptObject" target="_top">.NET documentation</a>
+     */
     public boolean IsScriptObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

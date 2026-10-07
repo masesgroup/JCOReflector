@@ -103,7 +103,10 @@ public class SamlCondition extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SamlCondition(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,12 @@ public class SamlCondition extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member MakeReadOnly.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlCondition.MakeReadOnly" target="_top">.NET documentation</a>
+     */
     public void MakeReadOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -166,6 +175,16 @@ public class SamlCondition extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReadXml.
+     *
+     * @param reader the argument of type {@code XmlDictionaryReader}
+     * @param samlSerializer the argument of type {@code SamlSerializer}
+     * @param keyInfoSerializer the argument of type {@code SecurityTokenSerializer}
+     * @param outOfBandTokenResolver the argument of type {@code SecurityTokenResolver}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlCondition.ReadXml" target="_top">.NET documentation</a>
+     */
     public void ReadXml(XmlDictionaryReader reader, SamlSerializer samlSerializer, SecurityTokenSerializer keyInfoSerializer, SecurityTokenResolver outOfBandTokenResolver) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +195,15 @@ public class SamlCondition extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteXml.
+     *
+     * @param writer the argument of type {@code XmlDictionaryWriter}
+     * @param samlSerializer the argument of type {@code SamlSerializer}
+     * @param keyInfoSerializer the argument of type {@code SecurityTokenSerializer}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlCondition.WriteXml" target="_top">.NET documentation</a>
+     */
     public void WriteXml(XmlDictionaryWriter writer, SamlSerializer samlSerializer, SecurityTokenSerializer keyInfoSerializer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +218,13 @@ public class SamlCondition extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsReadOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlCondition.IsReadOnly" target="_top">.NET documentation</a>
+     */
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

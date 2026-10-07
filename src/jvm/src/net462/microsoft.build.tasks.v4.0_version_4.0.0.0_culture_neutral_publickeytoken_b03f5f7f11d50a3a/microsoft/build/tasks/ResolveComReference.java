@@ -101,7 +101,10 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ResolveComReference(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,19 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.-ctor" target="_top">.NET documentation</a>
+     */
     public ResolveComReference() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +178,40 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Execute.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.runtime.interopservices.COMException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.Execute" target="_top">.NET documentation</a>
+     */
     public boolean Execute() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.OverflowException, system.NotSupportedException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.NullReferenceException, system.security.SecurityException, system.runtime.serialization.SerializationException, system.runtime.interopservices.COMException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.AbandonedMutexException, system.TypeLoadException, system.NotImplementedException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +230,13 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DelaySign.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.DelaySign" target="_top">.NET documentation</a>
+     */
     public boolean getDelaySign() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +251,13 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
         }
     }
 
+    /**
+     * Sets the value of the .NET property DelaySign.
+     *
+     * @param DelaySign the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.DelaySign" target="_top">.NET documentation</a>
+     */
     public void setDelaySign(boolean DelaySign) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +268,13 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExecuteAsTool.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.ExecuteAsTool" target="_top">.NET documentation</a>
+     */
     public boolean getExecuteAsTool() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +289,13 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
         }
     }
 
+    /**
+     * Sets the value of the .NET property ExecuteAsTool.
+     *
+     * @param ExecuteAsTool the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.ExecuteAsTool" target="_top">.NET documentation</a>
+     */
     public void setExecuteAsTool(boolean ExecuteAsTool) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +306,13 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
         }
     }
 
+    /**
+     * Gets the value of the .NET property IncludeVersionInInteropName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.IncludeVersionInInteropName" target="_top">.NET documentation</a>
+     */
     public boolean getIncludeVersionInInteropName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +327,13 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
         }
     }
 
+    /**
+     * Sets the value of the .NET property IncludeVersionInInteropName.
+     *
+     * @param IncludeVersionInInteropName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.IncludeVersionInInteropName" target="_top">.NET documentation</a>
+     */
     public void setIncludeVersionInInteropName(boolean IncludeVersionInInteropName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +344,13 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
         }
     }
 
+    /**
+     * Gets the value of the .NET property NoClassMembers.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.NoClassMembers" target="_top">.NET documentation</a>
+     */
     public boolean getNoClassMembers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +365,13 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
         }
     }
 
+    /**
+     * Sets the value of the .NET property NoClassMembers.
+     *
+     * @param NoClassMembers the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.NoClassMembers" target="_top">.NET documentation</a>
+     */
     public void setNoClassMembers(boolean NoClassMembers) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +382,13 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
         }
     }
 
+    /**
+     * Gets the value of the .NET property Silent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.Silent" target="_top">.NET documentation</a>
+     */
     public boolean getSilent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +403,13 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
         }
     }
 
+    /**
+     * Sets the value of the .NET property Silent.
+     *
+     * @param Silent the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.Silent" target="_top">.NET documentation</a>
+     */
     public void setSilent(boolean Silent) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +420,13 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResolvedAssemblyReferences.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.ResolvedAssemblyReferences" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getResolvedAssemblyReferences() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +448,13 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
         }
     }
 
+    /**
+     * Sets the value of the .NET property ResolvedAssemblyReferences.
+     *
+     * @param ResolvedAssemblyReferences the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.ResolvedAssemblyReferences" target="_top">.NET documentation</a>
+     */
     public void setResolvedAssemblyReferences(ITaskItem[] ResolvedAssemblyReferences) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -331,6 +465,13 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResolvedFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.ResolvedFiles" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getResolvedFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -352,6 +493,13 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
         }
     }
 
+    /**
+     * Sets the value of the .NET property ResolvedFiles.
+     *
+     * @param ResolvedFiles the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.ResolvedFiles" target="_top">.NET documentation</a>
+     */
     public void setResolvedFiles(ITaskItem[] ResolvedFiles) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -362,6 +510,13 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResolvedModules.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.ResolvedModules" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getResolvedModules() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -383,6 +538,13 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
         }
     }
 
+    /**
+     * Sets the value of the .NET property ResolvedModules.
+     *
+     * @param ResolvedModules the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.ResolvedModules" target="_top">.NET documentation</a>
+     */
     public void setResolvedModules(ITaskItem[] ResolvedModules) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -393,6 +555,13 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeLibFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.TypeLibFiles" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getTypeLibFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -414,6 +583,13 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
         }
     }
 
+    /**
+     * Sets the value of the .NET property TypeLibFiles.
+     *
+     * @param TypeLibFiles the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.TypeLibFiles" target="_top">.NET documentation</a>
+     */
     public void setTypeLibFiles(ITaskItem[] TypeLibFiles) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -424,6 +600,13 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeLibNames.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.TypeLibNames" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getTypeLibNames() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -445,6 +628,13 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
         }
     }
 
+    /**
+     * Sets the value of the .NET property TypeLibNames.
+     *
+     * @param TypeLibNames the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.TypeLibNames" target="_top">.NET documentation</a>
+     */
     public void setTypeLibNames(ITaskItem[] TypeLibNames) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -455,6 +645,13 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeyContainer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.KeyContainer" target="_top">.NET documentation</a>
+     */
     public java.lang.String getKeyContainer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -469,6 +666,13 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeyContainer.
+     *
+     * @param KeyContainer the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.KeyContainer" target="_top">.NET documentation</a>
+     */
     public void setKeyContainer(java.lang.String KeyContainer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -479,6 +683,13 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeyFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.KeyFile" target="_top">.NET documentation</a>
+     */
     public java.lang.String getKeyFile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -493,6 +704,13 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeyFile.
+     *
+     * @param KeyFile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.KeyFile" target="_top">.NET documentation</a>
+     */
     public void setKeyFile(java.lang.String KeyFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -503,6 +721,13 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
         }
     }
 
+    /**
+     * Gets the value of the .NET property SdkToolsPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.SdkToolsPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSdkToolsPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -517,6 +742,13 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
         }
     }
 
+    /**
+     * Sets the value of the .NET property SdkToolsPath.
+     *
+     * @param SdkToolsPath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.SdkToolsPath" target="_top">.NET documentation</a>
+     */
     public void setSdkToolsPath(java.lang.String SdkToolsPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -527,6 +759,13 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
         }
     }
 
+    /**
+     * Gets the value of the .NET property StateFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.StateFile" target="_top">.NET documentation</a>
+     */
     public java.lang.String getStateFile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -541,6 +780,13 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
         }
     }
 
+    /**
+     * Sets the value of the .NET property StateFile.
+     *
+     * @param StateFile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.StateFile" target="_top">.NET documentation</a>
+     */
     public void setStateFile(java.lang.String StateFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -551,6 +797,13 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetFrameworkVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.TargetFrameworkVersion" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTargetFrameworkVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -565,6 +818,13 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
         }
     }
 
+    /**
+     * Sets the value of the .NET property TargetFrameworkVersion.
+     *
+     * @param TargetFrameworkVersion the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.TargetFrameworkVersion" target="_top">.NET documentation</a>
+     */
     public void setTargetFrameworkVersion(java.lang.String TargetFrameworkVersion) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -575,6 +835,13 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetProcessorArchitecture.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.TargetProcessorArchitecture" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTargetProcessorArchitecture() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -589,6 +856,21 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
         }
     }
 
+    /**
+     * Sets the value of the .NET property TargetProcessorArchitecture.
+     *
+     * @param TargetProcessorArchitecture the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.TargetProcessorArchitecture" target="_top">.NET documentation</a>
+     */
     public void setTargetProcessorArchitecture(java.lang.String TargetProcessorArchitecture) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -599,6 +881,13 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
         }
     }
 
+    /**
+     * Gets the value of the .NET property WrapperOutputDirectory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.WrapperOutputDirectory" target="_top">.NET documentation</a>
+     */
     public java.lang.String getWrapperOutputDirectory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -613,6 +902,13 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
         }
     }
 
+    /**
+     * Sets the value of the .NET property WrapperOutputDirectory.
+     *
+     * @param WrapperOutputDirectory the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.WrapperOutputDirectory" target="_top">.NET documentation</a>
+     */
     public void setWrapperOutputDirectory(java.lang.String WrapperOutputDirectory) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -623,6 +919,13 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
         }
     }
 
+    /**
+     * Gets the value of the .NET property EnvironmentVariables.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.EnvironmentVariables" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getEnvironmentVariables() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -646,6 +949,13 @@ public class ResolveComReference extends microsoft.build.tasks.AppDomainIsolated
         }
     }
 
+    /**
+     * Sets the value of the .NET property EnvironmentVariables.
+     *
+     * @param EnvironmentVariables the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveComReference.EnvironmentVariables" target="_top">.NET documentation</a>
+     */
     public void setEnvironmentVariables(java.lang.String[] EnvironmentVariables) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

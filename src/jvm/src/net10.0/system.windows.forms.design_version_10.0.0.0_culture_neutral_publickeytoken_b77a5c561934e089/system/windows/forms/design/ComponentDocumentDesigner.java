@@ -106,7 +106,10 @@ public class ComponentDocumentDesigner extends system.componentmodel.design.Comp
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ComponentDocumentDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,12 @@ public class ComponentDocumentDesigner extends system.componentmodel.design.Comp
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.ComponentDocumentDesigner.-ctor" target="_top">.NET documentation</a>
+     */
     public ComponentDocumentDesigner() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +176,22 @@ public class ComponentDocumentDesigner extends system.componentmodel.design.Comp
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Initialize.
+     *
+     * @param component the argument of type {@code IComponent}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.ComponentDocumentDesigner.Initialize" target="_top">.NET documentation</a>
+     */
     public void Initialize(IComponent component) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,8 +205,13 @@ public class ComponentDocumentDesigner extends system.componentmodel.design.Comp
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIRootDesigner method available in IRootDesigner to obtain an object with an invocable method
+     *
+     * @param technology the argument of type {@code ViewTechnology}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IRootDesigner.GetView" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public NetObject GetView(ViewTechnology technology) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRootDesigner to obtain the full interface.");
     }
@@ -189,8 +219,13 @@ public class ComponentDocumentDesigner extends system.componentmodel.design.Comp
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIToolboxUser method available in IToolboxUser to obtain an object with an invocable method
+     *
+     * @param tool the argument of type {@code ToolboxItem}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxUser.GetToolSupported" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean GetToolSupported(ToolboxItem tool) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxUser to obtain the full interface.");
     }
@@ -198,8 +233,12 @@ public class ComponentDocumentDesigner extends system.componentmodel.design.Comp
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIToolboxUser method available in IToolboxUser to obtain an object with an invocable method
+     *
+     * @param tool the argument of type {@code ToolboxItem}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxUser.ToolPicked" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ToolPicked(ToolboxItem tool) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxUser to obtain the full interface.");
     }
@@ -207,8 +246,14 @@ public class ComponentDocumentDesigner extends system.componentmodel.design.Comp
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToITypeDescriptorFilterService method available in ITypeDescriptorFilterService to obtain an object with an invocable method
+     *
+     * @param component the argument of type {@code IComponent}
+     * @param attributes the argument of type {@code IDictionary}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ITypeDescriptorFilterService.FilterAttributes" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean FilterAttributes(IComponent component, IDictionary attributes) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITypeDescriptorFilterService to obtain the full interface.");
     }
@@ -216,8 +261,14 @@ public class ComponentDocumentDesigner extends system.componentmodel.design.Comp
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToITypeDescriptorFilterService method available in ITypeDescriptorFilterService to obtain an object with an invocable method
+     *
+     * @param component the argument of type {@code IComponent}
+     * @param events the argument of type {@code IDictionary}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ITypeDescriptorFilterService.FilterEvents" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean FilterEvents(IComponent component, IDictionary events) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITypeDescriptorFilterService to obtain the full interface.");
     }
@@ -225,8 +276,14 @@ public class ComponentDocumentDesigner extends system.componentmodel.design.Comp
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToITypeDescriptorFilterService method available in ITypeDescriptorFilterService to obtain an object with an invocable method
+     *
+     * @param component the argument of type {@code IComponent}
+     * @param properties the argument of type {@code IDictionary}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ITypeDescriptorFilterService.FilterProperties" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean FilterProperties(IComponent component, IDictionary properties) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITypeDescriptorFilterService to obtain the full interface.");
     }
@@ -235,6 +292,22 @@ public class ComponentDocumentDesigner extends system.componentmodel.design.Comp
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property TrayAutoArrange.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.ComponentDocumentDesigner.TrayAutoArrange" target="_top">.NET documentation</a>
+     */
     public boolean getTrayAutoArrange() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +322,22 @@ public class ComponentDocumentDesigner extends system.componentmodel.design.Comp
         }
     }
 
+    /**
+     * Sets the value of the .NET property TrayAutoArrange.
+     *
+     * @param TrayAutoArrange the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.ComponentDocumentDesigner.TrayAutoArrange" target="_top">.NET documentation</a>
+     */
     public void setTrayAutoArrange(boolean TrayAutoArrange) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +348,22 @@ public class ComponentDocumentDesigner extends system.componentmodel.design.Comp
         }
     }
 
+    /**
+     * Gets the value of the .NET property TrayLargeIcon.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.ComponentDocumentDesigner.TrayLargeIcon" target="_top">.NET documentation</a>
+     */
     public boolean getTrayLargeIcon() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +378,22 @@ public class ComponentDocumentDesigner extends system.componentmodel.design.Comp
         }
     }
 
+    /**
+     * Sets the value of the .NET property TrayLargeIcon.
+     *
+     * @param TrayLargeIcon the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.ComponentDocumentDesigner.TrayLargeIcon" target="_top">.NET documentation</a>
+     */
     public void setTrayLargeIcon(boolean TrayLargeIcon) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +404,22 @@ public class ComponentDocumentDesigner extends system.componentmodel.design.Comp
         }
     }
 
+    /**
+     * Gets the value of the .NET property Control.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.ComponentDocumentDesigner.Control" target="_top">.NET documentation</a>
+     */
     public Control getControl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

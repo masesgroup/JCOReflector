@@ -99,7 +99,10 @@ public class ExportedDelegate extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ExportedDelegate(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,15 @@ public class ExportedDelegate extends NetObject  {
     public ExportedDelegate() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param instance the argument of type {@code NetObject}
+     * @param method the argument of type {@code MethodInfo}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Primitives.ExportedDelegate.-ctor" target="_top">.NET documentation</a>
+     */
     public ExportedDelegate(NetObject instance, MethodInfo method) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file

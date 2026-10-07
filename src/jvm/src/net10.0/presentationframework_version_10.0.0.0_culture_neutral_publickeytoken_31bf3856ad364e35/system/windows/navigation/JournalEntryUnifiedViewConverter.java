@@ -101,7 +101,10 @@ public class JournalEntryUnifiedViewConverter extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public JournalEntryUnifiedViewConverter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class JournalEntryUnifiedViewConverter extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Navigation.JournalEntryUnifiedViewConverter.-ctor" target="_top">.NET documentation</a>
+     */
     public JournalEntryUnifiedViewConverter() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +171,28 @@ public class JournalEntryUnifiedViewConverter extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Convert.
+     *
+     * @param values the argument of type {@code NetObject[]}
+     * @param targetType the argument of type {@code NetType}
+     * @param parameter the argument of type {@code NetObject}
+     * @param culture the argument of type {@code CultureInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Navigation.JournalEntryUnifiedViewConverter.Convert" target="_top">.NET documentation</a>
+     */
     public NetObject Convert(NetObject[] values, NetType targetType, NetObject parameter, CultureInfo culture) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.MulticastNotSupportedException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +208,17 @@ public class JournalEntryUnifiedViewConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertBack.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @param targetTypes the argument of type {@code NetType[]}
+     * @param parameter the argument of type {@code NetObject}
+     * @param culture the argument of type {@code CultureInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Navigation.JournalEntryUnifiedViewConverter.ConvertBack" target="_top">.NET documentation</a>
+     */
     public NetObject[] ConvertBack(NetObject value, NetType[] targetTypes, NetObject parameter, CultureInfo culture) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +240,25 @@ public class JournalEntryUnifiedViewConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetJournalEntryPosition.
+     *
+     * @param element the argument of type {@code DependencyObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Navigation.JournalEntryUnifiedViewConverter.GetJournalEntryPosition" target="_top">.NET documentation</a>
+     */
     public static JournalEntryPosition GetJournalEntryPosition(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -213,6 +274,25 @@ public class JournalEntryUnifiedViewConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetJournalEntryPosition.
+     *
+     * @param element the argument of type {@code DependencyObject}
+     * @param position the argument of type {@code JournalEntryPosition}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Navigation.JournalEntryUnifiedViewConverter.SetJournalEntryPosition" target="_top">.NET documentation</a>
+     */
     public static void SetJournalEntryPosition(DependencyObject element, JournalEntryPosition position) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

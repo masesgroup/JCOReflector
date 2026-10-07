@@ -102,7 +102,10 @@ public class DataSourceCacheDurationConverter extends system.componentmodel.Int3
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataSourceCacheDurationConverter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class DataSourceCacheDurationConverter extends system.componentmodel.Int3
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataSourceCacheDurationConverter.-ctor" target="_top">.NET documentation</a>
+     */
     public DataSourceCacheDurationConverter() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,15 @@ public class DataSourceCacheDurationConverter extends system.componentmodel.Int3
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CanConvertFrom.
+     *
+     * @param context the argument of type {@code ITypeDescriptorContext}
+     * @param sourceType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataSourceCacheDurationConverter.CanConvertFrom" target="_top">.NET documentation</a>
+     */
     public boolean CanConvertFrom(ITypeDescriptorContext context, NetType sourceType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +195,15 @@ public class DataSourceCacheDurationConverter extends system.componentmodel.Int3
         }
     }
 
+    /**
+     * Invokes the .NET member CanConvertTo.
+     *
+     * @param context the argument of type {@code ITypeDescriptorContext}
+     * @param destinationType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataSourceCacheDurationConverter.CanConvertTo" target="_top">.NET documentation</a>
+     */
     public boolean CanConvertTo(ITypeDescriptorContext context, NetType destinationType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +218,14 @@ public class DataSourceCacheDurationConverter extends system.componentmodel.Int3
         }
     }
 
+    /**
+     * Invokes the .NET member GetStandardValuesExclusive.
+     *
+     * @param context the argument of type {@code ITypeDescriptorContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataSourceCacheDurationConverter.GetStandardValuesExclusive" target="_top">.NET documentation</a>
+     */
     public boolean GetStandardValuesExclusive(ITypeDescriptorContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +240,14 @@ public class DataSourceCacheDurationConverter extends system.componentmodel.Int3
         }
     }
 
+    /**
+     * Invokes the .NET member GetStandardValuesSupported.
+     *
+     * @param context the argument of type {@code ITypeDescriptorContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataSourceCacheDurationConverter.GetStandardValuesSupported" target="_top">.NET documentation</a>
+     */
     public boolean GetStandardValuesSupported(ITypeDescriptorContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +262,31 @@ public class DataSourceCacheDurationConverter extends system.componentmodel.Int3
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertFrom.
+     *
+     * @param context the argument of type {@code ITypeDescriptorContext}
+     * @param culture the argument of type {@code CultureInfo}
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataSourceCacheDurationConverter.ConvertFrom" target="_top">.NET documentation</a>
+     */
     public NetObject ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, NetObject value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +302,33 @@ public class DataSourceCacheDurationConverter extends system.componentmodel.Int3
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertTo.
+     *
+     * @param context the argument of type {@code ITypeDescriptorContext}
+     * @param culture the argument of type {@code CultureInfo}
+     * @param value the argument of type {@code NetObject}
+     * @param destinationType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataSourceCacheDurationConverter.ConvertTo" target="_top">.NET documentation</a>
+     */
     public NetObject ConvertTo(ITypeDescriptorContext context, CultureInfo culture, NetObject value, NetType destinationType) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException, system.InvalidCastException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

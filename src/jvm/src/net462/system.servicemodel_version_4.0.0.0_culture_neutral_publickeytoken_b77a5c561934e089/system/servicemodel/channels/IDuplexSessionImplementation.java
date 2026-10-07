@@ -108,7 +108,10 @@ public class IDuplexSessionImplementation extends NetObject implements IDuplexSe
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDuplexSessionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,15 @@ public class IDuplexSessionImplementation extends NetObject implements IDuplexSe
 
     // Methods section
     
+    /**
+     * Invokes the .NET member BeginCloseOutputSession.
+     *
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSession.BeginCloseOutputSession" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginCloseOutputSession(AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -165,6 +177,16 @@ public class IDuplexSessionImplementation extends NetObject implements IDuplexSe
         }
     }
 
+    /**
+     * Invokes the .NET member BeginCloseOutputSession.
+     *
+     * @param timeout the argument of type {@code TimeSpan}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSession.BeginCloseOutputSession" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginCloseOutputSession(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +202,12 @@ public class IDuplexSessionImplementation extends NetObject implements IDuplexSe
         }
     }
 
+    /**
+     * Invokes the .NET member CloseOutputSession.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSession.CloseOutputSession" target="_top">.NET documentation</a>
+     */
     public void CloseOutputSession() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +218,13 @@ public class IDuplexSessionImplementation extends NetObject implements IDuplexSe
         }
     }
 
+    /**
+     * Invokes the .NET member CloseOutputSession.
+     *
+     * @param timeout the argument of type {@code TimeSpan}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSession.CloseOutputSession" target="_top">.NET documentation</a>
+     */
     public void CloseOutputSession(TimeSpan timeout) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +235,13 @@ public class IDuplexSessionImplementation extends NetObject implements IDuplexSe
         }
     }
 
+    /**
+     * Invokes the .NET member EndCloseOutputSession.
+     *
+     * @param result the argument of type {@code IAsyncResult}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSession.EndCloseOutputSession" target="_top">.NET documentation</a>
+     */
     public void EndCloseOutputSession(IAsyncResult result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +256,13 @@ public class IDuplexSessionImplementation extends NetObject implements IDuplexSe
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Id.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSession.Id" target="_top">.NET documentation</a>
+     */
     public java.lang.String getId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class ExecutionScope extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ExecutionScope(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,16 @@ public class ExecutionScope extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsolateExpression.
+     *
+     * @param expression the argument of type {@code Expression}
+     * @param locals the argument of type {@code NetObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.ExecutionScope.IsolateExpression" target="_top">.NET documentation</a>
+     */
     public Expression IsolateExpression(Expression expression, NetObject[] locals) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +182,14 @@ public class ExecutionScope extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateHoistedLocals.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.ExecutionScope.CreateHoistedLocals" target="_top">.NET documentation</a>
+     */
     public NetObject[] CreateHoistedLocals() throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

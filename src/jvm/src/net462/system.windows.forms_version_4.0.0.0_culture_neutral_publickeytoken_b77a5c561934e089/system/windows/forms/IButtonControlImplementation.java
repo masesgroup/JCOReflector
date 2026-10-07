@@ -99,7 +99,10 @@ public class IButtonControlImplementation extends NetObject implements IButtonCo
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IButtonControlImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,13 @@ public class IButtonControlImplementation extends NetObject implements IButtonCo
 
     // Methods section
     
+    /**
+     * Invokes the .NET member NotifyDefault.
+     *
+     * @param value the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.IButtonControl.NotifyDefault" target="_top">.NET documentation</a>
+     */
     public void NotifyDefault(boolean value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -151,6 +161,12 @@ public class IButtonControlImplementation extends NetObject implements IButtonCo
         }
     }
 
+    /**
+     * Invokes the .NET member PerformClick.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.IButtonControl.PerformClick" target="_top">.NET documentation</a>
+     */
     public void PerformClick() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -165,6 +181,13 @@ public class IButtonControlImplementation extends NetObject implements IButtonCo
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DialogResult.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.IButtonControl.DialogResult" target="_top">.NET documentation</a>
+     */
     public DialogResult getDialogResult() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +203,13 @@ public class IButtonControlImplementation extends NetObject implements IButtonCo
         }
     }
 
+    /**
+     * Sets the value of the .NET property DialogResult.
+     *
+     * @param DialogResult the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.IButtonControl.DialogResult" target="_top">.NET documentation</a>
+     */
     public void setDialogResult(DialogResult DialogResult) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

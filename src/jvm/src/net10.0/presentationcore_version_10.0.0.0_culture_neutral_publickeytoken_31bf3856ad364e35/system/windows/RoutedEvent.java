@@ -100,7 +100,10 @@ public class RoutedEvent extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RoutedEvent(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,21 @@ public class RoutedEvent extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AddOwner.
+     *
+     * @param ownerType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.RoutedEvent.AddOwner" target="_top">.NET documentation</a>
+     */
     public RoutedEvent AddOwner(NetType ownerType) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +192,13 @@ public class RoutedEvent extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.RoutedEvent.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +213,13 @@ public class RoutedEvent extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HandlerType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.RoutedEvent.HandlerType" target="_top">.NET documentation</a>
+     */
     public NetType getHandlerType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +235,13 @@ public class RoutedEvent extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OwnerType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.RoutedEvent.OwnerType" target="_top">.NET documentation</a>
+     */
     public NetType getOwnerType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +257,13 @@ public class RoutedEvent extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RoutingStrategy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.RoutedEvent.RoutingStrategy" target="_top">.NET documentation</a>
+     */
     public RoutingStrategy getRoutingStrategy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

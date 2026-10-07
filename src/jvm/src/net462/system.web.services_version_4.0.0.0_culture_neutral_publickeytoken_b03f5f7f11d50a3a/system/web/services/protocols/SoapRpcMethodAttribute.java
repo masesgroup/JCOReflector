@@ -100,7 +100,10 @@ public class SoapRpcMethodAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SoapRpcMethodAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class SoapRpcMethodAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapRpcMethodAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapRpcMethodAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +166,13 @@ public class SoapRpcMethodAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param action the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapRpcMethodAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapRpcMethodAttribute(java.lang.String action) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +191,13 @@ public class SoapRpcMethodAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property OneWay.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapRpcMethodAttribute.OneWay" target="_top">.NET documentation</a>
+     */
     public boolean getOneWay() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +212,13 @@ public class SoapRpcMethodAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OneWay.
+     *
+     * @param OneWay the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapRpcMethodAttribute.OneWay" target="_top">.NET documentation</a>
+     */
     public void setOneWay(boolean OneWay) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +229,13 @@ public class SoapRpcMethodAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Action.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapRpcMethodAttribute.Action" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +250,13 @@ public class SoapRpcMethodAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Action.
+     *
+     * @param Action the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapRpcMethodAttribute.Action" target="_top">.NET documentation</a>
+     */
     public void setAction(java.lang.String Action) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +267,13 @@ public class SoapRpcMethodAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Binding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapRpcMethodAttribute.Binding" target="_top">.NET documentation</a>
+     */
     public java.lang.String getBinding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +288,13 @@ public class SoapRpcMethodAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Binding.
+     *
+     * @param Binding the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapRpcMethodAttribute.Binding" target="_top">.NET documentation</a>
+     */
     public void setBinding(java.lang.String Binding) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +305,13 @@ public class SoapRpcMethodAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequestElementName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapRpcMethodAttribute.RequestElementName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRequestElementName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +326,13 @@ public class SoapRpcMethodAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RequestElementName.
+     *
+     * @param RequestElementName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapRpcMethodAttribute.RequestElementName" target="_top">.NET documentation</a>
+     */
     public void setRequestElementName(java.lang.String RequestElementName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +343,13 @@ public class SoapRpcMethodAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequestNamespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapRpcMethodAttribute.RequestNamespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRequestNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -285,6 +364,13 @@ public class SoapRpcMethodAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RequestNamespace.
+     *
+     * @param RequestNamespace the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapRpcMethodAttribute.RequestNamespace" target="_top">.NET documentation</a>
+     */
     public void setRequestNamespace(java.lang.String RequestNamespace) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +381,13 @@ public class SoapRpcMethodAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResponseElementName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapRpcMethodAttribute.ResponseElementName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getResponseElementName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -309,6 +402,13 @@ public class SoapRpcMethodAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ResponseElementName.
+     *
+     * @param ResponseElementName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapRpcMethodAttribute.ResponseElementName" target="_top">.NET documentation</a>
+     */
     public void setResponseElementName(java.lang.String ResponseElementName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -319,6 +419,13 @@ public class SoapRpcMethodAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResponseNamespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapRpcMethodAttribute.ResponseNamespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getResponseNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -333,6 +440,13 @@ public class SoapRpcMethodAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ResponseNamespace.
+     *
+     * @param ResponseNamespace the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapRpcMethodAttribute.ResponseNamespace" target="_top">.NET documentation</a>
+     */
     public void setResponseNamespace(java.lang.String ResponseNamespace) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -343,6 +457,13 @@ public class SoapRpcMethodAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Use.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapRpcMethodAttribute.Use" target="_top">.NET documentation</a>
+     */
     public SoapBindingUse getUse() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -358,6 +479,13 @@ public class SoapRpcMethodAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Use.
+     *
+     * @param Use the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapRpcMethodAttribute.Use" target="_top">.NET documentation</a>
+     */
     public void setUse(SoapBindingUse Use) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

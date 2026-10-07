@@ -98,7 +98,10 @@ public class Globals extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Globals(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,13 @@ public class Globals extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ScriptEngineBuildVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Globals.ScriptEngineBuildVersion" target="_top">.NET documentation</a>
+     */
     public static int getScriptEngineBuildVersion() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -197,6 +207,13 @@ public class Globals extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ScriptEngineMajorVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Globals.ScriptEngineMajorVersion" target="_top">.NET documentation</a>
+     */
     public static int getScriptEngineMajorVersion() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -237,6 +254,13 @@ public class Globals extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ScriptEngineMinorVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Globals.ScriptEngineMinorVersion" target="_top">.NET documentation</a>
+     */
     public static int getScriptEngineMinorVersion() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -277,6 +301,13 @@ public class Globals extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ScriptEngine.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Globals.ScriptEngine" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getScriptEngine() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

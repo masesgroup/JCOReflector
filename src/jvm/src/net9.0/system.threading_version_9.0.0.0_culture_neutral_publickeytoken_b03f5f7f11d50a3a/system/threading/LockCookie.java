@@ -100,7 +100,10 @@ public class LockCookie extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public LockCookie(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,14 @@ public class LockCookie extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param obj the argument of type {@code LockCookie}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.LockCookie.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(LockCookie obj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class TypeResolvingOptionsAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TypeResolvingOptionsAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class TypeResolvingOptionsAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.TypeResolvingOptionsAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public TypeResolvingOptionsAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +166,13 @@ public class TypeResolvingOptionsAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param options the argument of type {@code TypeResolvingOptions}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.TypeResolvingOptionsAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public TypeResolvingOptionsAttribute(TypeResolvingOptions options) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +191,13 @@ public class TypeResolvingOptionsAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property TypeResolvingOptions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.TypeResolvingOptionsAttribute.TypeResolvingOptions" target="_top">.NET documentation</a>
+     */
     public TypeResolvingOptions getTypeResolvingOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +213,13 @@ public class TypeResolvingOptionsAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TypeResolvingOptions.
+     *
+     * @param TypeResolvingOptions the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.TypeResolvingOptionsAttribute.TypeResolvingOptions" target="_top">.NET documentation</a>
+     */
     public void setTypeResolvingOptions(TypeResolvingOptions TypeResolvingOptions) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

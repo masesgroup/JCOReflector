@@ -101,7 +101,10 @@ public class DataGridViewRowStateChangedEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataGridViewRowStateChangedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,14 @@ public class DataGridViewRowStateChangedEventArgs extends system.EventArgs  {
     public DataGridViewRowStateChangedEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param dataGridViewRow the argument of type {@code DataGridViewRow}
+     * @param stateChanged the argument of type {@code DataGridViewElementStates}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewRowStateChangedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public DataGridViewRowStateChangedEventArgs(DataGridViewRow dataGridViewRow, DataGridViewElementStates stateChanged) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +181,13 @@ public class DataGridViewRowStateChangedEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property StateChanged.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewRowStateChangedEventArgs.StateChanged" target="_top">.NET documentation</a>
+     */
     public DataGridViewElementStates getStateChanged() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +203,13 @@ public class DataGridViewRowStateChangedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Row.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewRowStateChangedEventArgs.Row" target="_top">.NET documentation</a>
+     */
     public DataGridViewRow getRow() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

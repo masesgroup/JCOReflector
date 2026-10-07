@@ -100,7 +100,10 @@ public class ErrorPrototype extends microsoft.jscript.JSObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ErrorPrototype(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,27 @@ public class ErrorPrototype extends microsoft.jscript.JSObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member toString.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.ErrorPrototype.toString" target="_top">.NET documentation</a>
+     */
     public static java.lang.String toString(NetObject thisob) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.OverflowException, system.OutOfMemoryException, microsoft.jscript.vsa.JSVsaException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -173,6 +197,13 @@ public class ErrorPrototype extends microsoft.jscript.JSObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property constructor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.ErrorPrototype.getconstructor" target="_top">.NET documentation</a>
+     */
     public ErrorConstructor getconstructor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

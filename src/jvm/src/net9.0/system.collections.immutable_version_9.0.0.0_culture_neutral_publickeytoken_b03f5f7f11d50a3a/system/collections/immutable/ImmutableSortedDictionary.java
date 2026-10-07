@@ -106,7 +106,10 @@ public class ImmutableSortedDictionary extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ImmutableSortedDictionary(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,15 @@ public class ImmutableSortedDictionary extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TValue> the type of the generic argument TValue
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableSortedDictionary.Create" target="_top">.NET documentation</a>
+     */
     public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ImmutableSortedDictionary_2 Create() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -174,6 +186,23 @@ public class ImmutableSortedDictionary extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TValue> the type of the generic argument TValue
+     * @param keyComparer the argument of type {@code IComparer_1}
+     * @param valueComparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableSortedDictionary.Create" target="_top">.NET documentation</a>
+     */
     public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ImmutableSortedDictionary_2 Create(IComparer_1 keyComparer, IEqualityComparer_1 valueComparer) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -189,6 +218,22 @@ public class ImmutableSortedDictionary extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TValue> the type of the generic argument TValue
+     * @param keyComparer the argument of type {@code IComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableSortedDictionary.Create" target="_top">.NET documentation</a>
+     */
     public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ImmutableSortedDictionary_2 Create(IComparer_1 keyComparer) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -204,6 +249,23 @@ public class ImmutableSortedDictionary extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateRange.
+     *
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TValue> the type of the generic argument TValue
+     * @param keyComparer the argument of type {@code IComparer_1}
+     * @param items the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableSortedDictionary.CreateRange" target="_top">.NET documentation</a>
+     */
     public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ImmutableSortedDictionary_2 CreateRange(IComparer_1 keyComparer, IEnumerable_1 items) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -219,6 +281,24 @@ public class ImmutableSortedDictionary extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateRange.
+     *
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TValue> the type of the generic argument TValue
+     * @param keyComparer the argument of type {@code IComparer_1}
+     * @param valueComparer the argument of type {@code IEqualityComparer_1}
+     * @param items the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableSortedDictionary.CreateRange" target="_top">.NET documentation</a>
+     */
     public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ImmutableSortedDictionary_2 CreateRange(IComparer_1 keyComparer, IEqualityComparer_1 valueComparer, IEnumerable_1 items) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -234,6 +314,24 @@ public class ImmutableSortedDictionary extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateRange.
+     *
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TValue> the type of the generic argument TValue
+     * @param items the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableSortedDictionary.CreateRange" target="_top">.NET documentation</a>
+     */
     public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ImmutableSortedDictionary_2 CreateRange(IEnumerable_1 items) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -249,6 +347,27 @@ public class ImmutableSortedDictionary extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToImmutableSortedDictionary.
+     *
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TValue> the type of the generic argument TValue
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param keyComparer the argument of type {@code IComparer_1}
+     * @param valueComparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableSortedDictionary.ToImmutableSortedDictionary" target="_top">.NET documentation</a>
+     */
     public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ImmutableSortedDictionary_2 ToImmutableSortedDictionary(IEnumerable_1 source, IComparer_1 keyComparer, IEqualityComparer_1 valueComparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -264,6 +383,25 @@ public class ImmutableSortedDictionary extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToImmutableSortedDictionary.
+     *
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TValue> the type of the generic argument TValue
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param keyComparer the argument of type {@code IComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableSortedDictionary.ToImmutableSortedDictionary" target="_top">.NET documentation</a>
+     */
     public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ImmutableSortedDictionary_2 ToImmutableSortedDictionary(IEnumerable_1 source, IComparer_1 keyComparer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -279,6 +417,24 @@ public class ImmutableSortedDictionary extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToImmutableSortedDictionary.
+     *
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TValue> the type of the generic argument TValue
+     * @param source the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableSortedDictionary.ToImmutableSortedDictionary" target="_top">.NET documentation</a>
+     */
     public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ImmutableSortedDictionary_2 ToImmutableSortedDictionary(IEnumerable_1 source) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -294,6 +450,30 @@ public class ImmutableSortedDictionary extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToImmutableSortedDictionary.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TValue> the type of the generic argument TValue
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param elementSelector the argument of type {@code Func_2}
+     * @param keyComparer the argument of type {@code IComparer_1}
+     * @param valueComparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableSortedDictionary.ToImmutableSortedDictionary" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ImmutableSortedDictionary_2 ToImmutableSortedDictionary(IEnumerable_1 source, Func_2 keySelector, Func_2 elementSelector, IComparer_1 keyComparer, IEqualityComparer_1 valueComparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -309,6 +489,28 @@ public class ImmutableSortedDictionary extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToImmutableSortedDictionary.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TValue> the type of the generic argument TValue
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param elementSelector the argument of type {@code Func_2}
+     * @param keyComparer the argument of type {@code IComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableSortedDictionary.ToImmutableSortedDictionary" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ImmutableSortedDictionary_2 ToImmutableSortedDictionary(IEnumerable_1 source, Func_2 keySelector, Func_2 elementSelector, IComparer_1 keyComparer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -324,6 +526,27 @@ public class ImmutableSortedDictionary extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToImmutableSortedDictionary.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TValue> the type of the generic argument TValue
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param elementSelector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableSortedDictionary.ToImmutableSortedDictionary" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ImmutableSortedDictionary_2 ToImmutableSortedDictionary(IEnumerable_1 source, Func_2 keySelector, Func_2 elementSelector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

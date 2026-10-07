@@ -98,7 +98,10 @@ public class DesignerOptionService extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DesignerOptionService(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,8 +157,14 @@ public class DesignerOptionService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDesignerOptionService method available in IDesignerOptionService to obtain an object with an invocable method
+     *
+     * @param pageName the argument of type {@code java.lang.String}
+     * @param valueName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerOptionService.GetOptionValue" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public NetObject GetOptionValue(java.lang.String pageName, java.lang.String valueName) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerOptionService to obtain the full interface.");
     }
@@ -163,8 +172,14 @@ public class DesignerOptionService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDesignerOptionService method available in IDesignerOptionService to obtain an object with an invocable method
+     *
+     * @param pageName the argument of type {@code java.lang.String}
+     * @param valueName the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerOptionService.SetOptionValue" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void SetOptionValue(java.lang.String pageName, java.lang.String valueName, NetObject value) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerOptionService to obtain the full interface.");
     }

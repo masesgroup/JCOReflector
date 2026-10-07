@@ -52,5 +52,10 @@ import system.runtime.caching.CacheEntryUpdateArguments;
  * @version 2.0.0.0
  */
 public interface ICacheEntryUpdateCallback {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param arguments the .NET argument of type {@code System.Runtime.Caching.CacheEntryUpdateArguments}
+     */
     public void Invoke(CacheEntryUpdateArguments arguments);
 }

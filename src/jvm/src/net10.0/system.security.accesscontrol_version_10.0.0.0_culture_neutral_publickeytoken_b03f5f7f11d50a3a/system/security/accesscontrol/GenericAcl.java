@@ -100,7 +100,10 @@ public class GenericAcl extends NetObjectEnumerable  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public GenericAcl(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,14 @@ public class GenericAcl extends NetObjectEnumerable  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code GenericAce[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.GenericAcl.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(GenericAce[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -163,6 +174,14 @@ public class GenericAcl extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetBinaryForm.
+     *
+     * @param binaryForm the argument of type {@code byte[]}
+     * @param offset the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.GenericAcl.GetBinaryForm" target="_top">.NET documentation</a>
+     */
     public void GetBinaryForm(byte[] binaryForm, int offset) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +192,14 @@ public class GenericAcl extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetBinaryForm.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.GenericAcl.GetBinaryForm" target="_top">.NET documentation</a>
+     */
     public void GetBinaryForm(JCORefOut dupParam0, int dupParam1) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,8 +213,13 @@ public class GenericAcl extends NetObjectEnumerable  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICollection method available in ICollection to obtain an object with an invocable method
+     *
+     * @param array the argument of type {@code Array}
+     * @param index the argument of type {@code int}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.ICollection.CopyTo" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void CopyTo(Array array, int index) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection to obtain the full interface.");
     }
@@ -196,6 +228,13 @@ public class GenericAcl extends NetObjectEnumerable  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsSynchronized.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.GenericAcl.IsSynchronized" target="_top">.NET documentation</a>
+     */
     public boolean getIsSynchronized() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +249,13 @@ public class GenericAcl extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Revision.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.GenericAcl.Revision" target="_top">.NET documentation</a>
+     */
     public byte getRevision() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +296,13 @@ public class GenericAcl extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BinaryLength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.GenericAcl.BinaryLength" target="_top">.NET documentation</a>
+     */
     public int getBinaryLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +343,13 @@ public class GenericAcl extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Count.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.GenericAcl.Count" target="_top">.NET documentation</a>
+     */
     public int getCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -330,6 +390,13 @@ public class GenericAcl extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SyncRoot.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.GenericAcl.SyncRoot" target="_top">.NET documentation</a>
+     */
     public NetObject getSyncRoot() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

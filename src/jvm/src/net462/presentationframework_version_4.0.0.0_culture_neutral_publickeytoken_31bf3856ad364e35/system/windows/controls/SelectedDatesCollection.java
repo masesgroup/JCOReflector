@@ -101,7 +101,10 @@ public class SelectedDatesCollection extends system.collections.objectmodel.Obse
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SelectedDatesCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,13 @@ public class SelectedDatesCollection extends system.collections.objectmodel.Obse
     public SelectedDatesCollection() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param owner the argument of type {@code Calendar}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.SelectedDatesCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public SelectedDatesCollection(Calendar owner) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +176,22 @@ public class SelectedDatesCollection extends system.collections.objectmodel.Obse
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AddRange.
+     *
+     * @param start the argument of type {@code DateTime}
+     * @param end the argument of type {@code DateTime}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.SelectedDatesCollection.AddRange" target="_top">.NET documentation</a>
+     */
     public void AddRange(DateTime start, DateTime end) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

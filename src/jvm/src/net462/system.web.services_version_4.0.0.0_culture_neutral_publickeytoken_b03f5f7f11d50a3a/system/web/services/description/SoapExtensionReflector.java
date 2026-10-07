@@ -99,7 +99,10 @@ public class SoapExtensionReflector extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SoapExtensionReflector(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,12 @@ public class SoapExtensionReflector extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ReflectDescription.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapExtensionReflector.ReflectDescription" target="_top">.NET documentation</a>
+     */
     public void ReflectDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -162,6 +171,12 @@ public class SoapExtensionReflector extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReflectMethod.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapExtensionReflector.ReflectMethod" target="_top">.NET documentation</a>
+     */
     public void ReflectMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +191,13 @@ public class SoapExtensionReflector extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ReflectionContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapExtensionReflector.ReflectionContext" target="_top">.NET documentation</a>
+     */
     public ProtocolReflector getReflectionContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +213,13 @@ public class SoapExtensionReflector extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReflectionContext.
+     *
+     * @param ReflectionContext the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapExtensionReflector.ReflectionContext" target="_top">.NET documentation</a>
+     */
     public void setReflectionContext(ProtocolReflector ReflectionContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

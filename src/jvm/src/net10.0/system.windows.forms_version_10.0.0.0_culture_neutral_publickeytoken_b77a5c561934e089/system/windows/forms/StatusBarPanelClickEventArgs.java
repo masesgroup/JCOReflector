@@ -101,7 +101,10 @@ public class StatusBarPanelClickEventArgs extends system.windows.forms.MouseEven
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public StatusBarPanelClickEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,26 @@ public class StatusBarPanelClickEventArgs extends system.windows.forms.MouseEven
     public StatusBarPanelClickEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param statusBarPanel the argument of type {@code StatusBarPanel}
+     * @param button the argument of type {@code MouseButtons}
+     * @param clicks the argument of type {@code int}
+     * @param x the argument of type {@code int}
+     * @param y the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.StatusBarPanelClickEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public StatusBarPanelClickEventArgs(StatusBarPanel statusBarPanel, MouseButtons button, int clicks, int x, int y) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +193,13 @@ public class StatusBarPanelClickEventArgs extends system.windows.forms.MouseEven
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property StatusBarPanel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.StatusBarPanelClickEventArgs.StatusBarPanel" target="_top">.NET documentation</a>
+     */
     public StatusBarPanel getStatusBarPanel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

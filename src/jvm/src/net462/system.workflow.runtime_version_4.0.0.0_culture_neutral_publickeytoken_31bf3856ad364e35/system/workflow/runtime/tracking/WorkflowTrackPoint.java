@@ -100,7 +100,10 @@ public class WorkflowTrackPoint extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WorkflowTrackPoint(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class WorkflowTrackPoint extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.WorkflowTrackPoint.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowTrackPoint() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class WorkflowTrackPoint extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Annotations.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.WorkflowTrackPoint.Annotations" target="_top">.NET documentation</a>
+     */
     public TrackingAnnotationCollection getAnnotations() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +196,13 @@ public class WorkflowTrackPoint extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MatchingLocation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.WorkflowTrackPoint.MatchingLocation" target="_top">.NET documentation</a>
+     */
     public WorkflowTrackingLocation getMatchingLocation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +218,13 @@ public class WorkflowTrackPoint extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MatchingLocation.
+     *
+     * @param MatchingLocation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.WorkflowTrackPoint.MatchingLocation" target="_top">.NET documentation</a>
+     */
     public void setMatchingLocation(WorkflowTrackingLocation MatchingLocation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -51,5 +51,10 @@ import org.mases.jcobridge.netreflection.*;
  * @version 2.0.0.0
  */
 public interface ISubscribeContextCallback_1<TContextItemType extends IJCOBridgeReflected> {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param item the .NET argument of type {@code TContextItemType}
+     */
     public void Invoke(TContextItemType item);
 }

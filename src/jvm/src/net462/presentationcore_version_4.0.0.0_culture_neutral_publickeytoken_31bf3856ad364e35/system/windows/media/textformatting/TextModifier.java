@@ -102,7 +102,10 @@ public class TextModifier extends system.windows.media.textformatting.TextRun  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TextModifier(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,14 @@ public class TextModifier extends system.windows.media.textformatting.TextRun  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ModifyProperties.
+     *
+     * @param properties the argument of type {@code TextRunProperties}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextModifier.ModifyProperties" target="_top">.NET documentation</a>
+     */
     public TextRunProperties ModifyProperties(TextRunProperties properties) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +185,13 @@ public class TextModifier extends system.windows.media.textformatting.TextRun  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HasDirectionalEmbedding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextModifier.HasDirectionalEmbedding" target="_top">.NET documentation</a>
+     */
     public boolean getHasDirectionalEmbedding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +206,13 @@ public class TextModifier extends system.windows.media.textformatting.TextRun  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FlowDirection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextModifier.FlowDirection" target="_top">.NET documentation</a>
+     */
     public FlowDirection getFlowDirection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

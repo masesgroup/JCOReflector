@@ -105,7 +105,10 @@ public class IActivatorImplementation extends NetObject implements IActivator {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IActivatorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,14 @@ public class IActivatorImplementation extends NetObject implements IActivator {
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Activate.
+     *
+     * @param msg the argument of type {@code IConstructionCallMessage}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Activation.IActivator.Activate" target="_top">.NET documentation</a>
+     */
     public IConstructionReturnMessage Activate(IConstructionCallMessage msg) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -166,6 +177,13 @@ public class IActivatorImplementation extends NetObject implements IActivator {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Level.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Activation.IActivator.Level" target="_top">.NET documentation</a>
+     */
     public ActivatorLevel getLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +199,13 @@ public class IActivatorImplementation extends NetObject implements IActivator {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NextActivator.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Activation.IActivator.NextActivator" target="_top">.NET documentation</a>
+     */
     public IActivator getNextActivator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +221,13 @@ public class IActivatorImplementation extends NetObject implements IActivator {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NextActivator.
+     *
+     * @param NextActivator the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Activation.IActivator.NextActivator" target="_top">.NET documentation</a>
+     */
     public void setNextActivator(IActivator NextActivator) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

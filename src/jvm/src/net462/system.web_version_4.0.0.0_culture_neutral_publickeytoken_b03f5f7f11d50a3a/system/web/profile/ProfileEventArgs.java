@@ -101,7 +101,10 @@ public class ProfileEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ProfileEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,13 @@ public class ProfileEventArgs extends system.EventArgs  {
     public ProfileEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param context the argument of type {@code HttpContext}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Profile.ProfileEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ProfileEventArgs(HttpContext context) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +180,13 @@ public class ProfileEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Context.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Profile.ProfileEventArgs.Context" target="_top">.NET documentation</a>
+     */
     public HttpContext getContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +202,13 @@ public class ProfileEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Profile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Profile.ProfileEventArgs.Profile" target="_top">.NET documentation</a>
+     */
     public ProfileBase getProfile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +224,13 @@ public class ProfileEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Profile.
+     *
+     * @param Profile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Profile.ProfileEventArgs.Profile" target="_top">.NET documentation</a>
+     */
     public void setProfile(ProfileBase Profile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -98,7 +98,10 @@ public class UCOMIEnumVARIANTImplementation extends NetObject implements UCOMIEn
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UCOMIEnumVARIANTImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,16 @@ public class UCOMIEnumVARIANTImplementation extends NetObject implements UCOMIEn
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Next.
+     *
+     * @param celt the argument of type {@code int}
+     * @param rgvar the argument of type {@code int}
+     * @param pceltFetched the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIEnumVARIANT.Next" target="_top">.NET documentation</a>
+     */
     public int Next(int celt, int rgvar, int pceltFetched) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +193,13 @@ public class UCOMIEnumVARIANTImplementation extends NetObject implements UCOMIEn
         }
     }
 
+    /**
+     * Invokes the .NET member Reset.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIEnumVARIANT.Reset" target="_top">.NET documentation</a>
+     */
     public int Reset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +240,14 @@ public class UCOMIEnumVARIANTImplementation extends NetObject implements UCOMIEn
         }
     }
 
+    /**
+     * Invokes the .NET member Skip.
+     *
+     * @param celt the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIEnumVARIANT.Skip" target="_top">.NET documentation</a>
+     */
     public int Skip(int celt) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +288,13 @@ public class UCOMIEnumVARIANTImplementation extends NetObject implements UCOMIEn
         }
     }
 
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @param ppenum the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIEnumVARIANT.Clone" target="_top">.NET documentation</a>
+     */
     public void Clone(int ppenum) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

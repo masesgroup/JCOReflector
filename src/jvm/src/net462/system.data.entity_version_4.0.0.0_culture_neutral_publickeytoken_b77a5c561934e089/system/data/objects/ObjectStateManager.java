@@ -107,7 +107,10 @@ public class ObjectStateManager extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ObjectStateManager(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,16 @@ public class ObjectStateManager extends NetObject  {
     public ObjectStateManager() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param metadataWorkspace the argument of type {@code MetadataWorkspace}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectStateManager.-ctor" target="_top">.NET documentation</a>
+     */
     public ObjectStateManager(MetadataWorkspace metadataWorkspace) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +185,19 @@ public class ObjectStateManager extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member TryGetObjectStateEntry.
+     *
+     * @param key the argument of type {@code EntityKey}
+     * @param entry the argument of type {@code JCORefOut<ObjectStateEntry>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectStateManager.TryGetObjectStateEntry" target="_top">.NET documentation</a>
+     */
     public boolean TryGetObjectStateEntry(EntityKey key, JCORefOut<ObjectStateEntry> entry) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +212,19 @@ public class ObjectStateManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetObjectStateEntry.
+     *
+     * @param entity the argument of type {@code NetObject}
+     * @param entry the argument of type {@code JCORefOut<ObjectStateEntry>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectStateManager.TryGetObjectStateEntry" target="_top">.NET documentation</a>
+     */
     public boolean TryGetObjectStateEntry(NetObject entity, JCORefOut<ObjectStateEntry> entry) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +239,26 @@ public class ObjectStateManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetRelationshipManager.
+     *
+     * @param entity the argument of type {@code NetObject}
+     * @param relationshipManager the argument of type {@code JCORefOut<RelationshipManager>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectStateManager.TryGetRelationshipManager" target="_top">.NET documentation</a>
+     */
     public boolean TryGetRelationshipManager(NetObject entity, JCORefOut<RelationshipManager> relationshipManager) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +273,23 @@ public class ObjectStateManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetObjectStateEntries.
+     *
+     * @param state the argument of type {@code EntityState}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectStateManager.GetObjectStateEntries" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 GetObjectStateEntries(EntityState state) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +305,23 @@ public class ObjectStateManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRelationshipManager.
+     *
+     * @param entity the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectStateManager.GetRelationshipManager" target="_top">.NET documentation</a>
+     */
     public RelationshipManager GetRelationshipManager(NetObject entity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +337,26 @@ public class ObjectStateManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ChangeObjectState.
+     *
+     * @param entity the argument of type {@code NetObject}
+     * @param entityState the argument of type {@code EntityState}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.data.MappingException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectStateManager.ChangeObjectState" target="_top">.NET documentation</a>
+     */
     public ObjectStateEntry ChangeObjectState(NetObject entity, EntityState entityState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.data.MetadataException, system.data.MappingException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +372,31 @@ public class ObjectStateManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ChangeRelationshipState.
+     *
+     * @param sourceEntity the argument of type {@code NetObject}
+     * @param targetEntity the argument of type {@code NetObject}
+     * @param navigationProperty the argument of type {@code java.lang.String}
+     * @param relationshipState the argument of type {@code EntityState}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.data.MappingException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectStateManager.ChangeRelationshipState" target="_top">.NET documentation</a>
+     */
     public ObjectStateEntry ChangeRelationshipState(NetObject sourceEntity, NetObject targetEntity, java.lang.String navigationProperty, EntityState relationshipState) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +412,32 @@ public class ObjectStateManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ChangeRelationshipState.
+     *
+     * @param sourceEntity the argument of type {@code NetObject}
+     * @param targetEntity the argument of type {@code NetObject}
+     * @param relationshipName the argument of type {@code java.lang.String}
+     * @param targetRoleName the argument of type {@code java.lang.String}
+     * @param relationshipState the argument of type {@code EntityState}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.data.MappingException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectStateManager.ChangeRelationshipState" target="_top">.NET documentation</a>
+     */
     public ObjectStateEntry ChangeRelationshipState(NetObject sourceEntity, NetObject targetEntity, java.lang.String relationshipName, java.lang.String targetRoleName, EntityState relationshipState) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +453,32 @@ public class ObjectStateManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ChangeRelationshipState.
+     *
+     * @param <TEntity> the type of the generic argument TEntity
+     * @param sourceEntity the argument of type {@code TEntity}
+     * @param targetEntity the argument of type {@code NetObject}
+     * @param navigationPropertySelector the argument of type {@code Expression_1}
+     * @param relationshipState the argument of type {@code EntityState}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.data.MappingException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectStateManager.ChangeRelationshipState" target="_top">.NET documentation</a>
+     */
     public <TEntity extends IJCOBridgeReflected> ObjectStateEntry ChangeRelationshipState(TEntity sourceEntity, NetObject targetEntity, Expression_1 navigationPropertySelector, EntityState relationshipState) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +494,18 @@ public class ObjectStateManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetObjectStateEntry.
+     *
+     * @param key the argument of type {@code EntityKey}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectStateManager.GetObjectStateEntry" target="_top">.NET documentation</a>
+     */
     public ObjectStateEntry GetObjectStateEntry(EntityKey key) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -319,6 +521,24 @@ public class ObjectStateManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetObjectStateEntry.
+     *
+     * @param entity the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectStateManager.GetObjectStateEntry" target="_top">.NET documentation</a>
+     */
     public ObjectStateEntry GetObjectStateEntry(NetObject entity) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -338,6 +558,13 @@ public class ObjectStateManager extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MetadataWorkspace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectStateManager.MetadataWorkspace" target="_top">.NET documentation</a>
+     */
     public MetadataWorkspace getMetadataWorkspace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -358,6 +585,13 @@ public class ObjectStateManager extends NetObject  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addObjectStateManagerChanged.
+     *
+     * @param handler the argument of type {@code CollectionChangeEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addObjectStateManagerChanged(CollectionChangeEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -368,6 +602,13 @@ public class ObjectStateManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeObjectStateManagerChanged.
+     *
+     * @param handler the argument of type {@code CollectionChangeEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeObjectStateManagerChanged(CollectionChangeEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

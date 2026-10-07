@@ -100,7 +100,10 @@ public class SqlUserDefinedAggregateAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SqlUserDefinedAggregateAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,22 @@ public class SqlUserDefinedAggregateAttribute extends system.Attribute  {
     public SqlUserDefinedAggregateAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param format the argument of type {@code Format}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlUserDefinedAggregateAttribute(Format format) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +188,13 @@ public class SqlUserDefinedAggregateAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsInvariantToDuplicates.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute.IsInvariantToDuplicates" target="_top">.NET documentation</a>
+     */
     public boolean getIsInvariantToDuplicates() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +209,13 @@ public class SqlUserDefinedAggregateAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsInvariantToDuplicates.
+     *
+     * @param IsInvariantToDuplicates the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute.IsInvariantToDuplicates" target="_top">.NET documentation</a>
+     */
     public void setIsInvariantToDuplicates(boolean IsInvariantToDuplicates) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +226,13 @@ public class SqlUserDefinedAggregateAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsInvariantToNulls.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute.IsInvariantToNulls" target="_top">.NET documentation</a>
+     */
     public boolean getIsInvariantToNulls() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +247,13 @@ public class SqlUserDefinedAggregateAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsInvariantToNulls.
+     *
+     * @param IsInvariantToNulls the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute.IsInvariantToNulls" target="_top">.NET documentation</a>
+     */
     public void setIsInvariantToNulls(boolean IsInvariantToNulls) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +264,13 @@ public class SqlUserDefinedAggregateAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsInvariantToOrder.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute.IsInvariantToOrder" target="_top">.NET documentation</a>
+     */
     public boolean getIsInvariantToOrder() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +285,13 @@ public class SqlUserDefinedAggregateAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsInvariantToOrder.
+     *
+     * @param IsInvariantToOrder the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute.IsInvariantToOrder" target="_top">.NET documentation</a>
+     */
     public void setIsInvariantToOrder(boolean IsInvariantToOrder) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +302,13 @@ public class SqlUserDefinedAggregateAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsNullIfEmpty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute.IsNullIfEmpty" target="_top">.NET documentation</a>
+     */
     public boolean getIsNullIfEmpty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +323,13 @@ public class SqlUserDefinedAggregateAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsNullIfEmpty.
+     *
+     * @param IsNullIfEmpty the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute.IsNullIfEmpty" target="_top">.NET documentation</a>
+     */
     public void setIsNullIfEmpty(boolean IsNullIfEmpty) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +340,13 @@ public class SqlUserDefinedAggregateAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxByteSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute.MaxByteSize" target="_top">.NET documentation</a>
+     */
     public int getMaxByteSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +387,24 @@ public class SqlUserDefinedAggregateAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxByteSize.
+     *
+     * @param MaxByteSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute.MaxByteSize" target="_top">.NET documentation</a>
+     */
     public void setMaxByteSize(int MaxByteSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -315,6 +415,13 @@ public class SqlUserDefinedAggregateAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Format.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute.Format" target="_top">.NET documentation</a>
+     */
     public Format getFormat() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -330,6 +437,13 @@ public class SqlUserDefinedAggregateAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -344,6 +458,13 @@ public class SqlUserDefinedAggregateAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -115,7 +115,10 @@ public class CompiledQuery extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CompiledQuery(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -170,6 +173,35 @@ public class CompiledQuery extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Compile.
+     *
+     * @param <TArg0> the type of the generic argument TArg0
+     * @param <TArg1> the type of the generic argument TArg1
+     * @param <TArg2> the type of the generic argument TArg2
+     * @param <TArg3> the type of the generic argument TArg3
+     * @param <TArg4> the type of the generic argument TArg4
+     * @param <TArg5> the type of the generic argument TArg5
+     * @param <TArg6> the type of the generic argument TArg6
+     * @param <TArg7> the type of the generic argument TArg7
+     * @param <TArg8> the type of the generic argument TArg8
+     * @param <TResult> the type of the generic argument TResult
+     * @param query the argument of type {@code Expression_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.data.MappingException if the .NET member raises it
+     * @throws system.data.MetadataException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.CompiledQuery.Compile" target="_top">.NET documentation</a>
+     */
     public static <TArg0 extends IJCOBridgeReflected, TArg1 extends IJCOBridgeReflected, TArg2 extends IJCOBridgeReflected, TArg3 extends IJCOBridgeReflected, TArg4 extends IJCOBridgeReflected, TArg5 extends IJCOBridgeReflected, TArg6 extends IJCOBridgeReflected, TArg7 extends IJCOBridgeReflected, TArg8 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> Func_10 Compile(Expression_1 query) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.data.MappingException, system.data.MetadataException, system.threading.SynchronizationLockException, system.ObjectDisposedException, system.threading.LockRecursionException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

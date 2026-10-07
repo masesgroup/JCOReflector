@@ -100,7 +100,10 @@ public class MembershipPasswordAttribute extends system.componentmodel.dataannot
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MembershipPasswordAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,22 @@ public class MembershipPasswordAttribute extends system.componentmodel.dataannot
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipPasswordAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public MembershipPasswordAttribute() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +180,24 @@ public class MembershipPasswordAttribute extends system.componentmodel.dataannot
     
     // Methods section
     
+    /**
+     * Invokes the .NET member FormatErrorMessage.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipPasswordAttribute.FormatErrorMessage" target="_top">.NET documentation</a>
+     */
     public java.lang.String FormatErrorMessage(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +216,28 @@ public class MembershipPasswordAttribute extends system.componentmodel.dataannot
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MinRequiredNonAlphanumericCharacters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.reflection.TargetParameterCountException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipPasswordAttribute.MinRequiredNonAlphanumericCharacters" target="_top">.NET documentation</a>
+     */
     public int getMinRequiredNonAlphanumericCharacters() throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.TypeLoadException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +278,13 @@ public class MembershipPasswordAttribute extends system.componentmodel.dataannot
         }
     }
 
+    /**
+     * Sets the value of the .NET property MinRequiredNonAlphanumericCharacters.
+     *
+     * @param MinRequiredNonAlphanumericCharacters the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipPasswordAttribute.MinRequiredNonAlphanumericCharacters" target="_top">.NET documentation</a>
+     */
     public void setMinRequiredNonAlphanumericCharacters(int MinRequiredNonAlphanumericCharacters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +295,28 @@ public class MembershipPasswordAttribute extends system.componentmodel.dataannot
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinRequiredPasswordLength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.reflection.TargetParameterCountException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipPasswordAttribute.MinRequiredPasswordLength" target="_top">.NET documentation</a>
+     */
     public int getMinRequiredPasswordLength() throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.TypeLoadException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +357,13 @@ public class MembershipPasswordAttribute extends system.componentmodel.dataannot
         }
     }
 
+    /**
+     * Sets the value of the .NET property MinRequiredPasswordLength.
+     *
+     * @param MinRequiredPasswordLength the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipPasswordAttribute.MinRequiredPasswordLength" target="_top">.NET documentation</a>
+     */
     public void setMinRequiredPasswordLength(int MinRequiredPasswordLength) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +374,13 @@ public class MembershipPasswordAttribute extends system.componentmodel.dataannot
         }
     }
 
+    /**
+     * Gets the value of the .NET property PasswordStrengthRegexTimeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipPasswordAttribute.PasswordStrengthRegexTimeout" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getPasswordStrengthRegexTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +396,13 @@ public class MembershipPasswordAttribute extends system.componentmodel.dataannot
         }
     }
 
+    /**
+     * Sets the value of the .NET property PasswordStrengthRegexTimeout.
+     *
+     * @param PasswordStrengthRegexTimeout the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipPasswordAttribute.PasswordStrengthRegexTimeout" target="_top">.NET documentation</a>
+     */
     public void setPasswordStrengthRegexTimeout(Nullable_1 PasswordStrengthRegexTimeout) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +413,13 @@ public class MembershipPasswordAttribute extends system.componentmodel.dataannot
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinNonAlphanumericCharactersError.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipPasswordAttribute.MinNonAlphanumericCharactersError" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMinNonAlphanumericCharactersError() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +434,13 @@ public class MembershipPasswordAttribute extends system.componentmodel.dataannot
         }
     }
 
+    /**
+     * Sets the value of the .NET property MinNonAlphanumericCharactersError.
+     *
+     * @param MinNonAlphanumericCharactersError the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipPasswordAttribute.MinNonAlphanumericCharactersError" target="_top">.NET documentation</a>
+     */
     public void setMinNonAlphanumericCharactersError(java.lang.String MinNonAlphanumericCharactersError) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -328,6 +451,13 @@ public class MembershipPasswordAttribute extends system.componentmodel.dataannot
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinPasswordLengthError.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipPasswordAttribute.MinPasswordLengthError" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMinPasswordLengthError() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -342,6 +472,13 @@ public class MembershipPasswordAttribute extends system.componentmodel.dataannot
         }
     }
 
+    /**
+     * Sets the value of the .NET property MinPasswordLengthError.
+     *
+     * @param MinPasswordLengthError the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipPasswordAttribute.MinPasswordLengthError" target="_top">.NET documentation</a>
+     */
     public void setMinPasswordLengthError(java.lang.String MinPasswordLengthError) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -352,6 +489,13 @@ public class MembershipPasswordAttribute extends system.componentmodel.dataannot
         }
     }
 
+    /**
+     * Gets the value of the .NET property PasswordStrengthError.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipPasswordAttribute.PasswordStrengthError" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPasswordStrengthError() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -366,6 +510,13 @@ public class MembershipPasswordAttribute extends system.componentmodel.dataannot
         }
     }
 
+    /**
+     * Sets the value of the .NET property PasswordStrengthError.
+     *
+     * @param PasswordStrengthError the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipPasswordAttribute.PasswordStrengthError" target="_top">.NET documentation</a>
+     */
     public void setPasswordStrengthError(java.lang.String PasswordStrengthError) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -376,6 +527,28 @@ public class MembershipPasswordAttribute extends system.componentmodel.dataannot
         }
     }
 
+    /**
+     * Gets the value of the .NET property PasswordStrengthRegularExpression.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.reflection.TargetParameterCountException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipPasswordAttribute.PasswordStrengthRegularExpression" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPasswordStrengthRegularExpression() throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.TypeLoadException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -390,6 +563,13 @@ public class MembershipPasswordAttribute extends system.componentmodel.dataannot
         }
     }
 
+    /**
+     * Sets the value of the .NET property PasswordStrengthRegularExpression.
+     *
+     * @param PasswordStrengthRegularExpression the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipPasswordAttribute.PasswordStrengthRegularExpression" target="_top">.NET documentation</a>
+     */
     public void setPasswordStrengthRegularExpression(java.lang.String PasswordStrengthRegularExpression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -400,6 +580,13 @@ public class MembershipPasswordAttribute extends system.componentmodel.dataannot
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResourceType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipPasswordAttribute.ResourceType" target="_top">.NET documentation</a>
+     */
     public NetType getResourceType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -415,6 +602,13 @@ public class MembershipPasswordAttribute extends system.componentmodel.dataannot
         }
     }
 
+    /**
+     * Sets the value of the .NET property ResourceType.
+     *
+     * @param ResourceType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.MembershipPasswordAttribute.ResourceType" target="_top">.NET documentation</a>
+     */
     public void setResourceType(NetType ResourceType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

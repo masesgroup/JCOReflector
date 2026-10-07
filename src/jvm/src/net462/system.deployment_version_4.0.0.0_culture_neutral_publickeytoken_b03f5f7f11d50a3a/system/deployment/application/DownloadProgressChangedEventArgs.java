@@ -100,7 +100,10 @@ public class DownloadProgressChangedEventArgs extends system.componentmodel.Prog
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DownloadProgressChangedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class DownloadProgressChangedEventArgs extends system.componentmodel.Prog
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BytesDownloaded.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Deployment.Application.DownloadProgressChangedEventArgs.BytesDownloaded" target="_top">.NET documentation</a>
+     */
     public long getBytesDownloaded() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +209,13 @@ public class DownloadProgressChangedEventArgs extends system.componentmodel.Prog
         }
     }
 
+    /**
+     * Gets the value of the .NET property TotalBytesToDownload.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Deployment.Application.DownloadProgressChangedEventArgs.TotalBytesToDownload" target="_top">.NET documentation</a>
+     */
     public long getTotalBytesToDownload() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +256,13 @@ public class DownloadProgressChangedEventArgs extends system.componentmodel.Prog
         }
     }
 
+    /**
+     * Gets the value of the .NET property State.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Deployment.Application.DownloadProgressChangedEventArgs.State" target="_top">.NET documentation</a>
+     */
     public DeploymentProgressState getState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

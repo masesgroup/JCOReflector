@@ -103,7 +103,10 @@ public class SettingsBase extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SettingsBase(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,14 @@ public class SettingsBase extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Synchronized.
+     *
+     * @param settingsBase the argument of type {@code SettingsBase}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsBase.Synchronized" target="_top">.NET documentation</a>
+     */
     public static SettingsBase Synchronized(SettingsBase settingsBase) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -171,6 +182,15 @@ public class SettingsBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Initialize.
+     *
+     * @param context the argument of type {@code SettingsContext}
+     * @param properties the argument of type {@code SettingsPropertyCollection}
+     * @param providers the argument of type {@code SettingsProviderCollection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsBase.Initialize" target="_top">.NET documentation</a>
+     */
     public void Initialize(SettingsContext context, SettingsPropertyCollection properties, SettingsProviderCollection providers) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +201,20 @@ public class SettingsBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Save.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsBase.Save" target="_top">.NET documentation</a>
+     */
     public void Save() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +229,13 @@ public class SettingsBase extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsSynchronized.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsBase.IsSynchronized" target="_top">.NET documentation</a>
+     */
     public boolean getIsSynchronized() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +250,13 @@ public class SettingsBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Context.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsBase.Context" target="_top">.NET documentation</a>
+     */
     public SettingsContext getContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +272,13 @@ public class SettingsBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Properties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsBase.Properties" target="_top">.NET documentation</a>
+     */
     public SettingsPropertyCollection getProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +294,13 @@ public class SettingsBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyValues.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsBase.PropertyValues" target="_top">.NET documentation</a>
+     */
     public SettingsPropertyValueCollection getPropertyValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +316,13 @@ public class SettingsBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Providers.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsBase.Providers" target="_top">.NET documentation</a>
+     */
     public SettingsProviderCollection getProviders() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

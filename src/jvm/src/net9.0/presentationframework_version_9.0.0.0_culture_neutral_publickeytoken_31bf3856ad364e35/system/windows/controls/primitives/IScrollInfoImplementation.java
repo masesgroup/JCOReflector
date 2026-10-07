@@ -101,7 +101,10 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IScrollInfoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,15 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member MakeVisible.
+     *
+     * @param visual the argument of type {@code Visual}
+     * @param rectangle the argument of type {@code Rect}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IScrollInfo.MakeVisible" target="_top">.NET documentation</a>
+     */
     public Rect MakeVisible(Visual visual, Rect rectangle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -158,6 +170,12 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
         }
     }
 
+    /**
+     * Invokes the .NET member LineDown.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IScrollInfo.LineDown" target="_top">.NET documentation</a>
+     */
     public void LineDown() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +186,12 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
         }
     }
 
+    /**
+     * Invokes the .NET member LineLeft.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IScrollInfo.LineLeft" target="_top">.NET documentation</a>
+     */
     public void LineLeft() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +202,12 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
         }
     }
 
+    /**
+     * Invokes the .NET member LineRight.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IScrollInfo.LineRight" target="_top">.NET documentation</a>
+     */
     public void LineRight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +218,12 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
         }
     }
 
+    /**
+     * Invokes the .NET member LineUp.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IScrollInfo.LineUp" target="_top">.NET documentation</a>
+     */
     public void LineUp() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +234,12 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
         }
     }
 
+    /**
+     * Invokes the .NET member MouseWheelDown.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IScrollInfo.MouseWheelDown" target="_top">.NET documentation</a>
+     */
     public void MouseWheelDown() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +250,12 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
         }
     }
 
+    /**
+     * Invokes the .NET member MouseWheelLeft.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IScrollInfo.MouseWheelLeft" target="_top">.NET documentation</a>
+     */
     public void MouseWheelLeft() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +266,12 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
         }
     }
 
+    /**
+     * Invokes the .NET member MouseWheelRight.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IScrollInfo.MouseWheelRight" target="_top">.NET documentation</a>
+     */
     public void MouseWheelRight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +282,12 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
         }
     }
 
+    /**
+     * Invokes the .NET member MouseWheelUp.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IScrollInfo.MouseWheelUp" target="_top">.NET documentation</a>
+     */
     public void MouseWheelUp() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +298,12 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
         }
     }
 
+    /**
+     * Invokes the .NET member PageDown.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IScrollInfo.PageDown" target="_top">.NET documentation</a>
+     */
     public void PageDown() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +314,12 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
         }
     }
 
+    /**
+     * Invokes the .NET member PageLeft.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IScrollInfo.PageLeft" target="_top">.NET documentation</a>
+     */
     public void PageLeft() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +330,12 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
         }
     }
 
+    /**
+     * Invokes the .NET member PageRight.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IScrollInfo.PageRight" target="_top">.NET documentation</a>
+     */
     public void PageRight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +346,12 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
         }
     }
 
+    /**
+     * Invokes the .NET member PageUp.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IScrollInfo.PageUp" target="_top">.NET documentation</a>
+     */
     public void PageUp() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +362,13 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
         }
     }
 
+    /**
+     * Invokes the .NET member SetHorizontalOffset.
+     *
+     * @param offset the argument of type {@code double}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IScrollInfo.SetHorizontalOffset" target="_top">.NET documentation</a>
+     */
     public void SetHorizontalOffset(double offset) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +379,13 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
         }
     }
 
+    /**
+     * Invokes the .NET member SetVerticalOffset.
+     *
+     * @param offset the argument of type {@code double}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IScrollInfo.SetVerticalOffset" target="_top">.NET documentation</a>
+     */
     public void SetVerticalOffset(double offset) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -302,6 +400,13 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CanHorizontallyScroll.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IScrollInfo.CanHorizontallyScroll" target="_top">.NET documentation</a>
+     */
     public boolean getCanHorizontallyScroll() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -316,6 +421,13 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
         }
     }
 
+    /**
+     * Sets the value of the .NET property CanHorizontallyScroll.
+     *
+     * @param CanHorizontallyScroll the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IScrollInfo.CanHorizontallyScroll" target="_top">.NET documentation</a>
+     */
     public void setCanHorizontallyScroll(boolean CanHorizontallyScroll) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -326,6 +438,13 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanVerticallyScroll.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IScrollInfo.CanVerticallyScroll" target="_top">.NET documentation</a>
+     */
     public boolean getCanVerticallyScroll() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -340,6 +459,13 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
         }
     }
 
+    /**
+     * Sets the value of the .NET property CanVerticallyScroll.
+     *
+     * @param CanVerticallyScroll the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IScrollInfo.CanVerticallyScroll" target="_top">.NET documentation</a>
+     */
     public void setCanVerticallyScroll(boolean CanVerticallyScroll) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -350,6 +476,13 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExtentHeight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IScrollInfo.ExtentHeight" target="_top">.NET documentation</a>
+     */
     public double getExtentHeight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -390,6 +523,13 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExtentWidth.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IScrollInfo.ExtentWidth" target="_top">.NET documentation</a>
+     */
     public double getExtentWidth() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -430,6 +570,13 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
         }
     }
 
+    /**
+     * Gets the value of the .NET property HorizontalOffset.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IScrollInfo.HorizontalOffset" target="_top">.NET documentation</a>
+     */
     public double getHorizontalOffset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -470,6 +617,13 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
         }
     }
 
+    /**
+     * Gets the value of the .NET property VerticalOffset.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IScrollInfo.VerticalOffset" target="_top">.NET documentation</a>
+     */
     public double getVerticalOffset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -510,6 +664,13 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
         }
     }
 
+    /**
+     * Gets the value of the .NET property ViewportHeight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IScrollInfo.ViewportHeight" target="_top">.NET documentation</a>
+     */
     public double getViewportHeight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -550,6 +711,13 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
         }
     }
 
+    /**
+     * Gets the value of the .NET property ViewportWidth.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IScrollInfo.ViewportWidth" target="_top">.NET documentation</a>
+     */
     public double getViewportWidth() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -590,6 +758,13 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
         }
     }
 
+    /**
+     * Gets the value of the .NET property ScrollOwner.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IScrollInfo.ScrollOwner" target="_top">.NET documentation</a>
+     */
     public ScrollViewer getScrollOwner() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -605,6 +780,13 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
         }
     }
 
+    /**
+     * Sets the value of the .NET property ScrollOwner.
+     *
+     * @param ScrollOwner the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IScrollInfo.ScrollOwner" target="_top">.NET documentation</a>
+     */
     public void setScrollOwner(ScrollViewer ScrollOwner) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

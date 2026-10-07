@@ -100,7 +100,10 @@ public class IsolatedStorageSecurityState extends system.security.SecurityState 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IsolatedStorageSecurityState(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,13 @@ public class IsolatedStorageSecurityState extends system.security.SecurityState 
     
     // Methods section
     
+    /**
+     * Invokes the .NET member EnsureState.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.io.isolatedstorage.IsolatedStorageException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageSecurityState.EnsureState" target="_top">.NET documentation</a>
+     */
     public void EnsureState() throws Throwable, system.io.isolatedstorage.IsolatedStorageException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +179,13 @@ public class IsolatedStorageSecurityState extends system.security.SecurityState 
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Quota.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageSecurityState.Quota" target="_top">.NET documentation</a>
+     */
     public long getQuota() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +226,13 @@ public class IsolatedStorageSecurityState extends system.security.SecurityState 
         }
     }
 
+    /**
+     * Sets the value of the .NET property Quota.
+     *
+     * @param Quota the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageSecurityState.Quota" target="_top">.NET documentation</a>
+     */
     public void setQuota(long Quota) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +243,13 @@ public class IsolatedStorageSecurityState extends system.security.SecurityState 
         }
     }
 
+    /**
+     * Gets the value of the .NET property UsedSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageSecurityState.UsedSize" target="_top">.NET documentation</a>
+     */
     public long getUsedSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +290,13 @@ public class IsolatedStorageSecurityState extends system.security.SecurityState 
         }
     }
 
+    /**
+     * Gets the value of the .NET property Options.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IsolatedStorage.IsolatedStorageSecurityState.Options" target="_top">.NET documentation</a>
+     */
     public IsolatedStorageSecurityOptions getOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

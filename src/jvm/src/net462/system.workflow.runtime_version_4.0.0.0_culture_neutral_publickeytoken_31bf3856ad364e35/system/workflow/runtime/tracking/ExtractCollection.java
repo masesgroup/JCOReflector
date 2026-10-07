@@ -102,7 +102,10 @@ public class ExtractCollection extends system.collections.generic.List_1<Trackin
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ExtractCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class ExtractCollection extends system.collections.generic.List_1<Trackin
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.ExtractCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public ExtractCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +168,16 @@ public class ExtractCollection extends system.collections.generic.List_1<Trackin
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param extracts the argument of type {@code IEnumerable_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.ExtractCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public ExtractCollection(IEnumerable_1 extracts) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file

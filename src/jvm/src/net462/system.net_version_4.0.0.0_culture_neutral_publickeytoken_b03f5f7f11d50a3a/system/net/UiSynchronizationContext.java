@@ -99,7 +99,10 @@ public class UiSynchronizationContext extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UiSynchronizationContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,13 @@ public class UiSynchronizationContext extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ManagedUiThreadId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.UiSynchronizationContext.ManagedUiThreadId" target="_top">.NET documentation</a>
+     */
     public static int getManagedUiThreadId() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -196,6 +206,13 @@ public class UiSynchronizationContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ManagedUiThreadId.
+     *
+     * @param ManagedUiThreadId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.UiSynchronizationContext.ManagedUiThreadId" target="_top">.NET documentation</a>
+     */
     public static void setManagedUiThreadId(int ManagedUiThreadId) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -206,6 +223,13 @@ public class UiSynchronizationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Current.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.UiSynchronizationContext.Current" target="_top">.NET documentation</a>
+     */
     public static SynchronizationContext getCurrent() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -221,6 +245,13 @@ public class UiSynchronizationContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Current.
+     *
+     * @param Current the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.UiSynchronizationContext.Current" target="_top">.NET documentation</a>
+     */
     public static void setCurrent(SynchronizationContext Current) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

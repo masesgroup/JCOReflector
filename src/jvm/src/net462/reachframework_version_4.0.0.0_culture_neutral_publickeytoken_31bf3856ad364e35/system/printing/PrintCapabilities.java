@@ -103,7 +103,10 @@ public class PrintCapabilities extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PrintCapabilities(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,25 @@ public class PrintCapabilities extends NetObject  {
     public PrintCapabilities() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param xmlStream the argument of type {@code Stream}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PrintCapabilities.-ctor" target="_top">.NET documentation</a>
+     */
     public PrintCapabilities(Stream xmlStream) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.xml.XmlException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +194,15 @@ public class PrintCapabilities extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PagesPerSheetCapability.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PrintCapabilities.PagesPerSheetCapability" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getPagesPerSheetCapability() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +218,15 @@ public class PrintCapabilities extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CollationCapability.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PrintCapabilities.CollationCapability" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getCollationCapability() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +242,15 @@ public class PrintCapabilities extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DeviceFontSubstitutionCapability.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PrintCapabilities.DeviceFontSubstitutionCapability" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getDeviceFontSubstitutionCapability() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +266,15 @@ public class PrintCapabilities extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DuplexingCapability.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PrintCapabilities.DuplexingCapability" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getDuplexingCapability() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +290,15 @@ public class PrintCapabilities extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InputBinCapability.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PrintCapabilities.InputBinCapability" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getInputBinCapability() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +314,15 @@ public class PrintCapabilities extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OutputColorCapability.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PrintCapabilities.OutputColorCapability" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getOutputColorCapability() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +338,15 @@ public class PrintCapabilities extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OutputQualityCapability.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PrintCapabilities.OutputQualityCapability" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getOutputQualityCapability() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +362,15 @@ public class PrintCapabilities extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PageBorderlessCapability.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PrintCapabilities.PageBorderlessCapability" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getPageBorderlessCapability() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +386,15 @@ public class PrintCapabilities extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PageMediaSizeCapability.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PrintCapabilities.PageMediaSizeCapability" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getPageMediaSizeCapability() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -307,6 +410,15 @@ public class PrintCapabilities extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PageMediaTypeCapability.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PrintCapabilities.PageMediaTypeCapability" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getPageMediaTypeCapability() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -322,6 +434,15 @@ public class PrintCapabilities extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PageOrderCapability.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PrintCapabilities.PageOrderCapability" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getPageOrderCapability() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -337,6 +458,15 @@ public class PrintCapabilities extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PageOrientationCapability.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PrintCapabilities.PageOrientationCapability" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getPageOrientationCapability() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -352,6 +482,15 @@ public class PrintCapabilities extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PageResolutionCapability.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PrintCapabilities.PageResolutionCapability" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getPageResolutionCapability() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -367,6 +506,15 @@ public class PrintCapabilities extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PagesPerSheetDirectionCapability.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PrintCapabilities.PagesPerSheetDirectionCapability" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getPagesPerSheetDirectionCapability() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -382,6 +530,15 @@ public class PrintCapabilities extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PhotoPrintingIntentCapability.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PrintCapabilities.PhotoPrintingIntentCapability" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getPhotoPrintingIntentCapability() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -397,6 +554,15 @@ public class PrintCapabilities extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StaplingCapability.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PrintCapabilities.StaplingCapability" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getStaplingCapability() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -412,6 +578,15 @@ public class PrintCapabilities extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TrueTypeFontModeCapability.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PrintCapabilities.TrueTypeFontModeCapability" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getTrueTypeFontModeCapability() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -427,6 +602,14 @@ public class PrintCapabilities extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OrientedPageMediaHeight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PrintCapabilities.OrientedPageMediaHeight" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getOrientedPageMediaHeight() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -442,6 +625,14 @@ public class PrintCapabilities extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OrientedPageMediaWidth.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PrintCapabilities.OrientedPageMediaWidth" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getOrientedPageMediaWidth() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -457,6 +648,14 @@ public class PrintCapabilities extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxCopyCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PrintCapabilities.MaxCopyCount" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getMaxCopyCount() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -472,6 +671,14 @@ public class PrintCapabilities extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PageImageableArea.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PrintCapabilities.PageImageableArea" target="_top">.NET documentation</a>
+     */
     public PageImageableArea getPageImageableArea() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -487,6 +694,14 @@ public class PrintCapabilities extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PageScalingFactorRange.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PrintCapabilities.PageScalingFactorRange" target="_top">.NET documentation</a>
+     */
     public PageScalingFactorRange getPageScalingFactorRange() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -102,7 +102,10 @@ public class RegistryPermissionAttribute extends system.security.permissions.Cod
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RegistryPermissionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,13 @@ public class RegistryPermissionAttribute extends system.security.permissions.Cod
     public RegistryPermissionAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param action the argument of type {@code SecurityAction}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.RegistryPermissionAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public RegistryPermissionAttribute(SecurityAction action) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +177,13 @@ public class RegistryPermissionAttribute extends system.security.permissions.Cod
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreatePermission.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.RegistryPermissionAttribute.CreatePermission" target="_top">.NET documentation</a>
+     */
     public IPermission CreatePermission() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +203,13 @@ public class RegistryPermissionAttribute extends system.security.permissions.Cod
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property All.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.RegistryPermissionAttribute.All" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAll() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +224,13 @@ public class RegistryPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Sets the value of the .NET property All.
+     *
+     * @param All the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.RegistryPermissionAttribute.All" target="_top">.NET documentation</a>
+     */
     public void setAll(java.lang.String All) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +241,13 @@ public class RegistryPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Gets the value of the .NET property ChangeAccessControl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.RegistryPermissionAttribute.ChangeAccessControl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getChangeAccessControl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +262,13 @@ public class RegistryPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Sets the value of the .NET property ChangeAccessControl.
+     *
+     * @param ChangeAccessControl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.RegistryPermissionAttribute.ChangeAccessControl" target="_top">.NET documentation</a>
+     */
     public void setChangeAccessControl(java.lang.String ChangeAccessControl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +279,13 @@ public class RegistryPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Gets the value of the .NET property Create.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.RegistryPermissionAttribute.Create" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCreate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +300,13 @@ public class RegistryPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Sets the value of the .NET property Create.
+     *
+     * @param Create the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.RegistryPermissionAttribute.Create" target="_top">.NET documentation</a>
+     */
     public void setCreate(java.lang.String Create) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +317,13 @@ public class RegistryPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Gets the value of the .NET property Read.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.RegistryPermissionAttribute.Read" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRead() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +338,13 @@ public class RegistryPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Sets the value of the .NET property Read.
+     *
+     * @param Read the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.RegistryPermissionAttribute.Read" target="_top">.NET documentation</a>
+     */
     public void setRead(java.lang.String Read) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +355,13 @@ public class RegistryPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Gets the value of the .NET property ViewAccessControl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.RegistryPermissionAttribute.ViewAccessControl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getViewAccessControl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -296,6 +376,13 @@ public class RegistryPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Sets the value of the .NET property ViewAccessControl.
+     *
+     * @param ViewAccessControl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.RegistryPermissionAttribute.ViewAccessControl" target="_top">.NET documentation</a>
+     */
     public void setViewAccessControl(java.lang.String ViewAccessControl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +393,13 @@ public class RegistryPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Gets the value of the .NET property ViewAndModify.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.RegistryPermissionAttribute.ViewAndModify" target="_top">.NET documentation</a>
+     */
     public java.lang.String getViewAndModify() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +414,13 @@ public class RegistryPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Sets the value of the .NET property ViewAndModify.
+     *
+     * @param ViewAndModify the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.RegistryPermissionAttribute.ViewAndModify" target="_top">.NET documentation</a>
+     */
     public void setViewAndModify(java.lang.String ViewAndModify) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -330,6 +431,13 @@ public class RegistryPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Gets the value of the .NET property Write.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.RegistryPermissionAttribute.Write" target="_top">.NET documentation</a>
+     */
     public java.lang.String getWrite() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -344,6 +452,13 @@ public class RegistryPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Sets the value of the .NET property Write.
+     *
+     * @param Write the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.RegistryPermissionAttribute.Write" target="_top">.NET documentation</a>
+     */
     public void setWrite(java.lang.String Write) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

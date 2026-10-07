@@ -102,7 +102,10 @@ public class ArgIterator extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ArgIterator(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,13 @@ public class ArgIterator extends system.ValueType  {
     public ArgIterator() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param arglist the argument of type {@code RuntimeArgumentHandle}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ArgIterator.-ctor" target="_top">.NET documentation</a>
+     */
     public ArgIterator(RuntimeArgumentHandle arglist) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +177,13 @@ public class ArgIterator extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetRemainingCount.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ArgIterator.GetRemainingCount" target="_top">.NET documentation</a>
+     */
     public int GetRemainingCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +224,13 @@ public class ArgIterator extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetNextArgType.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ArgIterator.GetNextArgType" target="_top">.NET documentation</a>
+     */
     public RuntimeTypeHandle GetNextArgType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +246,13 @@ public class ArgIterator extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetNextArg.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ArgIterator.GetNextArg" target="_top">.NET documentation</a>
+     */
     public TypedReference GetNextArg() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +268,15 @@ public class ArgIterator extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetNextArg.
+     *
+     * @param rth the argument of type {@code RuntimeTypeHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ArgIterator.GetNextArg" target="_top">.NET documentation</a>
+     */
     public TypedReference GetNextArg(RuntimeTypeHandle rth) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +292,12 @@ public class ArgIterator extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member End.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ArgIterator.End" target="_top">.NET documentation</a>
+     */
     public void End() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

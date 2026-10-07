@@ -100,7 +100,10 @@ public class CodeChecksumPragma extends system.codedom.CodeDirective  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodeChecksumPragma(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class CodeChecksumPragma extends system.codedom.CodeDirective  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeChecksumPragma.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeChecksumPragma() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +166,15 @@ public class CodeChecksumPragma extends system.codedom.CodeDirective  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param fileName the argument of type {@code java.lang.String}
+     * @param checksumAlgorithmId the argument of type {@code Guid}
+     * @param checksumData the argument of type {@code byte[]}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeChecksumPragma.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeChecksumPragma(java.lang.String fileName, Guid checksumAlgorithmId, byte[] checksumData) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +193,13 @@ public class CodeChecksumPragma extends system.codedom.CodeDirective  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ChecksumData.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeChecksumPragma.ChecksumData" target="_top">.NET documentation</a>
+     */
     public byte[] getChecksumData() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +223,13 @@ public class CodeChecksumPragma extends system.codedom.CodeDirective  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ChecksumData.
+     *
+     * @param ChecksumData the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeChecksumPragma.ChecksumData" target="_top">.NET documentation</a>
+     */
     public void setChecksumData(byte[] ChecksumData) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +240,13 @@ public class CodeChecksumPragma extends system.codedom.CodeDirective  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ChecksumAlgorithmId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeChecksumPragma.ChecksumAlgorithmId" target="_top">.NET documentation</a>
+     */
     public Guid getChecksumAlgorithmId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +262,13 @@ public class CodeChecksumPragma extends system.codedom.CodeDirective  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ChecksumAlgorithmId.
+     *
+     * @param ChecksumAlgorithmId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeChecksumPragma.ChecksumAlgorithmId" target="_top">.NET documentation</a>
+     */
     public void setChecksumAlgorithmId(Guid ChecksumAlgorithmId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +279,13 @@ public class CodeChecksumPragma extends system.codedom.CodeDirective  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FileName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeChecksumPragma.FileName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFileName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +300,13 @@ public class CodeChecksumPragma extends system.codedom.CodeDirective  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FileName.
+     *
+     * @param FileName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeChecksumPragma.FileName" target="_top">.NET documentation</a>
+     */
     public void setFileName(java.lang.String FileName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -105,7 +105,10 @@ public class PropertyGroupDescription extends system.componentmodel.GroupDescrip
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PropertyGroupDescription(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,13 @@ public class PropertyGroupDescription extends system.componentmodel.GroupDescrip
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.PropertyGroupDescription.-ctor" target="_top">.NET documentation</a>
+     */
     public PropertyGroupDescription() throws Throwable, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +172,24 @@ public class PropertyGroupDescription extends system.componentmodel.GroupDescrip
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.PropertyGroupDescription.-ctor" target="_top">.NET documentation</a>
+     */
     public PropertyGroupDescription(java.lang.String propertyName) throws Throwable, system.MulticastNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.FormatException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +200,25 @@ public class PropertyGroupDescription extends system.componentmodel.GroupDescrip
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @param converter the argument of type {@code IValueConverter}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.PropertyGroupDescription.-ctor" target="_top">.NET documentation</a>
+     */
     public PropertyGroupDescription(java.lang.String propertyName, IValueConverter converter) throws Throwable, system.MulticastNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.FormatException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +229,26 @@ public class PropertyGroupDescription extends system.componentmodel.GroupDescrip
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @param converter the argument of type {@code IValueConverter}
+     * @param stringComparison the argument of type {@code StringComparison}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.PropertyGroupDescription.-ctor" target="_top">.NET documentation</a>
+     */
     public PropertyGroupDescription(java.lang.String propertyName, IValueConverter converter, StringComparison stringComparison) throws Throwable, system.MulticastNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.FormatException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -196,6 +263,23 @@ public class PropertyGroupDescription extends system.componentmodel.GroupDescrip
     
     // Methods section
     
+    /**
+     * Invokes the .NET member NamesMatch.
+     *
+     * @param groupName the argument of type {@code NetObject}
+     * @param itemName the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.PropertyGroupDescription.NamesMatch" target="_top">.NET documentation</a>
+     */
     public boolean NamesMatch(NetObject groupName, NetObject itemName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +294,27 @@ public class PropertyGroupDescription extends system.componentmodel.GroupDescrip
         }
     }
 
+    /**
+     * Invokes the .NET member GroupNameFromItem.
+     *
+     * @param item the argument of type {@code NetObject}
+     * @param level the argument of type {@code int}
+     * @param culture the argument of type {@code CultureInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.PropertyGroupDescription.GroupNameFromItem" target="_top">.NET documentation</a>
+     */
     public NetObject GroupNameFromItem(NetObject item, int level, CultureInfo culture) throws Throwable, system.ArgumentException, system.security.SecurityException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.TypeLoadException, system.ArgumentOutOfRangeException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +334,13 @@ public class PropertyGroupDescription extends system.componentmodel.GroupDescrip
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CompareNameAscending.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.PropertyGroupDescription.CompareNameAscending" target="_top">.NET documentation</a>
+     */
     public static IComparer getCompareNameAscending() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -244,6 +356,13 @@ public class PropertyGroupDescription extends system.componentmodel.GroupDescrip
         }
     }
 
+    /**
+     * Gets the value of the .NET property CompareNameDescending.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.PropertyGroupDescription.CompareNameDescending" target="_top">.NET documentation</a>
+     */
     public static IComparer getCompareNameDescending() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -259,6 +378,13 @@ public class PropertyGroupDescription extends system.componentmodel.GroupDescrip
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.PropertyGroupDescription.PropertyName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPropertyName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +399,23 @@ public class PropertyGroupDescription extends system.componentmodel.GroupDescrip
         }
     }
 
+    /**
+     * Sets the value of the .NET property PropertyName.
+     *
+     * @param PropertyName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.PropertyGroupDescription.PropertyName" target="_top">.NET documentation</a>
+     */
     public void setPropertyName(java.lang.String PropertyName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +426,13 @@ public class PropertyGroupDescription extends system.componentmodel.GroupDescrip
         }
     }
 
+    /**
+     * Gets the value of the .NET property StringComparison.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.PropertyGroupDescription.StringComparison" target="_top">.NET documentation</a>
+     */
     public StringComparison getStringComparison() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +448,13 @@ public class PropertyGroupDescription extends system.componentmodel.GroupDescrip
         }
     }
 
+    /**
+     * Sets the value of the .NET property StringComparison.
+     *
+     * @param StringComparison the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.PropertyGroupDescription.StringComparison" target="_top">.NET documentation</a>
+     */
     public void setStringComparison(StringComparison StringComparison) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +465,13 @@ public class PropertyGroupDescription extends system.componentmodel.GroupDescrip
         }
     }
 
+    /**
+     * Gets the value of the .NET property Converter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.PropertyGroupDescription.Converter" target="_top">.NET documentation</a>
+     */
     public IValueConverter getConverter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -323,6 +487,13 @@ public class PropertyGroupDescription extends system.componentmodel.GroupDescrip
         }
     }
 
+    /**
+     * Sets the value of the .NET property Converter.
+     *
+     * @param Converter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.PropertyGroupDescription.Converter" target="_top">.NET documentation</a>
+     */
     public void setConverter(IValueConverter Converter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

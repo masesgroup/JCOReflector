@@ -102,7 +102,10 @@ public class ItemsControlAutomationPeer extends system.windows.automation.peers.
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ItemsControlAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,24 @@ public class ItemsControlAutomationPeer extends system.windows.automation.peers.
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetPattern.
+     *
+     * @param patternInterface the argument of type {@code PatternInterface}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.ItemsControlAutomationPeer.GetPattern" target="_top">.NET documentation</a>
+     */
     public NetObject GetPattern(PatternInterface patternInterface) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,8 +194,15 @@ public class ItemsControlAutomationPeer extends system.windows.automation.peers.
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIItemContainerProvider method available in IItemContainerProvider to obtain an object with an invocable method
+     *
+     * @param startAfter the argument of type {@code IRawElementProviderSimple}
+     * @param propertyId the argument of type {@code int}
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IItemContainerProvider.FindItemByProperty" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public IRawElementProviderSimple FindItemByProperty(IRawElementProviderSimple startAfter, int propertyId, NetObject value) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerProvider to obtain the full interface.");
     }

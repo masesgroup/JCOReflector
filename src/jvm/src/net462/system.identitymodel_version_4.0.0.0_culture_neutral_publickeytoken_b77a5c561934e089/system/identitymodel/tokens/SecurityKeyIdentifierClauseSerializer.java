@@ -101,7 +101,10 @@ public class SecurityKeyIdentifierClauseSerializer extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SecurityKeyIdentifierClauseSerializer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,14 @@ public class SecurityKeyIdentifierClauseSerializer extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CanReadKeyIdentifierClause.
+     *
+     * @param reader the argument of type {@code XmlReader}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityKeyIdentifierClauseSerializer.CanReadKeyIdentifierClause" target="_top">.NET documentation</a>
+     */
     public boolean CanReadKeyIdentifierClause(XmlReader reader) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +179,14 @@ public class SecurityKeyIdentifierClauseSerializer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CanWriteKeyIdentifierClause.
+     *
+     * @param securityKeyIdentifierClause the argument of type {@code SecurityKeyIdentifierClause}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityKeyIdentifierClauseSerializer.CanWriteKeyIdentifierClause" target="_top">.NET documentation</a>
+     */
     public boolean CanWriteKeyIdentifierClause(SecurityKeyIdentifierClause securityKeyIdentifierClause) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +201,14 @@ public class SecurityKeyIdentifierClauseSerializer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReadKeyIdentifierClause.
+     *
+     * @param reader the argument of type {@code XmlReader}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityKeyIdentifierClauseSerializer.ReadKeyIdentifierClause" target="_top">.NET documentation</a>
+     */
     public SecurityKeyIdentifierClause ReadKeyIdentifierClause(XmlReader reader) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +224,14 @@ public class SecurityKeyIdentifierClauseSerializer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteKeyIdentifierClause.
+     *
+     * @param writer the argument of type {@code XmlWriter}
+     * @param securityKeyIdentifierClause the argument of type {@code SecurityKeyIdentifierClause}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityKeyIdentifierClauseSerializer.WriteKeyIdentifierClause" target="_top">.NET documentation</a>
+     */
     public void WriteKeyIdentifierClause(XmlWriter writer, SecurityKeyIdentifierClause securityKeyIdentifierClause) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class LocalizedName extends system.identitymodel.metadata.LocalizedEntry 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public LocalizedName(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class LocalizedName extends system.identitymodel.metadata.LocalizedEntry 
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.LocalizedName.-ctor" target="_top">.NET documentation</a>
+     */
     public LocalizedName() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +166,14 @@ public class LocalizedName extends system.identitymodel.metadata.LocalizedEntry 
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param language the argument of type {@code CultureInfo}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.LocalizedName.-ctor" target="_top">.NET documentation</a>
+     */
     public LocalizedName(java.lang.String name, CultureInfo language) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +192,13 @@ public class LocalizedName extends system.identitymodel.metadata.LocalizedEntry 
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.LocalizedName.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +213,13 @@ public class LocalizedName extends system.identitymodel.metadata.LocalizedEntry 
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.LocalizedName.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

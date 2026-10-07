@@ -107,7 +107,10 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BinaryWriter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,16 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
     public BinaryWriter() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param output the argument of type {@code Stream}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.BinaryWriter.-ctor" target="_top">.NET documentation</a>
+     */
     public BinaryWriter(Stream output) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +180,16 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param output the argument of type {@code Stream}
+     * @param encoding the argument of type {@code Encoding}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.BinaryWriter.-ctor" target="_top">.NET documentation</a>
+     */
     public BinaryWriter(Stream output, Encoding encoding) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -177,6 +200,17 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param output the argument of type {@code Stream}
+     * @param encoding the argument of type {@code Encoding}
+     * @param leaveOpen the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.BinaryWriter.-ctor" target="_top">.NET documentation</a>
+     */
     public BinaryWriter(Stream output, Encoding encoding, boolean leaveOpen) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -192,6 +226,15 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Seek.
+     *
+     * @param offset the argument of type {@code int}
+     * @param origin the argument of type {@code SeekOrigin}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.BinaryWriter.Seek" target="_top">.NET documentation</a>
+     */
     public long Seek(int offset, SeekOrigin origin) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +275,13 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Close.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.BinaryWriter.Close" target="_top">.NET documentation</a>
+     */
     public void Close() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +292,13 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.BinaryWriter.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +309,12 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Flush.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.BinaryWriter.Flush" target="_top">.NET documentation</a>
+     */
     public void Flush() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +325,13 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param value the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.BinaryWriter.Write" target="_top">.NET documentation</a>
+     */
     public void Write(boolean value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +342,13 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param value the argument of type {@code byte}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.BinaryWriter.Write" target="_top">.NET documentation</a>
+     */
     public void Write(byte value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +359,14 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param buffer the argument of type {@code byte[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.BinaryWriter.Write" target="_top">.NET documentation</a>
+     */
     public void Write(byte[] buffer) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +377,14 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.BinaryWriter.Write" target="_top">.NET documentation</a>
+     */
     public void Write(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -302,6 +395,15 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param buffer the argument of type {@code byte[]}
+     * @param index the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.BinaryWriter.Write" target="_top">.NET documentation</a>
+     */
     public void Write(byte[] buffer, int index, int count) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -312,6 +414,15 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.BinaryWriter.Write" target="_top">.NET documentation</a>
+     */
     public void Write(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -322,6 +433,16 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param ch the argument of type {@code char}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.BinaryWriter.Write" target="_top">.NET documentation</a>
+     */
     public void Write(char ch) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -332,6 +453,14 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param chars the argument of type {@code char[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.BinaryWriter.Write" target="_top">.NET documentation</a>
+     */
     public void Write(char[] chars) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -342,6 +471,15 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param chars the argument of type {@code char[]}
+     * @param index the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.BinaryWriter.Write" target="_top">.NET documentation</a>
+     */
     public void Write(char[] chars, int index, int count) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -352,6 +490,13 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param value the argument of type {@code double}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.BinaryWriter.Write" target="_top">.NET documentation</a>
+     */
     public void Write(double value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -362,6 +507,13 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param value the argument of type {@code short}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.BinaryWriter.Write" target="_top">.NET documentation</a>
+     */
     public void Write(short value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -372,6 +524,13 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param value the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.BinaryWriter.Write" target="_top">.NET documentation</a>
+     */
     public void Write(int value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -382,6 +541,13 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param value the argument of type {@code long}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.BinaryWriter.Write" target="_top">.NET documentation</a>
+     */
     public void Write(long value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -392,6 +558,13 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param value the argument of type {@code SByte}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.BinaryWriter.Write" target="_top">.NET documentation</a>
+     */
     public void Write(SByte value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -402,6 +575,13 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param value the argument of type {@code Single}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.BinaryWriter.Write" target="_top">.NET documentation</a>
+     */
     public void Write(Single value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -412,6 +592,13 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param value the argument of type {@code Decimal}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.BinaryWriter.Write" target="_top">.NET documentation</a>
+     */
     public void Write(Decimal value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -422,6 +609,15 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.BinaryWriter.Write" target="_top">.NET documentation</a>
+     */
     public void Write(java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -432,6 +628,13 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param value the argument of type {@code UInt16}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.BinaryWriter.Write" target="_top">.NET documentation</a>
+     */
     public void Write(UInt16 value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -442,6 +645,13 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param value the argument of type {@code UInt32}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.BinaryWriter.Write" target="_top">.NET documentation</a>
+     */
     public void Write(UInt32 value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -452,6 +662,13 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param value the argument of type {@code UInt64}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.BinaryWriter.Write" target="_top">.NET documentation</a>
+     */
     public void Write(UInt64 value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -479,6 +696,13 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BaseStream.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.BinaryWriter.BaseStream" target="_top">.NET documentation</a>
+     */
     public Stream getBaseStream() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

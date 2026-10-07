@@ -100,7 +100,10 @@ public class ServiceHealthSection extends system.collections.objectmodel.Collect
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ServiceHealthSection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,13 @@ public class ServiceHealthSection extends system.collections.objectmodel.Collect
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceHealthSection.-ctor" target="_top">.NET documentation</a>
+     */
     public ServiceHealthSection() throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +167,14 @@ public class ServiceHealthSection extends system.collections.objectmodel.Collect
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param title the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceHealthSection.-ctor" target="_top">.NET documentation</a>
+     */
     public ServiceHealthSection(java.lang.String title) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +189,15 @@ public class ServiceHealthSection extends system.collections.objectmodel.Collect
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateElementsCollection.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceHealthSection.CreateElementsCollection" target="_top">.NET documentation</a>
+     */
     public ServiceHealthDataCollection CreateElementsCollection() throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +217,13 @@ public class ServiceHealthSection extends system.collections.objectmodel.Collect
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BackgroundColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceHealthSection.BackgroundColor" target="_top">.NET documentation</a>
+     */
     public java.lang.String getBackgroundColor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +238,14 @@ public class ServiceHealthSection extends system.collections.objectmodel.Collect
         }
     }
 
+    /**
+     * Sets the value of the .NET property BackgroundColor.
+     *
+     * @param BackgroundColor the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceHealthSection.BackgroundColor" target="_top">.NET documentation</a>
+     */
     public void setBackgroundColor(java.lang.String BackgroundColor) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +256,13 @@ public class ServiceHealthSection extends system.collections.objectmodel.Collect
         }
     }
 
+    /**
+     * Gets the value of the .NET property ForegroundColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceHealthSection.ForegroundColor" target="_top">.NET documentation</a>
+     */
     public java.lang.String getForegroundColor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +277,14 @@ public class ServiceHealthSection extends system.collections.objectmodel.Collect
         }
     }
 
+    /**
+     * Sets the value of the .NET property ForegroundColor.
+     *
+     * @param ForegroundColor the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceHealthSection.ForegroundColor" target="_top">.NET documentation</a>
+     */
     public void setForegroundColor(java.lang.String ForegroundColor) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +295,13 @@ public class ServiceHealthSection extends system.collections.objectmodel.Collect
         }
     }
 
+    /**
+     * Gets the value of the .NET property Title.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceHealthSection.Title" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTitle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +316,14 @@ public class ServiceHealthSection extends system.collections.objectmodel.Collect
         }
     }
 
+    /**
+     * Sets the value of the .NET property Title.
+     *
+     * @param Title the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceHealthSection.Title" target="_top">.NET documentation</a>
+     */
     public void setTitle(java.lang.String Title) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

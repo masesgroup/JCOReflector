@@ -101,7 +101,10 @@ public class WebPartManagerInternals extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WebPartManagerInternals(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,14 @@ public class WebPartManagerInternals extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ConnectionDeleted.
+     *
+     * @param connection the argument of type {@code WebPartConnection}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartManagerInternals.ConnectionDeleted" target="_top">.NET documentation</a>
+     */
     public boolean ConnectionDeleted(WebPartConnection connection) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +181,27 @@ public class WebPartManagerInternals extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateObjectFromType.
+     *
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartManagerInternals.CreateObjectFromType" target="_top">.NET documentation</a>
+     */
     public NetObject CreateObjectFromType(NetType type) throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NullReferenceException, system.TypeLoadException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +217,14 @@ public class WebPartManagerInternals extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SaveConfigurationState.
+     *
+     * @param transformer the argument of type {@code WebPartTransformer}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SaveConfigurationState" target="_top">.NET documentation</a>
+     */
     public NetObject SaveConfigurationState(WebPartTransformer transformer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +240,14 @@ public class WebPartManagerInternals extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetZoneID.
+     *
+     * @param webPart the argument of type {@code WebPart}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartManagerInternals.GetZoneID" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetZoneID(WebPart webPart) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +262,22 @@ public class WebPartManagerInternals extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddWebPart.
+     *
+     * @param webPart the argument of type {@code WebPart}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartManagerInternals.AddWebPart" target="_top">.NET documentation</a>
+     */
     public void AddWebPart(WebPart webPart) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +288,13 @@ public class WebPartManagerInternals extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CallOnClosing.
+     *
+     * @param webPart the argument of type {@code WebPart}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartManagerInternals.CallOnClosing" target="_top">.NET documentation</a>
+     */
     public void CallOnClosing(WebPart webPart) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +305,13 @@ public class WebPartManagerInternals extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CallOnConnectModeChanged.
+     *
+     * @param webPart the argument of type {@code WebPart}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartManagerInternals.CallOnConnectModeChanged" target="_top">.NET documentation</a>
+     */
     public void CallOnConnectModeChanged(WebPart webPart) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +322,13 @@ public class WebPartManagerInternals extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CallOnDeleting.
+     *
+     * @param webPart the argument of type {@code WebPart}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartManagerInternals.CallOnDeleting" target="_top">.NET documentation</a>
+     */
     public void CallOnDeleting(WebPart webPart) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +339,13 @@ public class WebPartManagerInternals extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CallOnEditModeChanged.
+     *
+     * @param webPart the argument of type {@code WebPart}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartManagerInternals.CallOnEditModeChanged" target="_top">.NET documentation</a>
+     */
     public void CallOnEditModeChanged(WebPart webPart) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +356,13 @@ public class WebPartManagerInternals extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DeleteConnection.
+     *
+     * @param connection the argument of type {@code WebPartConnection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartManagerInternals.DeleteConnection" target="_top">.NET documentation</a>
+     */
     public void DeleteConnection(WebPartConnection connection) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +373,14 @@ public class WebPartManagerInternals extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LoadConfigurationState.
+     *
+     * @param transformer the argument of type {@code WebPartTransformer}
+     * @param savedState the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartManagerInternals.LoadConfigurationState" target="_top">.NET documentation</a>
+     */
     public void LoadConfigurationState(WebPartTransformer transformer, NetObject savedState) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -284,6 +391,21 @@ public class WebPartManagerInternals extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveWebPart.
+     *
+     * @param webPart the argument of type {@code WebPart}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartManagerInternals.RemoveWebPart" target="_top">.NET documentation</a>
+     */
     public void RemoveWebPart(WebPart webPart) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +416,14 @@ public class WebPartManagerInternals extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetConnectErrorMessage.
+     *
+     * @param webPart the argument of type {@code WebPart}
+     * @param connectErrorMessage the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetConnectErrorMessage" target="_top">.NET documentation</a>
+     */
     public void SetConnectErrorMessage(WebPart webPart, java.lang.String connectErrorMessage) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +434,14 @@ public class WebPartManagerInternals extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetHasSharedData.
+     *
+     * @param webPart the argument of type {@code WebPart}
+     * @param hasSharedData the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetHasSharedData" target="_top">.NET documentation</a>
+     */
     public void SetHasSharedData(WebPart webPart, boolean hasSharedData) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -314,6 +452,14 @@ public class WebPartManagerInternals extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetHasUserData.
+     *
+     * @param webPart the argument of type {@code WebPart}
+     * @param hasUserData the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetHasUserData" target="_top">.NET documentation</a>
+     */
     public void SetHasUserData(WebPart webPart, boolean hasUserData) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -324,6 +470,14 @@ public class WebPartManagerInternals extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetIsClosed.
+     *
+     * @param webPart the argument of type {@code WebPart}
+     * @param isClosed the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetIsClosed" target="_top">.NET documentation</a>
+     */
     public void SetIsClosed(WebPart webPart, boolean isClosed) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -334,6 +488,14 @@ public class WebPartManagerInternals extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetIsShared.
+     *
+     * @param webPart the argument of type {@code WebPart}
+     * @param isShared the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetIsShared" target="_top">.NET documentation</a>
+     */
     public void SetIsShared(WebPart webPart, boolean isShared) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -344,6 +506,14 @@ public class WebPartManagerInternals extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetIsShared.
+     *
+     * @param connection the argument of type {@code WebPartConnection}
+     * @param isShared the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetIsShared" target="_top">.NET documentation</a>
+     */
     public void SetIsShared(WebPartConnection connection, boolean isShared) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -354,6 +524,14 @@ public class WebPartManagerInternals extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetIsStandalone.
+     *
+     * @param webPart the argument of type {@code WebPart}
+     * @param isStandalone the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetIsStandalone" target="_top">.NET documentation</a>
+     */
     public void SetIsStandalone(WebPart webPart, boolean isStandalone) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -364,6 +542,14 @@ public class WebPartManagerInternals extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetIsStatic.
+     *
+     * @param webPart the argument of type {@code WebPart}
+     * @param isStatic the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetIsStatic" target="_top">.NET documentation</a>
+     */
     public void SetIsStatic(WebPart webPart, boolean isStatic) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -374,6 +560,14 @@ public class WebPartManagerInternals extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetIsStatic.
+     *
+     * @param connection the argument of type {@code WebPartConnection}
+     * @param isStatic the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetIsStatic" target="_top">.NET documentation</a>
+     */
     public void SetIsStatic(WebPartConnection connection, boolean isStatic) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -384,6 +578,14 @@ public class WebPartManagerInternals extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetTransformer.
+     *
+     * @param connection the argument of type {@code WebPartConnection}
+     * @param transformer the argument of type {@code WebPartTransformer}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetTransformer" target="_top">.NET documentation</a>
+     */
     public void SetTransformer(WebPartConnection connection, WebPartTransformer transformer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -394,6 +596,14 @@ public class WebPartManagerInternals extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetZoneID.
+     *
+     * @param webPart the argument of type {@code WebPart}
+     * @param zoneID the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetZoneID" target="_top">.NET documentation</a>
+     */
     public void SetZoneID(WebPart webPart, java.lang.String zoneID) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -404,6 +614,15 @@ public class WebPartManagerInternals extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetZoneIndex.
+     *
+     * @param webPart the argument of type {@code WebPart}
+     * @param zoneIndex the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartManagerInternals.SetZoneIndex" target="_top">.NET documentation</a>
+     */
     public void SetZoneIndex(WebPart webPart, int zoneIndex) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

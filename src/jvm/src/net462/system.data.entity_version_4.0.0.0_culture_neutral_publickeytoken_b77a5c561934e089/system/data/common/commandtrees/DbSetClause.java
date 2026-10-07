@@ -100,7 +100,10 @@ public class DbSetClause extends system.data.common.commandtrees.DbModificationC
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DbSetClause(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class DbSetClause extends system.data.common.commandtrees.DbModificationC
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Property.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbSetClause.Property" target="_top">.NET documentation</a>
+     */
     public DbExpression getProperty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +184,13 @@ public class DbSetClause extends system.data.common.commandtrees.DbModificationC
         }
     }
 
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbSetClause.Value" target="_top">.NET documentation</a>
+     */
     public DbExpression getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

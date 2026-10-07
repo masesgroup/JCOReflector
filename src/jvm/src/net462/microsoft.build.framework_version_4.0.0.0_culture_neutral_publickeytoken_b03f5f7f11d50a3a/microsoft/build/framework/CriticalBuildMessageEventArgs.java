@@ -100,7 +100,10 @@ public class CriticalBuildMessageEventArgs extends microsoft.build.framework.Bui
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CriticalBuildMessageEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,25 @@ public class CriticalBuildMessageEventArgs extends microsoft.build.framework.Bui
     public CriticalBuildMessageEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param subcategory the argument of type {@code java.lang.String}
+     * @param code the argument of type {@code java.lang.String}
+     * @param file the argument of type {@code java.lang.String}
+     * @param lineNumber the argument of type {@code int}
+     * @param columnNumber the argument of type {@code int}
+     * @param endLineNumber the argument of type {@code int}
+     * @param endColumnNumber the argument of type {@code int}
+     * @param message the argument of type {@code java.lang.String}
+     * @param helpKeyword the argument of type {@code java.lang.String}
+     * @param senderName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.CriticalBuildMessageEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public CriticalBuildMessageEventArgs(java.lang.String subcategory, java.lang.String code, java.lang.String file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, java.lang.String message, java.lang.String helpKeyword, java.lang.String senderName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +182,28 @@ public class CriticalBuildMessageEventArgs extends microsoft.build.framework.Bui
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param subcategory the argument of type {@code java.lang.String}
+     * @param code the argument of type {@code java.lang.String}
+     * @param file the argument of type {@code java.lang.String}
+     * @param lineNumber the argument of type {@code int}
+     * @param columnNumber the argument of type {@code int}
+     * @param endLineNumber the argument of type {@code int}
+     * @param endColumnNumber the argument of type {@code int}
+     * @param message the argument of type {@code java.lang.String}
+     * @param helpKeyword the argument of type {@code java.lang.String}
+     * @param senderName the argument of type {@code java.lang.String}
+     * @param eventTimestamp the argument of type {@code DateTime}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.CriticalBuildMessageEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public CriticalBuildMessageEventArgs(java.lang.String subcategory, java.lang.String code, java.lang.String file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, java.lang.String message, java.lang.String helpKeyword, java.lang.String senderName, DateTime eventTimestamp) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +214,30 @@ public class CriticalBuildMessageEventArgs extends microsoft.build.framework.Bui
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param subcategory the argument of type {@code java.lang.String}
+     * @param code the argument of type {@code java.lang.String}
+     * @param file the argument of type {@code java.lang.String}
+     * @param lineNumber the argument of type {@code int}
+     * @param columnNumber the argument of type {@code int}
+     * @param endLineNumber the argument of type {@code int}
+     * @param endColumnNumber the argument of type {@code int}
+     * @param message the argument of type {@code java.lang.String}
+     * @param helpKeyword the argument of type {@code java.lang.String}
+     * @param senderName the argument of type {@code java.lang.String}
+     * @param eventTimestamp the argument of type {@code DateTime}
+     * @param messageArgs the argument of type {@code NetObject...}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.CriticalBuildMessageEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public CriticalBuildMessageEventArgs(java.lang.String subcategory, java.lang.String code, java.lang.String file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, java.lang.String message, java.lang.String helpKeyword, java.lang.String senderName, DateTime eventTimestamp, NetObject... messageArgs) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file

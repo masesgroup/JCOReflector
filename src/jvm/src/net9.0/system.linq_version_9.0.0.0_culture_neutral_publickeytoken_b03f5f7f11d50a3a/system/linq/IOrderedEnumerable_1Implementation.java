@@ -105,7 +105,10 @@ public class IOrderedEnumerable_1Implementation<TElement extends IJCOBridgeRefle
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IOrderedEnumerable_1Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,17 @@ public class IOrderedEnumerable_1Implementation<TElement extends IJCOBridgeRefle
 
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateOrderedEnumerable.
+     *
+     * @param <TKey> the type of the generic argument TKey
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @param descending the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.IOrderedEnumerable-1.CreateOrderedEnumerable" target="_top">.NET documentation</a>
+     */
     public <TKey extends IJCOBridgeReflected> IOrderedEnumerable_1 CreateOrderedEnumerable(Func_2 keySelector, IComparer_1 comparer, boolean descending) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

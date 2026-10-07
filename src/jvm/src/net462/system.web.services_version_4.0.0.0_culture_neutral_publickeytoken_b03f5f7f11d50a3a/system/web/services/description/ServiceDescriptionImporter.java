@@ -110,7 +110,10 @@ public class ServiceDescriptionImporter extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ServiceDescriptionImporter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,29 @@ public class ServiceDescriptionImporter extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.web.HttpRequestValidationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ServiceDescriptionImporter.-ctor" target="_top">.NET documentation</a>
+     */
     public ServiceDescriptionImporter() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.NullReferenceException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.web.HttpException, system.web.HttpRequestValidationException, system.configuration.ConfigurationException {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +197,39 @@ public class ServiceDescriptionImporter extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GenerateWebReferences.
+     *
+     * @param webReferences the argument of type {@code WebReferenceCollection}
+     * @param codeProvider the argument of type {@code CodeDomProvider}
+     * @param codeCompileUnit the argument of type {@code CodeCompileUnit}
+     * @param options the argument of type {@code WebReferenceOptions}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ServiceDescriptionImporter.GenerateWebReferences" target="_top">.NET documentation</a>
+     */
     public static StringCollection GenerateWebReferences(WebReferenceCollection webReferences, CodeDomProvider codeProvider, CodeCompileUnit codeCompileUnit, WebReferenceOptions options) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.NotSupportedException, system.configuration.ConfigurationException, system.xml.schema.XmlSchemaException, system.IndexOutOfRangeException, system.xml.XmlException, system.MulticastNotSupportedException, system.NotImplementedException, system.io.FileNotFoundException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -186,6 +245,30 @@ public class ServiceDescriptionImporter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Import.
+     *
+     * @param codeNamespace the argument of type {@code CodeNamespace}
+     * @param codeCompileUnit the argument of type {@code CodeCompileUnit}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ServiceDescriptionImporter.Import" target="_top">.NET documentation</a>
+     */
     public ServiceDescriptionImportWarnings Import(CodeNamespace codeNamespace, CodeCompileUnit codeCompileUnit) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.MulticastNotSupportedException, system.NotImplementedException, system.NotSupportedException, system.NullReferenceException, system.io.FileNotFoundException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +284,16 @@ public class ServiceDescriptionImporter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddServiceDescription.
+     *
+     * @param serviceDescription the argument of type {@code ServiceDescription}
+     * @param appSettingUrlKey the argument of type {@code java.lang.String}
+     * @param appSettingBaseUrl the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ServiceDescriptionImporter.AddServiceDescription" target="_top">.NET documentation</a>
+     */
     public void AddServiceDescription(ServiceDescription serviceDescription, java.lang.String appSettingUrlKey, java.lang.String appSettingBaseUrl) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +308,13 @@ public class ServiceDescriptionImporter extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CodeGenerator.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ServiceDescriptionImporter.CodeGenerator" target="_top">.NET documentation</a>
+     */
     public CodeDomProvider getCodeGenerator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +330,13 @@ public class ServiceDescriptionImporter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CodeGenerator.
+     *
+     * @param CodeGenerator the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ServiceDescriptionImporter.CodeGenerator" target="_top">.NET documentation</a>
+     */
     public void setCodeGenerator(CodeDomProvider CodeGenerator) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +347,13 @@ public class ServiceDescriptionImporter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProtocolName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ServiceDescriptionImporter.ProtocolName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getProtocolName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +368,13 @@ public class ServiceDescriptionImporter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProtocolName.
+     *
+     * @param ProtocolName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ServiceDescriptionImporter.ProtocolName" target="_top">.NET documentation</a>
+     */
     public void setProtocolName(java.lang.String ProtocolName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +385,13 @@ public class ServiceDescriptionImporter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ServiceDescriptions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ServiceDescriptionImporter.ServiceDescriptions" target="_top">.NET documentation</a>
+     */
     public ServiceDescriptionCollection getServiceDescriptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +407,13 @@ public class ServiceDescriptionImporter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Style.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ServiceDescriptionImporter.Style" target="_top">.NET documentation</a>
+     */
     public ServiceDescriptionImportStyle getStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +429,13 @@ public class ServiceDescriptionImporter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Style.
+     *
+     * @param Style the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ServiceDescriptionImporter.Style" target="_top">.NET documentation</a>
+     */
     public void setStyle(ServiceDescriptionImportStyle Style) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +446,13 @@ public class ServiceDescriptionImporter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CodeGenerationOptions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ServiceDescriptionImporter.CodeGenerationOptions" target="_top">.NET documentation</a>
+     */
     public CodeGenerationOptions getCodeGenerationOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -319,6 +468,13 @@ public class ServiceDescriptionImporter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CodeGenerationOptions.
+     *
+     * @param CodeGenerationOptions the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ServiceDescriptionImporter.CodeGenerationOptions" target="_top">.NET documentation</a>
+     */
     public void setCodeGenerationOptions(CodeGenerationOptions CodeGenerationOptions) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -329,6 +485,13 @@ public class ServiceDescriptionImporter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Schemas.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ServiceDescriptionImporter.Schemas" target="_top">.NET documentation</a>
+     */
     public XmlSchemas getSchemas() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

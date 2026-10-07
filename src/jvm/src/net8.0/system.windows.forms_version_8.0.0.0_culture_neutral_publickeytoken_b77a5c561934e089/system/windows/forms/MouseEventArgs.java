@@ -101,7 +101,10 @@ public class MouseEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MouseEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,17 @@ public class MouseEventArgs extends system.EventArgs  {
     public MouseEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param button the argument of type {@code MouseButtons}
+     * @param clicks the argument of type {@code int}
+     * @param x the argument of type {@code int}
+     * @param y the argument of type {@code int}
+     * @param delta the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MouseEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public MouseEventArgs(MouseButtons button, int clicks, int x, int y, int delta) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +184,13 @@ public class MouseEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Clicks.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MouseEventArgs.Clicks" target="_top">.NET documentation</a>
+     */
     public int getClicks() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +231,13 @@ public class MouseEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Delta.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MouseEventArgs.Delta" target="_top">.NET documentation</a>
+     */
     public int getDelta() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +278,13 @@ public class MouseEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property X.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MouseEventArgs.X" target="_top">.NET documentation</a>
+     */
     public int getX() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +325,13 @@ public class MouseEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Y.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MouseEventArgs.Y" target="_top">.NET documentation</a>
+     */
     public int getY() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -330,6 +372,13 @@ public class MouseEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Location.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MouseEventArgs.Location" target="_top">.NET documentation</a>
+     */
     public Point getLocation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -345,6 +394,13 @@ public class MouseEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Button.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MouseEventArgs.Button" target="_top">.NET documentation</a>
+     */
     public MouseButtons getButton() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class CriticalHandle extends system.runtime.constrainedexecution.Critical
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CriticalHandle(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,13 @@ public class CriticalHandle extends system.runtime.constrainedexecution.Critical
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Close.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.CriticalHandle.Close" target="_top">.NET documentation</a>
+     */
     public void Close() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -162,6 +172,13 @@ public class CriticalHandle extends system.runtime.constrainedexecution.Critical
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.CriticalHandle.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +189,17 @@ public class CriticalHandle extends system.runtime.constrainedexecution.Critical
         }
     }
 
+    /**
+     * Invokes the .NET member SetHandleAsInvalid.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.CriticalHandle.SetHandleAsInvalid" target="_top">.NET documentation</a>
+     */
     public void SetHandleAsInvalid() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +227,13 @@ public class CriticalHandle extends system.runtime.constrainedexecution.Critical
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsClosed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.CriticalHandle.IsClosed" target="_top">.NET documentation</a>
+     */
     public boolean getIsClosed() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +248,13 @@ public class CriticalHandle extends system.runtime.constrainedexecution.Critical
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsInvalid.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.CriticalHandle.IsInvalid" target="_top">.NET documentation</a>
+     */
     public boolean getIsInvalid() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

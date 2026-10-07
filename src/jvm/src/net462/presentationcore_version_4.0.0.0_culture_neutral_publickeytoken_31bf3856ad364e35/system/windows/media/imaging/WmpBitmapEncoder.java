@@ -101,7 +101,10 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WmpBitmapEncoder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,21 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.WmpBitmapEncoder.-ctor" target="_top">.NET documentation</a>
+     */
     public WmpBitmapEncoder() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +184,13 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CompressedDomainTranscode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.WmpBitmapEncoder.CompressedDomainTranscode" target="_top">.NET documentation</a>
+     */
     public boolean getCompressedDomainTranscode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +205,13 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
 
+    /**
+     * Sets the value of the .NET property CompressedDomainTranscode.
+     *
+     * @param CompressedDomainTranscode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.WmpBitmapEncoder.CompressedDomainTranscode" target="_top">.NET documentation</a>
+     */
     public void setCompressedDomainTranscode(boolean CompressedDomainTranscode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +222,13 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
 
+    /**
+     * Gets the value of the .NET property FlipHorizontal.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.WmpBitmapEncoder.FlipHorizontal" target="_top">.NET documentation</a>
+     */
     public boolean getFlipHorizontal() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +243,13 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
 
+    /**
+     * Sets the value of the .NET property FlipHorizontal.
+     *
+     * @param FlipHorizontal the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.WmpBitmapEncoder.FlipHorizontal" target="_top">.NET documentation</a>
+     */
     public void setFlipHorizontal(boolean FlipHorizontal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +260,13 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
 
+    /**
+     * Gets the value of the .NET property FlipVertical.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.WmpBitmapEncoder.FlipVertical" target="_top">.NET documentation</a>
+     */
     public boolean getFlipVertical() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +281,13 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
 
+    /**
+     * Sets the value of the .NET property FlipVertical.
+     *
+     * @param FlipVertical the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.WmpBitmapEncoder.FlipVertical" target="_top">.NET documentation</a>
+     */
     public void setFlipVertical(boolean FlipVertical) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +298,13 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
 
+    /**
+     * Gets the value of the .NET property FrequencyOrder.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.WmpBitmapEncoder.FrequencyOrder" target="_top">.NET documentation</a>
+     */
     public boolean getFrequencyOrder() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +319,13 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
 
+    /**
+     * Sets the value of the .NET property FrequencyOrder.
+     *
+     * @param FrequencyOrder the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.WmpBitmapEncoder.FrequencyOrder" target="_top">.NET documentation</a>
+     */
     public void setFrequencyOrder(boolean FrequencyOrder) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +336,13 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
 
+    /**
+     * Gets the value of the .NET property IgnoreOverlap.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.WmpBitmapEncoder.IgnoreOverlap" target="_top">.NET documentation</a>
+     */
     public boolean getIgnoreOverlap() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +357,13 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
 
+    /**
+     * Sets the value of the .NET property IgnoreOverlap.
+     *
+     * @param IgnoreOverlap the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.WmpBitmapEncoder.IgnoreOverlap" target="_top">.NET documentation</a>
+     */
     public void setIgnoreOverlap(boolean IgnoreOverlap) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +374,13 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
 
+    /**
+     * Gets the value of the .NET property InterleavedAlpha.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.WmpBitmapEncoder.InterleavedAlpha" target="_top">.NET documentation</a>
+     */
     public boolean getInterleavedAlpha() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +395,13 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
 
+    /**
+     * Sets the value of the .NET property InterleavedAlpha.
+     *
+     * @param InterleavedAlpha the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.WmpBitmapEncoder.InterleavedAlpha" target="_top">.NET documentation</a>
+     */
     public void setInterleavedAlpha(boolean InterleavedAlpha) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +412,13 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
 
+    /**
+     * Gets the value of the .NET property Lossless.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.WmpBitmapEncoder.Lossless" target="_top">.NET documentation</a>
+     */
     public boolean getLossless() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -324,6 +433,13 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
 
+    /**
+     * Sets the value of the .NET property Lossless.
+     *
+     * @param Lossless the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.WmpBitmapEncoder.Lossless" target="_top">.NET documentation</a>
+     */
     public void setLossless(boolean Lossless) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -334,6 +450,13 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseCodecOptions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.WmpBitmapEncoder.UseCodecOptions" target="_top">.NET documentation</a>
+     */
     public boolean getUseCodecOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +471,13 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseCodecOptions.
+     *
+     * @param UseCodecOptions the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.WmpBitmapEncoder.UseCodecOptions" target="_top">.NET documentation</a>
+     */
     public void setUseCodecOptions(boolean UseCodecOptions) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -358,6 +488,13 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
 
+    /**
+     * Gets the value of the .NET property AlphaDataDiscardLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.WmpBitmapEncoder.AlphaDataDiscardLevel" target="_top">.NET documentation</a>
+     */
     public byte getAlphaDataDiscardLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -398,6 +535,24 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
 
+    /**
+     * Sets the value of the .NET property AlphaDataDiscardLevel.
+     *
+     * @param AlphaDataDiscardLevel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.WmpBitmapEncoder.AlphaDataDiscardLevel" target="_top">.NET documentation</a>
+     */
     public void setAlphaDataDiscardLevel(byte AlphaDataDiscardLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -408,6 +563,13 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
 
+    /**
+     * Gets the value of the .NET property AlphaQualityLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.WmpBitmapEncoder.AlphaQualityLevel" target="_top">.NET documentation</a>
+     */
     public byte getAlphaQualityLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -448,6 +610,24 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
 
+    /**
+     * Sets the value of the .NET property AlphaQualityLevel.
+     *
+     * @param AlphaQualityLevel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.WmpBitmapEncoder.AlphaQualityLevel" target="_top">.NET documentation</a>
+     */
     public void setAlphaQualityLevel(byte AlphaQualityLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -458,6 +638,13 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
 
+    /**
+     * Gets the value of the .NET property ImageDataDiscardLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.WmpBitmapEncoder.ImageDataDiscardLevel" target="_top">.NET documentation</a>
+     */
     public byte getImageDataDiscardLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -498,6 +685,24 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
 
+    /**
+     * Sets the value of the .NET property ImageDataDiscardLevel.
+     *
+     * @param ImageDataDiscardLevel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.WmpBitmapEncoder.ImageDataDiscardLevel" target="_top">.NET documentation</a>
+     */
     public void setImageDataDiscardLevel(byte ImageDataDiscardLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -508,6 +713,13 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
 
+    /**
+     * Gets the value of the .NET property OverlapLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.WmpBitmapEncoder.OverlapLevel" target="_top">.NET documentation</a>
+     */
     public byte getOverlapLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -548,6 +760,24 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
 
+    /**
+     * Sets the value of the .NET property OverlapLevel.
+     *
+     * @param OverlapLevel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.WmpBitmapEncoder.OverlapLevel" target="_top">.NET documentation</a>
+     */
     public void setOverlapLevel(byte OverlapLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -558,6 +788,13 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
 
+    /**
+     * Gets the value of the .NET property QualityLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.WmpBitmapEncoder.QualityLevel" target="_top">.NET documentation</a>
+     */
     public byte getQualityLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -598,6 +835,24 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
 
+    /**
+     * Sets the value of the .NET property QualityLevel.
+     *
+     * @param QualityLevel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.WmpBitmapEncoder.QualityLevel" target="_top">.NET documentation</a>
+     */
     public void setQualityLevel(byte QualityLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -608,6 +863,13 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
 
+    /**
+     * Gets the value of the .NET property SubsamplingLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.WmpBitmapEncoder.SubsamplingLevel" target="_top">.NET documentation</a>
+     */
     public byte getSubsamplingLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -648,6 +910,24 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
 
+    /**
+     * Sets the value of the .NET property SubsamplingLevel.
+     *
+     * @param SubsamplingLevel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.WmpBitmapEncoder.SubsamplingLevel" target="_top">.NET documentation</a>
+     */
     public void setSubsamplingLevel(byte SubsamplingLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -658,6 +938,13 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
 
+    /**
+     * Gets the value of the .NET property HorizontalTileSlices.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.WmpBitmapEncoder.HorizontalTileSlices" target="_top">.NET documentation</a>
+     */
     public short getHorizontalTileSlices() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -698,6 +985,24 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
 
+    /**
+     * Sets the value of the .NET property HorizontalTileSlices.
+     *
+     * @param HorizontalTileSlices the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.WmpBitmapEncoder.HorizontalTileSlices" target="_top">.NET documentation</a>
+     */
     public void setHorizontalTileSlices(short HorizontalTileSlices) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -708,6 +1013,13 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
 
+    /**
+     * Gets the value of the .NET property VerticalTileSlices.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.WmpBitmapEncoder.VerticalTileSlices" target="_top">.NET documentation</a>
+     */
     public short getVerticalTileSlices() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -748,6 +1060,24 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
 
+    /**
+     * Sets the value of the .NET property VerticalTileSlices.
+     *
+     * @param VerticalTileSlices the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.WmpBitmapEncoder.VerticalTileSlices" target="_top">.NET documentation</a>
+     */
     public void setVerticalTileSlices(short VerticalTileSlices) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -758,6 +1088,13 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
 
+    /**
+     * Gets the value of the .NET property ImageQualityLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.WmpBitmapEncoder.ImageQualityLevel" target="_top">.NET documentation</a>
+     */
     public Single getImageQualityLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -773,6 +1110,24 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
 
+    /**
+     * Sets the value of the .NET property ImageQualityLevel.
+     *
+     * @param ImageQualityLevel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.WmpBitmapEncoder.ImageQualityLevel" target="_top">.NET documentation</a>
+     */
     public void setImageQualityLevel(Single ImageQualityLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -783,6 +1138,13 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
 
+    /**
+     * Gets the value of the .NET property Rotation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.WmpBitmapEncoder.Rotation" target="_top">.NET documentation</a>
+     */
     public Rotation getRotation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -798,6 +1160,13 @@ public class WmpBitmapEncoder extends system.windows.media.imaging.BitmapEncoder
         }
     }
 
+    /**
+     * Sets the value of the .NET property Rotation.
+     *
+     * @param Rotation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.WmpBitmapEncoder.Rotation" target="_top">.NET documentation</a>
+     */
     public void setRotation(Rotation Rotation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

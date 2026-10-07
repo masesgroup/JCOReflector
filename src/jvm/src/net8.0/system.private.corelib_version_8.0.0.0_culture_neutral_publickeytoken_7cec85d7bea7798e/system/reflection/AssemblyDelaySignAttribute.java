@@ -99,7 +99,10 @@ public class AssemblyDelaySignAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AssemblyDelaySignAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,13 @@ public class AssemblyDelaySignAttribute extends system.Attribute  {
     public AssemblyDelaySignAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param delaySign the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyDelaySignAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public AssemblyDelaySignAttribute(boolean delaySign) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +178,13 @@ public class AssemblyDelaySignAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DelaySign.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyDelaySignAttribute.DelaySign" target="_top">.NET documentation</a>
+     */
     public boolean getDelaySign() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

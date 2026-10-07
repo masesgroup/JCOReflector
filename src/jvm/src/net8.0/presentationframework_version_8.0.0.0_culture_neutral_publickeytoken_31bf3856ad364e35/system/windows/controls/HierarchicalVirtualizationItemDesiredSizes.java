@@ -101,7 +101,10 @@ public class HierarchicalVirtualizationItemDesiredSizes extends system.ValueType
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HierarchicalVirtualizationItemDesiredSizes(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,20 @@ public class HierarchicalVirtualizationItemDesiredSizes extends system.ValueType
     public HierarchicalVirtualizationItemDesiredSizes() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param logicalSize the argument of type {@code Size}
+     * @param logicalSizeInViewport the argument of type {@code Size}
+     * @param logicalSizeBeforeViewport the argument of type {@code Size}
+     * @param logicalSizeAfterViewport the argument of type {@code Size}
+     * @param pixelSize the argument of type {@code Size}
+     * @param pixelSizeInViewport the argument of type {@code Size}
+     * @param pixelSizeBeforeViewport the argument of type {@code Size}
+     * @param pixelSizeAfterViewport the argument of type {@code Size}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.HierarchicalVirtualizationItemDesiredSizes.-ctor" target="_top">.NET documentation</a>
+     */
     public HierarchicalVirtualizationItemDesiredSizes(Size logicalSize, Size logicalSizeInViewport, Size logicalSizeBeforeViewport, Size logicalSizeAfterViewport, Size pixelSize, Size pixelSizeInViewport, Size pixelSizeBeforeViewport, Size pixelSizeAfterViewport) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +183,14 @@ public class HierarchicalVirtualizationItemDesiredSizes extends system.ValueType
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param comparisonItemSizes the argument of type {@code HierarchicalVirtualizationItemDesiredSizes}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.HierarchicalVirtualizationItemDesiredSizes.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(HierarchicalVirtualizationItemDesiredSizes comparisonItemSizes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +209,13 @@ public class HierarchicalVirtualizationItemDesiredSizes extends system.ValueType
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property LogicalSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.HierarchicalVirtualizationItemDesiredSizes.LogicalSize" target="_top">.NET documentation</a>
+     */
     public Size getLogicalSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +231,13 @@ public class HierarchicalVirtualizationItemDesiredSizes extends system.ValueType
         }
     }
 
+    /**
+     * Gets the value of the .NET property LogicalSizeAfterViewport.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.HierarchicalVirtualizationItemDesiredSizes.LogicalSizeAfterViewport" target="_top">.NET documentation</a>
+     */
     public Size getLogicalSizeAfterViewport() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +253,13 @@ public class HierarchicalVirtualizationItemDesiredSizes extends system.ValueType
         }
     }
 
+    /**
+     * Gets the value of the .NET property LogicalSizeBeforeViewport.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.HierarchicalVirtualizationItemDesiredSizes.LogicalSizeBeforeViewport" target="_top">.NET documentation</a>
+     */
     public Size getLogicalSizeBeforeViewport() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +275,13 @@ public class HierarchicalVirtualizationItemDesiredSizes extends system.ValueType
         }
     }
 
+    /**
+     * Gets the value of the .NET property LogicalSizeInViewport.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.HierarchicalVirtualizationItemDesiredSizes.LogicalSizeInViewport" target="_top">.NET documentation</a>
+     */
     public Size getLogicalSizeInViewport() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +297,13 @@ public class HierarchicalVirtualizationItemDesiredSizes extends system.ValueType
         }
     }
 
+    /**
+     * Gets the value of the .NET property PixelSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.HierarchicalVirtualizationItemDesiredSizes.PixelSize" target="_top">.NET documentation</a>
+     */
     public Size getPixelSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +319,13 @@ public class HierarchicalVirtualizationItemDesiredSizes extends system.ValueType
         }
     }
 
+    /**
+     * Gets the value of the .NET property PixelSizeAfterViewport.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.HierarchicalVirtualizationItemDesiredSizes.PixelSizeAfterViewport" target="_top">.NET documentation</a>
+     */
     public Size getPixelSizeAfterViewport() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +341,13 @@ public class HierarchicalVirtualizationItemDesiredSizes extends system.ValueType
         }
     }
 
+    /**
+     * Gets the value of the .NET property PixelSizeBeforeViewport.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.HierarchicalVirtualizationItemDesiredSizes.PixelSizeBeforeViewport" target="_top">.NET documentation</a>
+     */
     public Size getPixelSizeBeforeViewport() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +363,13 @@ public class HierarchicalVirtualizationItemDesiredSizes extends system.ValueType
         }
     }
 
+    /**
+     * Gets the value of the .NET property PixelSizeInViewport.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.HierarchicalVirtualizationItemDesiredSizes.PixelSizeInViewport" target="_top">.NET documentation</a>
+     */
     public Size getPixelSizeInViewport() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

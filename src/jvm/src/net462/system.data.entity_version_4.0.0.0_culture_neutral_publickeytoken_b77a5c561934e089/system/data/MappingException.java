@@ -103,7 +103,9 @@ public class MappingException extends system.data.EntityException {
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public MappingException(java.lang.Object instance) {
         super(instance);

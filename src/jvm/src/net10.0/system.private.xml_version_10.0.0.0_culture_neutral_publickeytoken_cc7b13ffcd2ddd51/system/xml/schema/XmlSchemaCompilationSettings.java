@@ -98,7 +98,10 @@ public class XmlSchemaCompilationSettings extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlSchemaCompilationSettings(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class XmlSchemaCompilationSettings extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaCompilationSettings.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlSchemaCompilationSettings() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,13 @@ public class XmlSchemaCompilationSettings extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EnableUpaCheck.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaCompilationSettings.EnableUpaCheck" target="_top">.NET documentation</a>
+     */
     public boolean getEnableUpaCheck() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +193,13 @@ public class XmlSchemaCompilationSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EnableUpaCheck.
+     *
+     * @param EnableUpaCheck the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaCompilationSettings.EnableUpaCheck" target="_top">.NET documentation</a>
+     */
     public void setEnableUpaCheck(boolean EnableUpaCheck) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

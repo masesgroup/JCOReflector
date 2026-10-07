@@ -98,7 +98,10 @@ public class ChannelDataStore extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ChannelDataStore(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,13 @@ public class ChannelDataStore extends NetObject  {
     public ChannelDataStore() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param channelURIs the argument of type {@code java.lang.String[]}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.ChannelDataStore.-ctor" target="_top">.NET documentation</a>
+     */
     public ChannelDataStore(java.lang.String[] channelURIs) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +177,13 @@ public class ChannelDataStore extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ChannelUris.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.ChannelDataStore.ChannelUris" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getChannelUris() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +207,13 @@ public class ChannelDataStore extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ChannelUris.
+     *
+     * @param ChannelUris the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.ChannelDataStore.ChannelUris" target="_top">.NET documentation</a>
+     */
     public void setChannelUris(java.lang.String[] ChannelUris) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

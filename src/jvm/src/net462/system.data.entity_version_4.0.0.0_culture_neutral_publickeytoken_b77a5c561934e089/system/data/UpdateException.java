@@ -106,7 +106,9 @@ public class UpdateException extends system.data.DataException {
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public UpdateException(java.lang.Object instance) {
         super(instance);
@@ -167,6 +169,17 @@ public class UpdateException extends system.data.DataException {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param innerException the argument of type {@code NetException}
+     * @param stateEntries the argument of type {@code IEnumerable_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.UpdateException.-ctor" target="_top">.NET documentation</a>
+     */
     public UpdateException(java.lang.String message, NetException innerException, IEnumerable_1 stateEntries) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -185,6 +198,13 @@ public class UpdateException extends system.data.DataException {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property StateEntries.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.UpdateException.StateEntries" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getStateEntries() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

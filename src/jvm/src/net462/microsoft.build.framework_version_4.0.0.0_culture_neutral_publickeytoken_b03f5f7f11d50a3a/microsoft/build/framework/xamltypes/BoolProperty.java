@@ -99,7 +99,10 @@ public class BoolProperty extends microsoft.build.framework.xamltypes.BaseProper
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BoolProperty(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class BoolProperty extends microsoft.build.framework.xamltypes.BaseProper
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BoolProperty.-ctor" target="_top">.NET documentation</a>
+     */
     public BoolProperty() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class BoolProperty extends microsoft.build.framework.xamltypes.BaseProper
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ReverseSwitch.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BoolProperty.ReverseSwitch" target="_top">.NET documentation</a>
+     */
     public java.lang.String getReverseSwitch() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +194,13 @@ public class BoolProperty extends microsoft.build.framework.xamltypes.BaseProper
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReverseSwitch.
+     *
+     * @param ReverseSwitch the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BoolProperty.ReverseSwitch" target="_top">.NET documentation</a>
+     */
     public void setReverseSwitch(java.lang.String ReverseSwitch) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

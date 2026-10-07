@@ -101,7 +101,10 @@ public class IDesignerGlyphProviderServiceImplementation extends NetObject imple
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDesignerGlyphProviderServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,13 @@ public class IDesignerGlyphProviderServiceImplementation extends NetObject imple
 
     // Methods section
     
+    /**
+     * Invokes the .NET member AddGlyphProvider.
+     *
+     * @param glyphProvider the argument of type {@code IDesignerGlyphProvider}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.IDesignerGlyphProviderService.AddGlyphProvider" target="_top">.NET documentation</a>
+     */
     public void AddGlyphProvider(IDesignerGlyphProvider glyphProvider) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -153,6 +163,13 @@ public class IDesignerGlyphProviderServiceImplementation extends NetObject imple
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveGlyphProvider.
+     *
+     * @param glyphProvider the argument of type {@code IDesignerGlyphProvider}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.IDesignerGlyphProviderService.RemoveGlyphProvider" target="_top">.NET documentation</a>
+     */
     public void RemoveGlyphProvider(IDesignerGlyphProvider glyphProvider) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -167,6 +184,13 @@ public class IDesignerGlyphProviderServiceImplementation extends NetObject imple
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property GlyphProviders.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.IDesignerGlyphProviderService.GlyphProviders" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getGlyphProviders() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

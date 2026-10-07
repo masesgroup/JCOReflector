@@ -102,7 +102,10 @@ public class ModifyRequest extends system.directoryservices.protocols.DirectoryR
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ModifyRequest(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,22 @@ public class ModifyRequest extends system.directoryservices.protocols.DirectoryR
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.ModifyRequest.-ctor" target="_top">.NET documentation</a>
+     */
     public ModifyRequest() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +178,22 @@ public class ModifyRequest extends system.directoryservices.protocols.DirectoryR
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param distinguishedName the argument of type {@code java.lang.String}
+     * @param modifications the argument of type {@code DirectoryAttributeModification...}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.ModifyRequest.-ctor" target="_top">.NET documentation</a>
+     */
     public ModifyRequest(java.lang.String distinguishedName, DirectoryAttributeModification... modifications) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +204,26 @@ public class ModifyRequest extends system.directoryservices.protocols.DirectoryR
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param distinguishedName the argument of type {@code java.lang.String}
+     * @param operation the argument of type {@code DirectoryAttributeOperation}
+     * @param attributeName the argument of type {@code java.lang.String}
+     * @param values the argument of type {@code NetObject...}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.ModifyRequest.-ctor" target="_top">.NET documentation</a>
+     */
     public ModifyRequest(java.lang.String distinguishedName, DirectoryAttributeOperation operation, java.lang.String attributeName, NetObject... values) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -187,6 +242,13 @@ public class ModifyRequest extends system.directoryservices.protocols.DirectoryR
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Modifications.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.ModifyRequest.Modifications" target="_top">.NET documentation</a>
+     */
     public DirectoryAttributeModificationCollection getModifications() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +264,13 @@ public class ModifyRequest extends system.directoryservices.protocols.DirectoryR
         }
     }
 
+    /**
+     * Gets the value of the .NET property DistinguishedName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.ModifyRequest.DistinguishedName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDistinguishedName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +285,13 @@ public class ModifyRequest extends system.directoryservices.protocols.DirectoryR
         }
     }
 
+    /**
+     * Sets the value of the .NET property DistinguishedName.
+     *
+     * @param DistinguishedName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.ModifyRequest.DistinguishedName" target="_top">.NET documentation</a>
+     */
     public void setDistinguishedName(java.lang.String DistinguishedName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

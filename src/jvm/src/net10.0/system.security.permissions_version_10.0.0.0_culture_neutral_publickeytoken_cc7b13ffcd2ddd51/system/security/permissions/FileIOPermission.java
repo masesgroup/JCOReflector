@@ -105,7 +105,10 @@ public class FileIOPermission extends system.security.CodeAccessPermission  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FileIOPermission(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,15 @@ public class FileIOPermission extends system.security.CodeAccessPermission  {
     public FileIOPermission() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param access the argument of type {@code FileIOPermissionAccess}
+     * @param actions the argument of type {@code AccessControlActions}
+     * @param path the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.FileIOPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public FileIOPermission(FileIOPermissionAccess access, AccessControlActions actions, java.lang.String path) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +177,15 @@ public class FileIOPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param access the argument of type {@code FileIOPermissionAccess}
+     * @param actions the argument of type {@code AccessControlActions}
+     * @param pathList the argument of type {@code java.lang.String[]}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.FileIOPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public FileIOPermission(FileIOPermissionAccess access, AccessControlActions actions, java.lang.String[] pathList) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +196,14 @@ public class FileIOPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param access the argument of type {@code FileIOPermissionAccess}
+     * @param path the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.FileIOPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public FileIOPermission(FileIOPermissionAccess access, java.lang.String path) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -185,6 +214,14 @@ public class FileIOPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param access the argument of type {@code FileIOPermissionAccess}
+     * @param pathList the argument of type {@code java.lang.String[]}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.FileIOPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public FileIOPermission(FileIOPermissionAccess access, java.lang.String[] pathList) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -195,6 +232,13 @@ public class FileIOPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param state the argument of type {@code PermissionState}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.FileIOPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public FileIOPermission(PermissionState state) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -210,6 +254,14 @@ public class FileIOPermission extends system.security.CodeAccessPermission  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsSubsetOf.
+     *
+     * @param target the argument of type {@code IPermission}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.FileIOPermission.IsSubsetOf" target="_top">.NET documentation</a>
+     */
     public boolean IsSubsetOf(IPermission target) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +276,13 @@ public class FileIOPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsUnrestricted.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.FileIOPermission.IsUnrestricted" target="_top">.NET documentation</a>
+     */
     public boolean IsUnrestricted() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +297,13 @@ public class FileIOPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member Copy.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.FileIOPermission.Copy" target="_top">.NET documentation</a>
+     */
     public IPermission Copy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +319,14 @@ public class FileIOPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member Intersect.
+     *
+     * @param target the argument of type {@code IPermission}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.FileIOPermission.Intersect" target="_top">.NET documentation</a>
+     */
     public IPermission Intersect(IPermission target) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +342,14 @@ public class FileIOPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member Union.
+     *
+     * @param other the argument of type {@code IPermission}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.FileIOPermission.Union" target="_top">.NET documentation</a>
+     */
     public IPermission Union(IPermission other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +365,13 @@ public class FileIOPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToXml.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.FileIOPermission.ToXml" target="_top">.NET documentation</a>
+     */
     public SecurityElement ToXml() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +387,14 @@ public class FileIOPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPathList.
+     *
+     * @param access the argument of type {@code FileIOPermissionAccess}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.FileIOPermission.GetPathList" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] GetPathList(FileIOPermissionAccess access) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +418,14 @@ public class FileIOPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddPathList.
+     *
+     * @param access the argument of type {@code FileIOPermissionAccess}
+     * @param path the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.FileIOPermission.AddPathList" target="_top">.NET documentation</a>
+     */
     public void AddPathList(FileIOPermissionAccess access, java.lang.String path) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -331,6 +436,14 @@ public class FileIOPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddPathList.
+     *
+     * @param access the argument of type {@code FileIOPermissionAccess}
+     * @param pathList the argument of type {@code java.lang.String[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.FileIOPermission.AddPathList" target="_top">.NET documentation</a>
+     */
     public void AddPathList(FileIOPermissionAccess access, java.lang.String[] pathList) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -341,6 +454,14 @@ public class FileIOPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddPathList.
+     *
+     * @param dupParam0 the argument of type {@code FileIOPermissionAccess}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.FileIOPermission.AddPathList" target="_top">.NET documentation</a>
+     */
     public void AddPathList(FileIOPermissionAccess dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -351,6 +472,13 @@ public class FileIOPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member FromXml.
+     *
+     * @param esd the argument of type {@code SecurityElement}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.FileIOPermission.FromXml" target="_top">.NET documentation</a>
+     */
     public void FromXml(SecurityElement esd) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -361,6 +489,14 @@ public class FileIOPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetPathList.
+     *
+     * @param access the argument of type {@code FileIOPermissionAccess}
+     * @param path the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.FileIOPermission.SetPathList" target="_top">.NET documentation</a>
+     */
     public void SetPathList(FileIOPermissionAccess access, java.lang.String path) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -371,6 +507,14 @@ public class FileIOPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetPathList.
+     *
+     * @param access the argument of type {@code FileIOPermissionAccess}
+     * @param pathList the argument of type {@code java.lang.String[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.FileIOPermission.SetPathList" target="_top">.NET documentation</a>
+     */
     public void SetPathList(FileIOPermissionAccess access, java.lang.String[] pathList) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -381,6 +525,14 @@ public class FileIOPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetPathList.
+     *
+     * @param dupParam0 the argument of type {@code FileIOPermissionAccess}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.FileIOPermission.SetPathList" target="_top">.NET documentation</a>
+     */
     public void SetPathList(FileIOPermissionAccess dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -395,6 +547,13 @@ public class FileIOPermission extends system.security.CodeAccessPermission  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.FileIOPermission.AllFiles" target="_top">.NET documentation</a>
+     */
     public FileIOPermissionAccess getAllFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -410,6 +569,13 @@ public class FileIOPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllFiles.
+     *
+     * @param AllFiles the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.FileIOPermission.AllFiles" target="_top">.NET documentation</a>
+     */
     public void setAllFiles(FileIOPermissionAccess AllFiles) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -420,6 +586,13 @@ public class FileIOPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllLocalFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.FileIOPermission.AllLocalFiles" target="_top">.NET documentation</a>
+     */
     public FileIOPermissionAccess getAllLocalFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -435,6 +608,13 @@ public class FileIOPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllLocalFiles.
+     *
+     * @param AllLocalFiles the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.FileIOPermission.AllLocalFiles" target="_top">.NET documentation</a>
+     */
     public void setAllLocalFiles(FileIOPermissionAccess AllLocalFiles) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

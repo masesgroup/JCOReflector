@@ -103,7 +103,10 @@ public class WrappedKeySecurityToken extends system.identitymodel.tokens.Securit
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WrappedKeySecurityToken(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,23 @@ public class WrappedKeySecurityToken extends system.identitymodel.tokens.Securit
     public WrappedKeySecurityToken() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param id the argument of type {@code java.lang.String}
+     * @param keyToWrap the argument of type {@code byte[]}
+     * @param wrappingAlgorithm the argument of type {@code java.lang.String}
+     * @param wrappingToken the argument of type {@code SecurityToken}
+     * @param wrappingTokenReference the argument of type {@code SecurityKeyIdentifier}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.WrappedKeySecurityToken.-ctor" target="_top">.NET documentation</a>
+     */
     public WrappedKeySecurityToken(java.lang.String id, byte[] keyToWrap, java.lang.String wrappingAlgorithm, SecurityToken wrappingToken, SecurityKeyIdentifier wrappingTokenReference) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +188,14 @@ public class WrappedKeySecurityToken extends system.identitymodel.tokens.Securit
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CanCreateKeyIdentifierClause.
+     *
+     * @param <T> the type of the generic argument T
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.WrappedKeySecurityToken.CanCreateKeyIdentifierClause" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> boolean CanCreateKeyIdentifierClause() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +210,27 @@ public class WrappedKeySecurityToken extends system.identitymodel.tokens.Securit
         }
     }
 
+    /**
+     * Invokes the .NET member MatchesKeyIdentifierClause.
+     *
+     * @param keyIdentifierClause the argument of type {@code SecurityKeyIdentifierClause}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.WrappedKeySecurityToken.MatchesKeyIdentifierClause" target="_top">.NET documentation</a>
+     */
     public boolean MatchesKeyIdentifierClause(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ApplicationException, system.NotSupportedException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +245,22 @@ public class WrappedKeySecurityToken extends system.identitymodel.tokens.Securit
         }
     }
 
+    /**
+     * Invokes the .NET member GetWrappedKey.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.WrappedKeySecurityToken.GetWrappedKey" target="_top">.NET documentation</a>
+     */
     public byte[] GetWrappedKey() throws Throwable, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +288,13 @@ public class WrappedKeySecurityToken extends system.identitymodel.tokens.Securit
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property WrappingTokenReference.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.WrappedKeySecurityToken.WrappingTokenReference" target="_top">.NET documentation</a>
+     */
     public SecurityKeyIdentifier getWrappingTokenReference() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +310,13 @@ public class WrappedKeySecurityToken extends system.identitymodel.tokens.Securit
         }
     }
 
+    /**
+     * Gets the value of the .NET property WrappingToken.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.WrappedKeySecurityToken.WrappingToken" target="_top">.NET documentation</a>
+     */
     public SecurityToken getWrappingToken() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +332,13 @@ public class WrappedKeySecurityToken extends system.identitymodel.tokens.Securit
         }
     }
 
+    /**
+     * Gets the value of the .NET property WrappingAlgorithm.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.WrappedKeySecurityToken.WrappingAlgorithm" target="_top">.NET documentation</a>
+     */
     public java.lang.String getWrappingAlgorithm() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

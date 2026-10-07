@@ -102,7 +102,10 @@ public class XamlWriter extends NetObject implements AutoCloseable {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XamlWriter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,12 @@ public class XamlWriter extends NetObject implements AutoCloseable {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Close.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlWriter.Close" target="_top">.NET documentation</a>
+     */
     public void Close() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -165,6 +174,12 @@ public class XamlWriter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteEndMember.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlWriter.WriteEndMember" target="_top">.NET documentation</a>
+     */
     public void WriteEndMember() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +190,12 @@ public class XamlWriter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteEndObject.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlWriter.WriteEndObject" target="_top">.NET documentation</a>
+     */
     public void WriteEndObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +206,12 @@ public class XamlWriter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteGetObject.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlWriter.WriteGetObject" target="_top">.NET documentation</a>
+     */
     public void WriteGetObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +222,13 @@ public class XamlWriter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteNamespace.
+     *
+     * @param namespaceDeclaration the argument of type {@code NamespaceDeclaration}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlWriter.WriteNamespace" target="_top">.NET documentation</a>
+     */
     public void WriteNamespace(NamespaceDeclaration namespaceDeclaration) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +239,13 @@ public class XamlWriter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteStartMember.
+     *
+     * @param xamlMember the argument of type {@code XamlMember}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlWriter.WriteStartMember" target="_top">.NET documentation</a>
+     */
     public void WriteStartMember(XamlMember xamlMember) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +256,13 @@ public class XamlWriter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteStartObject.
+     *
+     * @param type the argument of type {@code XamlType}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlWriter.WriteStartObject" target="_top">.NET documentation</a>
+     */
     public void WriteStartObject(XamlType type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +273,13 @@ public class XamlWriter extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteValue.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlWriter.WriteValue" target="_top">.NET documentation</a>
+     */
     public void WriteValue(NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,8 +293,11 @@ public class XamlWriter extends NetObject implements AutoCloseable {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDisposable method available in IDisposable to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IDisposable.Dispose" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Dispose() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
     }
@@ -261,6 +319,13 @@ public class XamlWriter extends NetObject implements AutoCloseable {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SchemaContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlWriter.SchemaContext" target="_top">.NET documentation</a>
+     */
     public XamlSchemaContext getSchemaContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

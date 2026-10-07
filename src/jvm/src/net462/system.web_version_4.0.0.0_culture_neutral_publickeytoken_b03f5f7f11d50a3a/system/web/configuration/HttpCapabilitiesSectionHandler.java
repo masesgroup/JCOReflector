@@ -99,7 +99,10 @@ public class HttpCapabilitiesSectionHandler extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HttpCapabilitiesSectionHandler(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class HttpCapabilitiesSectionHandler extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.HttpCapabilitiesSectionHandler.-ctor" target="_top">.NET documentation</a>
+     */
     public HttpCapabilitiesSectionHandler() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +169,41 @@ public class HttpCapabilitiesSectionHandler extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param parent the argument of type {@code NetObject}
+     * @param configurationContext the argument of type {@code NetObject}
+     * @param section the argument of type {@code XmlNode}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.HttpCapabilitiesSectionHandler.Create" target="_top">.NET documentation</a>
+     */
     public NetObject Create(NetObject parent, NetObject configurationContext, XmlNode section) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.text.regularexpressions.RegexMatchTimeoutException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.NotSupportedException, system.web.HttpException, system.NotImplementedException, system.security.SecurityException, system.configuration.ConfigurationException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.xml.schema.XmlSchemaException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class DebuggerVisualizerAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DebuggerVisualizerAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,13 @@ public class DebuggerVisualizerAttribute extends system.Attribute  {
     public DebuggerVisualizerAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param visualizerTypeName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DebuggerVisualizerAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DebuggerVisualizerAttribute(java.lang.String visualizerTypeName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +169,14 @@ public class DebuggerVisualizerAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param visualizerTypeName the argument of type {@code java.lang.String}
+     * @param visualizerObjectSourceTypeName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DebuggerVisualizerAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DebuggerVisualizerAttribute(java.lang.String visualizerTypeName, java.lang.String visualizerObjectSourceTypeName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +187,15 @@ public class DebuggerVisualizerAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param visualizerTypeName the argument of type {@code java.lang.String}
+     * @param visualizerObjectSource the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DebuggerVisualizerAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DebuggerVisualizerAttribute(java.lang.String visualizerTypeName, NetType visualizerObjectSource) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +206,14 @@ public class DebuggerVisualizerAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param visualizer the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DebuggerVisualizerAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DebuggerVisualizerAttribute(NetType visualizer) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -189,6 +224,15 @@ public class DebuggerVisualizerAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param visualizer the argument of type {@code NetType}
+     * @param visualizerObjectSourceTypeName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DebuggerVisualizerAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DebuggerVisualizerAttribute(NetType visualizer, java.lang.String visualizerObjectSourceTypeName) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -199,6 +243,15 @@ public class DebuggerVisualizerAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param visualizer the argument of type {@code NetType}
+     * @param visualizerObjectSource the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DebuggerVisualizerAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DebuggerVisualizerAttribute(NetType visualizer, NetType visualizerObjectSource) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -218,6 +271,13 @@ public class DebuggerVisualizerAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Description.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DebuggerVisualizerAttribute.Description" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +292,13 @@ public class DebuggerVisualizerAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Description.
+     *
+     * @param Description the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DebuggerVisualizerAttribute.Description" target="_top">.NET documentation</a>
+     */
     public void setDescription(java.lang.String Description) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +309,13 @@ public class DebuggerVisualizerAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetTypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DebuggerVisualizerAttribute.TargetTypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTargetTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +330,13 @@ public class DebuggerVisualizerAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TargetTypeName.
+     *
+     * @param TargetTypeName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DebuggerVisualizerAttribute.TargetTypeName" target="_top">.NET documentation</a>
+     */
     public void setTargetTypeName(java.lang.String TargetTypeName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +347,13 @@ public class DebuggerVisualizerAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VisualizerObjectSourceTypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DebuggerVisualizerAttribute.VisualizerObjectSourceTypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getVisualizerObjectSourceTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +368,13 @@ public class DebuggerVisualizerAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VisualizerTypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DebuggerVisualizerAttribute.VisualizerTypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getVisualizerTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +389,13 @@ public class DebuggerVisualizerAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Target.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DebuggerVisualizerAttribute.Target" target="_top">.NET documentation</a>
+     */
     public NetType getTarget() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -309,6 +411,14 @@ public class DebuggerVisualizerAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Target.
+     *
+     * @param Target the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DebuggerVisualizerAttribute.Target" target="_top">.NET documentation</a>
+     */
     public void setTarget(NetType Target) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

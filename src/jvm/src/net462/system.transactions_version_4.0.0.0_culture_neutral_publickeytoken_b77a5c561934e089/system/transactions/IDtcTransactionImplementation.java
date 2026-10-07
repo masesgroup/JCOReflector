@@ -98,7 +98,10 @@ public class IDtcTransactionImplementation extends NetObject implements IDtcTran
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDtcTransactionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,15 @@ public class IDtcTransactionImplementation extends NetObject implements IDtcTran
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Commit.
+     *
+     * @param retaining the argument of type {@code int}
+     * @param commitType the argument of type {@code int}
+     * @param reserved the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Transactions.IDtcTransaction.Commit" target="_top">.NET documentation</a>
+     */
     public void Commit(int retaining, int commitType, int reserved) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

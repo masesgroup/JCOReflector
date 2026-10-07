@@ -102,7 +102,10 @@ public class ToolZone extends system.web.ui.webcontrols.webparts.WebZone  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ToolZone(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,8 +161,12 @@ public class ToolZone extends system.web.ui.webcontrols.webparts.WebZone  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIPostBackEventHandler method available in IPostBackEventHandler to obtain an object with an invocable method
+     *
+     * @param eventArgument the argument of type {@code java.lang.String}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IPostBackEventHandler.RaisePostBackEvent" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void RaisePostBackEvent(java.lang.String eventArgument) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackEventHandler to obtain the full interface.");
     }
@@ -168,6 +175,22 @@ public class ToolZone extends system.web.ui.webcontrols.webparts.WebZone  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property InstructionText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.ToolZone.InstructionText" target="_top">.NET documentation</a>
+     */
     public java.lang.String getInstructionText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +205,21 @@ public class ToolZone extends system.web.ui.webcontrols.webparts.WebZone  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InstructionText.
+     *
+     * @param InstructionText the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.ToolZone.InstructionText" target="_top">.NET documentation</a>
+     */
     public void setInstructionText(java.lang.String InstructionText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +230,14 @@ public class ToolZone extends system.web.ui.webcontrols.webparts.WebZone  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EditUIStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.ToolZone.EditUIStyle" target="_top">.NET documentation</a>
+     */
     public Style getEditUIStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +253,14 @@ public class ToolZone extends system.web.ui.webcontrols.webparts.WebZone  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HeaderVerbStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.ToolZone.HeaderVerbStyle" target="_top">.NET documentation</a>
+     */
     public Style getHeaderVerbStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +276,14 @@ public class ToolZone extends system.web.ui.webcontrols.webparts.WebZone  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstructionTextStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.ToolZone.InstructionTextStyle" target="_top">.NET documentation</a>
+     */
     public Style getInstructionTextStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +299,14 @@ public class ToolZone extends system.web.ui.webcontrols.webparts.WebZone  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LabelStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.ToolZone.LabelStyle" target="_top">.NET documentation</a>
+     */
     public Style getLabelStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +322,13 @@ public class ToolZone extends system.web.ui.webcontrols.webparts.WebZone  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AssociatedDisplayModes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.ToolZone.AssociatedDisplayModes" target="_top">.NET documentation</a>
+     */
     public WebPartDisplayModeCollection getAssociatedDisplayModes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +344,13 @@ public class ToolZone extends system.web.ui.webcontrols.webparts.WebZone  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HeaderCloseVerb.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.ToolZone.HeaderCloseVerb" target="_top">.NET documentation</a>
+     */
     public WebPartVerb getHeaderCloseVerb() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

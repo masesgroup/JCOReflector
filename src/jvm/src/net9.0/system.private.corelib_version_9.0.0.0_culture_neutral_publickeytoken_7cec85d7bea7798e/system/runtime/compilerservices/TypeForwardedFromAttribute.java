@@ -99,7 +99,10 @@ public class TypeForwardedFromAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TypeForwardedFromAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,16 @@ public class TypeForwardedFromAttribute extends system.Attribute  {
     public TypeForwardedFromAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param assemblyFullName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.TypeForwardedFromAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public TypeForwardedFromAttribute(java.lang.String assemblyFullName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +181,13 @@ public class TypeForwardedFromAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AssemblyFullName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.TypeForwardedFromAttribute.AssemblyFullName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAssemblyFullName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

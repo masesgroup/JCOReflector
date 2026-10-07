@@ -101,7 +101,10 @@ public class IContextAttributeImplementation extends NetObject implements IConte
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IContextAttributeImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,15 @@ public class IContextAttributeImplementation extends NetObject implements IConte
 
     // Methods section
     
+    /**
+     * Invokes the .NET member IsContextOK.
+     *
+     * @param ctx the argument of type {@code Context}
+     * @param msg the argument of type {@code IConstructionCallMessage}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Contexts.IContextAttribute.IsContextOK" target="_top">.NET documentation</a>
+     */
     public boolean IsContextOK(Context ctx, IConstructionCallMessage msg) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -157,6 +169,13 @@ public class IContextAttributeImplementation extends NetObject implements IConte
         }
     }
 
+    /**
+     * Invokes the .NET member GetPropertiesForNewContext.
+     *
+     * @param msg the argument of type {@code IConstructionCallMessage}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Contexts.IContextAttribute.GetPropertiesForNewContext" target="_top">.NET documentation</a>
+     */
     public void GetPropertiesForNewContext(IConstructionCallMessage msg) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

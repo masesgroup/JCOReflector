@@ -100,7 +100,10 @@ public class CategoryAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CategoryAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class CategoryAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CategoryAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public CategoryAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +166,13 @@ public class CategoryAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param category the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CategoryAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public CategoryAttribute(java.lang.String category) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +187,22 @@ public class CategoryAttribute extends system.Attribute  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsDefaultAttribute.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CategoryAttribute.IsDefaultAttribute" target="_top">.NET documentation</a>
+     */
     public boolean IsDefaultAttribute() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +221,13 @@ public class CategoryAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Action.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CategoryAttribute.Action" target="_top">.NET documentation</a>
+     */
     public static CategoryAttribute getAction() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -204,6 +243,13 @@ public class CategoryAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Appearance.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CategoryAttribute.Appearance" target="_top">.NET documentation</a>
+     */
     public static CategoryAttribute getAppearance() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -219,6 +265,13 @@ public class CategoryAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Asynchronous.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CategoryAttribute.Asynchronous" target="_top">.NET documentation</a>
+     */
     public static CategoryAttribute getAsynchronous() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -234,6 +287,13 @@ public class CategoryAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Behavior.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CategoryAttribute.Behavior" target="_top">.NET documentation</a>
+     */
     public static CategoryAttribute getBehavior() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -249,6 +309,13 @@ public class CategoryAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Data.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CategoryAttribute.Data" target="_top">.NET documentation</a>
+     */
     public static CategoryAttribute getData() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -264,6 +331,13 @@ public class CategoryAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Default.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CategoryAttribute.Default" target="_top">.NET documentation</a>
+     */
     public static CategoryAttribute getDefault() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -279,6 +353,13 @@ public class CategoryAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Design.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CategoryAttribute.Design" target="_top">.NET documentation</a>
+     */
     public static CategoryAttribute getDesign() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -294,6 +375,13 @@ public class CategoryAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DragDrop.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CategoryAttribute.DragDrop" target="_top">.NET documentation</a>
+     */
     public static CategoryAttribute getDragDrop() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -309,6 +397,13 @@ public class CategoryAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Focus.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CategoryAttribute.Focus" target="_top">.NET documentation</a>
+     */
     public static CategoryAttribute getFocus() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -324,6 +419,13 @@ public class CategoryAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Format.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CategoryAttribute.Format" target="_top">.NET documentation</a>
+     */
     public static CategoryAttribute getFormat() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -339,6 +441,13 @@ public class CategoryAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Key.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CategoryAttribute.Key" target="_top">.NET documentation</a>
+     */
     public static CategoryAttribute getKey() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -354,6 +463,13 @@ public class CategoryAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Layout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CategoryAttribute.Layout" target="_top">.NET documentation</a>
+     */
     public static CategoryAttribute getLayout() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -369,6 +485,13 @@ public class CategoryAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Mouse.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CategoryAttribute.Mouse" target="_top">.NET documentation</a>
+     */
     public static CategoryAttribute getMouse() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -384,6 +507,13 @@ public class CategoryAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WindowStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CategoryAttribute.WindowStyle" target="_top">.NET documentation</a>
+     */
     public static CategoryAttribute getWindowStyle() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -399,6 +529,23 @@ public class CategoryAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Category.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CategoryAttribute.Category" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCategory() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

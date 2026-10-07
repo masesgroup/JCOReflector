@@ -101,7 +101,10 @@ public class WebEventBufferFlushInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WebEventBufferFlushInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class WebEventBufferFlushInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EventsDiscardedSinceLastNotification.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.WebEventBufferFlushInfo.EventsDiscardedSinceLastNotification" target="_top">.NET documentation</a>
+     */
     public int getEventsDiscardedSinceLastNotification() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +210,13 @@ public class WebEventBufferFlushInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EventsInBuffer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.WebEventBufferFlushInfo.EventsInBuffer" target="_top">.NET documentation</a>
+     */
     public int getEventsInBuffer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +257,13 @@ public class WebEventBufferFlushInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NotificationSequence.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.WebEventBufferFlushInfo.NotificationSequence" target="_top">.NET documentation</a>
+     */
     public int getNotificationSequence() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +304,13 @@ public class WebEventBufferFlushInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LastNotificationUtc.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.WebEventBufferFlushInfo.LastNotificationUtc" target="_top">.NET documentation</a>
+     */
     public DateTime getLastNotificationUtc() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +326,13 @@ public class WebEventBufferFlushInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NotificationType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.WebEventBufferFlushInfo.NotificationType" target="_top">.NET documentation</a>
+     */
     public EventNotificationType getNotificationType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +348,13 @@ public class WebEventBufferFlushInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Events.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.WebEventBufferFlushInfo.Events" target="_top">.NET documentation</a>
+     */
     public WebBaseEventCollection getEvents() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

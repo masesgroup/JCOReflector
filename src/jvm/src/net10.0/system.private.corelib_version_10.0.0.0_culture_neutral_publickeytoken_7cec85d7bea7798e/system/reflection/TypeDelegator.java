@@ -115,7 +115,10 @@ public class TypeDelegator extends system.reflection.TypeInfo  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TypeDelegator(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -165,6 +168,22 @@ public class TypeDelegator extends system.reflection.TypeInfo  {
     public TypeDelegator() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param delegatingType the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.TypeDelegator.-ctor" target="_top">.NET documentation</a>
+     */
     public TypeDelegator(NetType delegatingType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +199,24 @@ public class TypeDelegator extends system.reflection.TypeInfo  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsAssignableFrom.
+     *
+     * @param typeInfo the argument of type {@code TypeInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.TypeDelegator.IsAssignableFrom" target="_top">.NET documentation</a>
+     */
     public boolean IsAssignableFrom(TypeInfo typeInfo) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +231,15 @@ public class TypeDelegator extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsDefined.
+     *
+     * @param attributeType the argument of type {@code NetType}
+     * @param inherit the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.TypeDelegator.IsDefined" target="_top">.NET documentation</a>
+     */
     public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +254,22 @@ public class TypeDelegator extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetArrayRank.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.TypeDelegator.GetArrayRank" target="_top">.NET documentation</a>
+     */
     public int GetArrayRank() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +310,21 @@ public class TypeDelegator extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member InvokeMember.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param invokeAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param target the argument of type {@code NetObject}
+     * @param args the argument of type {@code NetObject[]}
+     * @param modifiers the argument of type {@code ParameterModifier[]}
+     * @param culture the argument of type {@code CultureInfo}
+     * @param namedParameters the argument of type {@code java.lang.String[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.TypeDelegator.InvokeMember" target="_top">.NET documentation</a>
+     */
     public NetObject InvokeMember(java.lang.String name, BindingFlags invokeAttr, Binder binder, NetObject target, NetObject[] args, ParameterModifier[] modifiers, CultureInfo culture, java.lang.String[] namedParameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +340,21 @@ public class TypeDelegator extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member InvokeMember.
+     *
+     * @param dupParam0 the argument of type {@code java.lang.String}
+     * @param dupParam1 the argument of type {@code BindingFlags}
+     * @param dupParam2 the argument of type {@code Binder}
+     * @param dupParam3 the argument of type {@code NetObject}
+     * @param dupParam4 the argument of type {@code NetObject[]}
+     * @param dupParam5 the argument of type {@code ParameterModifier[]}
+     * @param dupParam6 the argument of type {@code CultureInfo}
+     * @param dupParam7 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.TypeDelegator.InvokeMember" target="_top">.NET documentation</a>
+     */
     public NetObject InvokeMember(java.lang.String dupParam0, BindingFlags dupParam1, Binder dupParam2, NetObject dupParam3, NetObject[] dupParam4, ParameterModifier[] dupParam5, CultureInfo dupParam6, JCORefOut dupParam7) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +370,14 @@ public class TypeDelegator extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCustomAttributes.
+     *
+     * @param inherit the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.TypeDelegator.GetCustomAttributes" target="_top">.NET documentation</a>
+     */
     public NetObject[] GetCustomAttributes(boolean inherit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -299,6 +399,15 @@ public class TypeDelegator extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCustomAttributes.
+     *
+     * @param attributeType the argument of type {@code NetType}
+     * @param inherit the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.TypeDelegator.GetCustomAttributes" target="_top">.NET documentation</a>
+     */
     public NetObject[] GetCustomAttributes(NetType attributeType, boolean inherit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +429,14 @@ public class TypeDelegator extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetConstructors.
+     *
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.TypeDelegator.GetConstructors" target="_top">.NET documentation</a>
+     */
     public ConstructorInfo[] GetConstructors(BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -341,6 +458,15 @@ public class TypeDelegator extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEvent.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.TypeDelegator.GetEvent" target="_top">.NET documentation</a>
+     */
     public EventInfo GetEvent(java.lang.String name, BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -356,6 +482,13 @@ public class TypeDelegator extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEvents.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.TypeDelegator.GetEvents" target="_top">.NET documentation</a>
+     */
     public EventInfo[] GetEvents() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -377,6 +510,14 @@ public class TypeDelegator extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEvents.
+     *
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.TypeDelegator.GetEvents" target="_top">.NET documentation</a>
+     */
     public EventInfo[] GetEvents(BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -398,6 +539,15 @@ public class TypeDelegator extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetField.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.TypeDelegator.GetField" target="_top">.NET documentation</a>
+     */
     public FieldInfo GetField(java.lang.String name, BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -413,6 +563,14 @@ public class TypeDelegator extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFields.
+     *
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.TypeDelegator.GetFields" target="_top">.NET documentation</a>
+     */
     public FieldInfo[] GetFields(BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -434,6 +592,23 @@ public class TypeDelegator extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetInterfaceMap.
+     *
+     * @param interfaceType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.TypeDelegator.GetInterfaceMap" target="_top">.NET documentation</a>
+     */
     public InterfaceMapping GetInterfaceMap(NetType interfaceType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -449,6 +624,19 @@ public class TypeDelegator extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMemberWithSameMetadataDefinitionAs.
+     *
+     * @param member the argument of type {@code MemberInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.TypeDelegator.GetMemberWithSameMetadataDefinitionAs" target="_top">.NET documentation</a>
+     */
     public MemberInfo GetMemberWithSameMetadataDefinitionAs(MemberInfo member) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -464,6 +652,25 @@ public class TypeDelegator extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMember.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param type the argument of type {@code MemberTypes}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.TypeDelegator.GetMember" target="_top">.NET documentation</a>
+     */
     public MemberInfo[] GetMember(java.lang.String name, MemberTypes type, BindingFlags bindingAttr) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -485,6 +692,14 @@ public class TypeDelegator extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMembers.
+     *
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.TypeDelegator.GetMembers" target="_top">.NET documentation</a>
+     */
     public MemberInfo[] GetMembers(BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -506,6 +721,14 @@ public class TypeDelegator extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethods.
+     *
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.TypeDelegator.GetMethods" target="_top">.NET documentation</a>
+     */
     public MethodInfo[] GetMethods(BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -527,6 +750,14 @@ public class TypeDelegator extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetProperties.
+     *
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.TypeDelegator.GetProperties" target="_top">.NET documentation</a>
+     */
     public PropertyInfo[] GetProperties(BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -548,6 +779,13 @@ public class TypeDelegator extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetElementType.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.TypeDelegator.GetElementType" target="_top">.NET documentation</a>
+     */
     public NetType GetElementType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -563,6 +801,23 @@ public class TypeDelegator extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFunctionPointerReturnType.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.TypeDelegator.GetFunctionPointerReturnType" target="_top">.NET documentation</a>
+     */
     public NetType GetFunctionPointerReturnType() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -578,6 +833,15 @@ public class TypeDelegator extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetInterface.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.TypeDelegator.GetInterface" target="_top">.NET documentation</a>
+     */
     public NetType GetInterface(java.lang.String name, boolean ignoreCase) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -593,6 +857,15 @@ public class TypeDelegator extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetNestedType.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.TypeDelegator.GetNestedType" target="_top">.NET documentation</a>
+     */
     public NetType GetNestedType(java.lang.String name, BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -608,6 +881,23 @@ public class TypeDelegator extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFunctionPointerCallingConventions.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.TypeDelegator.GetFunctionPointerCallingConventions" target="_top">.NET documentation</a>
+     */
     public NetType[] GetFunctionPointerCallingConventions() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -629,6 +919,23 @@ public class TypeDelegator extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFunctionPointerParameterTypes.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.TypeDelegator.GetFunctionPointerParameterTypes" target="_top">.NET documentation</a>
+     */
     public NetType[] GetFunctionPointerParameterTypes() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -650,6 +957,13 @@ public class TypeDelegator extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetInterfaces.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.TypeDelegator.GetInterfaces" target="_top">.NET documentation</a>
+     */
     public NetType[] GetInterfaces() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -671,6 +985,14 @@ public class TypeDelegator extends system.reflection.TypeInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetNestedTypes.
+     *
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.TypeDelegator.GetNestedTypes" target="_top">.NET documentation</a>
+     */
     public NetType[] GetNestedTypes(BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

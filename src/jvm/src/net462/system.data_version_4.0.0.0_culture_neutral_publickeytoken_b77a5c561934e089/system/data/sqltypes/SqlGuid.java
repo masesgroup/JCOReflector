@@ -109,7 +109,10 @@ public class SqlGuid extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SqlGuid(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,14 @@ public class SqlGuid extends system.ValueType  {
     public SqlGuid() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code byte[]}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlGuid.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlGuid(byte[] value) throws Throwable, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +180,23 @@ public class SqlGuid extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param a the argument of type {@code int}
+     * @param b the argument of type {@code short}
+     * @param c the argument of type {@code short}
+     * @param d the argument of type {@code byte}
+     * @param e the argument of type {@code byte}
+     * @param f the argument of type {@code byte}
+     * @param g the argument of type {@code byte}
+     * @param h the argument of type {@code byte}
+     * @param i the argument of type {@code byte}
+     * @param j the argument of type {@code byte}
+     * @param k the argument of type {@code byte}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlGuid.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlGuid(int a, short b, short c, byte d, byte e, byte f, byte g, byte h, byte i, byte j, byte k) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +207,13 @@ public class SqlGuid extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param g the argument of type {@code Guid}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlGuid.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlGuid(Guid g) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -189,6 +224,19 @@ public class SqlGuid extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlGuid.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlGuid(java.lang.String s) throws Throwable, system.ArgumentNullException, system.FormatException, system.globalization.CultureNotFoundException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -204,6 +252,14 @@ public class SqlGuid extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ToByteArray.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlGuid.ToByteArray" target="_top">.NET documentation</a>
+     */
     public byte[] ToByteArray() throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +283,14 @@ public class SqlGuid extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CompareTo.
+     *
+     * @param value the argument of type {@code SqlGuid}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlGuid.CompareTo" target="_top">.NET documentation</a>
+     */
     public int CompareTo(SqlGuid value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +331,25 @@ public class SqlGuid extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CompareTo.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlGuid.CompareTo" target="_top">.NET documentation</a>
+     */
     public int CompareTo(NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -307,6 +390,14 @@ public class SqlGuid extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToSqlBinary.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlGuid.ToSqlBinary" target="_top">.NET documentation</a>
+     */
     public SqlBinary ToSqlBinary() throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -322,6 +413,15 @@ public class SqlGuid extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param x the argument of type {@code SqlGuid}
+     * @param y the argument of type {@code SqlGuid}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlGuid.Equals" target="_top">.NET documentation</a>
+     */
     public static SqlBoolean Equals(SqlGuid x, SqlGuid y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -337,6 +437,15 @@ public class SqlGuid extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member GreaterThan.
+     *
+     * @param x the argument of type {@code SqlGuid}
+     * @param y the argument of type {@code SqlGuid}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlGuid.GreaterThan" target="_top">.NET documentation</a>
+     */
     public static SqlBoolean GreaterThan(SqlGuid x, SqlGuid y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -352,6 +461,15 @@ public class SqlGuid extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member GreaterThanOrEqual.
+     *
+     * @param x the argument of type {@code SqlGuid}
+     * @param y the argument of type {@code SqlGuid}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlGuid.GreaterThanOrEqual" target="_top">.NET documentation</a>
+     */
     public static SqlBoolean GreaterThanOrEqual(SqlGuid x, SqlGuid y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -367,6 +485,15 @@ public class SqlGuid extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member LessThan.
+     *
+     * @param x the argument of type {@code SqlGuid}
+     * @param y the argument of type {@code SqlGuid}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlGuid.LessThan" target="_top">.NET documentation</a>
+     */
     public static SqlBoolean LessThan(SqlGuid x, SqlGuid y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -382,6 +509,15 @@ public class SqlGuid extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member LessThanOrEqual.
+     *
+     * @param x the argument of type {@code SqlGuid}
+     * @param y the argument of type {@code SqlGuid}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlGuid.LessThanOrEqual" target="_top">.NET documentation</a>
+     */
     public static SqlBoolean LessThanOrEqual(SqlGuid x, SqlGuid y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -397,6 +533,15 @@ public class SqlGuid extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member NotEquals.
+     *
+     * @param x the argument of type {@code SqlGuid}
+     * @param y the argument of type {@code SqlGuid}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlGuid.NotEquals" target="_top">.NET documentation</a>
+     */
     public static SqlBoolean NotEquals(SqlGuid x, SqlGuid y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -412,6 +557,19 @@ public class SqlGuid extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Parse.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlGuid.Parse" target="_top">.NET documentation</a>
+     */
     public static SqlGuid Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.FormatException, system.globalization.CultureNotFoundException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -427,6 +585,20 @@ public class SqlGuid extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToSqlString.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlGuid.ToSqlString" target="_top">.NET documentation</a>
+     */
     public SqlString ToSqlString() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -442,6 +614,14 @@ public class SqlGuid extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetXsdType.
+     *
+     * @param schemaSet the argument of type {@code XmlSchemaSet}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlGuid.GetXsdType" target="_top">.NET documentation</a>
+     */
     public static XmlQualifiedName GetXsdType(XmlSchemaSet schemaSet) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -460,8 +640,12 @@ public class SqlGuid extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIXmlSerializable method available in IXmlSerializable to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.IXmlSerializable.GetSchema" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public XmlSchema GetSchema() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
     }
@@ -469,8 +653,12 @@ public class SqlGuid extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIXmlSerializable method available in IXmlSerializable to obtain an object with an invocable method
+     *
+     * @param reader the argument of type {@code XmlReader}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.IXmlSerializable.ReadXml" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ReadXml(XmlReader reader) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
     }
@@ -478,8 +666,12 @@ public class SqlGuid extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIXmlSerializable method available in IXmlSerializable to obtain an object with an invocable method
+     *
+     * @param writer the argument of type {@code XmlWriter}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.IXmlSerializable.WriteXml" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void WriteXml(XmlWriter writer) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
     }
@@ -488,6 +680,13 @@ public class SqlGuid extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsNull.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlGuid.IsNull" target="_top">.NET documentation</a>
+     */
     public boolean getIsNull() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -502,6 +701,23 @@ public class SqlGuid extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.data.sqltypes.SqlNullValueException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlGuid.Value" target="_top">.NET documentation</a>
+     */
     public Guid getValue() throws Throwable, system.data.sqltypes.SqlNullValueException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

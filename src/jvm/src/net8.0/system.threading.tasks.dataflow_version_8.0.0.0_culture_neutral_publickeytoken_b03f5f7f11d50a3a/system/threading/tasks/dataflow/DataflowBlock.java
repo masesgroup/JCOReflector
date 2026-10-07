@@ -121,7 +121,10 @@ public class DataflowBlock extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataflowBlock(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -174,6 +177,25 @@ public class DataflowBlock extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Post.
+     *
+     * @param <TInput> the type of the generic argument TInput
+     * @param target the argument of type {@code ITargetBlock_1}
+     * @param item the argument of type {@code TInput}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.DataflowBlock.Post" target="_top">.NET documentation</a>
+     */
     public static <TInput extends IJCOBridgeReflected> boolean Post(ITargetBlock_1 target, TInput item) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -188,6 +210,25 @@ public class DataflowBlock extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryReceive.
+     *
+     * @param <TOutput> the type of the generic argument TOutput
+     * @param source the argument of type {@code IReceivableSourceBlock_1}
+     * @param item the argument of type {@code JCORefOut<TOutput>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive" target="_top">.NET documentation</a>
+     */
     public static <TOutput extends IJCOBridgeReflected> boolean TryReceive(IReceivableSourceBlock_1 source, JCORefOut<TOutput> item) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -202,6 +243,25 @@ public class DataflowBlock extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReceiveAllAsync.
+     *
+     * @param <TOutput> the type of the generic argument TOutput
+     * @param source the argument of type {@code IReceivableSourceBlock_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAllAsync" target="_top">.NET documentation</a>
+     */
     public static <TOutput extends IJCOBridgeReflected> IAsyncEnumerable_1 ReceiveAllAsync(IReceivableSourceBlock_1 source, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -217,6 +277,27 @@ public class DataflowBlock extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LinkTo.
+     *
+     * @param <TOutput> the type of the generic argument TOutput
+     * @param source the argument of type {@code ISourceBlock_1}
+     * @param target the argument of type {@code ITargetBlock_1}
+     * @param predicate the argument of type {@code Predicate_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo" target="_top">.NET documentation</a>
+     */
     public static <TOutput extends IJCOBridgeReflected> IDisposable LinkTo(ISourceBlock_1 source, ITargetBlock_1 target, Predicate_1 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -232,6 +313,27 @@ public class DataflowBlock extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LinkTo.
+     *
+     * @param <TOutput> the type of the generic argument TOutput
+     * @param source the argument of type {@code ISourceBlock_1}
+     * @param target the argument of type {@code ITargetBlock_1}
+     * @param linkOptions the argument of type {@code DataflowLinkOptions}
+     * @param predicate the argument of type {@code Predicate_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo" target="_top">.NET documentation</a>
+     */
     public static <TOutput extends IJCOBridgeReflected> IDisposable LinkTo(ISourceBlock_1 source, ITargetBlock_1 target, DataflowLinkOptions linkOptions, Predicate_1 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -247,6 +349,25 @@ public class DataflowBlock extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LinkTo.
+     *
+     * @param <TOutput> the type of the generic argument TOutput
+     * @param source the argument of type {@code ISourceBlock_1}
+     * @param target the argument of type {@code ITargetBlock_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo" target="_top">.NET documentation</a>
+     */
     public static <TOutput extends IJCOBridgeReflected> IDisposable LinkTo(ISourceBlock_1 source, ITargetBlock_1 target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -262,6 +383,25 @@ public class DataflowBlock extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsObservable.
+     *
+     * @param <TOutput> the type of the generic argument TOutput
+     * @param source the argument of type {@code ISourceBlock_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.DataflowBlock.AsObservable" target="_top">.NET documentation</a>
+     */
     public static <TOutput extends IJCOBridgeReflected> IObservable_1 AsObservable(ISourceBlock_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -277,6 +417,24 @@ public class DataflowBlock extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsObserver.
+     *
+     * @param <TInput> the type of the generic argument TInput
+     * @param target the argument of type {@code ITargetBlock_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.DataflowBlock.AsObserver" target="_top">.NET documentation</a>
+     */
     public static <TInput extends IJCOBridgeReflected> IObserver_1 AsObserver(ITargetBlock_1 target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -292,6 +450,26 @@ public class DataflowBlock extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Encapsulate.
+     *
+     * @param <TInput> the type of the generic argument TInput
+     * @param <TOutput> the type of the generic argument TOutput
+     * @param target the argument of type {@code ITargetBlock_1}
+     * @param source the argument of type {@code ISourceBlock_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.DataflowBlock.Encapsulate" target="_top">.NET documentation</a>
+     */
     public static <TInput extends IJCOBridgeReflected, TOutput extends IJCOBridgeReflected> IPropagatorBlock_2 Encapsulate(ITargetBlock_1 target, ISourceBlock_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -307,6 +485,14 @@ public class DataflowBlock extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member NullTarget.
+     *
+     * @param <TInput> the type of the generic argument TInput
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.DataflowBlock.NullTarget" target="_top">.NET documentation</a>
+     */
     public static <TInput extends IJCOBridgeReflected> ITargetBlock_1 NullTarget() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -322,6 +508,21 @@ public class DataflowBlock extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OutputAvailableAsync.
+     *
+     * @param <TOutput> the type of the generic argument TOutput
+     * @param source the argument of type {@code ISourceBlock_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.DataflowBlock.OutputAvailableAsync" target="_top">.NET documentation</a>
+     */
     public static <TOutput extends IJCOBridgeReflected> Task_1 OutputAvailableAsync(ISourceBlock_1 source, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -337,6 +538,17 @@ public class DataflowBlock extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OutputAvailableAsync.
+     *
+     * @param <TOutput> the type of the generic argument TOutput
+     * @param source the argument of type {@code ISourceBlock_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.DataflowBlock.OutputAvailableAsync" target="_top">.NET documentation</a>
+     */
     public static <TOutput extends IJCOBridgeReflected> Task_1 OutputAvailableAsync(ISourceBlock_1 source) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -352,6 +564,29 @@ public class DataflowBlock extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SendAsync.
+     *
+     * @param <TInput> the type of the generic argument TInput
+     * @param target the argument of type {@code ITargetBlock_1}
+     * @param item the argument of type {@code TInput}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync" target="_top">.NET documentation</a>
+     */
     public static <TInput extends IJCOBridgeReflected> Task_1 SendAsync(ITargetBlock_1 target, TInput item, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.threading.tasks.TaskSchedulerException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -367,6 +602,28 @@ public class DataflowBlock extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SendAsync.
+     *
+     * @param <TInput> the type of the generic argument TInput
+     * @param target the argument of type {@code ITargetBlock_1}
+     * @param item the argument of type {@code TInput}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync" target="_top">.NET documentation</a>
+     */
     public static <TInput extends IJCOBridgeReflected> Task_1 SendAsync(ITargetBlock_1 target, TInput item) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.threading.tasks.TaskSchedulerException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -382,6 +639,36 @@ public class DataflowBlock extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Choose.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param source1 the argument of type {@code ISourceBlock_1}
+     * @param action1 the argument of type {@code Action_1}
+     * @param source2 the argument of type {@code ISourceBlock_1}
+     * @param action2 the argument of type {@code Action_1}
+     * @param source3 the argument of type {@code ISourceBlock_1}
+     * @param action3 the argument of type {@code Action_1}
+     * @param dataflowBlockOptions the argument of type {@code DataflowBlockOptions}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.DataflowBlock.Choose" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected> Task_1 Choose(ISourceBlock_1 source1, Action_1 action1, ISourceBlock_1 source2, Action_1 action2, ISourceBlock_1 source3, Action_1 action3, DataflowBlockOptions dataflowBlockOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.AggregateException, system.threading.tasks.TaskSchedulerException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -397,6 +684,35 @@ public class DataflowBlock extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Choose.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param source1 the argument of type {@code ISourceBlock_1}
+     * @param action1 the argument of type {@code Action_1}
+     * @param source2 the argument of type {@code ISourceBlock_1}
+     * @param action2 the argument of type {@code Action_1}
+     * @param source3 the argument of type {@code ISourceBlock_1}
+     * @param action3 the argument of type {@code Action_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.DataflowBlock.Choose" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected> Task_1 Choose(ISourceBlock_1 source1, Action_1 action1, ISourceBlock_1 source2, Action_1 action2, ISourceBlock_1 source3, Action_1 action3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -412,6 +728,33 @@ public class DataflowBlock extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Choose.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param source1 the argument of type {@code ISourceBlock_1}
+     * @param action1 the argument of type {@code Action_1}
+     * @param source2 the argument of type {@code ISourceBlock_1}
+     * @param action2 the argument of type {@code Action_1}
+     * @param dataflowBlockOptions the argument of type {@code DataflowBlockOptions}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.DataflowBlock.Choose" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected> Task_1 Choose(ISourceBlock_1 source1, Action_1 action1, ISourceBlock_1 source2, Action_1 action2, DataflowBlockOptions dataflowBlockOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.AggregateException, system.threading.tasks.TaskSchedulerException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -427,6 +770,32 @@ public class DataflowBlock extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Choose.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param source1 the argument of type {@code ISourceBlock_1}
+     * @param action1 the argument of type {@code Action_1}
+     * @param source2 the argument of type {@code ISourceBlock_1}
+     * @param action2 the argument of type {@code Action_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.DataflowBlock.Choose" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected> Task_1 Choose(ISourceBlock_1 source1, Action_1 action1, ISourceBlock_1 source2, Action_1 action2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -442,6 +811,28 @@ public class DataflowBlock extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReceiveAsync.
+     *
+     * @param <TOutput> the type of the generic argument TOutput
+     * @param source the argument of type {@code ISourceBlock_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync" target="_top">.NET documentation</a>
+     */
     public static <TOutput extends IJCOBridgeReflected> Task_1 ReceiveAsync(ISourceBlock_1 source, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -457,6 +848,29 @@ public class DataflowBlock extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReceiveAsync.
+     *
+     * @param <TOutput> the type of the generic argument TOutput
+     * @param source the argument of type {@code ISourceBlock_1}
+     * @param timeout the argument of type {@code TimeSpan}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync" target="_top">.NET documentation</a>
+     */
     public static <TOutput extends IJCOBridgeReflected> Task_1 ReceiveAsync(ISourceBlock_1 source, TimeSpan timeout, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.AggregateException, system.OutOfMemoryException, system.threading.tasks.TaskSchedulerException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -472,6 +886,28 @@ public class DataflowBlock extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReceiveAsync.
+     *
+     * @param <TOutput> the type of the generic argument TOutput
+     * @param source the argument of type {@code ISourceBlock_1}
+     * @param timeout the argument of type {@code TimeSpan}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync" target="_top">.NET documentation</a>
+     */
     public static <TOutput extends IJCOBridgeReflected> Task_1 ReceiveAsync(ISourceBlock_1 source, TimeSpan timeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -487,6 +923,27 @@ public class DataflowBlock extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReceiveAsync.
+     *
+     * @param <TOutput> the type of the generic argument TOutput
+     * @param source the argument of type {@code ISourceBlock_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync" target="_top">.NET documentation</a>
+     */
     public static <TOutput extends IJCOBridgeReflected> Task_1 ReceiveAsync(ISourceBlock_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

@@ -100,7 +100,10 @@ public class QueryContinueDragEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public QueryContinueDragEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,15 @@ public class QueryContinueDragEventArgs extends system.EventArgs  {
     public QueryContinueDragEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param keyState the argument of type {@code int}
+     * @param escapePressed the argument of type {@code boolean}
+     * @param action the argument of type {@code DragAction}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.QueryContinueDragEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public QueryContinueDragEventArgs(int keyState, boolean escapePressed, DragAction action) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +181,13 @@ public class QueryContinueDragEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EscapePressed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.QueryContinueDragEventArgs.EscapePressed" target="_top">.NET documentation</a>
+     */
     public boolean getEscapePressed() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +202,13 @@ public class QueryContinueDragEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeyState.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.QueryContinueDragEventArgs.KeyState" target="_top">.NET documentation</a>
+     */
     public int getKeyState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +249,13 @@ public class QueryContinueDragEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Action.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.QueryContinueDragEventArgs.Action" target="_top">.NET documentation</a>
+     */
     public DragAction getAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +271,13 @@ public class QueryContinueDragEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Action.
+     *
+     * @param Action the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.QueryContinueDragEventArgs.Action" target="_top">.NET documentation</a>
+     */
     public void setAction(DragAction Action) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

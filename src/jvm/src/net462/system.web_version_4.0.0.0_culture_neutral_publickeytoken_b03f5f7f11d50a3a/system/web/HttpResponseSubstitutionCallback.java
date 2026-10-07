@@ -162,7 +162,10 @@ public class HttpResponseSubstitutionCallback extends JCDelegate implements IJCE
         callerInstance = instance;
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HttpResponseSubstitutionCallback(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
@@ -184,6 +187,14 @@ public class HttpResponseSubstitutionCallback extends JCDelegate implements IJCE
         return JCOBridgeInstance.translateException(ne);
     }
 
+    /**
+     * Invokes the .NET member DynamicInvoke.
+     *
+     * @param context the argument of type {@code HttpContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Delegate.DynamicInvoke" target="_top">.NET documentation</a>
+     */
     public java.lang.String DynamicInvoke(HttpContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,7 +210,10 @@ public class HttpResponseSubstitutionCallback extends JCDelegate implements IJCE
     }
 
     /**
-     * Methods invoked in JVM when an event is raised in CLR 
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param context the .NET argument of type {@code System.Web.HttpContext}
+     * @return the value returned to the CLR; this default implementation returns {@code null}
      */
     public java.lang.String Invoke(HttpContext context) {
         return "";

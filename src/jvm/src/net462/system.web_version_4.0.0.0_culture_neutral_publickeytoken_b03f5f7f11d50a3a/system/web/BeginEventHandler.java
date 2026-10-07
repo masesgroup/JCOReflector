@@ -170,7 +170,10 @@ public class BeginEventHandler extends JCDelegate implements IJCEventEmit, IJCOB
         callerInstance = instance;
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BeginEventHandler(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
@@ -192,6 +195,17 @@ public class BeginEventHandler extends JCDelegate implements IJCEventEmit, IJCOB
         return JCOBridgeInstance.translateException(ne);
     }
 
+    /**
+     * Invokes the .NET member DynamicInvoke.
+     *
+     * @param sender the argument of type {@code NetObject}
+     * @param e the argument of type {@code EventArgs}
+     * @param cb the argument of type {@code AsyncCallback}
+     * @param extraData the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Delegate.DynamicInvoke" target="_top">.NET documentation</a>
+     */
     public IAsyncResult DynamicInvoke(NetObject sender, EventArgs e, AsyncCallback cb, NetObject extraData) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,7 +222,13 @@ public class BeginEventHandler extends JCDelegate implements IJCEventEmit, IJCOB
     }
 
     /**
-     * Methods invoked in JVM when an event is raised in CLR 
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.EventArgs}
+     * @param cb the .NET argument of type {@code System.AsyncCallback}
+     * @param extraData the .NET argument of type {@code System.Object}
+     * @return the value returned to the CLR; this default implementation returns {@code null}
      */
     public IAsyncResult Invoke(NetObject sender, EventArgs e, AsyncCallback cb, NetObject extraData) {
         return null;

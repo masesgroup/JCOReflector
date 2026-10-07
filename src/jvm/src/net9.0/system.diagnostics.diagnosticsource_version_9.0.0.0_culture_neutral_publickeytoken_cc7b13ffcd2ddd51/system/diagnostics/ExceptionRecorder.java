@@ -160,7 +160,10 @@ public class ExceptionRecorder extends JCVoidDelegate implements IJCVoidEventEmi
         callerInstance = instance;
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ExceptionRecorder(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
@@ -182,6 +185,15 @@ public class ExceptionRecorder extends JCVoidDelegate implements IJCVoidEventEmi
         return JCOBridgeInstance.translateException(ne);
     }
 
+    /**
+     * Invokes the .NET member DynamicInvoke.
+     *
+     * @param activity the argument of type {@code Activity}
+     * @param exception the argument of type {@code NetException}
+     * @param tags the argument of type {@code TagList}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Delegate.DynamicInvoke" target="_top">.NET documentation</a>
+     */
     public void DynamicInvoke(Activity activity, NetException exception, TagList tags) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,7 +205,11 @@ public class ExceptionRecorder extends JCVoidDelegate implements IJCVoidEventEmi
     }
 
     /**
-     * Methods invoked in JVM when an event is raised in CLR 
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param activity the .NET argument of type {@code System.Diagnostics.Activity}
+     * @param exception the .NET argument of type {@code System.Exception}
+     * @param tags the .NET argument of type {@code System.Diagnostics.TagList&}
      */
     public void Invoke(Activity activity, NetException exception, TagList tags) {
     }

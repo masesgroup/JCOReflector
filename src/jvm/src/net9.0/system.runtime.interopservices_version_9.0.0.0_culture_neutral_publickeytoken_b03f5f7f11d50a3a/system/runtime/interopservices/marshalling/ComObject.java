@@ -100,7 +100,10 @@ public class ComObject extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ComObject(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,21 @@ public class ComObject extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member FinalRelease.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.ComObject.FinalRelease" target="_top">.NET documentation</a>
+     */
     public void FinalRelease() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,8 +186,14 @@ public class ComObject extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDynamicInterfaceCastable method available in IDynamicInterfaceCastable to obtain an object with an invocable method
+     *
+     * @param interfaceType the argument of type {@code RuntimeTypeHandle}
+     * @param throwIfNotImplemented the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.IDynamicInterfaceCastable.IsInterfaceImplemented" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean IsInterfaceImplemented(RuntimeTypeHandle interfaceType, boolean throwIfNotImplemented) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDynamicInterfaceCastable to obtain the full interface.");
     }
@@ -177,8 +201,13 @@ public class ComObject extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDynamicInterfaceCastable method available in IDynamicInterfaceCastable to obtain an object with an invocable method
+     *
+     * @param interfaceType the argument of type {@code RuntimeTypeHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.IDynamicInterfaceCastable.GetInterfaceImplementation" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public RuntimeTypeHandle GetInterfaceImplementation(RuntimeTypeHandle interfaceType) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDynamicInterfaceCastable to obtain the full interface.");
     }
@@ -186,8 +215,13 @@ public class ComObject extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIUnmanagedVirtualMethodTableProvider method available in IUnmanagedVirtualMethodTableProvider to obtain an object with an invocable method
+     *
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.IUnmanagedVirtualMethodTableProvider.GetVirtualMethodTableInfoForKey" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public VirtualMethodTableInfo GetVirtualMethodTableInfoForKey(NetType type) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIUnmanagedVirtualMethodTableProvider to obtain the full interface.");
     }

@@ -109,7 +109,10 @@ public class AttributedModelServices extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AttributedModelServices(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -162,6 +165,21 @@ public class AttributedModelServices extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Exports.
+     *
+     * @param part the argument of type {@code ComposablePartDefinition}
+     * @param contractType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.AttributedModelServices.Exports" target="_top">.NET documentation</a>
+     */
     public static boolean Exports(ComposablePartDefinition part, NetType contractType) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -176,6 +194,22 @@ public class AttributedModelServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Exports.
+     *
+     * @param <T> the type of the generic argument T
+     * @param part the argument of type {@code ComposablePartDefinition}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.AttributedModelServices.Exports" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean Exports(ComposablePartDefinition part) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -190,6 +224,21 @@ public class AttributedModelServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Imports.
+     *
+     * @param part the argument of type {@code ComposablePartDefinition}
+     * @param contractType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.AttributedModelServices.Imports" target="_top">.NET documentation</a>
+     */
     public static boolean Imports(ComposablePartDefinition part, NetType contractType) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -204,6 +253,22 @@ public class AttributedModelServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Imports.
+     *
+     * @param part the argument of type {@code ComposablePartDefinition}
+     * @param contractType the argument of type {@code NetType}
+     * @param importCardinality the argument of type {@code ImportCardinality}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.AttributedModelServices.Imports" target="_top">.NET documentation</a>
+     */
     public static boolean Imports(ComposablePartDefinition part, NetType contractType, ImportCardinality importCardinality) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -218,6 +283,20 @@ public class AttributedModelServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Imports.
+     *
+     * @param <T> the type of the generic argument T
+     * @param part the argument of type {@code ComposablePartDefinition}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.AttributedModelServices.Imports" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean Imports(ComposablePartDefinition part) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -232,6 +311,21 @@ public class AttributedModelServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Imports.
+     *
+     * @param <T> the type of the generic argument T
+     * @param part the argument of type {@code ComposablePartDefinition}
+     * @param importCardinality the argument of type {@code ImportCardinality}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.AttributedModelServices.Imports" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean Imports(ComposablePartDefinition part, ImportCardinality importCardinality) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -246,6 +340,24 @@ public class AttributedModelServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddExportedValue.
+     *
+     * @param <T> the type of the generic argument T
+     * @param batch the argument of type {@code CompositionBatch}
+     * @param contractName the argument of type {@code java.lang.String}
+     * @param exportedValue the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.AttributedModelServices.AddExportedValue" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> ComposablePart AddExportedValue(CompositionBatch batch, java.lang.String contractName, T exportedValue) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -261,6 +373,22 @@ public class AttributedModelServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddExportedValue.
+     *
+     * @param <T> the type of the generic argument T
+     * @param batch the argument of type {@code CompositionBatch}
+     * @param exportedValue the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.AttributedModelServices.AddExportedValue" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> ComposablePart AddExportedValue(CompositionBatch batch, T exportedValue) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -276,6 +404,20 @@ public class AttributedModelServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddPart.
+     *
+     * @param batch the argument of type {@code CompositionBatch}
+     * @param attributedPart the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.AttributedModelServices.AddPart" target="_top">.NET documentation</a>
+     */
     public static ComposablePart AddPart(CompositionBatch batch, NetObject attributedPart) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -291,6 +433,19 @@ public class AttributedModelServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreatePart.
+     *
+     * @param partDefinition the argument of type {@code ComposablePartDefinition}
+     * @param attributedPart the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.AttributedModelServices.CreatePart" target="_top">.NET documentation</a>
+     */
     public static ComposablePart CreatePart(ComposablePartDefinition partDefinition, NetObject attributedPart) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -306,6 +461,19 @@ public class AttributedModelServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreatePart.
+     *
+     * @param attributedPart the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.AttributedModelServices.CreatePart" target="_top">.NET documentation</a>
+     */
     public static ComposablePart CreatePart(NetObject attributedPart) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -321,6 +489,21 @@ public class AttributedModelServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreatePart.
+     *
+     * @param attributedPart the argument of type {@code NetObject}
+     * @param reflectionContext the argument of type {@code ReflectionContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.AttributedModelServices.CreatePart" target="_top">.NET documentation</a>
+     */
     public static ComposablePart CreatePart(NetObject attributedPart, ReflectionContext reflectionContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -336,6 +519,19 @@ public class AttributedModelServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SatisfyImportsOnce.
+     *
+     * @param compositionService the argument of type {@code ICompositionService}
+     * @param attributedPart the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.AttributedModelServices.SatisfyImportsOnce" target="_top">.NET documentation</a>
+     */
     public static ComposablePart SatisfyImportsOnce(ICompositionService compositionService, NetObject attributedPart) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -351,6 +547,21 @@ public class AttributedModelServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SatisfyImportsOnce.
+     *
+     * @param compositionService the argument of type {@code ICompositionService}
+     * @param attributedPart the argument of type {@code NetObject}
+     * @param reflectionContext the argument of type {@code ReflectionContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.AttributedModelServices.SatisfyImportsOnce" target="_top">.NET documentation</a>
+     */
     public static ComposablePart SatisfyImportsOnce(ICompositionService compositionService, NetObject attributedPart, ReflectionContext reflectionContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -366,6 +577,20 @@ public class AttributedModelServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreatePartDefinition.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param origin the argument of type {@code ICompositionElement}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.AttributedModelServices.CreatePartDefinition" target="_top">.NET documentation</a>
+     */
     public static ComposablePartDefinition CreatePartDefinition(NetType type, ICompositionElement origin) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -381,6 +606,23 @@ public class AttributedModelServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreatePartDefinition.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param origin the argument of type {@code ICompositionElement}
+     * @param ensureIsDiscoverable the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.AttributedModelServices.CreatePartDefinition" target="_top">.NET documentation</a>
+     */
     public static ComposablePartDefinition CreatePartDefinition(NetType type, ICompositionElement origin, boolean ensureIsDiscoverable) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -396,6 +638,21 @@ public class AttributedModelServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetContractName.
+     *
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.AttributedModelServices.GetContractName" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetContractName(NetType type) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -410,6 +667,20 @@ public class AttributedModelServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeIdentity.
+     *
+     * @param method the argument of type {@code MethodInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.AttributedModelServices.GetTypeIdentity" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetTypeIdentity(MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -424,6 +695,22 @@ public class AttributedModelServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeIdentity.
+     *
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.AttributedModelServices.GetTypeIdentity" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetTypeIdentity(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -438,6 +725,27 @@ public class AttributedModelServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ComposeExportedValue.
+     *
+     * @param <T> the type of the generic argument T
+     * @param container the argument of type {@code CompositionContainer}
+     * @param contractName the argument of type {@code java.lang.String}
+     * @param exportedValue the argument of type {@code T}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.composition.CompositionException if the .NET member raises it
+     * @throws system.componentmodel.composition.ChangeRejectedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.AttributedModelServices.ComposeExportedValue" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> void ComposeExportedValue(CompositionContainer container, java.lang.String contractName, T exportedValue) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.composition.CompositionException, system.componentmodel.composition.ChangeRejectedException, system.MulticastNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -448,6 +756,25 @@ public class AttributedModelServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ComposeExportedValue.
+     *
+     * @param <T> the type of the generic argument T
+     * @param container the argument of type {@code CompositionContainer}
+     * @param exportedValue the argument of type {@code T}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.composition.CompositionException if the .NET member raises it
+     * @throws system.componentmodel.composition.ChangeRejectedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.AttributedModelServices.ComposeExportedValue" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> void ComposeExportedValue(CompositionContainer container, T exportedValue) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.componentmodel.composition.CompositionException, system.componentmodel.composition.ChangeRejectedException, system.MulticastNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -458,6 +785,24 @@ public class AttributedModelServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ComposeParts.
+     *
+     * @param container the argument of type {@code CompositionContainer}
+     * @param attributedParts the argument of type {@code NetObject...}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.componentmodel.composition.CompositionException if the .NET member raises it
+     * @throws system.componentmodel.composition.ChangeRejectedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.AttributedModelServices.ComposeParts" target="_top">.NET documentation</a>
+     */
     public static void ComposeParts(CompositionContainer container, NetObject... attributedParts) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.NotImplementedException, system.componentmodel.composition.CompositionException, system.componentmodel.composition.ChangeRejectedException, system.MulticastNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

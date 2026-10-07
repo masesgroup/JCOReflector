@@ -100,7 +100,10 @@ public class ColumnReorderedEventArgs extends system.componentmodel.CancelEventA
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ColumnReorderedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,15 @@ public class ColumnReorderedEventArgs extends system.componentmodel.CancelEventA
     public ColumnReorderedEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param oldDisplayIndex the argument of type {@code int}
+     * @param newDisplayIndex the argument of type {@code int}
+     * @param header the argument of type {@code ColumnHeader}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ColumnReorderedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ColumnReorderedEventArgs(int oldDisplayIndex, int newDisplayIndex, ColumnHeader header) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +181,13 @@ public class ColumnReorderedEventArgs extends system.componentmodel.CancelEventA
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property NewDisplayIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ColumnReorderedEventArgs.NewDisplayIndex" target="_top">.NET documentation</a>
+     */
     public int getNewDisplayIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +228,13 @@ public class ColumnReorderedEventArgs extends system.componentmodel.CancelEventA
         }
     }
 
+    /**
+     * Gets the value of the .NET property OldDisplayIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ColumnReorderedEventArgs.OldDisplayIndex" target="_top">.NET documentation</a>
+     */
     public int getOldDisplayIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +275,13 @@ public class ColumnReorderedEventArgs extends system.componentmodel.CancelEventA
         }
     }
 
+    /**
+     * Gets the value of the .NET property Header.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ColumnReorderedEventArgs.Header" target="_top">.NET documentation</a>
+     */
     public ColumnHeader getHeader() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

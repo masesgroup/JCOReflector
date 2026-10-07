@@ -109,7 +109,10 @@ public class DataAdapter extends system.componentmodel.Component  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataAdapter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -164,6 +167,13 @@ public class DataAdapter extends system.componentmodel.Component  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ShouldSerializeAcceptChangesDuringFill.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DataAdapter.ShouldSerializeAcceptChangesDuringFill" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeAcceptChangesDuringFill() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +188,13 @@ public class DataAdapter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member ShouldSerializeFillLoadOption.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DataAdapter.ShouldSerializeFillLoadOption" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeFillLoadOption() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +209,26 @@ public class DataAdapter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member Fill.
+     *
+     * @param dataSet the argument of type {@code DataSet}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DataAdapter.Fill" target="_top">.NET documentation</a>
+     */
     public int Fill(DataSet dataSet) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +269,26 @@ public class DataAdapter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member Update.
+     *
+     * @param dataSet the argument of type {@code DataSet}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DataAdapter.Update" target="_top">.NET documentation</a>
+     */
     public int Update(DataSet dataSet) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +329,27 @@ public class DataAdapter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member FillSchema.
+     *
+     * @param dataSet the argument of type {@code DataSet}
+     * @param schemaType the argument of type {@code SchemaType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DataAdapter.FillSchema" target="_top">.NET documentation</a>
+     */
     public DataTable[] FillSchema(DataSet dataSet, SchemaType schemaType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +371,13 @@ public class DataAdapter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFillParameters.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DataAdapter.GetFillParameters" target="_top">.NET documentation</a>
+     */
     public IDataParameter[] GetFillParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -314,6 +399,12 @@ public class DataAdapter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResetFillLoadOption.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DataAdapter.ResetFillLoadOption" target="_top">.NET documentation</a>
+     */
     public void ResetFillLoadOption() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -328,6 +419,13 @@ public class DataAdapter extends system.componentmodel.Component  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AcceptChangesDuringFill.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DataAdapter.AcceptChangesDuringFill" target="_top">.NET documentation</a>
+     */
     public boolean getAcceptChangesDuringFill() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -342,6 +440,13 @@ public class DataAdapter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AcceptChangesDuringFill.
+     *
+     * @param AcceptChangesDuringFill the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DataAdapter.AcceptChangesDuringFill" target="_top">.NET documentation</a>
+     */
     public void setAcceptChangesDuringFill(boolean AcceptChangesDuringFill) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -352,6 +457,13 @@ public class DataAdapter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AcceptChangesDuringUpdate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DataAdapter.AcceptChangesDuringUpdate" target="_top">.NET documentation</a>
+     */
     public boolean getAcceptChangesDuringUpdate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -366,6 +478,13 @@ public class DataAdapter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AcceptChangesDuringUpdate.
+     *
+     * @param AcceptChangesDuringUpdate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DataAdapter.AcceptChangesDuringUpdate" target="_top">.NET documentation</a>
+     */
     public void setAcceptChangesDuringUpdate(boolean AcceptChangesDuringUpdate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -376,6 +495,13 @@ public class DataAdapter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContinueUpdateOnError.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DataAdapter.ContinueUpdateOnError" target="_top">.NET documentation</a>
+     */
     public boolean getContinueUpdateOnError() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -390,6 +516,13 @@ public class DataAdapter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ContinueUpdateOnError.
+     *
+     * @param ContinueUpdateOnError the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DataAdapter.ContinueUpdateOnError" target="_top">.NET documentation</a>
+     */
     public void setContinueUpdateOnError(boolean ContinueUpdateOnError) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -400,6 +533,13 @@ public class DataAdapter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReturnProviderSpecificTypes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DataAdapter.ReturnProviderSpecificTypes" target="_top">.NET documentation</a>
+     */
     public boolean getReturnProviderSpecificTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -414,6 +554,13 @@ public class DataAdapter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReturnProviderSpecificTypes.
+     *
+     * @param ReturnProviderSpecificTypes the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DataAdapter.ReturnProviderSpecificTypes" target="_top">.NET documentation</a>
+     */
     public void setReturnProviderSpecificTypes(boolean ReturnProviderSpecificTypes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -424,6 +571,22 @@ public class DataAdapter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TableMappings.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DataAdapter.TableMappings" target="_top">.NET documentation</a>
+     */
     public DataTableMappingCollection getTableMappings() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -439,6 +602,13 @@ public class DataAdapter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FillLoadOption.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DataAdapter.FillLoadOption" target="_top">.NET documentation</a>
+     */
     public LoadOption getFillLoadOption() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -454,6 +624,22 @@ public class DataAdapter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FillLoadOption.
+     *
+     * @param FillLoadOption the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DataAdapter.FillLoadOption" target="_top">.NET documentation</a>
+     */
     public void setFillLoadOption(LoadOption FillLoadOption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -464,6 +650,13 @@ public class DataAdapter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MissingMappingAction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DataAdapter.MissingMappingAction" target="_top">.NET documentation</a>
+     */
     public MissingMappingAction getMissingMappingAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -479,6 +672,22 @@ public class DataAdapter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MissingMappingAction.
+     *
+     * @param MissingMappingAction the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DataAdapter.MissingMappingAction" target="_top">.NET documentation</a>
+     */
     public void setMissingMappingAction(MissingMappingAction MissingMappingAction) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -489,6 +698,13 @@ public class DataAdapter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MissingSchemaAction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DataAdapter.MissingSchemaAction" target="_top">.NET documentation</a>
+     */
     public MissingSchemaAction getMissingSchemaAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -504,6 +720,22 @@ public class DataAdapter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MissingSchemaAction.
+     *
+     * @param MissingSchemaAction the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DataAdapter.MissingSchemaAction" target="_top">.NET documentation</a>
+     */
     public void setMissingSchemaAction(MissingSchemaAction MissingSchemaAction) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -519,6 +751,13 @@ public class DataAdapter extends system.componentmodel.Component  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addFillError.
+     *
+     * @param handler the argument of type {@code FillErrorEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addFillError(FillErrorEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -529,6 +768,13 @@ public class DataAdapter extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeFillError.
+     *
+     * @param handler the argument of type {@code FillErrorEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeFillError(FillErrorEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

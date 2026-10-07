@@ -107,7 +107,10 @@ public class HttpClientChannel extends system.runtime.remoting.channels.BaseChan
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HttpClientChannel(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,13 @@ public class HttpClientChannel extends system.runtime.remoting.channels.BaseChan
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.Http.HttpClientChannel.-ctor" target="_top">.NET documentation</a>
+     */
     public HttpClientChannel() throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +174,16 @@ public class HttpClientChannel extends system.runtime.remoting.channels.BaseChan
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param properties the argument of type {@code IDictionary}
+     * @param sinkProvider the argument of type {@code IClientChannelSinkProvider}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.Http.HttpClientChannel.-ctor" target="_top">.NET documentation</a>
+     */
     public HttpClientChannel(IDictionary properties, IClientChannelSinkProvider sinkProvider) throws Throwable, system.NotImplementedException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +194,15 @@ public class HttpClientChannel extends system.runtime.remoting.channels.BaseChan
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param sinkProvider the argument of type {@code IClientChannelSinkProvider}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.Http.HttpClientChannel.-ctor" target="_top">.NET documentation</a>
+     */
     public HttpClientChannel(java.lang.String name, IClientChannelSinkProvider sinkProvider) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -188,6 +217,34 @@ public class HttpClientChannel extends system.runtime.remoting.channels.BaseChan
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateMessageSink.
+     *
+     * @param url the argument of type {@code java.lang.String}
+     * @param remoteChannelData the argument of type {@code NetObject}
+     * @param objectURI the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.Http.HttpClientChannel.CreateMessageSink" target="_top">.NET documentation</a>
+     */
     public IMessageSink CreateMessageSink(java.lang.String url, NetObject remoteChannelData, JCORefOut objectURI) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.configuration.ConfigurationException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.OverflowException, system.runtime.remoting.RemotingException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +260,16 @@ public class HttpClientChannel extends system.runtime.remoting.channels.BaseChan
         }
     }
 
+    /**
+     * Invokes the .NET member Parse.
+     *
+     * @param url the argument of type {@code java.lang.String}
+     * @param objectURI the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.Http.HttpClientChannel.Parse" target="_top">.NET documentation</a>
+     */
     public java.lang.String Parse(java.lang.String url, JCORefOut objectURI) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +288,13 @@ public class HttpClientChannel extends system.runtime.remoting.channels.BaseChan
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsSecured.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.Http.HttpClientChannel.IsSecured" target="_top">.NET documentation</a>
+     */
     public boolean getIsSecured() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +309,13 @@ public class HttpClientChannel extends system.runtime.remoting.channels.BaseChan
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsSecured.
+     *
+     * @param IsSecured the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.Http.HttpClientChannel.IsSecured" target="_top">.NET documentation</a>
+     */
     public void setIsSecured(boolean IsSecured) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +326,13 @@ public class HttpClientChannel extends system.runtime.remoting.channels.BaseChan
         }
     }
 
+    /**
+     * Gets the value of the .NET property ChannelPriority.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.Http.HttpClientChannel.ChannelPriority" target="_top">.NET documentation</a>
+     */
     public int getChannelPriority() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -285,6 +373,13 @@ public class HttpClientChannel extends system.runtime.remoting.channels.BaseChan
         }
     }
 
+    /**
+     * Gets the value of the .NET property ChannelName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.Http.HttpClientChannel.ChannelName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getChannelName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

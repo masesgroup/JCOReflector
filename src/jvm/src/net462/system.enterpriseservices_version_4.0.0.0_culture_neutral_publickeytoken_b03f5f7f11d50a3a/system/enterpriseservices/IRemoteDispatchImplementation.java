@@ -98,7 +98,10 @@ public class IRemoteDispatchImplementation extends NetObject implements IRemoteD
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IRemoteDispatchImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,14 @@ public class IRemoteDispatchImplementation extends NetObject implements IRemoteD
 
     // Methods section
     
+    /**
+     * Invokes the .NET member RemoteDispatchAutoDone.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.IRemoteDispatch.RemoteDispatchAutoDone" target="_top">.NET documentation</a>
+     */
     public java.lang.String RemoteDispatchAutoDone(java.lang.String s) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -154,6 +165,14 @@ public class IRemoteDispatchImplementation extends NetObject implements IRemoteD
         }
     }
 
+    /**
+     * Invokes the .NET member RemoteDispatchNotAutoDone.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.IRemoteDispatch.RemoteDispatchNotAutoDone" target="_top">.NET documentation</a>
+     */
     public java.lang.String RemoteDispatchNotAutoDone(java.lang.String s) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

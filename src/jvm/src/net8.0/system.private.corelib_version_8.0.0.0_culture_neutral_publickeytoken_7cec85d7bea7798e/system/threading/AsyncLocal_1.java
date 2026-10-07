@@ -99,7 +99,10 @@ public class AsyncLocal_1<T extends IJCOBridgeReflected> extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AsyncLocal_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class AsyncLocal_1<T extends IJCOBridgeReflected> extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.AsyncLocal-1.-ctor" target="_top">.NET documentation</a>
+     */
     public AsyncLocal_1() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,13 @@ public class AsyncLocal_1<T extends IJCOBridgeReflected> extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param valueChangedHandler the argument of type {@code Action_1}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.AsyncLocal-1.-ctor" target="_top">.NET documentation</a>
+     */
     public AsyncLocal_1(Action_1 valueChangedHandler) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +194,13 @@ public class AsyncLocal_1<T extends IJCOBridgeReflected> extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.AsyncLocal-1.Value" target="_top">.NET documentation</a>
+     */
     public T getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +215,18 @@ public class AsyncLocal_1<T extends IJCOBridgeReflected> extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Value.
+     *
+     * @param Value the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.AsyncLocal-1.Value" target="_top">.NET documentation</a>
+     */
     public void setValue(T Value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

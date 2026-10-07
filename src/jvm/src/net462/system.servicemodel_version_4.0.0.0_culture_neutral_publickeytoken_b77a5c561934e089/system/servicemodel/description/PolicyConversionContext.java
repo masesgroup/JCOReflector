@@ -104,7 +104,10 @@ public class PolicyConversionContext extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PolicyConversionContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,13 @@ public class PolicyConversionContext extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetBindingAssertions.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.PolicyConversionContext.GetBindingAssertions" target="_top">.NET documentation</a>
+     */
     public PolicyAssertionCollection GetBindingAssertions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +182,14 @@ public class PolicyConversionContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFaultBindingAssertions.
+     *
+     * @param fault the argument of type {@code FaultDescription}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.PolicyConversionContext.GetFaultBindingAssertions" target="_top">.NET documentation</a>
+     */
     public PolicyAssertionCollection GetFaultBindingAssertions(FaultDescription fault) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +205,14 @@ public class PolicyConversionContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMessageBindingAssertions.
+     *
+     * @param message the argument of type {@code MessageDescription}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.PolicyConversionContext.GetMessageBindingAssertions" target="_top">.NET documentation</a>
+     */
     public PolicyAssertionCollection GetMessageBindingAssertions(MessageDescription message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +228,14 @@ public class PolicyConversionContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetOperationBindingAssertions.
+     *
+     * @param operation the argument of type {@code OperationDescription}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.PolicyConversionContext.GetOperationBindingAssertions" target="_top">.NET documentation</a>
+     */
     public PolicyAssertionCollection GetOperationBindingAssertions(OperationDescription operation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +255,13 @@ public class PolicyConversionContext extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BindingElements.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.PolicyConversionContext.BindingElements" target="_top">.NET documentation</a>
+     */
     public BindingElementCollection getBindingElements() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +277,13 @@ public class PolicyConversionContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Contract.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.PolicyConversionContext.Contract" target="_top">.NET documentation</a>
+     */
     public ContractDescription getContract() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

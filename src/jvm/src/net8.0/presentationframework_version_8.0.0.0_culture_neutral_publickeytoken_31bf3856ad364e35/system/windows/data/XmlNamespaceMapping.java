@@ -99,7 +99,10 @@ public class XmlNamespaceMapping extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlNamespaceMapping(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class XmlNamespaceMapping extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.XmlNamespaceMapping.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlNamespaceMapping() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,14 @@ public class XmlNamespaceMapping extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @param uri the argument of type {@code Uri}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.XmlNamespaceMapping.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlNamespaceMapping(java.lang.String prefix, Uri uri) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -173,8 +190,11 @@ public class XmlNamespaceMapping extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToISupportInitialize method available in ISupportInitialize to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ISupportInitialize.BeginInit" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void BeginInit() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
     }
@@ -182,8 +202,11 @@ public class XmlNamespaceMapping extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToISupportInitialize method available in ISupportInitialize to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ISupportInitialize.EndInit" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void EndInit() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
     }
@@ -192,6 +215,13 @@ public class XmlNamespaceMapping extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Prefix.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.XmlNamespaceMapping.Prefix" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPrefix() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +236,20 @@ public class XmlNamespaceMapping extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Prefix.
+     *
+     * @param Prefix the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.XmlNamespaceMapping.Prefix" target="_top">.NET documentation</a>
+     */
     public void setPrefix(java.lang.String Prefix) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +260,13 @@ public class XmlNamespaceMapping extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Uri.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.XmlNamespaceMapping.Uri" target="_top">.NET documentation</a>
+     */
     public Uri getUri() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +282,20 @@ public class XmlNamespaceMapping extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Uri.
+     *
+     * @param Uri the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.XmlNamespaceMapping.Uri" target="_top">.NET documentation</a>
+     */
     public void setUri(Uri Uri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

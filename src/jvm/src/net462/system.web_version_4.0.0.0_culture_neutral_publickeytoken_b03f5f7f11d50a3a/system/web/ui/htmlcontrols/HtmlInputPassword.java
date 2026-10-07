@@ -99,7 +99,10 @@ public class HtmlInputPassword extends system.web.ui.htmlcontrols.HtmlInputText 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HtmlInputPassword(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,16 @@ public class HtmlInputPassword extends system.web.ui.htmlcontrols.HtmlInputText 
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.HtmlControls.HtmlInputPassword.-ctor" target="_top">.NET documentation</a>
+     */
     public HtmlInputPassword() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file

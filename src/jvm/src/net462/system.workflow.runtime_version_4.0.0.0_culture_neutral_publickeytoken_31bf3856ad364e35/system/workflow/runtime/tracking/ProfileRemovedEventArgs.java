@@ -99,7 +99,10 @@ public class ProfileRemovedEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ProfileRemovedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class ProfileRemovedEventArgs extends system.EventArgs  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.ProfileRemovedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ProfileRemovedEventArgs() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,13 @@ public class ProfileRemovedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param workflowType the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.ProfileRemovedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ProfileRemovedEventArgs(NetType workflowType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +190,13 @@ public class ProfileRemovedEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property WorkflowType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.ProfileRemovedEventArgs.WorkflowType" target="_top">.NET documentation</a>
+     */
     public NetType getWorkflowType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +212,13 @@ public class ProfileRemovedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WorkflowType.
+     *
+     * @param WorkflowType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.ProfileRemovedEventArgs.WorkflowType" target="_top">.NET documentation</a>
+     */
     public void setWorkflowType(NetType WorkflowType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class ExportedTypeExtensions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ExportedTypeExtensions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,18 @@ public class ExportedTypeExtensions extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetTypeDefinitionId.
+     *
+     * @param exportedType the argument of type {@code ExportedType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.ExportedTypeExtensions.GetTypeDefinitionId" target="_top">.NET documentation</a>
+     */
     public static int GetTypeDefinitionId(ExportedType exportedType) throws Throwable, system.ArgumentException, system.BadImageFormatException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

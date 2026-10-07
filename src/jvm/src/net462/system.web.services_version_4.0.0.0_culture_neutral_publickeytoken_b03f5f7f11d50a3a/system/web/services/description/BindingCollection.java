@@ -99,7 +99,10 @@ public class BindingCollection extends system.web.services.description.ServiceDe
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BindingCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,14 @@ public class BindingCollection extends system.web.services.description.ServiceDe
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param binding the argument of type {@code system.web.services.description.Binding}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.BindingCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(system.web.services.description.Binding binding) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +179,14 @@ public class BindingCollection extends system.web.services.description.ServiceDe
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param binding the argument of type {@code system.web.services.description.Binding}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.BindingCollection.Add" target="_top">.NET documentation</a>
+     */
     public int Add(system.web.services.description.Binding binding) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +227,14 @@ public class BindingCollection extends system.web.services.description.ServiceDe
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param binding the argument of type {@code system.web.services.description.Binding}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.BindingCollection.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(system.web.services.description.Binding binding) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +275,14 @@ public class BindingCollection extends system.web.services.description.ServiceDe
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code system.web.services.description.Binding[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.BindingCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(system.web.services.description.Binding[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +293,14 @@ public class BindingCollection extends system.web.services.description.ServiceDe
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param binding the argument of type {@code system.web.services.description.Binding}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.BindingCollection.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(int index, system.web.services.description.Binding binding) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +311,13 @@ public class BindingCollection extends system.web.services.description.ServiceDe
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param binding the argument of type {@code system.web.services.description.Binding}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.BindingCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(system.web.services.description.Binding binding) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

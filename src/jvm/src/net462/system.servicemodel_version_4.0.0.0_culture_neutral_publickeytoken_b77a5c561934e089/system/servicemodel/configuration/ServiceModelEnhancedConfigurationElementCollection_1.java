@@ -99,7 +99,10 @@ public class ServiceModelEnhancedConfigurationElementCollection_1<TConfiguration
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ServiceModelEnhancedConfigurationElementCollection_1(java.lang.Object instance) throws Throwable {
         super(instance);

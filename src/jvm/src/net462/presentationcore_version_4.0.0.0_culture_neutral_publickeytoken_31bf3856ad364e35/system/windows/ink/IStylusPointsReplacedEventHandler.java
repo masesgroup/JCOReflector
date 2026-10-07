@@ -52,5 +52,11 @@ import system.windows.ink.StylusPointsReplacedEventArgs;
  * @version 2.0.0.0
  */
 public interface IStylusPointsReplacedEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.Windows.Ink.StylusPointsReplacedEventArgs}
+     */
     public void Invoke(NetObject sender, StylusPointsReplacedEventArgs e);
 }

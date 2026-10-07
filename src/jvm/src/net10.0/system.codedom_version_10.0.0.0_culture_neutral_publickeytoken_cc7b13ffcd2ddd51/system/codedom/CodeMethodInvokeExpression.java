@@ -101,7 +101,10 @@ public class CodeMethodInvokeExpression extends system.codedom.CodeExpression  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodeMethodInvokeExpression(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class CodeMethodInvokeExpression extends system.codedom.CodeExpression  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMethodInvokeExpression.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeMethodInvokeExpression() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,20 @@ public class CodeMethodInvokeExpression extends system.codedom.CodeExpression  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param targetObject the argument of type {@code CodeExpression}
+     * @param methodName the argument of type {@code java.lang.String}
+     * @param parameters the argument of type {@code CodeExpression...}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMethodInvokeExpression.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeMethodInvokeExpression(CodeExpression targetObject, java.lang.String methodName, CodeExpression... parameters) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +191,19 @@ public class CodeMethodInvokeExpression extends system.codedom.CodeExpression  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param method the argument of type {@code CodeMethodReferenceExpression}
+     * @param parameters the argument of type {@code CodeExpression...}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMethodInvokeExpression.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeMethodInvokeExpression(CodeMethodReferenceExpression method, CodeExpression... parameters) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -186,6 +222,13 @@ public class CodeMethodInvokeExpression extends system.codedom.CodeExpression  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Parameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMethodInvokeExpression.Parameters" target="_top">.NET documentation</a>
+     */
     public CodeExpressionCollection getParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +244,13 @@ public class CodeMethodInvokeExpression extends system.codedom.CodeExpression  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Method.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMethodInvokeExpression.Method" target="_top">.NET documentation</a>
+     */
     public CodeMethodReferenceExpression getMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +266,13 @@ public class CodeMethodInvokeExpression extends system.codedom.CodeExpression  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Method.
+     *
+     * @param Method the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMethodInvokeExpression.Method" target="_top">.NET documentation</a>
+     */
     public void setMethod(CodeMethodReferenceExpression Method) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

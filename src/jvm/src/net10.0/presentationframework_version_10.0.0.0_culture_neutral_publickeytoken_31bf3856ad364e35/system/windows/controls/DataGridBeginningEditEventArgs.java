@@ -102,7 +102,10 @@ public class DataGridBeginningEditEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataGridBeginningEditEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,15 @@ public class DataGridBeginningEditEventArgs extends system.EventArgs  {
     public DataGridBeginningEditEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param column the argument of type {@code DataGridColumn}
+     * @param row the argument of type {@code DataGridRow}
+     * @param editingEventArgs the argument of type {@code RoutedEventArgs}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridBeginningEditEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public DataGridBeginningEditEventArgs(DataGridColumn column, DataGridRow row, RoutedEventArgs editingEventArgs) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +183,13 @@ public class DataGridBeginningEditEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Cancel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridBeginningEditEventArgs.Cancel" target="_top">.NET documentation</a>
+     */
     public boolean getCancel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +204,13 @@ public class DataGridBeginningEditEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Cancel.
+     *
+     * @param Cancel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridBeginningEditEventArgs.Cancel" target="_top">.NET documentation</a>
+     */
     public void setCancel(boolean Cancel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +221,13 @@ public class DataGridBeginningEditEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Column.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridBeginningEditEventArgs.Column" target="_top">.NET documentation</a>
+     */
     public DataGridColumn getColumn() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +243,13 @@ public class DataGridBeginningEditEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Row.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridBeginningEditEventArgs.Row" target="_top">.NET documentation</a>
+     */
     public DataGridRow getRow() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +265,13 @@ public class DataGridBeginningEditEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EditingEventArgs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridBeginningEditEventArgs.EditingEventArgs" target="_top">.NET documentation</a>
+     */
     public RoutedEventArgs getEditingEventArgs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

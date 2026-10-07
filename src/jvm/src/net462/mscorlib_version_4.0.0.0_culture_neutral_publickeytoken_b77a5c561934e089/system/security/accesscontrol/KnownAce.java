@@ -100,7 +100,10 @@ public class KnownAce extends system.security.accesscontrol.GenericAce  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public KnownAce(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,13 @@ public class KnownAce extends system.security.accesscontrol.GenericAce  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AccessMask.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.KnownAce.AccessMask" target="_top">.NET documentation</a>
+     */
     public int getAccessMask() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +207,13 @@ public class KnownAce extends system.security.accesscontrol.GenericAce  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AccessMask.
+     *
+     * @param AccessMask the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.KnownAce.AccessMask" target="_top">.NET documentation</a>
+     */
     public void setAccessMask(int AccessMask) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +224,13 @@ public class KnownAce extends system.security.accesscontrol.GenericAce  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SecurityIdentifier.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.KnownAce.SecurityIdentifier" target="_top">.NET documentation</a>
+     */
     public SecurityIdentifier getSecurityIdentifier() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +246,14 @@ public class KnownAce extends system.security.accesscontrol.GenericAce  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SecurityIdentifier.
+     *
+     * @param SecurityIdentifier the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.KnownAce.SecurityIdentifier" target="_top">.NET documentation</a>
+     */
     public void setSecurityIdentifier(SecurityIdentifier SecurityIdentifier) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

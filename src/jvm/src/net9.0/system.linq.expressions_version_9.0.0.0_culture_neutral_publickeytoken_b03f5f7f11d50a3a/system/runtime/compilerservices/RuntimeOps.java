@@ -102,7 +102,10 @@ public class RuntimeOps extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RuntimeOps(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,15 @@ public class RuntimeOps extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ExpandoCheckVersion.
+     *
+     * @param expando the argument of type {@code ExpandoObject}
+     * @param version the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.RuntimeOps.ExpandoCheckVersion" target="_top">.NET documentation</a>
+     */
     public static boolean ExpandoCheckVersion(ExpandoObject expando, NetObject version) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -169,6 +181,31 @@ public class RuntimeOps extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExpandoTryDeleteValue.
+     *
+     * @param expando the argument of type {@code ExpandoObject}
+     * @param indexClass the argument of type {@code NetObject}
+     * @param index the argument of type {@code int}
+     * @param name the argument of type {@code java.lang.String}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.RuntimeOps.ExpandoTryDeleteValue" target="_top">.NET documentation</a>
+     */
     public static boolean ExpandoTryDeleteValue(ExpandoObject expando, NetObject indexClass, int index, java.lang.String name, boolean ignoreCase) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -183,6 +220,31 @@ public class RuntimeOps extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExpandoTryGetValue.
+     *
+     * @param expando the argument of type {@code ExpandoObject}
+     * @param indexClass the argument of type {@code NetObject}
+     * @param index the argument of type {@code int}
+     * @param name the argument of type {@code java.lang.String}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @param value the argument of type {@code JCORefOut<NetObject>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.RuntimeOps.ExpandoTryGetValue" target="_top">.NET documentation</a>
+     */
     public static boolean ExpandoTryGetValue(ExpandoObject expando, NetObject indexClass, int index, java.lang.String name, boolean ignoreCase, JCORefOut<NetObject> value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -197,6 +259,20 @@ public class RuntimeOps extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Quote.
+     *
+     * @param expression the argument of type {@code Expression}
+     * @param hoistedLocals the argument of type {@code NetObject}
+     * @param locals the argument of type {@code NetObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.RuntimeOps.Quote" target="_top">.NET documentation</a>
+     */
     public static Expression Quote(Expression expression, NetObject hoistedLocals, NetObject[] locals) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -212,6 +288,33 @@ public class RuntimeOps extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExpandoTrySetValue.
+     *
+     * @param expando the argument of type {@code ExpandoObject}
+     * @param indexClass the argument of type {@code NetObject}
+     * @param index the argument of type {@code int}
+     * @param value the argument of type {@code NetObject}
+     * @param name the argument of type {@code java.lang.String}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.RuntimeOps.ExpandoTrySetValue" target="_top">.NET documentation</a>
+     */
     public static NetObject ExpandoTrySetValue(ExpandoObject expando, NetObject indexClass, int index, NetObject value, java.lang.String name, boolean ignoreCase) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.reflection.AmbiguousMatchException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -227,6 +330,13 @@ public class RuntimeOps extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateRuntimeVariables.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.RuntimeOps.CreateRuntimeVariables" target="_top">.NET documentation</a>
+     */
     public static IRuntimeVariables CreateRuntimeVariables() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -242,6 +352,15 @@ public class RuntimeOps extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateRuntimeVariables.
+     *
+     * @param data the argument of type {@code NetObject[]}
+     * @param indexes the argument of type {@code long[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.RuntimeOps.CreateRuntimeVariables" target="_top">.NET documentation</a>
+     */
     public static IRuntimeVariables CreateRuntimeVariables(NetObject[] data, long[] indexes) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -257,6 +376,15 @@ public class RuntimeOps extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateRuntimeVariables.
+     *
+     * @param dupParam0 the argument of type {@code NetObject[]}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.RuntimeOps.CreateRuntimeVariables" target="_top">.NET documentation</a>
+     */
     public static IRuntimeVariables CreateRuntimeVariables(NetObject[] dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -272,6 +400,16 @@ public class RuntimeOps extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MergeRuntimeVariables.
+     *
+     * @param first the argument of type {@code IRuntimeVariables}
+     * @param second the argument of type {@code IRuntimeVariables}
+     * @param indexes the argument of type {@code int[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.RuntimeOps.MergeRuntimeVariables" target="_top">.NET documentation</a>
+     */
     public static IRuntimeVariables MergeRuntimeVariables(IRuntimeVariables first, IRuntimeVariables second, int[] indexes) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -287,6 +425,16 @@ public class RuntimeOps extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MergeRuntimeVariables.
+     *
+     * @param dupParam0 the argument of type {@code IRuntimeVariables}
+     * @param dupParam1 the argument of type {@code IRuntimeVariables}
+     * @param dupParam2 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.RuntimeOps.MergeRuntimeVariables" target="_top">.NET documentation</a>
+     */
     public static IRuntimeVariables MergeRuntimeVariables(IRuntimeVariables dupParam0, IRuntimeVariables dupParam1, JCORefOut dupParam2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -302,6 +450,23 @@ public class RuntimeOps extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExpandoPromoteClass.
+     *
+     * @param expando the argument of type {@code ExpandoObject}
+     * @param oldClass the argument of type {@code NetObject}
+     * @param newClass the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.RuntimeOps.ExpandoPromoteClass" target="_top">.NET documentation</a>
+     */
     public static void ExpandoPromoteClass(ExpandoObject expando, NetObject oldClass, NetObject newClass) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

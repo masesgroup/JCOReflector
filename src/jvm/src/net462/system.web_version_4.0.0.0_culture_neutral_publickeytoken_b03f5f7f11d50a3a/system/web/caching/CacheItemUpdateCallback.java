@@ -168,7 +168,10 @@ public class CacheItemUpdateCallback extends JCVoidDelegate implements IJCVoidEv
         callerInstance = instance;
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CacheItemUpdateCallback(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
@@ -190,6 +193,18 @@ public class CacheItemUpdateCallback extends JCVoidDelegate implements IJCVoidEv
         return JCOBridgeInstance.translateException(ne);
     }
 
+    /**
+     * Invokes the .NET member DynamicInvoke.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @param reason the argument of type {@code CacheItemUpdateReason}
+     * @param expensiveObject the argument of type {@code NetObject}
+     * @param dependency the argument of type {@code CacheDependency}
+     * @param absoluteExpiration the argument of type {@code DateTime}
+     * @param slidingExpiration the argument of type {@code TimeSpan}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Delegate.DynamicInvoke" target="_top">.NET documentation</a>
+     */
     public void DynamicInvoke(java.lang.String key, CacheItemUpdateReason reason, NetObject expensiveObject, CacheDependency dependency, DateTime absoluteExpiration, TimeSpan slidingExpiration) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,7 +216,14 @@ public class CacheItemUpdateCallback extends JCVoidDelegate implements IJCVoidEv
     }
 
     /**
-     * Methods invoked in JVM when an event is raised in CLR 
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param key the .NET argument of type {@code System.String}
+     * @param reason the .NET argument of type {@code System.Web.Caching.CacheItemUpdateReason}
+     * @param expensiveObject the .NET argument of type {@code System.Object&}
+     * @param dependency the .NET argument of type {@code System.Web.Caching.CacheDependency&}
+     * @param absoluteExpiration the .NET argument of type {@code System.DateTime&}
+     * @param slidingExpiration the .NET argument of type {@code System.TimeSpan&}
      */
     public void Invoke(java.lang.String key, CacheItemUpdateReason reason, NetObject expensiveObject, CacheDependency dependency, DateTime absoluteExpiration, TimeSpan slidingExpiration) {
     }

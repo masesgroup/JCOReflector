@@ -101,7 +101,10 @@ public class MimeReturnReader extends system.web.services.protocols.MimeFormatte
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MimeReturnReader(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,15 @@ public class MimeReturnReader extends system.web.services.protocols.MimeFormatte
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Read.
+     *
+     * @param response the argument of type {@code WebResponse}
+     * @param responseStream the argument of type {@code Stream}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.MimeReturnReader.Read" target="_top">.NET documentation</a>
+     */
     public NetObject Read(WebResponse response, Stream responseStream) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

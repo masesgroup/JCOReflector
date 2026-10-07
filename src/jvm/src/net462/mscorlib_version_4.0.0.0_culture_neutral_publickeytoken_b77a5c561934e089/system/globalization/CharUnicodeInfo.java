@@ -99,7 +99,10 @@ public class CharUnicodeInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CharUnicodeInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,14 @@ public class CharUnicodeInfo extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetNumericValue.
+     *
+     * @param ch the argument of type {@code char}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.CharUnicodeInfo.GetNumericValue" target="_top">.NET documentation</a>
+     */
     public static double GetNumericValue(char ch) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -192,6 +203,17 @@ public class CharUnicodeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetNumericValue.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.CharUnicodeInfo.GetNumericValue" target="_top">.NET documentation</a>
+     */
     public static double GetNumericValue(java.lang.String s, int index) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -232,6 +254,14 @@ public class CharUnicodeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDecimalDigitValue.
+     *
+     * @param ch the argument of type {@code char}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.CharUnicodeInfo.GetDecimalDigitValue" target="_top">.NET documentation</a>
+     */
     public static int GetDecimalDigitValue(char ch) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -272,6 +302,17 @@ public class CharUnicodeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDecimalDigitValue.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.CharUnicodeInfo.GetDecimalDigitValue" target="_top">.NET documentation</a>
+     */
     public static int GetDecimalDigitValue(java.lang.String s, int index) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -312,6 +353,14 @@ public class CharUnicodeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDigitValue.
+     *
+     * @param ch the argument of type {@code char}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.CharUnicodeInfo.GetDigitValue" target="_top">.NET documentation</a>
+     */
     public static int GetDigitValue(char ch) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -352,6 +401,17 @@ public class CharUnicodeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDigitValue.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.CharUnicodeInfo.GetDigitValue" target="_top">.NET documentation</a>
+     */
     public static int GetDigitValue(java.lang.String s, int index) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -392,6 +452,14 @@ public class CharUnicodeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetUnicodeCategory.
+     *
+     * @param ch the argument of type {@code char}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.CharUnicodeInfo.GetUnicodeCategory" target="_top">.NET documentation</a>
+     */
     public static UnicodeCategory GetUnicodeCategory(char ch) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -407,6 +475,17 @@ public class CharUnicodeInfo extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetUnicodeCategory.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.CharUnicodeInfo.GetUnicodeCategory" target="_top">.NET documentation</a>
+     */
     public static UnicodeCategory GetUnicodeCategory(java.lang.String s, int index) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

@@ -98,7 +98,10 @@ public class IParameterInspectorImplementation extends NetObject implements IPar
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IParameterInspectorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,15 @@ public class IParameterInspectorImplementation extends NetObject implements IPar
 
     // Methods section
     
+    /**
+     * Invokes the .NET member BeforeCall.
+     *
+     * @param operationName the argument of type {@code java.lang.String}
+     * @param inputs the argument of type {@code NetObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IParameterInspector.BeforeCall" target="_top">.NET documentation</a>
+     */
     public NetObject BeforeCall(java.lang.String operationName, NetObject[] inputs) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -155,6 +167,16 @@ public class IParameterInspectorImplementation extends NetObject implements IPar
         }
     }
 
+    /**
+     * Invokes the .NET member AfterCall.
+     *
+     * @param operationName the argument of type {@code java.lang.String}
+     * @param outputs the argument of type {@code NetObject[]}
+     * @param returnValue the argument of type {@code NetObject}
+     * @param correlationState the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IParameterInspector.AfterCall" target="_top">.NET documentation</a>
+     */
     public void AfterCall(java.lang.String operationName, NetObject[] outputs, NetObject returnValue, NetObject correlationState) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class StateMachineStateRecord extends system.activities.tracking.CustomTr
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public StateMachineStateRecord(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,17 @@ public class StateMachineStateRecord extends system.activities.tracking.CustomTr
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.Tracking.StateMachineStateRecord.-ctor" target="_top">.NET documentation</a>
+     */
     public StateMachineStateRecord() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +178,15 @@ public class StateMachineStateRecord extends system.activities.tracking.CustomTr
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property StateMachineName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.Tracking.StateMachineStateRecord.StateMachineName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getStateMachineName() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +201,15 @@ public class StateMachineStateRecord extends system.activities.tracking.CustomTr
         }
     }
 
+    /**
+     * Sets the value of the .NET property StateMachineName.
+     *
+     * @param StateMachineName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.Tracking.StateMachineStateRecord.StateMachineName" target="_top">.NET documentation</a>
+     */
     public void setStateMachineName(java.lang.String StateMachineName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +220,15 @@ public class StateMachineStateRecord extends system.activities.tracking.CustomTr
         }
     }
 
+    /**
+     * Gets the value of the .NET property StateName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.Tracking.StateMachineStateRecord.StateName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getStateName() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +243,15 @@ public class StateMachineStateRecord extends system.activities.tracking.CustomTr
         }
     }
 
+    /**
+     * Sets the value of the .NET property StateName.
+     *
+     * @param StateName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.Tracking.StateMachineStateRecord.StateName" target="_top">.NET documentation</a>
+     */
     public void setStateName(java.lang.String StateName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class _ExceptionImplementation extends NetObject implements _Exception {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public _ExceptionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,13 @@ public class _ExceptionImplementation extends NetObject implements _Exception {
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetBaseException.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Exception.GetBaseException" target="_top">.NET documentation</a>
+     */
     public NetException GetBaseException() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -158,6 +168,14 @@ public class _ExceptionImplementation extends NetObject implements _Exception {
         }
     }
 
+    /**
+     * Invokes the .NET member GetObjectData.
+     *
+     * @param info the argument of type {@code SerializationInfo}
+     * @param context the argument of type {@code StreamingContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Exception.GetObjectData" target="_top">.NET documentation</a>
+     */
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +190,13 @@ public class _ExceptionImplementation extends NetObject implements _Exception {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property InnerException.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Exception.InnerException" target="_top">.NET documentation</a>
+     */
     public NetException getInnerException() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +212,13 @@ public class _ExceptionImplementation extends NetObject implements _Exception {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetSite.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Exception.TargetSite" target="_top">.NET documentation</a>
+     */
     public MethodBase getTargetSite() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +234,13 @@ public class _ExceptionImplementation extends NetObject implements _Exception {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HelpLink.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Exception.HelpLink" target="_top">.NET documentation</a>
+     */
     public java.lang.String getHelpLink() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +255,13 @@ public class _ExceptionImplementation extends NetObject implements _Exception {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HelpLink.
+     *
+     * @param HelpLink the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Exception.HelpLink" target="_top">.NET documentation</a>
+     */
     public void setHelpLink(java.lang.String HelpLink) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +272,13 @@ public class _ExceptionImplementation extends NetObject implements _Exception {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Message.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Exception.Message" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMessage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +293,13 @@ public class _ExceptionImplementation extends NetObject implements _Exception {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Source.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Exception.Source" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +314,13 @@ public class _ExceptionImplementation extends NetObject implements _Exception {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Source.
+     *
+     * @param Source the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Exception.Source" target="_top">.NET documentation</a>
+     */
     public void setSource(java.lang.String Source) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +331,13 @@ public class _ExceptionImplementation extends NetObject implements _Exception {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StackTrace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Exception.StackTrace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getStackTrace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

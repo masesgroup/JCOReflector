@@ -103,7 +103,10 @@ public class Calendar extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Calendar(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,16 @@ public class Calendar extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsLeapDay.
+     *
+     * @param year the argument of type {@code int}
+     * @param month the argument of type {@code int}
+     * @param day the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.IsLeapDay" target="_top">.NET documentation</a>
+     */
     public boolean IsLeapDay(int year, int month, int day) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +183,17 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsLeapDay.
+     *
+     * @param year the argument of type {@code int}
+     * @param month the argument of type {@code int}
+     * @param day the argument of type {@code int}
+     * @param era the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.IsLeapDay" target="_top">.NET documentation</a>
+     */
     public boolean IsLeapDay(int year, int month, int day, int era) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +208,15 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsLeapMonth.
+     *
+     * @param year the argument of type {@code int}
+     * @param month the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.IsLeapMonth" target="_top">.NET documentation</a>
+     */
     public boolean IsLeapMonth(int year, int month) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +231,16 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsLeapMonth.
+     *
+     * @param year the argument of type {@code int}
+     * @param month the argument of type {@code int}
+     * @param era the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.IsLeapMonth" target="_top">.NET documentation</a>
+     */
     public boolean IsLeapMonth(int year, int month, int era) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +255,14 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsLeapYear.
+     *
+     * @param year the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.IsLeapYear" target="_top">.NET documentation</a>
+     */
     public boolean IsLeapYear(int year) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +277,15 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsLeapYear.
+     *
+     * @param year the argument of type {@code int}
+     * @param era the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.IsLeapYear" target="_top">.NET documentation</a>
+     */
     public boolean IsLeapYear(int year, int era) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +300,14 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMilliseconds.
+     *
+     * @param time the argument of type {@code DateTime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.GetMilliseconds" target="_top">.NET documentation</a>
+     */
     public double GetMilliseconds(DateTime time) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +348,14 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDayOfMonth.
+     *
+     * @param time the argument of type {@code DateTime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.GetDayOfMonth" target="_top">.NET documentation</a>
+     */
     public int GetDayOfMonth(DateTime time) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +396,14 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDayOfYear.
+     *
+     * @param time the argument of type {@code DateTime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.GetDayOfYear" target="_top">.NET documentation</a>
+     */
     public int GetDayOfYear(DateTime time) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -360,6 +444,15 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDaysInMonth.
+     *
+     * @param year the argument of type {@code int}
+     * @param month the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.GetDaysInMonth" target="_top">.NET documentation</a>
+     */
     public int GetDaysInMonth(int year, int month) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -400,6 +493,16 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDaysInMonth.
+     *
+     * @param year the argument of type {@code int}
+     * @param month the argument of type {@code int}
+     * @param era the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.GetDaysInMonth" target="_top">.NET documentation</a>
+     */
     public int GetDaysInMonth(int year, int month, int era) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -440,6 +543,14 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDaysInYear.
+     *
+     * @param year the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.GetDaysInYear" target="_top">.NET documentation</a>
+     */
     public int GetDaysInYear(int year) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -480,6 +591,15 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDaysInYear.
+     *
+     * @param year the argument of type {@code int}
+     * @param era the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.GetDaysInYear" target="_top">.NET documentation</a>
+     */
     public int GetDaysInYear(int year, int era) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -520,6 +640,14 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEra.
+     *
+     * @param time the argument of type {@code DateTime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.GetEra" target="_top">.NET documentation</a>
+     */
     public int GetEra(DateTime time) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -560,6 +688,14 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetHour.
+     *
+     * @param time the argument of type {@code DateTime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.GetHour" target="_top">.NET documentation</a>
+     */
     public int GetHour(DateTime time) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -600,6 +736,14 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetLeapMonth.
+     *
+     * @param year the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.GetLeapMonth" target="_top">.NET documentation</a>
+     */
     public int GetLeapMonth(int year) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -640,6 +784,15 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetLeapMonth.
+     *
+     * @param year the argument of type {@code int}
+     * @param era the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.GetLeapMonth" target="_top">.NET documentation</a>
+     */
     public int GetLeapMonth(int year, int era) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -680,6 +833,14 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMinute.
+     *
+     * @param time the argument of type {@code DateTime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.GetMinute" target="_top">.NET documentation</a>
+     */
     public int GetMinute(DateTime time) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -720,6 +881,14 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMonth.
+     *
+     * @param time the argument of type {@code DateTime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.GetMonth" target="_top">.NET documentation</a>
+     */
     public int GetMonth(DateTime time) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -760,6 +929,14 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMonthsInYear.
+     *
+     * @param year the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.GetMonthsInYear" target="_top">.NET documentation</a>
+     */
     public int GetMonthsInYear(int year) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -800,6 +977,15 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMonthsInYear.
+     *
+     * @param year the argument of type {@code int}
+     * @param era the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.GetMonthsInYear" target="_top">.NET documentation</a>
+     */
     public int GetMonthsInYear(int year, int era) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -840,6 +1026,14 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetSecond.
+     *
+     * @param time the argument of type {@code DateTime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.GetSecond" target="_top">.NET documentation</a>
+     */
     public int GetSecond(DateTime time) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -880,6 +1074,27 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetWeekOfYear.
+     *
+     * @param time the argument of type {@code DateTime}
+     * @param rule the argument of type {@code CalendarWeekRule}
+     * @param firstDayOfWeek the argument of type {@code DayOfWeek}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.GetWeekOfYear" target="_top">.NET documentation</a>
+     */
     public int GetWeekOfYear(DateTime time, CalendarWeekRule rule, DayOfWeek firstDayOfWeek) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -920,6 +1135,14 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetYear.
+     *
+     * @param time the argument of type {@code DateTime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.GetYear" target="_top">.NET documentation</a>
+     */
     public int GetYear(DateTime time) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -960,6 +1183,15 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToFourDigitYear.
+     *
+     * @param year the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.ToFourDigitYear" target="_top">.NET documentation</a>
+     */
     public int ToFourDigitYear(int year) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1000,6 +1232,20 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddDays.
+     *
+     * @param time the argument of type {@code DateTime}
+     * @param days the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.AddDays" target="_top">.NET documentation</a>
+     */
     public DateTime AddDays(DateTime time, int days) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1015,6 +1261,20 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddHours.
+     *
+     * @param time the argument of type {@code DateTime}
+     * @param hours the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.AddHours" target="_top">.NET documentation</a>
+     */
     public DateTime AddHours(DateTime time, int hours) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1030,6 +1290,20 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddMilliseconds.
+     *
+     * @param time the argument of type {@code DateTime}
+     * @param milliseconds the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.AddMilliseconds" target="_top">.NET documentation</a>
+     */
     public DateTime AddMilliseconds(DateTime time, double milliseconds) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1045,6 +1319,20 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddMinutes.
+     *
+     * @param time the argument of type {@code DateTime}
+     * @param minutes the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.AddMinutes" target="_top">.NET documentation</a>
+     */
     public DateTime AddMinutes(DateTime time, int minutes) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1060,6 +1348,15 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddMonths.
+     *
+     * @param time the argument of type {@code DateTime}
+     * @param months the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.AddMonths" target="_top">.NET documentation</a>
+     */
     public DateTime AddMonths(DateTime time, int months) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1075,6 +1372,20 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddSeconds.
+     *
+     * @param time the argument of type {@code DateTime}
+     * @param seconds the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.AddSeconds" target="_top">.NET documentation</a>
+     */
     public DateTime AddSeconds(DateTime time, int seconds) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1090,6 +1401,19 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddWeeks.
+     *
+     * @param time the argument of type {@code DateTime}
+     * @param weeks the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.AddWeeks" target="_top">.NET documentation</a>
+     */
     public DateTime AddWeeks(DateTime time, int weeks) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1105,6 +1429,15 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddYears.
+     *
+     * @param time the argument of type {@code DateTime}
+     * @param years the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.AddYears" target="_top">.NET documentation</a>
+     */
     public DateTime AddYears(DateTime time, int years) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1120,6 +1453,20 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToDateTime.
+     *
+     * @param year the argument of type {@code int}
+     * @param month the argument of type {@code int}
+     * @param day the argument of type {@code int}
+     * @param hour the argument of type {@code int}
+     * @param minute the argument of type {@code int}
+     * @param second the argument of type {@code int}
+     * @param millisecond the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.ToDateTime" target="_top">.NET documentation</a>
+     */
     public DateTime ToDateTime(int year, int month, int day, int hour, int minute, int second, int millisecond) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1135,6 +1482,21 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToDateTime.
+     *
+     * @param year the argument of type {@code int}
+     * @param month the argument of type {@code int}
+     * @param day the argument of type {@code int}
+     * @param hour the argument of type {@code int}
+     * @param minute the argument of type {@code int}
+     * @param second the argument of type {@code int}
+     * @param millisecond the argument of type {@code int}
+     * @param era the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.ToDateTime" target="_top">.NET documentation</a>
+     */
     public DateTime ToDateTime(int year, int month, int day, int hour, int minute, int second, int millisecond, int era) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1150,6 +1512,14 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDayOfWeek.
+     *
+     * @param time the argument of type {@code DateTime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.GetDayOfWeek" target="_top">.NET documentation</a>
+     */
     public DayOfWeek GetDayOfWeek(DateTime time) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1165,6 +1535,15 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReadOnly.
+     *
+     * @param calendar the argument of type {@code Calendar}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.ReadOnly" target="_top">.NET documentation</a>
+     */
     public static Calendar ReadOnly(Calendar calendar) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1180,6 +1559,13 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.Clone" target="_top">.NET documentation</a>
+     */
     public NetObject Clone() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1199,6 +1585,13 @@ public class Calendar extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsReadOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.IsReadOnly" target="_top">.NET documentation</a>
+     */
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1213,6 +1606,13 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TwoDigitYearMax.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.TwoDigitYearMax" target="_top">.NET documentation</a>
+     */
     public int getTwoDigitYearMax() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1253,6 +1653,14 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TwoDigitYearMax.
+     *
+     * @param TwoDigitYearMax the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.TwoDigitYearMax" target="_top">.NET documentation</a>
+     */
     public void setTwoDigitYearMax(int TwoDigitYearMax) throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1263,6 +1671,13 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Eras.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.Eras" target="_top">.NET documentation</a>
+     */
     public int[] getEras() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1286,6 +1701,13 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxSupportedDateTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.MaxSupportedDateTime" target="_top">.NET documentation</a>
+     */
     public DateTime getMaxSupportedDateTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1301,6 +1723,13 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinSupportedDateTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.MinSupportedDateTime" target="_top">.NET documentation</a>
+     */
     public DateTime getMinSupportedDateTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1316,6 +1745,13 @@ public class Calendar extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AlgorithmType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.Calendar.AlgorithmType" target="_top">.NET documentation</a>
+     */
     public CalendarAlgorithmType getAlgorithmType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

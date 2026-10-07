@@ -102,7 +102,10 @@ public class AttachedProperty_1<T extends IJCOBridgeReflected> extends system.ac
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AttachedProperty_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class AttachedProperty_1<T extends IJCOBridgeReflected> extends system.ac
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.AttachedProperty-1.-ctor" target="_top">.NET documentation</a>
+     */
     public AttachedProperty_1() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,14 @@ public class AttachedProperty_1<T extends IJCOBridgeReflected> extends system.ac
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetValue.
+     *
+     * @param modelItem the argument of type {@code ModelItem}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.AttachedProperty-1.GetValue" target="_top">.NET documentation</a>
+     */
     public NetObject GetValue(ModelItem modelItem) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +197,13 @@ public class AttachedProperty_1<T extends IJCOBridgeReflected> extends system.ac
         }
     }
 
+    /**
+     * Invokes the .NET member ResetValue.
+     *
+     * @param modelItem the argument of type {@code ModelItem}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.AttachedProperty-1.ResetValue" target="_top">.NET documentation</a>
+     */
     public void ResetValue(ModelItem modelItem) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +214,21 @@ public class AttachedProperty_1<T extends IJCOBridgeReflected> extends system.ac
         }
     }
 
+    /**
+     * Invokes the .NET member SetValue.
+     *
+     * @param modelItem the argument of type {@code ModelItem}
+     * @param Value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.AttachedProperty-1.SetValue" target="_top">.NET documentation</a>
+     */
     public void SetValue(ModelItem modelItem, NetObject Value) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +243,13 @@ public class AttachedProperty_1<T extends IJCOBridgeReflected> extends system.ac
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Setter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.AttachedProperty-1.Setter" target="_top">.NET documentation</a>
+     */
     public Action_2 getSetter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +264,13 @@ public class AttachedProperty_1<T extends IJCOBridgeReflected> extends system.ac
         }
     }
 
+    /**
+     * Sets the value of the .NET property Setter.
+     *
+     * @param Setter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.AttachedProperty-1.Setter" target="_top">.NET documentation</a>
+     */
     public void setSetter(Action_2 Setter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +281,13 @@ public class AttachedProperty_1<T extends IJCOBridgeReflected> extends system.ac
         }
     }
 
+    /**
+     * Gets the value of the .NET property Getter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.AttachedProperty-1.Getter" target="_top">.NET documentation</a>
+     */
     public Func_2 getGetter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +302,13 @@ public class AttachedProperty_1<T extends IJCOBridgeReflected> extends system.ac
         }
     }
 
+    /**
+     * Sets the value of the .NET property Getter.
+     *
+     * @param Getter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.AttachedProperty-1.Getter" target="_top">.NET documentation</a>
+     */
     public void setGetter(Func_2 Getter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

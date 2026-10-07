@@ -104,7 +104,10 @@ public class CustomAttribute extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CustomAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,24 @@ public class CustomAttribute extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member DecodeValue.
+     *
+     * @param <TType> the type of the generic argument TType
+     * @param provider the argument of type {@code ICustomAttributeTypeProvider_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.CustomAttribute.DecodeValue" target="_top">.NET documentation</a>
+     */
     public <TType extends IJCOBridgeReflected> CustomAttributeValue_1 DecodeValue(ICustomAttributeTypeProvider_1 provider) throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidCastException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +199,21 @@ public class CustomAttribute extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.CustomAttribute.Value" target="_top">.NET documentation</a>
+     */
     public BlobHandle getValue() throws Throwable, system.ArgumentException, system.BadImageFormatException, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidCastException, system.ObjectDisposedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +229,15 @@ public class CustomAttribute extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Constructor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.CustomAttribute.Constructor" target="_top">.NET documentation</a>
+     */
     public EntityHandle getConstructor() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +253,17 @@ public class CustomAttribute extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Parent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.CustomAttribute.Parent" target="_top">.NET documentation</a>
+     */
     public EntityHandle getParent() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -104,7 +104,10 @@ public class ImageSourceTypeConverter extends system.componentmodel.ExpandableOb
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ImageSourceTypeConverter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,12 @@ public class ImageSourceTypeConverter extends system.componentmodel.ExpandableOb
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.ImageSourceTypeConverter.-ctor" target="_top">.NET documentation</a>
+     */
     public ImageSourceTypeConverter() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,15 @@ public class ImageSourceTypeConverter extends system.componentmodel.ExpandableOb
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CanConvertFrom.
+     *
+     * @param context the argument of type {@code ITypeDescriptorContext}
+     * @param sourceType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.ImageSourceTypeConverter.CanConvertFrom" target="_top">.NET documentation</a>
+     */
     public boolean CanConvertFrom(ITypeDescriptorContext context, NetType sourceType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +197,15 @@ public class ImageSourceTypeConverter extends system.componentmodel.ExpandableOb
         }
     }
 
+    /**
+     * Invokes the .NET member CanConvertTo.
+     *
+     * @param context the argument of type {@code ITypeDescriptorContext}
+     * @param destinationType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.ImageSourceTypeConverter.CanConvertTo" target="_top">.NET documentation</a>
+     */
     public boolean CanConvertTo(ITypeDescriptorContext context, NetType destinationType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +220,17 @@ public class ImageSourceTypeConverter extends system.componentmodel.ExpandableOb
         }
     }
 
+    /**
+     * Invokes the .NET member GetProperties.
+     *
+     * @param context the argument of type {@code ITypeDescriptorContext}
+     * @param value the argument of type {@code NetObject}
+     * @param attributes the argument of type {@code Attribute[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.ImageSourceTypeConverter.GetProperties" target="_top">.NET documentation</a>
+     */
     public PropertyDescriptorCollection GetProperties(ITypeDescriptorContext context, NetObject value, Attribute[] attributes) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +246,28 @@ public class ImageSourceTypeConverter extends system.componentmodel.ExpandableOb
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertFrom.
+     *
+     * @param context the argument of type {@code ITypeDescriptorContext}
+     * @param culture the argument of type {@code CultureInfo}
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.ImageSourceTypeConverter.ConvertFrom" target="_top">.NET documentation</a>
+     */
     public NetObject ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +283,49 @@ public class ImageSourceTypeConverter extends system.componentmodel.ExpandableOb
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertTo.
+     *
+     * @param context the argument of type {@code ITypeDescriptorContext}
+     * @param culture the argument of type {@code CultureInfo}
+     * @param value the argument of type {@code NetObject}
+     * @param destinationType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.windows.xps.XpsSerializationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.net.WebException if the .NET member raises it
+     * @throws system.net.CookieException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.ImageSourceTypeConverter.ConvertTo" target="_top">.NET documentation</a>
+     */
     public NetObject ConvertTo(ITypeDescriptorContext context, CultureInfo culture, NetObject value, NetType destinationType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.windows.xps.XpsSerializationException, system.security.SecurityException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.MemberAccessException, system.NullReferenceException, system.configuration.ConfigurationException, system.UriFormatException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.net.WebException, system.net.CookieException, system.RankException, system.io.IOException, system.UnauthorizedAccessException, system.AccessViolationException, system.io.FileFormatException, system.io.FileNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

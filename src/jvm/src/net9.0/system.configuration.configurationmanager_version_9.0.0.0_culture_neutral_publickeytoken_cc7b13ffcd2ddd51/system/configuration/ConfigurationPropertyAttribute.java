@@ -100,7 +100,10 @@ public class ConfigurationPropertyAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ConfigurationPropertyAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class ConfigurationPropertyAttribute extends system.Attribute  {
     public ConfigurationPropertyAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationPropertyAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ConfigurationPropertyAttribute(java.lang.String name) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +179,13 @@ public class ConfigurationPropertyAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsDefaultCollection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationPropertyAttribute.IsDefaultCollection" target="_top">.NET documentation</a>
+     */
     public boolean getIsDefaultCollection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +200,13 @@ public class ConfigurationPropertyAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsDefaultCollection.
+     *
+     * @param IsDefaultCollection the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationPropertyAttribute.IsDefaultCollection" target="_top">.NET documentation</a>
+     */
     public void setIsDefaultCollection(boolean IsDefaultCollection) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +217,13 @@ public class ConfigurationPropertyAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationPropertyAttribute.IsKey" target="_top">.NET documentation</a>
+     */
     public boolean getIsKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +238,13 @@ public class ConfigurationPropertyAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsKey.
+     *
+     * @param IsKey the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationPropertyAttribute.IsKey" target="_top">.NET documentation</a>
+     */
     public void setIsKey(boolean IsKey) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +255,13 @@ public class ConfigurationPropertyAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsRequired.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationPropertyAttribute.IsRequired" target="_top">.NET documentation</a>
+     */
     public boolean getIsRequired() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +276,13 @@ public class ConfigurationPropertyAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsRequired.
+     *
+     * @param IsRequired the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationPropertyAttribute.IsRequired" target="_top">.NET documentation</a>
+     */
     public void setIsRequired(boolean IsRequired) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +293,13 @@ public class ConfigurationPropertyAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Options.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationPropertyAttribute.Options" target="_top">.NET documentation</a>
+     */
     public ConfigurationPropertyOptions getOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +315,13 @@ public class ConfigurationPropertyAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Options.
+     *
+     * @param Options the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationPropertyAttribute.Options" target="_top">.NET documentation</a>
+     */
     public void setOptions(ConfigurationPropertyOptions Options) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +332,13 @@ public class ConfigurationPropertyAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationPropertyAttribute.DefaultValue" target="_top">.NET documentation</a>
+     */
     public NetObject getDefaultValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +354,13 @@ public class ConfigurationPropertyAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultValue.
+     *
+     * @param DefaultValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationPropertyAttribute.DefaultValue" target="_top">.NET documentation</a>
+     */
     public void setDefaultValue(NetObject DefaultValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +371,13 @@ public class ConfigurationPropertyAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationPropertyAttribute.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

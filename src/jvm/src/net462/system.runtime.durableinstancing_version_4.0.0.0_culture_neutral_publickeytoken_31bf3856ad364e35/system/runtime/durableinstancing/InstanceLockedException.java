@@ -109,7 +109,9 @@ public class InstanceLockedException extends system.runtime.durableinstancing.In
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public InstanceLockedException(java.lang.Object instance) {
         super(instance);
@@ -170,6 +172,24 @@ public class InstanceLockedException extends system.runtime.durableinstancing.In
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param commandName the argument of type {@code XName}
+     * @param instanceId the argument of type {@code Guid}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceLockedException.-ctor" target="_top">.NET documentation</a>
+     */
     public InstanceLockedException(XName commandName, Guid instanceId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +200,27 @@ public class InstanceLockedException extends system.runtime.durableinstancing.In
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param commandName the argument of type {@code XName}
+     * @param instanceId the argument of type {@code Guid}
+     * @param innerException the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceLockedException.-ctor" target="_top">.NET documentation</a>
+     */
     public InstanceLockedException(XName commandName, Guid instanceId, NetException innerException) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -190,6 +231,26 @@ public class InstanceLockedException extends system.runtime.durableinstancing.In
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param commandName the argument of type {@code XName}
+     * @param instanceId the argument of type {@code Guid}
+     * @param instanceOwnerId the argument of type {@code Guid}
+     * @param serializableInstanceOwnerMetadata the argument of type {@code IDictionary_2}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceLockedException.-ctor" target="_top">.NET documentation</a>
+     */
     public InstanceLockedException(XName commandName, Guid instanceId, Guid instanceOwnerId, IDictionary_2 serializableInstanceOwnerMetadata) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -200,6 +261,29 @@ public class InstanceLockedException extends system.runtime.durableinstancing.In
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param commandName the argument of type {@code XName}
+     * @param instanceId the argument of type {@code Guid}
+     * @param instanceOwnerId the argument of type {@code Guid}
+     * @param serializableInstanceOwnerMetadata the argument of type {@code IDictionary_2}
+     * @param innerException the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceLockedException.-ctor" target="_top">.NET documentation</a>
+     */
     public InstanceLockedException(XName commandName, Guid instanceId, Guid instanceOwnerId, IDictionary_2 serializableInstanceOwnerMetadata, NetException innerException) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -210,6 +294,21 @@ public class InstanceLockedException extends system.runtime.durableinstancing.In
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param commandName the argument of type {@code XName}
+     * @param instanceId the argument of type {@code Guid}
+     * @param instanceOwnerId the argument of type {@code Guid}
+     * @param serializableInstanceOwnerMetadata the argument of type {@code IDictionary_2}
+     * @param message the argument of type {@code java.lang.String}
+     * @param innerException the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceLockedException.-ctor" target="_top">.NET documentation</a>
+     */
     public InstanceLockedException(XName commandName, Guid instanceId, Guid instanceOwnerId, IDictionary_2 serializableInstanceOwnerMetadata, java.lang.String message, NetException innerException) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -220,6 +319,19 @@ public class InstanceLockedException extends system.runtime.durableinstancing.In
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param commandName the argument of type {@code XName}
+     * @param instanceId the argument of type {@code Guid}
+     * @param message the argument of type {@code java.lang.String}
+     * @param innerException the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceLockedException.-ctor" target="_top">.NET documentation</a>
+     */
     public InstanceLockedException(XName commandName, Guid instanceId, java.lang.String message, NetException innerException) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -234,6 +346,27 @@ public class InstanceLockedException extends system.runtime.durableinstancing.In
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetObjectData.
+     *
+     * @param info the argument of type {@code SerializationInfo}
+     * @param context the argument of type {@code StreamingContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceLockedException.GetObjectData" target="_top">.NET documentation</a>
+     */
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.runtime.serialization.SerializationException, system.OverflowException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +381,13 @@ public class InstanceLockedException extends system.runtime.durableinstancing.In
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SerializableInstanceOwnerMetadata.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceLockedException.SerializableInstanceOwnerMetadata" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 getSerializableInstanceOwnerMetadata() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +403,13 @@ public class InstanceLockedException extends system.runtime.durableinstancing.In
         }
     }
 
+    /**
+     * Sets the value of the .NET property SerializableInstanceOwnerMetadata.
+     *
+     * @param SerializableInstanceOwnerMetadata the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceLockedException.SerializableInstanceOwnerMetadata" target="_top">.NET documentation</a>
+     */
     public void setSerializableInstanceOwnerMetadata(IDictionary_2 SerializableInstanceOwnerMetadata) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +420,13 @@ public class InstanceLockedException extends system.runtime.durableinstancing.In
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceOwnerId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceLockedException.InstanceOwnerId" target="_top">.NET documentation</a>
+     */
     public Guid getInstanceOwnerId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +442,13 @@ public class InstanceLockedException extends system.runtime.durableinstancing.In
         }
     }
 
+    /**
+     * Sets the value of the .NET property InstanceOwnerId.
+     *
+     * @param InstanceOwnerId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceLockedException.InstanceOwnerId" target="_top">.NET documentation</a>
+     */
     public void setInstanceOwnerId(Guid InstanceOwnerId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

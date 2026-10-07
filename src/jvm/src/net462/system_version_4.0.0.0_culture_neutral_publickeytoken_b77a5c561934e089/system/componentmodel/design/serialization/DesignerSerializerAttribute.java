@@ -99,7 +99,10 @@ public class DesignerSerializerAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DesignerSerializerAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class DesignerSerializerAttribute extends system.Attribute  {
     public DesignerSerializerAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param serializerTypeName the argument of type {@code java.lang.String}
+     * @param baseSerializerTypeName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.DesignerSerializerAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DesignerSerializerAttribute(java.lang.String serializerTypeName, java.lang.String baseSerializerTypeName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +170,14 @@ public class DesignerSerializerAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param serializerTypeName the argument of type {@code java.lang.String}
+     * @param baseSerializerType the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.DesignerSerializerAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DesignerSerializerAttribute(java.lang.String serializerTypeName, NetType baseSerializerType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +188,14 @@ public class DesignerSerializerAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param serializerType the argument of type {@code NetType}
+     * @param baseSerializerType the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.DesignerSerializerAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DesignerSerializerAttribute(NetType serializerType, NetType baseSerializerType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -188,6 +215,13 @@ public class DesignerSerializerAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SerializerBaseTypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.DesignerSerializerAttribute.SerializerBaseTypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSerializerBaseTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +236,13 @@ public class DesignerSerializerAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SerializerTypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.DesignerSerializerAttribute.SerializerTypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSerializerTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

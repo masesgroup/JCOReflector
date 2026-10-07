@@ -103,7 +103,10 @@ public class ReceiveContextEnabledAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ReceiveContextEnabledAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,12 @@ public class ReceiveContextEnabledAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ReceiveContextEnabledAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ReceiveContextEnabledAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,14 @@ public class ReceiveContextEnabledAttribute extends system.Attribute  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AddBindingParameters.
+     *
+     * @param operationDescription the argument of type {@code OperationDescription}
+     * @param bindingParameters the argument of type {@code BindingParameterCollection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ReceiveContextEnabledAttribute.AddBindingParameters" target="_top">.NET documentation</a>
+     */
     public void AddBindingParameters(OperationDescription operationDescription, BindingParameterCollection bindingParameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +191,14 @@ public class ReceiveContextEnabledAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Invokes the .NET member ApplyClientBehavior.
+     *
+     * @param operationDescription the argument of type {@code OperationDescription}
+     * @param clientOperation the argument of type {@code ClientOperation}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ReceiveContextEnabledAttribute.ApplyClientBehavior" target="_top">.NET documentation</a>
+     */
     public void ApplyClientBehavior(OperationDescription operationDescription, ClientOperation clientOperation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +209,25 @@ public class ReceiveContextEnabledAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Invokes the .NET member ApplyDispatchBehavior.
+     *
+     * @param operationDescription the argument of type {@code OperationDescription}
+     * @param dispatchOperation the argument of type {@code DispatchOperation}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ReceiveContextEnabledAttribute.ApplyDispatchBehavior" target="_top">.NET documentation</a>
+     */
     public void ApplyDispatchBehavior(OperationDescription operationDescription, DispatchOperation dispatchOperation) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +238,13 @@ public class ReceiveContextEnabledAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Invokes the .NET member Validate.
+     *
+     * @param operationDescription the argument of type {@code OperationDescription}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ReceiveContextEnabledAttribute.Validate" target="_top">.NET documentation</a>
+     */
     public void Validate(OperationDescription operationDescription) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +259,13 @@ public class ReceiveContextEnabledAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ManualControl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ReceiveContextEnabledAttribute.ManualControl" target="_top">.NET documentation</a>
+     */
     public boolean getManualControl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +280,13 @@ public class ReceiveContextEnabledAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ManualControl.
+     *
+     * @param ManualControl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ReceiveContextEnabledAttribute.ManualControl" target="_top">.NET documentation</a>
+     */
     public void setManualControl(boolean ManualControl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

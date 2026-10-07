@@ -99,7 +99,10 @@ public class NamedWaitHandleOptions extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public NamedWaitHandleOptions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class NamedWaitHandleOptions extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CurrentSessionOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.NamedWaitHandleOptions.CurrentSessionOnly" target="_top">.NET documentation</a>
+     */
     public boolean getCurrentSessionOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +182,13 @@ public class NamedWaitHandleOptions extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CurrentSessionOnly.
+     *
+     * @param CurrentSessionOnly the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.NamedWaitHandleOptions.CurrentSessionOnly" target="_top">.NET documentation</a>
+     */
     public void setCurrentSessionOnly(boolean CurrentSessionOnly) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +199,13 @@ public class NamedWaitHandleOptions extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentUserOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.NamedWaitHandleOptions.CurrentUserOnly" target="_top">.NET documentation</a>
+     */
     public boolean getCurrentUserOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +220,13 @@ public class NamedWaitHandleOptions extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CurrentUserOnly.
+     *
+     * @param CurrentUserOnly the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.NamedWaitHandleOptions.CurrentUserOnly" target="_top">.NET documentation</a>
+     */
     public void setCurrentUserOnly(boolean CurrentUserOnly) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

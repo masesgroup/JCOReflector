@@ -100,7 +100,10 @@ public class JsonWriterOptions extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public JsonWriterOptions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class JsonWriterOptions extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Indented.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonWriterOptions.Indented" target="_top">.NET documentation</a>
+     */
     public boolean getIndented() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +183,13 @@ public class JsonWriterOptions extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Indented.
+     *
+     * @param Indented the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonWriterOptions.Indented" target="_top">.NET documentation</a>
+     */
     public void setIndented(boolean Indented) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +200,13 @@ public class JsonWriterOptions extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SkipValidation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonWriterOptions.SkipValidation" target="_top">.NET documentation</a>
+     */
     public boolean getSkipValidation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +221,13 @@ public class JsonWriterOptions extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SkipValidation.
+     *
+     * @param SkipValidation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonWriterOptions.SkipValidation" target="_top">.NET documentation</a>
+     */
     public void setSkipValidation(boolean SkipValidation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +238,13 @@ public class JsonWriterOptions extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IndentCharacter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonWriterOptions.IndentCharacter" target="_top">.NET documentation</a>
+     */
     public char getIndentCharacter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +259,18 @@ public class JsonWriterOptions extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IndentCharacter.
+     *
+     * @param IndentCharacter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonWriterOptions.IndentCharacter" target="_top">.NET documentation</a>
+     */
     public void setIndentCharacter(char IndentCharacter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +281,13 @@ public class JsonWriterOptions extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IndentSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonWriterOptions.IndentSize" target="_top">.NET documentation</a>
+     */
     public int getIndentSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +328,18 @@ public class JsonWriterOptions extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IndentSize.
+     *
+     * @param IndentSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonWriterOptions.IndentSize" target="_top">.NET documentation</a>
+     */
     public void setIndentSize(int IndentSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +350,13 @@ public class JsonWriterOptions extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxDepth.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonWriterOptions.MaxDepth" target="_top">.NET documentation</a>
+     */
     public int getMaxDepth() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +397,21 @@ public class JsonWriterOptions extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxDepth.
+     *
+     * @param MaxDepth the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonWriterOptions.MaxDepth" target="_top">.NET documentation</a>
+     */
     public void setMaxDepth(int MaxDepth) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -331,6 +422,13 @@ public class JsonWriterOptions extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NewLine.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonWriterOptions.NewLine" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNewLine() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -345,6 +443,22 @@ public class JsonWriterOptions extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NewLine.
+     *
+     * @param NewLine the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonWriterOptions.NewLine" target="_top">.NET documentation</a>
+     */
     public void setNewLine(java.lang.String NewLine) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -355,6 +469,13 @@ public class JsonWriterOptions extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Encoder.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonWriterOptions.Encoder" target="_top">.NET documentation</a>
+     */
     public JavaScriptEncoder getEncoder() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -370,6 +491,13 @@ public class JsonWriterOptions extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Encoder.
+     *
+     * @param Encoder the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonWriterOptions.Encoder" target="_top">.NET documentation</a>
+     */
     public void setEncoder(JavaScriptEncoder Encoder) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

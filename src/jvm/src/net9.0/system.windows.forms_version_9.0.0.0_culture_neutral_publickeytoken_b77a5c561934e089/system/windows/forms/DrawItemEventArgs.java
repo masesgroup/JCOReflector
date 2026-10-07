@@ -104,7 +104,10 @@ public class DrawItemEventArgs extends system.EventArgs implements AutoCloseable
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DrawItemEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,22 @@ public class DrawItemEventArgs extends system.EventArgs implements AutoCloseable
     public DrawItemEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param graphics the argument of type {@code Graphics}
+     * @param font the argument of type {@code Font}
+     * @param rect the argument of type {@code Rectangle}
+     * @param index the argument of type {@code int}
+     * @param state the argument of type {@code DrawItemState}
+     * @param foreColor the argument of type {@code Color}
+     * @param backColor the argument of type {@code Color}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DrawItemEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public DrawItemEventArgs(Graphics graphics, Font font, Rectangle rect, int index, DrawItemState state, Color foreColor, Color backColor) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +183,20 @@ public class DrawItemEventArgs extends system.EventArgs implements AutoCloseable
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param graphics the argument of type {@code Graphics}
+     * @param font the argument of type {@code Font}
+     * @param rect the argument of type {@code Rectangle}
+     * @param index the argument of type {@code int}
+     * @param state the argument of type {@code DrawItemState}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DrawItemEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public DrawItemEventArgs(Graphics graphics, Font font, Rectangle rect, int index, DrawItemState state) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +212,13 @@ public class DrawItemEventArgs extends system.EventArgs implements AutoCloseable
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DrawItemEventArgs.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +229,23 @@ public class DrawItemEventArgs extends system.EventArgs implements AutoCloseable
         }
     }
 
+    /**
+     * Invokes the .NET member DrawBackground.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DrawItemEventArgs.DrawBackground" target="_top">.NET documentation</a>
+     */
     public void DrawBackground() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.NullReferenceException, system.NotSupportedException, system.MulticastNotSupportedException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +256,23 @@ public class DrawItemEventArgs extends system.EventArgs implements AutoCloseable
         }
     }
 
+    /**
+     * Invokes the .NET member DrawFocusRectangle.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DrawItemEventArgs.DrawFocusRectangle" target="_top">.NET documentation</a>
+     */
     public void DrawFocusRectangle() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,8 +286,11 @@ public class DrawItemEventArgs extends system.EventArgs implements AutoCloseable
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDeviceContext method available in IDeviceContext to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.IDeviceContext.ReleaseHdc" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ReleaseHdc() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDeviceContext to obtain the full interface.");
     }
@@ -235,6 +312,13 @@ public class DrawItemEventArgs extends system.EventArgs implements AutoCloseable
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Index.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DrawItemEventArgs.Index" target="_top">.NET documentation</a>
+     */
     public int getIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +359,16 @@ public class DrawItemEventArgs extends system.EventArgs implements AutoCloseable
         }
     }
 
+    /**
+     * Gets the value of the .NET property BackColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DrawItemEventArgs.BackColor" target="_top">.NET documentation</a>
+     */
     public Color getBackColor() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +384,16 @@ public class DrawItemEventArgs extends system.EventArgs implements AutoCloseable
         }
     }
 
+    /**
+     * Gets the value of the .NET property ForeColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DrawItemEventArgs.ForeColor" target="_top">.NET documentation</a>
+     */
     public Color getForeColor() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +409,13 @@ public class DrawItemEventArgs extends system.EventArgs implements AutoCloseable
         }
     }
 
+    /**
+     * Gets the value of the .NET property Font.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DrawItemEventArgs.Font" target="_top">.NET documentation</a>
+     */
     public Font getFont() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +431,22 @@ public class DrawItemEventArgs extends system.EventArgs implements AutoCloseable
         }
     }
 
+    /**
+     * Gets the value of the .NET property Graphics.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DrawItemEventArgs.Graphics" target="_top">.NET documentation</a>
+     */
     public Graphics getGraphics() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +462,13 @@ public class DrawItemEventArgs extends system.EventArgs implements AutoCloseable
         }
     }
 
+    /**
+     * Gets the value of the .NET property Bounds.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DrawItemEventArgs.Bounds" target="_top">.NET documentation</a>
+     */
     public Rectangle getBounds() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -350,6 +484,13 @@ public class DrawItemEventArgs extends system.EventArgs implements AutoCloseable
         }
     }
 
+    /**
+     * Gets the value of the .NET property State.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DrawItemEventArgs.State" target="_top">.NET documentation</a>
+     */
     public DrawItemState getState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

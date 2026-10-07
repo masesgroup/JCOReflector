@@ -107,7 +107,10 @@ public class ObjRef extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ObjRef(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,12 @@ public class ObjRef extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.ObjRef.-ctor" target="_top">.NET documentation</a>
+     */
     public ObjRef() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,27 @@ public class ObjRef extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param o the argument of type {@code MarshalByRefObject}
+     * @param requestedType the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.ObjRef.-ctor" target="_top">.NET documentation</a>
+     */
     public ObjRef(MarshalByRefObject o, NetType requestedType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +208,15 @@ public class ObjRef extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsFromThisAppDomain.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.ObjRef.IsFromThisAppDomain" target="_top">.NET documentation</a>
+     */
     public boolean IsFromThisAppDomain() throws Throwable, system.ArgumentException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +231,15 @@ public class ObjRef extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsFromThisProcess.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.ObjRef.IsFromThisProcess" target="_top">.NET documentation</a>
+     */
     public boolean IsFromThisProcess() throws Throwable, system.ArgumentException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +254,27 @@ public class ObjRef extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRealObject.
+     *
+     * @param context the argument of type {@code StreamingContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.ObjRef.GetRealObject" target="_top">.NET documentation</a>
+     */
     public NetObject GetRealObject(StreamingContext context) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.FormatException, system.runtime.remoting.RemotingException, system.OutOfMemoryException, system.InvalidCastException, system.NotImplementedException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +290,25 @@ public class ObjRef extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetObjectData.
+     *
+     * @param info the argument of type {@code SerializationInfo}
+     * @param context the argument of type {@code StreamingContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.ObjRef.GetObjectData" target="_top">.NET documentation</a>
+     */
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.runtime.remoting.RemotingException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +323,13 @@ public class ObjRef extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ChannelInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.ObjRef.ChannelInfo" target="_top">.NET documentation</a>
+     */
     public IChannelInfo getChannelInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +345,13 @@ public class ObjRef extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ChannelInfo.
+     *
+     * @param ChannelInfo the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.ObjRef.ChannelInfo" target="_top">.NET documentation</a>
+     */
     public void setChannelInfo(IChannelInfo ChannelInfo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +362,13 @@ public class ObjRef extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EnvoyInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.ObjRef.EnvoyInfo" target="_top">.NET documentation</a>
+     */
     public IEnvoyInfo getEnvoyInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +384,13 @@ public class ObjRef extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EnvoyInfo.
+     *
+     * @param EnvoyInfo the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.ObjRef.EnvoyInfo" target="_top">.NET documentation</a>
+     */
     public void setEnvoyInfo(IEnvoyInfo EnvoyInfo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -285,6 +401,13 @@ public class ObjRef extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.ObjRef.TypeInfo" target="_top">.NET documentation</a>
+     */
     public IRemotingTypeInfo getTypeInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +423,13 @@ public class ObjRef extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TypeInfo.
+     *
+     * @param TypeInfo the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.ObjRef.TypeInfo" target="_top">.NET documentation</a>
+     */
     public void setTypeInfo(IRemotingTypeInfo TypeInfo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +440,13 @@ public class ObjRef extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property URI.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.ObjRef.URI" target="_top">.NET documentation</a>
+     */
     public java.lang.String getURI() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -324,6 +461,13 @@ public class ObjRef extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property URI.
+     *
+     * @param URI the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.ObjRef.URI" target="_top">.NET documentation</a>
+     */
     public void setURI(java.lang.String URI) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class Unsafe extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Unsafe(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,25 @@ public class Unsafe extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AreSame.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code JCORefOut<T>}
+     * @param right the argument of type {@code JCORefOut<T>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.Unsafe.AreSame" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean AreSame(JCORefOut<T> left, JCORefOut<T> right) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -166,6 +188,25 @@ public class Unsafe extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsAddressGreaterThan.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code JCORefOut<T>}
+     * @param right the argument of type {@code JCORefOut<T>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.Unsafe.IsAddressGreaterThan" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean IsAddressGreaterThan(JCORefOut<T> left, JCORefOut<T> right) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -180,6 +221,26 @@ public class Unsafe extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsAddressGreaterThanOrEqualTo.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code JCORefOut<T>}
+     * @param right the argument of type {@code JCORefOut<T>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.Unsafe.IsAddressGreaterThanOrEqualTo" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean IsAddressGreaterThanOrEqualTo(JCORefOut<T> left, JCORefOut<T> right) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -194,6 +255,25 @@ public class Unsafe extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsAddressLessThan.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code JCORefOut<T>}
+     * @param right the argument of type {@code JCORefOut<T>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.Unsafe.IsAddressLessThan" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean IsAddressLessThan(JCORefOut<T> left, JCORefOut<T> right) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -208,6 +288,26 @@ public class Unsafe extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsAddressLessThanOrEqualTo.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code JCORefOut<T>}
+     * @param right the argument of type {@code JCORefOut<T>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.Unsafe.IsAddressLessThanOrEqualTo" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean IsAddressLessThanOrEqualTo(JCORefOut<T> left, JCORefOut<T> right) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -222,6 +322,25 @@ public class Unsafe extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsNullRef.
+     *
+     * @param <T> the type of the generic argument T
+     * @param source the argument of type {@code JCORefOut<T>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.Unsafe.IsNullRef" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean IsNullRef(JCORefOut<T> source) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -236,6 +355,14 @@ public class Unsafe extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SizeOf.
+     *
+     * @param <T> the type of the generic argument T
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.Unsafe.SizeOf" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> int SizeOf() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -276,6 +403,24 @@ public class Unsafe extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CopyBlock.
+     *
+     * @param destination the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>>}
+     * @param source the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>>}
+     * @param byteCount the argument of type {@code UInt32}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.Unsafe.CopyBlock" target="_top">.NET documentation</a>
+     */
     public static void CopyBlock(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> destination, JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> source, UInt32 byteCount) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -286,6 +431,24 @@ public class Unsafe extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CopyBlockUnaligned.
+     *
+     * @param destination the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>>}
+     * @param source the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>>}
+     * @param byteCount the argument of type {@code UInt32}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.Unsafe.CopyBlockUnaligned" target="_top">.NET documentation</a>
+     */
     public static void CopyBlockUnaligned(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> destination, JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> source, UInt32 byteCount) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -296,6 +459,24 @@ public class Unsafe extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member InitBlock.
+     *
+     * @param startAddress the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>>}
+     * @param value the argument of type {@code byte}
+     * @param byteCount the argument of type {@code UInt32}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.Unsafe.InitBlock" target="_top">.NET documentation</a>
+     */
     public static void InitBlock(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> startAddress, byte value, UInt32 byteCount) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -306,6 +487,16 @@ public class Unsafe extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member InitBlockUnaligned.
+     *
+     * @param startAddress the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>>}
+     * @param value the argument of type {@code byte}
+     * @param byteCount the argument of type {@code UInt32}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.Unsafe.InitBlockUnaligned" target="_top">.NET documentation</a>
+     */
     public static void InitBlockUnaligned(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> startAddress, byte value, UInt32 byteCount) throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -316,6 +507,23 @@ public class Unsafe extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SkipInit.
+     *
+     * @param <T> the type of the generic argument T
+     * @param value the argument of type {@code JCORefOut<T>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.Unsafe.SkipInit" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> void SkipInit(JCORefOut<T> value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -326,6 +534,16 @@ public class Unsafe extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteUnaligned.
+     *
+     * @param <T> the type of the generic argument T
+     * @param destination the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>>}
+     * @param value the argument of type {@code T}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.Unsafe.WriteUnaligned" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> void WriteUnaligned(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> destination, T value) throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

@@ -178,7 +178,10 @@ public class NotifyOfNewConnectionCallback extends JCDelegate implements IJCEven
         callerInstance = instance;
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public NotifyOfNewConnectionCallback(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
@@ -200,6 +203,21 @@ public class NotifyOfNewConnectionCallback extends JCDelegate implements IJCEven
         return JCOBridgeInstance.translateException(ne);
     }
 
+    /**
+     * Invokes the .NET member DynamicInvoke.
+     *
+     * @param primaryConnection the argument of type {@code LdapConnection}
+     * @param referralFromConnection the argument of type {@code LdapConnection}
+     * @param newDistinguishedName the argument of type {@code java.lang.String}
+     * @param identifier the argument of type {@code LdapDirectoryIdentifier}
+     * @param newConnection the argument of type {@code LdapConnection}
+     * @param credential the argument of type {@code NetworkCredential}
+     * @param currentUserToken the argument of type {@code long}
+     * @param errorCodeFromBind the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Delegate.DynamicInvoke" target="_top">.NET documentation</a>
+     */
     public boolean DynamicInvoke(LdapConnection primaryConnection, LdapConnection referralFromConnection, java.lang.String newDistinguishedName, LdapDirectoryIdentifier identifier, LdapConnection newConnection, NetworkCredential credential, long currentUserToken, int errorCodeFromBind) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,7 +233,17 @@ public class NotifyOfNewConnectionCallback extends JCDelegate implements IJCEven
     }
 
     /**
-     * Methods invoked in JVM when an event is raised in CLR 
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param primaryConnection the .NET argument of type {@code System.DirectoryServices.Protocols.LdapConnection}
+     * @param referralFromConnection the .NET argument of type {@code System.DirectoryServices.Protocols.LdapConnection}
+     * @param newDistinguishedName the .NET argument of type {@code System.String}
+     * @param identifier the .NET argument of type {@code System.DirectoryServices.Protocols.LdapDirectoryIdentifier}
+     * @param newConnection the .NET argument of type {@code System.DirectoryServices.Protocols.LdapConnection}
+     * @param credential the .NET argument of type {@code System.Net.NetworkCredential}
+     * @param currentUserToken the .NET argument of type {@code System.Int64}
+     * @param errorCodeFromBind the .NET argument of type {@code System.Int32}
+     * @return the value returned to the CLR; this default implementation returns {@code null}
      */
     public boolean Invoke(LdapConnection primaryConnection, LdapConnection referralFromConnection, java.lang.String newDistinguishedName, LdapDirectoryIdentifier identifier, LdapConnection newConnection, NetworkCredential credential, long currentUserToken, int errorCodeFromBind) {
         return false;

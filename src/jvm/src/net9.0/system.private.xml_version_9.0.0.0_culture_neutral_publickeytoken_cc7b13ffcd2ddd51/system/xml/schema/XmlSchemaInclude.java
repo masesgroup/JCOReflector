@@ -100,7 +100,10 @@ public class XmlSchemaInclude extends system.xml.schema.XmlSchemaExternal  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlSchemaInclude(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class XmlSchemaInclude extends system.xml.schema.XmlSchemaExternal  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaInclude.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlSchemaInclude() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class XmlSchemaInclude extends system.xml.schema.XmlSchemaExternal  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Annotation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaInclude.Annotation" target="_top">.NET documentation</a>
+     */
     public XmlSchemaAnnotation getAnnotation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +196,13 @@ public class XmlSchemaInclude extends system.xml.schema.XmlSchemaExternal  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Annotation.
+     *
+     * @param Annotation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaInclude.Annotation" target="_top">.NET documentation</a>
+     */
     public void setAnnotation(XmlSchemaAnnotation Annotation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

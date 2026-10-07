@@ -99,7 +99,10 @@ public class IDebugConvert2Implementation extends NetObject implements IDebugCon
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDebugConvert2Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,14 @@ public class IDebugConvert2Implementation extends NetObject implements IDebugCon
 
     // Methods section
     
+    /**
+     * Invokes the .NET member DecimalToString.
+     *
+     * @param value the argument of type {@code Decimal}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IDebugConvert2.DecimalToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String DecimalToString(Decimal value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

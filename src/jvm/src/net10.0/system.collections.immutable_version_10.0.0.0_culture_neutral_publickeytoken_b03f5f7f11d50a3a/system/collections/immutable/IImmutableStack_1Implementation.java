@@ -102,7 +102,10 @@ public class IImmutableStack_1Implementation<T extends IJCOBridgeReflected> exte
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IImmutableStack_1Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,13 @@ public class IImmutableStack_1Implementation<T extends IJCOBridgeReflected> exte
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Clear.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableStack-1.Clear" target="_top">.NET documentation</a>
+     */
     public IImmutableStack_1 Clear() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -159,6 +169,13 @@ public class IImmutableStack_1Implementation<T extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Pop.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableStack-1.Pop" target="_top">.NET documentation</a>
+     */
     public IImmutableStack_1 Pop() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +191,14 @@ public class IImmutableStack_1Implementation<T extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Push.
+     *
+     * @param value the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableStack-1.Push" target="_top">.NET documentation</a>
+     */
     public IImmutableStack_1 Push(T value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +214,13 @@ public class IImmutableStack_1Implementation<T extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Peek.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableStack-1.Peek" target="_top">.NET documentation</a>
+     */
     public T Peek() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +239,13 @@ public class IImmutableStack_1Implementation<T extends IJCOBridgeReflected> exte
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsEmpty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableStack-1.IsEmpty" target="_top">.NET documentation</a>
+     */
     public boolean getIsEmpty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

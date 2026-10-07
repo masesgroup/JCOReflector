@@ -109,7 +109,10 @@ public class SecurityTokenDescriptor extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SecurityTokenDescriptor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,14 @@ public class SecurityTokenDescriptor extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenDescriptor.-ctor" target="_top">.NET documentation</a>
+     */
     public SecurityTokenDescriptor() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +181,23 @@ public class SecurityTokenDescriptor extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AddAuthenticationClaims.
+     *
+     * @param authType the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenDescriptor.AddAuthenticationClaims" target="_top">.NET documentation</a>
+     */
     public void AddAuthenticationClaims(java.lang.String authType) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.InvalidTimeZoneException, system.NotSupportedException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +208,31 @@ public class SecurityTokenDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddAuthenticationClaims.
+     *
+     * @param authType the argument of type {@code java.lang.String}
+     * @param time the argument of type {@code DateTime}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenDescriptor.AddAuthenticationClaims" target="_top">.NET documentation</a>
+     */
     public void AddAuthenticationClaims(java.lang.String authType, DateTime time) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.NotSupportedException, system.OverflowException, system.TypeInitializationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +243,24 @@ public class SecurityTokenDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ApplyTo.
+     *
+     * @param response the argument of type {@code RequestSecurityTokenResponse}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenDescriptor.ApplyTo" target="_top">.NET documentation</a>
+     */
     public void ApplyTo(RequestSecurityTokenResponse response) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +275,13 @@ public class SecurityTokenDescriptor extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Properties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenDescriptor.Properties" target="_top">.NET documentation</a>
+     */
     public Dictionary_2 getProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +297,13 @@ public class SecurityTokenDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Lifetime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenDescriptor.Lifetime" target="_top">.NET documentation</a>
+     */
     public Lifetime getLifetime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +319,13 @@ public class SecurityTokenDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Lifetime.
+     *
+     * @param Lifetime the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenDescriptor.Lifetime" target="_top">.NET documentation</a>
+     */
     public void setLifetime(Lifetime Lifetime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +336,13 @@ public class SecurityTokenDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EncryptingCredentials.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenDescriptor.EncryptingCredentials" target="_top">.NET documentation</a>
+     */
     public EncryptingCredentials getEncryptingCredentials() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +358,13 @@ public class SecurityTokenDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EncryptingCredentials.
+     *
+     * @param EncryptingCredentials the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenDescriptor.EncryptingCredentials" target="_top">.NET documentation</a>
+     */
     public void setEncryptingCredentials(EncryptingCredentials EncryptingCredentials) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +375,13 @@ public class SecurityTokenDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Proof.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenDescriptor.Proof" target="_top">.NET documentation</a>
+     */
     public ProofDescriptor getProof() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -284,6 +397,13 @@ public class SecurityTokenDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Proof.
+     *
+     * @param Proof the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenDescriptor.Proof" target="_top">.NET documentation</a>
+     */
     public void setProof(ProofDescriptor Proof) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +414,13 @@ public class SecurityTokenDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AttachedReference.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenDescriptor.AttachedReference" target="_top">.NET documentation</a>
+     */
     public SecurityKeyIdentifierClause getAttachedReference() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -309,6 +436,13 @@ public class SecurityTokenDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AttachedReference.
+     *
+     * @param AttachedReference the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenDescriptor.AttachedReference" target="_top">.NET documentation</a>
+     */
     public void setAttachedReference(SecurityKeyIdentifierClause AttachedReference) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -319,6 +453,13 @@ public class SecurityTokenDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnattachedReference.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenDescriptor.UnattachedReference" target="_top">.NET documentation</a>
+     */
     public SecurityKeyIdentifierClause getUnattachedReference() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -334,6 +475,13 @@ public class SecurityTokenDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UnattachedReference.
+     *
+     * @param UnattachedReference the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenDescriptor.UnattachedReference" target="_top">.NET documentation</a>
+     */
     public void setUnattachedReference(SecurityKeyIdentifierClause UnattachedReference) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -344,6 +492,13 @@ public class SecurityTokenDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Token.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenDescriptor.Token" target="_top">.NET documentation</a>
+     */
     public SecurityToken getToken() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -359,6 +514,13 @@ public class SecurityTokenDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Token.
+     *
+     * @param Token the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenDescriptor.Token" target="_top">.NET documentation</a>
+     */
     public void setToken(SecurityToken Token) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -369,6 +531,13 @@ public class SecurityTokenDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SigningCredentials.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenDescriptor.SigningCredentials" target="_top">.NET documentation</a>
+     */
     public SigningCredentials getSigningCredentials() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -384,6 +553,13 @@ public class SecurityTokenDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SigningCredentials.
+     *
+     * @param SigningCredentials the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenDescriptor.SigningCredentials" target="_top">.NET documentation</a>
+     */
     public void setSigningCredentials(SigningCredentials SigningCredentials) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -394,6 +570,13 @@ public class SecurityTokenDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AuthenticationInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenDescriptor.AuthenticationInfo" target="_top">.NET documentation</a>
+     */
     public AuthenticationInformation getAuthenticationInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -409,6 +592,13 @@ public class SecurityTokenDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AuthenticationInfo.
+     *
+     * @param AuthenticationInfo the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenDescriptor.AuthenticationInfo" target="_top">.NET documentation</a>
+     */
     public void setAuthenticationInfo(AuthenticationInformation AuthenticationInfo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -419,6 +609,13 @@ public class SecurityTokenDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Subject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenDescriptor.Subject" target="_top">.NET documentation</a>
+     */
     public ClaimsIdentity getSubject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -434,6 +631,13 @@ public class SecurityTokenDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Subject.
+     *
+     * @param Subject the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenDescriptor.Subject" target="_top">.NET documentation</a>
+     */
     public void setSubject(ClaimsIdentity Subject) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -444,6 +648,13 @@ public class SecurityTokenDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AppliesToAddress.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenDescriptor.AppliesToAddress" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAppliesToAddress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -458,6 +669,25 @@ public class SecurityTokenDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AppliesToAddress.
+     *
+     * @param AppliesToAddress the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenDescriptor.AppliesToAddress" target="_top">.NET documentation</a>
+     */
     public void setAppliesToAddress(java.lang.String AppliesToAddress) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -468,6 +698,13 @@ public class SecurityTokenDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReplyToAddress.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenDescriptor.ReplyToAddress" target="_top">.NET documentation</a>
+     */
     public java.lang.String getReplyToAddress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -482,6 +719,13 @@ public class SecurityTokenDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReplyToAddress.
+     *
+     * @param ReplyToAddress the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenDescriptor.ReplyToAddress" target="_top">.NET documentation</a>
+     */
     public void setReplyToAddress(java.lang.String ReplyToAddress) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -492,6 +736,13 @@ public class SecurityTokenDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TokenIssuerName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenDescriptor.TokenIssuerName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTokenIssuerName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -506,6 +757,13 @@ public class SecurityTokenDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TokenIssuerName.
+     *
+     * @param TokenIssuerName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenDescriptor.TokenIssuerName" target="_top">.NET documentation</a>
+     */
     public void setTokenIssuerName(java.lang.String TokenIssuerName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -516,6 +774,13 @@ public class SecurityTokenDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TokenType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenDescriptor.TokenType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTokenType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -530,6 +795,13 @@ public class SecurityTokenDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TokenType.
+     *
+     * @param TokenType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenDescriptor.TokenType" target="_top">.NET documentation</a>
+     */
     public void setTokenType(java.lang.String TokenType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

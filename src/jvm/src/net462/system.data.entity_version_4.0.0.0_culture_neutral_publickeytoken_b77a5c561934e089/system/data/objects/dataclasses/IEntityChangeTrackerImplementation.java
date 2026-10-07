@@ -99,7 +99,10 @@ public class IEntityChangeTrackerImplementation extends NetObject implements IEn
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IEntityChangeTrackerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,15 @@ public class IEntityChangeTrackerImplementation extends NetObject implements IEn
 
     // Methods section
     
+    /**
+     * Invokes the .NET member EntityComplexMemberChanged.
+     *
+     * @param entityMemberName the argument of type {@code java.lang.String}
+     * @param complexObject the argument of type {@code NetObject}
+     * @param complexObjectMemberName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.IEntityChangeTracker.EntityComplexMemberChanged" target="_top">.NET documentation</a>
+     */
     public void EntityComplexMemberChanged(java.lang.String entityMemberName, NetObject complexObject, java.lang.String complexObjectMemberName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -151,6 +163,15 @@ public class IEntityChangeTrackerImplementation extends NetObject implements IEn
         }
     }
 
+    /**
+     * Invokes the .NET member EntityComplexMemberChanging.
+     *
+     * @param entityMemberName the argument of type {@code java.lang.String}
+     * @param complexObject the argument of type {@code NetObject}
+     * @param complexObjectMemberName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.IEntityChangeTracker.EntityComplexMemberChanging" target="_top">.NET documentation</a>
+     */
     public void EntityComplexMemberChanging(java.lang.String entityMemberName, NetObject complexObject, java.lang.String complexObjectMemberName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -161,6 +182,13 @@ public class IEntityChangeTrackerImplementation extends NetObject implements IEn
         }
     }
 
+    /**
+     * Invokes the .NET member EntityMemberChanged.
+     *
+     * @param entityMemberName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.IEntityChangeTracker.EntityMemberChanged" target="_top">.NET documentation</a>
+     */
     public void EntityMemberChanged(java.lang.String entityMemberName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +199,13 @@ public class IEntityChangeTrackerImplementation extends NetObject implements IEn
         }
     }
 
+    /**
+     * Invokes the .NET member EntityMemberChanging.
+     *
+     * @param entityMemberName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.IEntityChangeTracker.EntityMemberChanging" target="_top">.NET documentation</a>
+     */
     public void EntityMemberChanging(java.lang.String entityMemberName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +220,13 @@ public class IEntityChangeTrackerImplementation extends NetObject implements IEn
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EntityState.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.IEntityChangeTracker.EntityState" target="_top">.NET documentation</a>
+     */
     public EntityState getEntityState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

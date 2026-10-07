@@ -101,7 +101,10 @@ public class ContactPerson extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ContactPerson(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class ContactPerson extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.ContactPerson.-ctor" target="_top">.NET documentation</a>
+     */
     public ContactPerson() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,13 @@ public class ContactPerson extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param contactType the argument of type {@code ContactType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.ContactPerson.-ctor" target="_top">.NET documentation</a>
+     */
     public ContactPerson(ContactType contactType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +192,13 @@ public class ContactPerson extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EmailAddresses.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.ContactPerson.EmailAddresses" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getEmailAddresses() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +214,13 @@ public class ContactPerson extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TelephoneNumbers.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.ContactPerson.TelephoneNumbers" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getTelephoneNumbers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +236,13 @@ public class ContactPerson extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Type.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.ContactPerson.Type" target="_top">.NET documentation</a>
+     */
     public ContactType getType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +258,13 @@ public class ContactPerson extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Type.
+     *
+     * @param Type the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.ContactPerson.Type" target="_top">.NET documentation</a>
+     */
     public void setType(ContactType Type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +275,13 @@ public class ContactPerson extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Company.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.ContactPerson.Company" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCompany() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +296,13 @@ public class ContactPerson extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Company.
+     *
+     * @param Company the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.ContactPerson.Company" target="_top">.NET documentation</a>
+     */
     public void setCompany(java.lang.String Company) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +313,13 @@ public class ContactPerson extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GivenName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.ContactPerson.GivenName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getGivenName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +334,13 @@ public class ContactPerson extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property GivenName.
+     *
+     * @param GivenName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.ContactPerson.GivenName" target="_top">.NET documentation</a>
+     */
     public void setGivenName(java.lang.String GivenName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +351,13 @@ public class ContactPerson extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Surname.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.ContactPerson.Surname" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSurname() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +372,13 @@ public class ContactPerson extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Surname.
+     *
+     * @param Surname the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.ContactPerson.Surname" target="_top">.NET documentation</a>
+     */
     public void setSurname(java.lang.String Surname) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

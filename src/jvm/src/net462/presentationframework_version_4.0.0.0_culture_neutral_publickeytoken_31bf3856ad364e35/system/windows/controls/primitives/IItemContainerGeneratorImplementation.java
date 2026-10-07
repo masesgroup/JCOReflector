@@ -105,7 +105,10 @@ public class IItemContainerGeneratorImplementation extends NetObject implements 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IItemContainerGeneratorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,14 @@ public class IItemContainerGeneratorImplementation extends NetObject implements 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member IndexFromGeneratorPosition.
+     *
+     * @param position the argument of type {@code GeneratorPosition}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IItemContainerGenerator.IndexFromGeneratorPosition" target="_top">.NET documentation</a>
+     */
     public int IndexFromGeneratorPosition(GeneratorPosition position) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +198,15 @@ public class IItemContainerGeneratorImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member StartAt.
+     *
+     * @param position the argument of type {@code GeneratorPosition}
+     * @param direction the argument of type {@code GeneratorDirection}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IItemContainerGenerator.StartAt" target="_top">.NET documentation</a>
+     */
     public IDisposable StartAt(GeneratorPosition position, GeneratorDirection direction) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +222,16 @@ public class IItemContainerGeneratorImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member StartAt.
+     *
+     * @param position the argument of type {@code GeneratorPosition}
+     * @param direction the argument of type {@code GeneratorDirection}
+     * @param allowStartAtRealizedItem the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IItemContainerGenerator.StartAt" target="_top">.NET documentation</a>
+     */
     public IDisposable StartAt(GeneratorPosition position, GeneratorDirection direction, boolean allowStartAtRealizedItem) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +247,14 @@ public class IItemContainerGeneratorImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member GetItemContainerGeneratorForPanel.
+     *
+     * @param panel the argument of type {@code Panel}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IItemContainerGenerator.GetItemContainerGeneratorForPanel" target="_top">.NET documentation</a>
+     */
     public ItemContainerGenerator GetItemContainerGeneratorForPanel(Panel panel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +270,14 @@ public class IItemContainerGeneratorImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member GeneratorPositionFromIndex.
+     *
+     * @param itemIndex the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IItemContainerGenerator.GeneratorPositionFromIndex" target="_top">.NET documentation</a>
+     */
     public GeneratorPosition GeneratorPositionFromIndex(int itemIndex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +293,13 @@ public class IItemContainerGeneratorImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member GenerateNext.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IItemContainerGenerator.GenerateNext" target="_top">.NET documentation</a>
+     */
     public DependencyObject GenerateNext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +315,14 @@ public class IItemContainerGeneratorImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member GenerateNext.
+     *
+     * @param isNewlyRealized the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicBoolean>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IItemContainerGenerator.GenerateNext" target="_top">.NET documentation</a>
+     */
     public DependencyObject GenerateNext(JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isNewlyRealized) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +338,13 @@ public class IItemContainerGeneratorImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member PrepareItemContainer.
+     *
+     * @param container the argument of type {@code DependencyObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IItemContainerGenerator.PrepareItemContainer" target="_top">.NET documentation</a>
+     */
     public void PrepareItemContainer(DependencyObject container) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -287,6 +355,14 @@ public class IItemContainerGeneratorImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param position the argument of type {@code GeneratorPosition}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IItemContainerGenerator.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(GeneratorPosition position, int count) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -297,6 +373,12 @@ public class IItemContainerGeneratorImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAll.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IItemContainerGenerator.RemoveAll" target="_top">.NET documentation</a>
+     */
     public void RemoveAll() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -98,7 +98,10 @@ public class SqlColumnEncryptionKeyStoreProvider extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SqlColumnEncryptionKeyStoreProvider(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,17 @@ public class SqlColumnEncryptionKeyStoreProvider extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member VerifyColumnMasterKeyMetadata.
+     *
+     * @param masterKeyPath the argument of type {@code java.lang.String}
+     * @param allowEnclaveComputations the argument of type {@code boolean}
+     * @param signature the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlColumnEncryptionKeyStoreProvider.VerifyColumnMasterKeyMetadata" target="_top">.NET documentation</a>
+     */
     public boolean VerifyColumnMasterKeyMetadata(java.lang.String masterKeyPath, boolean allowEnclaveComputations, byte[] signature) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -165,6 +179,17 @@ public class SqlColumnEncryptionKeyStoreProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member VerifyColumnMasterKeyMetadata.
+     *
+     * @param dupParam0 the argument of type {@code java.lang.String}
+     * @param dupParam1 the argument of type {@code boolean}
+     * @param dupParam2 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlColumnEncryptionKeyStoreProvider.VerifyColumnMasterKeyMetadata" target="_top">.NET documentation</a>
+     */
     public boolean VerifyColumnMasterKeyMetadata(java.lang.String dupParam0, boolean dupParam1, JCORefOut dupParam2) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +204,16 @@ public class SqlColumnEncryptionKeyStoreProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DecryptColumnEncryptionKey.
+     *
+     * @param masterKeyPath the argument of type {@code java.lang.String}
+     * @param encryptionAlgorithm the argument of type {@code java.lang.String}
+     * @param encryptedColumnEncryptionKey the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlColumnEncryptionKeyStoreProvider.DecryptColumnEncryptionKey" target="_top">.NET documentation</a>
+     */
     public byte[] DecryptColumnEncryptionKey(java.lang.String masterKeyPath, java.lang.String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +237,16 @@ public class SqlColumnEncryptionKeyStoreProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DecryptColumnEncryptionKey.
+     *
+     * @param dupParam0 the argument of type {@code java.lang.String}
+     * @param dupParam1 the argument of type {@code java.lang.String}
+     * @param dupParam2 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlColumnEncryptionKeyStoreProvider.DecryptColumnEncryptionKey" target="_top">.NET documentation</a>
+     */
     public byte[] DecryptColumnEncryptionKey(java.lang.String dupParam0, java.lang.String dupParam1, JCORefOut dupParam2) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +270,16 @@ public class SqlColumnEncryptionKeyStoreProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EncryptColumnEncryptionKey.
+     *
+     * @param masterKeyPath the argument of type {@code java.lang.String}
+     * @param encryptionAlgorithm the argument of type {@code java.lang.String}
+     * @param columnEncryptionKey the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlColumnEncryptionKeyStoreProvider.EncryptColumnEncryptionKey" target="_top">.NET documentation</a>
+     */
     public byte[] EncryptColumnEncryptionKey(java.lang.String masterKeyPath, java.lang.String encryptionAlgorithm, byte[] columnEncryptionKey) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +303,16 @@ public class SqlColumnEncryptionKeyStoreProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EncryptColumnEncryptionKey.
+     *
+     * @param dupParam0 the argument of type {@code java.lang.String}
+     * @param dupParam1 the argument of type {@code java.lang.String}
+     * @param dupParam2 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlColumnEncryptionKeyStoreProvider.EncryptColumnEncryptionKey" target="_top">.NET documentation</a>
+     */
     public byte[] EncryptColumnEncryptionKey(java.lang.String dupParam0, java.lang.String dupParam1, JCORefOut dupParam2) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +336,16 @@ public class SqlColumnEncryptionKeyStoreProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SignColumnMasterKeyMetadata.
+     *
+     * @param masterKeyPath the argument of type {@code java.lang.String}
+     * @param allowEnclaveComputations the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlColumnEncryptionKeyStoreProvider.SignColumnMasterKeyMetadata" target="_top">.NET documentation</a>
+     */
     public byte[] SignColumnMasterKeyMetadata(java.lang.String masterKeyPath, boolean allowEnclaveComputations) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -102,7 +102,10 @@ public class EntityType extends system.data.metadata.edm.EntityTypeBase  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EntityType(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,18 @@ public class EntityType extends system.data.metadata.edm.EntityTypeBase  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetReferenceType.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EntityType.GetReferenceType" target="_top">.NET documentation</a>
+     */
     public RefType GetReferenceType() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +191,15 @@ public class EntityType extends system.data.metadata.edm.EntityTypeBase  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Properties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EntityType.Properties" target="_top">.NET documentation</a>
+     */
     public ReadOnlyMetadataCollection_1 getProperties() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +215,15 @@ public class EntityType extends system.data.metadata.edm.EntityTypeBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NavigationProperties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EntityType.NavigationProperties" target="_top">.NET documentation</a>
+     */
     public ReadOnlyMetadataCollection_1 getNavigationProperties() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

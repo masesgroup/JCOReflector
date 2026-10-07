@@ -102,7 +102,10 @@ public class IConstructedTypeProvider_1Implementation<TType extends IJCOBridgeRe
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IConstructedTypeProvider_1Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,15 @@ public class IConstructedTypeProvider_1Implementation<TType extends IJCOBridgeRe
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetArrayType.
+     *
+     * @param elementType the argument of type {@code TType}
+     * @param shape the argument of type {@code ArrayShape}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.IConstructedTypeProvider-1.GetArrayType" target="_top">.NET documentation</a>
+     */
     public TType GetArrayType(TType elementType, ArrayShape shape) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -158,6 +170,14 @@ public class IConstructedTypeProvider_1Implementation<TType extends IJCOBridgeRe
         }
     }
 
+    /**
+     * Invokes the .NET member GetByReferenceType.
+     *
+     * @param elementType the argument of type {@code TType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.IConstructedTypeProvider-1.GetByReferenceType" target="_top">.NET documentation</a>
+     */
     public TType GetByReferenceType(TType elementType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +192,15 @@ public class IConstructedTypeProvider_1Implementation<TType extends IJCOBridgeRe
         }
     }
 
+    /**
+     * Invokes the .NET member GetGenericInstantiation.
+     *
+     * @param genericType the argument of type {@code TType}
+     * @param typeArguments the argument of type {@code ImmutableArray_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.IConstructedTypeProvider-1.GetGenericInstantiation" target="_top">.NET documentation</a>
+     */
     public TType GetGenericInstantiation(TType genericType, ImmutableArray_1 typeArguments) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +215,14 @@ public class IConstructedTypeProvider_1Implementation<TType extends IJCOBridgeRe
         }
     }
 
+    /**
+     * Invokes the .NET member GetPointerType.
+     *
+     * @param elementType the argument of type {@code TType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.IConstructedTypeProvider-1.GetPointerType" target="_top">.NET documentation</a>
+     */
     public TType GetPointerType(TType elementType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +237,14 @@ public class IConstructedTypeProvider_1Implementation<TType extends IJCOBridgeRe
         }
     }
 
+    /**
+     * Invokes the .NET member GetSZArrayType.
+     *
+     * @param elementType the argument of type {@code TType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.IConstructedTypeProvider-1.GetSZArrayType" target="_top">.NET documentation</a>
+     */
     public TType GetSZArrayType(TType elementType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

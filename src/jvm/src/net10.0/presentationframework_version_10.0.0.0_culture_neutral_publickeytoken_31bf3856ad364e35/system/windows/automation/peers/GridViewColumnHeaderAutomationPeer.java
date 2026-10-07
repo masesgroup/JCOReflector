@@ -101,7 +101,10 @@ public class GridViewColumnHeaderAutomationPeer extends system.windows.automatio
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public GridViewColumnHeaderAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,23 @@ public class GridViewColumnHeaderAutomationPeer extends system.windows.automatio
     public GridViewColumnHeaderAutomationPeer() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param owner the argument of type {@code GridViewColumnHeader}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.GridViewColumnHeaderAutomationPeer.-ctor" target="_top">.NET documentation</a>
+     */
     public GridViewColumnHeaderAutomationPeer(GridViewColumnHeader owner) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +186,23 @@ public class GridViewColumnHeaderAutomationPeer extends system.windows.automatio
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetPattern.
+     *
+     * @param patternInterface the argument of type {@code PatternInterface}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.GridViewColumnHeaderAutomationPeer.GetPattern" target="_top">.NET documentation</a>
+     */
     public NetObject GetPattern(PatternInterface patternInterface) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,8 +221,11 @@ public class GridViewColumnHeaderAutomationPeer extends system.windows.automatio
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIInvokeProvider method available in IInvokeProvider to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IInvokeProvider.Invoke" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Invoke() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIInvokeProvider to obtain the full interface.");
     }
@@ -193,8 +233,13 @@ public class GridViewColumnHeaderAutomationPeer extends system.windows.automatio
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToITransformProvider method available in ITransformProvider to obtain an object with an invocable method
+     *
+     * @param x the argument of type {@code double}
+     * @param y the argument of type {@code double}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITransformProvider.Move" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Move(double x, double y) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITransformProvider to obtain the full interface.");
     }
@@ -202,8 +247,13 @@ public class GridViewColumnHeaderAutomationPeer extends system.windows.automatio
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToITransformProvider method available in ITransformProvider to obtain an object with an invocable method
+     *
+     * @param width the argument of type {@code double}
+     * @param height the argument of type {@code double}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITransformProvider.Resize" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Resize(double width, double height) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITransformProvider to obtain the full interface.");
     }
@@ -211,8 +261,12 @@ public class GridViewColumnHeaderAutomationPeer extends system.windows.automatio
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToITransformProvider method available in ITransformProvider to obtain an object with an invocable method
+     *
+     * @param degrees the argument of type {@code double}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITransformProvider.Rotate" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Rotate(double degrees) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITransformProvider to obtain the full interface.");
     }

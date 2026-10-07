@@ -102,7 +102,10 @@ public class BitConverter extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BitConverter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,17 @@ public class BitConverter extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ToBoolean.
+     *
+     * @param value the argument of type {@code byte[]}
+     * @param startIndex the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.ToBoolean" target="_top">.NET documentation</a>
+     */
     public static boolean ToBoolean(byte[] value, int startIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -169,6 +183,17 @@ public class BitConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToBoolean.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.ToBoolean" target="_top">.NET documentation</a>
+     */
     public static boolean ToBoolean(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -183,6 +208,14 @@ public class BitConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetBytes.
+     *
+     * @param value the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.GetBytes" target="_top">.NET documentation</a>
+     */
     public static byte[] GetBytes(boolean value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -206,6 +239,14 @@ public class BitConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetBytes.
+     *
+     * @param value the argument of type {@code char}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.GetBytes" target="_top">.NET documentation</a>
+     */
     public static byte[] GetBytes(char value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -229,6 +270,14 @@ public class BitConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetBytes.
+     *
+     * @param value the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.GetBytes" target="_top">.NET documentation</a>
+     */
     public static byte[] GetBytes(double value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -252,6 +301,14 @@ public class BitConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetBytes.
+     *
+     * @param value the argument of type {@code short}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.GetBytes" target="_top">.NET documentation</a>
+     */
     public static byte[] GetBytes(short value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -275,6 +332,14 @@ public class BitConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetBytes.
+     *
+     * @param value the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.GetBytes" target="_top">.NET documentation</a>
+     */
     public static byte[] GetBytes(int value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -298,6 +363,14 @@ public class BitConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetBytes.
+     *
+     * @param value the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.GetBytes" target="_top">.NET documentation</a>
+     */
     public static byte[] GetBytes(long value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -321,6 +394,14 @@ public class BitConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetBytes.
+     *
+     * @param value the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.GetBytes" target="_top">.NET documentation</a>
+     */
     public static byte[] GetBytes(Single value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -344,6 +425,14 @@ public class BitConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetBytes.
+     *
+     * @param value the argument of type {@code UInt16}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.GetBytes" target="_top">.NET documentation</a>
+     */
     public static byte[] GetBytes(UInt16 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -367,6 +456,14 @@ public class BitConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetBytes.
+     *
+     * @param value the argument of type {@code UInt32}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.GetBytes" target="_top">.NET documentation</a>
+     */
     public static byte[] GetBytes(UInt32 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -390,6 +487,14 @@ public class BitConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetBytes.
+     *
+     * @param value the argument of type {@code UInt64}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.GetBytes" target="_top">.NET documentation</a>
+     */
     public static byte[] GetBytes(UInt64 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -413,6 +518,18 @@ public class BitConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToChar.
+     *
+     * @param value the argument of type {@code byte[]}
+     * @param startIndex the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.ToChar" target="_top">.NET documentation</a>
+     */
     public static char ToChar(byte[] value, int startIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -427,6 +544,18 @@ public class BitConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToChar.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.ToChar" target="_top">.NET documentation</a>
+     */
     public static char ToChar(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -441,6 +570,14 @@ public class BitConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Int64BitsToDouble.
+     *
+     * @param value the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.Int64BitsToDouble" target="_top">.NET documentation</a>
+     */
     public static double Int64BitsToDouble(long value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -481,6 +618,18 @@ public class BitConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToDouble.
+     *
+     * @param value the argument of type {@code byte[]}
+     * @param startIndex the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.ToDouble" target="_top">.NET documentation</a>
+     */
     public static double ToDouble(byte[] value, int startIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -521,6 +670,18 @@ public class BitConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToDouble.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.ToDouble" target="_top">.NET documentation</a>
+     */
     public static double ToDouble(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -561,6 +722,18 @@ public class BitConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToInt16.
+     *
+     * @param value the argument of type {@code byte[]}
+     * @param startIndex the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.ToInt16" target="_top">.NET documentation</a>
+     */
     public static short ToInt16(byte[] value, int startIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -601,6 +774,18 @@ public class BitConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToInt16.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.ToInt16" target="_top">.NET documentation</a>
+     */
     public static short ToInt16(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -641,6 +826,18 @@ public class BitConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToInt32.
+     *
+     * @param value the argument of type {@code byte[]}
+     * @param startIndex the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.ToInt32" target="_top">.NET documentation</a>
+     */
     public static int ToInt32(byte[] value, int startIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -681,6 +878,18 @@ public class BitConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToInt32.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.ToInt32" target="_top">.NET documentation</a>
+     */
     public static int ToInt32(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -721,6 +930,14 @@ public class BitConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DoubleToInt64Bits.
+     *
+     * @param value the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.DoubleToInt64Bits" target="_top">.NET documentation</a>
+     */
     public static long DoubleToInt64Bits(double value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -761,6 +978,18 @@ public class BitConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToInt64.
+     *
+     * @param value the argument of type {@code byte[]}
+     * @param startIndex the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.ToInt64" target="_top">.NET documentation</a>
+     */
     public static long ToInt64(byte[] value, int startIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -801,6 +1030,18 @@ public class BitConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToInt64.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.ToInt64" target="_top">.NET documentation</a>
+     */
     public static long ToInt64(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -841,6 +1082,18 @@ public class BitConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToSingle.
+     *
+     * @param value the argument of type {@code byte[]}
+     * @param startIndex the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.ToSingle" target="_top">.NET documentation</a>
+     */
     public static Single ToSingle(byte[] value, int startIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -856,6 +1109,18 @@ public class BitConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToSingle.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.ToSingle" target="_top">.NET documentation</a>
+     */
     public static Single ToSingle(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -871,6 +1136,23 @@ public class BitConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToString.
+     *
+     * @param value the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.ToString" target="_top">.NET documentation</a>
+     */
     public static java.lang.String ToString(byte[] value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -885,6 +1167,23 @@ public class BitConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToString.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.ToString" target="_top">.NET documentation</a>
+     */
     public static java.lang.String ToString(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -899,6 +1198,24 @@ public class BitConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToString.
+     *
+     * @param value the argument of type {@code byte[]}
+     * @param startIndex the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.ToString" target="_top">.NET documentation</a>
+     */
     public static java.lang.String ToString(byte[] value, int startIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -913,6 +1230,24 @@ public class BitConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToString.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.ToString" target="_top">.NET documentation</a>
+     */
     public static java.lang.String ToString(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -927,6 +1262,27 @@ public class BitConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToString.
+     *
+     * @param value the argument of type {@code byte[]}
+     * @param startIndex the argument of type {@code int}
+     * @param length the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.ToString" target="_top">.NET documentation</a>
+     */
     public static java.lang.String ToString(byte[] value, int startIndex, int length) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -941,6 +1297,27 @@ public class BitConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToString.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.ToString" target="_top">.NET documentation</a>
+     */
     public static java.lang.String ToString(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -955,6 +1332,18 @@ public class BitConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToUInt16.
+     *
+     * @param value the argument of type {@code byte[]}
+     * @param startIndex the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.ToUInt16" target="_top">.NET documentation</a>
+     */
     public static UInt16 ToUInt16(byte[] value, int startIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -970,6 +1359,18 @@ public class BitConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToUInt16.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.ToUInt16" target="_top">.NET documentation</a>
+     */
     public static UInt16 ToUInt16(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -985,6 +1386,18 @@ public class BitConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToUInt32.
+     *
+     * @param value the argument of type {@code byte[]}
+     * @param startIndex the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.ToUInt32" target="_top">.NET documentation</a>
+     */
     public static UInt32 ToUInt32(byte[] value, int startIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1000,6 +1413,18 @@ public class BitConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToUInt32.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.ToUInt32" target="_top">.NET documentation</a>
+     */
     public static UInt32 ToUInt32(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1015,6 +1440,18 @@ public class BitConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToUInt64.
+     *
+     * @param value the argument of type {@code byte[]}
+     * @param startIndex the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.ToUInt64" target="_top">.NET documentation</a>
+     */
     public static UInt64 ToUInt64(byte[] value, int startIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1030,6 +1467,18 @@ public class BitConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToUInt64.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.BitConverter.ToUInt64" target="_top">.NET documentation</a>
+     */
     public static UInt64 ToUInt64(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

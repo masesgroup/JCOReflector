@@ -102,7 +102,10 @@ public class CommonItemDialog extends microsoft.win32.CommonDialog  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CommonItemDialog(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,12 @@ public class CommonItemDialog extends microsoft.win32.CommonDialog  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Reset.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.CommonItemDialog.Reset" target="_top">.NET documentation</a>
+     */
     public void Reset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +178,13 @@ public class CommonItemDialog extends microsoft.win32.CommonDialog  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AddToRecent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.CommonItemDialog.AddToRecent" target="_top">.NET documentation</a>
+     */
     public boolean getAddToRecent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +199,13 @@ public class CommonItemDialog extends microsoft.win32.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AddToRecent.
+     *
+     * @param AddToRecent the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.CommonItemDialog.AddToRecent" target="_top">.NET documentation</a>
+     */
     public void setAddToRecent(boolean AddToRecent) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +216,13 @@ public class CommonItemDialog extends microsoft.win32.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DereferenceLinks.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.CommonItemDialog.DereferenceLinks" target="_top">.NET documentation</a>
+     */
     public boolean getDereferenceLinks() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +237,13 @@ public class CommonItemDialog extends microsoft.win32.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DereferenceLinks.
+     *
+     * @param DereferenceLinks the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.CommonItemDialog.DereferenceLinks" target="_top">.NET documentation</a>
+     */
     public void setDereferenceLinks(boolean DereferenceLinks) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +254,13 @@ public class CommonItemDialog extends microsoft.win32.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShowHiddenItems.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.CommonItemDialog.ShowHiddenItems" target="_top">.NET documentation</a>
+     */
     public boolean getShowHiddenItems() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +275,13 @@ public class CommonItemDialog extends microsoft.win32.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ShowHiddenItems.
+     *
+     * @param ShowHiddenItems the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.CommonItemDialog.ShowHiddenItems" target="_top">.NET documentation</a>
+     */
     public void setShowHiddenItems(boolean ShowHiddenItems) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +292,13 @@ public class CommonItemDialog extends microsoft.win32.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValidateNames.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.CommonItemDialog.ValidateNames" target="_top">.NET documentation</a>
+     */
     public boolean getValidateNames() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +313,13 @@ public class CommonItemDialog extends microsoft.win32.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ValidateNames.
+     *
+     * @param ValidateNames the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.CommonItemDialog.ValidateNames" target="_top">.NET documentation</a>
+     */
     public void setValidateNames(boolean ValidateNames) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +330,13 @@ public class CommonItemDialog extends microsoft.win32.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CustomPlaces.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.CommonItemDialog.CustomPlaces" target="_top">.NET documentation</a>
+     */
     public IList_1 getCustomPlaces() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +352,13 @@ public class CommonItemDialog extends microsoft.win32.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CustomPlaces.
+     *
+     * @param CustomPlaces the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.CommonItemDialog.CustomPlaces" target="_top">.NET documentation</a>
+     */
     public void setCustomPlaces(IList_1 CustomPlaces) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +369,13 @@ public class CommonItemDialog extends microsoft.win32.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClientGuid.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.CommonItemDialog.ClientGuid" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getClientGuid() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +391,13 @@ public class CommonItemDialog extends microsoft.win32.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ClientGuid.
+     *
+     * @param ClientGuid the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.CommonItemDialog.ClientGuid" target="_top">.NET documentation</a>
+     */
     public void setClientGuid(Nullable_1 ClientGuid) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -315,6 +408,13 @@ public class CommonItemDialog extends microsoft.win32.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultDirectory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.CommonItemDialog.DefaultDirectory" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDefaultDirectory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -329,6 +429,13 @@ public class CommonItemDialog extends microsoft.win32.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultDirectory.
+     *
+     * @param DefaultDirectory the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.CommonItemDialog.DefaultDirectory" target="_top">.NET documentation</a>
+     */
     public void setDefaultDirectory(java.lang.String DefaultDirectory) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -339,6 +446,13 @@ public class CommonItemDialog extends microsoft.win32.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InitialDirectory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.CommonItemDialog.InitialDirectory" target="_top">.NET documentation</a>
+     */
     public java.lang.String getInitialDirectory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -353,6 +467,13 @@ public class CommonItemDialog extends microsoft.win32.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InitialDirectory.
+     *
+     * @param InitialDirectory the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.CommonItemDialog.InitialDirectory" target="_top">.NET documentation</a>
+     */
     public void setInitialDirectory(java.lang.String InitialDirectory) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -363,6 +484,13 @@ public class CommonItemDialog extends microsoft.win32.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RootDirectory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.CommonItemDialog.RootDirectory" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRootDirectory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -377,6 +505,13 @@ public class CommonItemDialog extends microsoft.win32.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RootDirectory.
+     *
+     * @param RootDirectory the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.CommonItemDialog.RootDirectory" target="_top">.NET documentation</a>
+     */
     public void setRootDirectory(java.lang.String RootDirectory) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -387,6 +522,13 @@ public class CommonItemDialog extends microsoft.win32.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Title.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.CommonItemDialog.Title" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTitle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -401,6 +543,13 @@ public class CommonItemDialog extends microsoft.win32.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Title.
+     *
+     * @param Title the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.CommonItemDialog.Title" target="_top">.NET documentation</a>
+     */
     public void setTitle(java.lang.String Title) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

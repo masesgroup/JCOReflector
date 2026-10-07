@@ -105,7 +105,10 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XamlObjectWriterSettings(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,12 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.-ctor" target="_top">.NET documentation</a>
+     */
     public XamlObjectWriterSettings() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +171,22 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param settings the argument of type {@code XamlObjectWriterSettings}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.-ctor" target="_top">.NET documentation</a>
+     */
     public XamlObjectWriterSettings(XamlObjectWriterSettings settings) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +205,13 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IgnoreCanConvert.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.IgnoreCanConvert" target="_top">.NET documentation</a>
+     */
     public boolean getIgnoreCanConvert() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +226,13 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IgnoreCanConvert.
+     *
+     * @param IgnoreCanConvert the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.IgnoreCanConvert" target="_top">.NET documentation</a>
+     */
     public void setIgnoreCanConvert(boolean IgnoreCanConvert) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +243,13 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PreferUnconvertedDictionaryKeys.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.PreferUnconvertedDictionaryKeys" target="_top">.NET documentation</a>
+     */
     public boolean getPreferUnconvertedDictionaryKeys() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +264,13 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PreferUnconvertedDictionaryKeys.
+     *
+     * @param PreferUnconvertedDictionaryKeys the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.PreferUnconvertedDictionaryKeys" target="_top">.NET documentation</a>
+     */
     public void setPreferUnconvertedDictionaryKeys(boolean PreferUnconvertedDictionaryKeys) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +281,13 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RegisterNamesOnExternalNamescope.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.RegisterNamesOnExternalNamescope" target="_top">.NET documentation</a>
+     */
     public boolean getRegisterNamesOnExternalNamescope() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +302,13 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RegisterNamesOnExternalNamescope.
+     *
+     * @param RegisterNamesOnExternalNamescope the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.RegisterNamesOnExternalNamescope" target="_top">.NET documentation</a>
+     */
     public void setRegisterNamesOnExternalNamescope(boolean RegisterNamesOnExternalNamescope) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +319,13 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SkipDuplicatePropertyCheck.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.SkipDuplicatePropertyCheck" target="_top">.NET documentation</a>
+     */
     public boolean getSkipDuplicatePropertyCheck() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +340,13 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SkipDuplicatePropertyCheck.
+     *
+     * @param SkipDuplicatePropertyCheck the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.SkipDuplicatePropertyCheck" target="_top">.NET documentation</a>
+     */
     public void setSkipDuplicatePropertyCheck(boolean SkipDuplicatePropertyCheck) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +357,13 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SkipProvideValueOnRoot.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.SkipProvideValueOnRoot" target="_top">.NET documentation</a>
+     */
     public boolean getSkipProvideValueOnRoot() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +378,13 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SkipProvideValueOnRoot.
+     *
+     * @param SkipProvideValueOnRoot the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.SkipProvideValueOnRoot" target="_top">.NET documentation</a>
+     */
     public void setSkipProvideValueOnRoot(boolean SkipProvideValueOnRoot) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +395,13 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XamlSetValueHandler.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.XamlSetValueHandler" target="_top">.NET documentation</a>
+     */
     public EventHandler_1 getXamlSetValueHandler() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -314,6 +416,13 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XamlSetValueHandler.
+     *
+     * @param XamlSetValueHandler the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.XamlSetValueHandler" target="_top">.NET documentation</a>
+     */
     public void setXamlSetValueHandler(EventHandler_1 XamlSetValueHandler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -324,6 +433,13 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AfterBeginInitHandler.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.AfterBeginInitHandler" target="_top">.NET documentation</a>
+     */
     public EventHandler_1 getAfterBeginInitHandler() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -338,6 +454,13 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AfterBeginInitHandler.
+     *
+     * @param AfterBeginInitHandler the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.AfterBeginInitHandler" target="_top">.NET documentation</a>
+     */
     public void setAfterBeginInitHandler(EventHandler_1 AfterBeginInitHandler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +471,13 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AfterEndInitHandler.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.AfterEndInitHandler" target="_top">.NET documentation</a>
+     */
     public EventHandler_1 getAfterEndInitHandler() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -362,6 +492,13 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AfterEndInitHandler.
+     *
+     * @param AfterEndInitHandler the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.AfterEndInitHandler" target="_top">.NET documentation</a>
+     */
     public void setAfterEndInitHandler(EventHandler_1 AfterEndInitHandler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -372,6 +509,13 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AfterPropertiesHandler.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.AfterPropertiesHandler" target="_top">.NET documentation</a>
+     */
     public EventHandler_1 getAfterPropertiesHandler() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -386,6 +530,13 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AfterPropertiesHandler.
+     *
+     * @param AfterPropertiesHandler the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.AfterPropertiesHandler" target="_top">.NET documentation</a>
+     */
     public void setAfterPropertiesHandler(EventHandler_1 AfterPropertiesHandler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -396,6 +547,13 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BeforePropertiesHandler.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.BeforePropertiesHandler" target="_top">.NET documentation</a>
+     */
     public EventHandler_1 getBeforePropertiesHandler() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -410,6 +568,13 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BeforePropertiesHandler.
+     *
+     * @param BeforePropertiesHandler the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.BeforePropertiesHandler" target="_top">.NET documentation</a>
+     */
     public void setBeforePropertiesHandler(EventHandler_1 BeforePropertiesHandler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -420,6 +585,13 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RootObjectInstance.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.RootObjectInstance" target="_top">.NET documentation</a>
+     */
     public NetObject getRootObjectInstance() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -435,6 +607,13 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RootObjectInstance.
+     *
+     * @param RootObjectInstance the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.RootObjectInstance" target="_top">.NET documentation</a>
+     */
     public void setRootObjectInstance(NetObject RootObjectInstance) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -445,6 +624,13 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SourceBamlUri.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.SourceBamlUri" target="_top">.NET documentation</a>
+     */
     public Uri getSourceBamlUri() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -460,6 +646,13 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SourceBamlUri.
+     *
+     * @param SourceBamlUri the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.SourceBamlUri" target="_top">.NET documentation</a>
+     */
     public void setSourceBamlUri(Uri SourceBamlUri) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -470,6 +663,13 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExternalNameScope.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.ExternalNameScope" target="_top">.NET documentation</a>
+     */
     public INameScope getExternalNameScope() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -485,6 +685,13 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ExternalNameScope.
+     *
+     * @param ExternalNameScope the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.ExternalNameScope" target="_top">.NET documentation</a>
+     */
     public void setExternalNameScope(INameScope ExternalNameScope) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -495,6 +702,13 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AccessLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.AccessLevel" target="_top">.NET documentation</a>
+     */
     public XamlAccessLevel getAccessLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -510,6 +724,13 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AccessLevel.
+     *
+     * @param AccessLevel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.AccessLevel" target="_top">.NET documentation</a>
+     */
     public void setAccessLevel(XamlAccessLevel AccessLevel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

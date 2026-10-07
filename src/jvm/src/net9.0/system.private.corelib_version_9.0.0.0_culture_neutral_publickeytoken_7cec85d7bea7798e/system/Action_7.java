@@ -183,7 +183,10 @@ public class Action_7<T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeRefle
         callerInstance = instance;
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     @SuppressWarnings("unchecked")
     public Action_7(java.lang.Object instance) throws Throwable {
@@ -206,6 +209,19 @@ public class Action_7<T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeRefle
         return JCOBridgeInstance.translateException(ne);
     }
 
+    /**
+     * Invokes the .NET member DynamicInvoke.
+     *
+     * @param arg1 the argument of type {@code T1}
+     * @param arg2 the argument of type {@code T2}
+     * @param arg3 the argument of type {@code T3}
+     * @param arg4 the argument of type {@code T4}
+     * @param arg5 the argument of type {@code T5}
+     * @param arg6 the argument of type {@code T6}
+     * @param arg7 the argument of type {@code T7}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Delegate.DynamicInvoke" target="_top">.NET documentation</a>
+     */
     public void DynamicInvoke(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,7 +233,15 @@ public class Action_7<T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeRefle
     }
 
     /**
-     * Methods invoked in JVM when an event is raised in CLR 
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param arg1 the .NET argument of type {@code T1}
+     * @param arg2 the .NET argument of type {@code T2}
+     * @param arg3 the .NET argument of type {@code T3}
+     * @param arg4 the .NET argument of type {@code T4}
+     * @param arg5 the .NET argument of type {@code T5}
+     * @param arg6 the .NET argument of type {@code T6}
+     * @param arg7 the .NET argument of type {@code T7}
      */
     public void Invoke(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7) {
     }

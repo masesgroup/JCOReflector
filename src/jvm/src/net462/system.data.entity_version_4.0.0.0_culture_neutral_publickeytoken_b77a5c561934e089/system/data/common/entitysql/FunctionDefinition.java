@@ -99,7 +99,10 @@ public class FunctionDefinition extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FunctionDefinition(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class FunctionDefinition extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EndPosition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.EntitySql.FunctionDefinition.EndPosition" target="_top">.NET documentation</a>
+     */
     public int getEndPosition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +208,13 @@ public class FunctionDefinition extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StartPosition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.EntitySql.FunctionDefinition.StartPosition" target="_top">.NET documentation</a>
+     */
     public int getStartPosition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +255,13 @@ public class FunctionDefinition extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Lambda.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.EntitySql.FunctionDefinition.Lambda" target="_top">.NET documentation</a>
+     */
     public DbLambda getLambda() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +277,13 @@ public class FunctionDefinition extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.EntitySql.FunctionDefinition.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class PropertyFilterAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PropertyFilterAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class PropertyFilterAttribute extends system.Attribute  {
     public PropertyFilterAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param filter the argument of type {@code PropertyFilterOptions}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.PropertyFilterAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public PropertyFilterAttribute(PropertyFilterOptions filter) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +175,14 @@ public class PropertyFilterAttribute extends system.Attribute  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Match.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.PropertyFilterAttribute.Match" target="_top">.NET documentation</a>
+     */
     public boolean Match(NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +201,13 @@ public class PropertyFilterAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Filter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.PropertyFilterAttribute.Filter" target="_top">.NET documentation</a>
+     */
     public PropertyFilterOptions getFilter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

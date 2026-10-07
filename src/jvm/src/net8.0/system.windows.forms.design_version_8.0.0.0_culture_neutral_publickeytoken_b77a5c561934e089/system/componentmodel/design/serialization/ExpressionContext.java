@@ -99,7 +99,10 @@ public class ExpressionContext extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ExpressionContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,21 @@ public class ExpressionContext extends NetObject  {
     public ExpressionContext() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param expression the argument of type {@code CodeExpression}
+     * @param expressionType the argument of type {@code NetType}
+     * @param owner the argument of type {@code NetObject}
+     * @param presetValue the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.ExpressionContext.-ctor" target="_top">.NET documentation</a>
+     */
     public ExpressionContext(CodeExpression expression, NetType expressionType, NetObject owner, NetObject presetValue) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +177,18 @@ public class ExpressionContext extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param expression the argument of type {@code CodeExpression}
+     * @param expressionType the argument of type {@code NetType}
+     * @param owner the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.ExpressionContext.-ctor" target="_top">.NET documentation</a>
+     */
     public ExpressionContext(CodeExpression expression, NetType expressionType, NetObject owner) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +208,13 @@ public class ExpressionContext extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Expression.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.ExpressionContext.Expression" target="_top">.NET documentation</a>
+     */
     public CodeExpression getExpression() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +230,13 @@ public class ExpressionContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Owner.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.ExpressionContext.Owner" target="_top">.NET documentation</a>
+     */
     public NetObject getOwner() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +252,13 @@ public class ExpressionContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PresetValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.ExpressionContext.PresetValue" target="_top">.NET documentation</a>
+     */
     public NetObject getPresetValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +274,13 @@ public class ExpressionContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExpressionType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.ExpressionContext.ExpressionType" target="_top">.NET documentation</a>
+     */
     public NetType getExpressionType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

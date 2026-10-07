@@ -100,7 +100,10 @@ public class DpapiDataProtector extends system.security.cryptography.DataProtect
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DpapiDataProtector(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,29 @@ public class DpapiDataProtector extends system.security.cryptography.DataProtect
     public DpapiDataProtector() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param appName the argument of type {@code java.lang.String}
+     * @param primaryPurpose the argument of type {@code java.lang.String}
+     * @param specificPurpose the argument of type {@code java.lang.String...}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.DpapiDataProtector.-ctor" target="_top">.NET documentation</a>
+     */
     public DpapiDataProtector(java.lang.String appName, java.lang.String primaryPurpose, java.lang.String... specificPurpose) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +191,14 @@ public class DpapiDataProtector extends system.security.cryptography.DataProtect
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsReprotectRequired.
+     *
+     * @param encryptedData the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.DpapiDataProtector.IsReprotectRequired" target="_top">.NET documentation</a>
+     */
     public boolean IsReprotectRequired(byte[] encryptedData) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +213,14 @@ public class DpapiDataProtector extends system.security.cryptography.DataProtect
         }
     }
 
+    /**
+     * Invokes the .NET member IsReprotectRequired.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.DpapiDataProtector.IsReprotectRequired" target="_top">.NET documentation</a>
+     */
     public boolean IsReprotectRequired(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +239,13 @@ public class DpapiDataProtector extends system.security.cryptography.DataProtect
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Scope.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.DpapiDataProtector.Scope" target="_top">.NET documentation</a>
+     */
     public DataProtectionScope getScope() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +261,13 @@ public class DpapiDataProtector extends system.security.cryptography.DataProtect
         }
     }
 
+    /**
+     * Sets the value of the .NET property Scope.
+     *
+     * @param Scope the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.DpapiDataProtector.Scope" target="_top">.NET documentation</a>
+     */
     public void setScope(DataProtectionScope Scope) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

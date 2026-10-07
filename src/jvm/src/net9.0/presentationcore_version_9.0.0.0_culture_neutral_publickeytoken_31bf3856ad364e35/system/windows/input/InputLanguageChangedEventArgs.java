@@ -100,7 +100,10 @@ public class InputLanguageChangedEventArgs extends system.windows.input.InputLan
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public InputLanguageChangedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class InputLanguageChangedEventArgs extends system.windows.input.InputLan
     public InputLanguageChangedEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param newLanguageId the argument of type {@code CultureInfo}
+     * @param previousLanguageId the argument of type {@code CultureInfo}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InputLanguageChangedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public InputLanguageChangedEventArgs(CultureInfo newLanguageId, CultureInfo previousLanguageId) throws Throwable {
         try {
             // add reference to assemblyName.dll file

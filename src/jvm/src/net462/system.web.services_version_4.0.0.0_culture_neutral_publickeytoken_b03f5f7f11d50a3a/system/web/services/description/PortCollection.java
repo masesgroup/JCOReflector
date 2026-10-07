@@ -100,7 +100,10 @@ public class PortCollection extends system.web.services.description.ServiceDescr
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PortCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,14 @@ public class PortCollection extends system.web.services.description.ServiceDescr
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param port the argument of type {@code Port}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.PortCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(Port port) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +180,14 @@ public class PortCollection extends system.web.services.description.ServiceDescr
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param port the argument of type {@code Port}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.PortCollection.Add" target="_top">.NET documentation</a>
+     */
     public int Add(Port port) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +228,14 @@ public class PortCollection extends system.web.services.description.ServiceDescr
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param port the argument of type {@code Port}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.PortCollection.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(Port port) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +276,14 @@ public class PortCollection extends system.web.services.description.ServiceDescr
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code Port[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.PortCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(Port[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +294,14 @@ public class PortCollection extends system.web.services.description.ServiceDescr
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param port the argument of type {@code Port}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.PortCollection.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(int index, Port port) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +312,13 @@ public class PortCollection extends system.web.services.description.ServiceDescr
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param port the argument of type {@code Port}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.PortCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(Port port) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

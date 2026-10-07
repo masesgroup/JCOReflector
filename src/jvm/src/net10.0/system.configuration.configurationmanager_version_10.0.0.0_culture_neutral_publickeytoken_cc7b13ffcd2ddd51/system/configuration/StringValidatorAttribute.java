@@ -100,7 +100,10 @@ public class StringValidatorAttribute extends system.configuration.Configuration
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public StringValidatorAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class StringValidatorAttribute extends system.configuration.Configuration
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.StringValidatorAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public StringValidatorAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class StringValidatorAttribute extends system.configuration.Configuration
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MaxLength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.StringValidatorAttribute.MaxLength" target="_top">.NET documentation</a>
+     */
     public int getMaxLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +221,21 @@ public class StringValidatorAttribute extends system.configuration.Configuration
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxLength.
+     *
+     * @param MaxLength the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.StringValidatorAttribute.MaxLength" target="_top">.NET documentation</a>
+     */
     public void setMaxLength(int MaxLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +246,13 @@ public class StringValidatorAttribute extends system.configuration.Configuration
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinLength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.StringValidatorAttribute.MinLength" target="_top">.NET documentation</a>
+     */
     public int getMinLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +293,21 @@ public class StringValidatorAttribute extends system.configuration.Configuration
         }
     }
 
+    /**
+     * Sets the value of the .NET property MinLength.
+     *
+     * @param MinLength the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.StringValidatorAttribute.MinLength" target="_top">.NET documentation</a>
+     */
     public void setMinLength(int MinLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +318,13 @@ public class StringValidatorAttribute extends system.configuration.Configuration
         }
     }
 
+    /**
+     * Gets the value of the .NET property InvalidCharacters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.StringValidatorAttribute.InvalidCharacters" target="_top">.NET documentation</a>
+     */
     public java.lang.String getInvalidCharacters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +339,13 @@ public class StringValidatorAttribute extends system.configuration.Configuration
         }
     }
 
+    /**
+     * Sets the value of the .NET property InvalidCharacters.
+     *
+     * @param InvalidCharacters the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.StringValidatorAttribute.InvalidCharacters" target="_top">.NET documentation</a>
+     */
     public void setInvalidCharacters(java.lang.String InvalidCharacters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

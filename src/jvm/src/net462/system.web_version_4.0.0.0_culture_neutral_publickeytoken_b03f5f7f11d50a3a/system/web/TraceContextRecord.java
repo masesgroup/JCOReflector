@@ -98,7 +98,10 @@ public class TraceContextRecord extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TraceContextRecord(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,16 @@ public class TraceContextRecord extends NetObject  {
     public TraceContextRecord() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param category the argument of type {@code java.lang.String}
+     * @param msg the argument of type {@code java.lang.String}
+     * @param isWarning the argument of type {@code boolean}
+     * @param errorInfo the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.TraceContextRecord.-ctor" target="_top">.NET documentation</a>
+     */
     public TraceContextRecord(java.lang.String category, java.lang.String msg, boolean isWarning, NetException errorInfo) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +180,13 @@ public class TraceContextRecord extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsWarning.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.TraceContextRecord.IsWarning" target="_top">.NET documentation</a>
+     */
     public boolean getIsWarning() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +201,13 @@ public class TraceContextRecord extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ErrorInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.TraceContextRecord.ErrorInfo" target="_top">.NET documentation</a>
+     */
     public NetException getErrorInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +223,13 @@ public class TraceContextRecord extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Category.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.TraceContextRecord.Category" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCategory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +244,13 @@ public class TraceContextRecord extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Message.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.TraceContextRecord.Message" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMessage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

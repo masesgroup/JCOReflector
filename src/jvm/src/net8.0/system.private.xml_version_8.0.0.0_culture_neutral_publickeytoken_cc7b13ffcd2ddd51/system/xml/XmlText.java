@@ -103,7 +103,10 @@ public class XmlText extends system.xml.XmlCharacterData  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlText(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,15 @@ public class XmlText extends system.xml.XmlCharacterData  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CloneNode.
+     *
+     * @param deep the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlText.CloneNode" target="_top">.NET documentation</a>
+     */
     public XmlNode CloneNode(boolean deep) throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +185,26 @@ public class XmlText extends system.xml.XmlCharacterData  {
         }
     }
 
+    /**
+     * Invokes the .NET member SplitText.
+     *
+     * @param offset the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlText.SplitText" target="_top">.NET documentation</a>
+     */
     public XmlText SplitText(int offset) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +220,13 @@ public class XmlText extends system.xml.XmlCharacterData  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteContentTo.
+     *
+     * @param w the argument of type {@code XmlWriter}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlText.WriteContentTo" target="_top">.NET documentation</a>
+     */
     public void WriteContentTo(XmlWriter w) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +237,13 @@ public class XmlText extends system.xml.XmlCharacterData  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteTo.
+     *
+     * @param w the argument of type {@code XmlWriter}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlText.WriteTo" target="_top">.NET documentation</a>
+     */
     public void WriteTo(XmlWriter w) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

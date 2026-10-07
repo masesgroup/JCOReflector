@@ -114,7 +114,9 @@ public class PreProcessControlState extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public PreProcessControlState(java.lang.Object instance) {
         super(instance);

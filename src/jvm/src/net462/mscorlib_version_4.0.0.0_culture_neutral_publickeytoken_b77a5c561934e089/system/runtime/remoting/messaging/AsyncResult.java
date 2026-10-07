@@ -105,7 +105,10 @@ public class AsyncResult extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AsyncResult(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class AsyncResult extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetReplyMessage.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.AsyncResult.GetReplyMessage" target="_top">.NET documentation</a>
+     */
     public IMessage GetReplyMessage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +185,30 @@ public class AsyncResult extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SyncProcessMessage.
+     *
+     * @param msg the argument of type {@code IMessage}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.AsyncResult.SyncProcessMessage" target="_top">.NET documentation</a>
+     */
     public IMessage SyncProcessMessage(IMessage msg) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NullReferenceException, system.threading.WaitHandleCannotBeOpenedException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +224,16 @@ public class AsyncResult extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsyncProcessMessage.
+     *
+     * @param msg the argument of type {@code IMessage}
+     * @param replySink the argument of type {@code IMessageSink}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.AsyncResult.AsyncProcessMessage" target="_top">.NET documentation</a>
+     */
     public IMessageCtrl AsyncProcessMessage(IMessage msg, IMessageSink replySink) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +249,13 @@ public class AsyncResult extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetMessageCtrl.
+     *
+     * @param mc the argument of type {@code IMessageCtrl}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.AsyncResult.SetMessageCtrl" target="_top">.NET documentation</a>
+     */
     public void SetMessageCtrl(IMessageCtrl mc) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +270,13 @@ public class AsyncResult extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CompletedSynchronously.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.AsyncResult.CompletedSynchronously" target="_top">.NET documentation</a>
+     */
     public boolean getCompletedSynchronously() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +291,13 @@ public class AsyncResult extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EndInvokeCalled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.AsyncResult.EndInvokeCalled" target="_top">.NET documentation</a>
+     */
     public boolean getEndInvokeCalled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +312,13 @@ public class AsyncResult extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EndInvokeCalled.
+     *
+     * @param EndInvokeCalled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.AsyncResult.EndInvokeCalled" target="_top">.NET documentation</a>
+     */
     public void setEndInvokeCalled(boolean EndInvokeCalled) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +329,13 @@ public class AsyncResult extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsCompleted.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.AsyncResult.IsCompleted" target="_top">.NET documentation</a>
+     */
     public boolean getIsCompleted() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +350,13 @@ public class AsyncResult extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AsyncDelegate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.AsyncResult.AsyncDelegate" target="_top">.NET documentation</a>
+     */
     public NetObject getAsyncDelegate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +372,13 @@ public class AsyncResult extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AsyncState.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.AsyncResult.AsyncState" target="_top">.NET documentation</a>
+     */
     public NetObject getAsyncState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +394,13 @@ public class AsyncResult extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NextSink.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.AsyncResult.NextSink" target="_top">.NET documentation</a>
+     */
     public IMessageSink getNextSink() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -316,6 +416,26 @@ public class AsyncResult extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AsyncWaitHandle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.AsyncResult.AsyncWaitHandle" target="_top">.NET documentation</a>
+     */
     public WaitHandle getAsyncWaitHandle() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

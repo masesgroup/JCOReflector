@@ -99,7 +99,10 @@ public class CheckBox extends system.windows.controls.primitives.ToggleButton  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CheckBox(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,14 @@ public class CheckBox extends system.windows.controls.primitives.ToggleButton  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.CheckBox.-ctor" target="_top">.NET documentation</a>
+     */
     public CheckBox() throws Throwable, system.InvalidOperationException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file

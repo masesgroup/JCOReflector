@@ -98,7 +98,10 @@ public class RegexRunner extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RegexRunner(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,20 @@ public class RegexRunner extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CharInClass.
+     *
+     * @param ch the argument of type {@code char}
+     * @param charClass the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.RegularExpressions.RegexRunner.CharInClass" target="_top">.NET documentation</a>
+     */
     public static boolean CharInClass(char ch, java.lang.String charClass) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

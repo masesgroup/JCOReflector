@@ -100,7 +100,10 @@ public class ToolStripProfessionalRenderer extends system.windows.forms.ToolStri
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ToolStripProfessionalRenderer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class ToolStripProfessionalRenderer extends system.windows.forms.ToolStri
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripProfessionalRenderer.-ctor" target="_top">.NET documentation</a>
+     */
     public ToolStripProfessionalRenderer() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +166,13 @@ public class ToolStripProfessionalRenderer extends system.windows.forms.ToolStri
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param professionalColorTable the argument of type {@code ProfessionalColorTable}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripProfessionalRenderer.-ctor" target="_top">.NET documentation</a>
+     */
     public ToolStripProfessionalRenderer(ProfessionalColorTable professionalColorTable) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +191,13 @@ public class ToolStripProfessionalRenderer extends system.windows.forms.ToolStri
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RoundedEdges.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripProfessionalRenderer.RoundedEdges" target="_top">.NET documentation</a>
+     */
     public boolean getRoundedEdges() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +212,13 @@ public class ToolStripProfessionalRenderer extends system.windows.forms.ToolStri
         }
     }
 
+    /**
+     * Sets the value of the .NET property RoundedEdges.
+     *
+     * @param RoundedEdges the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripProfessionalRenderer.RoundedEdges" target="_top">.NET documentation</a>
+     */
     public void setRoundedEdges(boolean RoundedEdges) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +229,13 @@ public class ToolStripProfessionalRenderer extends system.windows.forms.ToolStri
         }
     }
 
+    /**
+     * Gets the value of the .NET property ColorTable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripProfessionalRenderer.ColorTable" target="_top">.NET documentation</a>
+     */
     public ProfessionalColorTable getColorTable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

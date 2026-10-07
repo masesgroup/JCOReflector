@@ -100,7 +100,10 @@ public class DataGridAutoGeneratingColumnEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataGridAutoGeneratingColumnEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,15 @@ public class DataGridAutoGeneratingColumnEventArgs extends system.EventArgs  {
     public DataGridAutoGeneratingColumnEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @param propertyType the argument of type {@code NetType}
+     * @param column the argument of type {@code DataGridColumn}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridAutoGeneratingColumnEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public DataGridAutoGeneratingColumnEventArgs(java.lang.String propertyName, NetType propertyType, DataGridColumn column) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +181,13 @@ public class DataGridAutoGeneratingColumnEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Cancel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridAutoGeneratingColumnEventArgs.Cancel" target="_top">.NET documentation</a>
+     */
     public boolean getCancel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +202,13 @@ public class DataGridAutoGeneratingColumnEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Cancel.
+     *
+     * @param Cancel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridAutoGeneratingColumnEventArgs.Cancel" target="_top">.NET documentation</a>
+     */
     public void setCancel(boolean Cancel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +219,13 @@ public class DataGridAutoGeneratingColumnEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyDescriptor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridAutoGeneratingColumnEventArgs.PropertyDescriptor" target="_top">.NET documentation</a>
+     */
     public NetObject getPropertyDescriptor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +241,13 @@ public class DataGridAutoGeneratingColumnEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PropertyDescriptor.
+     *
+     * @param PropertyDescriptor the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridAutoGeneratingColumnEventArgs.PropertyDescriptor" target="_top">.NET documentation</a>
+     */
     public void setPropertyDescriptor(NetObject PropertyDescriptor) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +258,13 @@ public class DataGridAutoGeneratingColumnEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridAutoGeneratingColumnEventArgs.PropertyName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPropertyName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +279,13 @@ public class DataGridAutoGeneratingColumnEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridAutoGeneratingColumnEventArgs.PropertyType" target="_top">.NET documentation</a>
+     */
     public NetType getPropertyType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +301,13 @@ public class DataGridAutoGeneratingColumnEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Column.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridAutoGeneratingColumnEventArgs.Column" target="_top">.NET documentation</a>
+     */
     public DataGridColumn getColumn() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +323,13 @@ public class DataGridAutoGeneratingColumnEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Column.
+     *
+     * @param Column the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridAutoGeneratingColumnEventArgs.Column" target="_top">.NET documentation</a>
+     */
     public void setColumn(DataGridColumn Column) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

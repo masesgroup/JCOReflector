@@ -98,7 +98,10 @@ public class IChannelCredentialsImplementation extends NetObject implements ICha
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IChannelCredentialsImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,15 @@ public class IChannelCredentialsImplementation extends NetObject implements ICha
 
     // Methods section
     
+    /**
+     * Invokes the .NET member SetClientCertificateFromFile.
+     *
+     * @param fileName the argument of type {@code java.lang.String}
+     * @param password the argument of type {@code java.lang.String}
+     * @param keyStorageFlags the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile" target="_top">.NET documentation</a>
+     */
     public void SetClientCertificateFromFile(java.lang.String fileName, java.lang.String password, java.lang.String keyStorageFlags) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -150,6 +162,16 @@ public class IChannelCredentialsImplementation extends NetObject implements ICha
         }
     }
 
+    /**
+     * Invokes the .NET member SetClientCertificateFromStore.
+     *
+     * @param storeLocation the argument of type {@code java.lang.String}
+     * @param storeName the argument of type {@code java.lang.String}
+     * @param findType the argument of type {@code java.lang.String}
+     * @param findValue the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore" target="_top">.NET documentation</a>
+     */
     public void SetClientCertificateFromStore(java.lang.String storeLocation, java.lang.String storeName, java.lang.String findType, NetObject findValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -160,6 +182,15 @@ public class IChannelCredentialsImplementation extends NetObject implements ICha
         }
     }
 
+    /**
+     * Invokes the .NET member SetClientCertificateFromStoreByName.
+     *
+     * @param subjectName the argument of type {@code java.lang.String}
+     * @param storeLocation the argument of type {@code java.lang.String}
+     * @param storeName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName" target="_top">.NET documentation</a>
+     */
     public void SetClientCertificateFromStoreByName(java.lang.String subjectName, java.lang.String storeLocation, java.lang.String storeName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +201,15 @@ public class IChannelCredentialsImplementation extends NetObject implements ICha
         }
     }
 
+    /**
+     * Invokes the .NET member SetDefaultServiceCertificateFromFile.
+     *
+     * @param fileName the argument of type {@code java.lang.String}
+     * @param password the argument of type {@code java.lang.String}
+     * @param keyStorageFlags the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ComIntegration.IChannelCredentials.SetDefaultServiceCertificateFromFile" target="_top">.NET documentation</a>
+     */
     public void SetDefaultServiceCertificateFromFile(java.lang.String fileName, java.lang.String password, java.lang.String keyStorageFlags) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +220,16 @@ public class IChannelCredentialsImplementation extends NetObject implements ICha
         }
     }
 
+    /**
+     * Invokes the .NET member SetDefaultServiceCertificateFromStore.
+     *
+     * @param storeLocation the argument of type {@code java.lang.String}
+     * @param storeName the argument of type {@code java.lang.String}
+     * @param findType the argument of type {@code java.lang.String}
+     * @param findValue the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ComIntegration.IChannelCredentials.SetDefaultServiceCertificateFromStore" target="_top">.NET documentation</a>
+     */
     public void SetDefaultServiceCertificateFromStore(java.lang.String storeLocation, java.lang.String storeName, java.lang.String findType, NetObject findValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +240,15 @@ public class IChannelCredentialsImplementation extends NetObject implements ICha
         }
     }
 
+    /**
+     * Invokes the .NET member SetDefaultServiceCertificateFromStoreByName.
+     *
+     * @param subjectName the argument of type {@code java.lang.String}
+     * @param storeLocation the argument of type {@code java.lang.String}
+     * @param storeName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ComIntegration.IChannelCredentials.SetDefaultServiceCertificateFromStoreByName" target="_top">.NET documentation</a>
+     */
     public void SetDefaultServiceCertificateFromStoreByName(java.lang.String subjectName, java.lang.String storeLocation, java.lang.String storeName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +259,15 @@ public class IChannelCredentialsImplementation extends NetObject implements ICha
         }
     }
 
+    /**
+     * Invokes the .NET member SetIssuedToken.
+     *
+     * @param localIssuerAddres the argument of type {@code java.lang.String}
+     * @param localIssuerBindingType the argument of type {@code java.lang.String}
+     * @param localIssuerBinding the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken" target="_top">.NET documentation</a>
+     */
     public void SetIssuedToken(java.lang.String localIssuerAddres, java.lang.String localIssuerBindingType, java.lang.String localIssuerBinding) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +278,15 @@ public class IChannelCredentialsImplementation extends NetObject implements ICha
         }
     }
 
+    /**
+     * Invokes the .NET member SetServiceCertificateAuthentication.
+     *
+     * @param storeLocation the argument of type {@code java.lang.String}
+     * @param revocationMode the argument of type {@code java.lang.String}
+     * @param certificationValidationMode the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ComIntegration.IChannelCredentials.SetServiceCertificateAuthentication" target="_top">.NET documentation</a>
+     */
     public void SetServiceCertificateAuthentication(java.lang.String storeLocation, java.lang.String revocationMode, java.lang.String certificationValidationMode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +297,14 @@ public class IChannelCredentialsImplementation extends NetObject implements ICha
         }
     }
 
+    /**
+     * Invokes the .NET member SetUserNameCredential.
+     *
+     * @param userName the argument of type {@code java.lang.String}
+     * @param password the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ComIntegration.IChannelCredentials.SetUserNameCredential" target="_top">.NET documentation</a>
+     */
     public void SetUserNameCredential(java.lang.String userName, java.lang.String password) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +315,17 @@ public class IChannelCredentialsImplementation extends NetObject implements ICha
         }
     }
 
+    /**
+     * Invokes the .NET member SetWindowsCredential.
+     *
+     * @param domain the argument of type {@code java.lang.String}
+     * @param userName the argument of type {@code java.lang.String}
+     * @param password the argument of type {@code java.lang.String}
+     * @param impersonationLevel the argument of type {@code int}
+     * @param allowNtlm the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ComIntegration.IChannelCredentials.SetWindowsCredential" target="_top">.NET documentation</a>
+     */
     public void SetWindowsCredential(java.lang.String domain, java.lang.String userName, java.lang.String password, int impersonationLevel, boolean allowNtlm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

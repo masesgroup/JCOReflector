@@ -99,7 +99,10 @@ public class MessageProcessingHandler extends system.net.http.DelegatingHandler 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MessageProcessingHandler(java.lang.Object instance) throws Throwable {
         super(instance);

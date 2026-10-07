@@ -104,7 +104,10 @@ public class CacheItemPolicy extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CacheItemPolicy(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,12 @@ public class CacheItemPolicy extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Caching.CacheItemPolicy.-ctor" target="_top">.NET documentation</a>
+     */
     public CacheItemPolicy() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +178,13 @@ public class CacheItemPolicy extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ChangeMonitors.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Caching.CacheItemPolicy.ChangeMonitors" target="_top">.NET documentation</a>
+     */
     public Collection_1 getChangeMonitors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +200,13 @@ public class CacheItemPolicy extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AbsoluteExpiration.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Caching.CacheItemPolicy.AbsoluteExpiration" target="_top">.NET documentation</a>
+     */
     public DateTimeOffset getAbsoluteExpiration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +222,13 @@ public class CacheItemPolicy extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AbsoluteExpiration.
+     *
+     * @param AbsoluteExpiration the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Caching.CacheItemPolicy.AbsoluteExpiration" target="_top">.NET documentation</a>
+     */
     public void setAbsoluteExpiration(DateTimeOffset AbsoluteExpiration) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +239,13 @@ public class CacheItemPolicy extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RemovedCallback.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Caching.CacheItemPolicy.RemovedCallback" target="_top">.NET documentation</a>
+     */
     public CacheEntryRemovedCallback getRemovedCallback() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +260,13 @@ public class CacheItemPolicy extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RemovedCallback.
+     *
+     * @param RemovedCallback the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Caching.CacheItemPolicy.RemovedCallback" target="_top">.NET documentation</a>
+     */
     public void setRemovedCallback(CacheEntryRemovedCallback RemovedCallback) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +277,13 @@ public class CacheItemPolicy extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UpdateCallback.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Caching.CacheItemPolicy.UpdateCallback" target="_top">.NET documentation</a>
+     */
     public CacheEntryUpdateCallback getUpdateCallback() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +298,13 @@ public class CacheItemPolicy extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UpdateCallback.
+     *
+     * @param UpdateCallback the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Caching.CacheItemPolicy.UpdateCallback" target="_top">.NET documentation</a>
+     */
     public void setUpdateCallback(CacheEntryUpdateCallback UpdateCallback) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +315,13 @@ public class CacheItemPolicy extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Priority.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Caching.CacheItemPolicy.Priority" target="_top">.NET documentation</a>
+     */
     public CacheItemPriority getPriority() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +337,13 @@ public class CacheItemPolicy extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Priority.
+     *
+     * @param Priority the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Caching.CacheItemPolicy.Priority" target="_top">.NET documentation</a>
+     */
     public void setPriority(CacheItemPriority Priority) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +354,13 @@ public class CacheItemPolicy extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SlidingExpiration.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Caching.CacheItemPolicy.SlidingExpiration" target="_top">.NET documentation</a>
+     */
     public TimeSpan getSlidingExpiration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -297,6 +376,13 @@ public class CacheItemPolicy extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SlidingExpiration.
+     *
+     * @param SlidingExpiration the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Caching.CacheItemPolicy.SlidingExpiration" target="_top">.NET documentation</a>
+     */
     public void setSlidingExpiration(TimeSpan SlidingExpiration) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

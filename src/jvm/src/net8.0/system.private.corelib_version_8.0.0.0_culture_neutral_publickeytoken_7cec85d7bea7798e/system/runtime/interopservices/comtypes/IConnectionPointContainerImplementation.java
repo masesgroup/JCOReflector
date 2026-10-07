@@ -103,7 +103,10 @@ public class IConnectionPointContainerImplementation extends NetObject implement
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IConnectionPointContainerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,13 @@ public class IConnectionPointContainerImplementation extends NetObject implement
 
     // Methods section
     
+    /**
+     * Invokes the .NET member EnumConnectionPoints.
+     *
+     * @param ppEnum the argument of type {@code JCORefOut<IEnumConnectionPoints>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IConnectionPointContainer.EnumConnectionPoints" target="_top">.NET documentation</a>
+     */
     public void EnumConnectionPoints(JCORefOut<IEnumConnectionPoints> ppEnum) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -155,6 +165,14 @@ public class IConnectionPointContainerImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member FindConnectionPoint.
+     *
+     * @param riid the argument of type {@code JCORefOut<Guid>}
+     * @param ppCP the argument of type {@code JCORefOut<IConnectionPoint>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IConnectionPointContainer.FindConnectionPoint" target="_top">.NET documentation</a>
+     */
     public void FindConnectionPoint(JCORefOut<Guid> riid, JCORefOut<IConnectionPoint> ppCP) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

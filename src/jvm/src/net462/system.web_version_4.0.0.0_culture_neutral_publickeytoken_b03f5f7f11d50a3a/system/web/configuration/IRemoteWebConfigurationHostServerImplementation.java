@@ -98,7 +98,10 @@ public class IRemoteWebConfigurationHostServerImplementation extends NetObject i
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IRemoteWebConfigurationHostServerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,16 @@ public class IRemoteWebConfigurationHostServerImplementation extends NetObject i
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetData.
+     *
+     * @param fileName the argument of type {@code java.lang.String}
+     * @param getReadTimeOnly the argument of type {@code boolean}
+     * @param readTime the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicLong>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.IRemoteWebConfigurationHostServer.GetData" target="_top">.NET documentation</a>
+     */
     public byte[] GetData(java.lang.String fileName, boolean getReadTimeOnly, JCORefOut<java.util.concurrent.atomic.AtomicLong> readTime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -163,6 +176,19 @@ public class IRemoteWebConfigurationHostServerImplementation extends NetObject i
         }
     }
 
+    /**
+     * Invokes the .NET member DoEncryptOrDecrypt.
+     *
+     * @param doEncrypt the argument of type {@code boolean}
+     * @param xmlString the argument of type {@code java.lang.String}
+     * @param protectionProviderName the argument of type {@code java.lang.String}
+     * @param protectionProviderType the argument of type {@code java.lang.String}
+     * @param parameterKeys the argument of type {@code java.lang.String[]}
+     * @param parameterValues the argument of type {@code java.lang.String[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.IRemoteWebConfigurationHostServer.DoEncryptOrDecrypt" target="_top">.NET documentation</a>
+     */
     public java.lang.String DoEncryptOrDecrypt(boolean doEncrypt, java.lang.String xmlString, java.lang.String protectionProviderName, java.lang.String protectionProviderType, java.lang.String[] parameterKeys, java.lang.String[] parameterValues) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +203,19 @@ public class IRemoteWebConfigurationHostServerImplementation extends NetObject i
         }
     }
 
+    /**
+     * Invokes the .NET member DoEncryptOrDecrypt.
+     *
+     * @param dupParam0 the argument of type {@code boolean}
+     * @param dupParam1 the argument of type {@code java.lang.String}
+     * @param dupParam2 the argument of type {@code java.lang.String}
+     * @param dupParam3 the argument of type {@code java.lang.String}
+     * @param dupParam4 the argument of type {@code JCORefOut}
+     * @param dupParam5 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.IRemoteWebConfigurationHostServer.DoEncryptOrDecrypt" target="_top">.NET documentation</a>
+     */
     public java.lang.String DoEncryptOrDecrypt(boolean dupParam0, java.lang.String dupParam1, java.lang.String dupParam2, java.lang.String dupParam3, JCORefOut dupParam4, JCORefOut dupParam5) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +230,17 @@ public class IRemoteWebConfigurationHostServerImplementation extends NetObject i
         }
     }
 
+    /**
+     * Invokes the .NET member GetFilePaths.
+     *
+     * @param webLevel the argument of type {@code int}
+     * @param path the argument of type {@code java.lang.String}
+     * @param site the argument of type {@code java.lang.String}
+     * @param locationSubPath the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.IRemoteWebConfigurationHostServer.GetFilePaths" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetFilePaths(int webLevel, java.lang.String path, java.lang.String site, java.lang.String locationSubPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +255,17 @@ public class IRemoteWebConfigurationHostServerImplementation extends NetObject i
         }
     }
 
+    /**
+     * Invokes the .NET member GetFileDetails.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param exists the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicBoolean>}
+     * @param size the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicLong>}
+     * @param createDate the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicLong>}
+     * @param lastWriteDate the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicLong>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.IRemoteWebConfigurationHostServer.GetFileDetails" target="_top">.NET documentation</a>
+     */
     public void GetFileDetails(java.lang.String name, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> exists, JCORefOut<java.util.concurrent.atomic.AtomicLong> size, JCORefOut<java.util.concurrent.atomic.AtomicLong> createDate, JCORefOut<java.util.concurrent.atomic.AtomicLong> lastWriteDate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +276,16 @@ public class IRemoteWebConfigurationHostServerImplementation extends NetObject i
         }
     }
 
+    /**
+     * Invokes the .NET member WriteData.
+     *
+     * @param fileName the argument of type {@code java.lang.String}
+     * @param templateFileName the argument of type {@code java.lang.String}
+     * @param data the argument of type {@code byte[]}
+     * @param readTime the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicLong>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.IRemoteWebConfigurationHostServer.WriteData" target="_top">.NET documentation</a>
+     */
     public void WriteData(java.lang.String fileName, java.lang.String templateFileName, byte[] data, JCORefOut<java.util.concurrent.atomic.AtomicLong> readTime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

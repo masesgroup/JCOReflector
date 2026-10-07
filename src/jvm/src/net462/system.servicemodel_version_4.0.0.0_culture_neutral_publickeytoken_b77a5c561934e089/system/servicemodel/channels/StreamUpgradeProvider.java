@@ -103,7 +103,10 @@ public class StreamUpgradeProvider extends system.servicemodel.channels.Communic
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public StreamUpgradeProvider(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,13 @@ public class StreamUpgradeProvider extends system.servicemodel.channels.Communic
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateUpgradeAcceptor.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeAcceptor" target="_top">.NET documentation</a>
+     */
     public StreamUpgradeAcceptor CreateUpgradeAcceptor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +181,15 @@ public class StreamUpgradeProvider extends system.servicemodel.channels.Communic
         }
     }
 
+    /**
+     * Invokes the .NET member CreateUpgradeInitiator.
+     *
+     * @param remoteAddress the argument of type {@code EndpointAddress}
+     * @param via the argument of type {@code Uri}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeInitiator" target="_top">.NET documentation</a>
+     */
     public StreamUpgradeInitiator CreateUpgradeInitiator(EndpointAddress remoteAddress, Uri via) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

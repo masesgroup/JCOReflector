@@ -100,7 +100,10 @@ public class HashAlgorithmName extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HashAlgorithmName(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class HashAlgorithmName extends system.ValueType  {
     public HashAlgorithmName() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.HashAlgorithmName.-ctor" target="_top">.NET documentation</a>
+     */
     public HashAlgorithmName(java.lang.String name) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +175,14 @@ public class HashAlgorithmName extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code HashAlgorithmName}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.HashAlgorithmName.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(HashAlgorithmName other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +201,13 @@ public class HashAlgorithmName extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MD5.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.HashAlgorithmName.MD5" target="_top">.NET documentation</a>
+     */
     public static HashAlgorithmName getMD5() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -198,6 +223,13 @@ public class HashAlgorithmName extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SHA1.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.HashAlgorithmName.SHA1" target="_top">.NET documentation</a>
+     */
     public static HashAlgorithmName getSHA1() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -213,6 +245,13 @@ public class HashAlgorithmName extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SHA256.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.HashAlgorithmName.SHA256" target="_top">.NET documentation</a>
+     */
     public static HashAlgorithmName getSHA256() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -228,6 +267,13 @@ public class HashAlgorithmName extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SHA384.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.HashAlgorithmName.SHA384" target="_top">.NET documentation</a>
+     */
     public static HashAlgorithmName getSHA384() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -243,6 +289,13 @@ public class HashAlgorithmName extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SHA512.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.HashAlgorithmName.SHA512" target="_top">.NET documentation</a>
+     */
     public static HashAlgorithmName getSHA512() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -258,6 +311,13 @@ public class HashAlgorithmName extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.HashAlgorithmName.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

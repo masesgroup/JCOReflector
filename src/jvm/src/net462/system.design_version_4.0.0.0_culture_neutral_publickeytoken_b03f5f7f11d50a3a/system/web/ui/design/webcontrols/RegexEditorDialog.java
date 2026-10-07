@@ -101,7 +101,10 @@ public class RegexEditorDialog extends system.windows.forms.Form  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RegexEditorDialog(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,33 @@ public class RegexEditorDialog extends system.windows.forms.Form  {
     public RegexEditorDialog() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param site the argument of type {@code ISite}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebControls.RegexEditorDialog.-ctor" target="_top">.NET documentation</a>
+     */
     public RegexEditorDialog(ISite site) throws Throwable, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.NotSupportedException, system.security.SecurityException, system.componentmodel.InvalidEnumArgumentException, system.collections.generic.KeyNotFoundException, system.NotImplementedException, system.OverflowException, system.MulticastNotSupportedException, system.RankException, system.NullReferenceException, system.InvalidCastException, system.FormatException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +200,13 @@ public class RegexEditorDialog extends system.windows.forms.Form  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RegularExpression.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebControls.RegexEditorDialog.RegularExpression" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRegularExpression() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +221,13 @@ public class RegexEditorDialog extends system.windows.forms.Form  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RegularExpression.
+     *
+     * @param RegularExpression the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebControls.RegexEditorDialog.RegularExpression" target="_top">.NET documentation</a>
+     */
     public void setRegularExpression(java.lang.String RegularExpression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

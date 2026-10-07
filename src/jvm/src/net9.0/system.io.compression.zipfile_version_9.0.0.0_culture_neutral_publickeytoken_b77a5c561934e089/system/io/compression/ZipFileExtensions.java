@@ -101,7 +101,10 @@ public class ZipFileExtensions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ZipFileExtensions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,29 @@ public class ZipFileExtensions extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateEntryFromFile.
+     *
+     * @param destination the argument of type {@code ZipArchive}
+     * @param sourceFileName the argument of type {@code java.lang.String}
+     * @param entryName the argument of type {@code java.lang.String}
+     * @param compressionLevel the argument of type {@code CompressionLevel}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.InvalidDataException if the .NET member raises it
+     * @throws system.io.compression.ZLibException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Compression.ZipFileExtensions.CreateEntryFromFile" target="_top">.NET documentation</a>
+     */
     public static ZipArchiveEntry CreateEntryFromFile(ZipArchive destination, java.lang.String sourceFileName, java.lang.String entryName, CompressionLevel compressionLevel) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.io.IOException, system.io.InvalidDataException, system.io.compression.ZLibException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -169,6 +195,28 @@ public class ZipFileExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateEntryFromFile.
+     *
+     * @param destination the argument of type {@code ZipArchive}
+     * @param sourceFileName the argument of type {@code java.lang.String}
+     * @param entryName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.InvalidDataException if the .NET member raises it
+     * @throws system.io.compression.ZLibException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Compression.ZipFileExtensions.CreateEntryFromFile" target="_top">.NET documentation</a>
+     */
     public static ZipArchiveEntry CreateEntryFromFile(ZipArchive destination, java.lang.String sourceFileName, java.lang.String entryName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.io.IOException, system.io.InvalidDataException, system.io.compression.ZLibException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -184,6 +232,30 @@ public class ZipFileExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExtractToDirectory.
+     *
+     * @param source the argument of type {@code ZipArchive}
+     * @param destinationDirectoryName the argument of type {@code java.lang.String}
+     * @param overwriteFiles the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.InvalidDataException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.io.compression.ZLibException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Compression.ZipFileExtensions.ExtractToDirectory" target="_top">.NET documentation</a>
+     */
     public static void ExtractToDirectory(ZipArchive source, java.lang.String destinationDirectoryName, boolean overwriteFiles) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.io.IOException, system.io.InvalidDataException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.runtime.serialization.SerializationException, system.io.compression.ZLibException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -194,6 +266,29 @@ public class ZipFileExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExtractToDirectory.
+     *
+     * @param source the argument of type {@code ZipArchive}
+     * @param destinationDirectoryName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.io.InvalidDataException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Compression.ZipFileExtensions.ExtractToDirectory" target="_top">.NET documentation</a>
+     */
     public static void ExtractToDirectory(ZipArchive source, java.lang.String destinationDirectoryName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.io.InvalidDataException, system.IndexOutOfRangeException, system.io.IOException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.runtime.serialization.SerializationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -204,6 +299,31 @@ public class ZipFileExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExtractToFile.
+     *
+     * @param source the argument of type {@code ZipArchiveEntry}
+     * @param destinationFileName the argument of type {@code java.lang.String}
+     * @param overwrite the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.InvalidDataException if the .NET member raises it
+     * @throws system.io.compression.ZLibException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Compression.ZipFileExtensions.ExtractToFile" target="_top">.NET documentation</a>
+     */
     public static void ExtractToFile(ZipArchiveEntry source, java.lang.String destinationFileName, boolean overwrite) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.io.IOException, system.io.InvalidDataException, system.io.compression.ZLibException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -214,6 +334,28 @@ public class ZipFileExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExtractToFile.
+     *
+     * @param source the argument of type {@code ZipArchiveEntry}
+     * @param destinationFileName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.InvalidDataException if the .NET member raises it
+     * @throws system.io.compression.ZLibException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Compression.ZipFileExtensions.ExtractToFile" target="_top">.NET documentation</a>
+     */
     public static void ExtractToFile(ZipArchiveEntry source, java.lang.String destinationFileName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.io.IOException, system.ObjectDisposedException, system.io.InvalidDataException, system.io.compression.ZLibException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

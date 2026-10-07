@@ -101,7 +101,10 @@ public class HwndSourceParameters extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HwndSourceParameters(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,13 @@ public class HwndSourceParameters extends system.ValueType  {
     public HwndSourceParameters() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSourceParameters.-ctor" target="_top">.NET documentation</a>
+     */
     public HwndSourceParameters(java.lang.String name) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +171,15 @@ public class HwndSourceParameters extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param width the argument of type {@code int}
+     * @param height the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSourceParameters.-ctor" target="_top">.NET documentation</a>
+     */
     public HwndSourceParameters(java.lang.String name, int width, int height) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +195,14 @@ public class HwndSourceParameters extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param obj the argument of type {@code HwndSourceParameters}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSourceParameters.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(HwndSourceParameters obj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +217,14 @@ public class HwndSourceParameters extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetPosition.
+     *
+     * @param x the argument of type {@code int}
+     * @param y the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSourceParameters.SetPosition" target="_top">.NET documentation</a>
+     */
     public void SetPosition(int x, int y) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +235,14 @@ public class HwndSourceParameters extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetSize.
+     *
+     * @param width the argument of type {@code int}
+     * @param height the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSourceParameters.SetSize" target="_top">.NET documentation</a>
+     */
     public void SetSize(int width, int height) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +257,14 @@ public class HwndSourceParameters extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AcquireHwndFocusInMenuMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSourceParameters.AcquireHwndFocusInMenuMode" target="_top">.NET documentation</a>
+     */
     public boolean getAcquireHwndFocusInMenuMode() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +279,13 @@ public class HwndSourceParameters extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AcquireHwndFocusInMenuMode.
+     *
+     * @param AcquireHwndFocusInMenuMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSourceParameters.AcquireHwndFocusInMenuMode" target="_top">.NET documentation</a>
+     */
     public void setAcquireHwndFocusInMenuMode(boolean AcquireHwndFocusInMenuMode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +296,13 @@ public class HwndSourceParameters extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AdjustSizingForNonClientArea.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSourceParameters.AdjustSizingForNonClientArea" target="_top">.NET documentation</a>
+     */
     public boolean getAdjustSizingForNonClientArea() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +317,13 @@ public class HwndSourceParameters extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AdjustSizingForNonClientArea.
+     *
+     * @param AdjustSizingForNonClientArea the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSourceParameters.AdjustSizingForNonClientArea" target="_top">.NET documentation</a>
+     */
     public void setAdjustSizingForNonClientArea(boolean AdjustSizingForNonClientArea) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +334,13 @@ public class HwndSourceParameters extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HasAssignedSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSourceParameters.HasAssignedSize" target="_top">.NET documentation</a>
+     */
     public boolean getHasAssignedSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +355,13 @@ public class HwndSourceParameters extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TreatAncestorsAsNonClientArea.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSourceParameters.TreatAncestorsAsNonClientArea" target="_top">.NET documentation</a>
+     */
     public boolean getTreatAncestorsAsNonClientArea() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +376,13 @@ public class HwndSourceParameters extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TreatAncestorsAsNonClientArea.
+     *
+     * @param TreatAncestorsAsNonClientArea the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSourceParameters.TreatAncestorsAsNonClientArea" target="_top">.NET documentation</a>
+     */
     public void setTreatAncestorsAsNonClientArea(boolean TreatAncestorsAsNonClientArea) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +393,13 @@ public class HwndSourceParameters extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TreatAsInputRoot.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSourceParameters.TreatAsInputRoot" target="_top">.NET documentation</a>
+     */
     public boolean getTreatAsInputRoot() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -314,6 +414,13 @@ public class HwndSourceParameters extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TreatAsInputRoot.
+     *
+     * @param TreatAsInputRoot the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSourceParameters.TreatAsInputRoot" target="_top">.NET documentation</a>
+     */
     public void setTreatAsInputRoot(boolean TreatAsInputRoot) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -324,6 +431,13 @@ public class HwndSourceParameters extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UsesPerPixelOpacity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSourceParameters.UsesPerPixelOpacity" target="_top">.NET documentation</a>
+     */
     public boolean getUsesPerPixelOpacity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -338,6 +452,13 @@ public class HwndSourceParameters extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UsesPerPixelOpacity.
+     *
+     * @param UsesPerPixelOpacity the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSourceParameters.UsesPerPixelOpacity" target="_top">.NET documentation</a>
+     */
     public void setUsesPerPixelOpacity(boolean UsesPerPixelOpacity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +469,13 @@ public class HwndSourceParameters extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UsesPerPixelTransparency.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSourceParameters.UsesPerPixelTransparency" target="_top">.NET documentation</a>
+     */
     public boolean getUsesPerPixelTransparency() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -362,6 +490,13 @@ public class HwndSourceParameters extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UsesPerPixelTransparency.
+     *
+     * @param UsesPerPixelTransparency the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSourceParameters.UsesPerPixelTransparency" target="_top">.NET documentation</a>
+     */
     public void setUsesPerPixelTransparency(boolean UsesPerPixelTransparency) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -372,6 +507,13 @@ public class HwndSourceParameters extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExtendedWindowStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSourceParameters.ExtendedWindowStyle" target="_top">.NET documentation</a>
+     */
     public int getExtendedWindowStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -412,6 +554,13 @@ public class HwndSourceParameters extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ExtendedWindowStyle.
+     *
+     * @param ExtendedWindowStyle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSourceParameters.ExtendedWindowStyle" target="_top">.NET documentation</a>
+     */
     public void setExtendedWindowStyle(int ExtendedWindowStyle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -422,6 +571,13 @@ public class HwndSourceParameters extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Height.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSourceParameters.Height" target="_top">.NET documentation</a>
+     */
     public int getHeight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -462,6 +618,13 @@ public class HwndSourceParameters extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Height.
+     *
+     * @param Height the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSourceParameters.Height" target="_top">.NET documentation</a>
+     */
     public void setHeight(int Height) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -472,6 +635,13 @@ public class HwndSourceParameters extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PositionX.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSourceParameters.PositionX" target="_top">.NET documentation</a>
+     */
     public int getPositionX() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -512,6 +682,13 @@ public class HwndSourceParameters extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PositionX.
+     *
+     * @param PositionX the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSourceParameters.PositionX" target="_top">.NET documentation</a>
+     */
     public void setPositionX(int PositionX) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -522,6 +699,13 @@ public class HwndSourceParameters extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PositionY.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSourceParameters.PositionY" target="_top">.NET documentation</a>
+     */
     public int getPositionY() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -562,6 +746,13 @@ public class HwndSourceParameters extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PositionY.
+     *
+     * @param PositionY the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSourceParameters.PositionY" target="_top">.NET documentation</a>
+     */
     public void setPositionY(int PositionY) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -572,6 +763,13 @@ public class HwndSourceParameters extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Width.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSourceParameters.Width" target="_top">.NET documentation</a>
+     */
     public int getWidth() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -612,6 +810,13 @@ public class HwndSourceParameters extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Width.
+     *
+     * @param Width the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSourceParameters.Width" target="_top">.NET documentation</a>
+     */
     public void setWidth(int Width) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -622,6 +827,13 @@ public class HwndSourceParameters extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WindowClassStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSourceParameters.WindowClassStyle" target="_top">.NET documentation</a>
+     */
     public int getWindowClassStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -662,6 +874,13 @@ public class HwndSourceParameters extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WindowClassStyle.
+     *
+     * @param WindowClassStyle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSourceParameters.WindowClassStyle" target="_top">.NET documentation</a>
+     */
     public void setWindowClassStyle(int WindowClassStyle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -672,6 +891,13 @@ public class HwndSourceParameters extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WindowStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSourceParameters.WindowStyle" target="_top">.NET documentation</a>
+     */
     public int getWindowStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -712,6 +938,13 @@ public class HwndSourceParameters extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WindowStyle.
+     *
+     * @param WindowStyle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSourceParameters.WindowStyle" target="_top">.NET documentation</a>
+     */
     public void setWindowStyle(int WindowStyle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -722,6 +955,13 @@ public class HwndSourceParameters extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WindowName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSourceParameters.WindowName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getWindowName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -736,6 +976,13 @@ public class HwndSourceParameters extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WindowName.
+     *
+     * @param WindowName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSourceParameters.WindowName" target="_top">.NET documentation</a>
+     */
     public void setWindowName(java.lang.String WindowName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -746,6 +993,20 @@ public class HwndSourceParameters extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RestoreFocusMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSourceParameters.RestoreFocusMode" target="_top">.NET documentation</a>
+     */
     public RestoreFocusMode getRestoreFocusMode() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -761,6 +1022,13 @@ public class HwndSourceParameters extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RestoreFocusMode.
+     *
+     * @param RestoreFocusMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSourceParameters.RestoreFocusMode" target="_top">.NET documentation</a>
+     */
     public void setRestoreFocusMode(RestoreFocusMode RestoreFocusMode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

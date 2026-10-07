@@ -99,7 +99,10 @@ public class ExportAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ExportAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class ExportAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ExportAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ExportAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,13 @@ public class ExportAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param contractName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ExportAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ExportAttribute(java.lang.String contractName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +182,14 @@ public class ExportAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param contractName the argument of type {@code java.lang.String}
+     * @param contractType the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ExportAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ExportAttribute(java.lang.String contractName, NetType contractType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +200,13 @@ public class ExportAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param contractType the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ExportAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ExportAttribute(NetType contractType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -194,6 +225,13 @@ public class ExportAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ContractName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ExportAttribute.ContractName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getContractName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +246,13 @@ public class ExportAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ContractName.
+     *
+     * @param ContractName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ExportAttribute.ContractName" target="_top">.NET documentation</a>
+     */
     public void setContractName(java.lang.String ContractName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +263,13 @@ public class ExportAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContractType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ExportAttribute.ContractType" target="_top">.NET documentation</a>
+     */
     public NetType getContractType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +285,13 @@ public class ExportAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ContractType.
+     *
+     * @param ContractType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ExportAttribute.ContractType" target="_top">.NET documentation</a>
+     */
     public void setContractType(NetType ContractType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

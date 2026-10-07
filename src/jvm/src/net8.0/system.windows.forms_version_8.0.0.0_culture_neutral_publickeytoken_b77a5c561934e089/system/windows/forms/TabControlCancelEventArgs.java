@@ -101,7 +101,10 @@ public class TabControlCancelEventArgs extends system.componentmodel.CancelEvent
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TabControlCancelEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,16 @@ public class TabControlCancelEventArgs extends system.componentmodel.CancelEvent
     public TabControlCancelEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param tabPage the argument of type {@code TabPage}
+     * @param tabPageIndex the argument of type {@code int}
+     * @param cancel the argument of type {@code boolean}
+     * @param action the argument of type {@code TabControlAction}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TabControlCancelEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public TabControlCancelEventArgs(TabPage tabPage, int tabPageIndex, boolean cancel, TabControlAction action) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +183,13 @@ public class TabControlCancelEventArgs extends system.componentmodel.CancelEvent
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property TabPageIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TabControlCancelEventArgs.TabPageIndex" target="_top">.NET documentation</a>
+     */
     public int getTabPageIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +230,13 @@ public class TabControlCancelEventArgs extends system.componentmodel.CancelEvent
         }
     }
 
+    /**
+     * Gets the value of the .NET property Action.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TabControlCancelEventArgs.Action" target="_top">.NET documentation</a>
+     */
     public TabControlAction getAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +252,13 @@ public class TabControlCancelEventArgs extends system.componentmodel.CancelEvent
         }
     }
 
+    /**
+     * Gets the value of the .NET property TabPage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TabControlCancelEventArgs.TabPage" target="_top">.NET documentation</a>
+     */
     public TabPage getTabPage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class IIUnknownDerivedDetailsImplementation extends NetObject implements 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IIUnknownDerivedDetailsImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,13 @@ public class IIUnknownDerivedDetailsImplementation extends NetObject implements 
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Iid.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.IIUnknownDerivedDetails.Iid" target="_top">.NET documentation</a>
+     */
     public Guid getIid() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -160,6 +170,13 @@ public class IIUnknownDerivedDetailsImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Gets the value of the .NET property Implementation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.IIUnknownDerivedDetails.Implementation" target="_top">.NET documentation</a>
+     */
     public NetType getImplementation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

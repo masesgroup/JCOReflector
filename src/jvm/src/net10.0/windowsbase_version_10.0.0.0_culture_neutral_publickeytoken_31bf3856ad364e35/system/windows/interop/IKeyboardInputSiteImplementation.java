@@ -101,7 +101,10 @@ public class IKeyboardInputSiteImplementation extends NetObject implements IKeyb
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IKeyboardInputSiteImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,14 @@ public class IKeyboardInputSiteImplementation extends NetObject implements IKeyb
 
     // Methods section
     
+    /**
+     * Invokes the .NET member OnNoMoreTabStops.
+     *
+     * @param request the argument of type {@code TraversalRequest}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IKeyboardInputSite.OnNoMoreTabStops" target="_top">.NET documentation</a>
+     */
     public boolean OnNoMoreTabStops(TraversalRequest request) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -157,6 +168,12 @@ public class IKeyboardInputSiteImplementation extends NetObject implements IKeyb
         }
     }
 
+    /**
+     * Invokes the .NET member Unregister.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IKeyboardInputSite.Unregister" target="_top">.NET documentation</a>
+     */
     public void Unregister() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +188,13 @@ public class IKeyboardInputSiteImplementation extends NetObject implements IKeyb
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Sink.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IKeyboardInputSite.Sink" target="_top">.NET documentation</a>
+     */
     public IKeyboardInputSink getSink() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

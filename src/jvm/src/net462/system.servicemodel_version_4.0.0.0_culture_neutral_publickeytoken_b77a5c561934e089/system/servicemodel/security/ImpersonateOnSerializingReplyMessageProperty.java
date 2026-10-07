@@ -107,7 +107,10 @@ public class ImpersonateOnSerializingReplyMessageProperty extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ImpersonateOnSerializingReplyMessageProperty(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -162,6 +165,26 @@ public class ImpersonateOnSerializingReplyMessageProperty extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member TryGet.
+     *
+     * @param message the argument of type {@code Message}
+     * @param property the argument of type {@code JCORefOut<ImpersonateOnSerializingReplyMessageProperty>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.ImpersonateOnSerializingReplyMessageProperty.TryGet" target="_top">.NET documentation</a>
+     */
     public static boolean TryGet(Message message, JCORefOut<ImpersonateOnSerializingReplyMessageProperty> property) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -176,6 +199,26 @@ public class ImpersonateOnSerializingReplyMessageProperty extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryGet.
+     *
+     * @param properties the argument of type {@code MessageProperties}
+     * @param property the argument of type {@code JCORefOut<ImpersonateOnSerializingReplyMessageProperty>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.ImpersonateOnSerializingReplyMessageProperty.TryGet" target="_top">.NET documentation</a>
+     */
     public static boolean TryGet(MessageProperties properties, JCORefOut<ImpersonateOnSerializingReplyMessageProperty> property) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -190,6 +233,13 @@ public class ImpersonateOnSerializingReplyMessageProperty extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateCopy.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.ImpersonateOnSerializingReplyMessageProperty.CreateCopy" target="_top">.NET documentation</a>
+     */
     public IMessageProperty CreateCopy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +255,31 @@ public class ImpersonateOnSerializingReplyMessageProperty extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member StartImpersonation.
+     *
+     * @param impersonationContext the argument of type {@code JCORefOut<IDisposable>}
+     * @param originalPrincipal the argument of type {@code JCORefOut<IPrincipal>}
+     * @param isThreadPrincipalSet the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicBoolean>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.ImpersonateOnSerializingReplyMessageProperty.StartImpersonation" target="_top">.NET documentation</a>
+     */
     public void StartImpersonation(JCORefOut<IDisposable> impersonationContext, JCORefOut<IPrincipal> originalPrincipal, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isThreadPrincipalSet) throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.componentmodel.InvalidEnumArgumentException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +290,31 @@ public class ImpersonateOnSerializingReplyMessageProperty extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member StopImpersonation.
+     *
+     * @param impersonationContext the argument of type {@code IDisposable}
+     * @param originalPrincipal the argument of type {@code IPrincipal}
+     * @param isThreadPrincipalSet the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.ImpersonateOnSerializingReplyMessageProperty.StopImpersonation" target="_top">.NET documentation</a>
+     */
     public void StopImpersonation(IDisposable impersonationContext, IPrincipal originalPrincipal, boolean isThreadPrincipalSet) throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.componentmodel.InvalidEnumArgumentException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +329,13 @@ public class ImpersonateOnSerializingReplyMessageProperty extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.ImpersonateOnSerializingReplyMessageProperty.Name" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getName() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

@@ -100,7 +100,10 @@ public class IDuplexPipeImplementation extends NetObject implements IDuplexPipe 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDuplexPipeImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,13 @@ public class IDuplexPipeImplementation extends NetObject implements IDuplexPipe 
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Input.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.IDuplexPipe.Input" target="_top">.NET documentation</a>
+     */
     public PipeReader getInput() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -161,6 +171,13 @@ public class IDuplexPipeImplementation extends NetObject implements IDuplexPipe 
         }
     }
 
+    /**
+     * Gets the value of the .NET property Output.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.IDuplexPipe.Output" target="_top">.NET documentation</a>
+     */
     public PipeWriter getOutput() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

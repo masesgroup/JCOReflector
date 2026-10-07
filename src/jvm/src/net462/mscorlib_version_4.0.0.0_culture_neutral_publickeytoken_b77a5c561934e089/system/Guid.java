@@ -104,7 +104,10 @@ public class Guid extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Guid(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,24 @@ public class Guid extends system.ValueType  {
     public Guid() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param b the argument of type {@code byte[]}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Guid.-ctor" target="_top">.NET documentation</a>
+     */
     public Guid(byte[] b) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +185,23 @@ public class Guid extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param a the argument of type {@code int}
+     * @param b the argument of type {@code short}
+     * @param c the argument of type {@code short}
+     * @param d the argument of type {@code byte}
+     * @param e the argument of type {@code byte}
+     * @param f the argument of type {@code byte}
+     * @param g the argument of type {@code byte}
+     * @param h the argument of type {@code byte}
+     * @param i the argument of type {@code byte}
+     * @param j the argument of type {@code byte}
+     * @param k the argument of type {@code byte}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Guid.-ctor" target="_top">.NET documentation</a>
+     */
     public Guid(int a, short b, short c, byte d, byte e, byte f, byte g, byte h, byte i, byte j, byte k) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +212,27 @@ public class Guid extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param a the argument of type {@code int}
+     * @param b the argument of type {@code short}
+     * @param c the argument of type {@code short}
+     * @param d the argument of type {@code byte[]}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Guid.-ctor" target="_top">.NET documentation</a>
+     */
     public Guid(int a, short b, short c, byte[] d) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -184,6 +243,18 @@ public class Guid extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param g the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Guid.-ctor" target="_top">.NET documentation</a>
+     */
     public Guid(java.lang.String g) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -194,6 +265,23 @@ public class Guid extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param a the argument of type {@code UInt32}
+     * @param b the argument of type {@code UInt16}
+     * @param c the argument of type {@code UInt16}
+     * @param d the argument of type {@code byte}
+     * @param e the argument of type {@code byte}
+     * @param f the argument of type {@code byte}
+     * @param g the argument of type {@code byte}
+     * @param h the argument of type {@code byte}
+     * @param i the argument of type {@code byte}
+     * @param j the argument of type {@code byte}
+     * @param k the argument of type {@code byte}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Guid.-ctor" target="_top">.NET documentation</a>
+     */
     public Guid(UInt32 a, UInt16 b, UInt16 c, byte d, byte e, byte f, byte g, byte h, byte i, byte j, byte k) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -209,6 +297,14 @@ public class Guid extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param g the argument of type {@code Guid}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Guid.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(Guid g) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +319,20 @@ public class Guid extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryParse.
+     *
+     * @param input the argument of type {@code java.lang.String}
+     * @param result the argument of type {@code JCORefOut<Guid>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Guid.TryParse" target="_top">.NET documentation</a>
+     */
     public static boolean TryParse(java.lang.String input, JCORefOut<Guid> result) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -237,6 +347,21 @@ public class Guid extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryParseExact.
+     *
+     * @param input the argument of type {@code java.lang.String}
+     * @param format the argument of type {@code java.lang.String}
+     * @param result the argument of type {@code JCORefOut<Guid>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Guid.TryParseExact" target="_top">.NET documentation</a>
+     */
     public static boolean TryParseExact(java.lang.String input, java.lang.String format, JCORefOut<Guid> result) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -251,6 +376,13 @@ public class Guid extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToByteArray.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Guid.ToByteArray" target="_top">.NET documentation</a>
+     */
     public byte[] ToByteArray() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +406,14 @@ public class Guid extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CompareTo.
+     *
+     * @param value the argument of type {@code Guid}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Guid.CompareTo" target="_top">.NET documentation</a>
+     */
     public int CompareTo(Guid value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -314,6 +454,15 @@ public class Guid extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CompareTo.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Guid.CompareTo" target="_top">.NET documentation</a>
+     */
     public int CompareTo(NetObject value) throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -354,6 +503,13 @@ public class Guid extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member NewGuid.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Guid.NewGuid" target="_top">.NET documentation</a>
+     */
     public static Guid NewGuid() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -369,6 +525,19 @@ public class Guid extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Parse.
+     *
+     * @param input the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Guid.Parse" target="_top">.NET documentation</a>
+     */
     public static Guid Parse(java.lang.String input) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -384,6 +553,20 @@ public class Guid extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ParseExact.
+     *
+     * @param input the argument of type {@code java.lang.String}
+     * @param format the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Guid.ParseExact" target="_top">.NET documentation</a>
+     */
     public static Guid ParseExact(java.lang.String input, java.lang.String format) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -399,6 +582,15 @@ public class Guid extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToString.
+     *
+     * @param format the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Guid.ToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String ToString(java.lang.String format) throws Throwable, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -413,6 +605,16 @@ public class Guid extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToString.
+     *
+     * @param format the argument of type {@code java.lang.String}
+     * @param provider the argument of type {@code IFormatProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Guid.ToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String ToString(java.lang.String format, IFormatProvider provider) throws Throwable, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

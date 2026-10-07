@@ -102,7 +102,10 @@ public class DebugDirectoryEntry extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DebugDirectoryEntry(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,19 @@ public class DebugDirectoryEntry extends system.ValueType  {
     public DebugDirectoryEntry() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param stamp the argument of type {@code UInt32}
+     * @param majorVersion the argument of type {@code UInt16}
+     * @param minorVersion the argument of type {@code UInt16}
+     * @param type the argument of type {@code DebugDirectoryEntryType}
+     * @param dataSize the argument of type {@code int}
+     * @param dataRelativeVirtualAddress the argument of type {@code int}
+     * @param dataPointer the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.DebugDirectoryEntry.-ctor" target="_top">.NET documentation</a>
+     */
     public DebugDirectoryEntry(UInt32 stamp, UInt16 majorVersion, UInt16 minorVersion, DebugDirectoryEntryType type, int dataSize, int dataRelativeVirtualAddress, int dataPointer) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +187,13 @@ public class DebugDirectoryEntry extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsPortableCodeView.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.DebugDirectoryEntry.IsPortableCodeView" target="_top">.NET documentation</a>
+     */
     public boolean getIsPortableCodeView() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +208,13 @@ public class DebugDirectoryEntry extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataPointer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.DebugDirectoryEntry.DataPointer" target="_top">.NET documentation</a>
+     */
     public int getDataPointer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +255,13 @@ public class DebugDirectoryEntry extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataRelativeVirtualAddress.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.DebugDirectoryEntry.DataRelativeVirtualAddress" target="_top">.NET documentation</a>
+     */
     public int getDataRelativeVirtualAddress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +302,13 @@ public class DebugDirectoryEntry extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.DebugDirectoryEntry.DataSize" target="_top">.NET documentation</a>
+     */
     public int getDataSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +349,13 @@ public class DebugDirectoryEntry extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Type.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.DebugDirectoryEntry.Type" target="_top">.NET documentation</a>
+     */
     public DebugDirectoryEntryType getType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +371,13 @@ public class DebugDirectoryEntry extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MajorVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.DebugDirectoryEntry.MajorVersion" target="_top">.NET documentation</a>
+     */
     public UInt16 getMajorVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +393,13 @@ public class DebugDirectoryEntry extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinorVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.DebugDirectoryEntry.MinorVersion" target="_top">.NET documentation</a>
+     */
     public UInt16 getMinorVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -350,6 +415,13 @@ public class DebugDirectoryEntry extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Stamp.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.DebugDirectoryEntry.Stamp" target="_top">.NET documentation</a>
+     */
     public UInt32 getStamp() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

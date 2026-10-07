@@ -52,5 +52,11 @@ import system.web.ui.design.ViewEventArgs;
  * @version 2.0.0.0
  */
 public interface IViewEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.Web.UI.Design.ViewEventArgs}
+     */
     public void Invoke(NetObject sender, ViewEventArgs e);
 }

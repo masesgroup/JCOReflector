@@ -101,7 +101,10 @@ public class CacheEntryChangeMonitor extends system.runtime.caching.ChangeMonito
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CacheEntryChangeMonitor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class CacheEntryChangeMonitor extends system.runtime.caching.ChangeMonito
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CacheKeys.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Caching.CacheEntryChangeMonitor.CacheKeys" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getCacheKeys() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +183,13 @@ public class CacheEntryChangeMonitor extends system.runtime.caching.ChangeMonito
         }
     }
 
+    /**
+     * Gets the value of the .NET property LastModified.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Caching.CacheEntryChangeMonitor.LastModified" target="_top">.NET documentation</a>
+     */
     public DateTimeOffset getLastModified() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +205,13 @@ public class CacheEntryChangeMonitor extends system.runtime.caching.ChangeMonito
         }
     }
 
+    /**
+     * Gets the value of the .NET property RegionName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Caching.CacheEntryChangeMonitor.RegionName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRegionName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

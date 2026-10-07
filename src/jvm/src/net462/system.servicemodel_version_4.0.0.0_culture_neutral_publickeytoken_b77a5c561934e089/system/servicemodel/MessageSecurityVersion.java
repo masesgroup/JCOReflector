@@ -105,7 +105,10 @@ public class MessageSecurityVersion extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MessageSecurityVersion(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -162,6 +165,13 @@ public class MessageSecurityVersion extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SecurityTokenVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageSecurityVersion.SecurityTokenVersion" target="_top">.NET documentation</a>
+     */
     public SecurityTokenVersion getSecurityTokenVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +187,13 @@ public class MessageSecurityVersion extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Default.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageSecurityVersion.Default" target="_top">.NET documentation</a>
+     */
     public static MessageSecurityVersion getDefault() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -192,6 +209,13 @@ public class MessageSecurityVersion extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WSSecurity10WSTrust13WSSecureConversation13WSSecurityPolicy12BasicSecurityProfile10.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageSecurityVersion.WSSecurity10WSTrust13WSSecureConversation13WSSecurityPolicy12BasicSecurityProfile10" target="_top">.NET documentation</a>
+     */
     public static MessageSecurityVersion getWSSecurity10WSTrust13WSSecureConversation13WSSecurityPolicy12BasicSecurityProfile10() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -207,6 +231,13 @@ public class MessageSecurityVersion extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageSecurityVersion.WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10" target="_top">.NET documentation</a>
+     */
     public static MessageSecurityVersion getWSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -222,6 +253,13 @@ public class MessageSecurityVersion extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WSSecurity11WSTrust13WSSecureConversation13WSSecurityPolicy12.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageSecurityVersion.WSSecurity11WSTrust13WSSecureConversation13WSSecurityPolicy12" target="_top">.NET documentation</a>
+     */
     public static MessageSecurityVersion getWSSecurity11WSTrust13WSSecureConversation13WSSecurityPolicy12() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -237,6 +275,13 @@ public class MessageSecurityVersion extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WSSecurity11WSTrust13WSSecureConversation13WSSecurityPolicy12BasicSecurityProfile10.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageSecurityVersion.WSSecurity11WSTrust13WSSecureConversation13WSSecurityPolicy12BasicSecurityProfile10" target="_top">.NET documentation</a>
+     */
     public static MessageSecurityVersion getWSSecurity11WSTrust13WSSecureConversation13WSSecurityPolicy12BasicSecurityProfile10() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -252,6 +297,13 @@ public class MessageSecurityVersion extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageSecurityVersion.WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11" target="_top">.NET documentation</a>
+     */
     public static MessageSecurityVersion getWSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -267,6 +319,13 @@ public class MessageSecurityVersion extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageSecurityVersion.WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10" target="_top">.NET documentation</a>
+     */
     public static MessageSecurityVersion getWSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -282,6 +341,13 @@ public class MessageSecurityVersion extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BasicSecurityProfileVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageSecurityVersion.BasicSecurityProfileVersion" target="_top">.NET documentation</a>
+     */
     public BasicSecurityProfileVersion getBasicSecurityProfileVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -297,6 +363,13 @@ public class MessageSecurityVersion extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SecureConversationVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageSecurityVersion.SecureConversationVersion" target="_top">.NET documentation</a>
+     */
     public SecureConversationVersion getSecureConversationVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -312,6 +385,13 @@ public class MessageSecurityVersion extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SecurityPolicyVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageSecurityVersion.SecurityPolicyVersion" target="_top">.NET documentation</a>
+     */
     public SecurityPolicyVersion getSecurityPolicyVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -327,6 +407,13 @@ public class MessageSecurityVersion extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SecurityVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageSecurityVersion.SecurityVersion" target="_top">.NET documentation</a>
+     */
     public SecurityVersion getSecurityVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -342,6 +429,13 @@ public class MessageSecurityVersion extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TrustVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageSecurityVersion.TrustVersion" target="_top">.NET documentation</a>
+     */
     public TrustVersion getTrustVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

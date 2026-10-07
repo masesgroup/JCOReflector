@@ -98,7 +98,10 @@ public class DesignerDataConnection extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DesignerDataConnection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,15 @@ public class DesignerDataConnection extends NetObject  {
     public DesignerDataConnection() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param providerName the argument of type {@code java.lang.String}
+     * @param connectionString the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Data.DesignerDataConnection.-ctor" target="_top">.NET documentation</a>
+     */
     public DesignerDataConnection(java.lang.String name, java.lang.String providerName, java.lang.String connectionString) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +170,16 @@ public class DesignerDataConnection extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param providerName the argument of type {@code java.lang.String}
+     * @param connectionString the argument of type {@code java.lang.String}
+     * @param isConfigured the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Data.DesignerDataConnection.-ctor" target="_top">.NET documentation</a>
+     */
     public DesignerDataConnection(java.lang.String name, java.lang.String providerName, java.lang.String connectionString, boolean isConfigured) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -177,6 +199,13 @@ public class DesignerDataConnection extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsConfigured.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Data.DesignerDataConnection.IsConfigured" target="_top">.NET documentation</a>
+     */
     public boolean getIsConfigured() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +220,13 @@ public class DesignerDataConnection extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConnectionString.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Data.DesignerDataConnection.ConnectionString" target="_top">.NET documentation</a>
+     */
     public java.lang.String getConnectionString() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +241,13 @@ public class DesignerDataConnection extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Data.DesignerDataConnection.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +262,13 @@ public class DesignerDataConnection extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProviderName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Data.DesignerDataConnection.ProviderName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getProviderName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

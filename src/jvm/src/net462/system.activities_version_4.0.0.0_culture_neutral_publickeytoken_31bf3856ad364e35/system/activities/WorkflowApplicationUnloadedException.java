@@ -104,7 +104,9 @@ public class WorkflowApplicationUnloadedException extends system.activities.Work
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public WorkflowApplicationUnloadedException(java.lang.Object instance) {
         super(instance);
@@ -165,6 +167,14 @@ public class WorkflowApplicationUnloadedException extends system.activities.Work
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param instanceId the argument of type {@code Guid}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.WorkflowApplicationUnloadedException.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowApplicationUnloadedException(java.lang.String message, Guid instanceId) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +185,15 @@ public class WorkflowApplicationUnloadedException extends system.activities.Work
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param instanceId the argument of type {@code Guid}
+     * @param innerException the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.WorkflowApplicationUnloadedException.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowApplicationUnloadedException(java.lang.String message, Guid instanceId, NetException innerException) throws Throwable {
         try {
             // add reference to assemblyName.dll file

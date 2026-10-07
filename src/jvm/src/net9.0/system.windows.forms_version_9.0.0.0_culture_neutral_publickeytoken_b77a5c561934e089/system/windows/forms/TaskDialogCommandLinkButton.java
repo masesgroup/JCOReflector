@@ -99,7 +99,10 @@ public class TaskDialogCommandLinkButton extends system.windows.forms.TaskDialog
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TaskDialogCommandLinkButton(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class TaskDialogCommandLinkButton extends system.windows.forms.TaskDialog
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialogCommandLinkButton.-ctor" target="_top">.NET documentation</a>
+     */
     public TaskDialogCommandLinkButton() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,20 @@ public class TaskDialogCommandLinkButton extends system.windows.forms.TaskDialog
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @param descriptionText the argument of type {@code java.lang.String}
+     * @param enabled the argument of type {@code boolean}
+     * @param allowCloseDialog the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialogCommandLinkButton.-ctor" target="_top">.NET documentation</a>
+     */
     public TaskDialogCommandLinkButton(java.lang.String text, java.lang.String descriptionText, boolean enabled, boolean allowCloseDialog) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +197,13 @@ public class TaskDialogCommandLinkButton extends system.windows.forms.TaskDialog
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DescriptionText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialogCommandLinkButton.DescriptionText" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDescriptionText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +218,19 @@ public class TaskDialogCommandLinkButton extends system.windows.forms.TaskDialog
         }
     }
 
+    /**
+     * Sets the value of the .NET property DescriptionText.
+     *
+     * @param DescriptionText the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialogCommandLinkButton.DescriptionText" target="_top">.NET documentation</a>
+     */
     public void setDescriptionText(java.lang.String DescriptionText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class WeakGCHandle_1<T extends IJCOBridgeReflected> extends system.ValueT
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WeakGCHandle_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,17 @@ public class WeakGCHandle_1<T extends IJCOBridgeReflected> extends system.ValueT
     public WeakGCHandle_1() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param target the argument of type {@code T}
+     * @param trackResurrection the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.WeakGCHandle-1.-ctor" target="_top">.NET documentation</a>
+     */
     public WeakGCHandle_1(T target, boolean trackResurrection) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +181,14 @@ public class WeakGCHandle_1<T extends IJCOBridgeReflected> extends system.ValueT
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code WeakGCHandle_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.WeakGCHandle-1.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(WeakGCHandle_1 other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +203,24 @@ public class WeakGCHandle_1<T extends IJCOBridgeReflected> extends system.ValueT
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetTarget.
+     *
+     * @param target the argument of type {@code JCORefOut<T>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.WeakGCHandle-1.TryGetTarget" target="_top">.NET documentation</a>
+     */
     public boolean TryGetTarget(JCORefOut<T> target) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +235,12 @@ public class WeakGCHandle_1<T extends IJCOBridgeReflected> extends system.ValueT
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.WeakGCHandle-1.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +251,13 @@ public class WeakGCHandle_1<T extends IJCOBridgeReflected> extends system.ValueT
         }
     }
 
+    /**
+     * Invokes the .NET member SetTarget.
+     *
+     * @param target the argument of type {@code T}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.WeakGCHandle-1.SetTarget" target="_top">.NET documentation</a>
+     */
     public void SetTarget(T target) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +285,13 @@ public class WeakGCHandle_1<T extends IJCOBridgeReflected> extends system.ValueT
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsAllocated.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.WeakGCHandle-1.IsAllocated" target="_top">.NET documentation</a>
+     */
     public boolean getIsAllocated() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

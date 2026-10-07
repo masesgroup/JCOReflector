@@ -101,7 +101,10 @@ public class ActivityDesignerResizeEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ActivityDesignerResizeEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,14 @@ public class ActivityDesignerResizeEventArgs extends system.EventArgs  {
     public ActivityDesignerResizeEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param sizingEdge the argument of type {@code DesignerEdges}
+     * @param newBounds the argument of type {@code Rectangle}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.ActivityDesignerResizeEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ActivityDesignerResizeEventArgs(DesignerEdges sizingEdge, Rectangle newBounds) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +181,13 @@ public class ActivityDesignerResizeEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Bounds.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.ActivityDesignerResizeEventArgs.Bounds" target="_top">.NET documentation</a>
+     */
     public Rectangle getBounds() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +203,13 @@ public class ActivityDesignerResizeEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SizingEdge.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.ActivityDesignerResizeEventArgs.SizingEdge" target="_top">.NET documentation</a>
+     */
     public DesignerEdges getSizingEdge() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

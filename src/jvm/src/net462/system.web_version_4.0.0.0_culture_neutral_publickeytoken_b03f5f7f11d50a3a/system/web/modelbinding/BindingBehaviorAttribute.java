@@ -100,7 +100,10 @@ public class BindingBehaviorAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BindingBehaviorAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class BindingBehaviorAttribute extends system.Attribute  {
     public BindingBehaviorAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param behavior the argument of type {@code BindingBehavior}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.BindingBehaviorAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public BindingBehaviorAttribute(BindingBehavior behavior) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +179,13 @@ public class BindingBehaviorAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Behavior.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.BindingBehaviorAttribute.Behavior" target="_top">.NET documentation</a>
+     */
     public BindingBehavior getBehavior() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +201,13 @@ public class BindingBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Behavior.
+     *
+     * @param Behavior the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.BindingBehaviorAttribute.Behavior" target="_top">.NET documentation</a>
+     */
     public void setBehavior(BindingBehavior Behavior) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

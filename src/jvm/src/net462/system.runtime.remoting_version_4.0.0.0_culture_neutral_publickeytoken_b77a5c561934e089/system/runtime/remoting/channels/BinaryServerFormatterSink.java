@@ -113,7 +113,10 @@ public class BinaryServerFormatterSink extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BinaryServerFormatterSink(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -168,6 +171,18 @@ public class BinaryServerFormatterSink extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetResponseStream.
+     *
+     * @param sinkStack the argument of type {@code IServerResponseChannelSinkStack}
+     * @param state the argument of type {@code NetObject}
+     * @param msg the argument of type {@code IMessage}
+     * @param headers the argument of type {@code ITransportHeaders}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.BinaryServerFormatterSink.GetResponseStream" target="_top">.NET documentation</a>
+     */
     public Stream GetResponseStream(IServerResponseChannelSinkStack sinkStack, NetObject state, IMessage msg, ITransportHeaders headers) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +198,42 @@ public class BinaryServerFormatterSink extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ProcessMessage.
+     *
+     * @param sinkStack the argument of type {@code IServerChannelSinkStack}
+     * @param requestMsg the argument of type {@code IMessage}
+     * @param requestHeaders the argument of type {@code ITransportHeaders}
+     * @param requestStream the argument of type {@code Stream}
+     * @param responseMsg the argument of type {@code JCORefOut<IMessage>}
+     * @param responseHeaders the argument of type {@code JCORefOut<ITransportHeaders>}
+     * @param responseStream the argument of type {@code JCORefOut<Stream>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.web.HttpRequestValidationException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.BinaryServerFormatterSink.ProcessMessage" target="_top">.NET documentation</a>
+     */
     public ServerProcessing ProcessMessage(IServerChannelSinkStack sinkStack, IMessage requestMsg, ITransportHeaders requestHeaders, Stream requestStream, JCORefOut<IMessage> responseMsg, JCORefOut<ITransportHeaders> responseHeaders, JCORefOut<Stream> responseStream) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.NullReferenceException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.runtime.remoting.RemotingException, system.security.SecurityException, system.runtime.serialization.SerializationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.web.HttpException, system.web.HttpRequestValidationException, system.UriFormatException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +249,35 @@ public class BinaryServerFormatterSink extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsyncProcessResponse.
+     *
+     * @param sinkStack the argument of type {@code IServerResponseChannelSinkStack}
+     * @param state the argument of type {@code NetObject}
+     * @param msg the argument of type {@code IMessage}
+     * @param headers the argument of type {@code ITransportHeaders}
+     * @param stream the argument of type {@code Stream}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.web.HttpRequestValidationException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.BinaryServerFormatterSink.AsyncProcessResponse" target="_top">.NET documentation</a>
+     */
     public void AsyncProcessResponse(IServerResponseChannelSinkStack sinkStack, NetObject state, IMessage msg, ITransportHeaders headers, Stream stream) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.web.HttpException, system.web.HttpRequestValidationException, system.UriFormatException, system.OutOfMemoryException, system.runtime.remoting.RemotingException, system.NullReferenceException, system.runtime.serialization.SerializationException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +292,13 @@ public class BinaryServerFormatterSink extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Properties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.BinaryServerFormatterSink.Properties" target="_top">.NET documentation</a>
+     */
     public IDictionary getProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +314,13 @@ public class BinaryServerFormatterSink extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NextChannelSink.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.BinaryServerFormatterSink.NextChannelSink" target="_top">.NET documentation</a>
+     */
     public IServerChannelSink getNextChannelSink() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +336,13 @@ public class BinaryServerFormatterSink extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeFilterLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.BinaryServerFormatterSink.TypeFilterLevel" target="_top">.NET documentation</a>
+     */
     public TypeFilterLevel getTypeFilterLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +358,13 @@ public class BinaryServerFormatterSink extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TypeFilterLevel.
+     *
+     * @param TypeFilterLevel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.BinaryServerFormatterSink.TypeFilterLevel" target="_top">.NET documentation</a>
+     */
     public void setTypeFilterLevel(TypeFilterLevel TypeFilterLevel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

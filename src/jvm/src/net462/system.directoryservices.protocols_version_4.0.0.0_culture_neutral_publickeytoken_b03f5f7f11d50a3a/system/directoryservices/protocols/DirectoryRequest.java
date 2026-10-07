@@ -100,7 +100,10 @@ public class DirectoryRequest extends system.directoryservices.protocols.Directo
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DirectoryRequest(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,13 @@ public class DirectoryRequest extends system.directoryservices.protocols.Directo
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Controls.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.DirectoryRequest.Controls" target="_top">.NET documentation</a>
+     */
     public DirectoryControlCollection getControls() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +182,13 @@ public class DirectoryRequest extends system.directoryservices.protocols.Directo
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequestId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.DirectoryRequest.RequestId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRequestId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +203,13 @@ public class DirectoryRequest extends system.directoryservices.protocols.Directo
         }
     }
 
+    /**
+     * Sets the value of the .NET property RequestId.
+     *
+     * @param RequestId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.DirectoryRequest.RequestId" target="_top">.NET documentation</a>
+     */
     public void setRequestId(java.lang.String RequestId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

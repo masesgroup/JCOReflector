@@ -114,7 +114,10 @@ public class SqlByte extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SqlByte(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -164,6 +167,13 @@ public class SqlByte extends system.ValueType  {
     public SqlByte() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code byte}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlByte.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlByte(byte value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +189,14 @@ public class SqlByte extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CompareTo.
+     *
+     * @param value the argument of type {@code SqlByte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlByte.CompareTo" target="_top">.NET documentation</a>
+     */
     public int CompareTo(SqlByte value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +237,25 @@ public class SqlByte extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CompareTo.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlByte.CompareTo" target="_top">.NET documentation</a>
+     */
     public int CompareTo(NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +296,15 @@ public class SqlByte extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param x the argument of type {@code SqlByte}
+     * @param y the argument of type {@code SqlByte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlByte.Equals" target="_top">.NET documentation</a>
+     */
     public static SqlBoolean Equals(SqlByte x, SqlByte y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -274,6 +320,15 @@ public class SqlByte extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member GreaterThan.
+     *
+     * @param x the argument of type {@code SqlByte}
+     * @param y the argument of type {@code SqlByte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlByte.GreaterThan" target="_top">.NET documentation</a>
+     */
     public static SqlBoolean GreaterThan(SqlByte x, SqlByte y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -289,6 +344,15 @@ public class SqlByte extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member GreaterThanOrEqual.
+     *
+     * @param x the argument of type {@code SqlByte}
+     * @param y the argument of type {@code SqlByte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlByte.GreaterThanOrEqual" target="_top">.NET documentation</a>
+     */
     public static SqlBoolean GreaterThanOrEqual(SqlByte x, SqlByte y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -304,6 +368,15 @@ public class SqlByte extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member LessThan.
+     *
+     * @param x the argument of type {@code SqlByte}
+     * @param y the argument of type {@code SqlByte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlByte.LessThan" target="_top">.NET documentation</a>
+     */
     public static SqlBoolean LessThan(SqlByte x, SqlByte y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -319,6 +392,15 @@ public class SqlByte extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member LessThanOrEqual.
+     *
+     * @param x the argument of type {@code SqlByte}
+     * @param y the argument of type {@code SqlByte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlByte.LessThanOrEqual" target="_top">.NET documentation</a>
+     */
     public static SqlBoolean LessThanOrEqual(SqlByte x, SqlByte y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -334,6 +416,15 @@ public class SqlByte extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member NotEquals.
+     *
+     * @param x the argument of type {@code SqlByte}
+     * @param y the argument of type {@code SqlByte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlByte.NotEquals" target="_top">.NET documentation</a>
+     */
     public static SqlBoolean NotEquals(SqlByte x, SqlByte y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -349,6 +440,14 @@ public class SqlByte extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToSqlBoolean.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.data.sqltypes.SqlNullValueException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlByte.ToSqlBoolean" target="_top">.NET documentation</a>
+     */
     public SqlBoolean ToSqlBoolean() throws Throwable, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -364,6 +463,16 @@ public class SqlByte extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param x the argument of type {@code SqlByte}
+     * @param y the argument of type {@code SqlByte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlByte.Add" target="_top">.NET documentation</a>
+     */
     public static SqlByte Add(SqlByte x, SqlByte y) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -379,6 +488,15 @@ public class SqlByte extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member BitwiseAnd.
+     *
+     * @param x the argument of type {@code SqlByte}
+     * @param y the argument of type {@code SqlByte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlByte.BitwiseAnd" target="_top">.NET documentation</a>
+     */
     public static SqlByte BitwiseAnd(SqlByte x, SqlByte y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -394,6 +512,15 @@ public class SqlByte extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member BitwiseOr.
+     *
+     * @param x the argument of type {@code SqlByte}
+     * @param y the argument of type {@code SqlByte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlByte.BitwiseOr" target="_top">.NET documentation</a>
+     */
     public static SqlByte BitwiseOr(SqlByte x, SqlByte y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -409,6 +536,16 @@ public class SqlByte extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Divide.
+     *
+     * @param x the argument of type {@code SqlByte}
+     * @param y the argument of type {@code SqlByte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.DivideByZeroException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlByte.Divide" target="_top">.NET documentation</a>
+     */
     public static SqlByte Divide(SqlByte x, SqlByte y) throws Throwable, system.DivideByZeroException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -424,6 +561,16 @@ public class SqlByte extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Mod.
+     *
+     * @param x the argument of type {@code SqlByte}
+     * @param y the argument of type {@code SqlByte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.DivideByZeroException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlByte.Mod" target="_top">.NET documentation</a>
+     */
     public static SqlByte Mod(SqlByte x, SqlByte y) throws Throwable, system.DivideByZeroException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -439,6 +586,16 @@ public class SqlByte extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Modulus.
+     *
+     * @param x the argument of type {@code SqlByte}
+     * @param y the argument of type {@code SqlByte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.DivideByZeroException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlByte.Modulus" target="_top">.NET documentation</a>
+     */
     public static SqlByte Modulus(SqlByte x, SqlByte y) throws Throwable, system.DivideByZeroException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -454,6 +611,16 @@ public class SqlByte extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Multiply.
+     *
+     * @param x the argument of type {@code SqlByte}
+     * @param y the argument of type {@code SqlByte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlByte.Multiply" target="_top">.NET documentation</a>
+     */
     public static SqlByte Multiply(SqlByte x, SqlByte y) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -469,6 +636,14 @@ public class SqlByte extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member OnesComplement.
+     *
+     * @param x the argument of type {@code SqlByte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlByte.OnesComplement" target="_top">.NET documentation</a>
+     */
     public static SqlByte OnesComplement(SqlByte x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -484,6 +659,24 @@ public class SqlByte extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Parse.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlByte.Parse" target="_top">.NET documentation</a>
+     */
     public static SqlByte Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -499,6 +692,16 @@ public class SqlByte extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Subtract.
+     *
+     * @param x the argument of type {@code SqlByte}
+     * @param y the argument of type {@code SqlByte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlByte.Subtract" target="_top">.NET documentation</a>
+     */
     public static SqlByte Subtract(SqlByte x, SqlByte y) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -514,6 +717,15 @@ public class SqlByte extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Xor.
+     *
+     * @param x the argument of type {@code SqlByte}
+     * @param y the argument of type {@code SqlByte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlByte.Xor" target="_top">.NET documentation</a>
+     */
     public static SqlByte Xor(SqlByte x, SqlByte y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -529,6 +741,14 @@ public class SqlByte extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToSqlDecimal.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.data.sqltypes.SqlNullValueException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlByte.ToSqlDecimal" target="_top">.NET documentation</a>
+     */
     public SqlDecimal ToSqlDecimal() throws Throwable, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -544,6 +764,15 @@ public class SqlByte extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToSqlDouble.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.data.sqltypes.SqlNullValueException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlByte.ToSqlDouble" target="_top">.NET documentation</a>
+     */
     public SqlDouble ToSqlDouble() throws Throwable, system.data.sqltypes.SqlNullValueException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -559,6 +788,14 @@ public class SqlByte extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToSqlInt16.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.data.sqltypes.SqlNullValueException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlByte.ToSqlInt16" target="_top">.NET documentation</a>
+     */
     public SqlInt16 ToSqlInt16() throws Throwable, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -574,6 +811,14 @@ public class SqlByte extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToSqlInt32.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.data.sqltypes.SqlNullValueException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlByte.ToSqlInt32" target="_top">.NET documentation</a>
+     */
     public SqlInt32 ToSqlInt32() throws Throwable, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -589,6 +834,14 @@ public class SqlByte extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToSqlInt64.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.data.sqltypes.SqlNullValueException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlByte.ToSqlInt64" target="_top">.NET documentation</a>
+     */
     public SqlInt64 ToSqlInt64() throws Throwable, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -604,6 +857,14 @@ public class SqlByte extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToSqlMoney.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.data.sqltypes.SqlNullValueException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlByte.ToSqlMoney" target="_top">.NET documentation</a>
+     */
     public SqlMoney ToSqlMoney() throws Throwable, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -619,6 +880,15 @@ public class SqlByte extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToSqlSingle.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.data.sqltypes.SqlNullValueException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlByte.ToSqlSingle" target="_top">.NET documentation</a>
+     */
     public SqlSingle ToSqlSingle() throws Throwable, system.data.sqltypes.SqlNullValueException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -634,6 +904,20 @@ public class SqlByte extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToSqlString.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.data.sqltypes.SqlNullValueException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlByte.ToSqlString" target="_top">.NET documentation</a>
+     */
     public SqlString ToSqlString() throws Throwable, system.data.sqltypes.SqlNullValueException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -649,6 +933,14 @@ public class SqlByte extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetXsdType.
+     *
+     * @param schemaSet the argument of type {@code XmlSchemaSet}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlByte.GetXsdType" target="_top">.NET documentation</a>
+     */
     public static XmlQualifiedName GetXsdType(XmlSchemaSet schemaSet) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -667,8 +959,12 @@ public class SqlByte extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIXmlSerializable method available in IXmlSerializable to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.IXmlSerializable.GetSchema" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public XmlSchema GetSchema() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
     }
@@ -676,8 +972,12 @@ public class SqlByte extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIXmlSerializable method available in IXmlSerializable to obtain an object with an invocable method
+     *
+     * @param reader the argument of type {@code XmlReader}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.IXmlSerializable.ReadXml" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ReadXml(XmlReader reader) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
     }
@@ -685,8 +985,12 @@ public class SqlByte extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIXmlSerializable method available in IXmlSerializable to obtain an object with an invocable method
+     *
+     * @param writer the argument of type {@code XmlWriter}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.IXmlSerializable.WriteXml" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void WriteXml(XmlWriter writer) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
     }
@@ -695,6 +999,13 @@ public class SqlByte extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsNull.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlByte.IsNull" target="_top">.NET documentation</a>
+     */
     public boolean getIsNull() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -709,6 +1020,14 @@ public class SqlByte extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.data.sqltypes.SqlNullValueException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlByte.Value" target="_top">.NET documentation</a>
+     */
     public byte getValue() throws Throwable, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class IContributeObjectSinkImplementation extends NetObject implements IC
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IContributeObjectSinkImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,15 @@ public class IContributeObjectSinkImplementation extends NetObject implements IC
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetObjectSink.
+     *
+     * @param obj the argument of type {@code MarshalByRefObject}
+     * @param nextSink the argument of type {@code IMessageSink}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Contexts.IContributeObjectSink.GetObjectSink" target="_top">.NET documentation</a>
+     */
     public IMessageSink GetObjectSink(MarshalByRefObject obj, IMessageSink nextSink) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -104,7 +104,10 @@ public class EntityRecordInfo extends system.data.common.DataRecordInfo  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EntityRecordInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,25 @@ public class EntityRecordInfo extends system.data.common.DataRecordInfo  {
     public EntityRecordInfo() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param metadata the argument of type {@code EntityType}
+     * @param memberInfo the argument of type {@code IEnumerable_1}
+     * @param entityKey the argument of type {@code EntityKey}
+     * @param entitySet the argument of type {@code EntitySet}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.EntityRecordInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public EntityRecordInfo(EntityType metadata, IEnumerable_1 memberInfo, EntityKey entityKey, EntitySet entitySet) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -173,6 +195,13 @@ public class EntityRecordInfo extends system.data.common.DataRecordInfo  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EntityKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.EntityRecordInfo.EntityKey" target="_top">.NET documentation</a>
+     */
     public EntityKey getEntityKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

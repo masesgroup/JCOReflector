@@ -107,7 +107,10 @@ public class IWSTrustChannelContractImplementation extends NetObject implements 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IWSTrustChannelContractImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,16 @@ public class IWSTrustChannelContractImplementation extends NetObject implements 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member BeginCancel.
+     *
+     * @param request the argument of type {@code RequestSecurityToken}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustChannelContract.BeginCancel" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginCancel(RequestSecurityToken request, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -164,6 +177,16 @@ public class IWSTrustChannelContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member BeginCancel.
+     *
+     * @param message the argument of type {@code Message}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param asyncState the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustChannelContract.BeginCancel" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginCancel(Message message, AsyncCallback callback, NetObject asyncState) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +202,16 @@ public class IWSTrustChannelContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member BeginIssue.
+     *
+     * @param request the argument of type {@code RequestSecurityToken}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param asyncState the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustChannelContract.BeginIssue" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginIssue(RequestSecurityToken request, AsyncCallback callback, NetObject asyncState) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +227,16 @@ public class IWSTrustChannelContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member BeginIssue.
+     *
+     * @param message the argument of type {@code Message}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param asyncState the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustChannelContract.BeginIssue" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginIssue(Message message, AsyncCallback callback, NetObject asyncState) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +252,16 @@ public class IWSTrustChannelContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member BeginRenew.
+     *
+     * @param request the argument of type {@code RequestSecurityToken}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustChannelContract.BeginRenew" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginRenew(RequestSecurityToken request, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +277,16 @@ public class IWSTrustChannelContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member BeginRenew.
+     *
+     * @param message the argument of type {@code Message}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param asyncState the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustChannelContract.BeginRenew" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginRenew(Message message, AsyncCallback callback, NetObject asyncState) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +302,16 @@ public class IWSTrustChannelContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member BeginValidate.
+     *
+     * @param request the argument of type {@code RequestSecurityToken}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustChannelContract.BeginValidate" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginValidate(RequestSecurityToken request, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +327,16 @@ public class IWSTrustChannelContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member BeginValidate.
+     *
+     * @param message the argument of type {@code Message}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param asyncState the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustChannelContract.BeginValidate" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginValidate(Message message, AsyncCallback callback, NetObject asyncState) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +352,14 @@ public class IWSTrustChannelContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member Cancel.
+     *
+     * @param request the argument of type {@code RequestSecurityToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustChannelContract.Cancel" target="_top">.NET documentation</a>
+     */
     public RequestSecurityTokenResponse Cancel(RequestSecurityToken request) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -284,6 +375,14 @@ public class IWSTrustChannelContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member Renew.
+     *
+     * @param request the argument of type {@code RequestSecurityToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustChannelContract.Renew" target="_top">.NET documentation</a>
+     */
     public RequestSecurityTokenResponse Renew(RequestSecurityToken request) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -299,6 +398,14 @@ public class IWSTrustChannelContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member Validate.
+     *
+     * @param request the argument of type {@code RequestSecurityToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustChannelContract.Validate" target="_top">.NET documentation</a>
+     */
     public RequestSecurityTokenResponse Validate(RequestSecurityToken request) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -314,6 +421,15 @@ public class IWSTrustChannelContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member EndIssue.
+     *
+     * @param result the argument of type {@code IAsyncResult}
+     * @param response the argument of type {@code JCORefOut<RequestSecurityTokenResponse>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustChannelContract.EndIssue" target="_top">.NET documentation</a>
+     */
     public SecurityToken EndIssue(IAsyncResult result, JCORefOut<RequestSecurityTokenResponse> response) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -329,6 +445,14 @@ public class IWSTrustChannelContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member Issue.
+     *
+     * @param request the argument of type {@code RequestSecurityToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustChannelContract.Issue" target="_top">.NET documentation</a>
+     */
     public SecurityToken Issue(RequestSecurityToken request) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -344,6 +468,15 @@ public class IWSTrustChannelContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member Issue.
+     *
+     * @param request the argument of type {@code RequestSecurityToken}
+     * @param response the argument of type {@code JCORefOut<RequestSecurityTokenResponse>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustChannelContract.Issue" target="_top">.NET documentation</a>
+     */
     public SecurityToken Issue(RequestSecurityToken request, JCORefOut<RequestSecurityTokenResponse> response) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -359,6 +492,14 @@ public class IWSTrustChannelContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member Cancel.
+     *
+     * @param message the argument of type {@code Message}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustChannelContract.Cancel" target="_top">.NET documentation</a>
+     */
     public Message Cancel(Message message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -374,6 +515,14 @@ public class IWSTrustChannelContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member EndCancel.
+     *
+     * @param asyncResult the argument of type {@code IAsyncResult}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustChannelContract.EndCancel" target="_top">.NET documentation</a>
+     */
     public Message EndCancel(IAsyncResult asyncResult) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -389,6 +538,14 @@ public class IWSTrustChannelContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member EndIssue.
+     *
+     * @param asyncResult the argument of type {@code IAsyncResult}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustChannelContract.EndIssue" target="_top">.NET documentation</a>
+     */
     public Message EndIssue(IAsyncResult asyncResult) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -404,6 +561,14 @@ public class IWSTrustChannelContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member EndRenew.
+     *
+     * @param asyncResult the argument of type {@code IAsyncResult}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustChannelContract.EndRenew" target="_top">.NET documentation</a>
+     */
     public Message EndRenew(IAsyncResult asyncResult) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -419,6 +584,14 @@ public class IWSTrustChannelContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member EndValidate.
+     *
+     * @param asyncResult the argument of type {@code IAsyncResult}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustChannelContract.EndValidate" target="_top">.NET documentation</a>
+     */
     public Message EndValidate(IAsyncResult asyncResult) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -434,6 +607,14 @@ public class IWSTrustChannelContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member Issue.
+     *
+     * @param message the argument of type {@code Message}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustChannelContract.Issue" target="_top">.NET documentation</a>
+     */
     public Message Issue(Message message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -449,6 +630,14 @@ public class IWSTrustChannelContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member Renew.
+     *
+     * @param message the argument of type {@code Message}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustChannelContract.Renew" target="_top">.NET documentation</a>
+     */
     public Message Renew(Message message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -464,6 +653,14 @@ public class IWSTrustChannelContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member Validate.
+     *
+     * @param message the argument of type {@code Message}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustChannelContract.Validate" target="_top">.NET documentation</a>
+     */
     public Message Validate(Message message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -479,6 +676,14 @@ public class IWSTrustChannelContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member EndCancel.
+     *
+     * @param result the argument of type {@code IAsyncResult}
+     * @param response the argument of type {@code JCORefOut<RequestSecurityTokenResponse>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustChannelContract.EndCancel" target="_top">.NET documentation</a>
+     */
     public void EndCancel(IAsyncResult result, JCORefOut<RequestSecurityTokenResponse> response) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -489,6 +694,14 @@ public class IWSTrustChannelContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member EndRenew.
+     *
+     * @param result the argument of type {@code IAsyncResult}
+     * @param response the argument of type {@code JCORefOut<RequestSecurityTokenResponse>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustChannelContract.EndRenew" target="_top">.NET documentation</a>
+     */
     public void EndRenew(IAsyncResult result, JCORefOut<RequestSecurityTokenResponse> response) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -499,6 +712,14 @@ public class IWSTrustChannelContractImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member EndValidate.
+     *
+     * @param result the argument of type {@code IAsyncResult}
+     * @param response the argument of type {@code JCORefOut<RequestSecurityTokenResponse>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustChannelContract.EndValidate" target="_top">.NET documentation</a>
+     */
     public void EndValidate(IAsyncResult result, JCORefOut<RequestSecurityTokenResponse> response) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

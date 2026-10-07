@@ -100,7 +100,10 @@ public class TableLayoutColumnStyleCollection extends system.windows.forms.Table
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TableLayoutColumnStyleCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,14 @@ public class TableLayoutColumnStyleCollection extends system.windows.forms.Table
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param columnStyle the argument of type {@code ColumnStyle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TableLayoutColumnStyleCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(ColumnStyle columnStyle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +180,14 @@ public class TableLayoutColumnStyleCollection extends system.windows.forms.Table
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param columnStyle the argument of type {@code ColumnStyle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TableLayoutColumnStyleCollection.Add" target="_top">.NET documentation</a>
+     */
     public int Add(ColumnStyle columnStyle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +228,14 @@ public class TableLayoutColumnStyleCollection extends system.windows.forms.Table
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param columnStyle the argument of type {@code ColumnStyle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TableLayoutColumnStyleCollection.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(ColumnStyle columnStyle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +276,14 @@ public class TableLayoutColumnStyleCollection extends system.windows.forms.Table
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param columnStyle the argument of type {@code ColumnStyle}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TableLayoutColumnStyleCollection.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(int index, ColumnStyle columnStyle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +294,13 @@ public class TableLayoutColumnStyleCollection extends system.windows.forms.Table
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param columnStyle the argument of type {@code ColumnStyle}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TableLayoutColumnStyleCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(ColumnStyle columnStyle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

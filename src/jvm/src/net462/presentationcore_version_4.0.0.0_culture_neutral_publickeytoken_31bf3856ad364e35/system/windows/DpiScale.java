@@ -99,7 +99,10 @@ public class DpiScale extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DpiScale(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class DpiScale extends system.ValueType  {
     public DpiScale() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param dpiScaleX the argument of type {@code double}
+     * @param dpiScaleY the argument of type {@code double}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DpiScale.-ctor" target="_top">.NET documentation</a>
+     */
     public DpiScale(double dpiScaleX, double dpiScaleY) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +179,13 @@ public class DpiScale extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DpiScaleX.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DpiScale.DpiScaleX" target="_top">.NET documentation</a>
+     */
     public double getDpiScaleX() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +226,13 @@ public class DpiScale extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DpiScaleY.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DpiScale.DpiScaleY" target="_top">.NET documentation</a>
+     */
     public double getDpiScaleY() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +273,13 @@ public class DpiScale extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PixelsPerDip.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DpiScale.PixelsPerDip" target="_top">.NET documentation</a>
+     */
     public double getPixelsPerDip() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +320,13 @@ public class DpiScale extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PixelsPerInchX.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DpiScale.PixelsPerInchX" target="_top">.NET documentation</a>
+     */
     public double getPixelsPerInchX() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -328,6 +367,13 @@ public class DpiScale extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PixelsPerInchY.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DpiScale.PixelsPerInchY" target="_top">.NET documentation</a>
+     */
     public double getPixelsPerInchY() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -102,7 +102,10 @@ public class EventQueueName extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EventQueueName(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,15 @@ public class EventQueueName extends NetObject  {
     public EventQueueName() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param interfaceType the argument of type {@code NetType}
+     * @param operation the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.EventQueueName.-ctor" target="_top">.NET documentation</a>
+     */
     public EventQueueName(NetType interfaceType, java.lang.String operation) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +174,16 @@ public class EventQueueName extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param interfaceType the argument of type {@code NetType}
+     * @param operation the argument of type {@code java.lang.String}
+     * @param propertyValues the argument of type {@code ICollection_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.EventQueueName.-ctor" target="_top">.NET documentation</a>
+     */
     public EventQueueName(NetType interfaceType, java.lang.String operation, ICollection_1 propertyValues) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -177,6 +199,14 @@ public class EventQueueName extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CompareTo.
+     *
+     * @param toCompare the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.EventQueueName.CompareTo" target="_top">.NET documentation</a>
+     */
     public int CompareTo(NetObject toCompare) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +247,14 @@ public class EventQueueName extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CompareTo.
+     *
+     * @param eventQueueName the argument of type {@code EventQueueName}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.EventQueueName.CompareTo" target="_top">.NET documentation</a>
+     */
     public int CompareTo(EventQueueName eventQueueName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +295,13 @@ public class EventQueueName extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCorrelationValues.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.EventQueueName.GetCorrelationValues" target="_top">.NET documentation</a>
+     */
     public CorrelationProperty[] GetCorrelationValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +327,13 @@ public class EventQueueName extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MethodName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.EventQueueName.MethodName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMethodName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -296,6 +348,13 @@ public class EventQueueName extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InterfaceType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.EventQueueName.InterfaceType" target="_top">.NET documentation</a>
+     */
     public NetType getInterfaceType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

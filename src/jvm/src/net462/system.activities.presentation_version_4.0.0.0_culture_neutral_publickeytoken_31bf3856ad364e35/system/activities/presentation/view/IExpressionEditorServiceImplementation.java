@@ -104,7 +104,10 @@ public class IExpressionEditorServiceImplementation extends NetObject implements
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IExpressionEditorServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,17 @@ public class IExpressionEditorServiceImplementation extends NetObject implements
 
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateExpressionEditor.
+     *
+     * @param assemblies the argument of type {@code AssemblyContextControlItem}
+     * @param importedNamespaces the argument of type {@code ImportedNamespaceContextItem}
+     * @param variables the argument of type {@code List_1}
+     * @param text the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor" target="_top">.NET documentation</a>
+     */
     public IExpressionEditorInstance CreateExpressionEditor(AssemblyContextControlItem assemblies, ImportedNamespaceContextItem importedNamespaces, List_1 variables, java.lang.String text) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -161,6 +175,18 @@ public class IExpressionEditorServiceImplementation extends NetObject implements
         }
     }
 
+    /**
+     * Invokes the .NET member CreateExpressionEditor.
+     *
+     * @param assemblies the argument of type {@code AssemblyContextControlItem}
+     * @param importedNamespaces the argument of type {@code ImportedNamespaceContextItem}
+     * @param variables the argument of type {@code List_1}
+     * @param text the argument of type {@code java.lang.String}
+     * @param expressionType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor" target="_top">.NET documentation</a>
+     */
     public IExpressionEditorInstance CreateExpressionEditor(AssemblyContextControlItem assemblies, ImportedNamespaceContextItem importedNamespaces, List_1 variables, java.lang.String text, NetType expressionType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +202,19 @@ public class IExpressionEditorServiceImplementation extends NetObject implements
         }
     }
 
+    /**
+     * Invokes the .NET member CreateExpressionEditor.
+     *
+     * @param assemblies the argument of type {@code AssemblyContextControlItem}
+     * @param importedNamespaces the argument of type {@code ImportedNamespaceContextItem}
+     * @param variables the argument of type {@code List_1}
+     * @param text the argument of type {@code java.lang.String}
+     * @param expressionType the argument of type {@code NetType}
+     * @param initialSize the argument of type {@code Size}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor" target="_top">.NET documentation</a>
+     */
     public IExpressionEditorInstance CreateExpressionEditor(AssemblyContextControlItem assemblies, ImportedNamespaceContextItem importedNamespaces, List_1 variables, java.lang.String text, NetType expressionType, Size initialSize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +230,18 @@ public class IExpressionEditorServiceImplementation extends NetObject implements
         }
     }
 
+    /**
+     * Invokes the .NET member CreateExpressionEditor.
+     *
+     * @param assemblies the argument of type {@code AssemblyContextControlItem}
+     * @param importedNamespaces the argument of type {@code ImportedNamespaceContextItem}
+     * @param variables the argument of type {@code List_1}
+     * @param text the argument of type {@code java.lang.String}
+     * @param initialSize the argument of type {@code Size}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor" target="_top">.NET documentation</a>
+     */
     public IExpressionEditorInstance CreateExpressionEditor(AssemblyContextControlItem assemblies, ImportedNamespaceContextItem importedNamespaces, List_1 variables, java.lang.String text, Size initialSize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +257,12 @@ public class IExpressionEditorServiceImplementation extends NetObject implements
         }
     }
 
+    /**
+     * Invokes the .NET member CloseExpressionEditors.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors" target="_top">.NET documentation</a>
+     */
     public void CloseExpressionEditors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +273,14 @@ public class IExpressionEditorServiceImplementation extends NetObject implements
         }
     }
 
+    /**
+     * Invokes the .NET member UpdateContext.
+     *
+     * @param assemblies the argument of type {@code AssemblyContextControlItem}
+     * @param importedNamespaces the argument of type {@code ImportedNamespaceContextItem}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorService.UpdateContext" target="_top">.NET documentation</a>
+     */
     public void UpdateContext(AssemblyContextControlItem assemblies, ImportedNamespaceContextItem importedNamespaces) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

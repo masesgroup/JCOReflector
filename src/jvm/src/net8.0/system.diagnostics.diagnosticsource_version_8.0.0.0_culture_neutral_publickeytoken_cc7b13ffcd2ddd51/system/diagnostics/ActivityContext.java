@@ -103,7 +103,10 @@ public class ActivityContext extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ActivityContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,17 @@ public class ActivityContext extends system.ValueType  {
     public ActivityContext() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param traceId the argument of type {@code ActivityTraceId}
+     * @param spanId the argument of type {@code ActivitySpanId}
+     * @param traceFlags the argument of type {@code ActivityTraceFlags}
+     * @param traceState the argument of type {@code java.lang.String}
+     * @param isRemote the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ActivityContext.-ctor" target="_top">.NET documentation</a>
+     */
     public ActivityContext(ActivityTraceId traceId, ActivitySpanId spanId, ActivityTraceFlags traceFlags, java.lang.String traceState, boolean isRemote) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +182,16 @@ public class ActivityContext extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param value the argument of type {@code ActivityContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ActivityContext.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(ActivityContext value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +206,22 @@ public class ActivityContext extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryParse.
+     *
+     * @param traceParent the argument of type {@code java.lang.String}
+     * @param traceState the argument of type {@code java.lang.String}
+     * @param isRemote the argument of type {@code boolean}
+     * @param context the argument of type {@code JCORefOut<ActivityContext>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ActivityContext.TryParse" target="_top">.NET documentation</a>
+     */
     public static boolean TryParse(java.lang.String traceParent, java.lang.String traceState, boolean isRemote, JCORefOut<ActivityContext> context) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -196,6 +236,19 @@ public class ActivityContext extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryParse.
+     *
+     * @param traceParent the argument of type {@code java.lang.String}
+     * @param traceState the argument of type {@code java.lang.String}
+     * @param context the argument of type {@code JCORefOut<ActivityContext>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ActivityContext.TryParse" target="_top">.NET documentation</a>
+     */
     public static boolean TryParse(java.lang.String traceParent, java.lang.String traceState, JCORefOut<ActivityContext> context) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -210,6 +263,25 @@ public class ActivityContext extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Parse.
+     *
+     * @param traceParent the argument of type {@code java.lang.String}
+     * @param traceState the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ActivityContext.Parse" target="_top">.NET documentation</a>
+     */
     public static ActivityContext Parse(java.lang.String traceParent, java.lang.String traceState) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -229,6 +301,13 @@ public class ActivityContext extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsRemote.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ActivityContext.IsRemote" target="_top">.NET documentation</a>
+     */
     public boolean getIsRemote() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +322,13 @@ public class ActivityContext extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SpanId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ActivityContext.SpanId" target="_top">.NET documentation</a>
+     */
     public ActivitySpanId getSpanId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +344,13 @@ public class ActivityContext extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TraceFlags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ActivityContext.TraceFlags" target="_top">.NET documentation</a>
+     */
     public ActivityTraceFlags getTraceFlags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +366,13 @@ public class ActivityContext extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TraceId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ActivityContext.TraceId" target="_top">.NET documentation</a>
+     */
     public ActivityTraceId getTraceId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +388,13 @@ public class ActivityContext extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TraceState.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ActivityContext.TraceState" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTraceState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

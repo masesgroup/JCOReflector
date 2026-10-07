@@ -100,7 +100,10 @@ public class MinMaxParagraphWidth extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MinMaxParagraphWidth(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,14 @@ public class MinMaxParagraphWidth extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param value the argument of type {@code MinMaxParagraphWidth}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.MinMaxParagraphWidth.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(MinMaxParagraphWidth value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +184,13 @@ public class MinMaxParagraphWidth extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MaxWidth.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.MinMaxParagraphWidth.MaxWidth" target="_top">.NET documentation</a>
+     */
     public double getMaxWidth() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +231,13 @@ public class MinMaxParagraphWidth extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinWidth.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.MinMaxParagraphWidth.MinWidth" target="_top">.NET documentation</a>
+     */
     public double getMinWidth() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

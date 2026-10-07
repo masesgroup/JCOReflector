@@ -100,7 +100,10 @@ public class UICuesEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UICuesEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class UICuesEventArgs extends system.EventArgs  {
     public UICuesEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param uicues the argument of type {@code UICues}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.UICuesEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public UICuesEventArgs(UICues uicues) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +179,13 @@ public class UICuesEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ChangeFocus.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.UICuesEventArgs.ChangeFocus" target="_top">.NET documentation</a>
+     */
     public boolean getChangeFocus() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +200,13 @@ public class UICuesEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ChangeKeyboard.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.UICuesEventArgs.ChangeKeyboard" target="_top">.NET documentation</a>
+     */
     public boolean getChangeKeyboard() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +221,13 @@ public class UICuesEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShowFocus.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.UICuesEventArgs.ShowFocus" target="_top">.NET documentation</a>
+     */
     public boolean getShowFocus() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +242,13 @@ public class UICuesEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShowKeyboard.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.UICuesEventArgs.ShowKeyboard" target="_top">.NET documentation</a>
+     */
     public boolean getShowKeyboard() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +263,13 @@ public class UICuesEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Changed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.UICuesEventArgs.Changed" target="_top">.NET documentation</a>
+     */
     public UICues getChanged() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

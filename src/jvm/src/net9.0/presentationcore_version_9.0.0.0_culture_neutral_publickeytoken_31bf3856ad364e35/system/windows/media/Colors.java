@@ -99,7 +99,10 @@ public class Colors extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Colors(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class Colors extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AliceBlue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.AliceBlue" target="_top">.NET documentation</a>
+     */
     public static Color getAliceBlue() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -173,6 +183,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AntiqueWhite.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.AntiqueWhite" target="_top">.NET documentation</a>
+     */
     public static Color getAntiqueWhite() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -188,6 +205,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Aqua.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Aqua" target="_top">.NET documentation</a>
+     */
     public static Color getAqua() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -203,6 +227,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Aquamarine.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Aquamarine" target="_top">.NET documentation</a>
+     */
     public static Color getAquamarine() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -218,6 +249,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Azure.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Azure" target="_top">.NET documentation</a>
+     */
     public static Color getAzure() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -233,6 +271,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Beige.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Beige" target="_top">.NET documentation</a>
+     */
     public static Color getBeige() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -248,6 +293,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Bisque.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Bisque" target="_top">.NET documentation</a>
+     */
     public static Color getBisque() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -263,6 +315,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Black.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Black" target="_top">.NET documentation</a>
+     */
     public static Color getBlack() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -278,6 +337,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BlanchedAlmond.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.BlanchedAlmond" target="_top">.NET documentation</a>
+     */
     public static Color getBlanchedAlmond() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -293,6 +359,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Blue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Blue" target="_top">.NET documentation</a>
+     */
     public static Color getBlue() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -308,6 +381,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BlueViolet.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.BlueViolet" target="_top">.NET documentation</a>
+     */
     public static Color getBlueViolet() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -323,6 +403,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Brown.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Brown" target="_top">.NET documentation</a>
+     */
     public static Color getBrown() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -338,6 +425,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BurlyWood.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.BurlyWood" target="_top">.NET documentation</a>
+     */
     public static Color getBurlyWood() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -353,6 +447,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CadetBlue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.CadetBlue" target="_top">.NET documentation</a>
+     */
     public static Color getCadetBlue() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -368,6 +469,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Chartreuse.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Chartreuse" target="_top">.NET documentation</a>
+     */
     public static Color getChartreuse() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -383,6 +491,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Chocolate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Chocolate" target="_top">.NET documentation</a>
+     */
     public static Color getChocolate() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -398,6 +513,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Coral.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Coral" target="_top">.NET documentation</a>
+     */
     public static Color getCoral() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -413,6 +535,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CornflowerBlue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.CornflowerBlue" target="_top">.NET documentation</a>
+     */
     public static Color getCornflowerBlue() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -428,6 +557,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Cornsilk.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Cornsilk" target="_top">.NET documentation</a>
+     */
     public static Color getCornsilk() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -443,6 +579,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Crimson.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Crimson" target="_top">.NET documentation</a>
+     */
     public static Color getCrimson() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -458,6 +601,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Cyan.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Cyan" target="_top">.NET documentation</a>
+     */
     public static Color getCyan() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -473,6 +623,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DarkBlue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.DarkBlue" target="_top">.NET documentation</a>
+     */
     public static Color getDarkBlue() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -488,6 +645,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DarkCyan.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.DarkCyan" target="_top">.NET documentation</a>
+     */
     public static Color getDarkCyan() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -503,6 +667,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DarkGoldenrod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.DarkGoldenrod" target="_top">.NET documentation</a>
+     */
     public static Color getDarkGoldenrod() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -518,6 +689,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DarkGray.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.DarkGray" target="_top">.NET documentation</a>
+     */
     public static Color getDarkGray() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -533,6 +711,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DarkGreen.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.DarkGreen" target="_top">.NET documentation</a>
+     */
     public static Color getDarkGreen() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -548,6 +733,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DarkKhaki.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.DarkKhaki" target="_top">.NET documentation</a>
+     */
     public static Color getDarkKhaki() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -563,6 +755,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DarkMagenta.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.DarkMagenta" target="_top">.NET documentation</a>
+     */
     public static Color getDarkMagenta() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -578,6 +777,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DarkOliveGreen.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.DarkOliveGreen" target="_top">.NET documentation</a>
+     */
     public static Color getDarkOliveGreen() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -593,6 +799,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DarkOrange.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.DarkOrange" target="_top">.NET documentation</a>
+     */
     public static Color getDarkOrange() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -608,6 +821,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DarkOrchid.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.DarkOrchid" target="_top">.NET documentation</a>
+     */
     public static Color getDarkOrchid() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -623,6 +843,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DarkRed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.DarkRed" target="_top">.NET documentation</a>
+     */
     public static Color getDarkRed() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -638,6 +865,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DarkSalmon.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.DarkSalmon" target="_top">.NET documentation</a>
+     */
     public static Color getDarkSalmon() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -653,6 +887,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DarkSeaGreen.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.DarkSeaGreen" target="_top">.NET documentation</a>
+     */
     public static Color getDarkSeaGreen() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -668,6 +909,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DarkSlateBlue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.DarkSlateBlue" target="_top">.NET documentation</a>
+     */
     public static Color getDarkSlateBlue() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -683,6 +931,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DarkSlateGray.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.DarkSlateGray" target="_top">.NET documentation</a>
+     */
     public static Color getDarkSlateGray() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -698,6 +953,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DarkTurquoise.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.DarkTurquoise" target="_top">.NET documentation</a>
+     */
     public static Color getDarkTurquoise() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -713,6 +975,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DarkViolet.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.DarkViolet" target="_top">.NET documentation</a>
+     */
     public static Color getDarkViolet() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -728,6 +997,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DeepPink.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.DeepPink" target="_top">.NET documentation</a>
+     */
     public static Color getDeepPink() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -743,6 +1019,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DeepSkyBlue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.DeepSkyBlue" target="_top">.NET documentation</a>
+     */
     public static Color getDeepSkyBlue() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -758,6 +1041,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DimGray.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.DimGray" target="_top">.NET documentation</a>
+     */
     public static Color getDimGray() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -773,6 +1063,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DodgerBlue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.DodgerBlue" target="_top">.NET documentation</a>
+     */
     public static Color getDodgerBlue() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -788,6 +1085,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Firebrick.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Firebrick" target="_top">.NET documentation</a>
+     */
     public static Color getFirebrick() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -803,6 +1107,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FloralWhite.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.FloralWhite" target="_top">.NET documentation</a>
+     */
     public static Color getFloralWhite() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -818,6 +1129,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ForestGreen.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.ForestGreen" target="_top">.NET documentation</a>
+     */
     public static Color getForestGreen() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -833,6 +1151,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Fuchsia.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Fuchsia" target="_top">.NET documentation</a>
+     */
     public static Color getFuchsia() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -848,6 +1173,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Gainsboro.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Gainsboro" target="_top">.NET documentation</a>
+     */
     public static Color getGainsboro() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -863,6 +1195,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GhostWhite.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.GhostWhite" target="_top">.NET documentation</a>
+     */
     public static Color getGhostWhite() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -878,6 +1217,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Gold.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Gold" target="_top">.NET documentation</a>
+     */
     public static Color getGold() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -893,6 +1239,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Goldenrod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Goldenrod" target="_top">.NET documentation</a>
+     */
     public static Color getGoldenrod() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -908,6 +1261,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Gray.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Gray" target="_top">.NET documentation</a>
+     */
     public static Color getGray() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -923,6 +1283,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Green.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Green" target="_top">.NET documentation</a>
+     */
     public static Color getGreen() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -938,6 +1305,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GreenYellow.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.GreenYellow" target="_top">.NET documentation</a>
+     */
     public static Color getGreenYellow() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -953,6 +1327,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Honeydew.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Honeydew" target="_top">.NET documentation</a>
+     */
     public static Color getHoneydew() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -968,6 +1349,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HotPink.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.HotPink" target="_top">.NET documentation</a>
+     */
     public static Color getHotPink() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -983,6 +1371,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IndianRed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.IndianRed" target="_top">.NET documentation</a>
+     */
     public static Color getIndianRed() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -998,6 +1393,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Indigo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Indigo" target="_top">.NET documentation</a>
+     */
     public static Color getIndigo() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1013,6 +1415,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Ivory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Ivory" target="_top">.NET documentation</a>
+     */
     public static Color getIvory() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1028,6 +1437,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Khaki.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Khaki" target="_top">.NET documentation</a>
+     */
     public static Color getKhaki() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1043,6 +1459,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Lavender.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Lavender" target="_top">.NET documentation</a>
+     */
     public static Color getLavender() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1058,6 +1481,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LavenderBlush.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.LavenderBlush" target="_top">.NET documentation</a>
+     */
     public static Color getLavenderBlush() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1073,6 +1503,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LawnGreen.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.LawnGreen" target="_top">.NET documentation</a>
+     */
     public static Color getLawnGreen() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1088,6 +1525,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LemonChiffon.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.LemonChiffon" target="_top">.NET documentation</a>
+     */
     public static Color getLemonChiffon() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1103,6 +1547,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LightBlue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.LightBlue" target="_top">.NET documentation</a>
+     */
     public static Color getLightBlue() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1118,6 +1569,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LightCoral.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.LightCoral" target="_top">.NET documentation</a>
+     */
     public static Color getLightCoral() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1133,6 +1591,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LightCyan.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.LightCyan" target="_top">.NET documentation</a>
+     */
     public static Color getLightCyan() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1148,6 +1613,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LightGoldenrodYellow.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.LightGoldenrodYellow" target="_top">.NET documentation</a>
+     */
     public static Color getLightGoldenrodYellow() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1163,6 +1635,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LightGray.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.LightGray" target="_top">.NET documentation</a>
+     */
     public static Color getLightGray() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1178,6 +1657,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LightGreen.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.LightGreen" target="_top">.NET documentation</a>
+     */
     public static Color getLightGreen() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1193,6 +1679,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LightPink.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.LightPink" target="_top">.NET documentation</a>
+     */
     public static Color getLightPink() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1208,6 +1701,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LightSalmon.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.LightSalmon" target="_top">.NET documentation</a>
+     */
     public static Color getLightSalmon() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1223,6 +1723,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LightSeaGreen.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.LightSeaGreen" target="_top">.NET documentation</a>
+     */
     public static Color getLightSeaGreen() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1238,6 +1745,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LightSkyBlue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.LightSkyBlue" target="_top">.NET documentation</a>
+     */
     public static Color getLightSkyBlue() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1253,6 +1767,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LightSlateGray.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.LightSlateGray" target="_top">.NET documentation</a>
+     */
     public static Color getLightSlateGray() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1268,6 +1789,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LightSteelBlue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.LightSteelBlue" target="_top">.NET documentation</a>
+     */
     public static Color getLightSteelBlue() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1283,6 +1811,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LightYellow.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.LightYellow" target="_top">.NET documentation</a>
+     */
     public static Color getLightYellow() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1298,6 +1833,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Lime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Lime" target="_top">.NET documentation</a>
+     */
     public static Color getLime() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1313,6 +1855,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LimeGreen.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.LimeGreen" target="_top">.NET documentation</a>
+     */
     public static Color getLimeGreen() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1328,6 +1877,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Linen.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Linen" target="_top">.NET documentation</a>
+     */
     public static Color getLinen() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1343,6 +1899,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Magenta.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Magenta" target="_top">.NET documentation</a>
+     */
     public static Color getMagenta() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1358,6 +1921,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Maroon.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Maroon" target="_top">.NET documentation</a>
+     */
     public static Color getMaroon() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1373,6 +1943,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MediumAquamarine.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.MediumAquamarine" target="_top">.NET documentation</a>
+     */
     public static Color getMediumAquamarine() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1388,6 +1965,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MediumBlue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.MediumBlue" target="_top">.NET documentation</a>
+     */
     public static Color getMediumBlue() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1403,6 +1987,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MediumOrchid.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.MediumOrchid" target="_top">.NET documentation</a>
+     */
     public static Color getMediumOrchid() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1418,6 +2009,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MediumPurple.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.MediumPurple" target="_top">.NET documentation</a>
+     */
     public static Color getMediumPurple() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1433,6 +2031,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MediumSeaGreen.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.MediumSeaGreen" target="_top">.NET documentation</a>
+     */
     public static Color getMediumSeaGreen() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1448,6 +2053,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MediumSlateBlue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.MediumSlateBlue" target="_top">.NET documentation</a>
+     */
     public static Color getMediumSlateBlue() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1463,6 +2075,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MediumSpringGreen.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.MediumSpringGreen" target="_top">.NET documentation</a>
+     */
     public static Color getMediumSpringGreen() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1478,6 +2097,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MediumTurquoise.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.MediumTurquoise" target="_top">.NET documentation</a>
+     */
     public static Color getMediumTurquoise() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1493,6 +2119,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MediumVioletRed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.MediumVioletRed" target="_top">.NET documentation</a>
+     */
     public static Color getMediumVioletRed() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1508,6 +2141,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MidnightBlue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.MidnightBlue" target="_top">.NET documentation</a>
+     */
     public static Color getMidnightBlue() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1523,6 +2163,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MintCream.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.MintCream" target="_top">.NET documentation</a>
+     */
     public static Color getMintCream() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1538,6 +2185,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MistyRose.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.MistyRose" target="_top">.NET documentation</a>
+     */
     public static Color getMistyRose() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1553,6 +2207,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Moccasin.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Moccasin" target="_top">.NET documentation</a>
+     */
     public static Color getMoccasin() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1568,6 +2229,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NavajoWhite.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.NavajoWhite" target="_top">.NET documentation</a>
+     */
     public static Color getNavajoWhite() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1583,6 +2251,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Navy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Navy" target="_top">.NET documentation</a>
+     */
     public static Color getNavy() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1598,6 +2273,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OldLace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.OldLace" target="_top">.NET documentation</a>
+     */
     public static Color getOldLace() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1613,6 +2295,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Olive.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Olive" target="_top">.NET documentation</a>
+     */
     public static Color getOlive() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1628,6 +2317,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OliveDrab.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.OliveDrab" target="_top">.NET documentation</a>
+     */
     public static Color getOliveDrab() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1643,6 +2339,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Orange.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Orange" target="_top">.NET documentation</a>
+     */
     public static Color getOrange() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1658,6 +2361,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OrangeRed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.OrangeRed" target="_top">.NET documentation</a>
+     */
     public static Color getOrangeRed() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1673,6 +2383,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Orchid.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Orchid" target="_top">.NET documentation</a>
+     */
     public static Color getOrchid() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1688,6 +2405,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PaleGoldenrod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.PaleGoldenrod" target="_top">.NET documentation</a>
+     */
     public static Color getPaleGoldenrod() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1703,6 +2427,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PaleGreen.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.PaleGreen" target="_top">.NET documentation</a>
+     */
     public static Color getPaleGreen() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1718,6 +2449,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PaleTurquoise.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.PaleTurquoise" target="_top">.NET documentation</a>
+     */
     public static Color getPaleTurquoise() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1733,6 +2471,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PaleVioletRed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.PaleVioletRed" target="_top">.NET documentation</a>
+     */
     public static Color getPaleVioletRed() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1748,6 +2493,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PapayaWhip.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.PapayaWhip" target="_top">.NET documentation</a>
+     */
     public static Color getPapayaWhip() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1763,6 +2515,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PeachPuff.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.PeachPuff" target="_top">.NET documentation</a>
+     */
     public static Color getPeachPuff() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1778,6 +2537,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Peru.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Peru" target="_top">.NET documentation</a>
+     */
     public static Color getPeru() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1793,6 +2559,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Pink.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Pink" target="_top">.NET documentation</a>
+     */
     public static Color getPink() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1808,6 +2581,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Plum.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Plum" target="_top">.NET documentation</a>
+     */
     public static Color getPlum() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1823,6 +2603,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PowderBlue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.PowderBlue" target="_top">.NET documentation</a>
+     */
     public static Color getPowderBlue() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1838,6 +2625,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Purple.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Purple" target="_top">.NET documentation</a>
+     */
     public static Color getPurple() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1853,6 +2647,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Red.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Red" target="_top">.NET documentation</a>
+     */
     public static Color getRed() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1868,6 +2669,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RosyBrown.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.RosyBrown" target="_top">.NET documentation</a>
+     */
     public static Color getRosyBrown() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1883,6 +2691,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RoyalBlue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.RoyalBlue" target="_top">.NET documentation</a>
+     */
     public static Color getRoyalBlue() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1898,6 +2713,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SaddleBrown.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.SaddleBrown" target="_top">.NET documentation</a>
+     */
     public static Color getSaddleBrown() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1913,6 +2735,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Salmon.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Salmon" target="_top">.NET documentation</a>
+     */
     public static Color getSalmon() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1928,6 +2757,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SandyBrown.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.SandyBrown" target="_top">.NET documentation</a>
+     */
     public static Color getSandyBrown() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1943,6 +2779,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SeaGreen.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.SeaGreen" target="_top">.NET documentation</a>
+     */
     public static Color getSeaGreen() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1958,6 +2801,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SeaShell.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.SeaShell" target="_top">.NET documentation</a>
+     */
     public static Color getSeaShell() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1973,6 +2823,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Sienna.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Sienna" target="_top">.NET documentation</a>
+     */
     public static Color getSienna() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1988,6 +2845,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Silver.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Silver" target="_top">.NET documentation</a>
+     */
     public static Color getSilver() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2003,6 +2867,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SkyBlue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.SkyBlue" target="_top">.NET documentation</a>
+     */
     public static Color getSkyBlue() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2018,6 +2889,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SlateBlue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.SlateBlue" target="_top">.NET documentation</a>
+     */
     public static Color getSlateBlue() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2033,6 +2911,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SlateGray.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.SlateGray" target="_top">.NET documentation</a>
+     */
     public static Color getSlateGray() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2048,6 +2933,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Snow.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Snow" target="_top">.NET documentation</a>
+     */
     public static Color getSnow() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2063,6 +2955,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SpringGreen.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.SpringGreen" target="_top">.NET documentation</a>
+     */
     public static Color getSpringGreen() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2078,6 +2977,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SteelBlue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.SteelBlue" target="_top">.NET documentation</a>
+     */
     public static Color getSteelBlue() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2093,6 +2999,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Tan.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Tan" target="_top">.NET documentation</a>
+     */
     public static Color getTan() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2108,6 +3021,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Teal.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Teal" target="_top">.NET documentation</a>
+     */
     public static Color getTeal() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2123,6 +3043,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Thistle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Thistle" target="_top">.NET documentation</a>
+     */
     public static Color getThistle() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2138,6 +3065,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Tomato.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Tomato" target="_top">.NET documentation</a>
+     */
     public static Color getTomato() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2153,6 +3087,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Transparent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Transparent" target="_top">.NET documentation</a>
+     */
     public static Color getTransparent() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2168,6 +3109,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Turquoise.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Turquoise" target="_top">.NET documentation</a>
+     */
     public static Color getTurquoise() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2183,6 +3131,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Violet.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Violet" target="_top">.NET documentation</a>
+     */
     public static Color getViolet() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2198,6 +3153,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Wheat.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Wheat" target="_top">.NET documentation</a>
+     */
     public static Color getWheat() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2213,6 +3175,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property White.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.White" target="_top">.NET documentation</a>
+     */
     public static Color getWhite() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2228,6 +3197,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WhiteSmoke.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.WhiteSmoke" target="_top">.NET documentation</a>
+     */
     public static Color getWhiteSmoke() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2243,6 +3219,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Yellow.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.Yellow" target="_top">.NET documentation</a>
+     */
     public static Color getYellow() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2258,6 +3241,13 @@ public class Colors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property YellowGreen.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Colors.YellowGreen" target="_top">.NET documentation</a>
+     */
     public static Color getYellowGreen() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

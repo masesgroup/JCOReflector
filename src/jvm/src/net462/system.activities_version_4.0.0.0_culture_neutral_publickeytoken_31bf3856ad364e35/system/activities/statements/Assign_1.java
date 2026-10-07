@@ -101,7 +101,10 @@ public class Assign_1<T extends IJCOBridgeReflected> extends system.activities.C
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Assign_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class Assign_1<T extends IJCOBridgeReflected> extends system.activities.C
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.Assign-1.-ctor" target="_top">.NET documentation</a>
+     */
     public Assign_1() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +177,13 @@ public class Assign_1<T extends IJCOBridgeReflected> extends system.activities.C
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.Assign-1.Value" target="_top">.NET documentation</a>
+     */
     public InArgument_1 getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +199,13 @@ public class Assign_1<T extends IJCOBridgeReflected> extends system.activities.C
         }
     }
 
+    /**
+     * Sets the value of the .NET property Value.
+     *
+     * @param Value the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.Assign-1.Value" target="_top">.NET documentation</a>
+     */
     public void setValue(InArgument_1 Value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +216,13 @@ public class Assign_1<T extends IJCOBridgeReflected> extends system.activities.C
         }
     }
 
+    /**
+     * Gets the value of the .NET property To.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.Assign-1.To" target="_top">.NET documentation</a>
+     */
     public OutArgument_1 getTo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +238,13 @@ public class Assign_1<T extends IJCOBridgeReflected> extends system.activities.C
         }
     }
 
+    /**
+     * Sets the value of the .NET property To.
+     *
+     * @param To the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.Assign-1.To" target="_top">.NET documentation</a>
+     */
     public void setTo(OutArgument_1 To) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

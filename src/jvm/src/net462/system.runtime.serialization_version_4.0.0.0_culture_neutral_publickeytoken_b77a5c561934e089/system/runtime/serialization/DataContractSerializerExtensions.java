@@ -101,7 +101,10 @@ public class DataContractSerializerExtensions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataContractSerializerExtensions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,14 @@ public class DataContractSerializerExtensions extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetSerializationSurrogateProvider.
+     *
+     * @param serializer the argument of type {@code DataContractSerializer}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContractSerializerExtensions.GetSerializationSurrogateProvider" target="_top">.NET documentation</a>
+     */
     public static ISerializationSurrogateProvider GetSerializationSurrogateProvider(DataContractSerializer serializer) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -169,6 +180,14 @@ public class DataContractSerializerExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetSerializationSurrogateProvider.
+     *
+     * @param serializer the argument of type {@code DataContractSerializer}
+     * @param provider the argument of type {@code ISerializationSurrogateProvider}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContractSerializerExtensions.SetSerializationSurrogateProvider" target="_top">.NET documentation</a>
+     */
     public static void SetSerializationSurrogateProvider(DataContractSerializer serializer, ISerializationSurrogateProvider provider) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

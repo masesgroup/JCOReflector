@@ -108,7 +108,10 @@ public class IDesignerSerializationManagerImplementation extends NetObject imple
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDesignerSerializationManagerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,17 @@ public class IDesignerSerializationManagerImplementation extends NetObject imple
 
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateInstance.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param arguments the argument of type {@code ICollection}
+     * @param name the argument of type {@code java.lang.String}
+     * @param addToContainer the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.IDesignerSerializationManager.CreateInstance" target="_top">.NET documentation</a>
+     */
     public NetObject CreateInstance(NetType type, ICollection arguments, java.lang.String name, boolean addToContainer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -165,6 +179,14 @@ public class IDesignerSerializationManagerImplementation extends NetObject imple
         }
     }
 
+    /**
+     * Invokes the .NET member GetInstance.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetInstance" target="_top">.NET documentation</a>
+     */
     public NetObject GetInstance(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +202,15 @@ public class IDesignerSerializationManagerImplementation extends NetObject imple
         }
     }
 
+    /**
+     * Invokes the .NET member GetSerializer.
+     *
+     * @param objectType the argument of type {@code NetType}
+     * @param serializerType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetSerializer" target="_top">.NET documentation</a>
+     */
     public NetObject GetSerializer(NetType objectType, NetType serializerType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +226,14 @@ public class IDesignerSerializationManagerImplementation extends NetObject imple
         }
     }
 
+    /**
+     * Invokes the .NET member GetService.
+     *
+     * @param serviceType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetService" target="_top">.NET documentation</a>
+     */
     public NetObject GetService(NetType serviceType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +249,14 @@ public class IDesignerSerializationManagerImplementation extends NetObject imple
         }
     }
 
+    /**
+     * Invokes the .NET member GetName.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetName" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetName(NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +271,14 @@ public class IDesignerSerializationManagerImplementation extends NetObject imple
         }
     }
 
+    /**
+     * Invokes the .NET member GetType.
+     *
+     * @param typeName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetType" target="_top">.NET documentation</a>
+     */
     public NetType GetType(java.lang.String typeName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +294,13 @@ public class IDesignerSerializationManagerImplementation extends NetObject imple
         }
     }
 
+    /**
+     * Invokes the .NET member AddSerializationProvider.
+     *
+     * @param provider the argument of type {@code IDesignerSerializationProvider}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.IDesignerSerializationManager.AddSerializationProvider" target="_top">.NET documentation</a>
+     */
     public void AddSerializationProvider(IDesignerSerializationProvider provider) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +311,13 @@ public class IDesignerSerializationManagerImplementation extends NetObject imple
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveSerializationProvider.
+     *
+     * @param provider the argument of type {@code IDesignerSerializationProvider}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.IDesignerSerializationManager.RemoveSerializationProvider" target="_top">.NET documentation</a>
+     */
     public void RemoveSerializationProvider(IDesignerSerializationProvider provider) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +328,13 @@ public class IDesignerSerializationManagerImplementation extends NetObject imple
         }
     }
 
+    /**
+     * Invokes the .NET member ReportError.
+     *
+     * @param errorInformation the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.IDesignerSerializationManager.ReportError" target="_top">.NET documentation</a>
+     */
     public void ReportError(NetObject errorInformation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +345,14 @@ public class IDesignerSerializationManagerImplementation extends NetObject imple
         }
     }
 
+    /**
+     * Invokes the .NET member SetName.
+     *
+     * @param instance the argument of type {@code NetObject}
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.IDesignerSerializationManager.SetName" target="_top">.NET documentation</a>
+     */
     public void SetName(NetObject instance, java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +367,13 @@ public class IDesignerSerializationManagerImplementation extends NetObject imple
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Context.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.IDesignerSerializationManager.Context" target="_top">.NET documentation</a>
+     */
     public ContextStack getContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +389,13 @@ public class IDesignerSerializationManagerImplementation extends NetObject imple
         }
     }
 
+    /**
+     * Gets the value of the .NET property Properties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.IDesignerSerializationManager.Properties" target="_top">.NET documentation</a>
+     */
     public PropertyDescriptorCollection getProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +416,13 @@ public class IDesignerSerializationManagerImplementation extends NetObject imple
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addResolveName.
+     *
+     * @param handler the argument of type {@code ResolveNameEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addResolveName(ResolveNameEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -328,6 +433,13 @@ public class IDesignerSerializationManagerImplementation extends NetObject imple
         }
     }
 
+    /**
+     * Invokes the .NET member removeResolveName.
+     *
+     * @param handler the argument of type {@code ResolveNameEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeResolveName(ResolveNameEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -338,6 +450,13 @@ public class IDesignerSerializationManagerImplementation extends NetObject imple
         }
     }
 
+    /**
+     * Invokes the .NET member addSerializationComplete.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addSerializationComplete(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +467,13 @@ public class IDesignerSerializationManagerImplementation extends NetObject imple
         }
     }
 
+    /**
+     * Invokes the .NET member removeSerializationComplete.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeSerializationComplete(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

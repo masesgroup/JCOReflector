@@ -100,7 +100,10 @@ public class MenuItemBindingCollection extends system.web.ui.StateManagedCollect
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MenuItemBindingCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,14 @@ public class MenuItemBindingCollection extends system.web.ui.StateManagedCollect
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param binding the argument of type {@code MenuItemBinding}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.MenuItemBindingCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(MenuItemBinding binding) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +180,14 @@ public class MenuItemBindingCollection extends system.web.ui.StateManagedCollect
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param binding the argument of type {@code MenuItemBinding}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.MenuItemBindingCollection.Add" target="_top">.NET documentation</a>
+     */
     public int Add(MenuItemBinding binding) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +228,14 @@ public class MenuItemBindingCollection extends system.web.ui.StateManagedCollect
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param value the argument of type {@code MenuItemBinding}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.MenuItemBindingCollection.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(MenuItemBinding value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +276,14 @@ public class MenuItemBindingCollection extends system.web.ui.StateManagedCollect
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code MenuItemBinding[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.MenuItemBindingCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(MenuItemBinding[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +294,14 @@ public class MenuItemBindingCollection extends system.web.ui.StateManagedCollect
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param binding the argument of type {@code MenuItemBinding}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.MenuItemBindingCollection.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(int index, MenuItemBinding binding) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +312,13 @@ public class MenuItemBindingCollection extends system.web.ui.StateManagedCollect
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param binding the argument of type {@code MenuItemBinding}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.MenuItemBindingCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(MenuItemBinding binding) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +329,13 @@ public class MenuItemBindingCollection extends system.web.ui.StateManagedCollect
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAt.
+     *
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.MenuItemBindingCollection.RemoveAt" target="_top">.NET documentation</a>
+     */
     public void RemoveAt(int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

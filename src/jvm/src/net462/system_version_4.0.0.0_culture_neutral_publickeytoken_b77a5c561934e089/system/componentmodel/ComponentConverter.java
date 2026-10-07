@@ -103,7 +103,10 @@ public class ComponentConverter extends system.componentmodel.ReferenceConverter
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ComponentConverter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,13 @@ public class ComponentConverter extends system.componentmodel.ReferenceConverter
     public ComponentConverter() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param type the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ComponentConverter.-ctor" target="_top">.NET documentation</a>
+     */
     public ComponentConverter(NetType type) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +178,14 @@ public class ComponentConverter extends system.componentmodel.ReferenceConverter
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetPropertiesSupported.
+     *
+     * @param context the argument of type {@code ITypeDescriptorContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ComponentConverter.GetPropertiesSupported" target="_top">.NET documentation</a>
+     */
     public boolean GetPropertiesSupported(ITypeDescriptorContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +200,25 @@ public class ComponentConverter extends system.componentmodel.ReferenceConverter
         }
     }
 
+    /**
+     * Invokes the .NET member GetProperties.
+     *
+     * @param context the argument of type {@code ITypeDescriptorContext}
+     * @param value the argument of type {@code NetObject}
+     * @param attributes the argument of type {@code Attribute[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ComponentConverter.GetProperties" target="_top">.NET documentation</a>
+     */
     public PropertyDescriptorCollection GetProperties(ITypeDescriptorContext context, NetObject value, Attribute[] attributes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class AssignProjectConfiguration extends microsoft.build.tasks.ResolvePro
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AssignProjectConfiguration(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,15 @@ public class AssignProjectConfiguration extends microsoft.build.tasks.ResolvePro
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AssignProjectConfiguration.-ctor" target="_top">.NET documentation</a>
+     */
     public AssignProjectConfiguration() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +174,26 @@ public class AssignProjectConfiguration extends microsoft.build.tasks.ResolvePro
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Execute.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AssignProjectConfiguration.Execute" target="_top">.NET documentation</a>
+     */
     public boolean Execute() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.io.PathTooLongException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +212,13 @@ public class AssignProjectConfiguration extends microsoft.build.tasks.ResolvePro
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AddSyntheticProjectReferencesForSolutionDependencies.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AssignProjectConfiguration.AddSyntheticProjectReferencesForSolutionDependencies" target="_top">.NET documentation</a>
+     */
     public boolean getAddSyntheticProjectReferencesForSolutionDependencies() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +233,13 @@ public class AssignProjectConfiguration extends microsoft.build.tasks.ResolvePro
         }
     }
 
+    /**
+     * Sets the value of the .NET property AddSyntheticProjectReferencesForSolutionDependencies.
+     *
+     * @param AddSyntheticProjectReferencesForSolutionDependencies the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AssignProjectConfiguration.AddSyntheticProjectReferencesForSolutionDependencies" target="_top">.NET documentation</a>
+     */
     public void setAddSyntheticProjectReferencesForSolutionDependencies(boolean AddSyntheticProjectReferencesForSolutionDependencies) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +250,13 @@ public class AssignProjectConfiguration extends microsoft.build.tasks.ResolvePro
         }
     }
 
+    /**
+     * Gets the value of the .NET property OnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AssignProjectConfiguration.OnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration" target="_top">.NET documentation</a>
+     */
     public boolean getOnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +271,13 @@ public class AssignProjectConfiguration extends microsoft.build.tasks.ResolvePro
         }
     }
 
+    /**
+     * Sets the value of the .NET property OnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration.
+     *
+     * @param OnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AssignProjectConfiguration.OnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration" target="_top">.NET documentation</a>
+     */
     public void setOnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration(boolean OnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +288,13 @@ public class AssignProjectConfiguration extends microsoft.build.tasks.ResolvePro
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResolveConfigurationPlatformUsingMappings.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AssignProjectConfiguration.ResolveConfigurationPlatformUsingMappings" target="_top">.NET documentation</a>
+     */
     public boolean getResolveConfigurationPlatformUsingMappings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +309,13 @@ public class AssignProjectConfiguration extends microsoft.build.tasks.ResolvePro
         }
     }
 
+    /**
+     * Sets the value of the .NET property ResolveConfigurationPlatformUsingMappings.
+     *
+     * @param ResolveConfigurationPlatformUsingMappings the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AssignProjectConfiguration.ResolveConfigurationPlatformUsingMappings" target="_top">.NET documentation</a>
+     */
     public void setResolveConfigurationPlatformUsingMappings(boolean ResolveConfigurationPlatformUsingMappings) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +326,13 @@ public class AssignProjectConfiguration extends microsoft.build.tasks.ResolvePro
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShouldUnsetParentConfigurationAndPlatform.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AssignProjectConfiguration.ShouldUnsetParentConfigurationAndPlatform" target="_top">.NET documentation</a>
+     */
     public boolean getShouldUnsetParentConfigurationAndPlatform() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +347,13 @@ public class AssignProjectConfiguration extends microsoft.build.tasks.ResolvePro
         }
     }
 
+    /**
+     * Sets the value of the .NET property ShouldUnsetParentConfigurationAndPlatform.
+     *
+     * @param ShouldUnsetParentConfigurationAndPlatform the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AssignProjectConfiguration.ShouldUnsetParentConfigurationAndPlatform" target="_top">.NET documentation</a>
+     */
     public void setShouldUnsetParentConfigurationAndPlatform(boolean ShouldUnsetParentConfigurationAndPlatform) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +364,13 @@ public class AssignProjectConfiguration extends microsoft.build.tasks.ResolvePro
         }
     }
 
+    /**
+     * Gets the value of the .NET property AssignedProjects.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AssignProjectConfiguration.AssignedProjects" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getAssignedProjects() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -297,6 +392,13 @@ public class AssignProjectConfiguration extends microsoft.build.tasks.ResolvePro
         }
     }
 
+    /**
+     * Sets the value of the .NET property AssignedProjects.
+     *
+     * @param AssignedProjects the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AssignProjectConfiguration.AssignedProjects" target="_top">.NET documentation</a>
+     */
     public void setAssignedProjects(ITaskItem[] AssignedProjects) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -307,6 +409,13 @@ public class AssignProjectConfiguration extends microsoft.build.tasks.ResolvePro
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnassignedProjects.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AssignProjectConfiguration.UnassignedProjects" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getUnassignedProjects() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -328,6 +437,13 @@ public class AssignProjectConfiguration extends microsoft.build.tasks.ResolvePro
         }
     }
 
+    /**
+     * Sets the value of the .NET property UnassignedProjects.
+     *
+     * @param UnassignedProjects the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AssignProjectConfiguration.UnassignedProjects" target="_top">.NET documentation</a>
+     */
     public void setUnassignedProjects(ITaskItem[] UnassignedProjects) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -338,6 +454,13 @@ public class AssignProjectConfiguration extends microsoft.build.tasks.ResolvePro
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentProject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AssignProjectConfiguration.CurrentProject" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCurrentProject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -352,6 +475,13 @@ public class AssignProjectConfiguration extends microsoft.build.tasks.ResolvePro
         }
     }
 
+    /**
+     * Sets the value of the .NET property CurrentProject.
+     *
+     * @param CurrentProject the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AssignProjectConfiguration.CurrentProject" target="_top">.NET documentation</a>
+     */
     public void setCurrentProject(java.lang.String CurrentProject) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -362,6 +492,13 @@ public class AssignProjectConfiguration extends microsoft.build.tasks.ResolvePro
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentProjectConfiguration.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AssignProjectConfiguration.CurrentProjectConfiguration" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCurrentProjectConfiguration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -376,6 +513,13 @@ public class AssignProjectConfiguration extends microsoft.build.tasks.ResolvePro
         }
     }
 
+    /**
+     * Sets the value of the .NET property CurrentProjectConfiguration.
+     *
+     * @param CurrentProjectConfiguration the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AssignProjectConfiguration.CurrentProjectConfiguration" target="_top">.NET documentation</a>
+     */
     public void setCurrentProjectConfiguration(java.lang.String CurrentProjectConfiguration) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -386,6 +530,13 @@ public class AssignProjectConfiguration extends microsoft.build.tasks.ResolvePro
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentProjectPlatform.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AssignProjectConfiguration.CurrentProjectPlatform" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCurrentProjectPlatform() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -400,6 +551,13 @@ public class AssignProjectConfiguration extends microsoft.build.tasks.ResolvePro
         }
     }
 
+    /**
+     * Sets the value of the .NET property CurrentProjectPlatform.
+     *
+     * @param CurrentProjectPlatform the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AssignProjectConfiguration.CurrentProjectPlatform" target="_top">.NET documentation</a>
+     */
     public void setCurrentProjectPlatform(java.lang.String CurrentProjectPlatform) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -410,6 +568,13 @@ public class AssignProjectConfiguration extends microsoft.build.tasks.ResolvePro
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultToVcxPlatformMapping.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AssignProjectConfiguration.DefaultToVcxPlatformMapping" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDefaultToVcxPlatformMapping() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -424,6 +589,13 @@ public class AssignProjectConfiguration extends microsoft.build.tasks.ResolvePro
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultToVcxPlatformMapping.
+     *
+     * @param DefaultToVcxPlatformMapping the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AssignProjectConfiguration.DefaultToVcxPlatformMapping" target="_top">.NET documentation</a>
+     */
     public void setDefaultToVcxPlatformMapping(java.lang.String DefaultToVcxPlatformMapping) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -434,6 +606,13 @@ public class AssignProjectConfiguration extends microsoft.build.tasks.ResolvePro
         }
     }
 
+    /**
+     * Gets the value of the .NET property OutputType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AssignProjectConfiguration.OutputType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getOutputType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -448,6 +627,13 @@ public class AssignProjectConfiguration extends microsoft.build.tasks.ResolvePro
         }
     }
 
+    /**
+     * Sets the value of the .NET property OutputType.
+     *
+     * @param OutputType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AssignProjectConfiguration.OutputType" target="_top">.NET documentation</a>
+     */
     public void setOutputType(java.lang.String OutputType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -458,6 +644,13 @@ public class AssignProjectConfiguration extends microsoft.build.tasks.ResolvePro
         }
     }
 
+    /**
+     * Gets the value of the .NET property SolutionConfigurationContents.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AssignProjectConfiguration.SolutionConfigurationContents" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSolutionConfigurationContents() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -472,6 +665,13 @@ public class AssignProjectConfiguration extends microsoft.build.tasks.ResolvePro
         }
     }
 
+    /**
+     * Sets the value of the .NET property SolutionConfigurationContents.
+     *
+     * @param SolutionConfigurationContents the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AssignProjectConfiguration.SolutionConfigurationContents" target="_top">.NET documentation</a>
+     */
     public void setSolutionConfigurationContents(java.lang.String SolutionConfigurationContents) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -482,6 +682,21 @@ public class AssignProjectConfiguration extends microsoft.build.tasks.ResolvePro
         }
     }
 
+    /**
+     * Gets the value of the .NET property VcxToDefaultPlatformMapping.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AssignProjectConfiguration.VcxToDefaultPlatformMapping" target="_top">.NET documentation</a>
+     */
     public java.lang.String getVcxToDefaultPlatformMapping() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -496,6 +711,13 @@ public class AssignProjectConfiguration extends microsoft.build.tasks.ResolvePro
         }
     }
 
+    /**
+     * Sets the value of the .NET property VcxToDefaultPlatformMapping.
+     *
+     * @param VcxToDefaultPlatformMapping the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.AssignProjectConfiguration.VcxToDefaultPlatformMapping" target="_top">.NET documentation</a>
+     */
     public void setVcxToDefaultPlatformMapping(java.lang.String VcxToDefaultPlatformMapping) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

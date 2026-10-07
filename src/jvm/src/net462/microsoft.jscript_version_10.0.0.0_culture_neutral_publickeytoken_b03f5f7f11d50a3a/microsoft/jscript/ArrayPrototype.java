@@ -101,7 +101,10 @@ public class ArrayPrototype extends microsoft.jscript.ArrayObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ArrayPrototype(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,30 @@ public class ArrayPrototype extends microsoft.jscript.ArrayObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member push.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @param args the argument of type {@code NetObject...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.ArrayPrototype.push" target="_top">.NET documentation</a>
+     */
     public static long push(NetObject thisob, NetObject... args) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.NullReferenceException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -196,6 +223,28 @@ public class ArrayPrototype extends microsoft.jscript.ArrayObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member concat.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @param engine the argument of type {@code VsaEngine}
+     * @param args the argument of type {@code NetObject...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.ArrayPrototype.concat" target="_top">.NET documentation</a>
+     */
     public static ArrayObject concat(NetObject thisob, VsaEngine engine, NetObject... args) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, microsoft.jscript.JScriptException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException, microsoft.jscript.vsa.JSVsaException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -211,6 +260,34 @@ public class ArrayPrototype extends microsoft.jscript.ArrayObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member slice.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @param engine the argument of type {@code VsaEngine}
+     * @param start the argument of type {@code double}
+     * @param end the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.ArrayPrototype.slice" target="_top">.NET documentation</a>
+     */
     public static ArrayObject slice(NetObject thisob, VsaEngine engine, double start, NetObject end) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.InvalidOperationException, system.ObjectDisposedException, microsoft.jscript.vsa.JSVsaException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.NullReferenceException, system.FormatException, system.reflection.TargetInvocationException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -226,6 +303,34 @@ public class ArrayPrototype extends microsoft.jscript.ArrayObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member splice.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @param engine the argument of type {@code VsaEngine}
+     * @param start the argument of type {@code double}
+     * @param deleteCnt the argument of type {@code double}
+     * @param args the argument of type {@code NetObject...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.ArrayPrototype.splice" target="_top">.NET documentation</a>
+     */
     public static ArrayObject splice(NetObject thisob, VsaEngine engine, double start, double deleteCnt, NetObject... args) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.NullReferenceException, system.FormatException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -241,6 +346,31 @@ public class ArrayPrototype extends microsoft.jscript.ArrayObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member pop.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.ArrayPrototype.pop" target="_top">.NET documentation</a>
+     */
     public static NetObject pop(NetObject thisob) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.NullReferenceException, system.FormatException, system.reflection.TargetInvocationException, system.RankException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -256,6 +386,32 @@ public class ArrayPrototype extends microsoft.jscript.ArrayObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member reverse.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.ArrayPrototype.reverse" target="_top">.NET documentation</a>
+     */
     public static NetObject reverse(NetObject thisob) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.NullReferenceException, system.FormatException, system.reflection.TargetInvocationException, system.InvalidCastException, system.RankException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -271,6 +427,26 @@ public class ArrayPrototype extends microsoft.jscript.ArrayObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member shift.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.ArrayPrototype.shift" target="_top">.NET documentation</a>
+     */
     public static NetObject shift(NetObject thisob) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.globalization.CultureNotFoundException, microsoft.jscript.JScriptException, system.RankException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -286,6 +462,31 @@ public class ArrayPrototype extends microsoft.jscript.ArrayObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member sort.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @param function the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.ArrayPrototype.sort" target="_top">.NET documentation</a>
+     */
     public static NetObject sort(NetObject thisob, NetObject function) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.NullReferenceException, system.FormatException, system.RankException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -301,6 +502,28 @@ public class ArrayPrototype extends microsoft.jscript.ArrayObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member unshift.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @param args the argument of type {@code NetObject...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.ArrayPrototype.unshift" target="_top">.NET documentation</a>
+     */
     public static NetObject unshift(NetObject thisob, NetObject... args) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, microsoft.jscript.JScriptException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.NotSupportedException, system.RankException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -316,6 +539,30 @@ public class ArrayPrototype extends microsoft.jscript.ArrayObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member join.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @param separator the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.ArrayPrototype.join" target="_top">.NET documentation</a>
+     */
     public static java.lang.String join(NetObject thisob, NetObject separator) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.InvalidCastException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -330,6 +577,32 @@ public class ArrayPrototype extends microsoft.jscript.ArrayObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member toLocaleString.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.ArrayPrototype.toLocaleString" target="_top">.NET documentation</a>
+     */
     public static java.lang.String toLocaleString(NetObject thisob) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotImplementedException, microsoft.jscript.vsa.JSVsaException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.FormatException, system.InvalidCastException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -344,6 +617,29 @@ public class ArrayPrototype extends microsoft.jscript.ArrayObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member toString.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.ArrayPrototype.toString" target="_top">.NET documentation</a>
+     */
     public static java.lang.String toString(NetObject thisob) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.InvalidCastException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -362,6 +658,13 @@ public class ArrayPrototype extends microsoft.jscript.ArrayObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property constructor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.ArrayPrototype.getconstructor" target="_top">.NET documentation</a>
+     */
     public static ArrayConstructor getconstructor() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

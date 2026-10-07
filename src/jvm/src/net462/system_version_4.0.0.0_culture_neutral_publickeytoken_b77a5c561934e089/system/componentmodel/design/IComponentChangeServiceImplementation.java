@@ -103,7 +103,10 @@ public class IComponentChangeServiceImplementation extends NetObject implements 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IComponentChangeServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,16 @@ public class IComponentChangeServiceImplementation extends NetObject implements 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member OnComponentChanged.
+     *
+     * @param component the argument of type {@code NetObject}
+     * @param member the argument of type {@code MemberDescriptor}
+     * @param oldValue the argument of type {@code NetObject}
+     * @param newValue the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IComponentChangeService.OnComponentChanged" target="_top">.NET documentation</a>
+     */
     public void OnComponentChanged(NetObject component, MemberDescriptor member, NetObject oldValue, NetObject newValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -155,6 +168,14 @@ public class IComponentChangeServiceImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member OnComponentChanging.
+     *
+     * @param component the argument of type {@code NetObject}
+     * @param member the argument of type {@code MemberDescriptor}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IComponentChangeService.OnComponentChanging" target="_top">.NET documentation</a>
+     */
     public void OnComponentChanging(NetObject component, MemberDescriptor member) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +195,13 @@ public class IComponentChangeServiceImplementation extends NetObject implements 
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addComponentChanged.
+     *
+     * @param handler the argument of type {@code ComponentChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addComponentChanged(ComponentChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +212,13 @@ public class IComponentChangeServiceImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member removeComponentChanged.
+     *
+     * @param handler the argument of type {@code ComponentChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeComponentChanged(ComponentChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +229,13 @@ public class IComponentChangeServiceImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member addComponentChanging.
+     *
+     * @param handler the argument of type {@code ComponentChangingEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addComponentChanging(ComponentChangingEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +246,13 @@ public class IComponentChangeServiceImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member removeComponentChanging.
+     *
+     * @param handler the argument of type {@code ComponentChangingEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeComponentChanging(ComponentChangingEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +263,13 @@ public class IComponentChangeServiceImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member addComponentAdded.
+     *
+     * @param handler the argument of type {@code ComponentEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addComponentAdded(ComponentEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +280,13 @@ public class IComponentChangeServiceImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member removeComponentAdded.
+     *
+     * @param handler the argument of type {@code ComponentEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeComponentAdded(ComponentEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +297,13 @@ public class IComponentChangeServiceImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member addComponentAdding.
+     *
+     * @param handler the argument of type {@code ComponentEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addComponentAdding(ComponentEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +314,13 @@ public class IComponentChangeServiceImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member removeComponentAdding.
+     *
+     * @param handler the argument of type {@code ComponentEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeComponentAdding(ComponentEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +331,13 @@ public class IComponentChangeServiceImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member addComponentRemoved.
+     *
+     * @param handler the argument of type {@code ComponentEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addComponentRemoved(ComponentEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +348,13 @@ public class IComponentChangeServiceImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member removeComponentRemoved.
+     *
+     * @param handler the argument of type {@code ComponentEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeComponentRemoved(ComponentEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +365,13 @@ public class IComponentChangeServiceImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member addComponentRemoving.
+     *
+     * @param handler the argument of type {@code ComponentEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addComponentRemoving(ComponentEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -284,6 +382,13 @@ public class IComponentChangeServiceImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member removeComponentRemoving.
+     *
+     * @param handler the argument of type {@code ComponentEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeComponentRemoving(ComponentEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +399,13 @@ public class IComponentChangeServiceImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member addComponentRename.
+     *
+     * @param handler the argument of type {@code ComponentRenameEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addComponentRename(ComponentRenameEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +416,13 @@ public class IComponentChangeServiceImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member removeComponentRename.
+     *
+     * @param handler the argument of type {@code ComponentRenameEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeComponentRename(ComponentRenameEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -104,7 +104,10 @@ public class ToolStripGripRenderEventArgs extends system.windows.forms.ToolStrip
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ToolStripGripRenderEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,14 @@ public class ToolStripGripRenderEventArgs extends system.windows.forms.ToolStrip
     public ToolStripGripRenderEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param toolStrip the argument of type {@code ToolStrip}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripGripRenderEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ToolStripGripRenderEventArgs(Graphics g, ToolStrip toolStrip) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -173,6 +184,22 @@ public class ToolStripGripRenderEventArgs extends system.windows.forms.ToolStrip
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property GripBounds.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripGripRenderEventArgs.GripBounds" target="_top">.NET documentation</a>
+     */
     public Rectangle getGripBounds() throws Throwable, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +215,13 @@ public class ToolStripGripRenderEventArgs extends system.windows.forms.ToolStrip
         }
     }
 
+    /**
+     * Gets the value of the .NET property GripDisplayStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripGripRenderEventArgs.GripDisplayStyle" target="_top">.NET documentation</a>
+     */
     public ToolStripGripDisplayStyle getGripDisplayStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +237,13 @@ public class ToolStripGripRenderEventArgs extends system.windows.forms.ToolStrip
         }
     }
 
+    /**
+     * Gets the value of the .NET property GripStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripGripRenderEventArgs.GripStyle" target="_top">.NET documentation</a>
+     */
     public ToolStripGripStyle getGripStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

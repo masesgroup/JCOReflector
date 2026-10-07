@@ -100,7 +100,10 @@ public class SynchronizationContext extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SynchronizationContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class SynchronizationContext extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.SynchronizationContext.-ctor" target="_top">.NET documentation</a>
+     */
     public SynchronizationContext() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,13 @@ public class SynchronizationContext extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsWaitNotificationRequired.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.SynchronizationContext.IsWaitNotificationRequired" target="_top">.NET documentation</a>
+     */
     public boolean IsWaitNotificationRequired() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +191,13 @@ public class SynchronizationContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateCopy.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.SynchronizationContext.CreateCopy" target="_top">.NET documentation</a>
+     */
     public SynchronizationContext CreateCopy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +213,12 @@ public class SynchronizationContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OperationCompleted.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.SynchronizationContext.OperationCompleted" target="_top">.NET documentation</a>
+     */
     public void OperationCompleted() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +229,12 @@ public class SynchronizationContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OperationStarted.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.SynchronizationContext.OperationStarted" target="_top">.NET documentation</a>
+     */
     public void OperationStarted() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +245,22 @@ public class SynchronizationContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Post.
+     *
+     * @param d the argument of type {@code SendOrPostCallback}
+     * @param state the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.SynchronizationContext.Post" target="_top">.NET documentation</a>
+     */
     public void Post(SendOrPostCallback d, NetObject state) throws Throwable, system.security.SecurityException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NullReferenceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +271,14 @@ public class SynchronizationContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Send.
+     *
+     * @param d the argument of type {@code SendOrPostCallback}
+     * @param state the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.SynchronizationContext.Send" target="_top">.NET documentation</a>
+     */
     public void Send(SendOrPostCallback d, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +289,19 @@ public class SynchronizationContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetSynchronizationContext.
+     *
+     * @param syncContext the argument of type {@code SynchronizationContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.SynchronizationContext.SetSynchronizationContext" target="_top">.NET documentation</a>
+     */
     public static void SetSynchronizationContext(SynchronizationContext syncContext) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -244,6 +316,21 @@ public class SynchronizationContext extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Current.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.SynchronizationContext.Current" target="_top">.NET documentation</a>
+     */
     public static SynchronizationContext getCurrent() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

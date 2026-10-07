@@ -101,7 +101,10 @@ public class EnvironmentLocationReference_1<T extends IJCOBridgeReflected> exten
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EnvironmentLocationReference_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class EnvironmentLocationReference_1<T extends IJCOBridgeReflected> exten
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property LocationReference.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.EnvironmentLocationReference-1.LocationReference" target="_top">.NET documentation</a>
+     */
     public LocationReference getLocationReference() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

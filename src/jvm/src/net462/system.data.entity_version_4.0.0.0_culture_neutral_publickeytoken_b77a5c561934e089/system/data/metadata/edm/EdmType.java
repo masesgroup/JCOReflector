@@ -101,7 +101,10 @@ public class EdmType extends system.data.metadata.edm.GlobalItem  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EdmType(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,18 @@ public class EdmType extends system.data.metadata.edm.GlobalItem  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetCollectionType.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EdmType.GetCollectionType" target="_top">.NET documentation</a>
+     */
     public CollectionType GetCollectionType() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +188,13 @@ public class EdmType extends system.data.metadata.edm.GlobalItem  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Abstract.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EdmType.Abstract" target="_top">.NET documentation</a>
+     */
     public boolean getAbstract() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +209,19 @@ public class EdmType extends system.data.metadata.edm.GlobalItem  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Abstract.
+     *
+     * @param Abstract the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EdmType.Abstract" target="_top">.NET documentation</a>
+     */
     public void setAbstract(boolean Abstract) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +232,13 @@ public class EdmType extends system.data.metadata.edm.GlobalItem  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BaseType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EdmType.BaseType" target="_top">.NET documentation</a>
+     */
     public EdmType getBaseType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +254,19 @@ public class EdmType extends system.data.metadata.edm.GlobalItem  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BaseType.
+     *
+     * @param BaseType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EdmType.BaseType" target="_top">.NET documentation</a>
+     */
     public void setBaseType(EdmType BaseType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +277,13 @@ public class EdmType extends system.data.metadata.edm.GlobalItem  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FullName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EdmType.FullName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFullName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +298,13 @@ public class EdmType extends system.data.metadata.edm.GlobalItem  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EdmType.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +319,13 @@ public class EdmType extends system.data.metadata.edm.GlobalItem  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EdmType.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +336,13 @@ public class EdmType extends system.data.metadata.edm.GlobalItem  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NamespaceName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EdmType.NamespaceName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNamespaceName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +357,13 @@ public class EdmType extends system.data.metadata.edm.GlobalItem  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NamespaceName.
+     *
+     * @param NamespaceName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EdmType.NamespaceName" target="_top">.NET documentation</a>
+     */
     public void setNamespaceName(java.lang.String NamespaceName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

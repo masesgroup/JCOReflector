@@ -100,7 +100,10 @@ public class IHierarchicalDataSourceDesignerImplementation extends NetObject imp
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IHierarchicalDataSourceDesignerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,14 @@ public class IHierarchicalDataSourceDesignerImplementation extends NetObject imp
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetView.
+     *
+     * @param viewPath the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IHierarchicalDataSourceDesigner.GetView" target="_top">.NET documentation</a>
+     */
     public DesignerHierarchicalDataSourceView GetView(java.lang.String viewPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -157,6 +168,12 @@ public class IHierarchicalDataSourceDesignerImplementation extends NetObject imp
         }
     }
 
+    /**
+     * Invokes the .NET member Configure.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IHierarchicalDataSourceDesigner.Configure" target="_top">.NET documentation</a>
+     */
     public void Configure() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -167,6 +184,13 @@ public class IHierarchicalDataSourceDesignerImplementation extends NetObject imp
         }
     }
 
+    /**
+     * Invokes the .NET member RefreshSchema.
+     *
+     * @param preferSilent the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IHierarchicalDataSourceDesigner.RefreshSchema" target="_top">.NET documentation</a>
+     */
     public void RefreshSchema(boolean preferSilent) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +201,12 @@ public class IHierarchicalDataSourceDesignerImplementation extends NetObject imp
         }
     }
 
+    /**
+     * Invokes the .NET member ResumeDataSourceEvents.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IHierarchicalDataSourceDesigner.ResumeDataSourceEvents" target="_top">.NET documentation</a>
+     */
     public void ResumeDataSourceEvents() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +217,12 @@ public class IHierarchicalDataSourceDesignerImplementation extends NetObject imp
         }
     }
 
+    /**
+     * Invokes the .NET member SuppressDataSourceEvents.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IHierarchicalDataSourceDesigner.SuppressDataSourceEvents" target="_top">.NET documentation</a>
+     */
     public void SuppressDataSourceEvents() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +237,13 @@ public class IHierarchicalDataSourceDesignerImplementation extends NetObject imp
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CanConfigure.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IHierarchicalDataSourceDesigner.CanConfigure" target="_top">.NET documentation</a>
+     */
     public boolean getCanConfigure() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +258,13 @@ public class IHierarchicalDataSourceDesignerImplementation extends NetObject imp
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanRefreshSchema.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IHierarchicalDataSourceDesigner.CanRefreshSchema" target="_top">.NET documentation</a>
+     */
     public boolean getCanRefreshSchema() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +284,13 @@ public class IHierarchicalDataSourceDesignerImplementation extends NetObject imp
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addDataSourceChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addDataSourceChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +301,13 @@ public class IHierarchicalDataSourceDesignerImplementation extends NetObject imp
         }
     }
 
+    /**
+     * Invokes the .NET member removeDataSourceChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeDataSourceChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +318,13 @@ public class IHierarchicalDataSourceDesignerImplementation extends NetObject imp
         }
     }
 
+    /**
+     * Invokes the .NET member addSchemaRefreshed.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addSchemaRefreshed(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +335,13 @@ public class IHierarchicalDataSourceDesignerImplementation extends NetObject imp
         }
     }
 
+    /**
+     * Invokes the .NET member removeSchemaRefreshed.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeSchemaRefreshed(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

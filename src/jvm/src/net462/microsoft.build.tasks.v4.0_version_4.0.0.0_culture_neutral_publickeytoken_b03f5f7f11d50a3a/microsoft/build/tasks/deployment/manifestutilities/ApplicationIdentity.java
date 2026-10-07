@@ -99,7 +99,10 @@ public class ApplicationIdentity extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ApplicationIdentity(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,16 @@ public class ApplicationIdentity extends NetObject  {
     public ApplicationIdentity() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param url the argument of type {@code java.lang.String}
+     * @param deployManifestIdentity the argument of type {@code AssemblyIdentity}
+     * @param applicationManifestIdentity the argument of type {@code AssemblyIdentity}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationIdentity.-ctor" target="_top">.NET documentation</a>
+     */
     public ApplicationIdentity(java.lang.String url, AssemblyIdentity deployManifestIdentity, AssemblyIdentity applicationManifestIdentity) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +172,35 @@ public class ApplicationIdentity extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param url the argument of type {@code java.lang.String}
+     * @param deployManifestPath the argument of type {@code java.lang.String}
+     * @param applicationManifestPath the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
+     * @throws system.xml.xpath.XPathException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationIdentity.-ctor" target="_top">.NET documentation</a>
+     */
     public ApplicationIdentity(java.lang.String url, java.lang.String deployManifestPath, java.lang.String applicationManifestPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.security.SecurityException, system.resources.MissingManifestResourceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.xpath.XPathException {
         try {
             // add reference to assemblyName.dll file

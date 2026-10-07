@@ -104,7 +104,10 @@ public class IFolderProjectItemImplementation extends NetObject implements IFold
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IFolderProjectItemImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,15 @@ public class IFolderProjectItemImplementation extends NetObject implements IFold
 
     // Methods section
     
+    /**
+     * Invokes the .NET member AddDocument.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param content the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IFolderProjectItem.AddDocument" target="_top">.NET documentation</a>
+     */
     public IDocumentProjectItem AddDocument(java.lang.String name, byte[] content) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -161,6 +173,15 @@ public class IFolderProjectItemImplementation extends NetObject implements IFold
         }
     }
 
+    /**
+     * Invokes the .NET member AddDocument.
+     *
+     * @param dupParam0 the argument of type {@code java.lang.String}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IFolderProjectItem.AddDocument" target="_top">.NET documentation</a>
+     */
     public IDocumentProjectItem AddDocument(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +197,14 @@ public class IFolderProjectItemImplementation extends NetObject implements IFold
         }
     }
 
+    /**
+     * Invokes the .NET member AddFolder.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IFolderProjectItem.AddFolder" target="_top">.NET documentation</a>
+     */
     public IFolderProjectItem AddFolder(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +224,13 @@ public class IFolderProjectItemImplementation extends NetObject implements IFold
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Children.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IFolderProjectItem.Children" target="_top">.NET documentation</a>
+     */
     public ICollection getChildren() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

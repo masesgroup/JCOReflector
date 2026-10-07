@@ -104,7 +104,10 @@ public class TypeBrowserDialog extends system.windows.forms.Form  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TypeBrowserDialog(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,41 @@ public class TypeBrowserDialog extends system.windows.forms.Form  {
     public TypeBrowserDialog() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param serviceProvider the argument of type {@code IServiceProvider}
+     * @param filterProvider the argument of type {@code ITypeFilterProvider}
+     * @param selectedTypeName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.reflection.TargetParameterCountException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.TypeBrowserDialog.-ctor" target="_top">.NET documentation</a>
+     */
     public TypeBrowserDialog(IServiceProvider serviceProvider, ITypeFilterProvider filterProvider, java.lang.String selectedTypeName) throws Throwable, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.NotSupportedException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NullReferenceException, system.RankException, system.componentmodel.InvalidEnumArgumentException, system.TypeLoadException, system.InvalidCastException, system.OutOfMemoryException, system.FormatException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.io.FileNotFoundException, system.reflection.TargetParameterCountException, system.UnauthorizedAccessException, system.AccessViolationException {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +202,44 @@ public class TypeBrowserDialog extends system.windows.forms.Form  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param serviceProvider the argument of type {@code IServiceProvider}
+     * @param filterProvider the argument of type {@code ITypeFilterProvider}
+     * @param selectedTypeName the argument of type {@code java.lang.String}
+     * @param typeProvider the argument of type {@code TypeProvider}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.reflection.TargetParameterCountException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.TypeBrowserDialog.-ctor" target="_top">.NET documentation</a>
+     */
     public TypeBrowserDialog(IServiceProvider serviceProvider, ITypeFilterProvider filterProvider, java.lang.String selectedTypeName, TypeProvider typeProvider) throws Throwable, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.NotSupportedException, system.security.SecurityException, system.NotImplementedException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.threading.AbandonedMutexException, system.reflection.TargetParameterCountException, system.RankException, system.globalization.CultureNotFoundException, system.FormatException, system.OverflowException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.InvalidEnumArgumentException, system.TypeLoadException, system.InvalidCastException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.AccessViolationException {
         try {
             // add reference to assemblyName.dll file
@@ -182,8 +258,13 @@ public class TypeBrowserDialog extends system.windows.forms.Form  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIServiceProvider method available in IServiceProvider to obtain an object with an invocable method
+     *
+     * @param serviceType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IServiceProvider.GetService" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public NetObject GetService(NetType serviceType) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceProvider to obtain the full interface.");
     }
@@ -192,6 +273,13 @@ public class TypeBrowserDialog extends system.windows.forms.Form  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SelectedType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.TypeBrowserDialog.SelectedType" target="_top">.NET documentation</a>
+     */
     public NetType getSelectedType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

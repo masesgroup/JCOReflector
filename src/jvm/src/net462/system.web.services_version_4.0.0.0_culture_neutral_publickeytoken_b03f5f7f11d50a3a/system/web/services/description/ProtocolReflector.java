@@ -112,7 +112,10 @@ public class ProtocolReflector extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ProtocolReflector(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -165,6 +168,18 @@ public class ProtocolReflector extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetServiceDescription.
+     *
+     * @param ns the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ProtocolReflector.GetServiceDescription" target="_top">.NET documentation</a>
+     */
     public ServiceDescription GetServiceDescription(java.lang.String ns) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +199,13 @@ public class ProtocolReflector extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DefaultNamespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ProtocolReflector.DefaultNamespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDefaultNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +220,13 @@ public class ProtocolReflector extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProtocolName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ProtocolReflector.ProtocolName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getProtocolName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +241,13 @@ public class ProtocolReflector extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ServiceUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ProtocolReflector.ServiceUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getServiceUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +262,13 @@ public class ProtocolReflector extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ServiceType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ProtocolReflector.ServiceType" target="_top">.NET documentation</a>
+     */
     public NetType getServiceType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +284,13 @@ public class ProtocolReflector extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Binding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ProtocolReflector.Binding" target="_top">.NET documentation</a>
+     */
     public system.web.services.description.Binding getBinding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +306,22 @@ public class ProtocolReflector extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InputMessage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ProtocolReflector.InputMessage" target="_top">.NET documentation</a>
+     */
     public Message getInputMessage() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +337,22 @@ public class ProtocolReflector extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OutputMessage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ProtocolReflector.OutputMessage" target="_top">.NET documentation</a>
+     */
     public Message getOutputMessage() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +368,13 @@ public class ProtocolReflector extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HeaderMessages.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ProtocolReflector.HeaderMessages" target="_top">.NET documentation</a>
+     */
     public MessageCollection getHeaderMessages() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +390,13 @@ public class ProtocolReflector extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Operation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ProtocolReflector.Operation" target="_top">.NET documentation</a>
+     */
     public Operation getOperation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -316,6 +412,13 @@ public class ProtocolReflector extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OperationBinding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ProtocolReflector.OperationBinding" target="_top">.NET documentation</a>
+     */
     public OperationBinding getOperationBinding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -331,6 +434,13 @@ public class ProtocolReflector extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Port.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ProtocolReflector.Port" target="_top">.NET documentation</a>
+     */
     public Port getPort() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -346,6 +456,13 @@ public class ProtocolReflector extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PortType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ProtocolReflector.PortType" target="_top">.NET documentation</a>
+     */
     public PortType getPortType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -361,6 +478,13 @@ public class ProtocolReflector extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Service.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ProtocolReflector.Service" target="_top">.NET documentation</a>
+     */
     public Service getService() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -376,6 +500,13 @@ public class ProtocolReflector extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ServiceDescription.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ProtocolReflector.ServiceDescription" target="_top">.NET documentation</a>
+     */
     public ServiceDescription getServiceDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -391,6 +522,13 @@ public class ProtocolReflector extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ServiceDescriptions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ProtocolReflector.ServiceDescriptions" target="_top">.NET documentation</a>
+     */
     public ServiceDescriptionCollection getServiceDescriptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -406,6 +544,13 @@ public class ProtocolReflector extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Method.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ProtocolReflector.Method" target="_top">.NET documentation</a>
+     */
     public LogicalMethodInfo getMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -421,6 +566,13 @@ public class ProtocolReflector extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Methods.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ProtocolReflector.Methods" target="_top">.NET documentation</a>
+     */
     public final LogicalMethodInfo[] getMethods() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -442,6 +594,13 @@ public class ProtocolReflector extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MethodAttribute.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ProtocolReflector.MethodAttribute" target="_top">.NET documentation</a>
+     */
     public WebMethodAttribute getMethodAttribute() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -457,6 +616,13 @@ public class ProtocolReflector extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReflectionImporter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ProtocolReflector.ReflectionImporter" target="_top">.NET documentation</a>
+     */
     public XmlReflectionImporter getReflectionImporter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -472,6 +638,13 @@ public class ProtocolReflector extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SchemaExporter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ProtocolReflector.SchemaExporter" target="_top">.NET documentation</a>
+     */
     public XmlSchemaExporter getSchemaExporter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -487,6 +660,13 @@ public class ProtocolReflector extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Schemas.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ProtocolReflector.Schemas" target="_top">.NET documentation</a>
+     */
     public XmlSchemas getSchemas() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

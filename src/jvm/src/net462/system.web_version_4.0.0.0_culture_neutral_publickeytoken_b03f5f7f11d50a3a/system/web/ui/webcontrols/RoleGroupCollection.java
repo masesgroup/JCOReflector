@@ -102,7 +102,10 @@ public class RoleGroupCollection extends system.collections.CollectionBase  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RoleGroupCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class RoleGroupCollection extends system.collections.CollectionBase  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.RoleGroupCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public RoleGroupCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,14 @@ public class RoleGroupCollection extends system.collections.CollectionBase  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param group the argument of type {@code RoleGroup}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.RoleGroupCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(RoleGroup group) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +194,14 @@ public class RoleGroupCollection extends system.collections.CollectionBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param group the argument of type {@code RoleGroup}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.RoleGroupCollection.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(RoleGroup group) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +242,15 @@ public class RoleGroupCollection extends system.collections.CollectionBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMatchingRoleGroup.
+     *
+     * @param user the argument of type {@code IPrincipal}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.RoleGroupCollection.GetMatchingRoleGroup" target="_top">.NET documentation</a>
+     */
     public RoleGroup GetMatchingRoleGroup(IPrincipal user) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +266,13 @@ public class RoleGroupCollection extends system.collections.CollectionBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param group the argument of type {@code RoleGroup}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.RoleGroupCollection.Add" target="_top">.NET documentation</a>
+     */
     public void Add(RoleGroup group) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +283,14 @@ public class RoleGroupCollection extends system.collections.CollectionBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code RoleGroup[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.RoleGroupCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(RoleGroup[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +301,14 @@ public class RoleGroupCollection extends system.collections.CollectionBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param group the argument of type {@code RoleGroup}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.RoleGroupCollection.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(int index, RoleGroup group) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +319,13 @@ public class RoleGroupCollection extends system.collections.CollectionBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param group the argument of type {@code RoleGroup}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.RoleGroupCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(RoleGroup group) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

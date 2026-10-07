@@ -99,7 +99,10 @@ public class ICurrencyManagerProviderImplementation extends NetObject implements
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ICurrencyManagerProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,14 @@ public class ICurrencyManagerProviderImplementation extends NetObject implements
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetRelatedCurrencyManager.
+     *
+     * @param dataMember the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ICurrencyManagerProvider.GetRelatedCurrencyManager" target="_top">.NET documentation</a>
+     */
     public CurrencyManager GetRelatedCurrencyManager(java.lang.String dataMember) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -160,6 +171,13 @@ public class ICurrencyManagerProviderImplementation extends NetObject implements
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CurrencyManager.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ICurrencyManagerProvider.CurrencyManager" target="_top">.NET documentation</a>
+     */
     public CurrencyManager getCurrencyManager() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

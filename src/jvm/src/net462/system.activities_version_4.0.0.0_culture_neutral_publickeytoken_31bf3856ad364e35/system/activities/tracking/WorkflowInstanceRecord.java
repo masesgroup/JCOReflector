@@ -101,7 +101,10 @@ public class WorkflowInstanceRecord extends system.activities.tracking.TrackingR
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WorkflowInstanceRecord(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,23 @@ public class WorkflowInstanceRecord extends system.activities.tracking.TrackingR
     public WorkflowInstanceRecord() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param recordNumber the argument of type {@code long}
+     * @param activityDefinitionId the argument of type {@code java.lang.String}
+     * @param state the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.WorkflowInstanceRecord.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowInstanceRecord(Guid instanceId, long recordNumber, java.lang.String activityDefinitionId, java.lang.String state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +181,27 @@ public class WorkflowInstanceRecord extends system.activities.tracking.TrackingR
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param recordNumber the argument of type {@code long}
+     * @param activityDefinitionId the argument of type {@code java.lang.String}
+     * @param state the argument of type {@code java.lang.String}
+     * @param workflowDefinitionIdentity the argument of type {@code WorkflowIdentity}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.WorkflowInstanceRecord.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowInstanceRecord(Guid instanceId, long recordNumber, java.lang.String activityDefinitionId, java.lang.String state, WorkflowIdentity workflowDefinitionIdentity) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +212,23 @@ public class WorkflowInstanceRecord extends system.activities.tracking.TrackingR
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param activityDefinitionId the argument of type {@code java.lang.String}
+     * @param state the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.WorkflowInstanceRecord.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowInstanceRecord(Guid instanceId, java.lang.String activityDefinitionId, java.lang.String state) throws Throwable, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +239,25 @@ public class WorkflowInstanceRecord extends system.activities.tracking.TrackingR
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param activityDefinitionId the argument of type {@code java.lang.String}
+     * @param state the argument of type {@code java.lang.String}
+     * @param workflowDefinitionIdentity the argument of type {@code WorkflowIdentity}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.WorkflowInstanceRecord.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowInstanceRecord(Guid instanceId, java.lang.String activityDefinitionId, java.lang.String state, WorkflowIdentity workflowDefinitionIdentity) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -200,6 +277,13 @@ public class WorkflowInstanceRecord extends system.activities.tracking.TrackingR
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property WorkflowDefinitionIdentity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.WorkflowInstanceRecord.WorkflowDefinitionIdentity" target="_top">.NET documentation</a>
+     */
     public WorkflowIdentity getWorkflowDefinitionIdentity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +299,13 @@ public class WorkflowInstanceRecord extends system.activities.tracking.TrackingR
         }
     }
 
+    /**
+     * Sets the value of the .NET property WorkflowDefinitionIdentity.
+     *
+     * @param WorkflowDefinitionIdentity the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.WorkflowInstanceRecord.WorkflowDefinitionIdentity" target="_top">.NET documentation</a>
+     */
     public void setWorkflowDefinitionIdentity(WorkflowIdentity WorkflowDefinitionIdentity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +316,13 @@ public class WorkflowInstanceRecord extends system.activities.tracking.TrackingR
         }
     }
 
+    /**
+     * Gets the value of the .NET property ActivityDefinitionId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.WorkflowInstanceRecord.ActivityDefinitionId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getActivityDefinitionId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +337,13 @@ public class WorkflowInstanceRecord extends system.activities.tracking.TrackingR
         }
     }
 
+    /**
+     * Sets the value of the .NET property ActivityDefinitionId.
+     *
+     * @param ActivityDefinitionId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.WorkflowInstanceRecord.ActivityDefinitionId" target="_top">.NET documentation</a>
+     */
     public void setActivityDefinitionId(java.lang.String ActivityDefinitionId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +354,13 @@ public class WorkflowInstanceRecord extends system.activities.tracking.TrackingR
         }
     }
 
+    /**
+     * Gets the value of the .NET property State.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.WorkflowInstanceRecord.State" target="_top">.NET documentation</a>
+     */
     public java.lang.String getState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +375,13 @@ public class WorkflowInstanceRecord extends system.activities.tracking.TrackingR
         }
     }
 
+    /**
+     * Sets the value of the .NET property State.
+     *
+     * @param State the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.WorkflowInstanceRecord.State" target="_top">.NET documentation</a>
+     */
     public void setState(java.lang.String State) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class WebSocketCreationOptions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WebSocketCreationOptions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class WebSocketCreationOptions extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketCreationOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public WebSocketCreationOptions() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class WebSocketCreationOptions extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsServer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketCreationOptions.IsServer" target="_top">.NET documentation</a>
+     */
     public boolean getIsServer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +195,13 @@ public class WebSocketCreationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsServer.
+     *
+     * @param IsServer the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketCreationOptions.IsServer" target="_top">.NET documentation</a>
+     */
     public void setIsServer(boolean IsServer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +212,13 @@ public class WebSocketCreationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DangerousDeflateOptions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketCreationOptions.DangerousDeflateOptions" target="_top">.NET documentation</a>
+     */
     public WebSocketDeflateOptions getDangerousDeflateOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +234,13 @@ public class WebSocketCreationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DangerousDeflateOptions.
+     *
+     * @param DangerousDeflateOptions the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketCreationOptions.DangerousDeflateOptions" target="_top">.NET documentation</a>
+     */
     public void setDangerousDeflateOptions(WebSocketDeflateOptions DangerousDeflateOptions) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +251,13 @@ public class WebSocketCreationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SubProtocol.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketCreationOptions.SubProtocol" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSubProtocol() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +272,25 @@ public class WebSocketCreationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SubProtocol.
+     *
+     * @param SubProtocol the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketCreationOptions.SubProtocol" target="_top">.NET documentation</a>
+     */
     public void setSubProtocol(java.lang.String SubProtocol) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.ArrayTypeMismatchException, system.NotSupportedException, system.OverflowException, system.InvalidOperationException, system.FormatException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +301,13 @@ public class WebSocketCreationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeepAliveInterval.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketCreationOptions.KeepAliveInterval" target="_top">.NET documentation</a>
+     */
     public TimeSpan getKeepAliveInterval() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +323,21 @@ public class WebSocketCreationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeepAliveInterval.
+     *
+     * @param KeepAliveInterval the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketCreationOptions.KeepAliveInterval" target="_top">.NET documentation</a>
+     */
     public void setKeepAliveInterval(TimeSpan KeepAliveInterval) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +348,13 @@ public class WebSocketCreationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeepAliveTimeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketCreationOptions.KeepAliveTimeout" target="_top">.NET documentation</a>
+     */
     public TimeSpan getKeepAliveTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +370,21 @@ public class WebSocketCreationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeepAliveTimeout.
+     *
+     * @param KeepAliveTimeout the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketCreationOptions.KeepAliveTimeout" target="_top">.NET documentation</a>
+     */
     public void setKeepAliveTimeout(TimeSpan KeepAliveTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

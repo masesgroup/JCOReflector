@@ -99,7 +99,10 @@ public class ConnectionProviderAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ConnectionProviderAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class ConnectionProviderAttribute extends system.Attribute  {
     public ConnectionProviderAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param displayName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ConnectionProviderAttribute(java.lang.String displayName) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +170,15 @@ public class ConnectionProviderAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param displayName the argument of type {@code java.lang.String}
+     * @param id the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ConnectionProviderAttribute(java.lang.String displayName, java.lang.String id) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +189,16 @@ public class ConnectionProviderAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param displayName the argument of type {@code java.lang.String}
+     * @param id the argument of type {@code java.lang.String}
+     * @param connectionPointType the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ConnectionProviderAttribute(java.lang.String displayName, java.lang.String id, NetType connectionPointType) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +209,15 @@ public class ConnectionProviderAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param displayName the argument of type {@code java.lang.String}
+     * @param connectionPointType the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ConnectionProviderAttribute(java.lang.String displayName, NetType connectionPointType) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -198,6 +237,13 @@ public class ConnectionProviderAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowsMultipleConnections.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.AllowsMultipleConnections" target="_top">.NET documentation</a>
+     */
     public boolean getAllowsMultipleConnections() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +258,13 @@ public class ConnectionProviderAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowsMultipleConnections.
+     *
+     * @param AllowsMultipleConnections the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.AllowsMultipleConnections" target="_top">.NET documentation</a>
+     */
     public void setAllowsMultipleConnections(boolean AllowsMultipleConnections) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +275,13 @@ public class ConnectionProviderAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DisplayName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.DisplayName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDisplayName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +296,13 @@ public class ConnectionProviderAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ID.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.ID" target="_top">.NET documentation</a>
+     */
     public java.lang.String getID() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +317,25 @@ public class ConnectionProviderAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConnectionPointType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.ConnectionPointType" target="_top">.NET documentation</a>
+     */
     public NetType getConnectionPointType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

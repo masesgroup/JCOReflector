@@ -99,7 +99,10 @@ public class DataGridViewCellCancelEventArgs extends system.componentmodel.Cance
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataGridViewCellCancelEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,15 @@ public class DataGridViewCellCancelEventArgs extends system.componentmodel.Cance
     public DataGridViewCellCancelEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param columnIndex the argument of type {@code int}
+     * @param rowIndex the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellCancelEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public DataGridViewCellCancelEventArgs(int columnIndex, int rowIndex) throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +180,13 @@ public class DataGridViewCellCancelEventArgs extends system.componentmodel.Cance
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ColumnIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellCancelEventArgs.ColumnIndex" target="_top">.NET documentation</a>
+     */
     public int getColumnIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +227,13 @@ public class DataGridViewCellCancelEventArgs extends system.componentmodel.Cance
         }
     }
 
+    /**
+     * Gets the value of the .NET property RowIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellCancelEventArgs.RowIndex" target="_top">.NET documentation</a>
+     */
     public int getRowIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class MenuItemStyleCollection extends system.web.ui.StateManagedCollectio
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MenuItemStyleCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,14 @@ public class MenuItemStyleCollection extends system.web.ui.StateManagedCollectio
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param style the argument of type {@code MenuItemStyle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.MenuItemStyleCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(MenuItemStyle style) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +180,14 @@ public class MenuItemStyleCollection extends system.web.ui.StateManagedCollectio
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param style the argument of type {@code MenuItemStyle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.MenuItemStyleCollection.Add" target="_top">.NET documentation</a>
+     */
     public int Add(MenuItemStyle style) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +228,14 @@ public class MenuItemStyleCollection extends system.web.ui.StateManagedCollectio
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param style the argument of type {@code MenuItemStyle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.MenuItemStyleCollection.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(MenuItemStyle style) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +276,15 @@ public class MenuItemStyleCollection extends system.web.ui.StateManagedCollectio
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param styleArray the argument of type {@code MenuItemStyle[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.MenuItemStyleCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(MenuItemStyle[] styleArray, int index) throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +295,14 @@ public class MenuItemStyleCollection extends system.web.ui.StateManagedCollectio
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param style the argument of type {@code MenuItemStyle}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.MenuItemStyleCollection.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(int index, MenuItemStyle style) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +313,13 @@ public class MenuItemStyleCollection extends system.web.ui.StateManagedCollectio
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param style the argument of type {@code MenuItemStyle}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.MenuItemStyleCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(MenuItemStyle style) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +330,13 @@ public class MenuItemStyleCollection extends system.web.ui.StateManagedCollectio
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAt.
+     *
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.MenuItemStyleCollection.RemoveAt" target="_top">.NET documentation</a>
+     */
     public void RemoveAt(int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class RSAOAEPKeyExchangeFormatter extends system.security.cryptography.As
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RSAOAEPKeyExchangeFormatter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class RSAOAEPKeyExchangeFormatter extends system.security.cryptography.As
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSAOAEPKeyExchangeFormatter.-ctor" target="_top">.NET documentation</a>
+     */
     public RSAOAEPKeyExchangeFormatter() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,22 @@ public class RSAOAEPKeyExchangeFormatter extends system.security.cryptography.As
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param key the argument of type {@code AsymmetricAlgorithm}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSAOAEPKeyExchangeFormatter.-ctor" target="_top">.NET documentation</a>
+     */
     public RSAOAEPKeyExchangeFormatter(AsymmetricAlgorithm key) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +197,15 @@ public class RSAOAEPKeyExchangeFormatter extends system.security.cryptography.As
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateKeyExchange.
+     *
+     * @param rgbData the argument of type {@code byte[]}
+     * @param symAlgType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSAOAEPKeyExchangeFormatter.CreateKeyExchange" target="_top">.NET documentation</a>
+     */
     public byte[] CreateKeyExchange(byte[] rgbData, NetType symAlgType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +229,15 @@ public class RSAOAEPKeyExchangeFormatter extends system.security.cryptography.As
         }
     }
 
+    /**
+     * Invokes the .NET member CreateKeyExchange.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSAOAEPKeyExchangeFormatter.CreateKeyExchange" target="_top">.NET documentation</a>
+     */
     public byte[] CreateKeyExchange(JCORefOut dupParam0, NetType dupParam1) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +261,24 @@ public class RSAOAEPKeyExchangeFormatter extends system.security.cryptography.As
         }
     }
 
+    /**
+     * Invokes the .NET member CreateKeyExchange.
+     *
+     * @param rgbData the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicUnexpectedOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSAOAEPKeyExchangeFormatter.CreateKeyExchange" target="_top">.NET documentation</a>
+     */
     public byte[] CreateKeyExchange(byte[] rgbData) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.security.cryptography.CryptographicUnexpectedOperationException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +302,24 @@ public class RSAOAEPKeyExchangeFormatter extends system.security.cryptography.As
         }
     }
 
+    /**
+     * Invokes the .NET member CreateKeyExchange.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicUnexpectedOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSAOAEPKeyExchangeFormatter.CreateKeyExchange" target="_top">.NET documentation</a>
+     */
     public byte[] CreateKeyExchange(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.security.cryptography.CryptographicUnexpectedOperationException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +343,22 @@ public class RSAOAEPKeyExchangeFormatter extends system.security.cryptography.As
         }
     }
 
+    /**
+     * Invokes the .NET member SetKey.
+     *
+     * @param key the argument of type {@code AsymmetricAlgorithm}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSAOAEPKeyExchangeFormatter.SetKey" target="_top">.NET documentation</a>
+     */
     public void SetKey(AsymmetricAlgorithm key) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +373,16 @@ public class RSAOAEPKeyExchangeFormatter extends system.security.cryptography.As
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Parameter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSAOAEPKeyExchangeFormatter.Parameter" target="_top">.NET documentation</a>
+     */
     public byte[] getParameter() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +406,16 @@ public class RSAOAEPKeyExchangeFormatter extends system.security.cryptography.As
         }
     }
 
+    /**
+     * Sets the value of the .NET property Parameter.
+     *
+     * @param Parameter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSAOAEPKeyExchangeFormatter.Parameter" target="_top">.NET documentation</a>
+     */
     public void setParameter(byte[] Parameter) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -311,6 +426,13 @@ public class RSAOAEPKeyExchangeFormatter extends system.security.cryptography.As
         }
     }
 
+    /**
+     * Gets the value of the .NET property Rng.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSAOAEPKeyExchangeFormatter.Rng" target="_top">.NET documentation</a>
+     */
     public RandomNumberGenerator getRng() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -326,6 +448,13 @@ public class RSAOAEPKeyExchangeFormatter extends system.security.cryptography.As
         }
     }
 
+    /**
+     * Sets the value of the .NET property Rng.
+     *
+     * @param Rng the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSAOAEPKeyExchangeFormatter.Rng" target="_top">.NET documentation</a>
+     */
     public void setRng(RandomNumberGenerator Rng) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

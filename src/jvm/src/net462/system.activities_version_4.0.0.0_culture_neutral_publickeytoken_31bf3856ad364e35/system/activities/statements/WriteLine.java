@@ -100,7 +100,10 @@ public class WriteLine extends system.activities.CodeActivity  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WriteLine(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class WriteLine extends system.activities.CodeActivity  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.WriteLine.-ctor" target="_top">.NET documentation</a>
+     */
     public WriteLine() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class WriteLine extends system.activities.CodeActivity  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property TextWriter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.WriteLine.TextWriter" target="_top">.NET documentation</a>
+     */
     public InArgument_1 getTextWriter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +196,13 @@ public class WriteLine extends system.activities.CodeActivity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TextWriter.
+     *
+     * @param TextWriter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.WriteLine.TextWriter" target="_top">.NET documentation</a>
+     */
     public void setTextWriter(InArgument_1 TextWriter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +213,13 @@ public class WriteLine extends system.activities.CodeActivity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Text.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.WriteLine.Text" target="_top">.NET documentation</a>
+     */
     public InArgument_1 getText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +235,13 @@ public class WriteLine extends system.activities.CodeActivity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Text.
+     *
+     * @param Text the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.WriteLine.Text" target="_top">.NET documentation</a>
+     */
     public void setText(InArgument_1 Text) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

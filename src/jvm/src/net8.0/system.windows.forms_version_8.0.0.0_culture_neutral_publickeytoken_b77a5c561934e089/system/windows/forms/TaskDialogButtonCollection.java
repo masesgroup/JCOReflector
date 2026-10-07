@@ -100,7 +100,10 @@ public class TaskDialogButtonCollection extends system.collections.objectmodel.C
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TaskDialogButtonCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class TaskDialogButtonCollection extends system.collections.objectmodel.C
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialogButtonCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public TaskDialogButtonCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,20 @@ public class TaskDialogButtonCollection extends system.collections.objectmodel.C
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @param enabled the argument of type {@code boolean}
+     * @param allowCloseDialog the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialogButtonCollection.Add" target="_top">.NET documentation</a>
+     */
     public TaskDialogButton Add(java.lang.String text, boolean enabled, boolean allowCloseDialog) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

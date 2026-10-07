@@ -52,5 +52,11 @@ import system.windows.ink.PropertyDataChangedEventArgs;
  * @version 2.0.0.0
  */
 public interface IPropertyDataChangedEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.Windows.Ink.PropertyDataChangedEventArgs}
+     */
     public void Invoke(NetObject sender, PropertyDataChangedEventArgs e);
 }

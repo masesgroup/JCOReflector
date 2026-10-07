@@ -100,7 +100,10 @@ public class X509ChainStatus extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public X509ChainStatus(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class X509ChainStatus extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Status.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.X509ChainStatus.Status" target="_top">.NET documentation</a>
+     */
     public X509ChainStatusFlags getStatus() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +184,13 @@ public class X509ChainStatus extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Status.
+     *
+     * @param Status the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.X509ChainStatus.Status" target="_top">.NET documentation</a>
+     */
     public void setStatus(X509ChainStatusFlags Status) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +201,13 @@ public class X509ChainStatus extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StatusInformation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.X509ChainStatus.StatusInformation" target="_top">.NET documentation</a>
+     */
     public java.lang.String getStatusInformation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +222,13 @@ public class X509ChainStatus extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StatusInformation.
+     *
+     * @param StatusInformation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.X509ChainStatus.StatusInformation" target="_top">.NET documentation</a>
+     */
     public void setStatusInformation(java.lang.String StatusInformation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

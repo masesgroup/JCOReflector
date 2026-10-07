@@ -105,7 +105,10 @@ public class IKeyboardInputSinkImplementation extends NetObject implements IKeyb
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IKeyboardInputSinkImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,13 @@ public class IKeyboardInputSinkImplementation extends NetObject implements IKeyb
 
     // Methods section
     
+    /**
+     * Invokes the .NET member HasFocusWithin.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IKeyboardInputSink.HasFocusWithin" target="_top">.NET documentation</a>
+     */
     public boolean HasFocusWithin() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -161,6 +171,15 @@ public class IKeyboardInputSinkImplementation extends NetObject implements IKeyb
         }
     }
 
+    /**
+     * Invokes the .NET member OnMnemonic.
+     *
+     * @param msg the argument of type {@code JCORefOut<MSG>}
+     * @param modifiers the argument of type {@code ModifierKeys}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IKeyboardInputSink.OnMnemonic" target="_top">.NET documentation</a>
+     */
     public boolean OnMnemonic(JCORefOut<MSG> msg, ModifierKeys modifiers) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +194,14 @@ public class IKeyboardInputSinkImplementation extends NetObject implements IKeyb
         }
     }
 
+    /**
+     * Invokes the .NET member TabInto.
+     *
+     * @param request the argument of type {@code TraversalRequest}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IKeyboardInputSink.TabInto" target="_top">.NET documentation</a>
+     */
     public boolean TabInto(TraversalRequest request) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +216,15 @@ public class IKeyboardInputSinkImplementation extends NetObject implements IKeyb
         }
     }
 
+    /**
+     * Invokes the .NET member TranslateAccelerator.
+     *
+     * @param msg the argument of type {@code JCORefOut<MSG>}
+     * @param modifiers the argument of type {@code ModifierKeys}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator" target="_top">.NET documentation</a>
+     */
     public boolean TranslateAccelerator(JCORefOut<MSG> msg, ModifierKeys modifiers) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +239,15 @@ public class IKeyboardInputSinkImplementation extends NetObject implements IKeyb
         }
     }
 
+    /**
+     * Invokes the .NET member TranslateChar.
+     *
+     * @param msg the argument of type {@code JCORefOut<MSG>}
+     * @param modifiers the argument of type {@code ModifierKeys}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IKeyboardInputSink.TranslateChar" target="_top">.NET documentation</a>
+     */
     public boolean TranslateChar(JCORefOut<MSG> msg, ModifierKeys modifiers) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +262,14 @@ public class IKeyboardInputSinkImplementation extends NetObject implements IKeyb
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterKeyboardInputSink.
+     *
+     * @param sink the argument of type {@code IKeyboardInputSink}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IKeyboardInputSink.RegisterKeyboardInputSink" target="_top">.NET documentation</a>
+     */
     public IKeyboardInputSite RegisterKeyboardInputSink(IKeyboardInputSink sink) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +289,13 @@ public class IKeyboardInputSinkImplementation extends NetObject implements IKeyb
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property KeyboardInputSite.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IKeyboardInputSink.KeyboardInputSite" target="_top">.NET documentation</a>
+     */
     public IKeyboardInputSite getKeyboardInputSite() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +311,13 @@ public class IKeyboardInputSinkImplementation extends NetObject implements IKeyb
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeyboardInputSite.
+     *
+     * @param KeyboardInputSite the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IKeyboardInputSink.KeyboardInputSite" target="_top">.NET documentation</a>
+     */
     public void setKeyboardInputSite(IKeyboardInputSite KeyboardInputSite) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class XpsFont extends system.windows.xps.packaging.XpsResource  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XpsFont(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,18 @@ public class XpsFont extends system.windows.xps.packaging.XpsResource  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ObfuscateFontData.
+     *
+     * @param fontData the argument of type {@code byte[]}
+     * @param guid the argument of type {@code Guid}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsFont.ObfuscateFontData" target="_top">.NET documentation</a>
+     */
     public static void ObfuscateFontData(byte[] fontData, Guid guid) throws Throwable, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -165,6 +180,18 @@ public class XpsFont extends system.windows.xps.packaging.XpsResource  {
         }
     }
 
+    /**
+     * Invokes the .NET member ObfuscateFontData.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code Guid}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsFont.ObfuscateFontData" target="_top">.NET documentation</a>
+     */
     public static void ObfuscateFontData(JCORefOut dupParam0, Guid dupParam1) throws Throwable, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -179,6 +206,13 @@ public class XpsFont extends system.windows.xps.packaging.XpsResource  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsObfuscated.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsFont.IsObfuscated" target="_top">.NET documentation</a>
+     */
     public boolean getIsObfuscated() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +227,13 @@ public class XpsFont extends system.windows.xps.packaging.XpsResource  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsRestricted.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsFont.IsRestricted" target="_top">.NET documentation</a>
+     */
     public boolean getIsRestricted() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +248,13 @@ public class XpsFont extends system.windows.xps.packaging.XpsResource  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsRestricted.
+     *
+     * @param IsRestricted the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsFont.IsRestricted" target="_top">.NET documentation</a>
+     */
     public void setIsRestricted(boolean IsRestricted) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

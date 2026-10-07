@@ -101,7 +101,10 @@ public class Lazy_2<T extends IJCOBridgeReflected, TMetadata extends IJCOBridgeR
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Lazy_2(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,16 @@ public class Lazy_2<T extends IJCOBridgeReflected, TMetadata extends IJCOBridgeR
     public Lazy_2() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param valueFactory the argument of type {@code Func_1}
+     * @param metadata the argument of type {@code TMetadata}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Lazy-2.-ctor" target="_top">.NET documentation</a>
+     */
     public Lazy_2(Func_1 valueFactory, TMetadata metadata) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +176,17 @@ public class Lazy_2<T extends IJCOBridgeReflected, TMetadata extends IJCOBridgeR
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param valueFactory the argument of type {@code Func_1}
+     * @param metadata the argument of type {@code TMetadata}
+     * @param isThreadSafe the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Lazy-2.-ctor" target="_top">.NET documentation</a>
+     */
     public Lazy_2(Func_1 valueFactory, TMetadata metadata, boolean isThreadSafe) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +199,17 @@ public class Lazy_2<T extends IJCOBridgeReflected, TMetadata extends IJCOBridgeR
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param valueFactory the argument of type {@code Func_1}
+     * @param metadata the argument of type {@code TMetadata}
+     * @param mode the argument of type {@code LazyThreadSafetyMode}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Lazy-2.-ctor" target="_top">.NET documentation</a>
+     */
     public Lazy_2(Func_1 valueFactory, TMetadata metadata, LazyThreadSafetyMode mode) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -187,6 +222,14 @@ public class Lazy_2<T extends IJCOBridgeReflected, TMetadata extends IJCOBridgeR
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param metadata the argument of type {@code TMetadata}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Lazy-2.-ctor" target="_top">.NET documentation</a>
+     */
     public Lazy_2(TMetadata metadata) throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -199,6 +242,15 @@ public class Lazy_2<T extends IJCOBridgeReflected, TMetadata extends IJCOBridgeR
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param metadata the argument of type {@code TMetadata}
+     * @param isThreadSafe the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Lazy-2.-ctor" target="_top">.NET documentation</a>
+     */
     public Lazy_2(TMetadata metadata, boolean isThreadSafe) throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -211,6 +263,15 @@ public class Lazy_2<T extends IJCOBridgeReflected, TMetadata extends IJCOBridgeR
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param metadata the argument of type {@code TMetadata}
+     * @param mode the argument of type {@code LazyThreadSafetyMode}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Lazy-2.-ctor" target="_top">.NET documentation</a>
+     */
     public Lazy_2(TMetadata metadata, LazyThreadSafetyMode mode) throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -232,6 +293,13 @@ public class Lazy_2<T extends IJCOBridgeReflected, TMetadata extends IJCOBridgeR
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Metadata.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Lazy-2.Metadata" target="_top">.NET documentation</a>
+     */
     public TMetadata getMetadata() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

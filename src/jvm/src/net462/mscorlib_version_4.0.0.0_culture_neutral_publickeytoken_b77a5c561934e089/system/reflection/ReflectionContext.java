@@ -100,7 +100,10 @@ public class ReflectionContext extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ReflectionContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,14 @@ public class ReflectionContext extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member MapAssembly.
+     *
+     * @param assembly the argument of type {@code Assembly}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.ReflectionContext.MapAssembly" target="_top">.NET documentation</a>
+     */
     public Assembly MapAssembly(Assembly assembly) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +179,15 @@ public class ReflectionContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeForObject.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.ReflectionContext.GetTypeForObject" target="_top">.NET documentation</a>
+     */
     public TypeInfo GetTypeForObject(NetObject value) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +203,14 @@ public class ReflectionContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MapType.
+     *
+     * @param type the argument of type {@code TypeInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.ReflectionContext.MapType" target="_top">.NET documentation</a>
+     */
     public TypeInfo MapType(TypeInfo type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class ISymbolDocumentImplementation extends NetObject implements ISymbolD
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ISymbolDocumentImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,13 @@ public class ISymbolDocumentImplementation extends NetObject implements ISymbolD
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetCheckSum.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolDocument.GetCheckSum" target="_top">.NET documentation</a>
+     */
     public byte[] GetCheckSum() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -164,6 +174,17 @@ public class ISymbolDocumentImplementation extends NetObject implements ISymbolD
         }
     }
 
+    /**
+     * Invokes the .NET member GetSourceRange.
+     *
+     * @param startLine the argument of type {@code int}
+     * @param startColumn the argument of type {@code int}
+     * @param endLine the argument of type {@code int}
+     * @param endColumn the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolDocument.GetSourceRange" target="_top">.NET documentation</a>
+     */
     public byte[] GetSourceRange(int startLine, int startColumn, int endLine, int endColumn) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +208,14 @@ public class ISymbolDocumentImplementation extends NetObject implements ISymbolD
         }
     }
 
+    /**
+     * Invokes the .NET member FindClosestLine.
+     *
+     * @param line the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolDocument.FindClosestLine" target="_top">.NET documentation</a>
+     */
     public int FindClosestLine(int line) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +260,13 @@ public class ISymbolDocumentImplementation extends NetObject implements ISymbolD
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HasEmbeddedSource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolDocument.HasEmbeddedSource" target="_top">.NET documentation</a>
+     */
     public boolean getHasEmbeddedSource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +281,13 @@ public class ISymbolDocumentImplementation extends NetObject implements ISymbolD
         }
     }
 
+    /**
+     * Gets the value of the .NET property SourceLength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolDocument.SourceLength" target="_top">.NET documentation</a>
+     */
     public int getSourceLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -285,6 +328,13 @@ public class ISymbolDocumentImplementation extends NetObject implements ISymbolD
         }
     }
 
+    /**
+     * Gets the value of the .NET property CheckSumAlgorithmId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolDocument.CheckSumAlgorithmId" target="_top">.NET documentation</a>
+     */
     public Guid getCheckSumAlgorithmId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +350,13 @@ public class ISymbolDocumentImplementation extends NetObject implements ISymbolD
         }
     }
 
+    /**
+     * Gets the value of the .NET property DocumentType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolDocument.DocumentType" target="_top">.NET documentation</a>
+     */
     public Guid getDocumentType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -315,6 +372,13 @@ public class ISymbolDocumentImplementation extends NetObject implements ISymbolD
         }
     }
 
+    /**
+     * Gets the value of the .NET property Language.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolDocument.Language" target="_top">.NET documentation</a>
+     */
     public Guid getLanguage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -330,6 +394,13 @@ public class ISymbolDocumentImplementation extends NetObject implements ISymbolD
         }
     }
 
+    /**
+     * Gets the value of the .NET property LanguageVendor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolDocument.LanguageVendor" target="_top">.NET documentation</a>
+     */
     public Guid getLanguageVendor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -345,6 +416,13 @@ public class ISymbolDocumentImplementation extends NetObject implements ISymbolD
         }
     }
 
+    /**
+     * Gets the value of the .NET property URL.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolDocument.URL" target="_top">.NET documentation</a>
+     */
     public java.lang.String getURL() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

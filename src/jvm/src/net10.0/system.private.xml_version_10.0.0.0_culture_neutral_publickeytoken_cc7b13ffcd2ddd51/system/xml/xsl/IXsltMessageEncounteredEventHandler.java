@@ -52,5 +52,11 @@ import system.xml.xsl.XsltMessageEncounteredEventArgs;
  * @version 2.0.0.0
  */
 public interface IXsltMessageEncounteredEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.Xml.Xsl.XsltMessageEncounteredEventArgs}
+     */
     public void Invoke(NetObject sender, XsltMessageEncounteredEventArgs e);
 }

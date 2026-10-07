@@ -179,7 +179,10 @@ public class SampleActivity_1<T extends IJCOBridgeReflected> extends JCDelegate 
         callerInstance = instance;
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     @SuppressWarnings("unchecked")
     public SampleActivity_1(java.lang.Object instance) throws Throwable {
@@ -202,6 +205,14 @@ public class SampleActivity_1<T extends IJCOBridgeReflected> extends JCDelegate 
         return JCOBridgeInstance.translateException(ne);
     }
 
+    /**
+     * Invokes the .NET member DynamicInvoke.
+     *
+     * @param options the argument of type {@code ActivityCreationOptions_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Delegate.DynamicInvoke" target="_top">.NET documentation</a>
+     */
     public ActivitySamplingResult DynamicInvoke(ActivityCreationOptions_1 options) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,7 +229,10 @@ public class SampleActivity_1<T extends IJCOBridgeReflected> extends JCDelegate 
     }
 
     /**
-     * Methods invoked in JVM when an event is raised in CLR 
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param options the .NET argument of type {@code System.Diagnostics.ActivityCreationOptions`1[T]&}
+     * @return the value returned to the CLR; this default implementation returns {@code null}
      */
     public ActivitySamplingResult Invoke(ActivityCreationOptions_1 options) {
         return null;

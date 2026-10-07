@@ -101,7 +101,10 @@ public class DependencyPropertyChangedEventArgs extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DependencyPropertyChangedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,15 @@ public class DependencyPropertyChangedEventArgs extends system.ValueType  {
     public DependencyPropertyChangedEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param property the argument of type {@code DependencyProperty}
+     * @param oldValue the argument of type {@code NetObject}
+     * @param newValue the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DependencyPropertyChangedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public DependencyPropertyChangedEventArgs(DependencyProperty property, NetObject oldValue, NetObject newValue) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +178,14 @@ public class DependencyPropertyChangedEventArgs extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param args the argument of type {@code DependencyPropertyChangedEventArgs}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DependencyPropertyChangedEventArgs.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(DependencyPropertyChangedEventArgs args) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +204,14 @@ public class DependencyPropertyChangedEventArgs extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property NewValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DependencyPropertyChangedEventArgs.NewValue" target="_top">.NET documentation</a>
+     */
     public NetObject getNewValue() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +227,14 @@ public class DependencyPropertyChangedEventArgs extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OldValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DependencyPropertyChangedEventArgs.OldValue" target="_top">.NET documentation</a>
+     */
     public NetObject getOldValue() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +250,13 @@ public class DependencyPropertyChangedEventArgs extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Property.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DependencyPropertyChangedEventArgs.Property" target="_top">.NET documentation</a>
+     */
     public DependencyProperty getProperty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -102,7 +102,10 @@ public class PrincipalPermissionAttribute extends system.security.permissions.Co
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PrincipalPermissionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,13 @@ public class PrincipalPermissionAttribute extends system.security.permissions.Co
     public PrincipalPermissionAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param action the argument of type {@code SecurityAction}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PrincipalPermissionAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public PrincipalPermissionAttribute(SecurityAction action) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +177,13 @@ public class PrincipalPermissionAttribute extends system.security.permissions.Co
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreatePermission.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PrincipalPermissionAttribute.CreatePermission" target="_top">.NET documentation</a>
+     */
     public IPermission CreatePermission() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +203,13 @@ public class PrincipalPermissionAttribute extends system.security.permissions.Co
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Authenticated.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PrincipalPermissionAttribute.Authenticated" target="_top">.NET documentation</a>
+     */
     public boolean getAuthenticated() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +224,13 @@ public class PrincipalPermissionAttribute extends system.security.permissions.Co
         }
     }
 
+    /**
+     * Sets the value of the .NET property Authenticated.
+     *
+     * @param Authenticated the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PrincipalPermissionAttribute.Authenticated" target="_top">.NET documentation</a>
+     */
     public void setAuthenticated(boolean Authenticated) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +241,13 @@ public class PrincipalPermissionAttribute extends system.security.permissions.Co
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PrincipalPermissionAttribute.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +262,13 @@ public class PrincipalPermissionAttribute extends system.security.permissions.Co
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PrincipalPermissionAttribute.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +279,13 @@ public class PrincipalPermissionAttribute extends system.security.permissions.Co
         }
     }
 
+    /**
+     * Gets the value of the .NET property Role.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PrincipalPermissionAttribute.Role" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRole() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +300,13 @@ public class PrincipalPermissionAttribute extends system.security.permissions.Co
         }
     }
 
+    /**
+     * Sets the value of the .NET property Role.
+     *
+     * @param Role the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PrincipalPermissionAttribute.Role" target="_top">.NET documentation</a>
+     */
     public void setRole(java.lang.String Role) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

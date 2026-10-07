@@ -105,7 +105,10 @@ public class DeliveryRequirementsAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DeliveryRequirementsAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,12 @@ public class DeliveryRequirementsAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.DeliveryRequirementsAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DeliveryRequirementsAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,8 +178,14 @@ public class DeliveryRequirementsAttribute extends system.Attribute  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIContractBehavior method available in IContractBehavior to obtain an object with an invocable method
+     *
+     * @param contractDescription the argument of type {@code ContractDescription}
+     * @param endpoint the argument of type {@code ServiceEndpoint}
+     * @param bindingParameters the argument of type {@code BindingParameterCollection}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IContractBehavior.AddBindingParameters" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void AddBindingParameters(ContractDescription contractDescription, ServiceEndpoint endpoint, BindingParameterCollection bindingParameters) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContractBehavior to obtain the full interface.");
     }
@@ -178,8 +193,14 @@ public class DeliveryRequirementsAttribute extends system.Attribute  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIContractBehavior method available in IContractBehavior to obtain an object with an invocable method
+     *
+     * @param contractDescription the argument of type {@code ContractDescription}
+     * @param endpoint the argument of type {@code ServiceEndpoint}
+     * @param clientRuntime the argument of type {@code ClientRuntime}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IContractBehavior.ApplyClientBehavior" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ApplyClientBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, ClientRuntime clientRuntime) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContractBehavior to obtain the full interface.");
     }
@@ -187,8 +208,14 @@ public class DeliveryRequirementsAttribute extends system.Attribute  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIContractBehavior method available in IContractBehavior to obtain an object with an invocable method
+     *
+     * @param contractDescription the argument of type {@code ContractDescription}
+     * @param endpoint the argument of type {@code ServiceEndpoint}
+     * @param dispatchRuntime the argument of type {@code DispatchRuntime}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ApplyDispatchBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, DispatchRuntime dispatchRuntime) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContractBehavior to obtain the full interface.");
     }
@@ -196,8 +223,13 @@ public class DeliveryRequirementsAttribute extends system.Attribute  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIContractBehavior method available in IContractBehavior to obtain an object with an invocable method
+     *
+     * @param contractDescription the argument of type {@code ContractDescription}
+     * @param endpoint the argument of type {@code ServiceEndpoint}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IContractBehavior.Validate" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Validate(ContractDescription contractDescription, ServiceEndpoint endpoint) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContractBehavior to obtain the full interface.");
     }
@@ -206,6 +238,13 @@ public class DeliveryRequirementsAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RequireOrderedDelivery.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.DeliveryRequirementsAttribute.RequireOrderedDelivery" target="_top">.NET documentation</a>
+     */
     public boolean getRequireOrderedDelivery() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +259,13 @@ public class DeliveryRequirementsAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RequireOrderedDelivery.
+     *
+     * @param RequireOrderedDelivery the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.DeliveryRequirementsAttribute.RequireOrderedDelivery" target="_top">.NET documentation</a>
+     */
     public void setRequireOrderedDelivery(boolean RequireOrderedDelivery) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +276,13 @@ public class DeliveryRequirementsAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property QueuedDeliveryRequirements.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.DeliveryRequirementsAttribute.QueuedDeliveryRequirements" target="_top">.NET documentation</a>
+     */
     public QueuedDeliveryRequirementsMode getQueuedDeliveryRequirements() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +298,24 @@ public class DeliveryRequirementsAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property QueuedDeliveryRequirements.
+     *
+     * @param QueuedDeliveryRequirements the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.DeliveryRequirementsAttribute.QueuedDeliveryRequirements" target="_top">.NET documentation</a>
+     */
     public void setQueuedDeliveryRequirements(QueuedDeliveryRequirementsMode QueuedDeliveryRequirements) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +326,13 @@ public class DeliveryRequirementsAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetContract.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.DeliveryRequirementsAttribute.TargetContract" target="_top">.NET documentation</a>
+     */
     public NetType getTargetContract() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +348,13 @@ public class DeliveryRequirementsAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TargetContract.
+     *
+     * @param TargetContract the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.DeliveryRequirementsAttribute.TargetContract" target="_top">.NET documentation</a>
+     */
     public void setTargetContract(NetType TargetContract) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

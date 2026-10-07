@@ -100,7 +100,10 @@ public class CloudCollection extends system.collections.objectmodel.Collection_1
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CloudCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class CloudCollection extends system.collections.objectmodel.Collection_1
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.CloudCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public CloudCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file

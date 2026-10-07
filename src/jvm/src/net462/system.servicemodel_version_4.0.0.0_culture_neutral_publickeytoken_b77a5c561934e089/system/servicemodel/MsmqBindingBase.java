@@ -103,7 +103,10 @@ public class MsmqBindingBase extends system.servicemodel.channels.Binding  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MsmqBindingBase(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class MsmqBindingBase extends system.servicemodel.channels.Binding  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Durable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqBindingBase.Durable" target="_top">.NET documentation</a>
+     */
     public boolean getDurable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +184,13 @@ public class MsmqBindingBase extends system.servicemodel.channels.Binding  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Durable.
+     *
+     * @param Durable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqBindingBase.Durable" target="_top">.NET documentation</a>
+     */
     public void setDurable(boolean Durable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +201,13 @@ public class MsmqBindingBase extends system.servicemodel.channels.Binding  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExactlyOnce.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqBindingBase.ExactlyOnce" target="_top">.NET documentation</a>
+     */
     public boolean getExactlyOnce() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +222,13 @@ public class MsmqBindingBase extends system.servicemodel.channels.Binding  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ExactlyOnce.
+     *
+     * @param ExactlyOnce the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqBindingBase.ExactlyOnce" target="_top">.NET documentation</a>
+     */
     public void setExactlyOnce(boolean ExactlyOnce) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +239,13 @@ public class MsmqBindingBase extends system.servicemodel.channels.Binding  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReceiveContextEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqBindingBase.ReceiveContextEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getReceiveContextEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +260,13 @@ public class MsmqBindingBase extends system.servicemodel.channels.Binding  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReceiveContextEnabled.
+     *
+     * @param ReceiveContextEnabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqBindingBase.ReceiveContextEnabled" target="_top">.NET documentation</a>
+     */
     public void setReceiveContextEnabled(boolean ReceiveContextEnabled) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +277,13 @@ public class MsmqBindingBase extends system.servicemodel.channels.Binding  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseMsmqTracing.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqBindingBase.UseMsmqTracing" target="_top">.NET documentation</a>
+     */
     public boolean getUseMsmqTracing() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +298,13 @@ public class MsmqBindingBase extends system.servicemodel.channels.Binding  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseMsmqTracing.
+     *
+     * @param UseMsmqTracing the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqBindingBase.UseMsmqTracing" target="_top">.NET documentation</a>
+     */
     public void setUseMsmqTracing(boolean UseMsmqTracing) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +315,13 @@ public class MsmqBindingBase extends system.servicemodel.channels.Binding  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseSourceJournal.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqBindingBase.UseSourceJournal" target="_top">.NET documentation</a>
+     */
     public boolean getUseSourceJournal() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +336,13 @@ public class MsmqBindingBase extends system.servicemodel.channels.Binding  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseSourceJournal.
+     *
+     * @param UseSourceJournal the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqBindingBase.UseSourceJournal" target="_top">.NET documentation</a>
+     */
     public void setUseSourceJournal(boolean UseSourceJournal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +353,13 @@ public class MsmqBindingBase extends system.servicemodel.channels.Binding  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxRetryCycles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqBindingBase.MaxRetryCycles" target="_top">.NET documentation</a>
+     */
     public int getMaxRetryCycles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +400,29 @@ public class MsmqBindingBase extends system.servicemodel.channels.Binding  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxRetryCycles.
+     *
+     * @param MaxRetryCycles the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqBindingBase.MaxRetryCycles" target="_top">.NET documentation</a>
+     */
     public void setMaxRetryCycles(int MaxRetryCycles) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -330,6 +433,13 @@ public class MsmqBindingBase extends system.servicemodel.channels.Binding  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReceiveRetryCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqBindingBase.ReceiveRetryCount" target="_top">.NET documentation</a>
+     */
     public int getReceiveRetryCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -370,6 +480,29 @@ public class MsmqBindingBase extends system.servicemodel.channels.Binding  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReceiveRetryCount.
+     *
+     * @param ReceiveRetryCount the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqBindingBase.ReceiveRetryCount" target="_top">.NET documentation</a>
+     */
     public void setReceiveRetryCount(int ReceiveRetryCount) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -380,6 +513,13 @@ public class MsmqBindingBase extends system.servicemodel.channels.Binding  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxReceivedMessageSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqBindingBase.MaxReceivedMessageSize" target="_top">.NET documentation</a>
+     */
     public long getMaxReceivedMessageSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -420,6 +560,29 @@ public class MsmqBindingBase extends system.servicemodel.channels.Binding  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxReceivedMessageSize.
+     *
+     * @param MaxReceivedMessageSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqBindingBase.MaxReceivedMessageSize" target="_top">.NET documentation</a>
+     */
     public void setMaxReceivedMessageSize(long MaxReceivedMessageSize) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -430,6 +593,13 @@ public class MsmqBindingBase extends system.servicemodel.channels.Binding  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DeadLetterQueue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqBindingBase.DeadLetterQueue" target="_top">.NET documentation</a>
+     */
     public DeadLetterQueue getDeadLetterQueue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -445,6 +615,27 @@ public class MsmqBindingBase extends system.servicemodel.channels.Binding  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DeadLetterQueue.
+     *
+     * @param DeadLetterQueue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqBindingBase.DeadLetterQueue" target="_top">.NET documentation</a>
+     */
     public void setDeadLetterQueue(DeadLetterQueue DeadLetterQueue) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -455,6 +646,13 @@ public class MsmqBindingBase extends system.servicemodel.channels.Binding  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReceiveErrorHandling.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling" target="_top">.NET documentation</a>
+     */
     public ReceiveErrorHandling getReceiveErrorHandling() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -470,6 +668,27 @@ public class MsmqBindingBase extends system.servicemodel.channels.Binding  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReceiveErrorHandling.
+     *
+     * @param ReceiveErrorHandling the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling" target="_top">.NET documentation</a>
+     */
     public void setReceiveErrorHandling(ReceiveErrorHandling ReceiveErrorHandling) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -480,6 +699,13 @@ public class MsmqBindingBase extends system.servicemodel.channels.Binding  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RetryCycleDelay.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqBindingBase.RetryCycleDelay" target="_top">.NET documentation</a>
+     */
     public TimeSpan getRetryCycleDelay() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -495,6 +721,29 @@ public class MsmqBindingBase extends system.servicemodel.channels.Binding  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RetryCycleDelay.
+     *
+     * @param RetryCycleDelay the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqBindingBase.RetryCycleDelay" target="_top">.NET documentation</a>
+     */
     public void setRetryCycleDelay(TimeSpan RetryCycleDelay) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -505,6 +754,13 @@ public class MsmqBindingBase extends system.servicemodel.channels.Binding  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TimeToLive.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqBindingBase.TimeToLive" target="_top">.NET documentation</a>
+     */
     public TimeSpan getTimeToLive() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -520,6 +776,29 @@ public class MsmqBindingBase extends system.servicemodel.channels.Binding  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TimeToLive.
+     *
+     * @param TimeToLive the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqBindingBase.TimeToLive" target="_top">.NET documentation</a>
+     */
     public void setTimeToLive(TimeSpan TimeToLive) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -530,6 +809,13 @@ public class MsmqBindingBase extends system.servicemodel.channels.Binding  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValidityDuration.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqBindingBase.ValidityDuration" target="_top">.NET documentation</a>
+     */
     public TimeSpan getValidityDuration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -545,6 +831,29 @@ public class MsmqBindingBase extends system.servicemodel.channels.Binding  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ValidityDuration.
+     *
+     * @param ValidityDuration the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqBindingBase.ValidityDuration" target="_top">.NET documentation</a>
+     */
     public void setValidityDuration(TimeSpan ValidityDuration) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -555,6 +864,13 @@ public class MsmqBindingBase extends system.servicemodel.channels.Binding  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CustomDeadLetterQueue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue" target="_top">.NET documentation</a>
+     */
     public Uri getCustomDeadLetterQueue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -570,6 +886,13 @@ public class MsmqBindingBase extends system.servicemodel.channels.Binding  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CustomDeadLetterQueue.
+     *
+     * @param CustomDeadLetterQueue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue" target="_top">.NET documentation</a>
+     */
     public void setCustomDeadLetterQueue(Uri CustomDeadLetterQueue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

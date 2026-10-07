@@ -100,7 +100,10 @@ public class RequestClaimCollection extends system.collections.objectmodel.Colle
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RequestClaimCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class RequestClaimCollection extends system.collections.objectmodel.Colle
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestClaimCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public RequestClaimCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class RequestClaimCollection extends system.collections.objectmodel.Colle
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Dialect.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestClaimCollection.Dialect" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDialect() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +195,13 @@ public class RequestClaimCollection extends system.collections.objectmodel.Colle
         }
     }
 
+    /**
+     * Sets the value of the .NET property Dialect.
+     *
+     * @param Dialect the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestClaimCollection.Dialect" target="_top">.NET documentation</a>
+     */
     public void setDialect(java.lang.String Dialect) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

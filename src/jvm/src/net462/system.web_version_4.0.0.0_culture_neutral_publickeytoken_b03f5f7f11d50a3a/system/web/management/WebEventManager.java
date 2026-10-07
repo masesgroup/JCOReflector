@@ -98,7 +98,10 @@ public class WebEventManager extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WebEventManager(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,20 @@ public class WebEventManager extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Flush.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.WebEventManager.Flush" target="_top">.NET documentation</a>
+     */
     public static void Flush() throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.configuration.ConfigurationException, system.InvalidOperationException, system.web.HttpException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -161,6 +178,21 @@ public class WebEventManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Flush.
+     *
+     * @param providerName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.WebEventManager.Flush" target="_top">.NET documentation</a>
+     */
     public static void Flush(java.lang.String providerName) throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.configuration.ConfigurationException, system.InvalidOperationException, system.web.HttpException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

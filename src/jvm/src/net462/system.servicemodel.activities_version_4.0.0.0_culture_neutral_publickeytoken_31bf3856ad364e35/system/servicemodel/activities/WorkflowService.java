@@ -106,7 +106,10 @@ public class WorkflowService extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WorkflowService(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,12 @@ public class WorkflowService extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.WorkflowService.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowService() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +176,13 @@ public class WorkflowService extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetWorkflowRoot.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.WorkflowService.GetWorkflowRoot" target="_top">.NET documentation</a>
+     */
     public Activity GetWorkflowRoot() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +198,23 @@ public class WorkflowService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Validate.
+     *
+     * @param settings the argument of type {@code ValidationSettings}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.WorkflowService.Validate" target="_top">.NET documentation</a>
+     */
     public ValidationResults Validate(ValidationSettings settings) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +230,26 @@ public class WorkflowService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetContractDescriptions.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.WorkflowService.GetContractDescriptions" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 GetContractDescriptions() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.OverflowException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +269,13 @@ public class WorkflowService extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowBufferedReceive.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.WorkflowService.AllowBufferedReceive" target="_top">.NET documentation</a>
+     */
     public boolean getAllowBufferedReceive() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +290,13 @@ public class WorkflowService extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowBufferedReceive.
+     *
+     * @param AllowBufferedReceive the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.WorkflowService.AllowBufferedReceive" target="_top">.NET documentation</a>
+     */
     public void setAllowBufferedReceive(boolean AllowBufferedReceive) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +307,13 @@ public class WorkflowService extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Body.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.WorkflowService.Body" target="_top">.NET documentation</a>
+     */
     public Activity getBody() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +329,13 @@ public class WorkflowService extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Body.
+     *
+     * @param Body the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.WorkflowService.Body" target="_top">.NET documentation</a>
+     */
     public void setBody(Activity Body) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +346,13 @@ public class WorkflowService extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefinitionIdentity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.WorkflowService.DefinitionIdentity" target="_top">.NET documentation</a>
+     */
     public WorkflowIdentity getDefinitionIdentity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +368,13 @@ public class WorkflowService extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefinitionIdentity.
+     *
+     * @param DefinitionIdentity the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.WorkflowService.DefinitionIdentity" target="_top">.NET documentation</a>
+     */
     public void setDefinitionIdentity(WorkflowIdentity DefinitionIdentity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +385,15 @@ public class WorkflowService extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UpdateMaps.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.WorkflowService.UpdateMaps" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 getUpdateMaps() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +409,13 @@ public class WorkflowService extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Endpoints.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.WorkflowService.Endpoints" target="_top">.NET documentation</a>
+     */
     public Collection_1 getEndpoints() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +431,13 @@ public class WorkflowService extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ImplementedContracts.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.WorkflowService.ImplementedContracts" target="_top">.NET documentation</a>
+     */
     public Collection_1 getImplementedContracts() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +453,13 @@ public class WorkflowService extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConfigurationName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.WorkflowService.ConfigurationName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getConfigurationName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -349,6 +474,13 @@ public class WorkflowService extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConfigurationName.
+     *
+     * @param ConfigurationName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.WorkflowService.ConfigurationName" target="_top">.NET documentation</a>
+     */
     public void setConfigurationName(java.lang.String ConfigurationName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -359,6 +491,13 @@ public class WorkflowService extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.WorkflowService.Name" target="_top">.NET documentation</a>
+     */
     public XName getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -374,6 +513,13 @@ public class WorkflowService extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.WorkflowService.Name" target="_top">.NET documentation</a>
+     */
     public void setName(XName Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class ConfigurationBuilder extends system.configuration.provider.Provider
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ConfigurationBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,14 @@ public class ConfigurationBuilder extends system.configuration.provider.Provider
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ProcessConfigurationSection.
+     *
+     * @param configSection the argument of type {@code ConfigurationSection}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationBuilder.ProcessConfigurationSection" target="_top">.NET documentation</a>
+     */
     public ConfigurationSection ProcessConfigurationSection(ConfigurationSection configSection) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +180,14 @@ public class ConfigurationBuilder extends system.configuration.provider.Provider
         }
     }
 
+    /**
+     * Invokes the .NET member ProcessRawXml.
+     *
+     * @param rawXml the argument of type {@code XmlNode}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationBuilder.ProcessRawXml" target="_top">.NET documentation</a>
+     */
     public XmlNode ProcessRawXml(XmlNode rawXml) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

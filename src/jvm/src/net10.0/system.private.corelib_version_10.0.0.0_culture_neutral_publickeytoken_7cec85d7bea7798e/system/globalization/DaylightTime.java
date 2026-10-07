@@ -100,7 +100,10 @@ public class DaylightTime extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DaylightTime(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,15 @@ public class DaylightTime extends NetObject  {
     public DaylightTime() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param start the argument of type {@code DateTime}
+     * @param end the argument of type {@code DateTime}
+     * @param delta the argument of type {@code TimeSpan}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.DaylightTime.-ctor" target="_top">.NET documentation</a>
+     */
     public DaylightTime(DateTime start, DateTime end, TimeSpan delta) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +181,13 @@ public class DaylightTime extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property End.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.DaylightTime.End" target="_top">.NET documentation</a>
+     */
     public DateTime getEnd() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +203,13 @@ public class DaylightTime extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Start.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.DaylightTime.Start" target="_top">.NET documentation</a>
+     */
     public DateTime getStart() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +225,13 @@ public class DaylightTime extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Delta.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.DaylightTime.Delta" target="_top">.NET documentation</a>
+     */
     public TimeSpan getDelta() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

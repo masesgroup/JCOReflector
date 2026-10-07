@@ -100,7 +100,10 @@ public class XpsResourceStream extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XpsResourceStream(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class XpsResourceStream extends NetObject  {
     public XpsResourceStream() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param stream the argument of type {@code Stream}
+     * @param uri the argument of type {@code Uri}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.XpsResourceStream.-ctor" target="_top">.NET documentation</a>
+     */
     public XpsResourceStream(Stream stream, Uri uri) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +176,12 @@ public class XpsResourceStream extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Initialize.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.XpsResourceStream.Initialize" target="_top">.NET documentation</a>
+     */
     public void Initialize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +196,13 @@ public class XpsResourceStream extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Stream.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.XpsResourceStream.Stream" target="_top">.NET documentation</a>
+     */
     public Stream getStream() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +218,13 @@ public class XpsResourceStream extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Uri.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.XpsResourceStream.Uri" target="_top">.NET documentation</a>
+     */
     public Uri getUri() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

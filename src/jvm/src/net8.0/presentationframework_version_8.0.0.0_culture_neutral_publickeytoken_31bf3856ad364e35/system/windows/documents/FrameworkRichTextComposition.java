@@ -100,7 +100,10 @@ public class FrameworkRichTextComposition extends system.windows.documents.Frame
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FrameworkRichTextComposition(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class FrameworkRichTextComposition extends system.windows.documents.Frame
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CompositionEnd.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.FrameworkRichTextComposition.CompositionEnd" target="_top">.NET documentation</a>
+     */
     public TextPointer getCompositionEnd() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +184,13 @@ public class FrameworkRichTextComposition extends system.windows.documents.Frame
         }
     }
 
+    /**
+     * Gets the value of the .NET property CompositionStart.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.FrameworkRichTextComposition.CompositionStart" target="_top">.NET documentation</a>
+     */
     public TextPointer getCompositionStart() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +206,13 @@ public class FrameworkRichTextComposition extends system.windows.documents.Frame
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResultEnd.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.FrameworkRichTextComposition.ResultEnd" target="_top">.NET documentation</a>
+     */
     public TextPointer getResultEnd() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +228,13 @@ public class FrameworkRichTextComposition extends system.windows.documents.Frame
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResultStart.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.FrameworkRichTextComposition.ResultStart" target="_top">.NET documentation</a>
+     */
     public TextPointer getResultStart() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

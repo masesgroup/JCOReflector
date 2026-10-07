@@ -100,7 +100,10 @@ public class AuthenticationInformation extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AuthenticationInformation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class AuthenticationInformation extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.AuthenticationInformation.-ctor" target="_top">.NET documentation</a>
+     */
     public AuthenticationInformation() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class AuthenticationInformation extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AuthorizationContexts.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.AuthenticationInformation.AuthorizationContexts" target="_top">.NET documentation</a>
+     */
     public Collection_1 getAuthorizationContexts() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +196,13 @@ public class AuthenticationInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NotOnOrAfter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.AuthenticationInformation.NotOnOrAfter" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getNotOnOrAfter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +218,13 @@ public class AuthenticationInformation extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NotOnOrAfter.
+     *
+     * @param NotOnOrAfter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.AuthenticationInformation.NotOnOrAfter" target="_top">.NET documentation</a>
+     */
     public void setNotOnOrAfter(Nullable_1 NotOnOrAfter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +235,13 @@ public class AuthenticationInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Address.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.AuthenticationInformation.Address" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAddress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +256,13 @@ public class AuthenticationInformation extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Address.
+     *
+     * @param Address the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.AuthenticationInformation.Address" target="_top">.NET documentation</a>
+     */
     public void setAddress(java.lang.String Address) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +273,13 @@ public class AuthenticationInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DnsName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.AuthenticationInformation.DnsName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDnsName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +294,13 @@ public class AuthenticationInformation extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DnsName.
+     *
+     * @param DnsName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.AuthenticationInformation.DnsName" target="_top">.NET documentation</a>
+     */
     public void setDnsName(java.lang.String DnsName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +311,13 @@ public class AuthenticationInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Session.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.AuthenticationInformation.Session" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSession() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +332,13 @@ public class AuthenticationInformation extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Session.
+     *
+     * @param Session the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.AuthenticationInformation.Session" target="_top">.NET documentation</a>
+     */
     public void setSession(java.lang.String Session) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

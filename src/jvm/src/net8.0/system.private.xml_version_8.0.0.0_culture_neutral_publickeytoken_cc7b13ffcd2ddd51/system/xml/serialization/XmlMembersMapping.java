@@ -100,7 +100,10 @@ public class XmlMembersMapping extends system.xml.serialization.XmlMapping  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlMembersMapping(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class XmlMembersMapping extends system.xml.serialization.XmlMapping  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Count.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlMembersMapping.Count" target="_top">.NET documentation</a>
+     */
     public int getCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +209,13 @@ public class XmlMembersMapping extends system.xml.serialization.XmlMapping  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlMembersMapping.TypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +230,13 @@ public class XmlMembersMapping extends system.xml.serialization.XmlMapping  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeNamespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlMembersMapping.TypeNamespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTypeNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -103,7 +103,10 @@ public class SourceLocationProvider extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SourceLocationProvider(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,25 @@ public class SourceLocationProvider extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetSourceLocations.
+     *
+     * @param rootActivity the argument of type {@code Activity}
+     * @param symbol the argument of type {@code WorkflowSymbol}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Debugger.SourceLocationProvider.GetSourceLocations" target="_top">.NET documentation</a>
+     */
     public static Dictionary_2 GetSourceLocations(Activity rootActivity, WorkflowSymbol symbol) throws Throwable, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -171,6 +193,26 @@ public class SourceLocationProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetSymbols.
+     *
+     * @param rootActivity the argument of type {@code Activity}
+     * @param sourceLocations the argument of type {@code Dictionary_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Debugger.SourceLocationProvider.GetSymbols" target="_top">.NET documentation</a>
+     */
     public static ICollection_1 GetSymbols(Activity rootActivity, Dictionary_2 sourceLocations) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.FormatException, system.NotImplementedException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -186,6 +228,29 @@ public class SourceLocationProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CollectMapping.
+     *
+     * @param rootActivity1 the argument of type {@code Activity}
+     * @param rootActivity2 the argument of type {@code Activity}
+     * @param mapping the argument of type {@code Dictionary_2}
+     * @param path the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Debugger.SourceLocationProvider.CollectMapping" target="_top">.NET documentation</a>
+     */
     public static void CollectMapping(Activity rootActivity1, Activity rootActivity2, Dictionary_2 mapping, java.lang.String path) throws Throwable, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.threading.ThreadAbortException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

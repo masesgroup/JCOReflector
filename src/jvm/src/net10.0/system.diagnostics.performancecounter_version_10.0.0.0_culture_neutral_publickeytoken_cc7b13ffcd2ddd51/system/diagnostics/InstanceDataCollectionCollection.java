@@ -102,7 +102,10 @@ public class InstanceDataCollectionCollection extends system.collections.Diction
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public InstanceDataCollectionCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class InstanceDataCollectionCollection extends system.collections.Diction
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.InstanceDataCollectionCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public InstanceDataCollectionCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,25 @@ public class InstanceDataCollectionCollection extends system.collections.Diction
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param counterName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.InstanceDataCollectionCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(java.lang.String counterName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +205,14 @@ public class InstanceDataCollectionCollection extends system.collections.Diction
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param counters the argument of type {@code InstanceDataCollection[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.InstanceDataCollectionCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(InstanceDataCollection[] counters, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +227,13 @@ public class InstanceDataCollectionCollection extends system.collections.Diction
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Keys.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.InstanceDataCollectionCollection.Keys" target="_top">.NET documentation</a>
+     */
     public ICollection getKeys() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +249,13 @@ public class InstanceDataCollectionCollection extends system.collections.Diction
         }
     }
 
+    /**
+     * Gets the value of the .NET property Values.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.InstanceDataCollectionCollection.Values" target="_top">.NET documentation</a>
+     */
     public ICollection getValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

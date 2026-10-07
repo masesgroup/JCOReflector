@@ -104,7 +104,10 @@ public class ObjectAce extends system.security.accesscontrol.QualifiedAce  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ObjectAce(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,29 @@ public class ObjectAce extends system.security.accesscontrol.QualifiedAce  {
     public ObjectAce() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param aceFlags the argument of type {@code AceFlags}
+     * @param qualifier the argument of type {@code AceQualifier}
+     * @param accessMask the argument of type {@code int}
+     * @param sid the argument of type {@code SecurityIdentifier}
+     * @param flags the argument of type {@code ObjectAceFlags}
+     * @param type the argument of type {@code Guid}
+     * @param inheritedType the argument of type {@code Guid}
+     * @param isCallback the argument of type {@code boolean}
+     * @param opaque the argument of type {@code byte[]}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.ObjectAce.-ctor" target="_top">.NET documentation</a>
+     */
     public ObjectAce(AceFlags aceFlags, AceQualifier qualifier, int accessMask, SecurityIdentifier sid, ObjectAceFlags flags, Guid type, Guid inheritedType, boolean isCallback, byte[] opaque) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +195,14 @@ public class ObjectAce extends system.security.accesscontrol.QualifiedAce  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member MaxOpaqueLength.
+     *
+     * @param isCallback the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.ObjectAce.MaxOpaqueLength" target="_top">.NET documentation</a>
+     */
     public static int MaxOpaqueLength(boolean isCallback) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -209,6 +243,23 @@ public class ObjectAce extends system.security.accesscontrol.QualifiedAce  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetBinaryForm.
+     *
+     * @param binaryForm the argument of type {@code byte[]}
+     * @param offset the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.ObjectAce.GetBinaryForm" target="_top">.NET documentation</a>
+     */
     public void GetBinaryForm(byte[] binaryForm, int offset) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +270,23 @@ public class ObjectAce extends system.security.accesscontrol.QualifiedAce  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetBinaryForm.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.ObjectAce.GetBinaryForm" target="_top">.NET documentation</a>
+     */
     public void GetBinaryForm(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +301,13 @@ public class ObjectAce extends system.security.accesscontrol.QualifiedAce  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property InheritedObjectAceType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.ObjectAce.InheritedObjectAceType" target="_top">.NET documentation</a>
+     */
     public Guid getInheritedObjectAceType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +323,13 @@ public class ObjectAce extends system.security.accesscontrol.QualifiedAce  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InheritedObjectAceType.
+     *
+     * @param InheritedObjectAceType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.ObjectAce.InheritedObjectAceType" target="_top">.NET documentation</a>
+     */
     public void setInheritedObjectAceType(Guid InheritedObjectAceType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +340,13 @@ public class ObjectAce extends system.security.accesscontrol.QualifiedAce  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ObjectAceType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.ObjectAce.ObjectAceType" target="_top">.NET documentation</a>
+     */
     public Guid getObjectAceType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +362,13 @@ public class ObjectAce extends system.security.accesscontrol.QualifiedAce  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ObjectAceType.
+     *
+     * @param ObjectAceType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.ObjectAce.ObjectAceType" target="_top">.NET documentation</a>
+     */
     public void setObjectAceType(Guid ObjectAceType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +379,13 @@ public class ObjectAce extends system.security.accesscontrol.QualifiedAce  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ObjectAceFlags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.ObjectAce.ObjectAceFlags" target="_top">.NET documentation</a>
+     */
     public ObjectAceFlags getObjectAceFlags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +401,13 @@ public class ObjectAce extends system.security.accesscontrol.QualifiedAce  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ObjectAceFlags.
+     *
+     * @param ObjectAceFlags the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.ObjectAce.ObjectAceFlags" target="_top">.NET documentation</a>
+     */
     public void setObjectAceFlags(ObjectAceFlags ObjectAceFlags) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

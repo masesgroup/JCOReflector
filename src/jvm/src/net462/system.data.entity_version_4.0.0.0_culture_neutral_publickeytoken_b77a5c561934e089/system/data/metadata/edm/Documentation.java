@@ -100,7 +100,10 @@ public class Documentation extends system.data.metadata.edm.MetadataItem  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Documentation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class Documentation extends system.data.metadata.edm.MetadataItem  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsEmpty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.Documentation.IsEmpty" target="_top">.NET documentation</a>
+     */
     public boolean getIsEmpty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +183,13 @@ public class Documentation extends system.data.metadata.edm.MetadataItem  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LongDescription.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.Documentation.LongDescription" target="_top">.NET documentation</a>
+     */
     public java.lang.String getLongDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +204,13 @@ public class Documentation extends system.data.metadata.edm.MetadataItem  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LongDescription.
+     *
+     * @param LongDescription the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.Documentation.LongDescription" target="_top">.NET documentation</a>
+     */
     public void setLongDescription(java.lang.String LongDescription) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +221,13 @@ public class Documentation extends system.data.metadata.edm.MetadataItem  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Summary.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.Documentation.Summary" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSummary() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +242,13 @@ public class Documentation extends system.data.metadata.edm.MetadataItem  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Summary.
+     *
+     * @param Summary the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.Documentation.Summary" target="_top">.NET documentation</a>
+     */
     public void setSummary(java.lang.String Summary) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

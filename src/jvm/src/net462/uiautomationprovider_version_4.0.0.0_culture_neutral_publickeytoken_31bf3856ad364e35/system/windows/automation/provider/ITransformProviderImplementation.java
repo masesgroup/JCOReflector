@@ -98,7 +98,10 @@ public class ITransformProviderImplementation extends NetObject implements ITran
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ITransformProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,14 @@ public class ITransformProviderImplementation extends NetObject implements ITran
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Move.
+     *
+     * @param x the argument of type {@code double}
+     * @param y the argument of type {@code double}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITransformProvider.Move" target="_top">.NET documentation</a>
+     */
     public void Move(double x, double y) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -150,6 +161,14 @@ public class ITransformProviderImplementation extends NetObject implements ITran
         }
     }
 
+    /**
+     * Invokes the .NET member Resize.
+     *
+     * @param width the argument of type {@code double}
+     * @param height the argument of type {@code double}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITransformProvider.Resize" target="_top">.NET documentation</a>
+     */
     public void Resize(double width, double height) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -160,6 +179,13 @@ public class ITransformProviderImplementation extends NetObject implements ITran
         }
     }
 
+    /**
+     * Invokes the .NET member Rotate.
+     *
+     * @param degrees the argument of type {@code double}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITransformProvider.Rotate" target="_top">.NET documentation</a>
+     */
     public void Rotate(double degrees) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +200,13 @@ public class ITransformProviderImplementation extends NetObject implements ITran
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CanMove.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITransformProvider.CanMove" target="_top">.NET documentation</a>
+     */
     public boolean getCanMove() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +221,13 @@ public class ITransformProviderImplementation extends NetObject implements ITran
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanResize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITransformProvider.CanResize" target="_top">.NET documentation</a>
+     */
     public boolean getCanResize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +242,13 @@ public class ITransformProviderImplementation extends NetObject implements ITran
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanRotate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITransformProvider.CanRotate" target="_top">.NET documentation</a>
+     */
     public boolean getCanRotate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

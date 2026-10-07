@@ -102,7 +102,10 @@ public class CalendarDataBindingHandler extends system.web.ui.design.DataBinding
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CalendarDataBindingHandler(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class CalendarDataBindingHandler extends system.web.ui.design.DataBinding
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.CalendarDataBindingHandler.-ctor" target="_top">.NET documentation</a>
+     */
     public CalendarDataBindingHandler() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,20 @@ public class CalendarDataBindingHandler extends system.web.ui.design.DataBinding
     
     // Methods section
     
+    /**
+     * Invokes the .NET member DataBindControl.
+     *
+     * @param designerHost the argument of type {@code IDesignerHost}
+     * @param control the argument of type {@code Control}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.CalendarDataBindingHandler.DataBindControl" target="_top">.NET documentation</a>
+     */
     public void DataBindControl(IDesignerHost designerHost, Control control) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidTimeZoneException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

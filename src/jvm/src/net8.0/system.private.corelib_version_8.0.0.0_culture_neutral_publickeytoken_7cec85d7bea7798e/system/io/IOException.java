@@ -103,7 +103,9 @@ public class IOException extends system.SystemException {
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public IOException(java.lang.Object instance) {
         super(instance);
@@ -164,6 +166,14 @@ public class IOException extends system.SystemException {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param hresult the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.IOException.-ctor" target="_top">.NET documentation</a>
+     */
     public IOException(java.lang.String message, int hresult) throws Throwable {
         try {
             // add reference to assemblyName.dll file

@@ -101,7 +101,10 @@ public class ExpressionVisitor extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ExpressionVisitor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,17 @@ public class ExpressionVisitor extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param nodes the argument of type {@code ReadOnlyCollection_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.ExpressionVisitor.Visit" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 Visit(ReadOnlyCollection_1 nodes) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +183,17 @@ public class ExpressionVisitor extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param <T> the type of the generic argument T
+     * @param nodes the argument of type {@code ReadOnlyCollection_1}
+     * @param elementVisitor the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.ExpressionVisitor.Visit" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> ReadOnlyCollection_1 Visit(ReadOnlyCollection_1 nodes, Func_2 elementVisitor) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -184,6 +209,19 @@ public class ExpressionVisitor extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member VisitAndConvert.
+     *
+     * @param <T> the type of the generic argument T
+     * @param nodes the argument of type {@code ReadOnlyCollection_1}
+     * @param callerName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.ExpressionVisitor.VisitAndConvert" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> ReadOnlyCollection_1 VisitAndConvert(ReadOnlyCollection_1 nodes, java.lang.String callerName) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +237,20 @@ public class ExpressionVisitor extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param node the argument of type {@code Expression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.ExpressionVisitor.Visit" target="_top">.NET documentation</a>
+     */
     public Expression Visit(Expression node) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -105,7 +105,10 @@ public class CanonicalTrackedInputFiles extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CanonicalTrackedInputFiles(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,32 @@ public class CanonicalTrackedInputFiles extends NetObject  {
     public CanonicalTrackedInputFiles() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param ownerTask the argument of type {@code ITask}
+     * @param tlogFiles the argument of type {@code ITaskItem[]}
+     * @param sourceFile the argument of type {@code ITaskItem}
+     * @param excludedInputPaths the argument of type {@code ITaskItem[]}
+     * @param outputs the argument of type {@code CanonicalTrackedOutputFiles}
+     * @param useMinimalRebuildOptimization the argument of type {@code boolean}
+     * @param maintainCompositeRootingMarkers the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.CanonicalTrackedInputFiles.-ctor" target="_top">.NET documentation</a>
+     */
     public CanonicalTrackedInputFiles(ITask ownerTask, ITaskItem[] tlogFiles, ITaskItem sourceFile, ITaskItem[] excludedInputPaths, CanonicalTrackedOutputFiles outputs, boolean useMinimalRebuildOptimization, boolean maintainCompositeRootingMarkers) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ArgumentException, system.io.PathTooLongException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.OutOfMemoryException, system.RankException, system.collections.generic.KeyNotFoundException, system.io.IOException {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +194,32 @@ public class CanonicalTrackedInputFiles extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param ownerTask the argument of type {@code ITask}
+     * @param tlogFiles the argument of type {@code ITaskItem[]}
+     * @param sourceFiles the argument of type {@code ITaskItem[]}
+     * @param excludedInputPaths the argument of type {@code ITaskItem[]}
+     * @param outputs the argument of type {@code ITaskItem[]}
+     * @param useMinimalRebuildOptimization the argument of type {@code boolean}
+     * @param maintainCompositeRootingMarkers the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.CanonicalTrackedInputFiles.-ctor" target="_top">.NET documentation</a>
+     */
     public CanonicalTrackedInputFiles(ITask ownerTask, ITaskItem[] tlogFiles, ITaskItem[] sourceFiles, ITaskItem[] excludedInputPaths, ITaskItem[] outputs, boolean useMinimalRebuildOptimization, boolean maintainCompositeRootingMarkers) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ArgumentException, system.io.PathTooLongException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.OutOfMemoryException, system.RankException, system.collections.generic.KeyNotFoundException, system.io.IOException {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +230,32 @@ public class CanonicalTrackedInputFiles extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param ownerTask the argument of type {@code ITask}
+     * @param tlogFiles the argument of type {@code ITaskItem[]}
+     * @param sourceFiles the argument of type {@code ITaskItem[]}
+     * @param excludedInputPaths the argument of type {@code ITaskItem[]}
+     * @param outputs the argument of type {@code CanonicalTrackedOutputFiles}
+     * @param useMinimalRebuildOptimization the argument of type {@code boolean}
+     * @param maintainCompositeRootingMarkers the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.CanonicalTrackedInputFiles.-ctor" target="_top">.NET documentation</a>
+     */
     public CanonicalTrackedInputFiles(ITask ownerTask, ITaskItem[] tlogFiles, ITaskItem[] sourceFiles, ITaskItem[] excludedInputPaths, CanonicalTrackedOutputFiles outputs, boolean useMinimalRebuildOptimization, boolean maintainCompositeRootingMarkers) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ArgumentException, system.io.PathTooLongException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.OutOfMemoryException, system.RankException, system.collections.generic.KeyNotFoundException, system.io.IOException {
         try {
             // add reference to assemblyName.dll file
@@ -185,6 +266,31 @@ public class CanonicalTrackedInputFiles extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param tlogFiles the argument of type {@code ITaskItem[]}
+     * @param sourceFiles the argument of type {@code ITaskItem[]}
+     * @param excludedInputPaths the argument of type {@code ITaskItem[]}
+     * @param outputs the argument of type {@code CanonicalTrackedOutputFiles}
+     * @param useMinimalRebuildOptimization the argument of type {@code boolean}
+     * @param maintainCompositeRootingMarkers the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.CanonicalTrackedInputFiles.-ctor" target="_top">.NET documentation</a>
+     */
     public CanonicalTrackedInputFiles(ITaskItem[] tlogFiles, ITaskItem[] sourceFiles, ITaskItem[] excludedInputPaths, CanonicalTrackedOutputFiles outputs, boolean useMinimalRebuildOptimization, boolean maintainCompositeRootingMarkers) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ArgumentException, system.io.PathTooLongException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.OutOfMemoryException, system.RankException, system.collections.generic.KeyNotFoundException, system.io.IOException {
         try {
             // add reference to assemblyName.dll file
@@ -195,6 +301,30 @@ public class CanonicalTrackedInputFiles extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param tlogFiles the argument of type {@code ITaskItem[]}
+     * @param sourceFiles the argument of type {@code ITaskItem[]}
+     * @param outputs the argument of type {@code CanonicalTrackedOutputFiles}
+     * @param useMinimalRebuildOptimization the argument of type {@code boolean}
+     * @param maintainCompositeRootingMarkers the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.CanonicalTrackedInputFiles.-ctor" target="_top">.NET documentation</a>
+     */
     public CanonicalTrackedInputFiles(ITaskItem[] tlogFiles, ITaskItem[] sourceFiles, CanonicalTrackedOutputFiles outputs, boolean useMinimalRebuildOptimization, boolean maintainCompositeRootingMarkers) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ArgumentException, system.io.PathTooLongException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.OutOfMemoryException, system.RankException, system.collections.generic.KeyNotFoundException, system.io.IOException {
         try {
             // add reference to assemblyName.dll file
@@ -210,6 +340,15 @@ public class CanonicalTrackedInputFiles extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member FileIsExcludedFromDependencyCheck.
+     *
+     * @param fileName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.CanonicalTrackedInputFiles.FileIsExcludedFromDependencyCheck" target="_top">.NET documentation</a>
+     */
     public boolean FileIsExcludedFromDependencyCheck(java.lang.String fileName) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +363,29 @@ public class CanonicalTrackedInputFiles extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ComputeSourcesNeedingCompilation.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.CanonicalTrackedInputFiles.ComputeSourcesNeedingCompilation" target="_top">.NET documentation</a>
+     */
     public ITaskItem[] ComputeSourcesNeedingCompilation() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.RankException, system.OutOfMemoryException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.OperationCanceledException, system.threading.tasks.TaskSchedulerException, system.threading.ThreadAbortException, system.AggregateException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +407,32 @@ public class CanonicalTrackedInputFiles extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ComputeSourcesNeedingCompilation.
+     *
+     * @param searchForSubRootsInCompositeRootingMarkers the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.CanonicalTrackedInputFiles.ComputeSourcesNeedingCompilation" target="_top">.NET documentation</a>
+     */
     public ITaskItem[] ComputeSourcesNeedingCompilation(boolean searchForSubRootsInCompositeRootingMarkers) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.RankException, system.InvalidOperationException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.IndexOutOfRangeException, system.OperationCanceledException, system.NullReferenceException, system.ObjectDisposedException, system.threading.tasks.TaskSchedulerException, system.threading.ThreadAbortException, system.AggregateException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +454,25 @@ public class CanonicalTrackedInputFiles extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveDependenciesFromEntryIfMissing.
+     *
+     * @param source the argument of type {@code ITaskItem}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.CanonicalTrackedInputFiles.RemoveDependenciesFromEntryIfMissing" target="_top">.NET documentation</a>
+     */
     public void RemoveDependenciesFromEntryIfMissing(ITaskItem source) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +483,26 @@ public class CanonicalTrackedInputFiles extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveDependenciesFromEntryIfMissing.
+     *
+     * @param source the argument of type {@code ITaskItem}
+     * @param correspondingOutput the argument of type {@code ITaskItem}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.CanonicalTrackedInputFiles.RemoveDependenciesFromEntryIfMissing" target="_top">.NET documentation</a>
+     */
     public void RemoveDependenciesFromEntryIfMissing(ITaskItem source, ITaskItem correspondingOutput) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +513,25 @@ public class CanonicalTrackedInputFiles extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveDependenciesFromEntryIfMissing.
+     *
+     * @param source the argument of type {@code ITaskItem[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.CanonicalTrackedInputFiles.RemoveDependenciesFromEntryIfMissing" target="_top">.NET documentation</a>
+     */
     public void RemoveDependenciesFromEntryIfMissing(ITaskItem[] source) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -296,6 +542,32 @@ public class CanonicalTrackedInputFiles extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveDependenciesFromEntryIfMissing.
+     *
+     * @param source the argument of type {@code ITaskItem[]}
+     * @param correspondingOutputs the argument of type {@code ITaskItem[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.CanonicalTrackedInputFiles.RemoveDependenciesFromEntryIfMissing" target="_top">.NET documentation</a>
+     */
     public void RemoveDependenciesFromEntryIfMissing(ITaskItem[] source, ITaskItem[] correspondingOutputs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.RankException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +578,25 @@ public class CanonicalTrackedInputFiles extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveDependencyFromEntry.
+     *
+     * @param source the argument of type {@code ITaskItem}
+     * @param dependencyToRemove the argument of type {@code ITaskItem}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.CanonicalTrackedInputFiles.RemoveDependencyFromEntry" target="_top">.NET documentation</a>
+     */
     public void RemoveDependencyFromEntry(ITaskItem source, ITaskItem dependencyToRemove) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -316,6 +607,25 @@ public class CanonicalTrackedInputFiles extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveDependencyFromEntry.
+     *
+     * @param sources the argument of type {@code ITaskItem[]}
+     * @param dependencyToRemove the argument of type {@code ITaskItem}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.CanonicalTrackedInputFiles.RemoveDependencyFromEntry" target="_top">.NET documentation</a>
+     */
     public void RemoveDependencyFromEntry(ITaskItem[] sources, ITaskItem dependencyToRemove) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -326,6 +636,22 @@ public class CanonicalTrackedInputFiles extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveEntriesForSource.
+     *
+     * @param source the argument of type {@code ITaskItem}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.CanonicalTrackedInputFiles.RemoveEntriesForSource" target="_top">.NET documentation</a>
+     */
     public void RemoveEntriesForSource(ITaskItem source) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.RankException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -336,6 +662,24 @@ public class CanonicalTrackedInputFiles extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveEntriesForSource.
+     *
+     * @param source the argument of type {@code ITaskItem[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.CanonicalTrackedInputFiles.RemoveEntriesForSource" target="_top">.NET documentation</a>
+     */
     public void RemoveEntriesForSource(ITaskItem[] source) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -346,6 +690,14 @@ public class CanonicalTrackedInputFiles extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveEntryForSourceRoot.
+     *
+     * @param rootingMarker the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.CanonicalTrackedInputFiles.RemoveEntryForSourceRoot" target="_top">.NET documentation</a>
+     */
     public void RemoveEntryForSourceRoot(java.lang.String rootingMarker) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -356,6 +708,32 @@ public class CanonicalTrackedInputFiles extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SaveTlog.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.CanonicalTrackedInputFiles.SaveTlog" target="_top">.NET documentation</a>
+     */
     public void SaveTlog() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.RankException, system.InvalidOperationException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.FormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -366,6 +744,33 @@ public class CanonicalTrackedInputFiles extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SaveTlog.
+     *
+     * @param includeInTLog the argument of type {@code DependencyFilter}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.CanonicalTrackedInputFiles.SaveTlog" target="_top">.NET documentation</a>
+     */
     public void SaveTlog(DependencyFilter includeInTLog) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.RankException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -380,6 +785,13 @@ public class CanonicalTrackedInputFiles extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DependencyTable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.CanonicalTrackedInputFiles.DependencyTable" target="_top">.NET documentation</a>
+     */
     public Dictionary_2 getDependencyTable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

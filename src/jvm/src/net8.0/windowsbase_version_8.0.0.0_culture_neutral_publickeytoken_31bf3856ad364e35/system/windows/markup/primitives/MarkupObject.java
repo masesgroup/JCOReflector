@@ -103,7 +103,10 @@ public class MarkupObject extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MarkupObject(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,13 @@ public class MarkupObject extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AssignRootContext.
+     *
+     * @param context the argument of type {@code IValueSerializerContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Primitives.MarkupObject.AssignRootContext" target="_top">.NET documentation</a>
+     */
     public void AssignRootContext(IValueSerializerContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +180,13 @@ public class MarkupObject extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Properties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Primitives.MarkupObject.Properties" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 getProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +202,13 @@ public class MarkupObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Attributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Primitives.MarkupObject.Attributes" target="_top">.NET documentation</a>
+     */
     public AttributeCollection getAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +224,13 @@ public class MarkupObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Instance.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Primitives.MarkupObject.Instance" target="_top">.NET documentation</a>
+     */
     public NetObject getInstance() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +246,13 @@ public class MarkupObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ObjectType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Primitives.MarkupObject.ObjectType" target="_top">.NET documentation</a>
+     */
     public NetType getObjectType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

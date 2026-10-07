@@ -103,7 +103,9 @@ public class PlatformNotSupportedException extends system.NotSupportedException 
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public PlatformNotSupportedException(java.lang.Object instance) {
         super(instance);

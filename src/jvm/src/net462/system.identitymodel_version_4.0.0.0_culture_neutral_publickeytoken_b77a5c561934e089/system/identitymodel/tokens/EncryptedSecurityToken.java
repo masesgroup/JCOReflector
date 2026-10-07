@@ -104,7 +104,10 @@ public class EncryptedSecurityToken extends system.identitymodel.tokens.Security
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EncryptedSecurityToken(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,25 @@ public class EncryptedSecurityToken extends system.identitymodel.tokens.Security
     public EncryptedSecurityToken() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param token the argument of type {@code SecurityToken}
+     * @param encryptingCredentials the argument of type {@code EncryptingCredentials}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.EncryptedSecurityToken.-ctor" target="_top">.NET documentation</a>
+     */
     public EncryptedSecurityToken(SecurityToken token, EncryptingCredentials encryptingCredentials) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +191,14 @@ public class EncryptedSecurityToken extends system.identitymodel.tokens.Security
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CanCreateKeyIdentifierClause.
+     *
+     * @param <T> the type of the generic argument T
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.EncryptedSecurityToken.CanCreateKeyIdentifierClause" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> boolean CanCreateKeyIdentifierClause() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +213,14 @@ public class EncryptedSecurityToken extends system.identitymodel.tokens.Security
         }
     }
 
+    /**
+     * Invokes the .NET member MatchesKeyIdentifierClause.
+     *
+     * @param keyIdentifierClause the argument of type {@code SecurityKeyIdentifierClause}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.EncryptedSecurityToken.MatchesKeyIdentifierClause" target="_top">.NET documentation</a>
+     */
     public boolean MatchesKeyIdentifierClause(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +235,14 @@ public class EncryptedSecurityToken extends system.identitymodel.tokens.Security
         }
     }
 
+    /**
+     * Invokes the .NET member ResolveKeyIdentifierClause.
+     *
+     * @param keyIdentifierClause the argument of type {@code SecurityKeyIdentifierClause}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.EncryptedSecurityToken.ResolveKeyIdentifierClause" target="_top">.NET documentation</a>
+     */
     public SecurityKey ResolveKeyIdentifierClause(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +262,13 @@ public class EncryptedSecurityToken extends system.identitymodel.tokens.Security
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EncryptingCredentials.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.EncryptedSecurityToken.EncryptingCredentials" target="_top">.NET documentation</a>
+     */
     public EncryptingCredentials getEncryptingCredentials() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +284,13 @@ public class EncryptedSecurityToken extends system.identitymodel.tokens.Security
         }
     }
 
+    /**
+     * Gets the value of the .NET property Token.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.EncryptedSecurityToken.Token" target="_top">.NET documentation</a>
+     */
     public SecurityToken getToken() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

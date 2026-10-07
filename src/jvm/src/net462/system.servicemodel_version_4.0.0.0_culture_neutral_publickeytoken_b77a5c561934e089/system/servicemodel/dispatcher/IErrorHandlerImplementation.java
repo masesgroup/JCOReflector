@@ -100,7 +100,10 @@ public class IErrorHandlerImplementation extends NetObject implements IErrorHand
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IErrorHandlerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,14 @@ public class IErrorHandlerImplementation extends NetObject implements IErrorHand
 
     // Methods section
     
+    /**
+     * Invokes the .NET member HandleError.
+     *
+     * @param error the argument of type {@code NetException}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IErrorHandler.HandleError" target="_top">.NET documentation</a>
+     */
     public boolean HandleError(NetException error) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -156,6 +167,15 @@ public class IErrorHandlerImplementation extends NetObject implements IErrorHand
         }
     }
 
+    /**
+     * Invokes the .NET member ProvideFault.
+     *
+     * @param error the argument of type {@code NetException}
+     * @param version the argument of type {@code MessageVersion}
+     * @param fault the argument of type {@code JCORefOut<Message>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault" target="_top">.NET documentation</a>
+     */
     public void ProvideFault(NetException error, MessageVersion version, JCORefOut<Message> fault) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

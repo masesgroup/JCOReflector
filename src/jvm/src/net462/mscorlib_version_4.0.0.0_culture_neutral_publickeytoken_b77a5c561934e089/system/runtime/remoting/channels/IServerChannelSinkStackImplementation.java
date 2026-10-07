@@ -109,7 +109,10 @@ public class IServerChannelSinkStackImplementation extends NetObject implements 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IServerChannelSinkStackImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,15 @@ public class IServerChannelSinkStackImplementation extends NetObject implements 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetResponseStream.
+     *
+     * @param msg the argument of type {@code IMessage}
+     * @param headers the argument of type {@code ITransportHeaders}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IServerChannelSinkStack.GetResponseStream" target="_top">.NET documentation</a>
+     */
     public Stream GetResponseStream(IMessage msg, ITransportHeaders headers) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -166,6 +178,14 @@ public class IServerChannelSinkStackImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member Pop.
+     *
+     * @param sink the argument of type {@code IServerChannelSink}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IServerChannelSinkStack.Pop" target="_top">.NET documentation</a>
+     */
     public NetObject Pop(IServerChannelSink sink) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +201,15 @@ public class IServerChannelSinkStackImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member AsyncProcessResponse.
+     *
+     * @param msg the argument of type {@code IMessage}
+     * @param headers the argument of type {@code ITransportHeaders}
+     * @param stream the argument of type {@code Stream}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IServerChannelSinkStack.AsyncProcessResponse" target="_top">.NET documentation</a>
+     */
     public void AsyncProcessResponse(IMessage msg, ITransportHeaders headers, Stream stream) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +220,14 @@ public class IServerChannelSinkStackImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member Push.
+     *
+     * @param sink the argument of type {@code IServerChannelSink}
+     * @param state the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IServerChannelSinkStack.Push" target="_top">.NET documentation</a>
+     */
     public void Push(IServerChannelSink sink, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +238,13 @@ public class IServerChannelSinkStackImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member ServerCallback.
+     *
+     * @param ar the argument of type {@code IAsyncResult}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IServerChannelSinkStack.ServerCallback" target="_top">.NET documentation</a>
+     */
     public void ServerCallback(IAsyncResult ar) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +255,14 @@ public class IServerChannelSinkStackImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member Store.
+     *
+     * @param sink the argument of type {@code IServerChannelSink}
+     * @param state the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IServerChannelSinkStack.Store" target="_top">.NET documentation</a>
+     */
     public void Store(IServerChannelSink sink, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +273,14 @@ public class IServerChannelSinkStackImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member StoreAndDispatch.
+     *
+     * @param sink the argument of type {@code IServerChannelSink}
+     * @param state the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IServerChannelSinkStack.StoreAndDispatch" target="_top">.NET documentation</a>
+     */
     public void StoreAndDispatch(IServerChannelSink sink, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class AssemblyReference extends microsoft.build.tasks.deployment.manifest
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AssemblyReference(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class AssemblyReference extends microsoft.build.tasks.deployment.manifest
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference.-ctor" target="_top">.NET documentation</a>
+     */
     public AssemblyReference() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,19 @@ public class AssemblyReference extends microsoft.build.tasks.deployment.manifest
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference.-ctor" target="_top">.NET documentation</a>
+     */
     public AssemblyReference(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +198,13 @@ public class AssemblyReference extends microsoft.build.tasks.deployment.manifest
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsPrerequisite.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference.IsPrerequisite" target="_top">.NET documentation</a>
+     */
     public boolean getIsPrerequisite() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +219,13 @@ public class AssemblyReference extends microsoft.build.tasks.deployment.manifest
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsPrerequisite.
+     *
+     * @param IsPrerequisite the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference.IsPrerequisite" target="_top">.NET documentation</a>
+     */
     public void setIsPrerequisite(boolean IsPrerequisite) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +236,13 @@ public class AssemblyReference extends microsoft.build.tasks.deployment.manifest
         }
     }
 
+    /**
+     * Gets the value of the .NET property AssemblyIdentity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference.AssemblyIdentity" target="_top">.NET documentation</a>
+     */
     public AssemblyIdentity getAssemblyIdentity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +258,13 @@ public class AssemblyReference extends microsoft.build.tasks.deployment.manifest
         }
     }
 
+    /**
+     * Sets the value of the .NET property AssemblyIdentity.
+     *
+     * @param AssemblyIdentity the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference.AssemblyIdentity" target="_top">.NET documentation</a>
+     */
     public void setAssemblyIdentity(AssemblyIdentity AssemblyIdentity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +275,13 @@ public class AssemblyReference extends microsoft.build.tasks.deployment.manifest
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlAssemblyIdentity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference.XmlAssemblyIdentity" target="_top">.NET documentation</a>
+     */
     public AssemblyIdentity getXmlAssemblyIdentity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +297,13 @@ public class AssemblyReference extends microsoft.build.tasks.deployment.manifest
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlAssemblyIdentity.
+     *
+     * @param XmlAssemblyIdentity the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference.XmlAssemblyIdentity" target="_top">.NET documentation</a>
+     */
     public void setXmlAssemblyIdentity(AssemblyIdentity XmlAssemblyIdentity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +314,13 @@ public class AssemblyReference extends microsoft.build.tasks.deployment.manifest
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReferenceType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference.ReferenceType" target="_top">.NET documentation</a>
+     */
     public AssemblyReferenceType getReferenceType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +336,13 @@ public class AssemblyReference extends microsoft.build.tasks.deployment.manifest
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReferenceType.
+     *
+     * @param ReferenceType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference.ReferenceType" target="_top">.NET documentation</a>
+     */
     public void setReferenceType(AssemblyReferenceType ReferenceType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +353,13 @@ public class AssemblyReference extends microsoft.build.tasks.deployment.manifest
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlIsNative.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference.XmlIsNative" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlIsNative() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +374,19 @@ public class AssemblyReference extends microsoft.build.tasks.deployment.manifest
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlIsNative.
+     *
+     * @param XmlIsNative the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference.XmlIsNative" target="_top">.NET documentation</a>
+     */
     public void setXmlIsNative(java.lang.String XmlIsNative) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -299,6 +397,19 @@ public class AssemblyReference extends microsoft.build.tasks.deployment.manifest
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlIsPrerequisite.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference.XmlIsPrerequisite" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlIsPrerequisite() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -313,6 +424,19 @@ public class AssemblyReference extends microsoft.build.tasks.deployment.manifest
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlIsPrerequisite.
+     *
+     * @param XmlIsPrerequisite the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference.XmlIsPrerequisite" target="_top">.NET documentation</a>
+     */
     public void setXmlIsPrerequisite(java.lang.String XmlIsPrerequisite) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

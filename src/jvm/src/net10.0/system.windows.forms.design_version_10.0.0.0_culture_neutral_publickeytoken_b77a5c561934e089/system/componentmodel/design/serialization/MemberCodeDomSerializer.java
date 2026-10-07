@@ -103,7 +103,10 @@ public class MemberCodeDomSerializer extends system.componentmodel.design.serial
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MemberCodeDomSerializer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,16 @@ public class MemberCodeDomSerializer extends system.componentmodel.design.serial
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ShouldSerialize.
+     *
+     * @param manager the argument of type {@code IDesignerSerializationManager}
+     * @param value the argument of type {@code NetObject}
+     * @param descriptor the argument of type {@code MemberDescriptor}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.MemberCodeDomSerializer.ShouldSerialize" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerialize(IDesignerSerializationManager manager, NetObject value, MemberDescriptor descriptor) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +183,16 @@ public class MemberCodeDomSerializer extends system.componentmodel.design.serial
         }
     }
 
+    /**
+     * Invokes the .NET member Serialize.
+     *
+     * @param manager the argument of type {@code IDesignerSerializationManager}
+     * @param value the argument of type {@code NetObject}
+     * @param descriptor the argument of type {@code MemberDescriptor}
+     * @param statements the argument of type {@code CodeStatementCollection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.MemberCodeDomSerializer.Serialize" target="_top">.NET documentation</a>
+     */
     public void Serialize(IDesignerSerializationManager manager, NetObject value, MemberDescriptor descriptor, CodeStatementCollection statements) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

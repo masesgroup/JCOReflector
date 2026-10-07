@@ -102,7 +102,10 @@ public class DateTimeAutomationPeer extends system.windows.automation.peers.Auto
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DateTimeAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,20 @@ public class DateTimeAutomationPeer extends system.windows.automation.peers.Auto
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetPattern.
+     *
+     * @param patternInterface the argument of type {@code PatternInterface}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.DateTimeAutomationPeer.GetPattern" target="_top">.NET documentation</a>
+     */
     public NetObject GetPattern(PatternInterface patternInterface) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,8 +192,11 @@ public class DateTimeAutomationPeer extends system.windows.automation.peers.Auto
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToISelectionItemProvider method available in ISelectionItemProvider to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ISelectionItemProvider.AddToSelection" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void AddToSelection() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISelectionItemProvider to obtain the full interface.");
     }
@@ -184,8 +204,11 @@ public class DateTimeAutomationPeer extends system.windows.automation.peers.Auto
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToISelectionItemProvider method available in ISelectionItemProvider to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void RemoveFromSelection() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISelectionItemProvider to obtain the full interface.");
     }
@@ -193,8 +216,11 @@ public class DateTimeAutomationPeer extends system.windows.automation.peers.Auto
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToISelectionItemProvider method available in ISelectionItemProvider to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ISelectionItemProvider.Select" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Select() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISelectionItemProvider to obtain the full interface.");
     }
@@ -202,8 +228,12 @@ public class DateTimeAutomationPeer extends system.windows.automation.peers.Auto
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToITableItemProvider method available in ITableItemProvider to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITableItemProvider.GetColumnHeaderItems" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public IRawElementProviderSimple[] GetColumnHeaderItems() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITableItemProvider to obtain the full interface.");
     }
@@ -211,8 +241,12 @@ public class DateTimeAutomationPeer extends system.windows.automation.peers.Auto
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToITableItemProvider method available in ITableItemProvider to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITableItemProvider.GetRowHeaderItems" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public IRawElementProviderSimple[] GetRowHeaderItems() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITableItemProvider to obtain the full interface.");
     }
@@ -220,8 +254,11 @@ public class DateTimeAutomationPeer extends system.windows.automation.peers.Auto
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIInvokeProvider method available in IInvokeProvider to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IInvokeProvider.Invoke" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Invoke() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIInvokeProvider to obtain the full interface.");
     }
@@ -229,8 +266,11 @@ public class DateTimeAutomationPeer extends system.windows.automation.peers.Auto
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIVirtualizedItemProvider method available in IVirtualizedItemProvider to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IVirtualizedItemProvider.Realize" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Realize() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIVirtualizedItemProvider to obtain the full interface.");
     }

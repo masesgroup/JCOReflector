@@ -98,7 +98,10 @@ public class Header extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Header(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,14 @@ public class Header extends NetObject  {
     public Header() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param _Name the argument of type {@code java.lang.String}
+     * @param _Value the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.Header.-ctor" target="_top">.NET documentation</a>
+     */
     public Header(java.lang.String _Name, NetObject _Value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +169,15 @@ public class Header extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param _Name the argument of type {@code java.lang.String}
+     * @param _Value the argument of type {@code NetObject}
+     * @param _MustUnderstand the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.Header.-ctor" target="_top">.NET documentation</a>
+     */
     public Header(java.lang.String _Name, NetObject _Value, boolean _MustUnderstand) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +188,16 @@ public class Header extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param _Name the argument of type {@code java.lang.String}
+     * @param _Value the argument of type {@code NetObject}
+     * @param _MustUnderstand the argument of type {@code boolean}
+     * @param _HeaderNamespace the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.Header.-ctor" target="_top">.NET documentation</a>
+     */
     public Header(java.lang.String _Name, NetObject _Value, boolean _MustUnderstand, java.lang.String _HeaderNamespace) throws Throwable {
         try {
             // add reference to assemblyName.dll file

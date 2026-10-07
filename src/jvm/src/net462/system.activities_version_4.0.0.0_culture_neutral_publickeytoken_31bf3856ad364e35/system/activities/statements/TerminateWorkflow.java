@@ -100,7 +100,10 @@ public class TerminateWorkflow extends system.activities.NativeActivity  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TerminateWorkflow(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class TerminateWorkflow extends system.activities.NativeActivity  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.TerminateWorkflow.-ctor" target="_top">.NET documentation</a>
+     */
     public TerminateWorkflow() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class TerminateWorkflow extends system.activities.NativeActivity  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Exception.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.TerminateWorkflow.Exception" target="_top">.NET documentation</a>
+     */
     public InArgument_1 getException() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +196,13 @@ public class TerminateWorkflow extends system.activities.NativeActivity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Exception.
+     *
+     * @param Exception the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.TerminateWorkflow.Exception" target="_top">.NET documentation</a>
+     */
     public void setException(InArgument_1 Exception) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +213,13 @@ public class TerminateWorkflow extends system.activities.NativeActivity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Reason.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.TerminateWorkflow.Reason" target="_top">.NET documentation</a>
+     */
     public InArgument_1 getReason() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +235,13 @@ public class TerminateWorkflow extends system.activities.NativeActivity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Reason.
+     *
+     * @param Reason the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.TerminateWorkflow.Reason" target="_top">.NET documentation</a>
+     */
     public void setReason(InArgument_1 Reason) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

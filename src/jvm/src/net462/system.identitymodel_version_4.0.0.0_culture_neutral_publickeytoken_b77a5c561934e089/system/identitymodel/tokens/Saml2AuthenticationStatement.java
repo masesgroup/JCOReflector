@@ -103,7 +103,10 @@ public class Saml2AuthenticationStatement extends system.identitymodel.tokens.Sa
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Saml2AuthenticationStatement(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,25 @@ public class Saml2AuthenticationStatement extends system.identitymodel.tokens.Sa
     public Saml2AuthenticationStatement() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param authenticationContext the argument of type {@code Saml2AuthenticationContext}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2AuthenticationStatement.-ctor" target="_top">.NET documentation</a>
+     */
     public Saml2AuthenticationStatement(Saml2AuthenticationContext authenticationContext) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +185,27 @@ public class Saml2AuthenticationStatement extends system.identitymodel.tokens.Sa
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param authenticationContext the argument of type {@code Saml2AuthenticationContext}
+     * @param authenticationInstant the argument of type {@code DateTime}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2AuthenticationStatement.-ctor" target="_top">.NET documentation</a>
+     */
     public Saml2AuthenticationStatement(Saml2AuthenticationContext authenticationContext, DateTime authenticationInstant) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +225,13 @@ public class Saml2AuthenticationStatement extends system.identitymodel.tokens.Sa
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AuthenticationInstant.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2AuthenticationStatement.AuthenticationInstant" target="_top">.NET documentation</a>
+     */
     public DateTime getAuthenticationInstant() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +247,19 @@ public class Saml2AuthenticationStatement extends system.identitymodel.tokens.Sa
         }
     }
 
+    /**
+     * Sets the value of the .NET property AuthenticationInstant.
+     *
+     * @param AuthenticationInstant the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2AuthenticationStatement.AuthenticationInstant" target="_top">.NET documentation</a>
+     */
     public void setAuthenticationInstant(DateTime AuthenticationInstant) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +270,13 @@ public class Saml2AuthenticationStatement extends system.identitymodel.tokens.Sa
         }
     }
 
+    /**
+     * Gets the value of the .NET property AuthenticationContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2AuthenticationStatement.AuthenticationContext" target="_top">.NET documentation</a>
+     */
     public Saml2AuthenticationContext getAuthenticationContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +292,24 @@ public class Saml2AuthenticationStatement extends system.identitymodel.tokens.Sa
         }
     }
 
+    /**
+     * Sets the value of the .NET property AuthenticationContext.
+     *
+     * @param AuthenticationContext the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2AuthenticationStatement.AuthenticationContext" target="_top">.NET documentation</a>
+     */
     public void setAuthenticationContext(Saml2AuthenticationContext AuthenticationContext) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +320,13 @@ public class Saml2AuthenticationStatement extends system.identitymodel.tokens.Sa
         }
     }
 
+    /**
+     * Gets the value of the .NET property SubjectLocality.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2AuthenticationStatement.SubjectLocality" target="_top">.NET documentation</a>
+     */
     public Saml2SubjectLocality getSubjectLocality() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +342,13 @@ public class Saml2AuthenticationStatement extends system.identitymodel.tokens.Sa
         }
     }
 
+    /**
+     * Sets the value of the .NET property SubjectLocality.
+     *
+     * @param SubjectLocality the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2AuthenticationStatement.SubjectLocality" target="_top">.NET documentation</a>
+     */
     public void setSubjectLocality(Saml2SubjectLocality SubjectLocality) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +359,13 @@ public class Saml2AuthenticationStatement extends system.identitymodel.tokens.Sa
         }
     }
 
+    /**
+     * Gets the value of the .NET property SessionNotOnOrAfter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2AuthenticationStatement.SessionNotOnOrAfter" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getSessionNotOnOrAfter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +381,18 @@ public class Saml2AuthenticationStatement extends system.identitymodel.tokens.Sa
         }
     }
 
+    /**
+     * Sets the value of the .NET property SessionNotOnOrAfter.
+     *
+     * @param SessionNotOnOrAfter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2AuthenticationStatement.SessionNotOnOrAfter" target="_top">.NET documentation</a>
+     */
     public void setSessionNotOnOrAfter(Nullable_1 SessionNotOnOrAfter) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.OverflowException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +403,13 @@ public class Saml2AuthenticationStatement extends system.identitymodel.tokens.Sa
         }
     }
 
+    /**
+     * Gets the value of the .NET property SessionIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2AuthenticationStatement.SessionIndex" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSessionIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -296,6 +424,13 @@ public class Saml2AuthenticationStatement extends system.identitymodel.tokens.Sa
         }
     }
 
+    /**
+     * Sets the value of the .NET property SessionIndex.
+     *
+     * @param SessionIndex the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2AuthenticationStatement.SessionIndex" target="_top">.NET documentation</a>
+     */
     public void setSessionIndex(java.lang.String SessionIndex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

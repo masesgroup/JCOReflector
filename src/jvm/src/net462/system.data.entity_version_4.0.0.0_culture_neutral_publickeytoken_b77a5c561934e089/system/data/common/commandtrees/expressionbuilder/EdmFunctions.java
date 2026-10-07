@@ -100,7 +100,10 @@ public class EdmFunctions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EdmFunctions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,24 @@ public class EdmFunctions extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param searchedString the argument of type {@code DbExpression}
+     * @param searchedForString the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.Contains" target="_top">.NET documentation</a>
+     */
     public static DbExpression Contains(DbExpression searchedString, DbExpression searchedForString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -168,6 +189,23 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Abs.
+     *
+     * @param value the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.Abs" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression Abs(DbExpression value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -183,6 +221,24 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddDays.
+     *
+     * @param dateValue the argument of type {@code DbExpression}
+     * @param addValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.AddDays" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression AddDays(DbExpression dateValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -198,6 +254,24 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddHours.
+     *
+     * @param timeValue the argument of type {@code DbExpression}
+     * @param addValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.AddHours" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression AddHours(DbExpression timeValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -213,6 +287,24 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddMicroseconds.
+     *
+     * @param timeValue the argument of type {@code DbExpression}
+     * @param addValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.AddMicroseconds" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression AddMicroseconds(DbExpression timeValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -228,6 +320,24 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddMilliseconds.
+     *
+     * @param timeValue the argument of type {@code DbExpression}
+     * @param addValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.AddMilliseconds" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression AddMilliseconds(DbExpression timeValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -243,6 +353,24 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddMinutes.
+     *
+     * @param timeValue the argument of type {@code DbExpression}
+     * @param addValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.AddMinutes" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression AddMinutes(DbExpression timeValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -258,6 +386,24 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddMonths.
+     *
+     * @param dateValue the argument of type {@code DbExpression}
+     * @param addValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.AddMonths" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression AddMonths(DbExpression dateValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -273,6 +419,24 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddNanoseconds.
+     *
+     * @param timeValue the argument of type {@code DbExpression}
+     * @param addValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.AddNanoseconds" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression AddNanoseconds(DbExpression timeValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -288,6 +452,24 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddSeconds.
+     *
+     * @param timeValue the argument of type {@code DbExpression}
+     * @param addValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.AddSeconds" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression AddSeconds(DbExpression timeValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -303,6 +485,24 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddYears.
+     *
+     * @param dateValue the argument of type {@code DbExpression}
+     * @param addValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.AddYears" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression AddYears(DbExpression dateValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -318,6 +518,23 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Average.
+     *
+     * @param collection the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.Average" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression Average(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -333,6 +550,24 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BitwiseAnd.
+     *
+     * @param value1 the argument of type {@code DbExpression}
+     * @param value2 the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.BitwiseAnd" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression BitwiseAnd(DbExpression value1, DbExpression value2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -348,6 +583,23 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BitwiseNot.
+     *
+     * @param value the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.BitwiseNot" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression BitwiseNot(DbExpression value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -363,6 +615,24 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BitwiseOr.
+     *
+     * @param value1 the argument of type {@code DbExpression}
+     * @param value2 the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.BitwiseOr" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression BitwiseOr(DbExpression value1, DbExpression value2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -378,6 +648,24 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BitwiseXor.
+     *
+     * @param value1 the argument of type {@code DbExpression}
+     * @param value2 the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.BitwiseXor" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression BitwiseXor(DbExpression value1, DbExpression value2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -393,6 +681,23 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Ceiling.
+     *
+     * @param value the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.Ceiling" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression Ceiling(DbExpression value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -408,6 +713,24 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Concat.
+     *
+     * @param string1 the argument of type {@code DbExpression}
+     * @param string2 the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.Concat" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression Concat(DbExpression string1, DbExpression string2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -423,6 +746,23 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Count.
+     *
+     * @param collection the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.Count" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression Count(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -438,6 +778,28 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateDateTime.
+     *
+     * @param year the argument of type {@code DbExpression}
+     * @param month the argument of type {@code DbExpression}
+     * @param day the argument of type {@code DbExpression}
+     * @param hour the argument of type {@code DbExpression}
+     * @param minute the argument of type {@code DbExpression}
+     * @param second the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.CreateDateTime" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression CreateDateTime(DbExpression year, DbExpression month, DbExpression day, DbExpression hour, DbExpression minute, DbExpression second) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -453,6 +815,29 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateDateTimeOffset.
+     *
+     * @param year the argument of type {@code DbExpression}
+     * @param month the argument of type {@code DbExpression}
+     * @param day the argument of type {@code DbExpression}
+     * @param hour the argument of type {@code DbExpression}
+     * @param minute the argument of type {@code DbExpression}
+     * @param second the argument of type {@code DbExpression}
+     * @param timeZoneOffset the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.CreateDateTimeOffset" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression CreateDateTimeOffset(DbExpression year, DbExpression month, DbExpression day, DbExpression hour, DbExpression minute, DbExpression second, DbExpression timeZoneOffset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -468,6 +853,25 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateTime.
+     *
+     * @param hour the argument of type {@code DbExpression}
+     * @param minute the argument of type {@code DbExpression}
+     * @param second the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.CreateTime" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression CreateTime(DbExpression hour, DbExpression minute, DbExpression second) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -483,6 +887,22 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CurrentDateTime.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.CurrentDateTime" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression CurrentDateTime() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -498,6 +918,22 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CurrentDateTimeOffset.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.CurrentDateTimeOffset" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression CurrentDateTimeOffset() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -513,6 +949,22 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CurrentUtcDateTime.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.CurrentUtcDateTime" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression CurrentUtcDateTime() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -528,6 +980,23 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Day.
+     *
+     * @param dateValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.Day" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression Day(DbExpression dateValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -543,6 +1012,23 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DayOfYear.
+     *
+     * @param dateValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.DayOfYear" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression DayOfYear(DbExpression dateValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -558,6 +1044,24 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DiffDays.
+     *
+     * @param dateValue1 the argument of type {@code DbExpression}
+     * @param dateValue2 the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.DiffDays" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression DiffDays(DbExpression dateValue1, DbExpression dateValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -573,6 +1077,24 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DiffHours.
+     *
+     * @param timeValue1 the argument of type {@code DbExpression}
+     * @param timeValue2 the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.DiffHours" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression DiffHours(DbExpression timeValue1, DbExpression timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -588,6 +1110,24 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DiffMicroseconds.
+     *
+     * @param timeValue1 the argument of type {@code DbExpression}
+     * @param timeValue2 the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.DiffMicroseconds" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression DiffMicroseconds(DbExpression timeValue1, DbExpression timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -603,6 +1143,24 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DiffMilliseconds.
+     *
+     * @param timeValue1 the argument of type {@code DbExpression}
+     * @param timeValue2 the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.DiffMilliseconds" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression DiffMilliseconds(DbExpression timeValue1, DbExpression timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -618,6 +1176,24 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DiffMinutes.
+     *
+     * @param timeValue1 the argument of type {@code DbExpression}
+     * @param timeValue2 the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.DiffMinutes" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression DiffMinutes(DbExpression timeValue1, DbExpression timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -633,6 +1209,24 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DiffMonths.
+     *
+     * @param dateValue1 the argument of type {@code DbExpression}
+     * @param dateValue2 the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.DiffMonths" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression DiffMonths(DbExpression dateValue1, DbExpression dateValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -648,6 +1242,24 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DiffNanoseconds.
+     *
+     * @param timeValue1 the argument of type {@code DbExpression}
+     * @param timeValue2 the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.DiffNanoseconds" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression DiffNanoseconds(DbExpression timeValue1, DbExpression timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -663,6 +1275,24 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DiffSeconds.
+     *
+     * @param timeValue1 the argument of type {@code DbExpression}
+     * @param timeValue2 the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.DiffSeconds" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression DiffSeconds(DbExpression timeValue1, DbExpression timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -678,6 +1308,24 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DiffYears.
+     *
+     * @param dateValue1 the argument of type {@code DbExpression}
+     * @param dateValue2 the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.DiffYears" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression DiffYears(DbExpression dateValue1, DbExpression dateValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -693,6 +1341,24 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EndsWith.
+     *
+     * @param stringArgument the argument of type {@code DbExpression}
+     * @param suffix the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.EndsWith" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression EndsWith(DbExpression stringArgument, DbExpression suffix) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -708,6 +1374,23 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Floor.
+     *
+     * @param value the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.Floor" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression Floor(DbExpression value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -723,6 +1406,23 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTotalOffsetMinutes.
+     *
+     * @param dateTimeOffsetArgument the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.GetTotalOffsetMinutes" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression GetTotalOffsetMinutes(DbExpression dateTimeOffsetArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -738,6 +1438,23 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Hour.
+     *
+     * @param timeValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.Hour" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression Hour(DbExpression timeValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -753,6 +1470,24 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param searchString the argument of type {@code DbExpression}
+     * @param stringToFind the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.IndexOf" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression IndexOf(DbExpression searchString, DbExpression stringToFind) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -768,6 +1503,24 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Left.
+     *
+     * @param stringArgument the argument of type {@code DbExpression}
+     * @param length the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.Left" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression Left(DbExpression stringArgument, DbExpression length) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -783,6 +1536,23 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Length.
+     *
+     * @param stringArgument the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.Length" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression Length(DbExpression stringArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -798,6 +1568,23 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LongCount.
+     *
+     * @param collection the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.LongCount" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression LongCount(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -813,6 +1600,23 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Max.
+     *
+     * @param collection the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.Max" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression Max(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -828,6 +1632,23 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Millisecond.
+     *
+     * @param timeValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.Millisecond" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression Millisecond(DbExpression timeValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -843,6 +1664,23 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Min.
+     *
+     * @param collection the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.Min" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression Min(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -858,6 +1696,23 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Minute.
+     *
+     * @param timeValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.Minute" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression Minute(DbExpression timeValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -873,6 +1728,23 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Month.
+     *
+     * @param dateValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.Month" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression Month(DbExpression dateValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -888,6 +1760,22 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member NewGuid.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.NewGuid" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression NewGuid() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -903,6 +1791,24 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Power.
+     *
+     * @param baseArgument the argument of type {@code DbExpression}
+     * @param exponent the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.Power" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression Power(DbExpression baseArgument, DbExpression exponent) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -918,6 +1824,25 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Replace.
+     *
+     * @param stringArgument the argument of type {@code DbExpression}
+     * @param toReplace the argument of type {@code DbExpression}
+     * @param replacement the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.Replace" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression Replace(DbExpression stringArgument, DbExpression toReplace, DbExpression replacement) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -933,6 +1858,23 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Reverse.
+     *
+     * @param stringArgument the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.Reverse" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression Reverse(DbExpression stringArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -948,6 +1890,24 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Right.
+     *
+     * @param stringArgument the argument of type {@code DbExpression}
+     * @param length the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.Right" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression Right(DbExpression stringArgument, DbExpression length) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -963,6 +1923,23 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Round.
+     *
+     * @param value the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.Round" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression Round(DbExpression value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -978,6 +1955,24 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Round.
+     *
+     * @param value the argument of type {@code DbExpression}
+     * @param digits the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.Round" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression Round(DbExpression value, DbExpression digits) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -993,6 +1988,23 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Second.
+     *
+     * @param timeValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.Second" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression Second(DbExpression timeValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1008,6 +2020,24 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member StartsWith.
+     *
+     * @param stringArgument the argument of type {@code DbExpression}
+     * @param prefix the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.StartsWith" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression StartsWith(DbExpression stringArgument, DbExpression prefix) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1023,6 +2053,23 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member StDev.
+     *
+     * @param collection the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.StDev" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression StDev(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1038,6 +2085,23 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member StDevP.
+     *
+     * @param collection the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.StDevP" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression StDevP(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1053,6 +2117,25 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Substring.
+     *
+     * @param stringArgument the argument of type {@code DbExpression}
+     * @param start the argument of type {@code DbExpression}
+     * @param length the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.Substring" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression Substring(DbExpression stringArgument, DbExpression start, DbExpression length) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1068,6 +2151,23 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Sum.
+     *
+     * @param collection the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.Sum" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression Sum(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1083,6 +2183,23 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToLower.
+     *
+     * @param stringArgument the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.ToLower" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression ToLower(DbExpression stringArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1098,6 +2215,23 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToUpper.
+     *
+     * @param stringArgument the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.ToUpper" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression ToUpper(DbExpression stringArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1113,6 +2247,23 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Trim.
+     *
+     * @param stringArgument the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.Trim" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression Trim(DbExpression stringArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1128,6 +2279,23 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TrimEnd.
+     *
+     * @param stringArgument the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.TrimEnd" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression TrimEnd(DbExpression stringArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1143,6 +2311,23 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TrimStart.
+     *
+     * @param stringArgument the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.TrimStart" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression TrimStart(DbExpression stringArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1158,6 +2343,24 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Truncate.
+     *
+     * @param value the argument of type {@code DbExpression}
+     * @param digits the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.Truncate" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression Truncate(DbExpression value, DbExpression digits) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1173,6 +2376,23 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TruncateTime.
+     *
+     * @param dateValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.TruncateTime" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression TruncateTime(DbExpression dateValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1188,6 +2408,23 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Var.
+     *
+     * @param collection the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.Var" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression Var(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1203,6 +2440,23 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member VarP.
+     *
+     * @param collection the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.VarP" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression VarP(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1218,6 +2472,23 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Year.
+     *
+     * @param dateValue the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.data.EntitySqlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.EdmFunctions.Year" target="_top">.NET documentation</a>
+     */
     public static DbFunctionExpression Year(DbExpression dateValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

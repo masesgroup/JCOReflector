@@ -101,7 +101,10 @@ public class SecurityCallContext extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SecurityCallContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,14 @@ public class SecurityCallContext extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsCallerInRole.
+     *
+     * @param role the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.SecurityCallContext.IsCallerInRole" target="_top">.NET documentation</a>
+     */
     public boolean IsCallerInRole(java.lang.String role) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +181,15 @@ public class SecurityCallContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsUserInRole.
+     *
+     * @param user the argument of type {@code java.lang.String}
+     * @param role the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.SecurityCallContext.IsUserInRole" target="_top">.NET documentation</a>
+     */
     public boolean IsUserInRole(java.lang.String user, java.lang.String role) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +208,13 @@ public class SecurityCallContext extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsSecurityEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.SecurityCallContext.IsSecurityEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getIsSecurityEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +229,13 @@ public class SecurityCallContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinAuthenticationLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.SecurityCallContext.MinAuthenticationLevel" target="_top">.NET documentation</a>
+     */
     public int getMinAuthenticationLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +276,13 @@ public class SecurityCallContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NumCallers.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.SecurityCallContext.NumCallers" target="_top">.NET documentation</a>
+     */
     public int getNumCallers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +323,25 @@ public class SecurityCallContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentCall.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.runtime.interopservices.COMException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.SecurityCallContext.CurrentCall" target="_top">.NET documentation</a>
+     */
     public static SecurityCallContext getCurrentCall() throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -297,6 +357,13 @@ public class SecurityCallContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Callers.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.SecurityCallContext.Callers" target="_top">.NET documentation</a>
+     */
     public SecurityCallers getCallers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -312,6 +379,13 @@ public class SecurityCallContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DirectCaller.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.SecurityCallContext.DirectCaller" target="_top">.NET documentation</a>
+     */
     public SecurityIdentity getDirectCaller() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -327,6 +401,13 @@ public class SecurityCallContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OriginalCaller.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.SecurityCallContext.OriginalCaller" target="_top">.NET documentation</a>
+     */
     public SecurityIdentity getOriginalCaller() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

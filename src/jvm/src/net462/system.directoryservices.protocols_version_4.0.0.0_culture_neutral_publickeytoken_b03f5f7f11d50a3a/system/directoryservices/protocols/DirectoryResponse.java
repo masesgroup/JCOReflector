@@ -102,7 +102,10 @@ public class DirectoryResponse extends system.directoryservices.protocols.Direct
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DirectoryResponse(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,26 @@ public class DirectoryResponse extends system.directoryservices.protocols.Direct
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Controls.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.xml.xpath.XPathException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.directoryservices.protocols.DsmlInvalidDocumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.directoryservices.protocols.BerConversionException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.DirectoryResponse.Controls" target="_top">.NET documentation</a>
+     */
     public final DirectoryControl[] getControls() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.directoryservices.protocols.DsmlInvalidDocumentException, system.FormatException, system.OutOfMemoryException, system.directoryservices.protocols.BerConversionException, system.AccessViolationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +203,27 @@ public class DirectoryResponse extends system.directoryservices.protocols.Direct
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResultCode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.xml.xpath.XPathException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.directoryservices.protocols.DsmlInvalidDocumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.DirectoryResponse.ResultCode" target="_top">.NET documentation</a>
+     */
     public ResultCode getResultCode() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.directoryservices.protocols.DsmlInvalidDocumentException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +239,18 @@ public class DirectoryResponse extends system.directoryservices.protocols.Direct
         }
     }
 
+    /**
+     * Gets the value of the .NET property ErrorMessage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.xml.xpath.XPathException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.DirectoryResponse.ErrorMessage" target="_top">.NET documentation</a>
+     */
     public java.lang.String getErrorMessage() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.ArgumentNullException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +265,16 @@ public class DirectoryResponse extends system.directoryservices.protocols.Direct
         }
     }
 
+    /**
+     * Gets the value of the .NET property MatchedDN.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.xml.xpath.XPathException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.DirectoryResponse.MatchedDN" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMatchedDN() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.xpath.XPathException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +289,18 @@ public class DirectoryResponse extends system.directoryservices.protocols.Direct
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequestId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.xml.xpath.XPathException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.DirectoryResponse.RequestId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRequestId() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.xml.xpath.XPathException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +315,25 @@ public class DirectoryResponse extends system.directoryservices.protocols.Direct
         }
     }
 
+    /**
+     * Gets the value of the .NET property Referral.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.xml.xpath.XPathException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.DirectoryResponse.Referral" target="_top">.NET documentation</a>
+     */
     public final Uri[] getReferral() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentException, system.NotImplementedException, system.security.SecurityException, system.MemberAccessException, system.InvalidOperationException, system.NullReferenceException, system.UriFormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

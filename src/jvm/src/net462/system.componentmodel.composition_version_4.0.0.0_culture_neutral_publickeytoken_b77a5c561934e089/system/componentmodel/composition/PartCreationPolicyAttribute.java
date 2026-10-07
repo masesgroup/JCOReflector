@@ -100,7 +100,10 @@ public class PartCreationPolicyAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PartCreationPolicyAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class PartCreationPolicyAttribute extends system.Attribute  {
     public PartCreationPolicyAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param creationPolicy the argument of type {@code CreationPolicy}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.PartCreationPolicyAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public PartCreationPolicyAttribute(CreationPolicy creationPolicy) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +179,13 @@ public class PartCreationPolicyAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CreationPolicy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.PartCreationPolicyAttribute.CreationPolicy" target="_top">.NET documentation</a>
+     */
     public CreationPolicy getCreationPolicy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +201,13 @@ public class PartCreationPolicyAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CreationPolicy.
+     *
+     * @param CreationPolicy the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.PartCreationPolicyAttribute.CreationPolicy" target="_top">.NET documentation</a>
+     */
     public void setCreationPolicy(CreationPolicy CreationPolicy) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

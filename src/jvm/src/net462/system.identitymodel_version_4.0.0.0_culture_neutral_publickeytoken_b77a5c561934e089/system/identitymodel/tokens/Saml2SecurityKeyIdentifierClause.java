@@ -100,7 +100,10 @@ public class Saml2SecurityKeyIdentifierClause extends system.identitymodel.token
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Saml2SecurityKeyIdentifierClause(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class Saml2SecurityKeyIdentifierClause extends system.identitymodel.token
     public Saml2SecurityKeyIdentifierClause() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param assertion the argument of type {@code Saml2Assertion}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2SecurityKeyIdentifierClause.-ctor" target="_top">.NET documentation</a>
+     */
     public Saml2SecurityKeyIdentifierClause(Saml2Assertion assertion) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +179,13 @@ public class Saml2SecurityKeyIdentifierClause extends system.identitymodel.token
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Assertion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2SecurityKeyIdentifierClause.Assertion" target="_top">.NET documentation</a>
+     */
     public Saml2Assertion getAssertion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -54,5 +54,16 @@ import system.net.NetworkCredential;
  * @version 2.0.0.0
  */
 public interface IQueryForConnectionCallback {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param primaryConnection the .NET argument of type {@code System.DirectoryServices.Protocols.LdapConnection}
+     * @param referralFromConnection the .NET argument of type {@code System.DirectoryServices.Protocols.LdapConnection}
+     * @param newDistinguishedName the .NET argument of type {@code System.String}
+     * @param identifier the .NET argument of type {@code System.DirectoryServices.Protocols.LdapDirectoryIdentifier}
+     * @param credential the .NET argument of type {@code System.Net.NetworkCredential}
+     * @param currentUserToken the .NET argument of type {@code System.Int64}
+     * @return the value returned to the CLR
+     */
     public LdapConnection Invoke(LdapConnection primaryConnection, LdapConnection referralFromConnection, java.lang.String newDistinguishedName, LdapDirectoryIdentifier identifier, NetworkCredential credential, long currentUserToken);
 }

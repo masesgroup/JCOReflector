@@ -101,7 +101,10 @@ public class SoapRpcServiceAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SoapRpcServiceAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class SoapRpcServiceAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapRpcServiceAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapRpcServiceAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +175,13 @@ public class SoapRpcServiceAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Use.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapRpcServiceAttribute.Use" target="_top">.NET documentation</a>
+     */
     public SoapBindingUse getUse() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +197,13 @@ public class SoapRpcServiceAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Use.
+     *
+     * @param Use the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapRpcServiceAttribute.Use" target="_top">.NET documentation</a>
+     */
     public void setUse(SoapBindingUse Use) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +214,13 @@ public class SoapRpcServiceAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RoutingStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapRpcServiceAttribute.RoutingStyle" target="_top">.NET documentation</a>
+     */
     public SoapServiceRoutingStyle getRoutingStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +236,13 @@ public class SoapRpcServiceAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RoutingStyle.
+     *
+     * @param RoutingStyle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapRpcServiceAttribute.RoutingStyle" target="_top">.NET documentation</a>
+     */
     public void setRoutingStyle(SoapServiceRoutingStyle RoutingStyle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

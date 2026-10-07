@@ -98,7 +98,10 @@ public class ApplicationContainerSettings extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ApplicationContainerSettings(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,13 @@ public class ApplicationContainerSettings extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SessionId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.ApplicationContainerSettings.SessionId" target="_top">.NET documentation</a>
+     */
     public int getSessionId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +207,20 @@ public class ApplicationContainerSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SessionId.
+     *
+     * @param SessionId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.ApplicationContainerSettings.SessionId" target="_top">.NET documentation</a>
+     */
     public void setSessionId(int SessionId) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +231,13 @@ public class ApplicationContainerSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PackageFullName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.ApplicationContainerSettings.PackageFullName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPackageFullName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +252,13 @@ public class ApplicationContainerSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PackageFullName.
+     *
+     * @param PackageFullName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.ApplicationContainerSettings.PackageFullName" target="_top">.NET documentation</a>
+     */
     public void setPackageFullName(java.lang.String PackageFullName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

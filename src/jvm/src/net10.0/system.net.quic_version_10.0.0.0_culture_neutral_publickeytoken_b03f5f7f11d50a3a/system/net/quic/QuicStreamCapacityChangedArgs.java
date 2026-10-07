@@ -99,7 +99,10 @@ public class QuicStreamCapacityChangedArgs extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public QuicStreamCapacityChangedArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class QuicStreamCapacityChangedArgs extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BidirectionalIncrement.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicStreamCapacityChangedArgs.BidirectionalIncrement" target="_top">.NET documentation</a>
+     */
     public int getBidirectionalIncrement() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +208,13 @@ public class QuicStreamCapacityChangedArgs extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BidirectionalIncrement.
+     *
+     * @param BidirectionalIncrement the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicStreamCapacityChangedArgs.BidirectionalIncrement" target="_top">.NET documentation</a>
+     */
     public void setBidirectionalIncrement(int BidirectionalIncrement) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +225,13 @@ public class QuicStreamCapacityChangedArgs extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnidirectionalIncrement.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicStreamCapacityChangedArgs.UnidirectionalIncrement" target="_top">.NET documentation</a>
+     */
     public int getUnidirectionalIncrement() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +272,13 @@ public class QuicStreamCapacityChangedArgs extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UnidirectionalIncrement.
+     *
+     * @param UnidirectionalIncrement the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicStreamCapacityChangedArgs.UnidirectionalIncrement" target="_top">.NET documentation</a>
+     */
     public void setUnidirectionalIncrement(int UnidirectionalIncrement) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

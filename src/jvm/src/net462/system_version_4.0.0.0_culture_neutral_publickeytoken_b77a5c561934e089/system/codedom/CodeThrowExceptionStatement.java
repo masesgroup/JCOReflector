@@ -100,7 +100,10 @@ public class CodeThrowExceptionStatement extends system.codedom.CodeStatement  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodeThrowExceptionStatement(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class CodeThrowExceptionStatement extends system.codedom.CodeStatement  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeThrowExceptionStatement.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeThrowExceptionStatement() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +166,13 @@ public class CodeThrowExceptionStatement extends system.codedom.CodeStatement  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param toThrow the argument of type {@code CodeExpression}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeThrowExceptionStatement.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeThrowExceptionStatement(CodeExpression toThrow) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +191,13 @@ public class CodeThrowExceptionStatement extends system.codedom.CodeStatement  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ToThrow.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeThrowExceptionStatement.ToThrow" target="_top">.NET documentation</a>
+     */
     public CodeExpression getToThrow() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +213,13 @@ public class CodeThrowExceptionStatement extends system.codedom.CodeStatement  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ToThrow.
+     *
+     * @param ToThrow the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeThrowExceptionStatement.ToThrow" target="_top">.NET documentation</a>
+     */
     public void setToThrow(CodeExpression ToThrow) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -106,7 +106,10 @@ public class Clock extends system.windows.threading.DispatcherObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Clock(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -165,6 +168,13 @@ public class Clock extends system.windows.threading.DispatcherObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HasControllableRoot.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.Clock.HasControllableRoot" target="_top">.NET documentation</a>
+     */
     public boolean getHasControllableRoot() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +189,13 @@ public class Clock extends system.windows.threading.DispatcherObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsPaused.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.Clock.IsPaused" target="_top">.NET documentation</a>
+     */
     public boolean getIsPaused() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +210,13 @@ public class Clock extends system.windows.threading.DispatcherObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentGlobalSpeed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.Clock.CurrentGlobalSpeed" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getCurrentGlobalSpeed() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +232,13 @@ public class Clock extends system.windows.threading.DispatcherObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentProgress.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.Clock.CurrentProgress" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getCurrentProgress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +254,13 @@ public class Clock extends system.windows.threading.DispatcherObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentIteration.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.Clock.CurrentIteration" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getCurrentIteration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +276,13 @@ public class Clock extends system.windows.threading.DispatcherObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.Clock.CurrentTime" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getCurrentTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +298,13 @@ public class Clock extends system.windows.threading.DispatcherObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NaturalDuration.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.Clock.NaturalDuration" target="_top">.NET documentation</a>
+     */
     public Duration getNaturalDuration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +320,13 @@ public class Clock extends system.windows.threading.DispatcherObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Parent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.Clock.Parent" target="_top">.NET documentation</a>
+     */
     public Clock getParent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +342,25 @@ public class Clock extends system.windows.threading.DispatcherObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Controller.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.Clock.Controller" target="_top">.NET documentation</a>
+     */
     public ClockController getController() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +376,13 @@ public class Clock extends system.windows.threading.DispatcherObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentState.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.Clock.CurrentState" target="_top">.NET documentation</a>
+     */
     public ClockState getCurrentState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -313,6 +398,13 @@ public class Clock extends system.windows.threading.DispatcherObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Timeline.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.Clock.Timeline" target="_top">.NET documentation</a>
+     */
     public Timeline getTimeline() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -333,6 +425,13 @@ public class Clock extends system.windows.threading.DispatcherObject  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addCompleted.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCompleted(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -343,6 +442,13 @@ public class Clock extends system.windows.threading.DispatcherObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCompleted.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCompleted(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -353,6 +459,13 @@ public class Clock extends system.windows.threading.DispatcherObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCurrentGlobalSpeedInvalidated.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCurrentGlobalSpeedInvalidated(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -363,6 +476,13 @@ public class Clock extends system.windows.threading.DispatcherObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCurrentGlobalSpeedInvalidated.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCurrentGlobalSpeedInvalidated(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -373,6 +493,13 @@ public class Clock extends system.windows.threading.DispatcherObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCurrentStateInvalidated.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCurrentStateInvalidated(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -383,6 +510,13 @@ public class Clock extends system.windows.threading.DispatcherObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCurrentStateInvalidated.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCurrentStateInvalidated(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -393,6 +527,13 @@ public class Clock extends system.windows.threading.DispatcherObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addCurrentTimeInvalidated.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCurrentTimeInvalidated(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -403,6 +544,13 @@ public class Clock extends system.windows.threading.DispatcherObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCurrentTimeInvalidated.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCurrentTimeInvalidated(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -413,6 +561,13 @@ public class Clock extends system.windows.threading.DispatcherObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRemoveRequested.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRemoveRequested(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -423,6 +578,13 @@ public class Clock extends system.windows.threading.DispatcherObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRemoveRequested.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRemoveRequested(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

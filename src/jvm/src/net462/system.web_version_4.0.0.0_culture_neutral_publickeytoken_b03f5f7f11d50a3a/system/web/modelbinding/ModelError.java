@@ -98,7 +98,10 @@ public class ModelError extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ModelError(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,14 @@ public class ModelError extends NetObject  {
     public ModelError() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param exception the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelError.-ctor" target="_top">.NET documentation</a>
+     */
     public ModelError(NetException exception) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +169,15 @@ public class ModelError extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param exception the argument of type {@code NetException}
+     * @param errorMessage the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelError.-ctor" target="_top">.NET documentation</a>
+     */
     public ModelError(NetException exception, java.lang.String errorMessage) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +188,13 @@ public class ModelError extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param errorMessage the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelError.-ctor" target="_top">.NET documentation</a>
+     */
     public ModelError(java.lang.String errorMessage) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -187,6 +214,13 @@ public class ModelError extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Exception.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelError.Exception" target="_top">.NET documentation</a>
+     */
     public NetException getException() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +236,13 @@ public class ModelError extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Exception.
+     *
+     * @param Exception the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelError.Exception" target="_top">.NET documentation</a>
+     */
     public void setException(NetException Exception) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +253,13 @@ public class ModelError extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ErrorMessage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelError.ErrorMessage" target="_top">.NET documentation</a>
+     */
     public java.lang.String getErrorMessage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +274,13 @@ public class ModelError extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ErrorMessage.
+     *
+     * @param ErrorMessage the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelError.ErrorMessage" target="_top">.NET documentation</a>
+     */
     public void setErrorMessage(java.lang.String ErrorMessage) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

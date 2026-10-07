@@ -100,7 +100,10 @@ public class StrongNameSignatureInformation extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public StrongNameSignatureInformation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class StrongNameSignatureInformation extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsValid.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.StrongNameSignatureInformation.IsValid" target="_top">.NET documentation</a>
+     */
     public boolean getIsValid() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +183,13 @@ public class StrongNameSignatureInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HResult.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.StrongNameSignatureInformation.HResult" target="_top">.NET documentation</a>
+     */
     public int getHResult() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +230,13 @@ public class StrongNameSignatureInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PublicKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.StrongNameSignatureInformation.PublicKey" target="_top">.NET documentation</a>
+     */
     public AsymmetricAlgorithm getPublicKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +252,13 @@ public class StrongNameSignatureInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VerificationResult.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.StrongNameSignatureInformation.VerificationResult" target="_top">.NET documentation</a>
+     */
     public SignatureVerificationResult getVerificationResult() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +274,13 @@ public class StrongNameSignatureInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HashAlgorithm.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.StrongNameSignatureInformation.HashAlgorithm" target="_top">.NET documentation</a>
+     */
     public java.lang.String getHashAlgorithm() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

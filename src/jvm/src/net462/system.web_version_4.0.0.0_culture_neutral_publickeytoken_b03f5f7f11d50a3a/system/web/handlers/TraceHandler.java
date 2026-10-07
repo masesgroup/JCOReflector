@@ -99,7 +99,10 @@ public class TraceHandler extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TraceHandler(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class TraceHandler extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Handlers.TraceHandler.-ctor" target="_top">.NET documentation</a>
+     */
     public TraceHandler() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,8 +172,12 @@ public class TraceHandler extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIHttpHandler method available in IHttpHandler to obtain an object with an invocable method
+     *
+     * @param context the argument of type {@code HttpContext}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.IHttpHandler.ProcessRequest" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ProcessRequest(HttpContext context) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIHttpHandler to obtain the full interface.");
     }

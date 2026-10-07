@@ -103,7 +103,10 @@ public class EntityParameter extends system.data.common.DbParameter  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EntityParameter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,12 @@ public class EntityParameter extends system.data.common.DbParameter  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.EntityClient.EntityParameter.-ctor" target="_top">.NET documentation</a>
+     */
     public EntityParameter() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +169,22 @@ public class EntityParameter extends system.data.common.DbParameter  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param parameterName the argument of type {@code java.lang.String}
+     * @param dbType the argument of type {@code DbType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.EntityClient.EntityParameter.-ctor" target="_top">.NET documentation</a>
+     */
     public EntityParameter(java.lang.String parameterName, DbType dbType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +195,23 @@ public class EntityParameter extends system.data.common.DbParameter  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param parameterName the argument of type {@code java.lang.String}
+     * @param dbType the argument of type {@code DbType}
+     * @param size the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.EntityClient.EntityParameter.-ctor" target="_top">.NET documentation</a>
+     */
     public EntityParameter(java.lang.String parameterName, DbType dbType, int size) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +222,30 @@ public class EntityParameter extends system.data.common.DbParameter  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param parameterName the argument of type {@code java.lang.String}
+     * @param dbType the argument of type {@code DbType}
+     * @param size the argument of type {@code int}
+     * @param direction the argument of type {@code ParameterDirection}
+     * @param isNullable the argument of type {@code boolean}
+     * @param precision the argument of type {@code byte}
+     * @param scale the argument of type {@code byte}
+     * @param sourceColumn the argument of type {@code java.lang.String}
+     * @param sourceVersion the argument of type {@code DataRowVersion}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.EntityClient.EntityParameter.-ctor" target="_top">.NET documentation</a>
+     */
     public EntityParameter(java.lang.String parameterName, DbType dbType, int size, ParameterDirection direction, boolean isNullable, byte precision, byte scale, java.lang.String sourceColumn, DataRowVersion sourceVersion, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -190,6 +256,24 @@ public class EntityParameter extends system.data.common.DbParameter  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param parameterName the argument of type {@code java.lang.String}
+     * @param dbType the argument of type {@code DbType}
+     * @param size the argument of type {@code int}
+     * @param sourceColumn the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.EntityClient.EntityParameter.-ctor" target="_top">.NET documentation</a>
+     */
     public EntityParameter(java.lang.String parameterName, DbType dbType, int size, java.lang.String sourceColumn) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -204,6 +288,12 @@ public class EntityParameter extends system.data.common.DbParameter  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ResetDbType.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.EntityClient.EntityParameter.ResetDbType" target="_top">.NET documentation</a>
+     */
     public void ResetDbType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +308,14 @@ public class EntityParameter extends system.data.common.DbParameter  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Precision.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.EntityClient.EntityParameter.Precision" target="_top">.NET documentation</a>
+     */
     public byte getPrecision() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +356,13 @@ public class EntityParameter extends system.data.common.DbParameter  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Precision.
+     *
+     * @param Precision the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.EntityClient.EntityParameter.Precision" target="_top">.NET documentation</a>
+     */
     public void setPrecision(byte Precision) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +373,14 @@ public class EntityParameter extends system.data.common.DbParameter  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Scale.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.EntityClient.EntityParameter.Scale" target="_top">.NET documentation</a>
+     */
     public byte getScale() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +421,13 @@ public class EntityParameter extends system.data.common.DbParameter  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Scale.
+     *
+     * @param Scale the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.EntityClient.EntityParameter.Scale" target="_top">.NET documentation</a>
+     */
     public void setScale(byte Scale) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +438,13 @@ public class EntityParameter extends system.data.common.DbParameter  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EdmType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.EntityClient.EntityParameter.EdmType" target="_top">.NET documentation</a>
+     */
     public EdmType getEdmType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -333,6 +460,24 @@ public class EntityParameter extends system.data.common.DbParameter  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EdmType.
+     *
+     * @param EdmType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.EntityClient.EntityParameter.EdmType" target="_top">.NET documentation</a>
+     */
     public void setEdmType(EdmType EdmType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

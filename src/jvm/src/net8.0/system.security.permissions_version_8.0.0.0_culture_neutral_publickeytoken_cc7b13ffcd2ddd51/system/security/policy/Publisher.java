@@ -103,7 +103,10 @@ public class Publisher extends system.security.policy.EvidenceBase  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Publisher(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,13 @@ public class Publisher extends system.security.policy.EvidenceBase  {
     public Publisher() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param cert the argument of type {@code X509Certificate}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.Publisher.-ctor" target="_top">.NET documentation</a>
+     */
     public Publisher(X509Certificate cert) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +178,13 @@ public class Publisher extends system.security.policy.EvidenceBase  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Copy.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.Publisher.Copy" target="_top">.NET documentation</a>
+     */
     public NetObject Copy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +200,14 @@ public class Publisher extends system.security.policy.EvidenceBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateIdentityPermission.
+     *
+     * @param evidence the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.Publisher.CreateIdentityPermission" target="_top">.NET documentation</a>
+     */
     public IPermission CreateIdentityPermission(Evidence evidence) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +227,13 @@ public class Publisher extends system.security.policy.EvidenceBase  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Certificate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.Publisher.Certificate" target="_top">.NET documentation</a>
+     */
     public X509Certificate getCertificate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

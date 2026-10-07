@@ -99,7 +99,10 @@ public class WellKnownClientTypeEntry extends system.runtime.remoting.TypeEntry 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WellKnownClientTypeEntry(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,16 @@ public class WellKnownClientTypeEntry extends system.runtime.remoting.TypeEntry 
     public WellKnownClientTypeEntry() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param typeName the argument of type {@code java.lang.String}
+     * @param assemblyName the argument of type {@code java.lang.String}
+     * @param objectUrl the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.WellKnownClientTypeEntry.-ctor" target="_top">.NET documentation</a>
+     */
     public WellKnownClientTypeEntry(java.lang.String typeName, java.lang.String assemblyName, java.lang.String objectUrl) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +172,17 @@ public class WellKnownClientTypeEntry extends system.runtime.remoting.TypeEntry 
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param objectUrl the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.WellKnownClientTypeEntry.-ctor" target="_top">.NET documentation</a>
+     */
     public WellKnownClientTypeEntry(NetType type, java.lang.String objectUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +202,13 @@ public class WellKnownClientTypeEntry extends system.runtime.remoting.TypeEntry 
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ApplicationUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.WellKnownClientTypeEntry.ApplicationUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getApplicationUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +223,13 @@ public class WellKnownClientTypeEntry extends system.runtime.remoting.TypeEntry 
         }
     }
 
+    /**
+     * Sets the value of the .NET property ApplicationUrl.
+     *
+     * @param ApplicationUrl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.WellKnownClientTypeEntry.ApplicationUrl" target="_top">.NET documentation</a>
+     */
     public void setApplicationUrl(java.lang.String ApplicationUrl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +240,13 @@ public class WellKnownClientTypeEntry extends system.runtime.remoting.TypeEntry 
         }
     }
 
+    /**
+     * Gets the value of the .NET property ObjectUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.WellKnownClientTypeEntry.ObjectUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getObjectUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +261,16 @@ public class WellKnownClientTypeEntry extends system.runtime.remoting.TypeEntry 
         }
     }
 
+    /**
+     * Gets the value of the .NET property ObjectType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.WellKnownClientTypeEntry.ObjectType" target="_top">.NET documentation</a>
+     */
     public NetType getObjectType() throws Throwable, system.IndexOutOfRangeException, system.TypeLoadException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

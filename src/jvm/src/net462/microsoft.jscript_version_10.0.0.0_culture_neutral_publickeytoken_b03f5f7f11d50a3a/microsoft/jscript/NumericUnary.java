@@ -99,7 +99,10 @@ public class NumericUnary extends microsoft.jscript.UnaryOp  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public NumericUnary(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,13 @@ public class NumericUnary extends microsoft.jscript.UnaryOp  {
     public NumericUnary() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param operatorTok the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.NumericUnary.-ctor" target="_top">.NET documentation</a>
+     */
     public NumericUnary(int operatorTok) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +174,27 @@ public class NumericUnary extends microsoft.jscript.UnaryOp  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member EvaluateUnary.
+     *
+     * @param v the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.NumericUnary.EvaluateUnary" target="_top">.NET documentation</a>
+     */
     public NetObject EvaluateUnary(NetObject v) throws Throwable, microsoft.jscript.JScriptException, system.ArithmeticException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.OverflowException, system.NotSupportedException, system.MissingMethodException, system.NullReferenceException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

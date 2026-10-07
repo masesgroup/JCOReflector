@@ -52,5 +52,11 @@ import system.directoryservices.protocols.LdapConnection;
  * @version 2.0.0.0
  */
 public interface IDereferenceConnectionCallback {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param primaryConnection the .NET argument of type {@code System.DirectoryServices.Protocols.LdapConnection}
+     * @param connectionToDereference the .NET argument of type {@code System.DirectoryServices.Protocols.LdapConnection}
+     */
     public void Invoke(LdapConnection primaryConnection, LdapConnection connectionToDereference);
 }

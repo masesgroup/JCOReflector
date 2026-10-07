@@ -102,7 +102,10 @@ public class IXmlTextReaderInitializerImplementation extends NetObject implement
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IXmlTextReaderInitializerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,18 @@ public class IXmlTextReaderInitializerImplementation extends NetObject implement
 
     // Methods section
     
+    /**
+     * Invokes the .NET member SetInput.
+     *
+     * @param buffer the argument of type {@code byte[]}
+     * @param offset the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @param encoding the argument of type {@code Encoding}
+     * @param quotas the argument of type {@code XmlDictionaryReaderQuotas}
+     * @param onClose the argument of type {@code OnXmlDictionaryReaderClose}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.IXmlTextReaderInitializer.SetInput" target="_top">.NET documentation</a>
+     */
     public void SetInput(byte[] buffer, int offset, int count, Encoding encoding, XmlDictionaryReaderQuotas quotas, OnXmlDictionaryReaderClose onClose) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -154,6 +169,18 @@ public class IXmlTextReaderInitializerImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member SetInput.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code int}
+     * @param dupParam3 the argument of type {@code Encoding}
+     * @param dupParam4 the argument of type {@code XmlDictionaryReaderQuotas}
+     * @param dupParam5 the argument of type {@code OnXmlDictionaryReaderClose}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.IXmlTextReaderInitializer.SetInput" target="_top">.NET documentation</a>
+     */
     public void SetInput(JCORefOut dupParam0, int dupParam1, int dupParam2, Encoding dupParam3, XmlDictionaryReaderQuotas dupParam4, OnXmlDictionaryReaderClose dupParam5) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -164,6 +191,16 @@ public class IXmlTextReaderInitializerImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member SetInput.
+     *
+     * @param stream the argument of type {@code Stream}
+     * @param encoding the argument of type {@code Encoding}
+     * @param quotas the argument of type {@code XmlDictionaryReaderQuotas}
+     * @param onClose the argument of type {@code OnXmlDictionaryReaderClose}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.IXmlTextReaderInitializer.SetInput" target="_top">.NET documentation</a>
+     */
     public void SetInput(Stream stream, Encoding encoding, XmlDictionaryReaderQuotas quotas, OnXmlDictionaryReaderClose onClose) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

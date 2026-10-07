@@ -108,7 +108,10 @@ public class UnsignedPublishLicense extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UnsignedPublishLicense(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,12 @@ public class UnsignedPublishLicense extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.RightsManagement.UnsignedPublishLicense.-ctor" target="_top">.NET documentation</a>
+     */
     public UnsignedPublishLicense() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,33 @@ public class UnsignedPublishLicense extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param publishLicenseTemplate the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.security.rightsmanagement.RightsManagementException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.RightsManagement.UnsignedPublishLicense.-ctor" target="_top">.NET documentation</a>
+     */
     public UnsignedPublishLicense(java.lang.String publishLicenseTemplate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.UriFormatException, system.security.rightsmanagement.RightsManagementException, system.FormatException, system.InvalidTimeZoneException, system.OverflowException, system.diagnostics.UnreachableException {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +215,36 @@ public class UnsignedPublishLicense extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Sign.
+     *
+     * @param secureEnvironment the argument of type {@code SecureEnvironment}
+     * @param authorUseLicense the argument of type {@code JCORefOut<UseLicense>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.security.rightsmanagement.RightsManagementException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.RightsManagement.UnsignedPublishLicense.Sign" target="_top">.NET documentation</a>
+     */
     public PublishLicense Sign(SecureEnvironment secureEnvironment, JCORefOut<UseLicense> authorUseLicense) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.globalization.CultureNotFoundException, system.UriFormatException, system.security.rightsmanagement.RightsManagementException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.AbandonedMutexException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +264,13 @@ public class UnsignedPublishLicense extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Grants.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.RightsManagement.UnsignedPublishLicense.Grants" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getGrants() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +286,19 @@ public class UnsignedPublishLicense extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LocalizedNameDescriptionDictionary.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.RightsManagement.UnsignedPublishLicense.LocalizedNameDescriptionDictionary" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 getLocalizedNameDescriptionDictionary() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +314,13 @@ public class UnsignedPublishLicense extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContentId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.RightsManagement.UnsignedPublishLicense.ContentId" target="_top">.NET documentation</a>
+     */
     public Guid getContentId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +336,13 @@ public class UnsignedPublishLicense extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ContentId.
+     *
+     * @param ContentId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.RightsManagement.UnsignedPublishLicense.ContentId" target="_top">.NET documentation</a>
+     */
     public void setContentId(Guid ContentId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +353,13 @@ public class UnsignedPublishLicense extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Owner.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.RightsManagement.UnsignedPublishLicense.Owner" target="_top">.NET documentation</a>
+     */
     public ContentUser getOwner() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +375,13 @@ public class UnsignedPublishLicense extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Owner.
+     *
+     * @param Owner the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.RightsManagement.UnsignedPublishLicense.Owner" target="_top">.NET documentation</a>
+     */
     public void setOwner(ContentUser Owner) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +392,13 @@ public class UnsignedPublishLicense extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReferralInfoName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.RightsManagement.UnsignedPublishLicense.ReferralInfoName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getReferralInfoName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +413,13 @@ public class UnsignedPublishLicense extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReferralInfoName.
+     *
+     * @param ReferralInfoName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.RightsManagement.UnsignedPublishLicense.ReferralInfoName" target="_top">.NET documentation</a>
+     */
     public void setReferralInfoName(java.lang.String ReferralInfoName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -302,6 +430,13 @@ public class UnsignedPublishLicense extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReferralInfoUri.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.RightsManagement.UnsignedPublishLicense.ReferralInfoUri" target="_top">.NET documentation</a>
+     */
     public Uri getReferralInfoUri() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -317,6 +452,13 @@ public class UnsignedPublishLicense extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReferralInfoUri.
+     *
+     * @param ReferralInfoUri the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.RightsManagement.UnsignedPublishLicense.ReferralInfoUri" target="_top">.NET documentation</a>
+     */
     public void setReferralInfoUri(Uri ReferralInfoUri) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

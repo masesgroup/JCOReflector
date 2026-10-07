@@ -99,7 +99,10 @@ public class VirtualPathExtension extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public VirtualPathExtension(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,13 @@ public class VirtualPathExtension extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Attach.
+     *
+     * @param owner the argument of type {@code ServiceHostBase}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activation.VirtualPathExtension.Attach" target="_top">.NET documentation</a>
+     */
     public void Attach(ServiceHostBase owner) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -164,6 +174,20 @@ public class VirtualPathExtension extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Detach.
+     *
+     * @param owner the argument of type {@code ServiceHostBase}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activation.VirtualPathExtension.Detach" target="_top">.NET documentation</a>
+     */
     public void Detach(ServiceHostBase owner) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +202,13 @@ public class VirtualPathExtension extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ApplicationVirtualPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activation.VirtualPathExtension.ApplicationVirtualPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getApplicationVirtualPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +223,13 @@ public class VirtualPathExtension extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ApplicationVirtualPath.
+     *
+     * @param ApplicationVirtualPath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activation.VirtualPathExtension.ApplicationVirtualPath" target="_top">.NET documentation</a>
+     */
     public void setApplicationVirtualPath(java.lang.String ApplicationVirtualPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +240,13 @@ public class VirtualPathExtension extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SiteName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activation.VirtualPathExtension.SiteName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSiteName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +261,13 @@ public class VirtualPathExtension extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SiteName.
+     *
+     * @param SiteName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activation.VirtualPathExtension.SiteName" target="_top">.NET documentation</a>
+     */
     public void setSiteName(java.lang.String SiteName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +278,13 @@ public class VirtualPathExtension extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VirtualPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activation.VirtualPathExtension.VirtualPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getVirtualPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +299,13 @@ public class VirtualPathExtension extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property VirtualPath.
+     *
+     * @param VirtualPath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activation.VirtualPathExtension.VirtualPath" target="_top">.NET documentation</a>
+     */
     public void setVirtualPath(java.lang.String VirtualPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

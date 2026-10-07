@@ -100,7 +100,10 @@ public class IAnchorInfoImplementation extends NetObject implements IAnchorInfo 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IAnchorInfoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,13 @@ public class IAnchorInfoImplementation extends NetObject implements IAnchorInfo 
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ResolvedAnchor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Annotations.IAnchorInfo.ResolvedAnchor" target="_top">.NET documentation</a>
+     */
     public NetObject getResolvedAnchor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -161,6 +171,13 @@ public class IAnchorInfoImplementation extends NetObject implements IAnchorInfo 
         }
     }
 
+    /**
+     * Gets the value of the .NET property Annotation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Annotations.IAnchorInfo.Annotation" target="_top">.NET documentation</a>
+     */
     public Annotation getAnnotation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +193,13 @@ public class IAnchorInfoImplementation extends NetObject implements IAnchorInfo 
         }
     }
 
+    /**
+     * Gets the value of the .NET property Anchor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Annotations.IAnchorInfo.Anchor" target="_top">.NET documentation</a>
+     */
     public AnnotationResource getAnchor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

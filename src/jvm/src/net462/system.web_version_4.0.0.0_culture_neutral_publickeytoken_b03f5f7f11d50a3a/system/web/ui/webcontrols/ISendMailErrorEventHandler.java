@@ -52,5 +52,11 @@ import system.web.ui.webcontrols.SendMailErrorEventArgs;
  * @version 2.0.0.0
  */
 public interface ISendMailErrorEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.Web.UI.WebControls.SendMailErrorEventArgs}
+     */
     public void Invoke(NetObject sender, SendMailErrorEventArgs e);
 }

@@ -100,7 +100,10 @@ public class TargetPlatformSDK extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TargetPlatformSDK(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,21 @@ public class TargetPlatformSDK extends NetObject  {
     public TargetPlatformSDK() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param targetPlatformIdentifier the argument of type {@code java.lang.String}
+     * @param targetPlatformVersion the argument of type {@code Version}
+     * @param path the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TargetPlatformSDK.-ctor" target="_top">.NET documentation</a>
+     */
     public TargetPlatformSDK(java.lang.String targetPlatformIdentifier, Version targetPlatformVersion, java.lang.String path) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +183,22 @@ public class TargetPlatformSDK extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code TargetPlatformSDK}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TargetPlatformSDK.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(TargetPlatformSDK other) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +217,13 @@ public class TargetPlatformSDK extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Path.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TargetPlatformSDK.Path" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +238,14 @@ public class TargetPlatformSDK extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Path.
+     *
+     * @param Path the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TargetPlatformSDK.Path" target="_top">.NET documentation</a>
+     */
     public void setPath(java.lang.String Path) throws Throwable, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +256,13 @@ public class TargetPlatformSDK extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetPlatformIdentifier.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TargetPlatformSDK.TargetPlatformIdentifier" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTargetPlatformIdentifier() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +277,13 @@ public class TargetPlatformSDK extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TargetPlatformIdentifier.
+     *
+     * @param TargetPlatformIdentifier the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TargetPlatformSDK.TargetPlatformIdentifier" target="_top">.NET documentation</a>
+     */
     public void setTargetPlatformIdentifier(java.lang.String TargetPlatformIdentifier) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +294,13 @@ public class TargetPlatformSDK extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetPlatformVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TargetPlatformSDK.TargetPlatformVersion" target="_top">.NET documentation</a>
+     */
     public Version getTargetPlatformVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +316,13 @@ public class TargetPlatformSDK extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TargetPlatformVersion.
+     *
+     * @param TargetPlatformVersion the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TargetPlatformSDK.TargetPlatformVersion" target="_top">.NET documentation</a>
+     */
     public void setTargetPlatformVersion(Version TargetPlatformVersion) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

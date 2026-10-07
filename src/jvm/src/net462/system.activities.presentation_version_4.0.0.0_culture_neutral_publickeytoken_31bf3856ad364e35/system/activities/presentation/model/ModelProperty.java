@@ -103,7 +103,10 @@ public class ModelProperty extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ModelProperty(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,14 @@ public class ModelProperty extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member SetValue.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.ModelProperty.SetValue" target="_top">.NET documentation</a>
+     */
     public ModelItem SetValue(NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +182,12 @@ public class ModelProperty extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ClearValue.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.ModelProperty.ClearValue" target="_top">.NET documentation</a>
+     */
     public void ClearValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +202,13 @@ public class ModelProperty extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsAttached.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.ModelProperty.IsAttached" target="_top">.NET documentation</a>
+     */
     public boolean getIsAttached() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +223,13 @@ public class ModelProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsBrowsable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.ModelProperty.IsBrowsable" target="_top">.NET documentation</a>
+     */
     public boolean getIsBrowsable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +244,13 @@ public class ModelProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsCollection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.ModelProperty.IsCollection" target="_top">.NET documentation</a>
+     */
     public boolean getIsCollection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +265,13 @@ public class ModelProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsDictionary.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.ModelProperty.IsDictionary" target="_top">.NET documentation</a>
+     */
     public boolean getIsDictionary() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +286,13 @@ public class ModelProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsReadOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.ModelProperty.IsReadOnly" target="_top">.NET documentation</a>
+     */
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +307,13 @@ public class ModelProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSet.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.ModelProperty.IsSet" target="_top">.NET documentation</a>
+     */
     public boolean getIsSet() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +328,13 @@ public class ModelProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Parent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.ModelProperty.Parent" target="_top">.NET documentation</a>
+     */
     public ModelItem getParent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -284,6 +350,13 @@ public class ModelProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.ModelProperty.Value" target="_top">.NET documentation</a>
+     */
     public ModelItem getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -299,6 +372,13 @@ public class ModelProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Collection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.ModelProperty.Collection" target="_top">.NET documentation</a>
+     */
     public ModelItemCollection getCollection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -314,6 +394,13 @@ public class ModelProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Dictionary.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.ModelProperty.Dictionary" target="_top">.NET documentation</a>
+     */
     public ModelItemDictionary getDictionary() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -329,6 +416,13 @@ public class ModelProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Attributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.ModelProperty.Attributes" target="_top">.NET documentation</a>
+     */
     public AttributeCollection getAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -344,6 +438,13 @@ public class ModelProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Converter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.ModelProperty.Converter" target="_top">.NET documentation</a>
+     */
     public TypeConverter getConverter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -359,6 +460,13 @@ public class ModelProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ComputedValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.ModelProperty.ComputedValue" target="_top">.NET documentation</a>
+     */
     public NetObject getComputedValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -374,6 +482,13 @@ public class ModelProperty extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ComputedValue.
+     *
+     * @param ComputedValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.ModelProperty.ComputedValue" target="_top">.NET documentation</a>
+     */
     public void setComputedValue(NetObject ComputedValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -384,6 +499,13 @@ public class ModelProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.ModelProperty.DefaultValue" target="_top">.NET documentation</a>
+     */
     public NetObject getDefaultValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -399,6 +521,13 @@ public class ModelProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.ModelProperty.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -413,6 +542,13 @@ public class ModelProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AttachedOwnerType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.ModelProperty.AttachedOwnerType" target="_top">.NET documentation</a>
+     */
     public NetType getAttachedOwnerType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -428,6 +564,13 @@ public class ModelProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.ModelProperty.PropertyType" target="_top">.NET documentation</a>
+     */
     public NetType getPropertyType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

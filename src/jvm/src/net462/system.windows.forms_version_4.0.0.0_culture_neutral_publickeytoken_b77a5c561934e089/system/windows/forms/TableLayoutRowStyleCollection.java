@@ -100,7 +100,10 @@ public class TableLayoutRowStyleCollection extends system.windows.forms.TableLay
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TableLayoutRowStyleCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,14 @@ public class TableLayoutRowStyleCollection extends system.windows.forms.TableLay
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param rowStyle the argument of type {@code RowStyle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TableLayoutRowStyleCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(RowStyle rowStyle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +180,14 @@ public class TableLayoutRowStyleCollection extends system.windows.forms.TableLay
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param rowStyle the argument of type {@code RowStyle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TableLayoutRowStyleCollection.Add" target="_top">.NET documentation</a>
+     */
     public int Add(RowStyle rowStyle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +228,14 @@ public class TableLayoutRowStyleCollection extends system.windows.forms.TableLay
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param rowStyle the argument of type {@code RowStyle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TableLayoutRowStyleCollection.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(RowStyle rowStyle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +276,14 @@ public class TableLayoutRowStyleCollection extends system.windows.forms.TableLay
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param rowStyle the argument of type {@code RowStyle}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TableLayoutRowStyleCollection.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(int index, RowStyle rowStyle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +294,13 @@ public class TableLayoutRowStyleCollection extends system.windows.forms.TableLay
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param rowStyle the argument of type {@code RowStyle}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TableLayoutRowStyleCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(RowStyle rowStyle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

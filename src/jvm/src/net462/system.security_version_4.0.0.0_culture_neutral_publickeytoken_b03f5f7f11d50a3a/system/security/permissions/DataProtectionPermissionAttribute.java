@@ -103,7 +103,10 @@ public class DataProtectionPermissionAttribute extends system.security.permissio
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataProtectionPermissionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,13 @@ public class DataProtectionPermissionAttribute extends system.security.permissio
     public DataProtectionPermissionAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param action the argument of type {@code SecurityAction}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.DataProtectionPermissionAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DataProtectionPermissionAttribute(SecurityAction action) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +178,28 @@ public class DataProtectionPermissionAttribute extends system.security.permissio
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreatePermission.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.DataProtectionPermissionAttribute.CreatePermission" target="_top">.NET documentation</a>
+     */
     public IPermission CreatePermission() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +219,13 @@ public class DataProtectionPermissionAttribute extends system.security.permissio
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ProtectData.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.DataProtectionPermissionAttribute.ProtectData" target="_top">.NET documentation</a>
+     */
     public boolean getProtectData() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +240,13 @@ public class DataProtectionPermissionAttribute extends system.security.permissio
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProtectData.
+     *
+     * @param ProtectData the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.DataProtectionPermissionAttribute.ProtectData" target="_top">.NET documentation</a>
+     */
     public void setProtectData(boolean ProtectData) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +257,13 @@ public class DataProtectionPermissionAttribute extends system.security.permissio
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProtectMemory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.DataProtectionPermissionAttribute.ProtectMemory" target="_top">.NET documentation</a>
+     */
     public boolean getProtectMemory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +278,13 @@ public class DataProtectionPermissionAttribute extends system.security.permissio
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProtectMemory.
+     *
+     * @param ProtectMemory the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.DataProtectionPermissionAttribute.ProtectMemory" target="_top">.NET documentation</a>
+     */
     public void setProtectMemory(boolean ProtectMemory) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +295,13 @@ public class DataProtectionPermissionAttribute extends system.security.permissio
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnprotectData.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.DataProtectionPermissionAttribute.UnprotectData" target="_top">.NET documentation</a>
+     */
     public boolean getUnprotectData() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +316,13 @@ public class DataProtectionPermissionAttribute extends system.security.permissio
         }
     }
 
+    /**
+     * Sets the value of the .NET property UnprotectData.
+     *
+     * @param UnprotectData the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.DataProtectionPermissionAttribute.UnprotectData" target="_top">.NET documentation</a>
+     */
     public void setUnprotectData(boolean UnprotectData) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +333,13 @@ public class DataProtectionPermissionAttribute extends system.security.permissio
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnprotectMemory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.DataProtectionPermissionAttribute.UnprotectMemory" target="_top">.NET documentation</a>
+     */
     public boolean getUnprotectMemory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +354,13 @@ public class DataProtectionPermissionAttribute extends system.security.permissio
         }
     }
 
+    /**
+     * Sets the value of the .NET property UnprotectMemory.
+     *
+     * @param UnprotectMemory the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.DataProtectionPermissionAttribute.UnprotectMemory" target="_top">.NET documentation</a>
+     */
     public void setUnprotectMemory(boolean UnprotectMemory) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +371,13 @@ public class DataProtectionPermissionAttribute extends system.security.permissio
         }
     }
 
+    /**
+     * Gets the value of the .NET property Flags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.DataProtectionPermissionAttribute.Flags" target="_top">.NET documentation</a>
+     */
     public DataProtectionPermissionFlags getFlags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +393,27 @@ public class DataProtectionPermissionAttribute extends system.security.permissio
         }
     }
 
+    /**
+     * Sets the value of the .NET property Flags.
+     *
+     * @param Flags the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.DataProtectionPermissionAttribute.Flags" target="_top">.NET documentation</a>
+     */
     public void setFlags(DataProtectionPermissionFlags Flags) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

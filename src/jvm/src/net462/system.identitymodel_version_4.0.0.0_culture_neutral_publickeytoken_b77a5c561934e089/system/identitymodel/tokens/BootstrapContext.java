@@ -102,7 +102,10 @@ public class BootstrapContext extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BootstrapContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,14 @@ public class BootstrapContext extends NetObject  {
     public BootstrapContext() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param token the argument of type {@code byte[]}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.BootstrapContext.-ctor" target="_top">.NET documentation</a>
+     */
     public BootstrapContext(byte[] token) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +173,15 @@ public class BootstrapContext extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param token the argument of type {@code SecurityToken}
+     * @param tokenHandler the argument of type {@code SecurityTokenHandler}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.BootstrapContext.-ctor" target="_top">.NET documentation</a>
+     */
     public BootstrapContext(SecurityToken token, SecurityTokenHandler tokenHandler) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +192,14 @@ public class BootstrapContext extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param token the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.BootstrapContext.-ctor" target="_top">.NET documentation</a>
+     */
     public BootstrapContext(java.lang.String token) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -187,6 +215,26 @@ public class BootstrapContext extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetObjectData.
+     *
+     * @param info the argument of type {@code SerializationInfo}
+     * @param context the argument of type {@code StreamingContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.BootstrapContext.GetObjectData" target="_top">.NET documentation</a>
+     */
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.runtime.serialization.SerializationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.UnauthorizedAccessException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +249,13 @@ public class BootstrapContext extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property TokenBytes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.BootstrapContext.TokenBytes" target="_top">.NET documentation</a>
+     */
     public byte[] getTokenBytes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +279,13 @@ public class BootstrapContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SecurityToken.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.BootstrapContext.SecurityToken" target="_top">.NET documentation</a>
+     */
     public SecurityToken getSecurityToken() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +301,13 @@ public class BootstrapContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SecurityTokenHandler.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.BootstrapContext.SecurityTokenHandler" target="_top">.NET documentation</a>
+     */
     public SecurityTokenHandler getSecurityTokenHandler() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +323,13 @@ public class BootstrapContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Token.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.BootstrapContext.Token" target="_top">.NET documentation</a>
+     */
     public java.lang.String getToken() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

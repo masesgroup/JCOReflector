@@ -101,7 +101,10 @@ public class EventFieldAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EventFieldAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class EventFieldAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventFieldAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public EventFieldAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +175,13 @@ public class EventFieldAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Format.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventFieldAttribute.Format" target="_top">.NET documentation</a>
+     */
     public EventFieldFormat getFormat() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +197,13 @@ public class EventFieldAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Format.
+     *
+     * @param Format the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventFieldAttribute.Format" target="_top">.NET documentation</a>
+     */
     public void setFormat(EventFieldFormat Format) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +214,13 @@ public class EventFieldAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Tags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventFieldAttribute.Tags" target="_top">.NET documentation</a>
+     */
     public EventFieldTags getTags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +236,13 @@ public class EventFieldAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Tags.
+     *
+     * @param Tags the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventFieldAttribute.Tags" target="_top">.NET documentation</a>
+     */
     public void setTags(EventFieldTags Tags) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

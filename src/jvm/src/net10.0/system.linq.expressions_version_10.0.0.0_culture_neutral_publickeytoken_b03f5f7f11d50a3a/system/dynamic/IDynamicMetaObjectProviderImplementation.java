@@ -100,7 +100,10 @@ public class IDynamicMetaObjectProviderImplementation extends NetObject implemen
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDynamicMetaObjectProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,14 @@ public class IDynamicMetaObjectProviderImplementation extends NetObject implemen
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetMetaObject.
+     *
+     * @param parameter the argument of type {@code Expression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject" target="_top">.NET documentation</a>
+     */
     public DynamicMetaObject GetMetaObject(Expression parameter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

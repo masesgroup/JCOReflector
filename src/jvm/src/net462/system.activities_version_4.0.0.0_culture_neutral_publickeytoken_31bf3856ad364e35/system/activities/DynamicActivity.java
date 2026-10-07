@@ -110,7 +110,10 @@ public class DynamicActivity extends system.activities.Activity  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DynamicActivity(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,13 @@ public class DynamicActivity extends system.activities.Activity  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicActivity.-ctor" target="_top">.NET documentation</a>
+     */
     public DynamicActivity() throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -174,8 +184,12 @@ public class DynamicActivity extends system.activities.Activity  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICustomTypeDescriptor method available in ICustomTypeDescriptor to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICustomTypeDescriptor.GetAttributes" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public AttributeCollection GetAttributes() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
@@ -183,8 +197,12 @@ public class DynamicActivity extends system.activities.Activity  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICustomTypeDescriptor method available in ICustomTypeDescriptor to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICustomTypeDescriptor.GetDefaultEvent" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public EventDescriptor GetDefaultEvent() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
@@ -192,8 +210,12 @@ public class DynamicActivity extends system.activities.Activity  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICustomTypeDescriptor method available in ICustomTypeDescriptor to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICustomTypeDescriptor.GetEvents" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public EventDescriptorCollection GetEvents() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
@@ -201,8 +223,13 @@ public class DynamicActivity extends system.activities.Activity  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICustomTypeDescriptor method available in ICustomTypeDescriptor to obtain an object with an invocable method
+     *
+     * @param attributes the argument of type {@code Attribute[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICustomTypeDescriptor.GetEvents" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public EventDescriptorCollection GetEvents(Attribute[] attributes) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
@@ -210,8 +237,12 @@ public class DynamicActivity extends system.activities.Activity  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICustomTypeDescriptor method available in ICustomTypeDescriptor to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICustomTypeDescriptor.GetDefaultProperty" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public PropertyDescriptor GetDefaultProperty() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
@@ -219,8 +250,12 @@ public class DynamicActivity extends system.activities.Activity  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICustomTypeDescriptor method available in ICustomTypeDescriptor to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICustomTypeDescriptor.GetProperties" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public PropertyDescriptorCollection GetProperties() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
@@ -228,8 +263,13 @@ public class DynamicActivity extends system.activities.Activity  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICustomTypeDescriptor method available in ICustomTypeDescriptor to obtain an object with an invocable method
+     *
+     * @param attributes the argument of type {@code Attribute[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICustomTypeDescriptor.GetProperties" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public PropertyDescriptorCollection GetProperties(Attribute[] attributes) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
@@ -237,8 +277,12 @@ public class DynamicActivity extends system.activities.Activity  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICustomTypeDescriptor method available in ICustomTypeDescriptor to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICustomTypeDescriptor.GetConverter" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public TypeConverter GetConverter() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
@@ -246,8 +290,13 @@ public class DynamicActivity extends system.activities.Activity  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICustomTypeDescriptor method available in ICustomTypeDescriptor to obtain an object with an invocable method
+     *
+     * @param editorBaseType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICustomTypeDescriptor.GetEditor" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public NetObject GetEditor(NetType editorBaseType) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
@@ -255,8 +304,13 @@ public class DynamicActivity extends system.activities.Activity  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICustomTypeDescriptor method available in ICustomTypeDescriptor to obtain an object with an invocable method
+     *
+     * @param pd the argument of type {@code PropertyDescriptor}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICustomTypeDescriptor.GetPropertyOwner" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public NetObject GetPropertyOwner(PropertyDescriptor pd) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
@@ -264,8 +318,12 @@ public class DynamicActivity extends system.activities.Activity  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICustomTypeDescriptor method available in ICustomTypeDescriptor to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICustomTypeDescriptor.GetClassName" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public java.lang.String GetClassName() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
@@ -273,8 +331,12 @@ public class DynamicActivity extends system.activities.Activity  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICustomTypeDescriptor method available in ICustomTypeDescriptor to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICustomTypeDescriptor.GetComponentName" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public java.lang.String GetComponentName() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
@@ -283,6 +345,13 @@ public class DynamicActivity extends system.activities.Activity  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Constraints.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicActivity.Constraints" target="_top">.NET documentation</a>
+     */
     public Collection_1 getConstraints() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +367,13 @@ public class DynamicActivity extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Attributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicActivity.Attributes" target="_top">.NET documentation</a>
+     */
     public Collection_1 getAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -313,6 +389,13 @@ public class DynamicActivity extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Properties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicActivity.Properties" target="_top">.NET documentation</a>
+     */
     public KeyedCollection_2 getProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -328,6 +411,13 @@ public class DynamicActivity extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Implementation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicActivity.Implementation" target="_top">.NET documentation</a>
+     */
     public Func_1 getImplementation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -342,6 +432,13 @@ public class DynamicActivity extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Implementation.
+     *
+     * @param Implementation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicActivity.Implementation" target="_top">.NET documentation</a>
+     */
     public void setImplementation(Func_1 Implementation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -352,6 +449,13 @@ public class DynamicActivity extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicActivity.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -366,6 +470,13 @@ public class DynamicActivity extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicActivity.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -376,6 +487,13 @@ public class DynamicActivity extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ImplementationVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicActivity.ImplementationVersion" target="_top">.NET documentation</a>
+     */
     public Version getImplementationVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -391,6 +509,13 @@ public class DynamicActivity extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ImplementationVersion.
+     *
+     * @param ImplementationVersion the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicActivity.ImplementationVersion" target="_top">.NET documentation</a>
+     */
     public void setImplementationVersion(Version ImplementationVersion) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

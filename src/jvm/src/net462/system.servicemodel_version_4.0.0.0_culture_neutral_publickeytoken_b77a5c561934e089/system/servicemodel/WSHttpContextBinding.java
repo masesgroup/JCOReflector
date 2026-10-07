@@ -103,7 +103,10 @@ public class WSHttpContextBinding extends system.servicemodel.WSHttpBinding  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WSHttpContextBinding(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,18 @@ public class WSHttpContextBinding extends system.servicemodel.WSHttpBinding  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.WSHttpContextBinding.-ctor" target="_top">.NET documentation</a>
+     */
     public WSHttpContextBinding() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +175,16 @@ public class WSHttpContextBinding extends system.servicemodel.WSHttpBinding  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param securityMode the argument of type {@code SecurityMode}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.WSHttpContextBinding.-ctor" target="_top">.NET documentation</a>
+     */
     public WSHttpContextBinding(SecurityMode securityMode) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +195,20 @@ public class WSHttpContextBinding extends system.servicemodel.WSHttpBinding  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param securityMode the argument of type {@code SecurityMode}
+     * @param reliableSessionEnabled the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.WSHttpContextBinding.-ctor" target="_top">.NET documentation</a>
+     */
     public WSHttpContextBinding(SecurityMode securityMode, boolean reliableSessionEnabled) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +219,23 @@ public class WSHttpContextBinding extends system.servicemodel.WSHttpBinding  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param configName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.WSHttpContextBinding.-ctor" target="_top">.NET documentation</a>
+     */
     public WSHttpContextBinding(java.lang.String configName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException, system.TypeLoadException, system.configuration.ConfigurationErrorsException {
         try {
             // add reference to assemblyName.dll file
@@ -194,6 +250,30 @@ public class WSHttpContextBinding extends system.servicemodel.WSHttpBinding  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateBindingElements.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.WSHttpContextBinding.CreateBindingElements" target="_top">.NET documentation</a>
+     */
     public BindingElementCollection CreateBindingElements() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +293,13 @@ public class WSHttpContextBinding extends system.servicemodel.WSHttpBinding  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ContextManagementEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.WSHttpContextBinding.ContextManagementEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getContextManagementEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +314,13 @@ public class WSHttpContextBinding extends system.servicemodel.WSHttpBinding  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ContextManagementEnabled.
+     *
+     * @param ContextManagementEnabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.WSHttpContextBinding.ContextManagementEnabled" target="_top">.NET documentation</a>
+     */
     public void setContextManagementEnabled(boolean ContextManagementEnabled) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +331,13 @@ public class WSHttpContextBinding extends system.servicemodel.WSHttpBinding  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContextProtectionLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.WSHttpContextBinding.ContextProtectionLevel" target="_top">.NET documentation</a>
+     */
     public ProtectionLevel getContextProtectionLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +353,24 @@ public class WSHttpContextBinding extends system.servicemodel.WSHttpBinding  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ContextProtectionLevel.
+     *
+     * @param ContextProtectionLevel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.WSHttpContextBinding.ContextProtectionLevel" target="_top">.NET documentation</a>
+     */
     public void setContextProtectionLevel(ProtectionLevel ContextProtectionLevel) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +381,13 @@ public class WSHttpContextBinding extends system.servicemodel.WSHttpBinding  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClientCallbackAddress.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.WSHttpContextBinding.ClientCallbackAddress" target="_top">.NET documentation</a>
+     */
     public Uri getClientCallbackAddress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +403,13 @@ public class WSHttpContextBinding extends system.servicemodel.WSHttpBinding  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ClientCallbackAddress.
+     *
+     * @param ClientCallbackAddress the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.WSHttpContextBinding.ClientCallbackAddress" target="_top">.NET documentation</a>
+     */
     public void setClientCallbackAddress(Uri ClientCallbackAddress) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

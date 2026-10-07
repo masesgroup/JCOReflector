@@ -104,7 +104,10 @@ public class ShortcutKeysEditor extends system.drawing.design.UITypeEditor  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ShortcutKeysEditor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,12 @@ public class ShortcutKeysEditor extends system.drawing.design.UITypeEditor  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.ShortcutKeysEditor.-ctor" target="_top">.NET documentation</a>
+     */
     public ShortcutKeysEditor() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,14 @@ public class ShortcutKeysEditor extends system.drawing.design.UITypeEditor  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetEditStyle.
+     *
+     * @param context the argument of type {@code ITypeDescriptorContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.ShortcutKeysEditor.GetEditStyle" target="_top">.NET documentation</a>
+     */
     public UITypeEditorEditStyle GetEditStyle(ITypeDescriptorContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +197,36 @@ public class ShortcutKeysEditor extends system.drawing.design.UITypeEditor  {
         }
     }
 
+    /**
+     * Invokes the .NET member EditValue.
+     *
+     * @param context the argument of type {@code ITypeDescriptorContext}
+     * @param provider the argument of type {@code IServiceProvider}
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.ShortcutKeysEditor.EditValue" target="_top">.NET documentation</a>
+     */
     public NetObject EditValue(ITypeDescriptorContext context, IServiceProvider provider, NetObject value) throws Throwable, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.MulticastNotSupportedException, system.NullReferenceException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.io.IOException, system.RankException, system.threading.ThreadStateException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -115,7 +115,10 @@ public class TypeDefinition extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TypeDefinition(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -170,6 +173,22 @@ public class TypeDefinition extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetNestedTypes.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.TypeDefinition.GetNestedTypes" target="_top">.NET documentation</a>
+     */
     public ImmutableArray_1 GetNestedTypes() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.BadImageFormatException, system.ArgumentNullException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +204,15 @@ public class TypeDefinition extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCustomAttributes.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.TypeDefinition.GetCustomAttributes" target="_top">.NET documentation</a>
+     */
     public CustomAttributeHandleCollection GetCustomAttributes() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +228,15 @@ public class TypeDefinition extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDeclarativeSecurityAttributes.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.TypeDefinition.GetDeclarativeSecurityAttributes" target="_top">.NET documentation</a>
+     */
     public DeclarativeSecurityAttributeHandleCollection GetDeclarativeSecurityAttributes() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +252,15 @@ public class TypeDefinition extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEvents.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.TypeDefinition.GetEvents" target="_top">.NET documentation</a>
+     */
     public EventDefinitionHandleCollection GetEvents() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +276,15 @@ public class TypeDefinition extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFields.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.TypeDefinition.GetFields" target="_top">.NET documentation</a>
+     */
     public FieldDefinitionHandleCollection GetFields() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +300,15 @@ public class TypeDefinition extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetGenericParameters.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.TypeDefinition.GetGenericParameters" target="_top">.NET documentation</a>
+     */
     public GenericParameterHandleCollection GetGenericParameters() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +324,15 @@ public class TypeDefinition extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetInterfaceImplementations.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.TypeDefinition.GetInterfaceImplementations" target="_top">.NET documentation</a>
+     */
     public InterfaceImplementationHandleCollection GetInterfaceImplementations() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +348,15 @@ public class TypeDefinition extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethods.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.TypeDefinition.GetMethods" target="_top">.NET documentation</a>
+     */
     public MethodDefinitionHandleCollection GetMethods() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +372,15 @@ public class TypeDefinition extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethodImplementations.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.TypeDefinition.GetMethodImplementations" target="_top">.NET documentation</a>
+     */
     public MethodImplementationHandleCollection GetMethodImplementations() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +396,15 @@ public class TypeDefinition extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetProperties.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.TypeDefinition.GetProperties" target="_top">.NET documentation</a>
+     */
     public PropertyDefinitionHandleCollection GetProperties() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +420,15 @@ public class TypeDefinition extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDeclaringType.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.TypeDefinition.GetDeclaringType" target="_top">.NET documentation</a>
+     */
     public TypeDefinitionHandle GetDeclaringType() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +444,15 @@ public class TypeDefinition extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetLayout.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.TypeDefinition.GetLayout" target="_top">.NET documentation</a>
+     */
     public TypeLayout GetLayout() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -354,6 +472,16 @@ public class TypeDefinition extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsNested.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.TypeDefinition.IsNested" target="_top">.NET documentation</a>
+     */
     public boolean getIsNested() throws Throwable, system.ArgumentException, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -368,6 +496,15 @@ public class TypeDefinition extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BaseType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.TypeDefinition.BaseType" target="_top">.NET documentation</a>
+     */
     public EntityHandle getBaseType() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -383,6 +520,16 @@ public class TypeDefinition extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NamespaceDefinition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.TypeDefinition.NamespaceDefinition" target="_top">.NET documentation</a>
+     */
     public NamespaceDefinitionHandle getNamespaceDefinition() throws Throwable, system.ArgumentException, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -398,6 +545,16 @@ public class TypeDefinition extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.TypeDefinition.Name" target="_top">.NET documentation</a>
+     */
     public StringHandle getName() throws Throwable, system.ArgumentException, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -413,6 +570,16 @@ public class TypeDefinition extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Namespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.TypeDefinition.Namespace" target="_top">.NET documentation</a>
+     */
     public StringHandle getNamespace() throws Throwable, system.ArgumentException, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -428,6 +595,17 @@ public class TypeDefinition extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Attributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.TypeDefinition.Attributes" target="_top">.NET documentation</a>
+     */
     public TypeAttributes getAttributes() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

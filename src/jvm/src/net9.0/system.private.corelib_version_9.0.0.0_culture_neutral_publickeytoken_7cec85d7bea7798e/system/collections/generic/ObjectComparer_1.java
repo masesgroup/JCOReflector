@@ -99,7 +99,10 @@ public class ObjectComparer_1<T extends IJCOBridgeReflected> extends system.coll
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ObjectComparer_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class ObjectComparer_1<T extends IJCOBridgeReflected> extends system.coll
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.ObjectComparer-1.-ctor" target="_top">.NET documentation</a>
+     */
     public ObjectComparer_1() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +171,19 @@ public class ObjectComparer_1<T extends IJCOBridgeReflected> extends system.coll
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CompareByKey.
+     *
+     * @param x the argument of type {@code T}
+     * @param y the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.ObjectComparer-1.CompareByKey" target="_top">.NET documentation</a>
+     */
     public int CompareByKey(T x, T y) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

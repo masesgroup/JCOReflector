@@ -99,7 +99,10 @@ public class TypeLibVersionAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TypeLibVersionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class TypeLibVersionAttribute extends system.Attribute  {
     public TypeLibVersionAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param major the argument of type {@code int}
+     * @param minor the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.TypeLibVersionAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public TypeLibVersionAttribute(int major, int minor) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +179,13 @@ public class TypeLibVersionAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MajorVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.TypeLibVersionAttribute.MajorVersion" target="_top">.NET documentation</a>
+     */
     public int getMajorVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +226,13 @@ public class TypeLibVersionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinorVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.TypeLibVersionAttribute.MinorVersion" target="_top">.NET documentation</a>
+     */
     public int getMinorVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

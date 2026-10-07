@@ -102,7 +102,10 @@ public class IHierarchicalVirtualizationAndScrollInfoImplementation extends NetO
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IHierarchicalVirtualizationAndScrollInfoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,13 @@ public class IHierarchicalVirtualizationAndScrollInfoImplementation extends NetO
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property InBackgroundLayout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo.InBackgroundLayout" target="_top">.NET documentation</a>
+     */
     public boolean getInBackgroundLayout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -162,6 +172,13 @@ public class IHierarchicalVirtualizationAndScrollInfoImplementation extends NetO
         }
     }
 
+    /**
+     * Sets the value of the .NET property InBackgroundLayout.
+     *
+     * @param InBackgroundLayout the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo.InBackgroundLayout" target="_top">.NET documentation</a>
+     */
     public void setInBackgroundLayout(boolean InBackgroundLayout) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +189,13 @@ public class IHierarchicalVirtualizationAndScrollInfoImplementation extends NetO
         }
     }
 
+    /**
+     * Gets the value of the .NET property MustDisableVirtualization.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo.MustDisableVirtualization" target="_top">.NET documentation</a>
+     */
     public boolean getMustDisableVirtualization() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +210,13 @@ public class IHierarchicalVirtualizationAndScrollInfoImplementation extends NetO
         }
     }
 
+    /**
+     * Sets the value of the .NET property MustDisableVirtualization.
+     *
+     * @param MustDisableVirtualization the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo.MustDisableVirtualization" target="_top">.NET documentation</a>
+     */
     public void setMustDisableVirtualization(boolean MustDisableVirtualization) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +227,13 @@ public class IHierarchicalVirtualizationAndScrollInfoImplementation extends NetO
         }
     }
 
+    /**
+     * Gets the value of the .NET property Constraints.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo.Constraints" target="_top">.NET documentation</a>
+     */
     public HierarchicalVirtualizationConstraints getConstraints() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +249,13 @@ public class IHierarchicalVirtualizationAndScrollInfoImplementation extends NetO
         }
     }
 
+    /**
+     * Sets the value of the .NET property Constraints.
+     *
+     * @param Constraints the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo.Constraints" target="_top">.NET documentation</a>
+     */
     public void setConstraints(HierarchicalVirtualizationConstraints Constraints) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +266,13 @@ public class IHierarchicalVirtualizationAndScrollInfoImplementation extends NetO
         }
     }
 
+    /**
+     * Gets the value of the .NET property HeaderDesiredSizes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo.HeaderDesiredSizes" target="_top">.NET documentation</a>
+     */
     public HierarchicalVirtualizationHeaderDesiredSizes getHeaderDesiredSizes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +288,13 @@ public class IHierarchicalVirtualizationAndScrollInfoImplementation extends NetO
         }
     }
 
+    /**
+     * Gets the value of the .NET property ItemDesiredSizes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo.ItemDesiredSizes" target="_top">.NET documentation</a>
+     */
     public HierarchicalVirtualizationItemDesiredSizes getItemDesiredSizes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +310,13 @@ public class IHierarchicalVirtualizationAndScrollInfoImplementation extends NetO
         }
     }
 
+    /**
+     * Sets the value of the .NET property ItemDesiredSizes.
+     *
+     * @param ItemDesiredSizes the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo.ItemDesiredSizes" target="_top">.NET documentation</a>
+     */
     public void setItemDesiredSizes(HierarchicalVirtualizationItemDesiredSizes ItemDesiredSizes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +327,13 @@ public class IHierarchicalVirtualizationAndScrollInfoImplementation extends NetO
         }
     }
 
+    /**
+     * Gets the value of the .NET property ItemsHost.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo.ItemsHost" target="_top">.NET documentation</a>
+     */
     public Panel getItemsHost() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

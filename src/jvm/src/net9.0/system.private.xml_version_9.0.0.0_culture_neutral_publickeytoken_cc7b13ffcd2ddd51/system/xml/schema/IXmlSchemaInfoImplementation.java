@@ -103,7 +103,10 @@ public class IXmlSchemaInfoImplementation extends NetObject implements IXmlSchem
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IXmlSchemaInfoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,13 @@ public class IXmlSchemaInfoImplementation extends NetObject implements IXmlSchem
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsDefault.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.IXmlSchemaInfo.IsDefault" target="_top">.NET documentation</a>
+     */
     public boolean getIsDefault() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -163,6 +173,13 @@ public class IXmlSchemaInfoImplementation extends NetObject implements IXmlSchem
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsNil.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.IXmlSchemaInfo.IsNil" target="_top">.NET documentation</a>
+     */
     public boolean getIsNil() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +194,13 @@ public class IXmlSchemaInfoImplementation extends NetObject implements IXmlSchem
         }
     }
 
+    /**
+     * Gets the value of the .NET property SchemaAttribute.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.IXmlSchemaInfo.SchemaAttribute" target="_top">.NET documentation</a>
+     */
     public XmlSchemaAttribute getSchemaAttribute() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +216,13 @@ public class IXmlSchemaInfoImplementation extends NetObject implements IXmlSchem
         }
     }
 
+    /**
+     * Gets the value of the .NET property SchemaElement.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.IXmlSchemaInfo.SchemaElement" target="_top">.NET documentation</a>
+     */
     public XmlSchemaElement getSchemaElement() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +238,13 @@ public class IXmlSchemaInfoImplementation extends NetObject implements IXmlSchem
         }
     }
 
+    /**
+     * Gets the value of the .NET property MemberType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.IXmlSchemaInfo.MemberType" target="_top">.NET documentation</a>
+     */
     public XmlSchemaSimpleType getMemberType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +260,13 @@ public class IXmlSchemaInfoImplementation extends NetObject implements IXmlSchem
         }
     }
 
+    /**
+     * Gets the value of the .NET property SchemaType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.IXmlSchemaInfo.SchemaType" target="_top">.NET documentation</a>
+     */
     public XmlSchemaType getSchemaType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +282,13 @@ public class IXmlSchemaInfoImplementation extends NetObject implements IXmlSchem
         }
     }
 
+    /**
+     * Gets the value of the .NET property Validity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.IXmlSchemaInfo.Validity" target="_top">.NET documentation</a>
+     */
     public XmlSchemaValidity getValidity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

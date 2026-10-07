@@ -101,7 +101,10 @@ public class SequencePoint extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SequencePoint(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,14 @@ public class SequencePoint extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code SequencePoint}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.SequencePoint.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(SequencePoint other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +185,13 @@ public class SequencePoint extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsHidden.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.SequencePoint.IsHidden" target="_top">.NET documentation</a>
+     */
     public boolean getIsHidden() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +206,13 @@ public class SequencePoint extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EndColumn.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.SequencePoint.EndColumn" target="_top">.NET documentation</a>
+     */
     public int getEndColumn() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +253,13 @@ public class SequencePoint extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EndLine.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.SequencePoint.EndLine" target="_top">.NET documentation</a>
+     */
     public int getEndLine() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +300,13 @@ public class SequencePoint extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Offset.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.SequencePoint.Offset" target="_top">.NET documentation</a>
+     */
     public int getOffset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +347,13 @@ public class SequencePoint extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StartColumn.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.SequencePoint.StartColumn" target="_top">.NET documentation</a>
+     */
     public int getStartColumn() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +394,13 @@ public class SequencePoint extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StartLine.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.SequencePoint.StartLine" target="_top">.NET documentation</a>
+     */
     public int getStartLine() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -388,6 +441,13 @@ public class SequencePoint extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Document.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.SequencePoint.Document" target="_top">.NET documentation</a>
+     */
     public DocumentHandle getDocument() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

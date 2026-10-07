@@ -111,7 +111,10 @@ public class DesignerSerializationManager extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DesignerSerializationManager(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,12 @@ public class DesignerSerializationManager extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.DesignerSerializationManager.-ctor" target="_top">.NET documentation</a>
+     */
     public DesignerSerializationManager() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +177,14 @@ public class DesignerSerializationManager extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param provider the argument of type {@code IServiceProvider}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.DesignerSerializationManager.-ctor" target="_top">.NET documentation</a>
+     */
     public DesignerSerializationManager(IServiceProvider provider) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +199,24 @@ public class DesignerSerializationManager extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateSession.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.DesignerSerializationManager.CreateSession" target="_top">.NET documentation</a>
+     */
     public IDisposable CreateSession() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +232,25 @@ public class DesignerSerializationManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetSerializer.
+     *
+     * @param objectType the argument of type {@code NetType}
+     * @param serializerType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.DesignerSerializationManager.GetSerializer" target="_top">.NET documentation</a>
+     */
     public NetObject GetSerializer(NetType objectType, NetType serializerType) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +266,17 @@ public class DesignerSerializationManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRuntimeType.
+     *
+     * @param typeName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.DesignerSerializationManager.GetRuntimeType" target="_top">.NET documentation</a>
+     */
     public NetType GetRuntimeType(java.lang.String typeName) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,8 +295,16 @@ public class DesignerSerializationManager extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDesignerSerializationManager method available in IDesignerSerializationManager to obtain an object with an invocable method
+     *
+     * @param type the argument of type {@code NetType}
+     * @param arguments the argument of type {@code ICollection}
+     * @param name the argument of type {@code java.lang.String}
+     * @param addToContainer the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.IDesignerSerializationManager.CreateInstance" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public NetObject CreateInstance(NetType type, ICollection arguments, java.lang.String name, boolean addToContainer) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
     }
@@ -239,8 +312,13 @@ public class DesignerSerializationManager extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDesignerSerializationManager method available in IDesignerSerializationManager to obtain an object with an invocable method
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetInstance" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public NetObject GetInstance(java.lang.String name) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
     }
@@ -248,8 +326,13 @@ public class DesignerSerializationManager extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDesignerSerializationManager method available in IDesignerSerializationManager to obtain an object with an invocable method
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetName" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public java.lang.String GetName(NetObject value) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
     }
@@ -257,8 +340,13 @@ public class DesignerSerializationManager extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDesignerSerializationManager method available in IDesignerSerializationManager to obtain an object with an invocable method
+     *
+     * @param typeName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetType" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public NetType GetType(java.lang.String typeName) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
     }
@@ -266,8 +354,12 @@ public class DesignerSerializationManager extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDesignerSerializationManager method available in IDesignerSerializationManager to obtain an object with an invocable method
+     *
+     * @param provider the argument of type {@code IDesignerSerializationProvider}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.IDesignerSerializationManager.AddSerializationProvider" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void AddSerializationProvider(IDesignerSerializationProvider provider) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
     }
@@ -275,8 +367,12 @@ public class DesignerSerializationManager extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDesignerSerializationManager method available in IDesignerSerializationManager to obtain an object with an invocable method
+     *
+     * @param provider the argument of type {@code IDesignerSerializationProvider}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.IDesignerSerializationManager.RemoveSerializationProvider" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void RemoveSerializationProvider(IDesignerSerializationProvider provider) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
     }
@@ -284,8 +380,12 @@ public class DesignerSerializationManager extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDesignerSerializationManager method available in IDesignerSerializationManager to obtain an object with an invocable method
+     *
+     * @param errorInformation the argument of type {@code NetObject}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.IDesignerSerializationManager.ReportError" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ReportError(NetObject errorInformation) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
     }
@@ -293,8 +393,13 @@ public class DesignerSerializationManager extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDesignerSerializationManager method available in IDesignerSerializationManager to obtain an object with an invocable method
+     *
+     * @param instance the argument of type {@code NetObject}
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.IDesignerSerializationManager.SetName" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void SetName(NetObject instance, java.lang.String name) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
     }
@@ -302,8 +407,13 @@ public class DesignerSerializationManager extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIServiceProvider method available in IServiceProvider to obtain an object with an invocable method
+     *
+     * @param serviceType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IServiceProvider.GetService" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public NetObject GetService(NetType serviceType) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceProvider to obtain the full interface.");
     }
@@ -312,6 +422,13 @@ public class DesignerSerializationManager extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PreserveNames.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.DesignerSerializationManager.PreserveNames" target="_top">.NET documentation</a>
+     */
     public boolean getPreserveNames() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -326,6 +443,23 @@ public class DesignerSerializationManager extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PreserveNames.
+     *
+     * @param PreserveNames the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.DesignerSerializationManager.PreserveNames" target="_top">.NET documentation</a>
+     */
     public void setPreserveNames(boolean PreserveNames) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -336,6 +470,13 @@ public class DesignerSerializationManager extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RecycleInstances.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.DesignerSerializationManager.RecycleInstances" target="_top">.NET documentation</a>
+     */
     public boolean getRecycleInstances() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -350,6 +491,23 @@ public class DesignerSerializationManager extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RecycleInstances.
+     *
+     * @param RecycleInstances the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.DesignerSerializationManager.RecycleInstances" target="_top">.NET documentation</a>
+     */
     public void setRecycleInstances(boolean RecycleInstances) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -360,6 +518,13 @@ public class DesignerSerializationManager extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValidateRecycledTypes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.DesignerSerializationManager.ValidateRecycledTypes" target="_top">.NET documentation</a>
+     */
     public boolean getValidateRecycledTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -374,6 +539,23 @@ public class DesignerSerializationManager extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ValidateRecycledTypes.
+     *
+     * @param ValidateRecycledTypes the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.DesignerSerializationManager.ValidateRecycledTypes" target="_top">.NET documentation</a>
+     */
     public void setValidateRecycledTypes(boolean ValidateRecycledTypes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -384,6 +566,23 @@ public class DesignerSerializationManager extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Errors.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.DesignerSerializationManager.Errors" target="_top">.NET documentation</a>
+     */
     public IList getErrors() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -399,6 +598,13 @@ public class DesignerSerializationManager extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Container.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.DesignerSerializationManager.Container" target="_top">.NET documentation</a>
+     */
     public IContainer getContainer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -414,6 +620,23 @@ public class DesignerSerializationManager extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Container.
+     *
+     * @param Container the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.DesignerSerializationManager.Container" target="_top">.NET documentation</a>
+     */
     public void setContainer(IContainer Container) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -424,6 +647,13 @@ public class DesignerSerializationManager extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyProvider.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.DesignerSerializationManager.PropertyProvider" target="_top">.NET documentation</a>
+     */
     public NetObject getPropertyProvider() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -439,6 +669,13 @@ public class DesignerSerializationManager extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PropertyProvider.
+     *
+     * @param PropertyProvider the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.DesignerSerializationManager.PropertyProvider" target="_top">.NET documentation</a>
+     */
     public void setPropertyProvider(NetObject PropertyProvider) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -454,6 +691,13 @@ public class DesignerSerializationManager extends NetObject  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addSessionCreated.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addSessionCreated(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -464,6 +708,13 @@ public class DesignerSerializationManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeSessionCreated.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeSessionCreated(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -474,6 +725,13 @@ public class DesignerSerializationManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addSessionDisposed.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addSessionDisposed(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -484,6 +742,13 @@ public class DesignerSerializationManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeSessionDisposed.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeSessionDisposed(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

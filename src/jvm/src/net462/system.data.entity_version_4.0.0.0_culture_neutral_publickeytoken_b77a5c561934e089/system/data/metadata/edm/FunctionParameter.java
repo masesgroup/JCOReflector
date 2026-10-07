@@ -103,7 +103,10 @@ public class FunctionParameter extends system.data.metadata.edm.MetadataItem  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FunctionParameter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -162,6 +165,13 @@ public class FunctionParameter extends system.data.metadata.edm.MetadataItem  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DeclaringFunction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.FunctionParameter.DeclaringFunction" target="_top">.NET documentation</a>
+     */
     public EdmFunction getDeclaringFunction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +187,13 @@ public class FunctionParameter extends system.data.metadata.edm.MetadataItem  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Mode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.FunctionParameter.Mode" target="_top">.NET documentation</a>
+     */
     public ParameterMode getMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +209,13 @@ public class FunctionParameter extends system.data.metadata.edm.MetadataItem  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeUsage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.FunctionParameter.TypeUsage" target="_top">.NET documentation</a>
+     */
     public TypeUsage getTypeUsage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +231,13 @@ public class FunctionParameter extends system.data.metadata.edm.MetadataItem  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.FunctionParameter.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

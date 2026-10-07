@@ -121,7 +121,10 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ParallelEnumerable(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -174,6 +177,25 @@ public class ParallelEnumerable extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member All.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param predicate the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.All" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> boolean All(ParallelQuery_1 source, Func_2 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -188,6 +210,25 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Any.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param predicate the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Any" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> boolean Any(ParallelQuery_1 source, Func_2 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -202,6 +243,24 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Any.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Any" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> boolean Any(ParallelQuery_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -216,6 +275,26 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param value the argument of type {@code TSource}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Contains" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> boolean Contains(ParallelQuery_1 source, TSource value, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -230,6 +309,21 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param value the argument of type {@code TSource}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Contains" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> boolean Contains(ParallelQuery_1 source, TSource value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -244,6 +338,25 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SequenceEqual.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param first the argument of type {@code ParallelQuery_1}
+     * @param second the argument of type {@code IEnumerable_1}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.SequenceEqual" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> boolean SequenceEqual(ParallelQuery_1 first, IEnumerable_1 second, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -258,6 +371,24 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SequenceEqual.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param first the argument of type {@code ParallelQuery_1}
+     * @param second the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.SequenceEqual" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> boolean SequenceEqual(ParallelQuery_1 first, IEnumerable_1 second) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -272,6 +403,29 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SequenceEqual.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param first the argument of type {@code ParallelQuery_1}
+     * @param second the argument of type {@code ParallelQuery_1}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.SequenceEqual" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> boolean SequenceEqual(ParallelQuery_1 first, ParallelQuery_1 second, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.OperationCanceledException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -286,6 +440,27 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SequenceEqual.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param first the argument of type {@code ParallelQuery_1}
+     * @param second the argument of type {@code ParallelQuery_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.SequenceEqual" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> boolean SequenceEqual(ParallelQuery_1 first, ParallelQuery_1 second) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OperationCanceledException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -300,6 +475,24 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Average.
+     *
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Average" target="_top">.NET documentation</a>
+     */
     public static double Average(ParallelQuery_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -340,6 +533,22 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Average.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param selector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Average" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> double Average(ParallelQuery_1 source, Func_2 selector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -380,6 +589,24 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Max.
+     *
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Max" target="_top">.NET documentation</a>
+     */
     public static double Max(ParallelQuery_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -420,6 +647,22 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Max.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param selector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Max" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> double Max(ParallelQuery_1 source, Func_2 selector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -460,6 +703,24 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Min.
+     *
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Min" target="_top">.NET documentation</a>
+     */
     public static double Min(ParallelQuery_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -500,6 +761,22 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Min.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param selector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Min" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> double Min(ParallelQuery_1 source, Func_2 selector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -540,6 +817,24 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Sum.
+     *
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Sum" target="_top">.NET documentation</a>
+     */
     public static double Sum(ParallelQuery_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -580,6 +875,22 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Sum.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param selector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Sum" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> double Sum(ParallelQuery_1 source, Func_2 selector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -620,6 +931,26 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Count.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param predicate the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Count" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> int Count(ParallelQuery_1 source, Func_2 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -660,6 +991,25 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Count.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Count" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> int Count(ParallelQuery_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -700,6 +1050,26 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LongCount.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param predicate the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.LongCount" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> long LongCount(ParallelQuery_1 source, Func_2 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -740,6 +1110,25 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LongCount.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.LongCount" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> long LongCount(ParallelQuery_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -780,6 +1169,32 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToDictionary.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TElement> the type of the generic argument TElement
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param elementSelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.ToDictionary" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> Dictionary_2 ToDictionary(ParallelQuery_1 source, Func_2 keySelector, Func_2 elementSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -795,6 +1210,27 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToDictionary.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TElement> the type of the generic argument TElement
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param elementSelector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.ToDictionary" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> Dictionary_2 ToDictionary(ParallelQuery_1 source, Func_2 keySelector, Func_2 elementSelector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -810,6 +1246,30 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToDictionary.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.ToDictionary" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> Dictionary_2 ToDictionary(ParallelQuery_1 source, Func_2 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -825,6 +1285,25 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToDictionary.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.ToDictionary" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> Dictionary_2 ToDictionary(ParallelQuery_1 source, Func_2 keySelector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -840,6 +1319,20 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsEnumerable.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.AsEnumerable" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IEnumerable_1 AsEnumerable(ParallelQuery_1 source) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -855,6 +1348,24 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsSequential.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.AsSequential" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IEnumerable_1 AsSequential(ParallelQuery_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -870,6 +1381,27 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToList.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.ToList" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> List_1 ToList(ParallelQuery_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OperationCanceledException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -885,6 +1417,30 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToLookup.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TElement> the type of the generic argument TElement
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param elementSelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.ToLookup" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> ILookup_2 ToLookup(ParallelQuery_1 source, Func_2 keySelector, Func_2 elementSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -900,6 +1456,26 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToLookup.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TElement> the type of the generic argument TElement
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param elementSelector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.ToLookup" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> ILookup_2 ToLookup(ParallelQuery_1 source, Func_2 keySelector, Func_2 elementSelector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -915,6 +1491,28 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToLookup.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.ToLookup" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> ILookup_2 ToLookup(ParallelQuery_1 source, Func_2 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -930,6 +1528,24 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToLookup.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.ToLookup" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> ILookup_2 ToLookup(ParallelQuery_1 source, Func_2 keySelector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -945,6 +1561,27 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OrderBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.OrderBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> OrderedParallelQuery_1 OrderBy(ParallelQuery_1 source, Func_2 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -960,6 +1597,26 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OrderBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.OrderBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> OrderedParallelQuery_1 OrderBy(ParallelQuery_1 source, Func_2 keySelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -975,6 +1632,27 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OrderByDescending.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.OrderByDescending" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> OrderedParallelQuery_1 OrderByDescending(ParallelQuery_1 source, Func_2 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -990,6 +1668,26 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OrderByDescending.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.OrderByDescending" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> OrderedParallelQuery_1 OrderByDescending(ParallelQuery_1 source, Func_2 keySelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1005,6 +1703,27 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ThenBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code OrderedParallelQuery_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.ThenBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> OrderedParallelQuery_1 ThenBy(OrderedParallelQuery_1 source, Func_2 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1020,6 +1739,26 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ThenBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code OrderedParallelQuery_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.ThenBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> OrderedParallelQuery_1 ThenBy(OrderedParallelQuery_1 source, Func_2 keySelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1035,6 +1774,27 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ThenByDescending.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code OrderedParallelQuery_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.ThenByDescending" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> OrderedParallelQuery_1 ThenByDescending(OrderedParallelQuery_1 source, Func_2 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1050,6 +1810,26 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ThenByDescending.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code OrderedParallelQuery_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.ThenByDescending" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> OrderedParallelQuery_1 ThenByDescending(OrderedParallelQuery_1 source, Func_2 keySelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1065,6 +1845,23 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsOrdered.
+     *
+     * @param source the argument of type {@code ParallelQuery}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.AsOrdered" target="_top">.NET documentation</a>
+     */
     public static ParallelQuery AsOrdered(ParallelQuery source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1080,6 +1877,23 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsParallel.
+     *
+     * @param source the argument of type {@code IEnumerable}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.AsParallel" target="_top">.NET documentation</a>
+     */
     public static ParallelQuery AsParallel(IEnumerable source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1095,6 +1909,24 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Range.
+     *
+     * @param start the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Range" target="_top">.NET documentation</a>
+     */
     public static ParallelQuery_1 Range(int start, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1110,6 +1942,29 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GroupBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TElement> the type of the generic argument TElement
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param elementSelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.GroupBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> ParallelQuery_1 GroupBy(ParallelQuery_1 source, Func_2 keySelector, Func_2 elementSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1125,6 +1980,24 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GroupBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TElement> the type of the generic argument TElement
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param elementSelector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.GroupBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> ParallelQuery_1 GroupBy(ParallelQuery_1 source, Func_2 keySelector, Func_2 elementSelector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1140,6 +2013,27 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GroupBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.GroupBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> ParallelQuery_1 GroupBy(ParallelQuery_1 source, Func_2 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1155,6 +2049,22 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GroupBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.GroupBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> ParallelQuery_1 GroupBy(ParallelQuery_1 source, Func_2 keySelector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1170,6 +2080,24 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Cast.
+     *
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code ParallelQuery}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Cast" target="_top">.NET documentation</a>
+     */
     public static <TResult extends IJCOBridgeReflected> ParallelQuery_1 Cast(ParallelQuery source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1185,6 +2113,14 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Empty.
+     *
+     * @param <TResult> the type of the generic argument TResult
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Empty" target="_top">.NET documentation</a>
+     */
     public static <TResult extends IJCOBridgeReflected> ParallelQuery_1 Empty() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1200,6 +2136,31 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GroupBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TElement> the type of the generic argument TElement
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param elementSelector the argument of type {@code Func_2}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.GroupBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 GroupBy(ParallelQuery_1 source, Func_2 keySelector, Func_2 elementSelector, Func_3 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1215,6 +2176,30 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GroupBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TElement> the type of the generic argument TElement
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param elementSelector the argument of type {@code Func_2}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.GroupBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 GroupBy(ParallelQuery_1 source, Func_2 keySelector, Func_2 elementSelector, Func_3 resultSelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1230,6 +2215,29 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GroupBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.GroupBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 GroupBy(ParallelQuery_1 source, Func_2 keySelector, Func_3 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1245,6 +2253,28 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GroupBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.GroupBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 GroupBy(ParallelQuery_1 source, Func_2 keySelector, Func_3 resultSelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1260,6 +2290,31 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GroupJoin.
+     *
+     * @param <TOuter> the type of the generic argument TOuter
+     * @param <TInner> the type of the generic argument TInner
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TResult> the type of the generic argument TResult
+     * @param outer the argument of type {@code ParallelQuery_1}
+     * @param inner the argument of type {@code IEnumerable_1}
+     * @param outerKeySelector the argument of type {@code Func_2}
+     * @param innerKeySelector the argument of type {@code Func_2}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.GroupJoin" target="_top">.NET documentation</a>
+     */
     public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 GroupJoin(ParallelQuery_1 outer, IEnumerable_1 inner, Func_2 outerKeySelector, Func_2 innerKeySelector, Func_3 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1275,6 +2330,30 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GroupJoin.
+     *
+     * @param <TOuter> the type of the generic argument TOuter
+     * @param <TInner> the type of the generic argument TInner
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TResult> the type of the generic argument TResult
+     * @param outer the argument of type {@code ParallelQuery_1}
+     * @param inner the argument of type {@code IEnumerable_1}
+     * @param outerKeySelector the argument of type {@code Func_2}
+     * @param innerKeySelector the argument of type {@code Func_2}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.GroupJoin" target="_top">.NET documentation</a>
+     */
     public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 GroupJoin(ParallelQuery_1 outer, IEnumerable_1 inner, Func_2 outerKeySelector, Func_2 innerKeySelector, Func_3 resultSelector) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1290,6 +2369,32 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GroupJoin.
+     *
+     * @param <TOuter> the type of the generic argument TOuter
+     * @param <TInner> the type of the generic argument TInner
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TResult> the type of the generic argument TResult
+     * @param outer the argument of type {@code ParallelQuery_1}
+     * @param inner the argument of type {@code ParallelQuery_1}
+     * @param outerKeySelector the argument of type {@code Func_2}
+     * @param innerKeySelector the argument of type {@code Func_2}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.GroupJoin" target="_top">.NET documentation</a>
+     */
     public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 GroupJoin(ParallelQuery_1 outer, ParallelQuery_1 inner, Func_2 outerKeySelector, Func_2 innerKeySelector, Func_3 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1305,6 +2410,27 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GroupJoin.
+     *
+     * @param <TOuter> the type of the generic argument TOuter
+     * @param <TInner> the type of the generic argument TInner
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TResult> the type of the generic argument TResult
+     * @param outer the argument of type {@code ParallelQuery_1}
+     * @param inner the argument of type {@code ParallelQuery_1}
+     * @param outerKeySelector the argument of type {@code Func_2}
+     * @param innerKeySelector the argument of type {@code Func_2}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.GroupJoin" target="_top">.NET documentation</a>
+     */
     public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 GroupJoin(ParallelQuery_1 outer, ParallelQuery_1 inner, Func_2 outerKeySelector, Func_2 innerKeySelector, Func_3 resultSelector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1320,6 +2446,31 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Join.
+     *
+     * @param <TOuter> the type of the generic argument TOuter
+     * @param <TInner> the type of the generic argument TInner
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TResult> the type of the generic argument TResult
+     * @param outer the argument of type {@code ParallelQuery_1}
+     * @param inner the argument of type {@code IEnumerable_1}
+     * @param outerKeySelector the argument of type {@code Func_2}
+     * @param innerKeySelector the argument of type {@code Func_2}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Join" target="_top">.NET documentation</a>
+     */
     public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 Join(ParallelQuery_1 outer, IEnumerable_1 inner, Func_2 outerKeySelector, Func_2 innerKeySelector, Func_3 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1335,6 +2486,30 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Join.
+     *
+     * @param <TOuter> the type of the generic argument TOuter
+     * @param <TInner> the type of the generic argument TInner
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TResult> the type of the generic argument TResult
+     * @param outer the argument of type {@code ParallelQuery_1}
+     * @param inner the argument of type {@code IEnumerable_1}
+     * @param outerKeySelector the argument of type {@code Func_2}
+     * @param innerKeySelector the argument of type {@code Func_2}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Join" target="_top">.NET documentation</a>
+     */
     public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 Join(ParallelQuery_1 outer, IEnumerable_1 inner, Func_2 outerKeySelector, Func_2 innerKeySelector, Func_3 resultSelector) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1350,6 +2525,32 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Join.
+     *
+     * @param <TOuter> the type of the generic argument TOuter
+     * @param <TInner> the type of the generic argument TInner
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TResult> the type of the generic argument TResult
+     * @param outer the argument of type {@code ParallelQuery_1}
+     * @param inner the argument of type {@code ParallelQuery_1}
+     * @param outerKeySelector the argument of type {@code Func_2}
+     * @param innerKeySelector the argument of type {@code Func_2}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Join" target="_top">.NET documentation</a>
+     */
     public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 Join(ParallelQuery_1 outer, ParallelQuery_1 inner, Func_2 outerKeySelector, Func_2 innerKeySelector, Func_3 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1365,6 +2566,27 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Join.
+     *
+     * @param <TOuter> the type of the generic argument TOuter
+     * @param <TInner> the type of the generic argument TInner
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TResult> the type of the generic argument TResult
+     * @param outer the argument of type {@code ParallelQuery_1}
+     * @param inner the argument of type {@code ParallelQuery_1}
+     * @param outerKeySelector the argument of type {@code Func_2}
+     * @param innerKeySelector the argument of type {@code Func_2}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Join" target="_top">.NET documentation</a>
+     */
     public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 Join(ParallelQuery_1 outer, ParallelQuery_1 inner, Func_2 outerKeySelector, Func_2 innerKeySelector, Func_3 resultSelector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1380,6 +2602,24 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OfType.
+     *
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code ParallelQuery}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.OfType" target="_top">.NET documentation</a>
+     */
     public static <TResult extends IJCOBridgeReflected> ParallelQuery_1 OfType(ParallelQuery source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1395,6 +2635,26 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Repeat.
+     *
+     * @param <TResult> the type of the generic argument TResult
+     * @param element the argument of type {@code TResult}
+     * @param count the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Repeat" target="_top">.NET documentation</a>
+     */
     public static <TResult extends IJCOBridgeReflected> ParallelQuery_1 Repeat(TResult element, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1410,6 +2670,26 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Select.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param selector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Select" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 Select(ParallelQuery_1 source, Func_2 selector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1425,6 +2705,26 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Select.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param selector the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Select" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 Select(ParallelQuery_1 source, Func_3 selector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1440,6 +2740,28 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SelectMany.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TCollection> the type of the generic argument TCollection
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param collectionSelector the argument of type {@code Func_2}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.SelectMany" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TCollection extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 SelectMany(ParallelQuery_1 source, Func_2 collectionSelector, Func_3 resultSelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1455,6 +2777,28 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SelectMany.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TCollection> the type of the generic argument TCollection
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param collectionSelector the argument of type {@code Func_3}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.SelectMany" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TCollection extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 SelectMany(ParallelQuery_1 source, Func_3 collectionSelector, Func_3 resultSelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1470,6 +2814,26 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SelectMany.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param selector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.SelectMany" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 SelectMany(ParallelQuery_1 source, Func_2 selector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1485,6 +2849,26 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SelectMany.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param selector the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.SelectMany" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 SelectMany(ParallelQuery_1 source, Func_3 selector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1500,6 +2884,27 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Zip.
+     *
+     * @param <TFirst> the type of the generic argument TFirst
+     * @param <TSecond> the type of the generic argument TSecond
+     * @param <TResult> the type of the generic argument TResult
+     * @param first the argument of type {@code ParallelQuery_1}
+     * @param second the argument of type {@code IEnumerable_1}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Zip" target="_top">.NET documentation</a>
+     */
     public static <TFirst extends IJCOBridgeReflected, TSecond extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 Zip(ParallelQuery_1 first, IEnumerable_1 second, Func_3 resultSelector) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1515,6 +2920,28 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Zip.
+     *
+     * @param <TFirst> the type of the generic argument TFirst
+     * @param <TSecond> the type of the generic argument TSecond
+     * @param <TResult> the type of the generic argument TResult
+     * @param first the argument of type {@code ParallelQuery_1}
+     * @param second the argument of type {@code ParallelQuery_1}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Zip" target="_top">.NET documentation</a>
+     */
     public static <TFirst extends IJCOBridgeReflected, TSecond extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 Zip(ParallelQuery_1 first, ParallelQuery_1 second, Func_3 resultSelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1530,6 +2957,24 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsOrdered.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.AsOrdered" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 AsOrdered(ParallelQuery_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1545,6 +2990,24 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsParallel.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code Partitioner_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.AsParallel" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 AsParallel(Partitioner_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1560,6 +3023,24 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsParallel.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.AsParallel" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 AsParallel(IEnumerable_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1575,6 +3056,24 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsUnordered.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.AsUnordered" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 AsUnordered(ParallelQuery_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1590,6 +3089,24 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Concat.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param first the argument of type {@code ParallelQuery_1}
+     * @param second the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Concat" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Concat(ParallelQuery_1 first, IEnumerable_1 second) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1605,6 +3122,25 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Concat.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param first the argument of type {@code ParallelQuery_1}
+     * @param second the argument of type {@code ParallelQuery_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Concat" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Concat(ParallelQuery_1 first, ParallelQuery_1 second) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1620,6 +3156,25 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DefaultIfEmpty.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param defaultValue the argument of type {@code TSource}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.DefaultIfEmpty" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 DefaultIfEmpty(ParallelQuery_1 source, TSource defaultValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1635,6 +3190,20 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DefaultIfEmpty.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.DefaultIfEmpty" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 DefaultIfEmpty(ParallelQuery_1 source) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1650,6 +3219,25 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Distinct.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Distinct" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Distinct(ParallelQuery_1 source, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1665,6 +3253,20 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Distinct.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Distinct" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Distinct(ParallelQuery_1 source) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1680,6 +3282,25 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Except.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param first the argument of type {@code ParallelQuery_1}
+     * @param second the argument of type {@code IEnumerable_1}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Except" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Except(ParallelQuery_1 first, IEnumerable_1 second, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1695,6 +3316,24 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Except.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param first the argument of type {@code ParallelQuery_1}
+     * @param second the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Except" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Except(ParallelQuery_1 first, IEnumerable_1 second) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1710,6 +3349,26 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Except.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param first the argument of type {@code ParallelQuery_1}
+     * @param second the argument of type {@code ParallelQuery_1}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Except" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Except(ParallelQuery_1 first, ParallelQuery_1 second, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1725,6 +3384,21 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Except.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param first the argument of type {@code ParallelQuery_1}
+     * @param second the argument of type {@code ParallelQuery_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Except" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Except(ParallelQuery_1 first, ParallelQuery_1 second) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1740,6 +3414,25 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Intersect.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param first the argument of type {@code ParallelQuery_1}
+     * @param second the argument of type {@code IEnumerable_1}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Intersect" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Intersect(ParallelQuery_1 first, IEnumerable_1 second, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1755,6 +3448,24 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Intersect.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param first the argument of type {@code ParallelQuery_1}
+     * @param second the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Intersect" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Intersect(ParallelQuery_1 first, IEnumerable_1 second) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1770,6 +3481,26 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Intersect.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param first the argument of type {@code ParallelQuery_1}
+     * @param second the argument of type {@code ParallelQuery_1}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Intersect" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Intersect(ParallelQuery_1 first, ParallelQuery_1 second, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1785,6 +3516,21 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Intersect.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param first the argument of type {@code ParallelQuery_1}
+     * @param second the argument of type {@code ParallelQuery_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Intersect" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Intersect(ParallelQuery_1 first, ParallelQuery_1 second) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1800,6 +3546,24 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Reverse.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Reverse" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Reverse(ParallelQuery_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1815,6 +3579,25 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Skip.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param count the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Skip" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Skip(ParallelQuery_1 source, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1830,6 +3613,25 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SkipWhile.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param predicate the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.SkipWhile" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 SkipWhile(ParallelQuery_1 source, Func_2 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1845,6 +3647,25 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SkipWhile.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param predicate the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.SkipWhile" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 SkipWhile(ParallelQuery_1 source, Func_3 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1860,6 +3681,25 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Take.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param count the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Take" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Take(ParallelQuery_1 source, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1875,6 +3715,25 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TakeWhile.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param predicate the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.TakeWhile" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 TakeWhile(ParallelQuery_1 source, Func_2 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1890,6 +3749,25 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TakeWhile.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param predicate the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.TakeWhile" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 TakeWhile(ParallelQuery_1 source, Func_3 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1905,6 +3783,25 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Union.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param first the argument of type {@code ParallelQuery_1}
+     * @param second the argument of type {@code IEnumerable_1}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Union" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Union(ParallelQuery_1 first, IEnumerable_1 second, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1920,6 +3817,24 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Union.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param first the argument of type {@code ParallelQuery_1}
+     * @param second the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Union" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Union(ParallelQuery_1 first, IEnumerable_1 second) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1935,6 +3850,26 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Union.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param first the argument of type {@code ParallelQuery_1}
+     * @param second the argument of type {@code ParallelQuery_1}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Union" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Union(ParallelQuery_1 first, ParallelQuery_1 second, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1950,6 +3885,21 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Union.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param first the argument of type {@code ParallelQuery_1}
+     * @param second the argument of type {@code ParallelQuery_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Union" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Union(ParallelQuery_1 first, ParallelQuery_1 second) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1965,6 +3915,25 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Where.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param predicate the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Where" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Where(ParallelQuery_1 source, Func_2 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1980,6 +3949,25 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Where.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param predicate the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.Where" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Where(ParallelQuery_1 source, Func_3 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1995,6 +3983,25 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WithCancellation.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.WithCancellation" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 WithCancellation(ParallelQuery_1 source, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2010,6 +4017,27 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WithDegreeOfParallelism.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param degreeOfParallelism the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.WithDegreeOfParallelism" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 WithDegreeOfParallelism(ParallelQuery_1 source, int degreeOfParallelism) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2025,6 +4053,25 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WithExecutionMode.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param executionMode the argument of type {@code ParallelExecutionMode}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.WithExecutionMode" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 WithExecutionMode(ParallelQuery_1 source, ParallelExecutionMode executionMode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2040,6 +4087,25 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WithMergeOptions.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param mergeOptions the argument of type {@code ParallelMergeOptions}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.WithMergeOptions" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 WithMergeOptions(ParallelQuery_1 source, ParallelMergeOptions mergeOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2055,6 +4121,25 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ForAll.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code ParallelQuery_1}
+     * @param action the argument of type {@code Action_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ParallelEnumerable.ForAll" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> void ForAll(ParallelQuery_1 source, Action_1 action) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OperationCanceledException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

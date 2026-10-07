@@ -99,7 +99,10 @@ public class MSG extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MSG(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class MSG extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property message.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.MSG.getmessage" target="_top">.NET documentation</a>
+     */
     public int getmessage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +208,14 @@ public class MSG extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property message.
+     *
+     * @param message the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.MSG.setmessage" target="_top">.NET documentation</a>
+     */
     public void setmessage(int message) throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +226,13 @@ public class MSG extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property pt_x.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.MSG.getpt_x" target="_top">.NET documentation</a>
+     */
     public int getpt_x() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +273,14 @@ public class MSG extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property pt_x.
+     *
+     * @param pt_x the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.MSG.setpt_x" target="_top">.NET documentation</a>
+     */
     public void setpt_x(int pt_x) throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +291,13 @@ public class MSG extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property pt_y.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.MSG.getpt_y" target="_top">.NET documentation</a>
+     */
     public int getpt_y() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +338,14 @@ public class MSG extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property pt_y.
+     *
+     * @param pt_y the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.MSG.setpt_y" target="_top">.NET documentation</a>
+     */
     public void setpt_y(int pt_y) throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +356,13 @@ public class MSG extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property time.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.MSG.gettime" target="_top">.NET documentation</a>
+     */
     public int gettime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +403,14 @@ public class MSG extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property time.
+     *
+     * @param time the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.MSG.settime" target="_top">.NET documentation</a>
+     */
     public void settime(int time) throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

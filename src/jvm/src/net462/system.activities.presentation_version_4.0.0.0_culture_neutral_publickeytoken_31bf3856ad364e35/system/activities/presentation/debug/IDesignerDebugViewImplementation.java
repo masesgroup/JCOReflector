@@ -102,7 +102,10 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDesignerDebugViewImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,14 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetExactLocation.
+     *
+     * @param approximateLocation the argument of type {@code SourceLocation}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Debug.IDesignerDebugView.GetExactLocation" target="_top">.NET documentation</a>
+     */
     public SourceLocation GetExactLocation(SourceLocation approximateLocation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -159,6 +170,13 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
         }
     }
 
+    /**
+     * Invokes the .NET member GetBreakpointLocations.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Debug.IDesignerDebugView.GetBreakpointLocations" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 GetBreakpointLocations() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +192,13 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
         }
     }
 
+    /**
+     * Invokes the .NET member DeleteBreakpoint.
+     *
+     * @param sourceLocation the argument of type {@code SourceLocation}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Debug.IDesignerDebugView.DeleteBreakpoint" target="_top">.NET documentation</a>
+     */
     public void DeleteBreakpoint(SourceLocation sourceLocation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +209,13 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
         }
     }
 
+    /**
+     * Invokes the .NET member EnsureVisible.
+     *
+     * @param sourceLocation the argument of type {@code SourceLocation}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Debug.IDesignerDebugView.EnsureVisible" target="_top">.NET documentation</a>
+     */
     public void EnsureVisible(SourceLocation sourceLocation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +226,14 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
         }
     }
 
+    /**
+     * Invokes the .NET member InsertBreakpoint.
+     *
+     * @param sourceLocation the argument of type {@code SourceLocation}
+     * @param breakpointType the argument of type {@code BreakpointTypes}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Debug.IDesignerDebugView.InsertBreakpoint" target="_top">.NET documentation</a>
+     */
     public void InsertBreakpoint(SourceLocation sourceLocation, BreakpointTypes breakpointType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +244,12 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
         }
     }
 
+    /**
+     * Invokes the .NET member ResetBreakpoints.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Debug.IDesignerDebugView.ResetBreakpoints" target="_top">.NET documentation</a>
+     */
     public void ResetBreakpoints() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +260,14 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
         }
     }
 
+    /**
+     * Invokes the .NET member UpdateBreakpoint.
+     *
+     * @param sourceLocation the argument of type {@code SourceLocation}
+     * @param breakpointType the argument of type {@code BreakpointTypes}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Debug.IDesignerDebugView.UpdateBreakpoint" target="_top">.NET documentation</a>
+     */
     public void UpdateBreakpoint(SourceLocation sourceLocation, BreakpointTypes breakpointType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +282,13 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HideSourceFileName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Debug.IDesignerDebugView.HideSourceFileName" target="_top">.NET documentation</a>
+     */
     public boolean getHideSourceFileName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +303,13 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
         }
     }
 
+    /**
+     * Sets the value of the .NET property HideSourceFileName.
+     *
+     * @param HideSourceFileName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Debug.IDesignerDebugView.HideSourceFileName" target="_top">.NET documentation</a>
+     */
     public void setHideSourceFileName(boolean HideSourceFileName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +320,13 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsDebugging.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Debug.IDesignerDebugView.IsDebugging" target="_top">.NET documentation</a>
+     */
     public boolean getIsDebugging() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +341,13 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsDebugging.
+     *
+     * @param IsDebugging the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Debug.IDesignerDebugView.IsDebugging" target="_top">.NET documentation</a>
+     */
     public void setIsDebugging(boolean IsDebugging) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +358,13 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Debug.IDesignerDebugView.CurrentContext" target="_top">.NET documentation</a>
+     */
     public SourceLocation getCurrentContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +380,13 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
         }
     }
 
+    /**
+     * Sets the value of the .NET property CurrentContext.
+     *
+     * @param CurrentContext the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Debug.IDesignerDebugView.CurrentContext" target="_top">.NET documentation</a>
+     */
     public void setCurrentContext(SourceLocation CurrentContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +397,13 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentLocation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Debug.IDesignerDebugView.CurrentLocation" target="_top">.NET documentation</a>
+     */
     public SourceLocation getCurrentLocation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -316,6 +419,13 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
         }
     }
 
+    /**
+     * Sets the value of the .NET property CurrentLocation.
+     *
+     * @param CurrentLocation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Debug.IDesignerDebugView.CurrentLocation" target="_top">.NET documentation</a>
+     */
     public void setCurrentLocation(SourceLocation CurrentLocation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -326,6 +436,13 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
         }
     }
 
+    /**
+     * Gets the value of the .NET property SelectedLocation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Debug.IDesignerDebugView.SelectedLocation" target="_top">.NET documentation</a>
+     */
     public SourceLocation getSelectedLocation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

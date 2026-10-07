@@ -110,7 +110,10 @@ public class VBCodeProvider extends system.codedom.compiler.CodeDomProvider  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public VBCodeProvider(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,12 @@ public class VBCodeProvider extends system.codedom.compiler.CodeDomProvider  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.VBCodeProvider.-ctor" target="_top">.NET documentation</a>
+     */
     public VBCodeProvider() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +176,22 @@ public class VBCodeProvider extends system.codedom.compiler.CodeDomProvider  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param providerOptions the argument of type {@code IDictionary_2}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.VBCodeProvider.-ctor" target="_top">.NET documentation</a>
+     */
     public VBCodeProvider(IDictionary_2 providerOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +206,13 @@ public class VBCodeProvider extends system.codedom.compiler.CodeDomProvider  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateCompiler.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.VBCodeProvider.CreateCompiler" target="_top">.NET documentation</a>
+     */
     public ICodeCompiler CreateCompiler() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +228,13 @@ public class VBCodeProvider extends system.codedom.compiler.CodeDomProvider  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateGenerator.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.VBCodeProvider.CreateGenerator" target="_top">.NET documentation</a>
+     */
     public ICodeGenerator CreateGenerator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +250,21 @@ public class VBCodeProvider extends system.codedom.compiler.CodeDomProvider  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetConverter.
+     *
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.VBCodeProvider.GetConverter" target="_top">.NET documentation</a>
+     */
     public TypeConverter GetConverter(NetType type) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +280,21 @@ public class VBCodeProvider extends system.codedom.compiler.CodeDomProvider  {
         }
     }
 
+    /**
+     * Invokes the .NET member GenerateCodeFromMember.
+     *
+     * @param member the argument of type {@code CodeTypeMember}
+     * @param writer the argument of type {@code TextWriter}
+     * @param options the argument of type {@code CodeGeneratorOptions}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.VBCodeProvider.GenerateCodeFromMember" target="_top">.NET documentation</a>
+     */
     public void GenerateCodeFromMember(CodeTypeMember member, TextWriter writer, CodeGeneratorOptions options) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

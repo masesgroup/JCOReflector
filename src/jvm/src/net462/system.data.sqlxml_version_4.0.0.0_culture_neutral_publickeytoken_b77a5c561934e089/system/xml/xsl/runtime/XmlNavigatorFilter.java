@@ -99,7 +99,10 @@ public class XmlNavigatorFilter extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlNavigatorFilter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,14 @@ public class XmlNavigatorFilter extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsFiltered.
+     *
+     * @param navigator the argument of type {@code XPathNavigator}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlNavigatorFilter.IsFiltered" target="_top">.NET documentation</a>
+     */
     public boolean IsFiltered(XPathNavigator navigator) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -166,6 +177,14 @@ public class XmlNavigatorFilter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MoveToContent.
+     *
+     * @param navigator the argument of type {@code XPathNavigator}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlNavigatorFilter.MoveToContent" target="_top">.NET documentation</a>
+     */
     public boolean MoveToContent(XPathNavigator navigator) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +199,15 @@ public class XmlNavigatorFilter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MoveToFollowing.
+     *
+     * @param navigator the argument of type {@code XPathNavigator}
+     * @param navigatorEnd the argument of type {@code XPathNavigator}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlNavigatorFilter.MoveToFollowing" target="_top">.NET documentation</a>
+     */
     public boolean MoveToFollowing(XPathNavigator navigator, XPathNavigator navigatorEnd) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +222,14 @@ public class XmlNavigatorFilter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MoveToFollowingSibling.
+     *
+     * @param navigator the argument of type {@code XPathNavigator}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlNavigatorFilter.MoveToFollowingSibling" target="_top">.NET documentation</a>
+     */
     public boolean MoveToFollowingSibling(XPathNavigator navigator) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +244,14 @@ public class XmlNavigatorFilter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MoveToNextContent.
+     *
+     * @param navigator the argument of type {@code XPathNavigator}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlNavigatorFilter.MoveToNextContent" target="_top">.NET documentation</a>
+     */
     public boolean MoveToNextContent(XPathNavigator navigator) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +266,14 @@ public class XmlNavigatorFilter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MoveToPreviousSibling.
+     *
+     * @param navigator the argument of type {@code XPathNavigator}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlNavigatorFilter.MoveToPreviousSibling" target="_top">.NET documentation</a>
+     */
     public boolean MoveToPreviousSibling(XPathNavigator navigator) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -51,5 +51,11 @@ import org.mases.jcobridge.netreflection.*;
  * @version 2.0.0.0
  */
 public interface IConverter_2<TInput extends IJCOBridgeReflected, TOutput extends IJCOBridgeReflected> {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param input the .NET argument of type {@code TInput}
+     * @return the value returned to the CLR
+     */
     public TOutput Invoke(TInput input);
 }

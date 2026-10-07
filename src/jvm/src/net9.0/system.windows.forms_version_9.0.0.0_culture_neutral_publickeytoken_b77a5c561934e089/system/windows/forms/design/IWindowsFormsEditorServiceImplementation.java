@@ -101,7 +101,10 @@ public class IWindowsFormsEditorServiceImplementation extends NetObject implemen
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IWindowsFormsEditorServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,14 @@ public class IWindowsFormsEditorServiceImplementation extends NetObject implemen
 
     // Methods section
     
+    /**
+     * Invokes the .NET member ShowDialog.
+     *
+     * @param dialog the argument of type {@code Form}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.IWindowsFormsEditorService.ShowDialog" target="_top">.NET documentation</a>
+     */
     public DialogResult ShowDialog(Form dialog) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -158,6 +169,12 @@ public class IWindowsFormsEditorServiceImplementation extends NetObject implemen
         }
     }
 
+    /**
+     * Invokes the .NET member CloseDropDown.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.IWindowsFormsEditorService.CloseDropDown" target="_top">.NET documentation</a>
+     */
     public void CloseDropDown() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +185,13 @@ public class IWindowsFormsEditorServiceImplementation extends NetObject implemen
         }
     }
 
+    /**
+     * Invokes the .NET member DropDownControl.
+     *
+     * @param control the argument of type {@code Control}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.IWindowsFormsEditorService.DropDownControl" target="_top">.NET documentation</a>
+     */
     public void DropDownControl(Control control) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

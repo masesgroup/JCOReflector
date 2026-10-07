@@ -102,7 +102,10 @@ public class BindingRestrictions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BindingRestrictions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,15 @@ public class BindingRestrictions extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Combine.
+     *
+     * @param contributingObjects the argument of type {@code IList_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.BindingRestrictions.Combine" target="_top">.NET documentation</a>
+     */
     public static BindingRestrictions Combine(IList_1 contributingObjects) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -170,6 +182,22 @@ public class BindingRestrictions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetExpressionRestriction.
+     *
+     * @param expression the argument of type {@code Expression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.BindingRestrictions.GetExpressionRestriction" target="_top">.NET documentation</a>
+     */
     public static BindingRestrictions GetExpressionRestriction(Expression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -185,6 +213,16 @@ public class BindingRestrictions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetInstanceRestriction.
+     *
+     * @param expression the argument of type {@code Expression}
+     * @param instance the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.BindingRestrictions.GetInstanceRestriction" target="_top">.NET documentation</a>
+     */
     public static BindingRestrictions GetInstanceRestriction(Expression expression, NetObject instance) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -200,6 +238,16 @@ public class BindingRestrictions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeRestriction.
+     *
+     * @param expression the argument of type {@code Expression}
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.BindingRestrictions.GetTypeRestriction" target="_top">.NET documentation</a>
+     */
     public static BindingRestrictions GetTypeRestriction(Expression expression, NetType type) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -215,6 +263,15 @@ public class BindingRestrictions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Merge.
+     *
+     * @param restrictions the argument of type {@code BindingRestrictions}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.BindingRestrictions.Merge" target="_top">.NET documentation</a>
+     */
     public BindingRestrictions Merge(BindingRestrictions restrictions) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +287,23 @@ public class BindingRestrictions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToExpression.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.BindingRestrictions.ToExpression" target="_top">.NET documentation</a>
+     */
     public Expression ToExpression() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

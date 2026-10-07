@@ -102,7 +102,10 @@ public class ApplyApplicationDefaultsEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ApplyApplicationDefaultsEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -161,6 +164,13 @@ public class ApplyApplicationDefaultsEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MinimumSplashScreenDisplayTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ApplicationServices.ApplyApplicationDefaultsEventArgs.MinimumSplashScreenDisplayTime" target="_top">.NET documentation</a>
+     */
     public int getMinimumSplashScreenDisplayTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +211,13 @@ public class ApplyApplicationDefaultsEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MinimumSplashScreenDisplayTime.
+     *
+     * @param MinimumSplashScreenDisplayTime the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ApplicationServices.ApplyApplicationDefaultsEventArgs.MinimumSplashScreenDisplayTime" target="_top">.NET documentation</a>
+     */
     public void setMinimumSplashScreenDisplayTime(int MinimumSplashScreenDisplayTime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +228,13 @@ public class ApplyApplicationDefaultsEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Font.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ApplicationServices.ApplyApplicationDefaultsEventArgs.Font" target="_top">.NET documentation</a>
+     */
     public Font getFont() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +250,13 @@ public class ApplyApplicationDefaultsEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Font.
+     *
+     * @param Font the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ApplicationServices.ApplyApplicationDefaultsEventArgs.Font" target="_top">.NET documentation</a>
+     */
     public void setFont(Font Font) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +267,13 @@ public class ApplyApplicationDefaultsEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HighDpiMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ApplicationServices.ApplyApplicationDefaultsEventArgs.HighDpiMode" target="_top">.NET documentation</a>
+     */
     public HighDpiMode getHighDpiMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +289,13 @@ public class ApplyApplicationDefaultsEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HighDpiMode.
+     *
+     * @param HighDpiMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ApplicationServices.ApplyApplicationDefaultsEventArgs.HighDpiMode" target="_top">.NET documentation</a>
+     */
     public void setHighDpiMode(HighDpiMode HighDpiMode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +306,13 @@ public class ApplyApplicationDefaultsEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ColorMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ApplicationServices.ApplyApplicationDefaultsEventArgs.ColorMode" target="_top">.NET documentation</a>
+     */
     public SystemColorMode getColorMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +328,13 @@ public class ApplyApplicationDefaultsEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ColorMode.
+     *
+     * @param ColorMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ApplicationServices.ApplyApplicationDefaultsEventArgs.ColorMode" target="_top">.NET documentation</a>
+     */
     public void setColorMode(SystemColorMode ColorMode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

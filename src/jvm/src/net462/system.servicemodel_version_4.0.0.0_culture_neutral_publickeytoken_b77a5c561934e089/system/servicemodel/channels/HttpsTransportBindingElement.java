@@ -106,7 +106,10 @@ public class HttpsTransportBindingElement extends system.servicemodel.channels.H
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HttpsTransportBindingElement(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,12 @@ public class HttpsTransportBindingElement extends system.servicemodel.channels.H
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpsTransportBindingElement.-ctor" target="_top">.NET documentation</a>
+     */
     public HttpsTransportBindingElement() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +176,18 @@ public class HttpsTransportBindingElement extends system.servicemodel.channels.H
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpsTransportBindingElement.Clone" target="_top">.NET documentation</a>
+     */
     public BindingElement Clone() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +203,29 @@ public class HttpsTransportBindingElement extends system.servicemodel.channels.H
         }
     }
 
+    /**
+     * Invokes the .NET member BuildChannelFactory.
+     *
+     * @param <TChannel> the type of the generic argument TChannel
+     * @param context the argument of type {@code BindingContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpsTransportBindingElement.BuildChannelFactory" target="_top">.NET documentation</a>
+     */
     public <TChannel extends IJCOBridgeReflected> IChannelFactory_1 BuildChannelFactory(BindingContext context) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.AccessViolationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +241,35 @@ public class HttpsTransportBindingElement extends system.servicemodel.channels.H
         }
     }
 
+    /**
+     * Invokes the .NET member BuildChannelListener.
+     *
+     * @param <TChannel> the type of the generic argument TChannel
+     * @param context the argument of type {@code BindingContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.net.sockets.SocketException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpsTransportBindingElement.BuildChannelListener" target="_top">.NET documentation</a>
+     */
     public <TChannel extends IJCOBridgeReflected> IChannelListener_1 BuildChannelListener(BindingContext context) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.net.sockets.SocketException, system.UriFormatException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.MissingMethodException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +285,13 @@ public class HttpsTransportBindingElement extends system.servicemodel.channels.H
         }
     }
 
+    /**
+     * Invokes the .NET member GetTransportTokenAssertion.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpsTransportBindingElement.GetTransportTokenAssertion" target="_top">.NET documentation</a>
+     */
     public XmlElement GetTransportTokenAssertion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +311,13 @@ public class HttpsTransportBindingElement extends system.servicemodel.channels.H
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RequireClientCertificate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpsTransportBindingElement.RequireClientCertificate" target="_top">.NET documentation</a>
+     */
     public boolean getRequireClientCertificate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +332,13 @@ public class HttpsTransportBindingElement extends system.servicemodel.channels.H
         }
     }
 
+    /**
+     * Sets the value of the .NET property RequireClientCertificate.
+     *
+     * @param RequireClientCertificate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpsTransportBindingElement.RequireClientCertificate" target="_top">.NET documentation</a>
+     */
     public void setRequireClientCertificate(boolean RequireClientCertificate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -112,7 +112,10 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDesignerHostImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,13 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
 
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateTransaction.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerHost.CreateTransaction" target="_top">.NET documentation</a>
+     */
     public DesignerTransaction CreateTransaction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +179,14 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
         }
     }
 
+    /**
+     * Invokes the .NET member CreateTransaction.
+     *
+     * @param description the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerHost.CreateTransaction" target="_top">.NET documentation</a>
+     */
     public DesignerTransaction CreateTransaction(java.lang.String description) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +202,14 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
         }
     }
 
+    /**
+     * Invokes the .NET member GetDesigner.
+     *
+     * @param component the argument of type {@code IComponent}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerHost.GetDesigner" target="_top">.NET documentation</a>
+     */
     public IDesigner GetDesigner(IComponent component) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +225,15 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
         }
     }
 
+    /**
+     * Invokes the .NET member CreateComponent.
+     *
+     * @param componentClass the argument of type {@code NetType}
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerHost.CreateComponent" target="_top">.NET documentation</a>
+     */
     public IComponent CreateComponent(NetType componentClass, java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +249,14 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
         }
     }
 
+    /**
+     * Invokes the .NET member CreateComponent.
+     *
+     * @param componentClass the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerHost.CreateComponent" target="_top">.NET documentation</a>
+     */
     public IComponent CreateComponent(NetType componentClass) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +272,14 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
         }
     }
 
+    /**
+     * Invokes the .NET member GetService.
+     *
+     * @param serviceType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerHost.GetService" target="_top">.NET documentation</a>
+     */
     public NetObject GetService(NetType serviceType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +295,14 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
         }
     }
 
+    /**
+     * Invokes the .NET member GetType.
+     *
+     * @param typeName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerHost.GetType" target="_top">.NET documentation</a>
+     */
     public NetType GetType(java.lang.String typeName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +318,12 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
         }
     }
 
+    /**
+     * Invokes the .NET member Activate.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerHost.Activate" target="_top">.NET documentation</a>
+     */
     public void Activate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +334,15 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
         }
     }
 
+    /**
+     * Invokes the .NET member AddService.
+     *
+     * @param serviceType the argument of type {@code NetType}
+     * @param callback the argument of type {@code ServiceCreatorCallback}
+     * @param promote the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerHost.AddService" target="_top">.NET documentation</a>
+     */
     public void AddService(NetType serviceType, ServiceCreatorCallback callback, boolean promote) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +353,14 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
         }
     }
 
+    /**
+     * Invokes the .NET member AddService.
+     *
+     * @param serviceType the argument of type {@code NetType}
+     * @param callback the argument of type {@code ServiceCreatorCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerHost.AddService" target="_top">.NET documentation</a>
+     */
     public void AddService(NetType serviceType, ServiceCreatorCallback callback) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +371,15 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
         }
     }
 
+    /**
+     * Invokes the .NET member AddService.
+     *
+     * @param serviceType the argument of type {@code NetType}
+     * @param serviceInstance the argument of type {@code NetObject}
+     * @param promote the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerHost.AddService" target="_top">.NET documentation</a>
+     */
     public void AddService(NetType serviceType, NetObject serviceInstance, boolean promote) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -299,6 +390,14 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
         }
     }
 
+    /**
+     * Invokes the .NET member AddService.
+     *
+     * @param serviceType the argument of type {@code NetType}
+     * @param serviceInstance the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerHost.AddService" target="_top">.NET documentation</a>
+     */
     public void AddService(NetType serviceType, NetObject serviceInstance) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -309,6 +408,13 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
         }
     }
 
+    /**
+     * Invokes the .NET member DestroyComponent.
+     *
+     * @param component the argument of type {@code IComponent}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerHost.DestroyComponent" target="_top">.NET documentation</a>
+     */
     public void DestroyComponent(IComponent component) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -319,6 +425,14 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveService.
+     *
+     * @param serviceType the argument of type {@code NetType}
+     * @param promote the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerHost.RemoveService" target="_top">.NET documentation</a>
+     */
     public void RemoveService(NetType serviceType, boolean promote) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -329,6 +443,13 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveService.
+     *
+     * @param serviceType the argument of type {@code NetType}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerHost.RemoveService" target="_top">.NET documentation</a>
+     */
     public void RemoveService(NetType serviceType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -343,6 +464,13 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property InTransaction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerHost.InTransaction" target="_top">.NET documentation</a>
+     */
     public boolean getInTransaction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -357,6 +485,13 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
         }
     }
 
+    /**
+     * Gets the value of the .NET property Loading.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerHost.Loading" target="_top">.NET documentation</a>
+     */
     public boolean getLoading() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -371,6 +506,13 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
         }
     }
 
+    /**
+     * Gets the value of the .NET property RootComponent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerHost.RootComponent" target="_top">.NET documentation</a>
+     */
     public IComponent getRootComponent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -386,6 +528,13 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
         }
     }
 
+    /**
+     * Gets the value of the .NET property Container.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerHost.Container" target="_top">.NET documentation</a>
+     */
     public IContainer getContainer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -401,6 +550,13 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
         }
     }
 
+    /**
+     * Gets the value of the .NET property RootComponentClassName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerHost.RootComponentClassName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRootComponentClassName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -415,6 +571,13 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
         }
     }
 
+    /**
+     * Gets the value of the .NET property TransactionDescription.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerHost.TransactionDescription" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTransactionDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -434,6 +597,13 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addTransactionClosed.
+     *
+     * @param handler the argument of type {@code DesignerTransactionCloseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addTransactionClosed(DesignerTransactionCloseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -444,6 +614,13 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
         }
     }
 
+    /**
+     * Invokes the .NET member removeTransactionClosed.
+     *
+     * @param handler the argument of type {@code DesignerTransactionCloseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeTransactionClosed(DesignerTransactionCloseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -454,6 +631,13 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
         }
     }
 
+    /**
+     * Invokes the .NET member addTransactionClosing.
+     *
+     * @param handler the argument of type {@code DesignerTransactionCloseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addTransactionClosing(DesignerTransactionCloseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -464,6 +648,13 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
         }
     }
 
+    /**
+     * Invokes the .NET member removeTransactionClosing.
+     *
+     * @param handler the argument of type {@code DesignerTransactionCloseEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeTransactionClosing(DesignerTransactionCloseEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -474,6 +665,13 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
         }
     }
 
+    /**
+     * Invokes the .NET member addActivated.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addActivated(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -484,6 +682,13 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
         }
     }
 
+    /**
+     * Invokes the .NET member removeActivated.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeActivated(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -494,6 +699,13 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
         }
     }
 
+    /**
+     * Invokes the .NET member addDeactivated.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addDeactivated(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -504,6 +716,13 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
         }
     }
 
+    /**
+     * Invokes the .NET member removeDeactivated.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeDeactivated(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -514,6 +733,13 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
         }
     }
 
+    /**
+     * Invokes the .NET member addLoadComplete.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addLoadComplete(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -524,6 +750,13 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
         }
     }
 
+    /**
+     * Invokes the .NET member removeLoadComplete.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeLoadComplete(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -534,6 +767,13 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
         }
     }
 
+    /**
+     * Invokes the .NET member addTransactionOpened.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addTransactionOpened(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -544,6 +784,13 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
         }
     }
 
+    /**
+     * Invokes the .NET member removeTransactionOpened.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeTransactionOpened(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -554,6 +801,13 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
         }
     }
 
+    /**
+     * Invokes the .NET member addTransactionOpening.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addTransactionOpening(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -564,6 +818,13 @@ public class IDesignerHostImplementation extends NetObject implements IDesignerH
         }
     }
 
+    /**
+     * Invokes the .NET member removeTransactionOpening.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeTransactionOpening(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

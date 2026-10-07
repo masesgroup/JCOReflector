@@ -98,7 +98,10 @@ public class CharacterMetrics extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CharacterMetrics(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class CharacterMetrics extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.CharacterMetrics.-ctor" target="_top">.NET documentation</a>
+     */
     public CharacterMetrics() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -155,6 +164,22 @@ public class CharacterMetrics extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param metrics the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.CharacterMetrics.-ctor" target="_top">.NET documentation</a>
+     */
     public CharacterMetrics(java.lang.String metrics) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NullReferenceException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -173,6 +198,13 @@ public class CharacterMetrics extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Baseline.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.CharacterMetrics.Baseline" target="_top">.NET documentation</a>
+     */
     public double getBaseline() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +245,13 @@ public class CharacterMetrics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BlackBoxHeight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.CharacterMetrics.BlackBoxHeight" target="_top">.NET documentation</a>
+     */
     public double getBlackBoxHeight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +292,13 @@ public class CharacterMetrics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BlackBoxWidth.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.CharacterMetrics.BlackBoxWidth" target="_top">.NET documentation</a>
+     */
     public double getBlackBoxWidth() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +339,13 @@ public class CharacterMetrics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BottomSideBearing.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.CharacterMetrics.BottomSideBearing" target="_top">.NET documentation</a>
+     */
     public double getBottomSideBearing() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -333,6 +386,13 @@ public class CharacterMetrics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LeftSideBearing.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.CharacterMetrics.LeftSideBearing" target="_top">.NET documentation</a>
+     */
     public double getLeftSideBearing() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -373,6 +433,13 @@ public class CharacterMetrics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RightSideBearing.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.CharacterMetrics.RightSideBearing" target="_top">.NET documentation</a>
+     */
     public double getRightSideBearing() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -413,6 +480,13 @@ public class CharacterMetrics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TopSideBearing.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.CharacterMetrics.TopSideBearing" target="_top">.NET documentation</a>
+     */
     public double getTopSideBearing() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -453,6 +527,17 @@ public class CharacterMetrics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Metrics.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.CharacterMetrics.Metrics" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMetrics() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -467,6 +552,24 @@ public class CharacterMetrics extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Metrics.
+     *
+     * @param Metrics the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.CharacterMetrics.Metrics" target="_top">.NET documentation</a>
+     */
     public void setMetrics(java.lang.String Metrics) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NullReferenceException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

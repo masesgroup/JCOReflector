@@ -100,7 +100,10 @@ public class SoapServices extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SoapServices(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,26 @@ public class SoapServices extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member DecodeXmlNamespaceForClrTypeNamespace.
+     *
+     * @param inNamespace the argument of type {@code java.lang.String}
+     * @param typeNamespace the argument of type {@code JCORefOut}
+     * @param assemblyName the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.SoapServices.DecodeXmlNamespaceForClrTypeNamespace" target="_top">.NET documentation</a>
+     */
     public static boolean DecodeXmlNamespaceForClrTypeNamespace(java.lang.String inNamespace, JCORefOut typeNamespace, JCORefOut assemblyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -169,6 +192,27 @@ public class SoapServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeAndMethodNameFromSoapAction.
+     *
+     * @param soapAction the argument of type {@code java.lang.String}
+     * @param typeName the argument of type {@code JCORefOut}
+     * @param methodName the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.SoapServices.GetTypeAndMethodNameFromSoapAction" target="_top">.NET documentation</a>
+     */
     public static boolean GetTypeAndMethodNameFromSoapAction(java.lang.String soapAction, JCORefOut typeName, JCORefOut methodName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -183,6 +227,21 @@ public class SoapServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetXmlElementForInteropType.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param xmlElement the argument of type {@code JCORefOut}
+     * @param xmlNamespace the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.SoapServices.GetXmlElementForInteropType" target="_top">.NET documentation</a>
+     */
     public static boolean GetXmlElementForInteropType(NetType type, JCORefOut xmlElement, JCORefOut xmlNamespace) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -197,6 +256,23 @@ public class SoapServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetXmlTypeForInteropType.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param xmlType the argument of type {@code JCORefOut}
+     * @param xmlTypeNamespace the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.SoapServices.GetXmlTypeForInteropType" target="_top">.NET documentation</a>
+     */
     public static boolean GetXmlTypeForInteropType(NetType type, JCORefOut xmlType, JCORefOut xmlTypeNamespace) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -211,6 +287,22 @@ public class SoapServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsClrTypeNamespace.
+     *
+     * @param namespaceString the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.SoapServices.IsClrTypeNamespace" target="_top">.NET documentation</a>
+     */
     public static boolean IsClrTypeNamespace(java.lang.String namespaceString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -225,6 +317,26 @@ public class SoapServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsSoapActionValidForMethodBase.
+     *
+     * @param soapAction the argument of type {@code java.lang.String}
+     * @param mb the argument of type {@code MethodBase}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.SoapServices.IsSoapActionValidForMethodBase" target="_top">.NET documentation</a>
+     */
     public static boolean IsSoapActionValidForMethodBase(java.lang.String soapAction, MethodBase mb) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -239,6 +351,19 @@ public class SoapServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CodeXmlNamespaceForClrTypeNamespace.
+     *
+     * @param typeNamespace the argument of type {@code java.lang.String}
+     * @param assemblyName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.SoapServices.CodeXmlNamespaceForClrTypeNamespace" target="_top">.NET documentation</a>
+     */
     public static java.lang.String CodeXmlNamespaceForClrTypeNamespace(java.lang.String typeNamespace, java.lang.String assemblyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -253,6 +378,22 @@ public class SoapServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetSoapActionFromMethodBase.
+     *
+     * @param mb the argument of type {@code MethodBase}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.SoapServices.GetSoapActionFromMethodBase" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetSoapActionFromMethodBase(MethodBase mb) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -267,6 +408,15 @@ public class SoapServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetXmlNamespaceForMethodCall.
+     *
+     * @param mb the argument of type {@code MethodBase}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.SoapServices.GetXmlNamespaceForMethodCall" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetXmlNamespaceForMethodCall(MethodBase mb) throws Throwable, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -281,6 +431,15 @@ public class SoapServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetXmlNamespaceForMethodResponse.
+     *
+     * @param mb the argument of type {@code MethodBase}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.SoapServices.GetXmlNamespaceForMethodResponse" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetXmlNamespaceForMethodResponse(MethodBase mb) throws Throwable, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -295,6 +454,19 @@ public class SoapServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetInteropTypeFromXmlElement.
+     *
+     * @param xmlElement the argument of type {@code java.lang.String}
+     * @param xmlNamespace the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.SoapServices.GetInteropTypeFromXmlElement" target="_top">.NET documentation</a>
+     */
     public static NetType GetInteropTypeFromXmlElement(java.lang.String xmlElement, java.lang.String xmlNamespace) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -310,6 +482,19 @@ public class SoapServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetInteropTypeFromXmlType.
+     *
+     * @param xmlType the argument of type {@code java.lang.String}
+     * @param xmlTypeNamespace the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.SoapServices.GetInteropTypeFromXmlType" target="_top">.NET documentation</a>
+     */
     public static NetType GetInteropTypeFromXmlType(java.lang.String xmlType, java.lang.String xmlTypeNamespace) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -325,6 +510,21 @@ public class SoapServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetInteropFieldTypeAndNameFromXmlAttribute.
+     *
+     * @param containingType the argument of type {@code NetType}
+     * @param xmlAttribute the argument of type {@code java.lang.String}
+     * @param xmlNamespace the argument of type {@code java.lang.String}
+     * @param type the argument of type {@code JCORefOut<NetType>}
+     * @param name the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.SoapServices.GetInteropFieldTypeAndNameFromXmlAttribute" target="_top">.NET documentation</a>
+     */
     public static void GetInteropFieldTypeAndNameFromXmlAttribute(NetType containingType, java.lang.String xmlAttribute, java.lang.String xmlNamespace, JCORefOut<NetType> type, JCORefOut name) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -335,6 +535,21 @@ public class SoapServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetInteropFieldTypeAndNameFromXmlElement.
+     *
+     * @param containingType the argument of type {@code NetType}
+     * @param xmlElement the argument of type {@code java.lang.String}
+     * @param xmlNamespace the argument of type {@code java.lang.String}
+     * @param type the argument of type {@code JCORefOut<NetType>}
+     * @param name the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.SoapServices.GetInteropFieldTypeAndNameFromXmlElement" target="_top">.NET documentation</a>
+     */
     public static void GetInteropFieldTypeAndNameFromXmlElement(NetType containingType, java.lang.String xmlElement, java.lang.String xmlNamespace, JCORefOut<NetType> type, JCORefOut name) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -345,6 +560,22 @@ public class SoapServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PreLoad.
+     *
+     * @param assembly the argument of type {@code Assembly}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.SoapServices.PreLoad" target="_top">.NET documentation</a>
+     */
     public static void PreLoad(Assembly assembly) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -355,6 +586,22 @@ public class SoapServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PreLoad.
+     *
+     * @param type the argument of type {@code NetType}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.SoapServices.PreLoad" target="_top">.NET documentation</a>
+     */
     public static void PreLoad(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -365,6 +612,23 @@ public class SoapServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterInteropXmlElement.
+     *
+     * @param xmlElement the argument of type {@code java.lang.String}
+     * @param xmlNamespace the argument of type {@code java.lang.String}
+     * @param type the argument of type {@code NetType}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.SoapServices.RegisterInteropXmlElement" target="_top">.NET documentation</a>
+     */
     public static void RegisterInteropXmlElement(java.lang.String xmlElement, java.lang.String xmlNamespace, NetType type) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -375,6 +639,23 @@ public class SoapServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterInteropXmlType.
+     *
+     * @param xmlType the argument of type {@code java.lang.String}
+     * @param xmlTypeNamespace the argument of type {@code java.lang.String}
+     * @param type the argument of type {@code NetType}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.SoapServices.RegisterInteropXmlType" target="_top">.NET documentation</a>
+     */
     public static void RegisterInteropXmlType(java.lang.String xmlType, java.lang.String xmlTypeNamespace, NetType type) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -385,6 +666,22 @@ public class SoapServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterSoapActionForMethodBase.
+     *
+     * @param mb the argument of type {@code MethodBase}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.SoapServices.RegisterSoapActionForMethodBase" target="_top">.NET documentation</a>
+     */
     public static void RegisterSoapActionForMethodBase(MethodBase mb) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -395,6 +692,23 @@ public class SoapServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterSoapActionForMethodBase.
+     *
+     * @param mb the argument of type {@code MethodBase}
+     * @param soapAction the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.SoapServices.RegisterSoapActionForMethodBase" target="_top">.NET documentation</a>
+     */
     public static void RegisterSoapActionForMethodBase(MethodBase mb, java.lang.String soapAction) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -409,6 +723,13 @@ public class SoapServices extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property XmlNsForClrType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.SoapServices.XmlNsForClrType" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getXmlNsForClrType() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -423,6 +744,13 @@ public class SoapServices extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlNsForClrTypeWithAssembly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.SoapServices.XmlNsForClrTypeWithAssembly" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getXmlNsForClrTypeWithAssembly() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -437,6 +765,13 @@ public class SoapServices extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlNsForClrTypeWithNs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.SoapServices.XmlNsForClrTypeWithNs" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getXmlNsForClrTypeWithNs() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -451,6 +786,13 @@ public class SoapServices extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlNsForClrTypeWithNsAndAssembly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.SoapServices.XmlNsForClrTypeWithNsAndAssembly" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getXmlNsForClrTypeWithNsAndAssembly() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

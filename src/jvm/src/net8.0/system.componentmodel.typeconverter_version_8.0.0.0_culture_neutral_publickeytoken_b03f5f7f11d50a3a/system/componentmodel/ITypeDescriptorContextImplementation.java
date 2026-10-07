@@ -103,7 +103,10 @@ public class ITypeDescriptorContextImplementation extends NetObject implements I
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ITypeDescriptorContextImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,13 @@ public class ITypeDescriptorContextImplementation extends NetObject implements I
 
     // Methods section
     
+    /**
+     * Invokes the .NET member OnComponentChanging.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ITypeDescriptorContext.OnComponentChanging" target="_top">.NET documentation</a>
+     */
     public boolean OnComponentChanging() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -159,6 +169,14 @@ public class ITypeDescriptorContextImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Invokes the .NET member GetService.
+     *
+     * @param serviceType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ITypeDescriptorContext.GetService" target="_top">.NET documentation</a>
+     */
     public NetObject GetService(NetType serviceType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +192,12 @@ public class ITypeDescriptorContextImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Invokes the .NET member OnComponentChanged.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ITypeDescriptorContext.OnComponentChanged" target="_top">.NET documentation</a>
+     */
     public void OnComponentChanged() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +212,13 @@ public class ITypeDescriptorContextImplementation extends NetObject implements I
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Container.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ITypeDescriptorContext.Container" target="_top">.NET documentation</a>
+     */
     public IContainer getContainer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +234,13 @@ public class ITypeDescriptorContextImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyDescriptor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ITypeDescriptorContext.PropertyDescriptor" target="_top">.NET documentation</a>
+     */
     public PropertyDescriptor getPropertyDescriptor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +256,13 @@ public class ITypeDescriptorContextImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Gets the value of the .NET property Instance.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ITypeDescriptorContext.Instance" target="_top">.NET documentation</a>
+     */
     public NetObject getInstance() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

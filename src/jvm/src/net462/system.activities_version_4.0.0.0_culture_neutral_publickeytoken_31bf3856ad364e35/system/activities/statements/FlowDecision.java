@@ -101,7 +101,10 @@ public class FlowDecision extends system.activities.statements.FlowNode  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FlowDecision(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class FlowDecision extends system.activities.statements.FlowNode  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.FlowDecision.-ctor" target="_top">.NET documentation</a>
+     */
     public FlowDecision() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,20 @@ public class FlowDecision extends system.activities.statements.FlowNode  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param condition the argument of type {@code Activity_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.FlowDecision.-ctor" target="_top">.NET documentation</a>
+     */
     public FlowDecision(Activity_1 condition) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +191,20 @@ public class FlowDecision extends system.activities.statements.FlowNode  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param condition the argument of type {@code Expression_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.FlowDecision.-ctor" target="_top">.NET documentation</a>
+     */
     public FlowDecision(Expression_1 condition) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -186,6 +223,13 @@ public class FlowDecision extends system.activities.statements.FlowNode  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Condition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.FlowDecision.Condition" target="_top">.NET documentation</a>
+     */
     public Activity_1 getCondition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +245,13 @@ public class FlowDecision extends system.activities.statements.FlowNode  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Condition.
+     *
+     * @param Condition the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.FlowDecision.Condition" target="_top">.NET documentation</a>
+     */
     public void setCondition(Activity_1 Condition) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +262,13 @@ public class FlowDecision extends system.activities.statements.FlowNode  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property False.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.FlowDecision.False" target="_top">.NET documentation</a>
+     */
     public FlowNode getFalse() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +284,13 @@ public class FlowDecision extends system.activities.statements.FlowNode  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property False.
+     *
+     * @param False the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.FlowDecision.False" target="_top">.NET documentation</a>
+     */
     public void setFalse(FlowNode False) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +301,13 @@ public class FlowDecision extends system.activities.statements.FlowNode  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property True.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.FlowDecision.True" target="_top">.NET documentation</a>
+     */
     public FlowNode getTrue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +323,13 @@ public class FlowDecision extends system.activities.statements.FlowNode  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property True.
+     *
+     * @param True the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.FlowDecision.True" target="_top">.NET documentation</a>
+     */
     public void setTrue(FlowNode True) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +340,13 @@ public class FlowDecision extends system.activities.statements.FlowNode  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DisplayName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.FlowDecision.DisplayName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDisplayName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +361,13 @@ public class FlowDecision extends system.activities.statements.FlowNode  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DisplayName.
+     *
+     * @param DisplayName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.FlowDecision.DisplayName" target="_top">.NET documentation</a>
+     */
     public void setDisplayName(java.lang.String DisplayName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class RootDesignerSerializerAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RootDesignerSerializerAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,15 @@ public class RootDesignerSerializerAttribute extends system.Attribute  {
     public RootDesignerSerializerAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param serializerTypeName the argument of type {@code java.lang.String}
+     * @param baseSerializerTypeName the argument of type {@code java.lang.String}
+     * @param reloadable the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public RootDesignerSerializerAttribute(java.lang.String serializerTypeName, java.lang.String baseSerializerTypeName, boolean reloadable) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +171,15 @@ public class RootDesignerSerializerAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param serializerTypeName the argument of type {@code java.lang.String}
+     * @param baseSerializerType the argument of type {@code NetType}
+     * @param reloadable the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public RootDesignerSerializerAttribute(java.lang.String serializerTypeName, NetType baseSerializerType, boolean reloadable) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +190,15 @@ public class RootDesignerSerializerAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param serializerType the argument of type {@code NetType}
+     * @param baseSerializerType the argument of type {@code NetType}
+     * @param reloadable the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public RootDesignerSerializerAttribute(NetType serializerType, NetType baseSerializerType, boolean reloadable) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -188,6 +218,13 @@ public class RootDesignerSerializerAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Reloadable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute.Reloadable" target="_top">.NET documentation</a>
+     */
     public boolean getReloadable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +239,13 @@ public class RootDesignerSerializerAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SerializerBaseTypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute.SerializerBaseTypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSerializerBaseTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +260,13 @@ public class RootDesignerSerializerAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SerializerTypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute.SerializerTypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSerializerTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

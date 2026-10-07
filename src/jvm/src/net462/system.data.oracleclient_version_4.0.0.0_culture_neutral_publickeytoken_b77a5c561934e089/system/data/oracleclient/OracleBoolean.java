@@ -100,7 +100,10 @@ public class OracleBoolean extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public OracleBoolean(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class OracleBoolean extends system.ValueType  {
     public OracleBoolean() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OracleBoolean.-ctor" target="_top">.NET documentation</a>
+     */
     public OracleBoolean(boolean value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +170,13 @@ public class OracleBoolean extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OracleBoolean.-ctor" target="_top">.NET documentation</a>
+     */
     public OracleBoolean(int value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +192,25 @@ public class OracleBoolean extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CompareTo.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OracleBoolean.CompareTo" target="_top">.NET documentation</a>
+     */
     public int CompareTo(NetObject obj) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +251,15 @@ public class OracleBoolean extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member And.
+     *
+     * @param x the argument of type {@code OracleBoolean}
+     * @param y the argument of type {@code OracleBoolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OracleBoolean.And" target="_top">.NET documentation</a>
+     */
     public static OracleBoolean And(OracleBoolean x, OracleBoolean y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -230,6 +275,15 @@ public class OracleBoolean extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param x the argument of type {@code OracleBoolean}
+     * @param y the argument of type {@code OracleBoolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OracleBoolean.Equals" target="_top">.NET documentation</a>
+     */
     public static OracleBoolean Equals(OracleBoolean x, OracleBoolean y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -245,6 +299,15 @@ public class OracleBoolean extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member NotEquals.
+     *
+     * @param x the argument of type {@code OracleBoolean}
+     * @param y the argument of type {@code OracleBoolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OracleBoolean.NotEquals" target="_top">.NET documentation</a>
+     */
     public static OracleBoolean NotEquals(OracleBoolean x, OracleBoolean y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -260,6 +323,14 @@ public class OracleBoolean extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member OnesComplement.
+     *
+     * @param x the argument of type {@code OracleBoolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OracleBoolean.OnesComplement" target="_top">.NET documentation</a>
+     */
     public static OracleBoolean OnesComplement(OracleBoolean x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -275,6 +346,15 @@ public class OracleBoolean extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Or.
+     *
+     * @param x the argument of type {@code OracleBoolean}
+     * @param y the argument of type {@code OracleBoolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OracleBoolean.Or" target="_top">.NET documentation</a>
+     */
     public static OracleBoolean Or(OracleBoolean x, OracleBoolean y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -290,6 +370,25 @@ public class OracleBoolean extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Parse.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OracleBoolean.Parse" target="_top">.NET documentation</a>
+     */
     public static OracleBoolean Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -305,6 +404,15 @@ public class OracleBoolean extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Xor.
+     *
+     * @param x the argument of type {@code OracleBoolean}
+     * @param y the argument of type {@code OracleBoolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OracleBoolean.Xor" target="_top">.NET documentation</a>
+     */
     public static OracleBoolean Xor(OracleBoolean x, OracleBoolean y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -324,6 +432,13 @@ public class OracleBoolean extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsFalse.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OracleBoolean.IsFalse" target="_top">.NET documentation</a>
+     */
     public boolean getIsFalse() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -338,6 +453,13 @@ public class OracleBoolean extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsNull.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OracleBoolean.IsNull" target="_top">.NET documentation</a>
+     */
     public boolean getIsNull() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -352,6 +474,13 @@ public class OracleBoolean extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsTrue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OracleBoolean.IsTrue" target="_top">.NET documentation</a>
+     */
     public boolean getIsTrue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -366,6 +495,23 @@ public class OracleBoolean extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OracleBoolean.Value" target="_top">.NET documentation</a>
+     */
     public boolean getValue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

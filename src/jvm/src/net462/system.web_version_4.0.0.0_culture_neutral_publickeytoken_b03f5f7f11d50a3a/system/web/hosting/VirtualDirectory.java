@@ -99,7 +99,10 @@ public class VirtualDirectory extends system.web.hosting.VirtualFileBase  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public VirtualDirectory(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,13 @@ public class VirtualDirectory extends system.web.hosting.VirtualFileBase  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Children.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.VirtualDirectory.Children" target="_top">.NET documentation</a>
+     */
     public IEnumerable getChildren() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +181,13 @@ public class VirtualDirectory extends system.web.hosting.VirtualFileBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Directories.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.VirtualDirectory.Directories" target="_top">.NET documentation</a>
+     */
     public IEnumerable getDirectories() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +203,13 @@ public class VirtualDirectory extends system.web.hosting.VirtualFileBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Files.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.VirtualDirectory.Files" target="_top">.NET documentation</a>
+     */
     public IEnumerable getFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

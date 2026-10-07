@@ -100,7 +100,10 @@ public class CoffHeader extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CoffHeader(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class CoffHeader extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property NumberOfSections.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.CoffHeader.NumberOfSections" target="_top">.NET documentation</a>
+     */
     public short getNumberOfSections() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +209,13 @@ public class CoffHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SizeOfOptionalHeader.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.CoffHeader.SizeOfOptionalHeader" target="_top">.NET documentation</a>
+     */
     public short getSizeOfOptionalHeader() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +256,13 @@ public class CoffHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NumberOfSymbols.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.CoffHeader.NumberOfSymbols" target="_top">.NET documentation</a>
+     */
     public int getNumberOfSymbols() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +303,13 @@ public class CoffHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PointerToSymbolTable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.CoffHeader.PointerToSymbolTable" target="_top">.NET documentation</a>
+     */
     public int getPointerToSymbolTable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -319,6 +350,13 @@ public class CoffHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TimeDateStamp.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.CoffHeader.TimeDateStamp" target="_top">.NET documentation</a>
+     */
     public int getTimeDateStamp() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -359,6 +397,13 @@ public class CoffHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Characteristics.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.CoffHeader.Characteristics" target="_top">.NET documentation</a>
+     */
     public Characteristics getCharacteristics() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -374,6 +419,13 @@ public class CoffHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Machine.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.CoffHeader.Machine" target="_top">.NET documentation</a>
+     */
     public Machine getMachine() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
